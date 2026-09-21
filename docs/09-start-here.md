@@ -16,14 +16,14 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 
 | Week | Do | Framework |
 |------|----|-----------|
-| 1–2 | Run the GOVERN navigator workshop; draft the charter including containment authority in §4 | navigator G1–G11, charter template |
-| 1–4 | Regulatory applicability register: which laws, which entities, which countries; register with authorities where overdue | 09 + your national annex, selector tool |
-| 2–6 | **Decide the operating model**, whether MSSP, tiered or capability-based, using the scored criteria | 11-operating-models.md |
-| 3–8 | Crown-jewel workshop with the business, I1; C/I/A impact rating per service | ID-3, 07-cia-triad |
-| 4–10 | Blast-radius sprint: MFA everywhere at P1, one offline or immutable backup copy restore-tested at P3, admin-path segmentation quick wins at P4 | PROTECT |
-| 6–12 | Onboard priority log sources 1–3, namely identity, endpoint and email, in-house or to the MSSP | DE-1 priority list |
-| 8–12 | IR plan v1 + ransomware & breach playbooks; statutory reporting contacts and one **reporting drill against the 24 h clock** | RS templates, playbooks/, annex |
-| 12 | Baseline maturity self-assessment; publish the gap backlog | assessments/ |
+| 1–2 | Run the GOVERN navigator workshop; draft the charter including containment authority in §4 | [Navigator](../assessments/cdc-design-navigator.md) G1–G11, [charter template](../templates/cdc-charter-template.md) |
+| 1–4 | Regulatory applicability register: which laws, which entities, which countries; register with authorities where overdue | This document, your [national annex](annexes/README.md), and the [regulatory selector](../tools/regulatory-profile.html) |
+| 2–6 | **Decide the operating model**, whether MSSP, tiered or capability-based, using the scored criteria | [Operating models](11-operating-models.md) |
+| 3–8 | Crown-jewel workshop with the business, I1; C/I/A impact rating per service | ID-3, [CIA triad](07-cia-triad.md) |
+| 4–10 | Blast-radius sprint: MFA everywhere at P1, one offline or immutable backup copy restore-tested at P3, admin-path segmentation quick wins at P4 | [PROTECT](03-protect.md) |
+| 6–12 | Onboard priority log sources 1–3, namely identity, endpoint and email, in-house or to the MSSP | [DETECT](04-detect.md), DE-1 priority list |
+| 8–12 | IR plan v1 + ransomware & breach playbooks; statutory reporting contacts and one **reporting drill against the 24 h clock** | [RESPOND](05-respond.md), [playbooks](../playbooks/README.md), your [national annex](annexes/README.md) |
+| 12 | Baseline maturity self-assessment; publish the gap backlog | [Maturity self-assessment](../assessments/maturity-self-assessment.md) |
 
 **Dependency warning:** most of the 90-day rows above contain a [GATE] or [HARD] dependency on another department: charter sign-off [GATE], log onboarding [HARD on system owners], MFA rollout [HARD on IAM], and the reporting drill [GATE on legal and DPO participation]. See each function document's "External dependencies" table and the marker convention in doc 00. Secure named counterparts for every [HARD] on this plan before week 1; it is the most common silent killer of new CDC timelines.
 
@@ -31,7 +31,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 
 ## Months 4–12
 
-- Detection: reach ~20+ ATT&CK-mapped use cases; establish the tuning loop and triage SLAs, per 13-cdc-operations.md
+- Detection: reach ~20+ ATT&CK-mapped use cases; establish the tuning loop and triage SLAs, per [Running the CDC](13-cdc-operations.md)
 - Response: containment technically tested; tabletop with management; DFIR retainer if not in-house
 - Recover: RTO/RPO agreed for crown jewels; rebuild-from-known-good procedure drafted
 - Govern: quarterly executive reporting running; supplier security clauses in new contracts

@@ -108,6 +108,7 @@ nav:
       - Lenses:
           - CIA triad as design lens: docs/07-cia-triad.md
           - Maturity model: docs/08-maturity-model.md
+      - Capability index: docs/capability-index.md
   - Organisation & operations:
       - Operating models: docs/11-operating-models.md
       - Roles & competences: docs/12-roles-and-competences.md
@@ -120,7 +121,7 @@ nav:
       - EU regulatory landscape: docs/17-eu-regulatory-landscape.md
       - CIS Controls crosswalk: docs/18-cis-controls-crosswalk.md
       - National annexes:
-          - docs/annexes/README.md
+          - Overview: docs/annexes/README.md
           - Austria: docs/annexes/annex-at.md
           - Belgium: docs/annexes/annex-be.md
           - Bulgaria: docs/annexes/annex-bg.md
@@ -159,13 +160,13 @@ nav:
           - Incident response plan: templates/incident-response-plan-template.md
           - Detection use case: templates/detection-use-case-template.md
           - Metrics & KPI catalogue: templates/metrics-kpi-template.md
-          - Job description, ECSF-structured: templates/job-description-template.md
+          - ECSF job description: templates/job-description-template.md
           - MSSP requirements checklist: templates/mssp-requirements-checklist.md
           - Containment action catalogue: templates/containment-action-catalogue-template.md
           - Controls register: templates/controls-register-template.md
           - Annual operating calendar: templates/annual-calendar-template.md
       - Playbooks:
-          - playbooks/README.md
+          - Overview: playbooks/README.md
           - Windows 11 laptop: playbooks/PB-W11-windows11-laptop.md
           - macOS laptop: playbooks/PB-MAC-macos-laptop.md
           - Windows Server: playbooks/PB-WSV-windows-server.md

@@ -12,7 +12,7 @@ fill in and return.
 | [Incident response plan](incident-response-plan-template.md) | The IR plan skeleton incl. statutory reporting clocks | Markdown |
 | [Detection use case](detection-use-case-template.md) | Specifying and reviewing detections | Markdown |
 | [Metrics & KPI catalogue](metrics-kpi-template.md) | Measuring the CDC without vanity metrics | Markdown |
-| [Job description (ECSF)](job-description-template.md) | Hiring against ECSF profiles | Markdown |
+| [ECSF job description](job-description-template.md) | Hiring against ECSF profiles | Markdown |
 | [MSSP requirements checklist](mssp-requirements-checklist.md) | Procuring and steering an MSSP | Markdown |
 | [Containment action catalogue](containment-action-catalogue-template.md) | Pre-approved containment actions | Markdown |
 | [Controls register](controls-register-template.md) | Tracking controls and evidence | Markdown |

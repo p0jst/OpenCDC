@@ -4,23 +4,25 @@
 
 **Legend:** ➜ = where to go in the framework · ⚠ = common failure this question prevents
 
+Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them up in the [capability index](../docs/capability-index.md), which gives the capability name, its document and the tier it belongs to.
+
 ---
 
 ## GOVERN — "Who owns this, and with what authority?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|
-| G1 | Who at executive level personally owns cyber risk, and do they know it? | NIS2 Art. 20 makes management accountable; an unnamed owner means no budget defence. ➜ 01-govern.md, GV-1 ⚠ "IT owns security" by default |
-| G2 | What exactly is in scope: which legal entities, countries, networks, cloud tenants, OT? What is explicitly out, and who covers that? | Undefined scope becomes disputed scope during an incident. ➜ charter template §2 |
+| G1 | Who at executive level personally owns cyber risk, and do they know it? | NIS2 Art. 20 makes management accountable; an unnamed owner means no budget defence. ➜ [GOVERN](../docs/01-govern.md), GV-1 ⚠ "IT owns security" by default |
+| G2 | What exactly is in scope: which legal entities, countries, networks, cloud tenants, OT? What is explicitly out, and who covers that? | Undefined scope becomes disputed scope during an incident. ➜ [charter template](../templates/cdc-charter-template.md) §2 |
 | G3 | May the CDC isolate a production system at 03:00 without waking anyone? Up to which tier? | Containment speed is decided here, years before the incident. ➜ charter §4 ⚠ response stalls awaiting permission |
-| G4 | What is our risk appetite, stated per CIA objective and per crown-jewel service? | Without it, every trade-off is improvised. ➜ 07-cia-triad.md §1 |
-| G5 | Which laws apply to which entity in which country, and who maintains that register? | Multi-country entities face different deadlines/channels per state. ➜ 17-eu-regulatory-landscape.md, docs/annexes/, regulatory selector |
-| G6 | MSSP-operated, in-house tiered, or capability-based: decided on scored criteria or on hope? | This choice shapes every DETECT/RESPOND design decision after it. ➜ **11-operating-models.md** for the decision criteria and what can never be outsourced, plus the MSSP checklist template |
+| G4 | What is our risk appetite, stated per CIA objective and per crown-jewel service? | Without it, every trade-off is improvised. ➜ [CIA triad](../docs/07-cia-triad.md) §1 |
+| G5 | Which laws apply to which entity in which country, and who maintains that register? | Multi-country entities face different deadlines/channels per state. ➜ [EU regulatory landscape](../docs/17-eu-regulatory-landscape.md), [national annexes](../docs/annexes/README.md), [regulatory selector](../tools/regulatory-profile.html) |
+| G6 | MSSP-operated, in-house tiered, or capability-based: decided on scored criteria or on hope? | This choice shapes every DETECT/RESPOND design decision after it. ➜ **[Operating models](../docs/11-operating-models.md)** for the decision criteria and what can never be outsourced, plus the [MSSP checklist](../templates/mssp-requirements-checklist.md) |
 | G7 | How do we require, verify and enforce supplier security through contracts, monitoring and exit? | NIS2 Art. 21(2)(d); your suppliers are your attack surface. ➜ GV-6 |
 | G8 | When did the board last train on cyber and join an exercise? | NIS2 Art. 20 training duty; also the fastest way to secure budget. ➜ RS-7 |
-| G9 | What does the CDC report upward, how often, and does anyone act on it? | Reporting nobody acts on is theatre. ➜ metrics template |
+| G9 | What does the CDC report upward, how often, and does anyone act on it? | Reporting nobody acts on is theatre. ➜ [metrics template](../templates/metrics-kpi-template.md) |
 | G10 | Who may accept a cyber risk, and where is that acceptance recorded? | Unrecorded acceptances resurface as "nobody told me". ➜ GV-2 |
-| G11 | How many security tools do we run, how many consoles does one case take, and when did we last retire one? | Tool sprawl taxes every case and buries data in silos. ➜ 13-cdc-operations §5 |
+| G11 | How many security tools do we run, how many consoles does one case take, and when did we last retire one? | Tool sprawl taxes every case and buries data in silos. ➜ [Running the CDC](../docs/13-cdc-operations.md) §5 |
 
 ## IDENTIFY — "What are we defending, against whom?"
 
@@ -56,13 +58,13 @@
 | D1 | If an attacker logged in with a stolen password right now, which log would show it, and is that log actually flowing to us? | Identity telemetry is the highest-value source; verify flow, not intent. ➜ DE-1 priority list |
 | D2 | Which of our crown jewels currently generate *zero* security telemetry? | Coverage gaps cluster exactly where impact is highest. ➜ DE-4 ⚠ cloud/SaaS blind spots |
 | D3 | For each detection in production: when did it last fire in a test? | Silently-broken rules are worse than no rules; they buy false confidence. ➜ DE-6 |
-| D4 | Does our use-case portfolio match our threat profile, or are we detecting yesterday's threats? | Balance C/I/A coverage against ID-5's profile. ➜ DE-2, 07-cia-triad §3 |
+| D4 | Does our use-case portfolio match our threat profile, or are we detecting yesterday's threats? | Balance C/I/A coverage against ID-5's profile. ➜ DE-2, [CIA triad](../docs/07-cia-triad.md) §3 |
 | D5 | What happens to an alert at 02:00 on a Sunday, concretely, minute by minute? | Walk the path; every undefined step is response time lost. ➜ DE-3, staffing model |
 | D6 | Can our analysts see asset criticality and identity context *inside* the alert, or must they hunt for it? | Enrichment is triage speed. ➜ DE-3 |
 | D7 | Could an attacker with admin rights delete or alter the logs we'd need? | Log integrity is an Integrity objective in itself. ➜ DE-1, DE-7 |
 | D8 | When did we last go *looking* for an intruder rather than waiting for an alert? | Hunting finds what detections miss and seeds new detections. ➜ DE-5 |
-| D9 | What is our measured MTTD on real incidents, and is it trending the right way? | You cannot improve what you don't measure. ➜ metrics template |
-| D10 | Who owns the SIEM's hardware, OS and application respectively, and if it's cloud-hosted, who decided which data may be shipped there? | An unowned platform decays; unclassified telemetry export is an uncontrolled data transfer. ➜ 04-detect.md "Owning the SIEM platform" |
+| D9 | What is our measured MTTD on real incidents, and is it trending the right way? | You cannot improve what you don't measure. ➜ [metrics template](../templates/metrics-kpi-template.md) |
+| D10 | Who owns the SIEM's hardware, OS and application respectively, and if it's cloud-hosted, who decided which data may be shipped there? | An unowned platform decays; unclassified telemetry export is an uncontrolled data transfer. ➜ [DETECT](../docs/04-detect.md), "Owning the SIEM platform" |
 
 ## RESPOND — "When it happens, does the machine run?"
 
@@ -70,10 +72,10 @@
 |---|----------|----------------|
 | R1 | Who is the incident manager for a P1 tonight, and does that person know it? | Named humans beat documented roles. ➜ IR plan template §2 |
 | R2 | Can we technically isolate any endpoint or server within 15 minutes, and legally/organisationally within the same 15? | Both halves must be true; test each. ➜ RS-4, charter §4 |
-| R3 | For our top 5 likely incidents, could a competent analyst execute the playbook alone at 03:00? | Playbooks are written for the worst night, not the best day. ➜ RS-2, playbooks/ |
+| R3 | For our top 5 likely incidents, could a competent analyst execute the playbook alone at 03:00? | Playbooks are written for the worst night, not the best day. ➜ RS-2, [playbooks](../playbooks/README.md) |
 | R4 | Who decides, and how fast, whether an incident is NIS2-reportable, GDPR-notifiable, or both? Have we drilled the 24 h clock? | The early-warning clock is shorter than most escalation chains. ➜ RS-5, IR plan §4, national annex ⚠ deadline discovered during the incident |
 | R5 | If email and chat are compromised, how does the response team talk? | Adversaries read your incident channel if it's in the environment they own. ➜ IR plan §5 |
-| R6 | Can we preserve evidence to a standard that survives court or regulator scrutiny, with hashing, chain of custody and imaging? | Sloppy first hours forecloses legal options forever. ➜ RS-3, platform playbooks |
+| R6 | Can we preserve evidence to a standard that survives court or regulator scrutiny, with hashing, chain of custody and imaging? | Sloppy first hours forecloses legal options forever. ➜ RS-3, [platform playbooks](../playbooks/README.md) |
 | R7 | At what point does a security incident become an organisational crisis, and who pulls that lever? | The threshold must pre-exist the incident. ➜ RS-6 |
 | R8 | When did management last sit in an exercise and make a real, if simulated, trade-off decision? | Executives who've practised decide in minutes, not hours. ➜ RS-7 |
 

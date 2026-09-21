@@ -12,6 +12,36 @@ Not every organisation needs every capability. Instead of maintaining three edit
 
 **Tier ≠ maturity.** Tier answers *which capabilities*; the [maturity model](08-maturity-model.md) answers *how well you run them*. A sensible target pairing: E-tier at Level 2, S-tier at Level 3, A-tier at Level 3–4.
 
+## If you are the whole security function
+
+Plenty of readers arrive here as the only person with security in their job
+title. The framework still applies, but the sequencing changes, because
+Essential tier assumes roughly 3 to 4 people and the staffing notes in
+[DETECT](04-detect.md) and [Roles & competences](12-roles-and-competences.md)
+assume more.
+
+Three moves make a one-person function viable:
+
+1. **Buy the clock, build the context.** Round-the-clock monitoring is the one
+   thing a single person cannot provide. Take
+   [Model A](11-operating-models.md) and let a provider hold the watch, then
+   spend your own hours on the work no provider can do for you: crown jewels,
+   business context, containment authority and the statutory reporting path.
+2. **Own the four things that never outsource.** Risk acceptance, containment
+   authority over crown jewels, statutory reporting and the regulatory
+   applicability register stay with you whatever the contract says. They are
+   also the highest-value use of a single person's time.
+3. **Take the blast-radius rows of Essential first.** GV-1, ID-3, PR-1, PR-7
+   and RS-1 in the [capability index](capability-index.md) buy more risk
+   reduction per hour than anything else on the list. The rest of Essential
+   follows once those are real.
+
+Staff the gap deliberately rather than pretending it is not there. Name the
+DFIR retainer before you need it, and record in the charter which decisions
+have no deputy while you are away. A one-person function with an honest
+dependency list is defensible to a board and to a regulator. One that claims
+full coverage is neither.
+
 ## Capability tier map
 
 | Function | Essential, E | plus Standard, S | plus Advanced, A |
