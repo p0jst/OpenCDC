@@ -4,10 +4,10 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 
 ## What we're especially looking for
 
-1. **National annexes** — NIS2 transposition specifics, national CSIRT contacts and reporting portals, per member state (`docs/annexes/annex-<ISO country code>.md`).
-2. **Translations** — the framework aims to be available in EU languages (`i18n/<lang>/`).
+1. **National annexes** — NIS2 transposition specifics, national CSIRT contacts and reporting portals, per member state, as `docs/annexes/annex-<ISO country code>.md`.
+2. **Translations** — the framework aims to be available in EU languages, under `i18n/<lang>/`.
 3. **Templates & playbooks** — additional scenario playbooks, report templates for statutory notifications.
-4. **Corrections** — factual, regulatory, or attribution fixes (high priority — open an issue immediately).
+4. **Corrections** — factual, regulatory, or attribution fixes; high priority, so open an issue immediately.
 5. **Field feedback** — did the maturity criteria match reality in your assessment? Open a discussion.
 
 ## Ground rules
@@ -20,9 +20,9 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 
 ## How to contribute
 
-1. Open an **issue** describing the change (use the templates).
-2. For text changes: fork → branch (`docs/<topic>` or `fix/<topic>`) → pull request referencing the issue.
-3. One logical change per PR; keep the document structure (Objective / Capabilities / CIA mapping / Roles & staffing / Maturity / EU hooks / External dependencies / Sources) intact for function docs.
+1. Open an **issue** describing the change, using the templates.
+2. For text changes: fork → branch, named `docs/<topic>` or `fix/<topic>` → pull request referencing the issue.
+3. One logical change per PR; keep the document structure intact for function docs: Objective, Capabilities, CIA mapping, Roles & staffing, Maturity, EU hooks, External dependencies, Sources.
 4. A maintainer will review for accuracy, neutrality, and attribution before merging.
 
 ## Licensing of contributions

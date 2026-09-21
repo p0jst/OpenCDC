@@ -11,9 +11,9 @@ The Cyber Defence Center protects the confidentiality, integrity and availabilit
 
 ## 2. Scope
 - **Organisational scope:** legal entities / business units covered: …
-- **Geographical scope / jurisdictions:** … (drives regulatory reporting map)
+- **Geographical scope / jurisdictions:** … This drives the regulatory reporting map.
 - **Technical scope:** on-prem / cloud / OT / SaaS / endpoints: …
-- **Explicitly out of scope:** … (and who covers it)
+- **Explicitly out of scope:** …, and who covers it
 
 ## 3. Services provided
 > Align with FIRST CSIRT Services Framework categories where useful.
@@ -34,19 +34,19 @@ The CDC is authorised, without prior approval, to:
 
 - [ ] Isolate endpoints and servers up to tier [X] criticality
 - [ ] Disable user and service accounts on confirmed compromise
-- [ ] Block network indicators (IP/domain/hash) at security controls
+- [ ] Block network indicators, whether IP, domain or hash, at security controls
 - [ ] Access logs and forensic data on any in-scope system, subject to the data-handling rules in §7
 
 Actions requiring approval from [ROLE]:
 
-- [ ] Isolation of tier-1 (crown jewel) production services
-- [ ] External statutory notifications (approval: legal/DPO; execution: CDC)
+- [ ] Isolation of tier-1 crown-jewel production services
+- [ ] External statutory notifications, with approval by legal and the DPO, and execution by the CDC
 - [ ] Engagement of external DFIR retainer
 
 ## 5. Reporting line & governance
 - CDC Director reports to: …
 - Executive reporting: [cadence] to [body], covering maturity, incidents, risk and KPIs.
-- Escalation to crisis management when: … (criteria)
+- Escalation to crisis management when: … State the criteria here.
 
 ## 6. Resourcing
 - Approved headcount and roles: …
@@ -57,12 +57,12 @@ Actions requiring approval from [ROLE]:
 - Legal basis and purpose limitation for security monitoring data: …
 - Retention: security logs [X months], case data [X years]
 - Access to monitoring data restricted to: …; DPO consulted on new intrusive sources.
-- Information sharing: TLP 2.0 (FIRST) is used for all shared threat information.
+- Information sharing: FIRST's TLP 2.0 is used for all shared threat information.
 
 ## 8. Interfaces
 | Party | Interface |
 |-------|-----------|
-| IT operations / infrastructure | containment execution, restoration; hardware & OS ownership for the monitoring platform (patching SLA, capacity) — application layer owned by the CDC |
+| IT operations / infrastructure | containment execution, restoration; hardware & OS ownership for the monitoring platform, covering patching SLA and capacity; application layer owned by the CDC |
 | Legal / DPO | breach assessment, notifications |
 | Communications | external comms during incidents |
 | National CSIRT | NIS2 reporting, advisories |
@@ -72,4 +72,4 @@ Actions requiring approval from [ROLE]:
 This charter is reviewed [annually] and after any major incident or organisational change.
 
 ---
-*Template from the Open CDC Framework (CC BY 4.0).*
+*Template from the Open CDC Framework, licensed CC BY 4.0.*

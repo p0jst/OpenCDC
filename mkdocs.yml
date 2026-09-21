@@ -95,7 +95,7 @@ nav:
       - "Start here: the first 90 days": docs/09-start-here.md
       - Implementation tiers: docs/10-tiers.md
       - Reading guide: docs/README.md
-      - Design navigator (workshops): assessments/cdc-design-navigator.md
+      - Design navigator for workshops: assessments/cdc-design-navigator.md
       - Maturity self-assessment: assessments/maturity-self-assessment.md
   - Framework:
       - The six functions:
@@ -159,7 +159,7 @@ nav:
           - Incident response plan: templates/incident-response-plan-template.md
           - Detection use case: templates/detection-use-case-template.md
           - Metrics & KPI catalogue: templates/metrics-kpi-template.md
-          - Job description (ECSF): templates/job-description-template.md
+          - Job description, ECSF-structured: templates/job-description-template.md
           - MSSP requirements checklist: templates/mssp-requirements-checklist.md
           - Containment action catalogue: templates/containment-action-catalogue-template.md
           - Controls register: templates/controls-register-template.md
@@ -169,7 +169,7 @@ nav:
           - Windows 11 laptop: playbooks/PB-W11-windows11-laptop.md
           - macOS laptop: playbooks/PB-MAC-macos-laptop.md
           - Windows Server: playbooks/PB-WSV-windows-server.md
-          - Linux (RHEL) server: playbooks/PB-LNX-rhel-server.md
+          - RHEL Linux server: playbooks/PB-LNX-rhel-server.md
   - Project:
       - About: ABOUT.md
       - Roadmap: ROADMAP.md

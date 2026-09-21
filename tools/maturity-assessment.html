@@ -259,7 +259,7 @@
   <p>Score each of the six CSF functions against the framework's four-level maturity model, right here in the
      browser. Every criterion is rated on a five-point scale from <i>not considered</i> to
      <i>implemented &amp; evidenced</i>; a level counts only when <b>every</b> criterion at that level and every
-     level below it is implemented — staged scoring, no averaging up. See <a href="../docs/08-maturity-model/">the maturity model</a> for the
+     level below it is implemented. That is staged scoring, with no averaging up. See <a href="../docs/08-maturity-model/">the maturity model</a> for the
      full method. Nothing is sent anywhere: your answers live in this browser and in your own
      resume link.</p>
 </header>
@@ -269,8 +269,8 @@
 <section class="resume" id="resume">
   <h2><span class="badge">Save &amp; resume</span> Your assessment lives in this link</h2>
   <p>There is no account and no cookie behind this page. Everything you tick is encoded into the
-     address below, which updates as you work. <b>Copy it and keep it</b> — in your notes, a
-     calendar invite or a mail to yourself — and open it whenever you want to carry on, on any
+     address below, which updates as you work. <b>Copy it and keep it</b> in your notes, a
+     calendar invite or a mail to yourself, then open it whenever you want to carry on, on any
      device or browser. Share it with a colleague and they see exactly the state you were in.</p>
   <div class="resume-row">
     <input type="text" id="share-url" readonly aria-label="Link that restores this assessment"
@@ -279,16 +279,16 @@
     <button class="btn ghost" id="mail-url">Mail it to myself</button>
     <span id="copy-flash">Copied</span>
   </div>
-  <p class="resume-note">The link carries your answers, evidence notes and targets — it is
+  <p class="resume-note">The link carries your answers, evidence notes and targets, and it is
      <b>not</b> stored on any server, so treat it as the assessment itself: whoever holds the link
      holds the data. A copy is also kept in this browser, so simply reopening the page works too.</p>
   <p class="resume-warn">This link has grown long because of the evidence notes. Some mail clients
-     break links over ~2 000 characters — use <b>Export snapshot (.json)</b> below for long-term
+     break links over ~2 000 characters, so use <b>Export snapshot as .json</b> below for long-term
      archiving.</p>
 </section>
 
 <div class="meta">
-  <div><label for="f-name">Assessor(s)</label><input type="text" id="f-name" placeholder="Names"></div>
+  <div><label for="f-name">Assessors</label><input type="text" id="f-name" placeholder="Names"></div>
   <div><label for="f-date">Assessment date</label><input type="text" id="f-date" placeholder="YYYY-MM-DD"></div>
   <div><label for="f-evrepo">Evidence repository</label><input type="text" id="f-evrepo" placeholder="Where evidence is filed"></div>
   <div><label for="f-profile">Target profile</label>
@@ -297,7 +297,7 @@
 </div>
 
 <div class="toolbar">
-  <button class="btn" id="export-json">Export snapshot (.json)</button>
+  <button class="btn" id="export-json">Export snapshot as .json</button>
   <button class="btn" id="import-json">Import snapshot</button>
   <button class="btn" onclick="window.print()">Print / save PDF</button>
   <button class="btn danger" id="reset-all">Clear all answers</button>
@@ -318,7 +318,7 @@
 
 <h2>Checklist</h2>
 <p style="font-size:.86rem;max-width:88ch;margin:0 0 4px">Each criterion is scored on a five-point
-  scale. <b>Only “implemented” and “implemented &amp; evidenced” count towards a level</b> — the three
+  scale. <b>Only “implemented” and “implemented &amp; evidenced” count towards a level</b>. The three
   states below them record work in flight without moving the score, because the maturity model is
   staged and does not average up. See <a href="../docs/08-maturity-model/">the scoring method</a>.</p>
 <div class="scale-key">
@@ -329,7 +329,7 @@
   <span><i style="background:var(--ok)"></i>Implemented &amp; evidenced</span>
 </div>
 <label class="strict"><input type="checkbox" id="strict-evidence">
-  <span>Evidence-based scoring — count a criterion only when it is <b>implemented &amp; evidenced</b>.
+  <span>Evidence-based scoring counts a criterion only when it is <b>implemented &amp; evidenced</b>.
   Stricter, and closer to how an auditor would read it: evidence-free self-assessment inflates
   scores by roughly one level.</span></label>
 <div id="functions"></div>
@@ -337,14 +337,14 @@
 <h2>Result</h2>
 <div class="scrollbox"><table class="result" id="result-table"></table></div>
 <p style="font-size:.82rem;color:var(--muted)">Reassess annually or after major change; review open gap actions
-  quarterly. Export a snapshot each round and keep it in version control to track the trend — see
+  quarterly. Export a snapshot each round and keep it in version control to track the trend; see
   <a href="../docs/08-maturity-model/">reassessment cadence</a>.</p>
 
 </main>
 
 <footer>
-  Open CDC Framework · CC BY 4.0 · Criteria mirror <code>assessments/maturity-self-assessment.md</code> — orientation
-  only, evidence-free self-assessment inflates scores by roughly one level.
+  Open CDC Framework · CC BY 4.0 · Criteria mirror <code>assessments/maturity-self-assessment.md</code>. Orientation
+  only, and evidence-free self-assessment inflates scores by roughly one level.
 </footer>
 
 <script>
@@ -731,7 +731,7 @@ jsonInput.addEventListener("change", async () => {
   }catch(e){ alert("Could not import: " + e.message); }
 });
 document.getElementById("reset-all").addEventListener("click", () => {
-  if(!confirm("Clear every answer and evidence note? Your existing resume link keeps working — copy it first if you may want to come back to it.")) return;
+  if(!confirm("Clear every answer and evidence note? Your existing resume link keeps working, so copy it first if you may want to come back to it.")) return;
   state = { ...blankState(), meta: state.meta, targets: state.targets, strict: state.strict };
   saveState(); renderAll();
 });

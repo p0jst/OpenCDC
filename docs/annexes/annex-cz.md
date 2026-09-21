@@ -1,31 +1,31 @@
-# National Annex — Czechia (CZ)
+# National Annex — Czechia
 
-> **Status (July 2026):** In force. Community-maintained orientation, **not legal advice** — verify against the official gazette and authority guidance before relying on it. Corrections welcome (see CONTRIBUTING.md).
+> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see CONTRIBUTING.md.
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | New Cybersecurity Act (nový zákon o kybernetické bezpečnosti, 2025) replacing Act 181/2014 — effective 1 November 2025 |
+| Implementing law | New Cybersecurity Act (nový zákon o kybernetické bezpečnosti, 2025) replacing Act 181/2014, effective 1 November 2025 |
 | Competent authority | NÚKIB (Národní úřad pro kybernetickou a informační bezpečnost) |
-| National CSIRT / reporting | GovCERT.CZ (NÚKIB) and national CSIRT.CZ |
+| National CSIRT / reporting | GovCERT.CZ under NÚKIB, and national CSIRT.CZ |
 | Official starting point | https://nukib.gov.cz |
 
 ## Country notes for your CDC
 
-Registration and duties via the NÚKIB portal; two regulated-obligation regimes (higher/lower) map well to essential/important.
+Registration and duties via the NÚKIB portal; two regulated-obligation regimes, higher and lower, map well to essential/important.
 
-## Standard checklist (all countries)
+## Standard checklist for all countries
 
-- [ ] Applicability determined per legal entity and sector; recorded in the regulatory applicability register (GOVERN)
+- [ ] GOVERN: applicability determined per legal entity and sector, and recorded in the regulatory applicability register
 - [ ] Entity registration completed with the national authority where required
-- [ ] Incident-reporting procedure drilled against the national channel and the 24 h early-warning clock (RESPOND)
+- [ ] RESPOND: incident-reporting procedure drilled against the national channel and the 24 h early-warning clock
 - [ ] Contact established with the national CSIRT *before* the first incident
-- [ ] Data protection authority contact and GDPR Art. 33 flow prepared (runs in parallel with NIS2 reporting)
-- [ ] National guidance/frameworks mapped to your control evidence (see note above)
+- [ ] Data protection authority contact and GDPR Art. 33 flow prepared. This runs in parallel with NIS2 reporting
+- [ ] National guidance and frameworks mapped to your control evidence, per the note above
 
 ## Selector tag
 
-`cz-nat` — tick "Czechia" in `tools/regulatory-profile.html` to include this country's references.
+Tick "Czechia" in `tools/regulatory-profile.html` to include this country's references under the `cz-nat` tag.
 
-*Open CDC Framework (CC BY 4.0).*
+*Open CDC Framework, licensed CC BY 4.0.*

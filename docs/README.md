@@ -1,6 +1,6 @@
 # Documentation index
 
-Reading order for a new CDC programme: 00 → 09 (start here) → 10 (pick tier) → 01–06 (functions) with 07–08 as lenses → 11–13 (organisation & operations) → 14–16 (advanced/community) → 17–18 (regulatory & CIS crosswalks). 19 holds all credits. Dependency markers [GATE]/[HARD]/[SOFT] are defined in 00.
+Reading order for a new CDC programme: 00 → 09 to start → 10 to pick a tier → 01–06 for the functions, with 07–08 as lenses → 11–13 for organisation and operations → 14–16 for the advanced and community layers → 17–18 for the regulatory and CIS crosswalks. 19 holds all credits. Dependency markers [GATE]/[HARD]/[SOFT] are defined in 00.
 
 | # | File | Area |
 |---|------|------|
@@ -16,6 +16,6 @@ Reading order for a new CDC programme: 00 → 09 (start here) → 10 (pick tier)
 | 14 | 14-detection-as-code-deep-dive.md | Advanced: engineering manual |
 | 15 | 15-cti-deep-dive.md | Advanced: CTI programme |
 | 16 | 16-csirt-community.md | Community, certification, living docs |
-| 17 | 17-eu-regulatory-landscape.md | EU law layer (+ annexes/) |
+| 17 | 17-eu-regulatory-landscape.md | EU law layer, plus annexes/ |
 | 18 | 18-cis-controls-crosswalk.md | CIS Controls with concrete actions |
 | 19 | 19-references.md | Sources & credits |

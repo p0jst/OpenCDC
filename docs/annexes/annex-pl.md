@@ -1,31 +1,31 @@
-# National Annex — Poland (PL)
+# National Annex — Poland
 
-> **Status (July 2026):** Pending/nearing adoption — verify. Community-maintained orientation, **not legal advice** — verify against the official gazette and authority guidance before relying on it. Corrections welcome (see CONTRIBUTING.md).
+> **Status as of July 2026:** Pending, nearing adoption, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see CONTRIBUTING.md.
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (KSC amendment) — in final legislative stages as of early–mid 2026 (verify) |
+| Implementing law | Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (KSC amendment), in final legislative stages as of early–mid 2026; verify |
 | Competent authority | Ministry of Digital Affairs + sector authorities |
-| National CSIRT / reporting | CSIRT NASK, CSIRT GOV, CSIRT MON (three-CSIRT model) |
+| National CSIRT / reporting | CSIRT NASK, CSIRT GOV and CSIRT MON, a three-CSIRT model |
 | Official starting point | https://www.gov.pl/web/cyfryzacja |
 
 ## Country notes for your CDC
 
-Poland's draft adds national extras (e.g., high-risk vendor assessments) — multinationals should track the final text closely.
+Poland's draft adds national extras such as high-risk vendor assessments. Multinationals should track the final text closely.
 
-## Standard checklist (all countries)
+## Standard checklist for all countries
 
-- [ ] Applicability determined per legal entity and sector; recorded in the regulatory applicability register (GOVERN)
+- [ ] GOVERN: applicability determined per legal entity and sector, and recorded in the regulatory applicability register
 - [ ] Entity registration completed with the national authority where required
-- [ ] Incident-reporting procedure drilled against the national channel and the 24 h early-warning clock (RESPOND)
+- [ ] RESPOND: incident-reporting procedure drilled against the national channel and the 24 h early-warning clock
 - [ ] Contact established with the national CSIRT *before* the first incident
-- [ ] Data protection authority contact and GDPR Art. 33 flow prepared (runs in parallel with NIS2 reporting)
-- [ ] National guidance/frameworks mapped to your control evidence (see note above)
+- [ ] Data protection authority contact and GDPR Art. 33 flow prepared. This runs in parallel with NIS2 reporting
+- [ ] National guidance and frameworks mapped to your control evidence, per the note above
 
 ## Selector tag
 
-`pl-nat` — tick "Poland" in `tools/regulatory-profile.html` to include this country's references.
+Tick "Poland" in `tools/regulatory-profile.html` to include this country's references under the `pl-nat` tag.
 
-*Open CDC Framework (CC BY 4.0).*
+*Open CDC Framework, licensed CC BY 4.0.*

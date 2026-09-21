@@ -1,31 +1,31 @@
-# National Annex — Spain (ES)
+# National Annex — Spain
 
-> **Status (July 2026):** Pending — verify. Community-maintained orientation, **not legal advice** — verify against the official gazette and authority guidance before relying on it. Corrections welcome (see CONTRIBUTING.md).
+> **Status as of July 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see CONTRIBUTING.md.
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad — still in legislative process as of mid-2026 (verify) |
-| Competent authority | Expected: National Cybersecurity Centre coordination; CCN (public sector), INCIBE (private/citizens), sector authorities |
+| Implementing law | Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, still in legislative process as of mid-2026; verify. |
+| Competent authority | Expected: National Cybersecurity Centre coordination; CCN for the public sector, INCIBE for private entities and citizens, sector authorities |
 | National CSIRT / reporting | CCN-CERT, INCIBE-CERT, ESPDEF-CERT |
 | Official starting point | https://www.incibe.es |
 
 ## Country notes for your CDC
 
-Existing ENS (Esquema Nacional de Seguridad, RD 311/2022) already imposes NIST-like controls for public sector and suppliers — comply with ENS now; it will carry most of the NIS2 weight.
+Existing ENS (Esquema Nacional de Seguridad, RD 311/2022) already imposes NIST-like controls for public sector and suppliers. Comply with ENS now; it will carry most of the NIS2 weight.
 
-## Standard checklist (all countries)
+## Standard checklist for all countries
 
-- [ ] Applicability determined per legal entity and sector; recorded in the regulatory applicability register (GOVERN)
+- [ ] GOVERN: applicability determined per legal entity and sector, and recorded in the regulatory applicability register
 - [ ] Entity registration completed with the national authority where required
-- [ ] Incident-reporting procedure drilled against the national channel and the 24 h early-warning clock (RESPOND)
+- [ ] RESPOND: incident-reporting procedure drilled against the national channel and the 24 h early-warning clock
 - [ ] Contact established with the national CSIRT *before* the first incident
-- [ ] Data protection authority contact and GDPR Art. 33 flow prepared (runs in parallel with NIS2 reporting)
-- [ ] National guidance/frameworks mapped to your control evidence (see note above)
+- [ ] Data protection authority contact and GDPR Art. 33 flow prepared. This runs in parallel with NIS2 reporting
+- [ ] National guidance and frameworks mapped to your control evidence, per the note above
 
 ## Selector tag
 
-`es-nat` — tick "Spain" in `tools/regulatory-profile.html` to include this country's references.
+Tick "Spain" in `tools/regulatory-profile.html` to include this country's references under the `es-nat` tag.
 
-*Open CDC Framework (CC BY 4.0).*
+*Open CDC Framework, licensed CC BY 4.0.*

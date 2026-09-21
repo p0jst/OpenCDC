@@ -13,7 +13,7 @@ hide:
 
 <p class="ocdf-lead" markdown>
 **A free, community-maintained framework for Security Operations Centers and
-Cyber Defence Centers in the European Union** — built on NIST CSF 2.0, anchored
+Cyber Defence Centers in the European Union**, built on NIST CSF 2.0, anchored
 in the CIA triad, and mapped to NIS2, GDPR, DORA and the laws of all 27 member
 states.
 </p>
@@ -42,7 +42,7 @@ states.
     The [introduction](docs/00-introduction.md) explains the design principles,
     [Start here](docs/09-start-here.md) orders your first 90 days and first year,
     and the [implementation tiers](docs/10-tiers.md) tell you which capabilities
-    apply at your size — Essential, Standard or Advanced.
+    apply at your size: Essential, Standard or Advanced.
 
 -   :material-hexagon-multiple-outline:{ .lg .middle } **The six functions**
 
@@ -50,7 +50,7 @@ states.
 
     [Govern](docs/01-govern.md) · [Identify](docs/02-identify.md) ·
     [Protect](docs/03-protect.md) · [Detect](docs/04-detect.md) ·
-    [Respond](docs/05-respond.md) · [Recover](docs/06-recover.md) — each with
+    [Respond](docs/05-respond.md) · [Recover](docs/06-recover.md), each with
     concrete capabilities, CIA mapping, maturity criteria and EU regulatory hooks.
 
 -   :material-scale-balance:{ .lg .middle } **EU regulatory layer**
@@ -76,8 +76,8 @@ states.
 
     ---
 
-    [Ready-to-copy templates](templates/index.md) — charter, IR plan, detection
-    use cases, KPIs, job descriptions — and
+    [Ready-to-copy templates](templates/index.md): charter, IR plan, detection
+    use cases, KPIs and job descriptions, plus
     [IR & forensics playbooks](playbooks/README.md) for Windows 11, macOS,
     Windows Server and Linux servers.
 
@@ -87,7 +87,7 @@ states.
 
     Everything is CC BY 4.0 on [GitHub](https://github.com/p0jst/open-cdc-framework):
     read [about the project](ABOUT.md), see the [roadmap](ROADMAP.md), or
-    [contribute](CONTRIBUTING.md) — national annexes especially welcome.
+    [contribute](CONTRIBUTING.md); national annexes especially welcome.
     Need it offline? Download the whole framework as a
     [zip from GitHub](https://github.com/p0jst/open-cdc-framework/archive/refs/heads/main.zip).
 
@@ -125,7 +125,7 @@ states.
 </div>
 
 !!! note "Scope"
-    The framework targets **enterprise IT environments** (endpoints, servers,
-    identity, cloud/SaaS). It is not designed for OT/ICS, telco core networks or
-    classified environments — see [About](ABOUT.md) for the reasoning. Orientation
-    only — not legal advice.
+    The framework targets **enterprise IT environments**: endpoints, servers,
+    identity, cloud and SaaS. It is not designed for OT/ICS, telco core networks or
+    classified environments; see [About](ABOUT.md) for the reasoning. Orientation
+    only, not legal advice.
