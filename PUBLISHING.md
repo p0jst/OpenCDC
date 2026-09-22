@@ -3,7 +3,7 @@
 Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capability model; SOC leads in the subtitle and metadata for discoverability.
 
 ## GitHub repository settings
-- Repository name: `open-cdc-framework`
+- Repository name: `OpenCDC`
 - Description: "Open CDC Framework (OCDF): an open source framework for building and maturing SOCs / Cyber Defence Centers in the EU. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model, playbooks, all 27 national annexes."
 - Topics: `soc` `security-operations-center` `cyber-defence-center` `csirt` `incident-response` `nist-csf` `nis2` `dora` `gdpr` `detection-engineering` `threat-intelligence` `maturity-model` `blue-team`
   Deliberately no `eu` topic: it is generic, carries enormous unrelated volume, and nobody browsing it is looking for a SOC framework. The European framing is already carried by `nis2`, `dora` and `gdpr`, which are specific enough that anyone arriving through them is in the audience.

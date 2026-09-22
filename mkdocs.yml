@@ -4,8 +4,8 @@ site_description: >-
   in the EU. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model,
   playbooks, all 27 national annexes.
 site_url: https://opencdc.org/
-repo_url: https://github.com/p0jst/open-cdc-framework
-repo_name: p0jst/open-cdc-framework
+repo_url: https://github.com/p0jst/OpenCDC
+repo_name: p0jst/OpenCDC
 # Unused while content.action.edit is off; kept so the repo link resolves and
 # so re-enabling the edit action is a one-line change. Note that if it is ever
 # re-enabled, index.md and templates/index.md are staged from site/ and need
@@ -83,7 +83,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/p0jst/open-cdc-framework
+      link: https://github.com/p0jst/OpenCDC
 copyright: >-
   Open CDC Framework · CC BY 4.0 · Not legal advice — verify regulatory
   references against EUR-Lex and national law.

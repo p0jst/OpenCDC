@@ -85,11 +85,11 @@ states.
 
     ---
 
-    Everything is CC BY 4.0 on [GitHub](https://github.com/p0jst/open-cdc-framework):
+    Everything is CC BY 4.0 on [GitHub](https://github.com/p0jst/OpenCDC):
     read [about the project](ABOUT.md), see the [roadmap](ROADMAP.md), or
     [contribute](CONTRIBUTING.md); national annexes especially welcome.
     Need it offline? Download the whole framework as a
-    [zip from GitHub](https://github.com/p0jst/open-cdc-framework/archive/refs/heads/main.zip).
+    [zip from GitHub](https://github.com/p0jst/OpenCDC/archive/refs/heads/main.zip).
 
 </div>
 
