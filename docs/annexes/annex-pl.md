@@ -2,6 +2,10 @@
 
 > **Status as of July 2026:** Pending, nearing adoption, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see CONTRIBUTING.md.
 
+| Last verified | Verified by | Second reviewer | Next review due |
+|---------------|-------------|-----------------|-----------------|
+| July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
+
 ## NIS2 implementation
 
 | Field | Value |

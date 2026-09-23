@@ -28,7 +28,7 @@
 
 - EDR network isolation preferred; otherwise MDM-based network restriction or physical disconnect.
 - **Do not power off** if live collection is still possible. Volatile data and decrypted FileVault state are lost with it.
-- Revoke the user's cloud sessions/tokens; rotate credentials from a clean device.
+- Block the user's sign-in, then revoke their cloud sessions and tokens immediately; rotate credentials from a clean device. Revoking while the account is still enabled lets a password holder sign straight back in.
 - If the device may be remotely wiped by the adversary, as in a stolen Apple ID or MDM compromise, isolate from network *and* record MDM/Apple ID state immediately.
 
 ## 4. Evidence acquisition — order of volatility

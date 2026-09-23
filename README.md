@@ -10,7 +10,7 @@
 
 ---
 
-> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning and the roadmap for a future OT profile.
+> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the roadmap for the OT profile planned for v0.3.
 
 ## Why this framework exists
 
@@ -42,7 +42,7 @@ Cross-cutting documents, in reading order:
 | # | Document | What it gives you |
 |---|----------|-------------------|
 | 07 | [CIA Triad as a Design Lens](docs/07-cia-triad.md) | How Confidentiality, Integrity and Availability drive every CDC decision |
-| 08 | [Maturity Model](docs/08-maturity-model.md) | Four maturity levels with concrete criteria per function |
+| 08 | [Maturity Model](docs/08-maturity-model.md) | Four maturity levels with concrete criteria per function, and how to reuse an existing SOC-CMM, SIM3 or CIS assessment |
 | 09 | [Start Here: Prioritisation](docs/09-start-here.md) | The first 90 days and first year, in order, with exit criteria and anti-priorities |
 | 10 | [Implementation Tiers](docs/10-tiers.md) | Essential / Standard / Advanced overlay: which capabilities apply at your size |
 | 11 | [Operating Models](docs/11-operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs and what can never be outsourced |
@@ -58,12 +58,12 @@ Cross-cutting documents, in reading order:
 Practical assets:
 
 - [`templates/`](templates/) — charter, IR plan, detection use case, KPI catalogue, ECSF job description, MSSP requirements checklist, containment action catalogue, controls register, annual operating calendar, skill self-assessment sheet in xlsx and csv.
-- [`playbooks/`](playbooks/) — IR + digital forensics playbooks for Windows 11 laptops, macOS laptops, Windows Server including domain controllers, and RHEL-class Linux servers, plus Microsoft and CISA baseline references.
+- [`playbooks/`](playbooks/) — attack-based playbooks for identity compromise, business email compromise and ransomware (drafts for field review), IR + digital forensics playbooks for Windows 11 laptops, macOS laptops, Windows Server including domain controllers, and RHEL-class Linux servers, plus Microsoft and CISA baseline references.
 - [`assessments/`](assessments/) — the Design Navigator, with its guiding questions per function, and the maturity self-assessment.
 - [`tools/regulatory-profile.html`](tools/regulatory-profile.html) — interactive law selector: tick the laws that apply, covering EU instruments and all 27 member states, and the references show or hide to match. Host via GitHub Pages or open locally.
 - [`tools/skill-matrix.html`](tools/skill-matrix.html) — team skill matrix: team members fill in the self-assessment sheet, the manager uploads the returned files and gets a skills heatmap, gap analysis against role targets, and train/mentor/hire recommendations. Host via GitHub Pages or open locally.
 - [`tools/maturity-assessment.html`](tools/maturity-assessment.html) — interactive maturity self-assessment: score every criterion on a five-point status scale, get automatic staged scoring, a score-vs-target chart, a resume link that restores your progress on any device, and an exportable snapshot to track the trend over time. Host via GitHub Pages or open locally.
-- [`docs/annexes/`](docs/annexes/) — national annexes for all 27 EU member states, status verified July 2026.
+- [`docs/annexes/`](docs/annexes/) — national annexes for all 27 EU member states, status verified July 2026. Each annex shows when it was last verified, by whom, and when the next review is due.
 
 ## Who is this for?
 
@@ -83,7 +83,7 @@ Practical assets:
 
 ## About the author & project
 
-Written by a practitioner who spent a decade in the field, the last four of them building and running a 24/7/365 CDC, and fell into most of the holes this framework now warns about. The full story, and what is deliberately out of scope: [ABOUT.md](ABOUT.md).
+Written by a practitioner who spent a decade in the field, the last four of them building and running a 24/7/365 CDC, and fell into most of the holes this framework now warns about. The author is Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber Defence Center, and the GitHub account p0jst is his. The full story, what is deliberately out of scope, and how the project is maintained: [ABOUT.md](ABOUT.md).
 
 ## Contributing
 

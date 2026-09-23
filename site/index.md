@@ -7,7 +7,7 @@ hide:
 
 <div class="ocdf-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>Open source</span> · <span>CC BY 4.0</span> · <span>Vendor-neutral</span> · <span>Built for the EU</span></p>
+<p class="ocdf-eyebrow"><span>v1.0.0</span> · <span>Open source</span> · <span>CC BY 4.0</span> · <span>Vendor-neutral</span> · <span>Built for the EU</span></p>
 
 # Build and mature your Cyber Defence Center
 
@@ -78,8 +78,9 @@ states.
 
     [Ready-to-copy templates](templates/index.md): charter, IR plan, detection
     use cases, KPIs and job descriptions, plus
-    [IR & forensics playbooks](playbooks/README.md) for Windows 11, macOS,
-    Windows Server and Linux servers.
+    [IR & forensics playbooks](playbooks/README.md) by attack (identity
+    compromise, business email compromise, ransomware) and by platform
+    (Windows 11, macOS, Windows Server and Linux servers).
 
 -   :material-source-branch:{ .lg .middle } **Open and community-maintained**
 
@@ -127,5 +128,14 @@ states.
 !!! note "Scope"
     The framework targets **enterprise IT environments**: endpoints, servers,
     identity, cloud and SaaS. It is not designed for OT/ICS, telco core networks or
-    classified environments; see [About](ABOUT.md) for the reasoning. Orientation
-    only, not legal advice.
+    classified environments; see [About](ABOUT.md) for the reasoning. Running
+    critical infrastructure? Read
+    [what still applies at the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure);
+    an OT profile is planned for v0.3. Orientation only, not legal advice.
+
+!!! info "How current is this?"
+    **Version 1.0.0**, released 2 September 2026; see the [changelog](CHANGELOG.md).
+    The national annexes were last verified in **July 2026** and each shows its
+    own verification date, reviewer and next review. The framework is written and
+    maintained by one practitioner, Frederik B. Krogsgaard, formerly Senior Manager at the
+    Norlys Cyber Defence Center; see [maintainers and adoption](ABOUT.md#maintainers-and-adoption).

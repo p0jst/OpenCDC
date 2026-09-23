@@ -17,11 +17,11 @@ Each of these was avoidable with the kind of structured, practitioner-written gu
 
 ## Who I am
 
-- Frederik B. Krogsgaard, Senior Manager @ Norlys Cyber Defence Center
+- Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber Defence Center, where I spent six years building and running monitoring for critical infrastructure
 - Certifications: SANS LDR553 Cyber Incident Management, LDR551 GSOM Building and Leading Security Operations Centers, FOR500 Windows Forensics, Application of the MITRE ATT&CK Framework, Investigation Theory, Effective Information Security Writing, Kusto Query Language for Security Analysts, and others.
 - Feel free to reach out at https://www.linkedin.com/in/frederikbogeskov/
 
-This is a personal, community-driven project. It is not affiliated with, endorsed by, or the position of my employer, nor of NIST, ENISA, MITRE, or any authority referenced in it.
+This is a personal, community-driven project. It is not affiliated with, endorsed by, or the position of any current or former employer, nor of NIST, ENISA, MITRE, or any authority referenced in it.
 
 ## What this project is — and is not
 
@@ -34,6 +34,37 @@ Explicitly out of scope for now:
 - Defence/classified environments and other regimes with their own mandatory frameworks.
 
 If you work in those domains, the GOVERN and maturity-model thinking still transfers. The technical content, meaning the PROTECT, DETECT and RESPOND playbooks, stays IT-specific.
+
+## If you run critical infrastructure
+
+Most of my career was spent in critical infrastructure, so I know the uncomfortable part of the scope line above: for a utility, the crown jewels are usually OT, and a framework that stops at the IT boundary covers less of what keeps you awake. Until the OT profile ships, this is how I would use OCDF in a CI setting.
+
+What applies as written:
+
+- **GOVERN, in full.** Mandate, charter, containment authority and reporting lines are no different for OT; if anything the authority question is sharper, because the CDC must know which actions it may *never* take on its own in an operational environment.
+- **The IT side of the IT/OT boundary.** Most OT incidents still arrive through IT: identity, remote access, supplier connections, engineering workstations and the historian or DMZ layer. Identity-first log onboarding, remote-access containment (CON-12) and backup isolation (CON-13) protect OT by protecting the paths into it.
+- **The maturity model, operating models, roles and the regulatory layer.** NIS2, CER and the national annexes apply to the organisation, not to one network.
+
+What the CDC should own at the boundary, even without an OT profile:
+
+- a current map of every IT/OT conduit, including supplier and vendor remote-access paths, with a named owner for each
+- monitoring of the conduits themselves: the IT/OT DMZ, jump hosts, engineering workstations and remote-access gateways
+- a written agreement with operations on who decides OT containment. The CDC advises; the plant or grid operator decides, because safety and availability outrank evidence in OT
+- a joint exercise at least once a year where an IT incident threatens to cross into OT
+
+What does **not** transfer: the platform playbooks. Isolating, rebooting or live-imaging an OT asset can have physical consequences. Use sector guidance (for example IEC 62443 and the ISA/IEC and ENISA OT material) and your vendors' procedures for anything below the DMZ.
+
+In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which goes beyond the EU baseline on 24/7 monitoring, segmentation and where operations centres may be located; see the [Danish annex](docs/annexes/annex-dk.md). The OT/ICS extension profile is planned for v0.3 on the [roadmap](ROADMAP.md).
+
+## Maintainers and adoption
+
+The GitHub account [p0jst](https://github.com/p0jst) is mine. Today the framework has one maintainer, and I would rather say that plainly than let it be discovered. What that means in practice:
+
+- **Every page is dated.** The national annexes carry a status block with the date they were last verified, who verified them and when the next review is due. An annex without a second reviewer says so.
+- **Releases are versioned.** The current version is on the front page and in the [changelog](CHANGELOG.md); cite the version when you cite the framework.
+- **Reviewers wanted.** A second reviewer per national annex, and practitioners willing to check the maturity criteria against their own CDC, would do more for the framework's credibility than anything I can write. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+**Using OCDF?** If your team uses the framework and is willing to be listed, open an issue or a discussion. No organisation is listed here until it has asked to be.
 
 ## How you can help
 

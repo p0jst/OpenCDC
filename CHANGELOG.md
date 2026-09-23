@@ -1,5 +1,16 @@
 # Changelog — Open CDC Framework
 
+## Unreleased
+
+Changes from a practitioner review of the site: a CDC manager from critical infrastructure read it cold and listed what would stop them relying on it.
+
+- **Critical infrastructure and OT.** ABOUT gains "If you run critical infrastructure": what applies as written, what the CDC should own at the IT/OT boundary even without an OT profile, and what does not transfer. The OT/ICS profile moves from "Later" to v0.3 on the roadmap. The landing page and README link to the new section.
+- **Annex currency.** All 27 national annexes open with a status block: last verified, verified by, second reviewer and next review due. The annex index shows the same columns under a "one reviewer so far" warning and commits to re-verification at least every six months.
+- **Reusing past assessments.** The maturity model gains a SOC-CMM → OCDF mapping by aspect, a rough and explicitly uncalibrated score translation, and pointers to the existing SIM3 and CIS Controls crosswalks.
+- **Attack-based playbooks**, published as drafts for field review: PB-IDC identity compromise, PB-BEC business email compromise and PB-RAN ransomware. They sit above the platform playbooks and hand off to them. PB-IDC fixes the containment order explicitly: block sign-in first, then revoke sessions immediately, because revoking while the account is enabled lets a password holder sign straight back in.
+- **Trust signals.** The landing page shows the version and a "How current is this?" box. ABOUT gains "Maintainers and adoption", which states that there is one maintainer, that p0jst is the author, and invites teams to ask to be listed as users.
+- **Author bio** updated to "formerly Senior Manager at the Norlys Cyber Defence Center" on the About page, README and landing page.
+
 ## v1.0.0 — 2026-09-02
 
 First stable release. The framework is content-complete across all six functions, the regulatory layer and the practical assets; see the release notes for status and limitations, in particular that the reporting-deadline tables have not had independent legal review and nine national annexes still carry verification flags.

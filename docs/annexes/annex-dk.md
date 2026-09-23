@@ -2,6 +2,10 @@
 
 > Status: community-maintained; verified July 2026. Verify against retsinformation.dk and samsik.dk before relying on it. Not legal advice.
 
+| Last verified | Verified by | Second reviewer | Next review due |
+|---------------|-------------|-----------------|-----------------|
+| July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
+
 ## The Danish implementation landscape
 
 Denmark implemented NIS2 and CER through a **family of laws** in force since 2025, rather than a single act:

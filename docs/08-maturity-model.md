@@ -81,9 +81,57 @@ Targets are risk decisions. Set them in GOVERN, with executive sign-off.
 | Model | Relationship |
 |-------|--------------|
 | **NIST CSF 2.0 Tiers** | OCDF levels are function-scoped rather than organisation-scoped, but philosophically aligned, Tier 1↔L1 through Tier 4↔L4. |
-| **SOC-CMM** | Much finer-grained, with 5 domains, ~25 aspects and continuous scoring. Recommended as a deep-dive follow-up once OCDF assessment identifies weak functions. SOC-CMM © Rob van Os, available free at soc-cmm.com. |
+| **SOC-CMM** | Much finer-grained, with 5 domains, ~25 aspects and continuous scoring. Recommended as a deep-dive follow-up once OCDF assessment identifies weak functions. To reuse an existing SOC-CMM assessment, see the mapping below. SOC-CMM © Rob van Os, available free at soc-cmm.com. |
 | **CMMI** | Conceptual ancestor of all staged maturity models; not security-specific. |
 | **ENISA CSIRT Maturity Framework** | Focused on national/sectoral CSIRTs; relevant if your CDC provides CSIRT services externally. Based on the Open CSIRT Foundation's SIM3. |
+
+## Reusing an existing SOC-CMM or SIM3 assessment
+
+Many teams arrive at OCDF with an assessment they have already paid for, in time or money. It should not be thrown away. The mappings below let you carry its evidence across and use its results as a starting hypothesis for the OCDF scores.
+
+### SOC-CMM → OCDF
+
+SOC-CMM groups its aspects into five domains. The table maps each aspect to the OCDF capabilities and documents where the same ground is covered.
+
+| SOC-CMM domain | SOC-CMM aspect | OCDF capabilities | Where in OCDF |
+|----------------|----------------|-------------------|---------------|
+| Business | Business drivers | GV-2, ID-3 | [Govern](01-govern.md), [Identify](02-identify.md) |
+| Business | Customers | GV-1, GV-7 | [Govern](01-govern.md) |
+| Business | Charter | GV-1 | [Charter template](../templates/cdc-charter-template.md) |
+| Business | Governance | GV-4, GV-5, GV-7 | [Govern](01-govern.md) |
+| Business | Privacy & policy | GV-3, PR-3 | [Govern](01-govern.md), [EU regulatory landscape](17-eu-regulatory-landscape.md) |
+| People | Employees | GV-5 | [Roles & competences](12-roles-and-competences.md) |
+| People | Roles & hierarchy | GV-4 | [Operating models](11-operating-models.md), [Roles & competences](12-roles-and-competences.md) |
+| People | People management | — | [Roles & competences](12-roles-and-competences.md), [Running the CDC](13-cdc-operations.md) |
+| People | Knowledge management | RS-2 | [Running the CDC](13-cdc-operations.md), [CSIRT community layer](16-csirt-community.md) |
+| People | Training & education | — | [Roles & competences](12-roles-and-competences.md) |
+| Process | SOC management | GV-7, RC-5 | [Running the CDC](13-cdc-operations.md) |
+| Process | Operations & facilities | PR-7 | [Operating models](11-operating-models.md), [Running the CDC](13-cdc-operations.md) |
+| Process | Reporting & communication | GV-7, RS-5, RC-4 | [Metrics & KPI template](../templates/metrics-kpi-template.md) |
+| Process | Use case management | DE-2, DE-4 | [Detect](04-detect.md), [Detection use case template](../templates/detection-use-case-template.md) |
+| Process | Detection engineering & validation | DE-2, DE-6 | [Detection-as-code deep dive](14-detection-as-code-deep-dive.md) |
+| Technology | SIEM / analytics tooling | DE-1, DE-2 | [Detect](04-detect.md) |
+| Technology | IDPS and network tooling | DE-7, PR-6 | [Detect](04-detect.md), [Protect](03-protect.md) |
+| Technology | Automation & orchestration | RS-4 | [Running the CDC](13-cdc-operations.md) |
+| Services | Security monitoring | DE-1, DE-3, DE-4 | [Detect](04-detect.md) |
+| Services | Security incident management | RS-1 to RS-7 | [Respond](05-respond.md) |
+| Services | Security analytics and forensics | RS-3, DE-3 | [Respond](05-respond.md), [Playbooks](../playbooks/README.md) |
+| Services | Threat intelligence | ID-5 | [CTI deep dive](15-cti-deep-dive.md) |
+| Services | Threat hunting | DE-5 | [Detect](04-detect.md) |
+| Services | Vulnerability management | ID-4, PR-5 | [Identify](02-identify.md), [Protect](03-protect.md) |
+| Services | Log management | DE-1 | [Detect](04-detect.md) |
+
+*Aspect names are paraphrased from SOC-CMM 2.x and may differ from the current release; consult soc-cmm.com for the authoritative list. OCDF's RECOVER function has no close SOC-CMM equivalent, so score it directly.*
+
+**Translating scores, as a rough guide only.** SOC-CMM scores maturity continuously from 0 to 5; OCDF uses four staged levels. As a starting hypothesis, an aspect scoring below 1.5 suggests OCDF Level 1, 1.5 to 2.5 suggests Level 2, 2.5 to 3.5 suggests Level 3, and above 3.5 suggests Level 4. This translation is not calibrated against real paired assessments. Two cautions apply:
+
+- **Take the lowest, not the average.** OCDF scoring is staged. If a function maps to several SOC-CMM aspects, the weakest one is the best predictor of the OCDF level.
+- **Carry the evidence, then re-score.** The value of an earlier assessment is its evidence: documents, interviews, metric exports. Attach that evidence to the OCDF criteria and score the criteria directly. Do not report a translated number as an OCDF score.
+
+### SIM3 and CIS Controls
+
+- **SIM3**, for teams with a TF-CSIRT or ENISA-style assessment: the crosswalk is in the [CSIRT community layer](16-csirt-community.md), section 3. SIM3's emphasis on documented, reviewed and independently verified process maps most closely to the *implemented & evidenced* status above.
+- **CIS Controls**, for teams with a CIS IG1–IG3 self-assessment: see the [CIS Controls crosswalk](18-cis-controls-crosswalk.md).
 
 ## Sources
 

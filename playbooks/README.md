@@ -1,7 +1,19 @@
 # Playbooks
 
-Basic incident response + digital forensics playbooks, per platform.
+Two kinds of playbook: **by attack**, for what you reach for first when the call comes in, and **by platform**, for the forensics on a specific machine. Attack playbooks point to the platform ones where the work moves to a host.
 All are vendor-neutral; open source tooling examples are non-normative.
+
+## By attack
+
+| ID | Scenario | Status | File |
+|----|----------|--------|------|
+| PB-IDC | Identity compromise: stolen passwords, tokens, MFA or app consent | Draft | [PB-IDC-identity-compromise.md](PB-IDC-identity-compromise.md) |
+| PB-BEC | Business email compromise and payment fraud | Draft | [PB-BEC-business-email-compromise.md](PB-BEC-business-email-compromise.md) |
+| PB-RAN | Ransomware | Draft | [PB-RAN-ransomware.md](PB-RAN-ransomware.md) |
+
+Drafts are published for field review: usable, but not yet checked by anyone other than the maintainer. Corrections and your own lessons are welcome via CONTRIBUTING.md.
+
+## By platform
 
 | ID | Platform | File |
 |----|----------|------|

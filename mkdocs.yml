@@ -167,6 +167,9 @@ nav:
           - Annual operating calendar: templates/annual-calendar-template.md
       - Playbooks:
           - Overview: playbooks/README.md
+          - "Attack: identity compromise": playbooks/PB-IDC-identity-compromise.md
+          - "Attack: business email compromise": playbooks/PB-BEC-business-email-compromise.md
+          - "Attack: ransomware": playbooks/PB-RAN-ransomware.md
           - Windows 11 laptop: playbooks/PB-W11-windows11-laptop.md
           - macOS laptop: playbooks/PB-MAC-macos-laptop.md
           - Windows Server: playbooks/PB-WSV-windows-server.md
