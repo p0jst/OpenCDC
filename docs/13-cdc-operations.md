@@ -1,5 +1,7 @@
 # 13 — Running the CDC: Tuning, Detection-as-Code, and Team Development
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Operating practice from running a CDC.</p>
+
 > The build documents 01–06 describe *what* to establish. This document describes three operational loops that determine whether the CDC improves or decays after go-live. It targets S-tier and above; E-tier teams apply the tuning loop in simplified form or demand it of their MSSP.
 
 ## 1. The alert tuning loop

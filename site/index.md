@@ -7,7 +7,7 @@ hide:
 
 <div class="ocdf-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>v1.0.0</span> · <span>Open source</span> · <span>CC BY 4.0</span> · <span>Vendor-neutral</span> · <span>Built for the EU</span></p>
+<p class="ocdf-eyebrow"><span>v1.1.0</span> · <span>Open source</span> · <span>CC BY 4.0</span> · <span>Vendor-neutral</span> · <span>Built for the EU</span></p>
 
 # Build and mature your Cyber Defence Center
 
@@ -62,12 +62,12 @@ gets it done.
 
     ---
 
-    The operational detail: [running the CDC](docs/13-cdc-operations.md),
+    The operational detail: [detection](docs/04-detect.md),
     [detection-as-code](docs/14-detection-as-code-deep-dive.md), the
     [CTI capability](docs/15-cti-deep-dive.md) and the
     [IR playbooks](playbooks/README.md).
 
-    [Detect →](docs/04-detect.md)
+    [Running the CDC →](docs/13-cdc-operations.md)
 
 -   :material-scale-balance:{ .lg .middle } **Compliance or legal**
 
@@ -145,14 +145,14 @@ fictional 2,500-person organisation in the [worked example](docs/worked-example.
 
 </div>
 
-All [templates](templates/index.md) and the three
-[browser tools](tools/README.md) work offline, and nothing you enter leaves your
-browser. The whole framework is on [GitHub](https://github.com/p0jst/OpenCDC)
+The [templates](templates/index.md) are plain documents to copy and adapt. The
+three [browser tools](tools/README.md) run entirely in your browser: nothing you
+enter is sent anywhere. The whole framework is on [GitHub](https://github.com/p0jst/OpenCDC)
 under CC BY 4.0, also as a
 [zip download](https://github.com/p0jst/OpenCDC/archive/refs/heads/main.zip).
 
 !!! info "How current is this, and who wrote it?"
-    **Version 1.0.0**, released 2 September 2026; see the [changelog](CHANGELOG.md).
+    **Version 1.1.0**, released 23 September 2026; see the [changelog](CHANGELOG.md).
     Written and maintained by one practitioner, Frederik B. Krogsgaard, formerly
     Senior Manager at the Norlys Cyber Defence Center. Each national annex shows
     when it was last verified and how confident that verification is.
@@ -166,4 +166,4 @@ under CC BY 4.0, also as a
     classified environments; see [About](ABOUT.md) for the reasoning. Running
     critical infrastructure? Read
     [what still applies at the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure);
-    an OT profile is planned for v1.2. Orientation only, not legal advice.
+    an OT profile is on the [roadmap](ROADMAP.md). Orientation only, not legal advice.

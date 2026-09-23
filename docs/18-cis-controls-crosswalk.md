@@ -1,5 +1,7 @@
 # 18 — CIS Controls Crosswalk: Concrete Actions per Control
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>CIS Controls v8.1 as published; the actions per control are this framework's.</p>
+
 > All 18 CIS Critical Security Controls v8 and v8.1 mapped to this framework, each with the concrete actions a CDC should drive or verify. Use it three ways: as a gap check asking which controls have no owner, as the business-facing prioritisation narrative of doc 09, and as an implementation checklist per tier, since CIS Implementation Groups align with OCDF tiers: IG1≈Essential, IG2≈Standard, IG3≈Advanced. The CDC rarely *operates* all of these; it must *require, verify and consume* them instead.
 
 | # | CIS Control | OCDF ref | Concrete actions |

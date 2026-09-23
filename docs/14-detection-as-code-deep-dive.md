@@ -1,5 +1,7 @@
 # 14 — Deep Dive: Detection-as-Code and ATT&CK Mapping, Advanced tier
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Engineering practice; ATT&CK and Sigma references are to the published projects.</p>
+
 > Doc 13 §2 states the principles; this document is the engineering manual. Audience: detection engineers and technical leads in S/A-tier CDCs, or teams demanding this of an MSSP. Everything below is vendor-neutral; Sigma is used as the authoring format because it is open and convertible to most platforms.
 
 ## 1. Repository layout

@@ -1,5 +1,7 @@
 # PB-WSV — Incident Response & Digital Forensics: Windows Server, including Domain Controllers
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Scope:** Suspected compromise of a Windows Server: file and application servers, IIS web tiers, Hyper-V hosts, and **Active Directory domain controllers**. Covers webshells, credential theft, ransomware staging, lateral movement and domain privilege escalation. Related capabilities: RS-2, RS-3, DE-3.
 > **Servers ≠ laptops:** containment has direct **Availability** impact on business services. The pre-agreed authority matrix in the CDC charter §4 governs who may isolate what. <!-- law:nis2 -->
 >

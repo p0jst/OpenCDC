@@ -1,5 +1,7 @@
 # PB-W11 — Incident Response & Digital Forensics: Windows 11 Laptop
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Scope:** Suspected compromise of a Windows 11 corporate laptop: malware, credential theft, insider cases, ransomware precursors. Related capabilities: RS-2, RS-3, DE-3.
 > **Legal note:** Laptop data includes employee personal data. Follow your monitoring legal basis under GDPR, involve the DPO for insider cases, and use the chain-of-custody form for anything that may reach court or a regulator. <!-- law:gdpr -->
 

@@ -1,5 +1,7 @@
 # PB-RAN — Incident Response: Ransomware
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Status: draft.** Attack-based playbook, published for field review. Tailor it to your estate, backup architecture and authority matrix before relying on it, and send corrections via CONTRIBUTING.md.
 > **Scope:** Encryption in progress or discovered, a ransom note, or high-confidence precursors such as backup deletion, mass credential dumping or security tooling being disabled. Enterprise IT only: for anything touching OT, operations decides containment; see [ABOUT](../ABOUT.md). Related capabilities: RS-1 to RS-6, RC-1 to RC-3.
 > **Legal note:** Assume data was exfiltrated before encryption until you can show otherwise. Most current ransomware operations steal first. <!-- law:gdpr -->

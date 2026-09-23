@@ -1,5 +1,7 @@
 # 15 — Deep Dive: Building a CTI Capability That Feeds the CDC, Advanced tier
 
+<p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag practitioner">Practitioner</span>Built on published intelligence practice, applied from experience.</p>
+
 > Threat intelligence fails in one of two ways: it becomes a feed of indicators nobody contextualises, or a stream of elegant reports nobody operationalises. This document describes a CTI function whose explicit job is to make the rest of the CDC better: detection engineering, hunting, vulnerability management, incident response and governance. Audience: S/A-tier teams standing up or professionalising CTI. E-tier teams should consume their national CSIRT and sector ISAC, and skip to §6.
 
 ## 1. The three levels — and who each one serves

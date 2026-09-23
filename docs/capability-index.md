@@ -1,5 +1,7 @@
 # Capability Index
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
+
 Every capability in the framework, with the document that defines it and the
 lowest [implementation tier](10-tiers.md) that should adopt it. The framework
 addresses capabilities by ID throughout, so this is the page to come back to

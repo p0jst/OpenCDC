@@ -303,6 +303,24 @@
   .actions-list button[data-s="2"]{border-left-color:var(--s2)}
   .actions-list .aown{display:block;font-size:.72rem;color:var(--eu);margin-top:2px}
   .actions-list .aown.none{color:var(--accent)}
+  .plink{font-size:.72rem;text-transform:none;letter-spacing:0;font-weight:400}
+  .bprofile{display:grid;grid-template-columns:1fr 1fr;gap:6px 8px;font-size:.74rem;color:var(--muted)}
+  .bprofile label{display:flex;flex-direction:column;gap:2px}
+  .bprofile select{font-size:.78rem;padding:4px 6px;width:100%}
+  .bout{margin-top:10px;font-size:.8rem}
+  .bout .bnote{color:var(--muted);font-size:.78rem;margin:0}
+  .bout table{border-collapse:collapse;width:100%;font-size:.78rem;margin-top:6px}
+  .bout th,.bout td{border-bottom:1px solid var(--line-soft);padding:4px 5px;text-align:left}
+  .bout .num{text-align:right;font-variant-numeric:tabular-nums}
+  .bout .gsel{font-size:.78rem;padding:3px 6px;margin-left:4px}
+  .ahead{color:var(--ok);font-weight:600}.behind{color:var(--accent);font-weight:600}
+  details.contrib{margin-top:12px;border-top:1px solid var(--line-soft);padding-top:10px}
+  details.contrib summary{cursor:pointer;font-size:.84rem;font-weight:600;color:var(--eu)}
+  details.contrib p{font-size:.78rem;color:var(--muted);margin:8px 0}
+  details.contrib pre{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.68rem;background:#f7f6f2;
+    border:1px solid var(--line-soft);border-radius:6px;padding:8px;white-space:pre-wrap;word-break:break-all;max-height:220px;overflow:auto}
+  .cbench{font-size:.72rem;color:var(--muted);margin:-4px 0 6px}
+  .cbench:empty{display:none}
   .plan-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);margin:0 0 8px}
   .ev input.own{flex:0 0 150px}
   .ev input.due{flex:0 0 130px}
@@ -314,7 +332,7 @@
   footer{max-width:1440px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted)}
 
   @media print{
-    .sitenav,.mbar,.head-actions,.ftabs,.fnav,details.setup,.resume,.rtabs,.strict,.chips,.ev input:placeholder-shown{display:none !important}
+    #bench,.cbench,.sitenav,.mbar,.head-actions,.ftabs,.fnav,details.setup,.resume,.rtabs,.strict,.chips,.ev input:placeholder-shown{display:none !important}
     header{background:#fff;color:var(--ink);border-bottom:2px solid var(--ink)}
     header p,.doc-id{color:var(--muted)}
     .workspace{display:block;padding:0}
@@ -443,6 +461,44 @@
     <p class="pfoot">Reassess annually or after major change; review open actions quarterly. Export a snapshot
        each round to track the trend; see <a href="../docs/08-maturity-model/">reassessment cadence</a>.</p>
   </section>
+
+  <section class="pblock" id="bench">
+    <div class="ptitle"><span>Compare with others</span><a href="../docs/benchmark/" class="plink">How this works</a></div>
+    <div class="bprofile">
+      <label>Employees <select data-b="size"><option value="">—</option>
+        <option value="1-49">1–49</option><option value="50-249">50–249</option><option value="250-999">250–999</option>
+        <option value="1000-4999">1,000–4,999</option><option value="5000+">5,000 or more</option></select></label>
+      <label>NIS2 <select data-b="nis2"><option value="">—</option><option value="essential">Essential entity</option>
+        <option value="important">Important entity</option><option value="not-in-scope">Not in scope</option><option value="unsure">Not sure</option></select></label>
+      <label>Region <select data-b="region"><option value="">—</option><option>Nordics</option><option>Western Europe</option>
+        <option>Central and Eastern Europe</option><option>Southern Europe</option><option>Outside the EU</option></select></label>
+      <label>Sector <select data-b="sector"><option value="">—</option><option>Energy</option><option>Transport</option>
+        <option>Finance and insurance</option><option>Health</option><option>Water and waste</option>
+        <option>Digital infrastructure and ICT services</option><option>Public administration</option><option>Manufacturing</option>
+        <option>Postal and courier</option><option>Food</option><option>Research and education</option><option>Other</option></select></label>
+      <label>Operating model <select data-b="model"><option value="">—</option><option value="A">A: provider (MSSP)</option>
+        <option value="B">B: in-house, tiered</option><option value="C">C: in-house, capability-based</option>
+        <option value="hybrid">Hybrid</option><option value="D">D: shared CDC</option><option value="none">No SOC yet</option></select></label>
+    </div>
+    <div id="bench-out" class="bout"></div>
+    <details class="contrib" id="contrib">
+      <summary>Contribute your result anonymously</summary>
+      <p>Help build the benchmark. The contribution contains <b>only</b> the five answers above, the month, the
+         framework version and the status of each of the 60 criteria. It does <b>not</b> contain your organisation's
+         name, evidence notes, owners, due dates, targets or the assessors' names. You see exactly what is sent, and
+         nothing leaves your browser until you send it yourself.</p>
+      <button class="btn primary" id="contrib-prep">Prepare contribution</button>
+      <div id="contrib-out" hidden>
+        <pre id="contrib-json"></pre>
+        <div class="rrow">
+          <button class="btn primary" id="contrib-mail">Email it</button>
+          <button class="btn" id="contrib-dl">Download file</button>
+          <button class="btn" id="contrib-copy">Copy</button>
+        </div>
+        <p class="rnote" id="contrib-note"></p>
+      </div>
+    </details>
+  </section>
 </aside>
 
 </div>
@@ -473,8 +529,9 @@ const STATES = [
   {v:3, label:"Implemented",                short:"implemented"},
   {v:4, label:"Implemented & evidenced",    short:"implemented & evidenced"}
 ];
+const BENCH_FIELDS = ["size", "nis2", "region", "sector", "model"];
 function blankState(){
-  return { meta:{name:"",date:"",evrepo:"",profile:""}, states:{}, evidence:{}, owner:{}, due:{}, targets:{}, strict:false };
+  return { meta:{name:"",date:"",evrepo:"",profile:""}, bench:{}, states:{}, evidence:{}, owner:{}, due:{}, targets:{}, strict:false };
 }
 let state = blankState();
 function statusOf(key){ return state.states[key] || 0; }
@@ -529,6 +586,7 @@ function encodeState(){
   if(Object.keys(ev).length) payload.e = ev;
   if(Object.keys(ow).length) payload.o = ow;
   if(Object.keys(du).length) payload.d = du;
+  if(Object.values(state.bench || {}).some(Boolean)) payload.b = BENCH_FIELDS.map(k => state.bench[k] || "");
   return b64uEncode(new TextEncoder().encode(JSON.stringify(payload)));
 }
 
@@ -555,6 +613,7 @@ function decodeState(token){
   for(const [i, txt] of Object.entries(p.e || {})) if(keys[i]) s.evidence[keys[i]] = txt;
   for(const [i, txt] of Object.entries(p.o || {})) if(keys[i]) s.owner[keys[i]] = txt;
   for(const [i, txt] of Object.entries(p.d || {})) if(keys[i]) s.due[keys[i]] = txt;
+  (p.b || []).forEach((v, i) => { if(v && BENCH_FIELDS[i]) s.bench[BENCH_FIELDS[i]] = v; });
   return s;
 }
 
@@ -565,6 +624,7 @@ function migrate(s){
   const out = {...blankState(), ...s};
   if(!out.states) out.states = {};
   if(!out.owner) out.owner = {};
+  if(!out.bench) out.bench = {};
   if(!out.due) out.due = {};
   if(!out.evidence) out.evidence = {};
   if(s.checks){
@@ -823,6 +883,7 @@ function critHtml(f, lvl, i, text){
   const id = key.replace(/\|/g, "-");
   return `<div class="crit" data-state="${st}" data-critkey="${key}" id="c-${id}">
     <p class="ctext" id="t-${id}">${esc(text)}</p>
+    <p class="cbench" data-cb="${key}"></p>
     <div class="seg" role="radiogroup" aria-labelledby="t-${id}">
       ${STATES.map(s => `<label class="s${s.v}${s.v===st?" on":""}"><input type="radio" name="r-${id}" value="${s.v}" data-key="${key}"${s.v===st?" checked":""}>${esc(s.label)}</label>`).join("")}
     </div>
@@ -963,9 +1024,119 @@ function exportPlan(){
 }
 document.getElementById("export-plan").addEventListener("click", exportPlan);
 
+/* ------------------------------------------------------------------ *
+ * Community benchmark.  The aggregate is a static file published next to
+ * this page; reading it sends nothing about you.  Figures exist only for
+ * groups of at least min_group organisations, so a small group shows its
+ * count and nothing else.
+ * ------------------------------------------------------------------ */
+const BENCH_EMAIL = "benchmark@opencdc.org";
+const FRAMEWORK_VERSION = "1.1.0";
+let bench = null, benchErr = "";
+let benchGroup = "";
+fetch("benchmark.json", {cache:"no-cache"}).then(r => r.ok ? r.json() : Promise.reject(r.status))
+  .then(d => { bench = d; renderBench(); })
+  .catch(() => { benchErr = "The benchmark figures load when this page is opened on opencdc.org."; renderBench(); });
+
+function groupsFor(){
+  if(!bench) return [];
+  const want = [["size", state.bench.size], ["nis2", state.bench.nis2], ["region", state.bench.region], ["all", "all"]];
+  return want.filter(([, k]) => k).map(([by, key]) => ({by, key,
+    g: bench.groups.find(x => x.by === by && x.key === key),
+    n: by === "all" ? bench.contributions : ((bench.counts[by] || {})[key] || 0)}));
+}
+function groupLabel(by, key){
+  if(by === "all") return "all contributors";
+  if(by === "size") return "organisations with " + key.replace("-", "–") + " employees";
+  if(by === "nis2") return ({essential:"NIS2 essential entities", important:"NIS2 important entities",
+    "not-in-scope":"organisations outside NIS2", unsure:"organisations unsure of NIS2 status"})[key];
+  return "organisations in " + key;
+}
+function renderBench(){
+  const out = document.getElementById("bench-out");
+  if(!out) return;
+  document.querySelectorAll("#bench select[data-b]").forEach(s => s.value = state.bench[s.dataset.b] || "");
+  document.querySelectorAll(".cbench").forEach(e => e.textContent = "");
+  if(!bench){ out.innerHTML = `<p class="bnote">${esc(benchErr || "Loading benchmark…")}</p>`; return; }
+  const opts = groupsFor();
+  const avail = opts.filter(o => o.g);
+  if(!avail.length){
+    const lines = opts.filter(o => o.by !== "all").map(o => `${esc(groupLabel(o.by, o.key))}: ${o.n} so far`);
+    out.innerHTML = `<p class="bnote"><b>Not enough contributions yet.</b> Figures appear once a group has at least
+      ${bench.min_group} organisations, so no published number can describe a single one.
+      ${bench.contributions} contribution${bench.contributions === 1 ? "" : "s"} in total${lines.length ? "; " + lines.join("; ") : ""}.
+      ${Object.values(state.bench).some(Boolean) ? "" : "Tell us about your organisation above to see the group you would be compared with."}</p>`;
+    return;
+  }
+  if(!avail.some(o => o.by + "|" + o.key === benchGroup)) benchGroup = avail[0].by + "|" + avail[0].key;
+  const cur = avail.find(o => o.by + "|" + o.key === benchGroup);
+  const g = cur.g;
+  let rows = "";
+  for(const f of FUNCS){
+    const mine = functionScore(f), med = g.levels[f.id].median;
+    const cls = mine > med ? "ahead" : mine < med ? "behind" : "";
+    rows += `<tr><td>${esc(f.name)}</td><td class="num ${cls}">L${mine}</td><td class="num">L${med}</td></tr>`;
+  }
+  out.innerHTML = `<p class="bnote">Compared with
+      <select class="gsel" id="bench-group">${avail.map(o => `<option value="${o.by}|${esc(o.key)}"${o.by + "|" + o.key === benchGroup ? " selected" : ""}>${esc(groupLabel(o.by, o.key))} (n = ${o.g.n})</option>`).join("")}</select></p>
+    <table><thead><tr><th>Function</th><th class="num">You</th><th class="num">Median</th></tr></thead><tbody>${rows}</tbody></table>
+    <p class="bnote">Self-assessed contributions, updated ${esc(bench.generated)}. Context, not a target: your targets are a risk decision.</p>`;
+  document.getElementById("bench-group").addEventListener("change", e => { benchGroup = e.target.value; renderBench(); });
+  const keys = critList();
+  keys.forEach((k, i) => {
+    const el = document.querySelector(`.cbench[data-cb="${k}"]`);
+    if(el) el.textContent = `${g.in_place_pct[i]}% of ${groupLabel(cur.by, cur.key)} have this in place (n = ${g.n}).`;
+  });
+}
+document.querySelectorAll("#bench select[data-b]").forEach(s => s.addEventListener("change", () => {
+  if(s.value) state.bench[s.dataset.b] = s.value; else delete state.bench[s.dataset.b];
+  benchGroup = "";   // a changed profile means a new closest group
+  saveState(); renderBench();
+}));
+
+function contribution(){
+  const keys = critList();
+  return {
+    ocdf_benchmark: 1,
+    framework: FRAMEWORK_VERSION,
+    month: new Date().toISOString().slice(0, 7),
+    size: state.bench.size || "", nis2: state.bench.nis2 || "", region: state.bench.region || "",
+    sector: state.bench.sector || "", model: state.bench.model || "",
+    evidence_based: !!state.strict,
+    statuses: keys.map(k => statusOf(k)).join("")
+  };
+}
+document.getElementById("contrib-prep").addEventListener("click", () => {
+  const c = contribution();
+  const missing = BENCH_FIELDS.filter(k => !c[k]);
+  const answered = Object.keys(state.states).length;
+  const note = document.getElementById("contrib-note");
+  document.getElementById("contrib-out").hidden = false;
+  document.getElementById("contrib-json").textContent = JSON.stringify(c, null, 1);
+  const problems = [];
+  if(missing.length) problems.push("answer all five questions above first (missing: " + missing.join(", ") + ")");
+  if(answered < 20) problems.push("score more of the criteria first; only " + answered + " of 60 have a status");
+  ["contrib-mail", "contrib-dl", "contrib-copy"].forEach(id => document.getElementById(id).disabled = problems.length > 0);
+  note.textContent = problems.length ? "Before you send: " + problems.join("; ") + "."
+    : "Email opens your mail program with this text ready to send to " + BENCH_EMAIL + ". Your email address is only used to receive it and is never published.";
+});
+document.getElementById("contrib-mail").addEventListener("click", () => {
+  location.href = "mailto:" + BENCH_EMAIL + "?subject=" + encodeURIComponent("OCDF benchmark contribution") +
+    "&body=" + encodeURIComponent(JSON.stringify(contribution()));
+});
+document.getElementById("contrib-dl").addEventListener("click", () => {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(contribution(), null, 1)], {type:"application/json"}));
+  a.download = "ocdf-benchmark-contribution.json"; a.click(); URL.revokeObjectURL(a.href);
+});
+document.getElementById("contrib-copy").addEventListener("click", async () => {
+  try{ await navigator.clipboard.writeText(JSON.stringify(contribution())); document.getElementById("contrib-note").textContent = "Copied. Paste it into an email to " + BENCH_EMAIL + "."; }catch(e){}
+});
+
 function renderAll(skipFunctions){
   renderMbar(); renderMeta(); renderTiles(); renderChart(); renderResult(); renderActions(); renderTabs();
   if(!skipFunctions) renderFunctions(); else refreshPanels();
+  if(bench) renderBench();
 }
 
 ["f-name","f-date","f-evrepo"].forEach(id => document.getElementById(id).addEventListener("input", e => {

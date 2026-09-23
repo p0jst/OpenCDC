@@ -1,5 +1,7 @@
 # 11 — Choosing Your Operating Model
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>The models and decision path are this framework's; staffing figures and trade-offs come from experience.</p>
+
 > **This is a decision document.** Before designing anything in DETECT or RESPOND, the organisation must choose how 24/7/365 monitoring and alerting will be operated. There are three core archetypes plus a shared/community variant, each with real trade-offs. Related: GOVERN GV-5, navigator question G6, charter template §3/§6.
 
 ## The three archetypes
@@ -123,6 +125,17 @@ That is where the framework's 8–12 FTE for a 24/7 in-house line comes from. A 
 - no containment action on crown jewels taken alone at night; record in the [containment action catalogue](../templates/containment-action-catalogue-template.md)'s notes column which actions need a second person
 - a welfare check-in and a clear rule for when to wake the on-call lead, so the analyst is never deciding alone whether something is serious enough
 - or an A+C hybrid, where a provider with several analysts on shift holds the night and your team holds the day
+
+The same method explains the **3–4 people for business hours with on-call** quoted in DETECT:
+
+| Line | Hours per year | FTE, using 1,576 h |
+|------|----------------|--------------------|
+| One seat, weekdays 07–17 | 250 days × 10 h = 2,500 | 1.6 |
+| Detection engineering and improvement work | — | 1 |
+| Lead, often combined with an analyst role | — | 0.5–1 |
+| **Total** | | **≈ 3–4** |
+
+With fewer than four people on the on-call rota, each person is on call more than one week in four, which is hard to sustain for long; that, not the daytime seat, is usually what sets the minimum.
 
 ### What it costs
 

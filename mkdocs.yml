@@ -93,14 +93,14 @@ nav:
   - Start:
       - OCDF on one page: docs/one-page.md
       - Executive guide: docs/executive-guide.md
-      - Introduction & design principles: docs/00-introduction.md
       - "Start here: the first 90 days": docs/09-start-here.md
       - Implementation tiers: docs/10-tiers.md
       - Worked example: docs/worked-example.md
-      - Reading guide: docs/README.md
       - Design navigator for workshops: assessments/cdc-design-navigator.md
       - Maturity self-assessment: assessments/maturity-self-assessment.md
   - Framework:
+      - Introduction & design principles: docs/00-introduction.md
+      - All documents in reading order: docs/README.md
       - The six functions:
           - Govern: docs/01-govern.md
           - Identify: docs/02-identify.md
@@ -157,6 +157,7 @@ nav:
       # section's first page into the section title, which hid this page.
       - Interactive tools:
           - Overview: tools/README.md
+          - Community benchmark: docs/benchmark.md
       - Templates:
           - Overview & downloads: templates/index.md
           - CDC charter: templates/cdc-charter-template.md

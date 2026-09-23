@@ -1,5 +1,7 @@
 # 08 — Maturity Model
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's model, informed by the NIST CSF tiers and CMMI. Not a certification standard.</p>
+
 ## Design
 
 The OCDF maturity model defines **four levels**, applied to each of the six CSF functions. The level names and philosophy are informed by the NIST CSF 2.0 **Tiers** of Partial, Risk Informed, Repeatable and Adaptive, and by the general structure of CMMI-style capability maturity models; teams already using Rob van Os's **SOC-CMM** will find the levels easy to cross-map.
@@ -79,7 +81,7 @@ Set the target in GOVERN alongside the maturity targets, and record it in the ch
 | Organisation type | Typical coverage-hours target |
 |-------------------|-------------------------------|
 | SME, low regulatory exposure | Business hours, with on-call or an MSSP out of hours |
-| NIS2 *important* entity | Out-of-hours detection by MSSP, NOC or on-call, able to meet the 24 h early-warning clock |
+| NIS2 *important* entity | Out-of-hours detection of serious alerts by MSSP, NOC or on-call, with a responder who can start the 24 h early-warning process at any hour |
 | NIS2 *essential* entity / DORA financial entity | 24/7 detection, in-house or hybrid, with a named responder reachable around the clock |
 | Critical infrastructure, high-threat sectors | 24/7 detection and 24/7 response authority, including for OT boundary events |
 
@@ -99,6 +101,15 @@ National or sector law can set the floor for you: Danish energy-sector entities,
 | **SOC-CMM** | Much finer-grained, with 5 domains, ~25 aspects and continuous scoring. Recommended as a deep-dive follow-up once OCDF assessment identifies weak functions. To reuse an existing SOC-CMM assessment, see the mapping below. SOC-CMM © Rob van Os, available free at soc-cmm.com. |
 | **CMMI** | Conceptual ancestor of all staged maturity models; not security-specific. |
 | **ENISA CSIRT Maturity Framework** | Focused on national/sectoral CSIRTs; relevant if your CDC provides CSIRT services externally. Based on the Open CSIRT Foundation's SIM3. |
+
+## Comparing with other organisations
+
+The [self-assessment tool](../tools/maturity-assessment.html) can compare your
+scores with other organisations of the same size, NIS2 category or region, using
+anonymous contributions from its users. The comparison is context, not a target:
+set targets from your own risks, as above. How it works, what a contribution
+contains, and what other published surveys have found in the meantime:
+[community benchmark](benchmark.md).
 
 ## Reusing an existing SOC-CMM or SIM3 assessment
 

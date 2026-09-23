@@ -1,5 +1,7 @@
 # 07 — The CIA Triad as a Design Lens
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>The triad is a long-standing security model, reflected in GDPR Art. 32; its use as a design lens is this framework's.</p>
+
 ## Why the triad still matters
 
 Confidentiality, Integrity and Availability are the three canonical objectives of information security, codified among others in the ISO/IEC 27000 definitions and NIST FIPS 199. Frameworks come and go; the triad is the constant test: **every control, detection, and process in your CDC should be traceable to at least one triad objective.** If it isn't, it's probably theatre.

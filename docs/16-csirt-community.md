@@ -1,5 +1,7 @@
 # 16 — The CSIRT Community Layer: Networking, Certification, and Living Documentation
 
+<p class="src" markdown><span class="src-tag guidance">Guidance</span>RFC 2350, FIRST, TF-CSIRT and SIM3 as published; the crosswalk to this framework is paraphrased.</p>
+
 > A CDC that operates alone learns slowly. Europe has a mature CSIRT community infrastructure of trust networks, certification schemes and maturity audits that most new CDCs discover years too late. This document covers joining it, and the documentation discipline that community certification forces upon you, which is worth adopting even if you never certify.
 
 ## 1. Publish who you are: RFC 2350

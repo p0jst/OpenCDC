@@ -1,5 +1,7 @@
 # 17 — EU Regulatory Landscape for CDC/SOC Teams
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the text itself and your national law; not legal advice.</p>
+
 > ⚠️ **This is orientation, not legal advice.** Directives are transposed into national law with variations; always verify against your member state's implementation and consult legal counsel.
 
 ## The core instruments

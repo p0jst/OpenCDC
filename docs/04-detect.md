@@ -66,7 +66,7 @@ The traditional split, where infrastructure maintains the server and OS and the 
 - **Tier 1/2 analysts**, or a tierless model at higher maturity, for triage and investigation.
 - **Detection engineers** — use case lifecycle; in small teams combined with analyst role.
 - **Threat hunter** — Level 3+ capability.
-- Minimum viable team for business-hours monitoring: **3–4 FTE**. One seat staffed around the clock takes roughly **5.5–6 FTE** once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at **8–12 FTE**, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](11-operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
+- Minimum viable team for business-hours monitoring with on-call: **3–4 FTE**. One seat staffed around the clock takes roughly **5.5–6 FTE** once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at **8–12 FTE**, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](11-operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
 
 ## Maturity criteria
 

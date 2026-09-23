@@ -1,5 +1,7 @@
 # OCDF on one page
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>A summary of this framework's terms.</p>
+
 The framework uses a handful of ideas many times over. Learn these and every
 other page reads faster.
 
@@ -26,7 +28,7 @@ require it.
 | **Capability** | Something the CDC must be able to do, with an ID such as `DE-2` (detection engineering). 43 in total. | [Capability index](capability-index.md) |
 | **Tier E · S · A** | Essential, Standard, Advanced. Which capabilities apply at your size. Higher tiers include the lower ones. | [Implementation tiers](10-tiers.md) |
 | **Level 1–4** | Initial, Managed, Established, Optimising. How well you run the capabilities you have. Staged: a level counts only when every criterion at it and below is met. | [Maturity model](08-maturity-model.md) |
-| **Criterion status** | Each maturity criterion is scored on five states, from *not considered* to *implemented & evidenced*. Only the top two count. | [Scoring method](08-maturity-model.md#criterion-status-scale) |
+| **Criterion status** | Each maturity criterion is scored on five states, from *not considered* to *implemented & evidenced*. Only the top two count, or only the top one with evidence-based scoring. | [Scoring method](08-maturity-model.md#criterion-status-scale) |
 | **Evidence** | The document, export or test result that proves a criterion. Without it, a self-assessment is an opinion. | [Self-assessment tool](../tools/maturity-assessment.html) |
 | **Operating model** | Who runs the watch: a provider (A), an in-house tiered SOC (B), an in-house capability-based team (C), a hybrid, or a shared CDC (D). | [Operating models](11-operating-models.md) |
 | **[GATE] [HARD] [SOFT]** | How much a capability depends on another department: a decision it must take, work it must do, or input that improves the result. | [Introduction](00-introduction.md#dependency-markers-gate-hard-soft) |

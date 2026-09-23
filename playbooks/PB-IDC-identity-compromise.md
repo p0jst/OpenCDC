@@ -1,5 +1,7 @@
 # PB-IDC — Incident Response: Identity Compromise
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Status: draft.** Attack-based playbook, published for field review. Tailor it to your identity platform and authority matrix before relying on it, and send corrections via CONTRIBUTING.md.
 > **Scope:** A user, administrator or service identity is suspected to be in adversary hands: password spray or stuffing success, MFA fatigue or adversary-in-the-middle phishing, token theft, malicious OAuth consent, or anomalous sign-ins. Related capabilities: PR-1, DE-3, RS-2, RS-4. Examples use Microsoft Entra ID and Active Directory because they are the most common; the steps apply to any identity provider.
 > **Legal note:** Sign-in and mailbox data are personal data. Follow your monitoring legal basis under GDPR and involve the DPO where the investigation reaches mailbox content. <!-- law:gdpr -->

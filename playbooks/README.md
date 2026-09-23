@@ -1,5 +1,7 @@
 # Playbooks
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227.</p>
+
 Two kinds of playbook: **by attack**, for what you reach for first when the call comes in, and **by platform**, for the forensics on a specific machine. Attack playbooks point to the platform ones where the work moves to a host.
 All are vendor-neutral; open source tooling examples are non-normative.
 

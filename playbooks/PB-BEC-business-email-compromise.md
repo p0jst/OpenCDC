@@ -1,5 +1,7 @@
 # PB-BEC — Incident Response: Business Email Compromise
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Status: draft.** Attack-based playbook, published for field review. Tailor it to your mail platform, finance processes and authority matrix before relying on it, and send corrections via CONTRIBUTING.md.
 > **Scope:** A mailbox is compromised, or impersonated, to redirect payments, request data or phish onward: invoice and payment-redirection fraud, CEO fraud, supplier account takeover, and internal phishing from a trusted sender. Related capabilities: PR-9, DE-3, RS-2, RS-5. For the underlying account takeover, run [PB-IDC](PB-IDC-identity-compromise.md) alongside this playbook.
 > **Legal note:** Mailbox content is personal data, often about third parties. Involve the DPO before reviewing message content and keep the review to what the investigation needs. <!-- law:gdpr -->

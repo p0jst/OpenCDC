@@ -1,5 +1,7 @@
 # 10 — Implementation Tiers: Essential, Standard, Advanced
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's tiers, a pattern borrowed from the CIS Controls implementation groups.</p>
+
 ## One framework, three ambition levels
 
 Not every organisation needs every capability. Instead of maintaining three editions, OCDF uses a **tier overlay**, a pattern borrowed from the CIS Controls' Implementation Groups: every capability is tagged with the lowest tier that should implement it. Higher tiers include everything below them.

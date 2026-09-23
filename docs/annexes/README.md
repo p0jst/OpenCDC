@@ -1,9 +1,12 @@
 # National Annexes — all 27 EU member states
 
+<p class="src" markdown><span class="src-tag law">Law</span>National implementations, summarised. Check each annex's confidence level and sources; not legal advice.</p>
+
 Per-country NIS2 implementation status, competent authority, national CSIRT and
-CDC-relevant notes. Status column reflects verification as of **July 2026**;
-national situations change, so treat "verify" flags seriously and open an issue
-with corrections.
+CDC-relevant notes. The **Status** column gives the legal status of the national
+law as of the last verification in **July 2026**; the **Confidence** column says
+how thoroughly that was checked. National situations change, so treat "verify"
+flags seriously and open an issue with corrections.
 
 > **One reviewer so far.** Every annex has been verified by the maintainer only.
 > Before you cite an annex to an auditor or regulator, check the date it was

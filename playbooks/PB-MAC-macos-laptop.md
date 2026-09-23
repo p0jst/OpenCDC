@@ -1,5 +1,7 @@
 # PB-MAC — Incident Response & Digital Forensics: macOS Laptop
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Scope:** Suspected compromise of a corporate macOS laptop on Apple Silicon or Intel. Related capabilities: RS-2, RS-3, DE-3.
 > **Legal note:** Employee personal data considerations apply as on Windows: legal basis, DPO involvement, chain of custody. <!-- law:gdpr -->
 

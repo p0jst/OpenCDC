@@ -8,3 +8,7 @@ _site_build/
 # Python bytecode from site/hooks.py
 __pycache__/
 *.pyc
+
+# Raw benchmark contributions. Never commit these: only the aggregated
+# tools/benchmark.json, with small groups suppressed, is published.
+benchmark/submissions/

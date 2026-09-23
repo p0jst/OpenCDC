@@ -17,15 +17,16 @@ to act does.
 
 <p class="src"><span class="src-tag practitioner">Practitioner</span>The author's reading of where a CDC changes outcomes.</p>
 
-- **Time the attacker has.** Most damage in ransomware and data theft happens
-  in the hours or days between first access and discovery. Detection shortens
-  that time; nothing else does.
+- **Time the attacker has.** Much of the damage in ransomware and data theft
+  happens between first access and discovery. Good detection is the most direct
+  way to shorten that time.
 - **Blast radius.** A CDC with pre-agreed authority to isolate a laptop or
   disable an account contains an incident in minutes. Without it, the same
   decision waits for a meeting.
-- **The legal clock.** NIS2 gives 24 hours for an early warning to the
-  authorities. That is only possible if someone is watching and knows the
-  reporting path.
+- **The legal clock.** NIS2 gives 24 hours from the moment you become aware of
+  a significant incident to send an early warning. Meeting it at 02:00 on a
+  Sunday takes someone who can recognise the incident, knows the reporting path
+  and has the authority to use it.
 - **Recovery that works.** Tested restores and a rebuild procedure decide
   whether an incident costs days or months.
 
@@ -41,14 +42,15 @@ to act does.
   business continuity and backup, supply-chain security, basic cyber hygiene
   and training, access control, and multi-factor authentication. Incident
   handling cannot be done without a detection and response capability.
-- **Reporting (Art. 23).** Significant incidents: early warning within 24 hours,
-  notification within 72 hours, final report within one month.
+- **Reporting (Art. 23).** Significant incidents: early warning within 24 hours of
+  becoming aware, notification within 72 hours, final report within one month.
 - **Penalties (Art. 34).** Member states must allow maximum fines of at least
   €10 million or 2% of worldwide annual turnover, whichever is higher, for
   essential entities, and at least €7 million or 1.4% for important entities.
 
-Financial entities are covered by DORA instead, with a four-hour initial report
-after an incident is classified as major. Your country's rules are in its
+Financial entities are covered by DORA instead: an initial report within four
+hours of classifying an incident as major, and no later than 24 hours after
+becoming aware of it. Your country's rules are in its
 [national annex](annexes/README.md); the full mapping is in the
 [EU regulatory landscape](17-eu-regulatory-landscape.md).
 

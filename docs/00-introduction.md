@@ -1,10 +1,14 @@
 # 00 — Introduction & Design Principles
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's scope and design principles, built on NIST CSF 2.0.</p>
+
 ## Purpose
 
 This framework describes **what a Cyber Defence Center (CDC) must be able to do**, **how to build those capabilities from zero**, and **how to measure maturity over time**. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
 
 ## Terminology
+
+The four terms below are the foundation; every other term the framework uses is explained in [OCDF on one page](one-page.md).
 
 - **CDC**, a Cyber Defence Center, is an organisational capability that governs, prevents, detects, responds to and recovers from cyber threats. We use CDC and SOC (Security Operations Center) interchangeably; "CDC" emphasises that the capability is broader than monitoring alone.
 - **NIST CSF 2.0** — the NIST Cybersecurity Framework version 2.0, published February 2024, organised into six functions: Govern, Identify, Protect, Detect, Respond, Recover.

@@ -28,7 +28,7 @@ Two layers keep the framework filterable:
 2. **Markdown docs:** law-specific sentences carry an HTML comment tag such as
    `<!-- law:nis2 -->` or `<!-- law:dk-nis2 -->`. These are invisible on GitHub
    but machine-readable, so future tooling can filter the plain docs the same way.
-   Roadmap v1.1 has a build script that generates per-profile Markdown and PDF.
+   The roadmap includes a build script that generates per-profile Markdown and PDF.
 
 ### Law IDs
 `nis2` `gdpr` `dora` `cra` `cer` for EU-wide instruments ·
@@ -67,7 +67,7 @@ GDPR: collect it transparently, use it for development only, keep access limited
 The tool reads `.xlsx` natively, using zip plus XML via the browser's built-in
 `DecompressionStream`, no libraries, and `.csv`. Parsing is positional-free:
 it locates the header row containing `Skill ID`, then matches rows by skill ID
-from `GV-01` to `PF-05`, takes the first digit 0–3 found in the level column, and
+from `GV-01` to `PF-05` (two-digit skill IDs, a separate scheme from the framework's capability IDs such as `GV-1`), takes the first digit 0–3 found in the level column, and
 reads `Name` / `Role` / `Date` from labelled rows above the table. Keep the
 skill IDs and the `Skill ID` header intact when translating or re-styling the
 sheet. Everything else is free: column order, extra columns, formatting.
@@ -117,6 +117,13 @@ screen.
   and **exports the action plan as a spreadsheet file** (semicolon-separated
   with a byte-order mark, so it opens in columns in Excel, including Danish and
   other comma-decimal locales).
+- **Community benchmark.** Tell the tool your size band, NIS2 category, region,
+  sector and operating model, and it compares your level per function with the
+  median of similar organisations, and shows for each criterion the share that
+  have it in place. Figures come from anonymous contributions and appear only for
+  groups of ten or more. You can contribute your own result from the same panel:
+  you see exactly what is included before you send it, by email, yourself. See
+  [the community benchmark](../docs/benchmark.md).
 - **Target profiles** from [`docs/08-maturity-model.md`](../docs/08-maturity-model.md)'s
   target-setting table, covering SME, NIS2 important and essential, and critical infrastructure,
   pre-fill a target per function, individually adjustable.

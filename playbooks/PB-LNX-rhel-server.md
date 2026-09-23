@@ -1,5 +1,7 @@
 # PB-LNX — Incident Response & Digital Forensics: RHEL-class Linux Enterprise Server
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
+
 > **Scope:** Suspected compromise of an enterprise RHEL-class Linux server, and by extension SLES or Ubuntu Server with path adjustments. Covers webshells, cryptominers, rootkits, lateral movement, ransomware on file/virtualisation servers. Related capabilities: RS-2, RS-3, DE-3.
 > **Servers ≠ laptops:** containment decisions have direct **Availability** impact on business services. The pre-agreed authority matrix in the CDC charter §4 governs who may isolate what. <!-- law:nis2 -->
 

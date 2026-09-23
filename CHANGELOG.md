@@ -2,6 +2,23 @@
 
 ## Unreleased
 
+- **Community benchmark, open for contributions.** The maturity self-assessment gains a *Compare with others* panel: tell it your size band, NIS2 category, region, sector and operating model, and once enough organisations have contributed it shows the median level per function for similar organisations, and for each criterion the share that have it in place. Figures are published only for groups of ten or more, one attribute at a time. Users can contribute their own result anonymously: the tool shows exactly what is included (the five answers, the month, the framework version and the 60 statuses; no names, evidence, owners, dates or targets) and the user sends it by email. Raw contributions are never published; `benchmark/aggregate.py` produces the public `tools/benchmark.json` and scores exactly as the tool does. A new page explains the benchmark and summarises what SOC-CMM and ENISA have published in the meantime.
+
+## v1.1.0 — 2026-09-23
+
+A usability and scoring release, built from three practitioner reviews of v1.0.0. It changes two DETECT maturity criteria; see **Scoring changes** below before comparing an assessment with one made under v1.0.0.
+
+Corrections from a final self-review before release:
+
+- **Version and roadmap.** The site said v1.0.0 while its criteria had changed; this release is v1.1.0, and the release checklist in PUBLISHING.md now lists all six places the version appears. The roadmap groups planned work as Next, After that and Later instead of future version numbers, so plans can move without renumbering.
+- **Source labels on every framework document**, not only the six functions and Start here, and the trust page now describes exactly what was checked: identical criteria in the checklist and the tool, and every capability ID in the index.
+- **NIS2 clock described precisely.** The 24 hours run from becoming aware of a significant incident. The executive guide, the worked example and the coverage-hours table argued as if the clock started at the attack.
+- **DORA timing completed:** four hours from classification as major, and no later than 24 hours from awareness.
+- **Overclaim removed.** The executive guide said nothing but detection shortens attacker dwell time.
+- **Business-hours staffing explained.** The 3–4 people for business hours with on-call now has its arithmetic, next to the 24/7 calculation, including why the on-call rota usually sets the minimum.
+- **Clearer labels:** the annex index separates legal status from confidence; the one-page overview mentions evidence-based scoring; skill IDs such as `GV-01` are explained as separate from capability IDs such as `GV-1`.
+- **Navigation.** The Start menu drops from nine entries to seven; the introduction and the reading-order index move to Framework. The analyst entry on the landing page leads to Running the CDC, and the landing page no longer claims templates "work offline".
+
 Changes from a third review, by a senior SOC/CDC manager, whose verdict was "an excellent framework, not yet an equally excellent product": the content was stronger than the experience of finding your way into it.
 
 - **New landing page.** Entry points by role (executive, SOC manager, analyst or engineer, compliance), the whole framework in one picture, and a seven-step "start building" path that links each step to the page or tool that does it. The old six feature cards are folded into these.
@@ -14,7 +31,7 @@ Changes from a third review, by a senior SOC/CDC manager, whose verdict was "an 
 - **Maturity tool: owner and due date per criterion, and an action-plan export.** The open-actions list shows who owns each gap and by when, counts how many are still unowned, and exports as a spreadsheet file that opens directly in Excel, including Danish Excel. Owners and dates travel in the resume link and the snapshot file; older links still open.
 - **Capability index filters** by function, by the tier you are at, and by free text.
 - **Unsourced claim reworded.** "Evidence-free self-assessment inflates scores by roughly one level" was stated as fact in four places; it is now presented as the author's observation.
-- **Roadmap.** The cloud CDC profile moves up to v1.2 with the scope the review proposed; v1.1 gains filled-in template examples, worked examples at other sizes and a machine-readable framework; a CDC builder is added under Later.
+- **Roadmap.** The cloud CDC profile moves up from Later with the scope the review proposed; the next group of work gains filled-in template examples, worked examples at other sizes and a machine-readable framework; a CDC builder is added under Later.
 
 ### Not taken up from the review
 
@@ -26,7 +43,7 @@ Changes from a second, deliberately critical review by a senior SOC manager:
 
 - **Staffing and cost, with the arithmetic.** [Operating models](docs/11-operating-models.md) gains "Staffing and cost: the arithmetic": how many people one seat takes around the clock, worked through step by step with inputs to replace; how the 8–12 FTE figure for a 24/7 line is built; how to make the lone night analyst safe; the cost lines to estimate, and what to watch for in each; and a three-year comparison table across the operating models. The staffing notes in DETECT and Model B now link to it.
 - **ATT&CK coverage metric tightened.** The metrics template now counts only techniques in your threat profile at level 3 on the honesty scale from the detection-as-code deep dive, drops the fixed 70% target in favour of a trend with the uncovered techniques named, and adds whole-matrix coverage and rule counts to the anti-patterns.
-- **Roadmap renumbered.** The planned releases after v1.0.0 were labelled v0.2 and v0.3; they are now v1.1 and v1.2, and the roadmap explains how releases are numbered. References in ABOUT, README, the landing page, the tools README and the IR plan template follow.
+- **Roadmap regrouped.** The planned work after v1.0.0 was labelled v0.2 and v0.3, lower than the release already out. It is now grouped as Next, After that and Later, so plans can move without renumbering, and the roadmap explains how releases are numbered. References in ABOUT, README, the landing page, the tools README and the IR plan template follow.
 
 ### Scoring changes
 
@@ -41,7 +58,7 @@ The interactive self-assessment keeps the same number and order of criteria, so 
 
 Changes from a practitioner review of the site: a CDC manager from critical infrastructure read it cold and listed what would stop them relying on it.
 
-- **Critical infrastructure and OT.** ABOUT gains "If you run critical infrastructure": what applies as written, what the CDC should own at the IT/OT boundary even without an OT profile, and what does not transfer. The OT/ICS profile moves from "Later" to v1.2 on the roadmap. The landing page and README link to the new section.
+- **Critical infrastructure and OT.** ABOUT gains "If you run critical infrastructure": what applies as written, what the CDC should own at the IT/OT boundary even without an OT profile, and what does not transfer. The OT/ICS profile moves up from "Later" on the roadmap. The landing page and README link to the new section.
 - **Annex currency.** All 27 national annexes open with a status block: last verified, verified by, second reviewer and next review due. The annex index shows the same columns under a "one reviewer so far" warning and commits to re-verification at least every six months.
 - **Reusing past assessments.** The maturity model gains a SOC-CMM → OCDF mapping by aspect, a rough and explicitly uncalibrated score translation, and pointers to the existing SIM3 and CIS Controls crosswalks.
 - **Attack-based playbooks**, published as drafts for field review: PB-IDC identity compromise, PB-BEC business email compromise and PB-RAN ransomware. They sit above the platform playbooks and hand off to them. PB-IDC fixes the containment order explicitly: block sign-in first, then revoke sessions immediately, because revoking while the account is enabled lets a password holder sign straight back in.

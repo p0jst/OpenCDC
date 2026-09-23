@@ -7,7 +7,7 @@ which is which.
 
 ## The five labels
 
-Sections that make claims carry a label under their heading:
+The framework documents carry these labels. Most have one under the title; the six function documents, Start here and the executive guide label each section instead, because their sections draw on different sources:
 
 | Label | What it means | Examples | How far to rely on it |
 |-------|---------------|----------|-----------------------|
@@ -25,8 +25,9 @@ Sections that make claims carry a label under their heading:
   official versions on EUR-Lex in [references and credits](19-references.md).
 - The national annexes each show when they were last verified, by whom, and how
   confident that verification is. See the [annex index](annexes/README.md).
-- The framework's own documents are consistent with each other: capability IDs,
-  maturity criteria and templates match across pages and tools.
+- The 60 maturity criteria are identical in the printable checklist and the
+  interactive tool, and every capability ID used in the documents appears in the
+  [capability index](capability-index.md).
 
 **Not checked:**
 
@@ -37,6 +38,8 @@ Sections that make claims carry a label under their heading:
   many CDCs.
 - **One maintainer.** Most national annexes have no second reviewer yet.
 - **No listed adopters.** No organisation has yet asked to be named as a user.
+- **Benchmark figures are self-assessed.** When the [community benchmark](benchmark.md)
+  starts publishing, its figures come from organisations scoring themselves.
 
 ## Who is behind it
 
@@ -51,8 +54,8 @@ not affiliated with any employer, NIST, ENISA, MITRE or any authority. See
 - Treat **Law** labels as a starting point for your lawyer, not a conclusion.
 - Treat **OCDF** and **Practitioner** content as a well-argued proposal. Where
   your context differs, your judgement wins, and the framework says so.
-- Cite the version: "Open CDC Framework v1.0.0". Criteria can change between
-  versions; the [changelog](../CHANGELOG.md) lists every change to scoring.
+- Cite the version shown on the front page, such as "Open CDC Framework v1.1.0".
+  Criteria can change between versions; the [changelog](../CHANGELOG.md) lists every change to scoring.
 - Report errors. Corrections, and second reviewers for the national annexes,
   are the most useful contributions. See [contributing](../CONTRIBUTING.md).
 

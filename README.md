@@ -3,14 +3,14 @@
 **An open source framework for building and maturing Security Operations Centers (SOC) and Cyber Defence Centers (CDC) across the European Union.**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![Version](https://img.shields.io/badge/version-v1.1.0-blue)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 **📖 Read the framework as a website: <https://opencdc.org/>** for searchable docs, interactive tools and template downloads.
 
 ---
 
-> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the roadmap for the OT profile planned for v1.2.
+> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the OT profile on the roadmap.
 
 ## Why this framework exists
 
