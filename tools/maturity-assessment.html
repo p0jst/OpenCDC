@@ -92,12 +92,13 @@
   :root{
     --ink:#1b2733; --paper:#fbfaf7; --line:#c9c4b8; --line-soft:#e6e2d8;
     --eu:#123a6d; --eu-dark:#0d2c54; --eu-soft:#e8eef7; --accent:#8a1f2d; --muted:#6b7280;
-    --ok:#1f6f43; --chipbg:#f1efe8; --barbg:#eeecE4;
+    --ok:#1f6f43; --chipbg:#f1efe8; --barbg:#eeece4;
+    --s0:#c9c4b8; --s1:#9aa7b4; --s2:#c98a1e; --s3:#123a6d; --s4:#1f6f43;
   }
   /* site nav — the tools are standalone pages outside the MkDocs theme,
      so they carry their own way back to the framework */
   .sitenav{background:var(--eu-dark);color:#cfdcef;font-size:.78rem;
-    padding:8px 28px;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+    padding:8px 24px;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
   .sitenav a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
   .sitenav a:hover{text-decoration:underline}
   .sitenav a.home{font-weight:600}
@@ -107,137 +108,216 @@
   body{margin:0;background:var(--paper);color:var(--ink);
     font-family:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
     font-size:15px;line-height:1.55}
-  header{background:var(--eu);color:#fff;padding:26px 28px;border-bottom:4px solid var(--accent)}
-  header h1{margin:0;font-size:1.35rem;font-weight:600;letter-spacing:.02em}
-  header p{margin:6px 0 0;max-width:78ch;color:#cfdcef;font-size:.92rem}
-  header p a{color:#fff;text-decoration:underline}
-  .doc-id{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.75rem;color:#9db6d8;letter-spacing:.12em;text-transform:uppercase}
-  main{max-width:1080px;margin:0 auto;padding:22px 28px 70px}
-  h2{font-size:1.08rem;border-bottom:2px solid var(--eu);padding-bottom:6px;margin:30px 0 12px;font-weight:650}
-  h3{font-size:.95rem;margin:0}
   a{color:var(--eu)}
+  button{font-family:inherit}
+
+  /* compact header: the work surface starts above the fold */
+  header{background:var(--eu);color:#fff;padding:16px 24px 14px;border-bottom:4px solid var(--accent)}
+  .head-inner{max-width:1440px;margin:0 auto;display:flex;gap:24px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+  header h1{margin:0;font-size:1.3rem;font-weight:600;letter-spacing:.01em}
+  header p{margin:4px 0 0;max-width:80ch;color:#cfdcef;font-size:.86rem}
+  header p a{color:#fff;text-decoration:underline}
+  .doc-id{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.72rem;color:#9db6d8;letter-spacing:.12em;text-transform:uppercase}
+  .head-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .head-actions .btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .head-actions .btn:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}
+
   .btn{border:1px solid var(--line);background:#fff;border-radius:6px;
-    padding:7px 13px;font-size:.85rem;cursor:pointer;color:var(--ink);font-family:inherit}
+    padding:6px 12px;font-size:.84rem;cursor:pointer;color:var(--ink)}
   .btn:hover{border-color:var(--eu);color:var(--eu)}
+  .btn.primary{background:var(--eu);color:#fff;border-color:var(--eu);font-weight:600}
+  .btn.primary:hover{background:var(--eu-dark);color:#fff}
   .btn.danger:hover{border-color:var(--accent);color:var(--accent)}
-  .btn:focus-visible{outline:2px solid var(--eu);outline-offset:2px}
+  .btn:focus-visible,.tab:focus-visible,.chip:focus-visible,.seg label:focus-within{outline:2px solid var(--eu);outline-offset:2px}
   select,input[type=text]{font-family:inherit;font-size:.85rem;padding:6px 8px;border:1px solid var(--line);
     border-radius:6px;background:#fff;color:var(--ink)}
 
-  /* meta fields */
-  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0 6px;
-    background:#fff;border:1px solid var(--line-soft);border-radius:8px;padding:14px 16px}
-  .meta label{display:block;font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
-  .meta input,.meta select{width:100%}
+  /* ---------- workspace: criteria left, live results right (SIM3-style) ---------- */
+  .workspace{max-width:1440px;margin:0 auto;padding:18px 24px 60px;
+    display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:24px;align-items:start}
+  @media (max-width:1100px){ .workspace{grid-template-columns:minmax(0,1fr)} .panel{position:static !important;max-height:none !important} }
 
-  /* tiles */
-  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
-  .tile{border:1px solid var(--line-soft);border-radius:8px;background:#fff;padding:12px 14px}
-  .tile .v{font-size:1.5rem;font-weight:650;color:var(--eu);line-height:1.2}
-  .tile .k{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+  /* function tabs */
+  .ftabs{position:sticky;top:0;z-index:5;background:var(--paper);padding:8px 0 0;
+    display:flex;gap:4px;overflow-x:auto;border-bottom:2px solid var(--eu);scrollbar-width:thin}
+  .tab{flex:1 0 auto;min-width:112px;border:1px solid var(--line-soft);border-bottom:0;background:#f3f1ea;
+    border-radius:8px 8px 0 0;padding:8px 12px 7px;cursor:pointer;text-align:left;color:var(--ink);
+    display:flex;flex-direction:column;gap:3px}
+  .tab:hover{background:#fff}
+  .tab .tname{font-weight:650;font-size:.92rem}
+  .tab .tmeta{display:flex;align-items:center;gap:7px;font-size:.74rem;color:var(--muted)}
+  .tab .tbar{flex:1;height:4px;border-radius:2px;background:var(--barbg);overflow:hidden;min-width:34px}
+  .tab .tbar i{display:block;height:100%;background:var(--eu)}
+  .tab[aria-selected="true"]{background:var(--eu);border-color:var(--eu);color:#fff}
+  .tab[aria-selected="true"] .tmeta{color:#cfdcef}
+  .tab[aria-selected="true"] .tbar{background:rgba(255,255,255,.25)}
+  .tab[aria-selected="true"] .tbar i{background:#fff}
+  .tab.below-target .tname::after{content:" •";color:var(--accent)}
+  .tab[aria-selected="true"].below-target .tname::after{color:#ffb4bf}
 
-  /* function cards */
-  .func{border:1px solid var(--line);border-left:4px solid var(--eu);border-radius:0 8px 8px 0;
-    background:#fff;margin:14px 0}
-  .func-head{display:flex;align-items:center;justify-content:space-between;gap:12px;
-    padding:12px 16px;cursor:pointer}
-  .func-head:hover{background:#f9f8f4}
-  .func-head h3{color:var(--eu)}
-  .func-badge{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted)}
-  .lvl-pill{display:inline-block;min-width:34px;text-align:center;border-radius:12px;padding:2px 10px;
-    font-weight:650;font-size:.82rem;background:var(--eu);color:#fff}
+  .fpanel{display:none;background:#fff;border:1px solid var(--line-soft);border-top:0;border-radius:0 0 8px 8px;padding:16px 18px 20px}
+  .fpanel.active{display:block}
+  .fhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .fhead h2{margin:0;font-size:1.15rem;color:var(--eu)}
+  .fhead .fcontrols{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--muted)}
+  .lvl-pill{display:inline-block;text-align:center;border-radius:12px;padding:2px 10px;
+    font-weight:650;font-size:.8rem;background:var(--eu);color:#fff;white-space:nowrap}
   .lvl-pill.l1{background:var(--barbg);color:var(--muted)}
-  .func-body{display:none;padding:0 16px 16px}
-  .func.open .func-body{display:block}
-  .func.open .chevron{transform:rotate(90deg)}
-  .chevron{display:inline-block;transition:transform .15s ease;color:var(--muted)}
-  .level-block{margin:12px 0}
-  .level-block h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 6px}
-  .crit{display:flex;align-items:flex-start;gap:10px;padding:6px 4px;border-radius:6px;
-    border-left:3px solid transparent}
-  .crit:hover{background:#f9f8f4}
-  .crit label{font-size:.88rem;display:block}
-  .crit input[type=text]{margin-top:4px;width:100%;font-size:.8rem;padding:4px 7px}
-  .crit .ev-wrap{flex:1;min-width:0}
-  /* five-state status control */
-  .crit select.state{flex:none;width:212px;margin-top:1px;font-size:.78rem;padding:5px 7px;
-    border-left-width:4px}
-  .crit[data-state="0"]{border-left-color:transparent}
-  .crit[data-state="1"]{border-left-color:#9aa7b4}
-  .crit[data-state="2"]{border-left-color:#c98a1e}
-  .crit[data-state="3"]{border-left-color:var(--eu)}
-  .crit[data-state="4"]{border-left-color:var(--ok)}
-  .crit[data-state="0"] select.state{border-left-color:var(--line);color:var(--muted)}
-  .crit[data-state="1"] select.state{border-left-color:#9aa7b4}
-  .crit[data-state="2"] select.state{border-left-color:#c98a1e}
-  .crit[data-state="3"] select.state{border-left-color:var(--eu)}
-  .crit[data-state="4"] select.state{border-left-color:var(--ok)}
-  .crit[data-state="3"] label,.crit[data-state="4"] label{color:var(--ink)}
-  .crit[data-state="0"] label{color:#55606c}
-  .scale-key{display:flex;gap:14px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);margin:6px 0 0}
-  .scale-key span{display:inline-flex;align-items:center;gap:6px}
-  .scale-key i{width:10px;height:10px;border-radius:2px;display:inline-block;font-style:normal}
-  .strict{display:flex;align-items:center;gap:8px;font-size:.82rem;margin:12px 0 0}
-  .strict input{width:15px;height:15px;accent-color:var(--eu)}
-  @media (max-width:640px){
-    .crit{flex-wrap:wrap}
-    .crit select.state{width:100%}
+  .fintro{font-size:.84rem;color:var(--muted);margin:0 0 6px}
+  .fintro a{color:var(--eu)}
+
+  .level-block{margin:18px 0 0}
+  .level-block h3{display:flex;align-items:center;gap:10px;font-size:.8rem;text-transform:uppercase;
+    letter-spacing:.07em;color:var(--muted);margin:0 0 8px;font-weight:650}
+  .level-block h3 .cnt{font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:0;text-transform:none;
+    background:var(--chipbg);border-radius:10px;padding:0 8px;font-weight:400}
+  .level-block h3 .cnt.done{background:#e3f1e8;color:var(--ok)}
+  .level-block h3::after{content:"";flex:1;border-bottom:1px solid var(--line-soft)}
+
+  /* a criterion: statement, one-click status row, evidence */
+  .crit{border:1px solid var(--line-soft);border-left:4px solid var(--s0);border-radius:0 8px 8px 0;
+    padding:10px 12px 10px;margin:0 0 8px;background:#fff;transition:background .15s ease,border-color .15s ease;scroll-margin-top:90px}
+  .crit[data-state="1"]{border-left-color:var(--s1)}
+  .crit[data-state="2"]{border-left-color:var(--s2);background:#fdf8ef}
+  .crit[data-state="3"]{border-left-color:var(--s3);background:#f5f8fc}
+  .crit[data-state="4"]{border-left-color:var(--s4);background:#f3f9f5}
+  .crit.flash{animation:flash 1.2s ease}
+  @keyframes flash{0%,40%{box-shadow:0 0 0 3px #f2c14e}100%{box-shadow:0 0 0 0 transparent}}
+  .crit .ctext{font-size:.92rem;font-weight:500;margin:0 0 8px}
+  .seg{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .seg label{position:relative;cursor:pointer;font-size:.74rem;line-height:1.25;text-align:center;
+    padding:6px 4px;border-right:1px solid var(--line-soft);color:var(--muted);background:#fff;user-select:none}
+  .seg label:last-child{border-right:0}
+  .seg label:hover{background:#f6f4ee;color:var(--ink)}
+  .seg input{position:absolute;opacity:0;pointer-events:none}
+  .seg label.on{color:#fff;font-weight:600}
+  .seg label.on.s0{background:#eeece4;color:var(--ink)}
+  .seg label.on.s1{background:var(--s1)}
+  .seg label.on.s2{background:var(--s2)}
+  .seg label.on.s3{background:var(--s3)}
+  .seg label.on.s4{background:var(--s4)}
+  .ev{margin-top:7px;display:flex;gap:8px;align-items:center}
+  .ev input{flex:1;min-width:0;font-size:.8rem;padding:5px 8px;border-color:var(--line-soft)}
+  .ev input:focus{border-color:var(--eu)}
+  @media (max-width:560px){ .seg{grid-template-columns:repeat(2,1fr)} .seg label{border-bottom:1px solid var(--line-soft)}
+    .seg label:last-child{grid-column:span 2;border-bottom:0} }
+
+  /* phones and narrow windows: the results panel sits below the criteria, so
+     keep a one-line summary in view that jumps to it */
+  .mbar{display:none}
+  @media (max-width:1100px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:10px;align-items:center;
+      justify-content:space-between;background:var(--eu-dark);color:#fff;padding:9px 16px;font-size:.84rem;
+      box-shadow:0 -2px 8px rgba(0,0,0,.15)}
+    .mbar .btn{background:#fff;color:var(--eu);border-color:#fff;font-weight:600;padding:5px 11px}
+    body{padding-bottom:52px}
   }
-  .target-row{display:flex;align-items:center;gap:8px;margin:10px 0 0;font-size:.82rem;color:var(--muted)}
 
-  /* chart */
-  .chartwrap{background:#fff;border:1px solid var(--line-soft);border-radius:8px;padding:16px 20px;margin:14px 0}
-  .barrow{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:.86rem}
-  .barrow .lbl{width:92px;flex:none;font-weight:600}
-  .bartrack{position:relative;flex:1;height:20px;background:var(--barbg);border-radius:4px;overflow:visible}
-  .barfill{position:absolute;left:0;top:0;height:100%;background:var(--eu);border-radius:4px;
-    transition:width .2s ease}
-  /* hatched extension: how far into the NEXT level the function has got */
-  .barprog{position:absolute;top:0;height:100%;border-radius:0 4px 4px 0;
-    background:repeating-linear-gradient(135deg,#9db6d8 0 5px,#c3d3e9 5px 10px);
-    transition:width .2s ease,left .2s ease}
-  .bartick{position:absolute;top:-3px;width:2px;height:26px;background:var(--accent)}
-  .barval{width:46px;flex:none;text-align:right;color:var(--muted);font-size:.8rem}
-  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:12px}
-  .legend .sw{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:5px}
+  .fnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
 
-  /* resume-link panel — the tool's most important affordance */
-  .resume{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;
-    background:var(--eu-soft);padding:14px 18px 16px;margin:18px 0 6px}
-  .resume h2{border:0;margin:0 0 4px;padding:0;font-size:.98rem;color:var(--eu);display:flex;
-    align-items:center;gap:8px}
-  .resume h2 .badge{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.62rem;letter-spacing:.12em;
-    text-transform:uppercase;background:var(--accent);color:#fff;border-radius:3px;padding:2px 7px;font-weight:600}
-  .resume p{margin:0 0 10px;font-size:.86rem;max-width:86ch}
-  .resume-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .resume-row input{flex:1 1 380px;min-width:0;font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;
-    font-size:.76rem;padding:8px 10px;background:#fff;border:1px solid var(--line);border-radius:6px;color:var(--muted)}
-  .resume-row .btn{background:var(--eu);color:#fff;border-color:var(--eu);font-weight:600}
-  .resume-row .btn:hover{background:var(--eu-dark,#0d2c54);color:#fff;border-color:var(--eu)}
-  .resume-row .btn.ghost{background:#fff;color:var(--ink);border-color:var(--line);font-weight:400}
-  .resume-row .btn.ghost:hover{background:#fff;color:var(--eu);border-color:var(--eu)}
-  .resume-note{margin:9px 0 0;font-size:.78rem;color:var(--muted)}
-  .resume-note b{color:var(--ink)}
-  .resume-warn{margin:8px 0 0;font-size:.78rem;color:var(--accent);display:none}
+  /* setup drawer above the tabs */
+  details.setup{background:#fff;border:1px solid var(--line-soft);border-radius:8px;margin:0 0 14px}
+  details.setup summary{cursor:pointer;padding:10px 14px;font-size:.88rem;font-weight:600;color:var(--eu);list-style:none;
+    display:flex;align-items:center;gap:8px}
+  details.setup summary::-webkit-details-marker{display:none}
+  details.setup summary::before{content:"▸";color:var(--muted);transition:transform .15s ease}
+  details.setup[open] summary::before{transform:rotate(90deg)}
+  details.setup summary .hint{font-weight:400;color:var(--muted);font-size:.8rem}
+  .setup-body{padding:0 14px 14px}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .meta label{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .meta input{width:100%}
+  .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0 0}
+  .scale-key{display:flex;gap:14px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);margin:12px 0 0}
+  .scale-key span{display:inline-flex;align-items:center;gap:6px}
+  .scale-key i{width:10px;height:10px;border-radius:2px;display:inline-block}
+  .setup-body p{font-size:.84rem;margin:12px 0 0;max-width:90ch}
+
+  /* ---------- results panel ---------- */
+  .panel{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;
+    background:#fff;border:1px solid var(--line-soft);border-radius:10px;box-shadow:0 1px 3px rgba(20,30,50,.06)}
+  .pblock{padding:14px 16px;border-bottom:1px solid var(--line-soft)}
+  .pblock:last-child{border-bottom:0}
+  .ptitle{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px;font-weight:650;
+    display:flex;justify-content:space-between;align-items:center;gap:8px}
+
+  /* resume link, kept small but always in view */
+  .resume .rrow{display:flex;gap:6px}
+  .resume input{flex:1;min-width:0;font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.72rem;
+    padding:6px 8px;color:var(--muted);background:#f7f6f2}
+  .resume .rnote{font-size:.76rem;color:var(--muted);margin:6px 0 0}
+  .resume-warn{display:none;font-size:.76rem;color:var(--accent);margin:6px 0 0}
   .resume.long .resume-warn{display:block}
-  #copy-flash{font-size:.8rem;color:var(--ok);opacity:0;transition:opacity .2s ease}
+  #copy-flash{font-size:.76rem;color:var(--ok);opacity:0;transition:opacity .2s ease;margin-left:4px}
   #copy-flash.on{opacity:1}
 
-  table.result{border-collapse:collapse;width:100%;font-size:.86rem;background:#fff;margin:10px 0}
+  /* target profile chips */
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{border:1px solid var(--line);background:#fff;border-radius:6px;padding:6px 9px;font-size:.76rem;
+    cursor:pointer;color:var(--ink);text-align:left;line-height:1.25;flex:1 1 150px}
+  .chip:hover{border-color:var(--eu)}
+  .chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  .chip small{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.68rem;opacity:.75;font-weight:400}
+  .strict{display:flex;align-items:flex-start;gap:8px;font-size:.78rem;margin:10px 0 0;color:var(--muted)}
+  .strict input{margin-top:3px;accent-color:var(--eu)}
+  .strict b{color:var(--ink)}
+
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .tile{background:var(--eu-soft);border-radius:6px;padding:7px 8px;text-align:center}
+  .tile .v{font-size:1.15rem;font-weight:650;color:var(--eu);line-height:1.2}
+  .tile .k{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;line-height:1.25;margin-top:2px}
+
+  .rtabs{display:flex;gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:0 0 12px}
+  .rtab{flex:1;border:0;border-right:1px solid var(--line);background:#fff;padding:6px 8px;font-size:.8rem;cursor:pointer;color:var(--ink)}
+  .rtab:last-child{border-right:0}
+  .rtab[aria-selected="true"]{background:var(--eu);color:#fff;font-weight:600}
+  .rview{display:none}.rview.active{display:block}
+
+  /* chart: rows are clickable and open that function's tab */
+  .barrow{display:flex;align-items:center;gap:8px;margin:0;padding:5px 6px;font-size:.84rem;border-radius:6px;cursor:pointer;
+    border:0;background:none;width:100%;text-align:left;color:var(--ink)}
+  .barrow:hover{background:#f6f4ee}
+  .barrow.cur{background:var(--eu-soft)}
+  .barrow .lbl{width:66px;flex:none;font-weight:600}
+  .bartrack{position:relative;flex:1;height:16px;background:var(--barbg);border-radius:4px}
+  .barfill{position:absolute;left:0;top:0;height:100%;background:var(--eu);border-radius:4px;transition:width .25s ease}
+  .barprog{position:absolute;top:0;height:100%;border-radius:0 4px 4px 0;
+    background:repeating-linear-gradient(135deg,#9db6d8 0 5px,#c3d3e9 5px 10px);transition:width .25s ease,left .25s ease}
+  .bartick{position:absolute;top:-3px;width:2px;height:22px;background:var(--accent)}
+  .barval{width:28px;flex:none;text-align:right;color:var(--muted);font-size:.78rem}
+  .gridlbl{display:flex;margin:2px 36px 0 80px;font-size:.66rem;color:var(--muted);justify-content:space-between}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:.72rem;color:var(--muted);margin-top:10px}
+  .legend .sw{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+
+  table.result{border-collapse:collapse;width:100%;font-size:.78rem}
   table.result th{background:var(--eu-soft);text-align:left;font-weight:600}
-  table.result th,table.result td{border:1px solid var(--line-soft);padding:7px 10px;vertical-align:top}
+  table.result th,table.result td{border:1px solid var(--line-soft);padding:5px 7px;vertical-align:top}
   .gap-note{color:var(--accent)} .met-note{color:var(--ok)}
-  .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0}
-  footer{max-width:1080px;margin:0 auto;padding:18px 28px;border-top:1px solid var(--line);
-    font-size:.78rem;color:var(--muted)}
+
+  .actions-list{list-style:none;margin:0;padding:0}
+  .actions-list li{margin:0}
+  .actions-list button{display:block;width:100%;text-align:left;border:0;border-left:3px solid var(--s0);background:#faf9f6;
+    padding:6px 9px;margin:0 0 5px;border-radius:0 6px 6px 0;font-size:.8rem;cursor:pointer;color:var(--ink);line-height:1.35}
+  .actions-list button:hover{background:var(--eu-soft)}
+  .actions-list button[data-s="1"]{border-left-color:var(--s1)}
+  .actions-list button[data-s="2"]{border-left-color:var(--s2)}
+  .actions-list .af{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block}
+  .empty{font-size:.82rem;color:var(--muted);margin:4px 0}
+  .pfoot{font-size:.74rem;color:var(--muted);margin:10px 0 0}
+
+  footer{max-width:1440px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted)}
+
   @media print{
-    .sitenav{display:none !important}
-    /* the resume panel is about the live page — it means nothing on paper */
-    .toolbar,#reset-all,.func-head .chevron,.resume,.strict{display:none !important}
+    .sitenav,.mbar,.head-actions,.ftabs,.fnav,details.setup,.resume,.rtabs,.strict,.chips,.ev input:placeholder-shown{display:none !important}
     header{background:#fff;color:var(--ink);border-bottom:2px solid var(--ink)}
     header p,.doc-id{color:var(--muted)}
-    header p a{color:var(--ink)}
-    .func-body{display:block !important}
+    .workspace{display:block;padding:0}
+    .panel{position:static;max-height:none;box-shadow:none;border:0}
+    .rview{display:block !important;margin-bottom:10px}
+    .fpanel{display:block !important;border:0;padding:0;page-break-inside:auto}
+    .seg label:not(.on){display:none}
+    .seg{display:inline-block;border:0}
+    .crit{page-break-inside:avoid}
     body{font-size:11px}
   }
 </style>
@@ -252,101 +332,120 @@
   <span class="sep">/</span><span class="here">Maturity self-assessment</span>
 </nav>
 
-
 <header>
-  <div class="doc-id">Open CDC Framework · Tool 03</div>
-  <h1>Maturity Self-Assessment</h1>
-  <p>Score each of the six CSF functions against the framework's four-level maturity model, right here in the
-     browser. Every criterion is rated on a five-point scale from <i>not considered</i> to
-     <i>implemented &amp; evidenced</i>; a level counts only when <b>every</b> criterion at that level and every
-     level below it is implemented. That is staged scoring, with no averaging up. See <a href="../docs/08-maturity-model/">the maturity model</a> for the
-     full method. Nothing is sent anywhere: your answers live in this browser and in your own
-     resume link.</p>
+  <div class="head-inner">
+    <div>
+      <div class="doc-id">Open CDC Framework · Tool 03</div>
+      <h1>Maturity Self-Assessment</h1>
+      <p>Pick a function, then click a status for each criterion; the score and open actions update as
+         you go. A level counts only when <b>every</b> criterion at that level and below is
+         implemented: staged scoring, no averaging up. See <a href="../docs/08-maturity-model/">the maturity model</a>.
+         Nothing is sent anywhere.</p>
+    </div>
+    <div class="head-actions">
+      <button class="btn" id="export-json">Export .json</button>
+      <button class="btn" id="import-json">Import</button>
+      <button class="btn" onclick="window.print()">Print / PDF</button>
+    </div>
+  </div>
 </header>
-
-<main>
-
-<section class="resume" id="resume">
-  <h2><span class="badge">Save &amp; resume</span> Your assessment lives in this link</h2>
-  <p>There is no account and no cookie behind this page. Everything you tick is encoded into the
-     address below, which updates as you work. <b>Copy it and keep it</b> in your notes, a
-     calendar invite or a mail to yourself, then open it whenever you want to carry on, on any
-     device or browser. Share it with a colleague and they see exactly the state you were in.</p>
-  <div class="resume-row">
-    <input type="text" id="share-url" readonly aria-label="Link that restores this assessment"
-           onfocus="this.select()">
-    <button class="btn" id="copy-url">Copy link</button>
-    <button class="btn ghost" id="mail-url">Mail it to myself</button>
-    <span id="copy-flash">Copied</span>
-  </div>
-  <p class="resume-note">The link carries your answers, evidence notes and targets, and it is
-     <b>not</b> stored on any server, so treat it as the assessment itself: whoever holds the link
-     holds the data. A copy is also kept in this browser, so simply reopening the page works too.</p>
-  <p class="resume-warn">This link has grown long because of the evidence notes. Some mail clients
-     break links over ~2 000 characters, so use <b>Export snapshot as .json</b> below for long-term
-     archiving.</p>
-</section>
-
-<div class="meta">
-  <div><label for="f-name">Assessors</label><input type="text" id="f-name" placeholder="Names"></div>
-  <div><label for="f-date">Assessment date</label><input type="text" id="f-date" placeholder="YYYY-MM-DD"></div>
-  <div><label for="f-evrepo">Evidence repository</label><input type="text" id="f-evrepo" placeholder="Where evidence is filed"></div>
-  <div><label for="f-profile">Target profile</label>
-    <select id="f-profile"><option value="">— pick a preset, or set targets per function below —</option></select>
-  </div>
-</div>
-
-<div class="toolbar">
-  <button class="btn" id="export-json">Export snapshot as .json</button>
-  <button class="btn" id="import-json">Import snapshot</button>
-  <button class="btn" onclick="window.print()">Print / save PDF</button>
-  <button class="btn danger" id="reset-all">Clear all answers</button>
-</div>
 <input type="file" id="json-input" accept=".json" hidden>
 
-<div class="tiles" id="tiles"></div>
+<div class="workspace">
 
-<h2>Score by function</h2>
-<div class="chartwrap">
-  <div id="chart"></div>
-  <div class="legend">
-    <span><span class="sw" style="background:var(--eu)"></span>Achieved level</span>
-    <span><span class="sw" style="background:repeating-linear-gradient(135deg,#9db6d8 0 3px,#c3d3e9 3px 6px)"></span>Progress into the next level</span>
-    <span><span class="sw" style="background:var(--accent);width:3px"></span>Target</span>
-  </div>
-</div>
+<main>
+  <details class="setup" id="setup">
+    <summary>Assessment details and how scoring works <span class="hint">· assessors, date, evidence location</span></summary>
+    <div class="setup-body">
+      <div class="meta">
+        <div><label for="f-name">Assessors</label><input type="text" id="f-name" placeholder="Names"></div>
+        <div><label for="f-date">Assessment date</label><input type="text" id="f-date" placeholder="YYYY-MM-DD"></div>
+        <div><label for="f-evrepo">Evidence repository</label><input type="text" id="f-evrepo" placeholder="Where evidence is filed"></div>
+      </div>
+      <p>Each criterion is scored on a five-point scale. <b>Only “implemented” and “implemented &amp; evidenced”
+         count towards a level.</b> The three states below them record work in flight without moving the score,
+         because the maturity model is staged and does not average up. See
+         <a href="../docs/08-maturity-model/">the scoring method</a>.</p>
+      <div class="scale-key">
+        <span><i style="background:var(--s0)"></i>Not considered</span>
+        <span><i style="background:var(--s1)"></i>Planned</span>
+        <span><i style="background:var(--s2)"></i>Partially in place</span>
+        <span><i style="background:var(--s3)"></i>Implemented</span>
+        <span><i style="background:var(--s4)"></i>Implemented &amp; evidenced</span>
+      </div>
+      <div class="toolbar">
+        <button class="btn danger" id="reset-all">Clear all answers</button>
+      </div>
+    </div>
+  </details>
 
-<h2>Checklist</h2>
-<p style="font-size:.86rem;max-width:88ch;margin:0 0 4px">Each criterion is scored on a five-point
-  scale. <b>Only “implemented” and “implemented &amp; evidenced” count towards a level</b>. The three
-  states below them record work in flight without moving the score, because the maturity model is
-  staged and does not average up. See <a href="../docs/08-maturity-model/">the scoring method</a>.</p>
-<div class="scale-key">
-  <span><i style="background:var(--line)"></i>Not considered</span>
-  <span><i style="background:#9aa7b4"></i>Planned</span>
-  <span><i style="background:#c98a1e"></i>Partially in place</span>
-  <span><i style="background:var(--eu)"></i>Implemented</span>
-  <span><i style="background:var(--ok)"></i>Implemented &amp; evidenced</span>
-</div>
-<label class="strict"><input type="checkbox" id="strict-evidence">
-  <span>Evidence-based scoring counts a criterion only when it is <b>implemented &amp; evidenced</b>.
-  Stricter, and closer to how an auditor would read it: evidence-free self-assessment inflates
-  scores by roughly one level.</span></label>
-<div id="functions"></div>
-
-<h2>Result</h2>
-<div class="scrollbox"><table class="result" id="result-table"></table></div>
-<p style="font-size:.82rem;color:var(--muted)">Reassess annually or after major change; review open gap actions
-  quarterly. Export a snapshot each round and keep it in version control to track the trend; see
-  <a href="../docs/08-maturity-model/">reassessment cadence</a>.</p>
-
+  <div class="ftabs" role="tablist" aria-label="Functions" id="ftabs"></div>
+  <div id="functions"></div>
 </main>
+
+<aside class="panel" aria-label="Results">
+  <section class="pblock resume" id="resume">
+    <div class="ptitle"><span>Your assessment link</span><span id="copy-flash">Copied</span></div>
+    <div class="rrow">
+      <input type="text" id="share-url" readonly aria-label="Link that restores this assessment" onfocus="this.select()">
+      <button class="btn primary" id="copy-url">Copy</button>
+      <button class="btn" id="mail-url" title="Mail the link to yourself">Mail</button>
+    </div>
+    <p class="rnote">No account, no server: your answers live in this link and in this browser. Whoever holds the
+       link holds the assessment.</p>
+    <p class="resume-warn">This link has grown long because of the evidence notes. Some mail clients break links
+       over ~2 000 characters, so use <b>Export .json</b> for long-term archiving.</p>
+  </section>
+
+  <section class="pblock">
+    <div class="ptitle"><span>Target profile</span></div>
+    <div class="chips" id="profiles" role="group" aria-label="Target profile"></div>
+    <label class="strict"><input type="checkbox" id="strict-evidence">
+      <span><b>Evidence-based scoring:</b> count a criterion only when it is implemented &amp; evidenced. Use
+      this when the result goes to an auditor or the board.</span></label>
+  </section>
+
+  <section class="pblock">
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="pblock">
+    <div class="rtabs" role="tablist" aria-label="Result views">
+      <button class="rtab" role="tab" data-view="chart" aria-selected="true">Score</button>
+      <button class="rtab" role="tab" data-view="table" aria-selected="false">Table</button>
+      <button class="rtab" role="tab" data-view="actions" aria-selected="false" id="actions-tab">Open actions</button>
+    </div>
+    <div class="rview active" data-view="chart">
+      <div id="chart"></div>
+      <div class="gridlbl"><span>L1</span><span>L2</span><span>L3</span><span>L4</span></div>
+      <div class="legend">
+        <span><span class="sw" style="background:var(--eu)"></span>Achieved</span>
+        <span><span class="sw" style="background:repeating-linear-gradient(135deg,#9db6d8 0 3px,#c3d3e9 3px 6px)"></span>Into next level</span>
+        <span><span class="sw" style="background:var(--accent);width:3px"></span>Target</span>
+      </div>
+      <p class="pfoot">Click a function to open it.</p>
+    </div>
+    <div class="rview" data-view="table">
+      <table class="result" id="result-table"></table>
+    </div>
+    <div class="rview" data-view="actions">
+      <p class="pfoot" id="actions-intro" style="margin-top:0"></p>
+      <ul class="actions-list" id="actions"></ul>
+    </div>
+    <p class="pfoot">Reassess annually or after major change; review open actions quarterly. Export a snapshot
+       each round to track the trend; see <a href="../docs/08-maturity-model/">reassessment cadence</a>.</p>
+  </section>
+</aside>
+
+</div>
+
+<div class="mbar" id="mbar" aria-live="polite"><span id="mbar-txt"></span>
+  <button class="btn" id="mbar-go">Results ↓</button></div>
 
 <footer>
   Open CDC Framework · CC BY 4.0 · Criteria mirror <code>assessments/maturity-self-assessment.md</code>. Orientation
   only, and evidence-free self-assessment inflates scores by roughly one level.
 </footer>
-
 <script>
 const CATALOG = {"functions":[{"id":"GOVERN","name":"Govern","levels":{"2":["Signed CDC charter defining mission, scope and authority","Security policies approved and reviewed within last 12 months","RACI for security roles exists"],"3":["Cyber risk items appear in the enterprise risk register with owners","Quarterly (or better) reporting to executive management","Supplier contracts include security requirements; supplier register maintained","Multi-year budget/staffing plan approved"],"4":["Management completed cybersecurity training and participated in an exercise in last 12 months","Resource decisions demonstrably driven by risk/maturity data"]}},{"id":"IDENTIFY","name":"Identify","levels":{"2":["Automated asset discovery on core networks","Vulnerability scanning at least quarterly on core estate","Subscribed to national CSIRT / ENISA advisories","Crown-jewel services listed with owners"],"3":["Inventory accuracy measured, > 90%","Documented threat profile mapped to MITRE ATT&CK, reviewed annually","Risk-based remediation SLAs defined and tracked","Annual risk assessment feeds budget/backlog"],"4":["Continuous attack-surface monitoring incl. cloud/SaaS","Threat intel demonstrably drives hunts and new detections (traceable)"]}},{"id":"PROTECT","name":"Protect","levels":{"2":["MFA enforced for all remote and administrative access","Hardening baselines defined for main platforms","Patching SLA for critical vulnerabilities defined and measured","Backup restore tested within last 12 months"],"3":["Phishing-resistant MFA for privileged accounts; PAM operational","Network segmentation isolates crown-jewel zones","Offline/immutable backup copy for critical data","Control coverage measured (e.g., % endpoints with EDR ≥ 95%)"],"4":["Continuous/periodic technical control validation (attack simulation)","Security requirements embedded in procurement and SDLC with verification"]}},{"id":"DETECT","name":"Detect","levels":{"2":["Central log platform; identity, endpoint and email sources onboarded","≥ 20 documented use cases mapped to ATT&CK","Triage runbook with severity matrix","Defined coverage hours with on-call arrangement"],"3":["Detection lifecycle with version control and testing","Coverage measured against ATT&CK and crown jewels; gaps drive backlog","24/7 monitoring (in-house or hybrid)","MTTD measured per confirmed incident","Threat hunting performed on a schedule"],"4":["All production detections validated (fired in test) within 12 months","Detection-as-code with CI/CD pipeline","FP rates and coverage trended, demonstrably driving engineering"]}},{"id":"RESPOND","name":"Respond","levels":{"2":["Approved IR plan with severity classification and roles","Playbooks for top scenarios incl. ransomware and data breach","Statutory reporting contacts and templates prepared (NIS2/GDPR/DORA as applicable)","Tabletop exercise within last 12 months"],"3":["Containment authority pre-agreed in charter; isolation technically tested","Forensic capability in-house or via retainer, with chain-of-custody procedure","Reporting drill executed against statutory deadlines","Post-incident reviews with tracked actions for all P1/P2"],"4":["MTTC trended; containment steps automated with approval gates","Cross-functional crisis exercise incl. management and comms within 12 months"]}},{"id":"RECOVER","name":"Recover","levels":{"2":["Recovery plans with RTO/RPO for crown-jewel services","Restore tests annually","Post-incident review process defined"],"3":["Rebuild-from-known-good procedure; integrity verification before reconnection","Credential rotation standard in recovery runbooks","Joint BCM/CDC exercise within 12 months","Lessons-learned actions tracked to closure"],"4":["Ransomware-scale recovery exercised; measured recovery vs. RTO","Demonstrable control/detection changes originating from incidents"]}}],"profiles":{"SME, low regulatory exposure":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":2,"RECOVER":2},"NIS2 important entity":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":3,"RECOVER":2},"NIS2 essential entity / DORA financial entity":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":3,"RESPOND":3,"RECOVER":3},"Critical infrastructure, high-threat sectors":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":4,"RESPOND":4,"RECOVER":3}}}
 ;
@@ -534,37 +633,79 @@ function nextLevelProgress(f, score){
            fraction: items.length ? met / items.length : 0 };
 }
 
+/* ------------------------------------------------------------------ *
+ * Interface.  Criteria on the left, one function per tab; the results
+ * panel on the right is sticky and re-renders on every change, so the
+ * effect of each answer is visible without scrolling.
+ * ------------------------------------------------------------------ */
+const UI_KEY = "ocdf-maturity-ui-v1";
+let activeFid = FUNCS[0].id;
+let activeView = "chart";
+try{ const u = JSON.parse(localStorage.getItem(UI_KEY) || "{}");
+     if(FUNCS.some(f => f.id === u.fid)) activeFid = u.fid;
+     if(["chart","table","actions"].includes(u.view)) activeView = u.view; }catch(e){}
+function saveUi(){ try{ localStorage.setItem(UI_KEY, JSON.stringify({fid:activeFid, view:activeView})); }catch(e){} }
+
+function levelCounts(f, lvl){
+  const items = f.levels[lvl] || [];
+  let met = 0; items.forEach((_, i) => { if(countsAsMet(critKey(f.id, lvl, i))) met++; });
+  return {met, total: items.length};
+}
+
+/* Open actions: every criterion not yet met up to the function's target
+   level, or up to the next level when no target is set. */
+function openActions(){
+  const out = [];
+  for(const f of FUNCS){
+    const score = functionScore(f);
+    const upto = state.targets[f.id] || Math.min(score + 1, 4);
+    for(const lvl of [2,3,4]){
+      if(lvl > upto) break;
+      (f.levels[lvl] || []).forEach((text, i) => {
+        const k = critKey(f.id, lvl, i);
+        if(!countsAsMet(k)) out.push({f, lvl, text, key:k, s:statusOf(k)});
+      });
+    }
+  }
+  return out;
+}
+
 function renderMeta(){
   document.getElementById("f-name").value = state.meta.name || "";
   document.getElementById("f-date").value = state.meta.date || "";
   document.getElementById("f-evrepo").value = state.meta.evrepo || "";
-  const sel = document.getElementById("f-profile");
-  if(!sel.options.length || sel.options.length === 1){
-    sel.innerHTML = '<option value="">— pick a preset, or set targets per function below —</option>' +
-      Object.keys(CATALOG.profiles).map(p => `<option value="${esc(p)}">${esc(p)}</option>`).join("");
-  }
-  sel.value = state.meta.profile || "";
   document.getElementById("strict-evidence").checked = !!state.strict;
+  const host = document.getElementById("profiles");
+  const custom = !state.meta.profile && Object.keys(state.targets).length;
+  host.innerHTML = Object.entries(CATALOG.profiles).map(([name, t]) =>
+      `<button class="chip" data-profile="${esc(name)}" aria-pressed="${state.meta.profile===name}">${esc(name)}
+         <small>${FUNCS.map(f => f.name[0] + t[f.id]).join(" ")}</small></button>`).join("") +
+    `<button class="chip" data-profile="" aria-pressed="${!state.meta.profile}">${custom ? "Custom targets" : "No target"}
+       <small>${custom ? "set per function" : "score only"}</small></button>`;
+  host.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+    const p = b.dataset.profile;
+    state.meta.profile = p;
+    state.targets = p && CATALOG.profiles[p] ? {...CATALOG.profiles[p]} : {};
+    saveState(); renderAll(true);
+  }));
 }
 
 function renderTiles(){
   let totalMet = 0, totalItems = 0, totalInFlight = 0, atOrAboveTarget = 0, functionsWithTarget = 0;
   for(const f of FUNCS){
     const c = totalCounts(f); totalMet += c.met; totalItems += c.total; totalInFlight += c.inFlight;
-    const score = functionScore(f);
     const t = state.targets[f.id];
-    if(t){ functionsWithTarget++; if(score >= t) atOrAboveTarget++; }
+    if(t){ functionsWithTarget++; if(functionScore(f) >= t) atOrAboveTarget++; }
   }
   const avg = FUNCS.reduce((s,f) => s + functionScore(f), 0) / FUNCS.length;
   document.getElementById("tiles").innerHTML = `
-    <div class="tile"><div class="v">${avg.toFixed(1)}</div><div class="k">Average function level</div></div>
+    <div class="tile"><div class="v">${avg.toFixed(1)}</div><div class="k">Avg level</div></div>
     <div class="tile"><div class="v">${totalMet}/${totalItems}</div><div class="k">Criteria met</div></div>
-    <div class="tile"><div class="v">${totalInFlight}</div><div class="k">Planned or partly in place</div></div>
-    <div class="tile"><div class="v">${atOrAboveTarget}/${functionsWithTarget || "–"}</div><div class="k">Functions at/above target</div></div>`;
+    <div class="tile"><div class="v">${totalInFlight}</div><div class="k">In flight</div></div>
+    <div class="tile"><div class="v">${atOrAboveTarget}/${functionsWithTarget || "–"}</div><div class="k">On target</div></div>`;
 }
 
 function renderChart(){
-  const maxW = 100;
   let html = "";
   for(const f of FUNCS){
     const score = functionScore(f);
@@ -575,68 +716,137 @@ function renderChart(){
     const progW = prog ? (prog.fraction / 3) * 100 : 0;
     const progTitle = prog ? ` · ${prog.met}/${prog.total} met towards L${prog.next}` +
       (prog.partial ? `, ${prog.partial} partly in place` : "") : "";
-    html += `<div class="barrow" title="${esc(f.name)}: level ${score} (${LEVEL_NAMES[score]})${t ? " · target " + t : ""}${progTitle}">
-      <div class="lbl">${esc(f.name)}</div>
-      <div class="bartrack"><div class="barfill" style="width:${pct}%"></div>${
-        progW > 0 ? `<div class="barprog" style="left:${pct}%;width:${progW}%"></div>` : ""
-      }${tpct!=null ? `<div class="bartick" style="left:calc(${tpct}% - 1px)"></div>` : ""}</div>
-      <div class="barval">L${score}</div>
-    </div>`;
+    html += `<button class="barrow${f.id===activeFid?" cur":""}" data-open="${f.id}"
+        title="${esc(f.name)}: level ${score} (${LEVEL_NAMES[score]})${t ? " · target " + t : ""}${progTitle}">
+      <span class="lbl">${esc(f.name)}</span>
+      <span class="bartrack"><span class="barfill" style="width:${pct}%"></span>${
+        progW > 0 ? `<span class="barprog" style="left:${pct}%;width:${progW}%"></span>` : ""
+      }${tpct!=null ? `<span class="bartick" style="left:calc(${tpct}% - 1px)"></span>` : ""}</span>
+      <span class="barval">L${score}</span>
+    </button>`;
   }
-  document.getElementById("chart").innerHTML = html;
+  const el = document.getElementById("chart");
+  el.innerHTML = html;
+  el.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => openFunction(b.dataset.open, true)));
+}
+
+function renderResult(){
+  let html = `<thead><tr><th>Function</th><th>Score</th><th>Target</th><th>Gap</th><th>Next level</th></tr></thead><tbody>`;
+  for(const f of FUNCS){
+    const score = functionScore(f);
+    const t = state.targets[f.id];
+    let gapCell = "—";
+    if(t != null){
+      const d = t - score;
+      gapCell = d <= 0 ? `<span class="met-note">on target</span>` : `<span class="gap-note">${d} short</span>`;
+    }
+    const prog = nextLevelProgress(f, score);
+    let progTxt = "—";
+    if(prog){
+      const bits = [`${prog.met}/${prog.total} met`];
+      if(prog.partial) bits.push(`${prog.partial} partial`);
+      if(prog.planned) bits.push(`${prog.planned} planned`);
+      progTxt = `L${prog.next}: ` + bits.join(" · ");
+    }
+    html += `<tr><td><b>${esc(f.name)}</b></td><td>L${score} · ${LEVEL_NAMES[score]}</td>
+      <td>${t ? "L"+t : "—"}</td><td>${gapCell}</td><td>${progTxt}</td></tr>`;
+  }
+  document.getElementById("result-table").innerHTML = html + "</tbody>";
+}
+
+function renderActions(){
+  const acts = openActions();
+  const hasTargets = Object.keys(state.targets).length > 0;
+  document.getElementById("actions-tab").textContent = `Open actions (${acts.length})`;
+  document.getElementById("actions-intro").textContent = hasTargets
+    ? "Criteria still missing to reach your targets. Click one to go to it."
+    : "Criteria still missing to reach the next level in each function. Pick a target profile to plan further ahead.";
+  const ul = document.getElementById("actions");
+  ul.innerHTML = acts.length ? acts.map(a =>
+    `<li><button data-s="${a.s}" data-jump="${a.key}"><span class="af">${esc(a.f.name)} · L${a.lvl} · ${esc(STATES[a.s].short)}</span>${esc(a.text)}</button></li>`
+  ).join("") : `<li class="empty">Nothing open. Every function is at or above its target.</li>`;
+  ul.querySelectorAll("[data-jump]").forEach(b => b.addEventListener("click", () => jumpTo(b.dataset.jump)));
+}
+
+function renderTabs(){
+  const host = document.getElementById("ftabs");
+  host.innerHTML = FUNCS.map(f => {
+    const score = functionScore(f);
+    const c = totalCounts(f);
+    const t = state.targets[f.id];
+    const below = t && score < t;
+    return `<button class="tab${below?" below-target":""}" role="tab" id="tab-${f.id}" aria-controls="panel-${f.id}"
+        aria-selected="${f.id===activeFid}" tabindex="${f.id===activeFid?0:-1}" data-fid="${f.id}"
+        title="${below ? "Below target L"+t : ""}">
+      <span class="tname">${esc(f.name)}</span>
+      <span class="tmeta"><span>L${score}</span><span class="tbar"><i style="width:${c.total ? c.met/c.total*100 : 0}%"></i></span><span>${c.met}/${c.total}</span></span>
+    </button>`;
+  }).join("");
+  host.querySelectorAll(".tab").forEach(b => {
+    b.addEventListener("click", () => openFunction(b.dataset.fid));
+    b.addEventListener("keydown", e => {
+      const i = FUNCS.findIndex(f => f.id === b.dataset.fid);
+      let j = null;
+      if(e.key === "ArrowRight") j = (i + 1) % FUNCS.length;
+      if(e.key === "ArrowLeft") j = (i - 1 + FUNCS.length) % FUNCS.length;
+      if(j != null){ e.preventDefault(); openFunction(FUNCS[j].id); document.getElementById("tab-" + FUNCS[j].id).focus(); }
+    });
+  });
+}
+
+function critHtml(f, lvl, i, text){
+  const key = critKey(f.id, lvl, i);
+  const st = statusOf(key);
+  const ev = state.evidence[key] || "";
+  const id = key.replace(/\|/g, "-");
+  return `<div class="crit" data-state="${st}" data-critkey="${key}" id="c-${id}">
+    <p class="ctext" id="t-${id}">${esc(text)}</p>
+    <div class="seg" role="radiogroup" aria-labelledby="t-${id}">
+      ${STATES.map(s => `<label class="s${s.v}${s.v===st?" on":""}"><input type="radio" name="r-${id}" value="${s.v}" data-key="${key}"${s.v===st?" checked":""}>${esc(s.label)}</label>`).join("")}
+    </div>
+    <div class="ev"><input type="text" data-ev="${key}" value="${esc(ev)}" aria-label="Evidence"
+      placeholder="Evidence (optional): document, screenshot, metric export…"></div>
+  </div>`;
 }
 
 function renderFunctions(){
   const host = document.getElementById("functions");
-  const openState = {};
-  host.querySelectorAll(".func").forEach(el => openState[el.dataset.fid] = el.classList.contains("open"));
   let html = "";
-  for(const f of FUNCS){
+  FUNCS.forEach((f, fi) => {
     const score = functionScore(f);
-    const isOpen = openState[f.id] ?? false;
-    html += `<div class="func${isOpen ? " open" : ""}" data-fid="${f.id}">
-      <div class="func-head" data-toggle="${f.id}">
-        <h3><span class="chevron">▸</span> ${esc(f.name)}</h3>
-        <span class="func-badge">
-          <select data-target="${f.id}" title="Target level for ${esc(f.name)}">
-            <option value="">no target</option>
-            ${[1,2,3,4].map(l => `<option value="${l}"${state.targets[f.id]===l?" selected":""}>target L${l}</option>`).join("")}
-          </select>
-          <span class="lvl-pill${score===1?" l1":""}">L${score} · ${LEVEL_NAMES[score]}</span>
-        </span>
+    const prev = FUNCS[fi - 1], next = FUNCS[fi + 1];
+    html += `<section class="fpanel${f.id===activeFid?" active":""}" role="tabpanel" id="panel-${f.id}" aria-labelledby="tab-${f.id}" data-fid="${f.id}">
+      <div class="fhead">
+        <h2>${esc(f.name)}</h2>
+        <div class="fcontrols">
+          <label>Target <select data-target="${f.id}" aria-label="Target level for ${esc(f.name)}">
+            <option value="">none</option>
+            ${[1,2,3,4].map(l => `<option value="${l}"${state.targets[f.id]===l?" selected":""}>L${l}</option>`).join("")}
+          </select></label>
+          <span class="lvl-pill${score===1?" l1":""}" data-pill="${f.id}">L${score} · ${LEVEL_NAMES[score]}</span>
+        </div>
       </div>
-      <div class="func-body">`;
+      <p class="fintro">Criteria for this function are explained in <a href="../docs/0${fi+1}-${f.id.toLowerCase()}/">${esc(f.name)}</a>, under “Maturity criteria”. Level 1 needs nothing: it is where every function starts.</p>`;
     for(const lvl of [2,3,4]){
-      const items = f.levels[lvl] || [];
-      html += `<div class="level-block"><h4>Level ${lvl} — ${LEVEL_NAMES[lvl]}</h4>`;
-      items.forEach((text, i) => {
-        const key = critKey(f.id, lvl, i);
-        const st = statusOf(key);
-        const ev = state.evidence[key] || "";
-        html += `<div class="crit" data-state="${st}" data-critkey="${key}">
-          <select class="state" data-key="${key}" id="st-${key}" aria-label="Status">
-            ${STATES.map(s => `<option value="${s.v}"${s.v===st?" selected":""}>${esc(s.label)}</option>`).join("")}
-          </select>
-          <div class="ev-wrap">
-            <label for="st-${key}">${esc(text)}</label>
-            <input type="text" data-ev="${key}" value="${esc(ev)}" placeholder="Evidence (optional) — document, screenshot, metric export…">
-          </div>
-        </div>`;
-      });
+      const c = levelCounts(f, lvl);
+      html += `<div class="level-block"><h3>Level ${lvl} · ${LEVEL_NAMES[lvl]}
+          <span class="cnt${c.met===c.total?" done":""}" data-cnt="${f.id}|${lvl}">${c.met}/${c.total}</span></h3>`;
+      (f.levels[lvl] || []).forEach((text, i) => { html += critHtml(f, lvl, i, text); });
       html += `</div>`;
     }
-    html += `</div></div>`;
-  }
+    html += `<div class="fnav">
+        ${prev ? `<button class="btn" data-go="${prev.id}">← ${esc(prev.name)}</button>` : "<span></span>"}
+        ${next ? `<button class="btn primary" data-go="${next.id}">${esc(next.name)} →</button>` : `<button class="btn primary" data-go-results>See open actions →</button>`}
+      </div></section>`;
+  });
   host.innerHTML = html;
 
-  host.querySelectorAll("[data-toggle]").forEach(el => el.addEventListener("click", e => {
-    if(e.target.tagName === "SELECT") return;
-    el.closest(".func").classList.toggle("open");
-  }));
-  host.querySelectorAll("select.state[data-key]").forEach(sel => sel.addEventListener("change", () => {
-    const v = Number(sel.value);
-    if(v) state.states[sel.dataset.key] = v; else delete state.states[sel.dataset.key];
-    sel.closest(".crit").dataset.state = v;
+  host.querySelectorAll("input[type=radio][data-key]").forEach(r => r.addEventListener("change", () => {
+    const v = Number(r.value), key = r.dataset.key;
+    if(v) state.states[key] = v; else delete state.states[key];
+    const crit = r.closest(".crit");
+    crit.dataset.state = v;
+    crit.querySelectorAll(".seg label").forEach(l => l.classList.toggle("on", l.querySelector("input").checked));
     saveState(); renderAll(true);
   }));
   host.querySelectorAll("input[type=text][data-ev]").forEach(inp => inp.addEventListener("input", () => {
@@ -647,68 +857,72 @@ function renderFunctions(){
     if(v) state.targets[sel.dataset.target] = v; else delete state.targets[sel.dataset.target];
     state.meta.profile = ""; saveState(); renderAll(true);
   }));
+  host.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => openFunction(b.dataset.go, true)));
+  host.querySelectorAll("[data-go-results]").forEach(b => b.addEventListener("click", () => {
+    setView("actions"); document.querySelector(".panel").scrollIntoView({behavior:"smooth", block:"start"});
+  }));
 }
 
-function renderResult(){
-  let html = `<thead><tr><th>Function</th><th>Score</th><th>Target</th><th>Gap</th>
-    <th>Progress to next level</th><th>Next steps to close it</th></tr></thead><tbody>`;
+/* Refresh the numbers inside the function panels without rebuilding them,
+   so focus and scroll position survive every click. */
+function refreshPanels(){
   for(const f of FUNCS){
     const score = functionScore(f);
-    const t = state.targets[f.id];
-    let gapCell = "—";
-    if(t != null){
-      const d = t - score;
-      gapCell = d <= 0 ? `<span class="met-note">at/above target</span>` : `<span class="gap-note">${d} level${d>1?"s":""} short</span>`;
+    const pill = document.querySelector(`[data-pill="${f.id}"]`);
+    if(pill){ pill.textContent = `L${score} · ${LEVEL_NAMES[score]}`; pill.classList.toggle("l1", score === 1); }
+    const sel = document.querySelector(`select[data-target="${f.id}"]`);
+    if(sel) sel.value = state.targets[f.id] || "";
+    for(const lvl of [2,3,4]){
+      const el = document.querySelector(`[data-cnt="${f.id}|${lvl}"]`);
+      if(el){ const c = levelCounts(f, lvl); el.textContent = `${c.met}/${c.total}`; el.classList.toggle("done", c.met === c.total); }
     }
-    const prog = nextLevelProgress(f, score);
-    let progTxt = "—";
-    if(prog){
-      const bits = [`${prog.met}/${prog.total} met`];
-      if(prog.partial) bits.push(`${prog.partial} partly in place`);
-      if(prog.planned) bits.push(`${prog.planned} planned`);
-      const untouched = prog.total - prog.met - prog.partial - prog.planned;
-      if(untouched) bits.push(`${untouched} not considered`);
-      progTxt = bits.join(" · ");
-    }
-    const gapItems = nextGapItems(f, score);
-    const nextTxt = score >= 4 ? "—" : (gapItems.length
-      ? `${gapItems.length} item${gapItems.length>1?"s":""} to reach L${score+1}: ${esc(gapItems.slice(0,2).join("; "))}${gapItems.length>2?"…":""}`
-      : "—");
-    html += `<tr><td><b>${esc(f.name)}</b></td><td>L${score} · ${LEVEL_NAMES[score]}</td>
-      <td>${t ? "L"+t : "—"}</td><td>${gapCell}</td>
-      <td style="font-size:.82rem">${progTxt}</td><td style="font-size:.82rem">${nextTxt}</td></tr>`;
   }
-  html += "</tbody>";
-  document.getElementById("result-table").innerHTML = html;
 }
 
-function renderAll(skipFunctions){
-  renderMeta(); renderTiles(); renderChart(); renderResult();
-  if(!skipFunctions) renderFunctions(); else renderFunctionBadgesOnly();
-}
-function renderFunctionBadgesOnly(){
-  for(const f of FUNCS){
-    const pill = document.querySelector(`.func[data-fid="${f.id}"] .lvl-pill`);
-    if(pill){
-      const score = functionScore(f);
-      pill.textContent = `L${score} · ${LEVEL_NAMES[score]}`;
-      pill.classList.toggle("l1", score === 1);
-    }
-    const sel = document.querySelector(`.func[data-fid="${f.id}"] select[data-target]`);
-    if(sel) sel.value = state.targets[f.id] || "";
+function openFunction(fid, scroll){
+  activeFid = fid; saveUi();
+  document.querySelectorAll(".fpanel").forEach(p => p.classList.toggle("active", p.dataset.fid === fid));
+  renderTabs(); renderChart(); renderMbar();
+  if(scroll){
+    const tabs = document.getElementById("ftabs");
+    const top = tabs.getBoundingClientRect().top + window.scrollY - 4;
+    if(window.scrollY > top) window.scrollTo({top, behavior:"smooth"});
   }
+}
+function jumpTo(key){
+  const fid = key.split("|")[0];
+  openFunction(fid);
+  const el = document.getElementById("c-" + key.replace(/\|/g, "-"));
+  if(el){
+    el.scrollIntoView({behavior:"smooth", block:"center"});
+    el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+    const on = el.querySelector("input[type=radio]:checked"); if(on) on.focus({preventScroll:true});
+  }
+}
+function setView(v){
+  activeView = v; saveUi();
+  document.querySelectorAll(".rtab").forEach(b => b.setAttribute("aria-selected", b.dataset.view === v));
+  document.querySelectorAll(".rview").forEach(p => p.classList.toggle("active", p.dataset.view === v));
+}
+document.querySelectorAll(".rtab").forEach(b => b.addEventListener("click", () => setView(b.dataset.view)));
+
+function renderMbar(){
+  const f = FUNCS.find(x => x.id === activeFid), s = functionScore(f), t = state.targets[f.id];
+  document.getElementById("mbar-txt").textContent =
+    `${f.name}: L${s}${t ? " / target L" + t : ""} · ${openActions().length} open actions`;
+}
+document.getElementById("mbar-go").addEventListener("click", () =>
+  document.querySelector(".panel").scrollIntoView({behavior:"smooth", block:"start"}));
+
+function renderAll(skipFunctions){
+  renderMbar(); renderMeta(); renderTiles(); renderChart(); renderResult(); renderActions(); renderTabs();
+  if(!skipFunctions) renderFunctions(); else refreshPanels();
 }
 
 ["f-name","f-date","f-evrepo"].forEach(id => document.getElementById(id).addEventListener("input", e => {
   const map = {"f-name":"name","f-date":"date","f-evrepo":"evrepo"};
   state.meta[map[id]] = e.target.value; saveState();
 }));
-document.getElementById("f-profile").addEventListener("change", e => {
-  const p = e.target.value;
-  state.meta.profile = p;
-  if(p && CATALOG.profiles[p]) state.targets = {...CATALOG.profiles[p]};
-  saveState(); renderAll(true);
-});
 
 document.getElementById("export-json").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
@@ -755,7 +969,6 @@ document.getElementById("mail-url").addEventListener("click", () => {
   location.href = "mailto:?subject=" + encodeURIComponent("CDC maturity self-assessment — resume link (" + d + ")") +
     "&body=" + encodeURIComponent("Open this link to continue the assessment where it was left off:\n\n" + shareUrl + "\n");
 });
-/* Someone pasting a different resume link into the address bar of an open tab. */
 window.addEventListener("hashchange", () => {
   if(location.hash === HASH_PREFIX + encodeState()) return;
   loadState(); renderAll();
@@ -763,6 +976,7 @@ window.addEventListener("hashchange", () => {
 
 loadState();
 renderAll();
+setView(activeView);
 syncShareLink();
 </script>
 </body>

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Maturity self-assessment redesigned as a workspace**, inspired by the SIM3 self-assessment tool. Criteria sit on the left with one tab per function, each tab showing the function's level and how many criteria are met. A results panel on the right stays in view and updates on every click: target profiles as buttons, summary tiles, and three views: the score chart, the Result table, and a new **Open actions** list of the criteria still missing to reach your targets, each of which jumps to the criterion. Status is set with one click on a five-button row instead of a dropdown. On phones the results move below the criteria, with a summary bar pinned to the bottom of the screen. Scoring, resume links and snapshot files are unchanged, so existing links and exports keep working.
+
 Changes from a practitioner review of the site: a CDC manager from critical infrastructure read it cold and listed what would stop them relying on it.
 
 - **Critical infrastructure and OT.** ABOUT gains "If you run critical infrastructure": what applies as written, what the CDC should own at the IT/OT boundary even without an OT profile, and what does not transfer. The OT/ICS profile moves from "Later" to v0.3 on the roadmap. The landing page and README link to the new section.
