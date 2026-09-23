@@ -91,6 +91,15 @@ into something you actually fill out, instead of a markdown checklist whose
 boxes cannot be ticked in the browser. All 60 criteria across the
 six CSF functions get a status of their own and an optional evidence field.
 
+The layout is a workspace, in the spirit of the SIM3 self-assessment tool:
+criteria on the left, one tab per function showing its level and progress, and
+a results panel on the right that stays in view and updates on every click.
+The results panel has three views: the score chart (click a function to open
+it), the Result table, and **Open actions**, the criteria still missing to reach
+your targets, each of which jumps straight to the criterion. On a phone the
+results sit below the criteria, with a summary bar pinned to the bottom of the
+screen.
+
 - **Five-point status per criterion** — not considered / planned / partially in
   place / implemented / implemented & evidenced, so work in flight is visible
   without distorting the score. A toggle switches between counting
@@ -107,7 +116,8 @@ six CSF functions get a status of their own and an optional evidence field.
   target-setting table, covering SME, NIS2 important and essential, and critical infrastructure,
   pre-fill a target per function, individually adjustable.
 - **Score chart** — current level vs. target, per function, plus a Result table
-  listing exactly which unmet criteria are blocking the next level.
+  and an Open actions list showing exactly which unmet criteria stand between
+  you and your targets.
 - **Resume link** — the full assessment, meaning answers, evidence notes, targets and
   the header fields, is encoded into the page's URL fragment, so the address bar
   always holds a unique link that restores exactly the current state. Copy it,
