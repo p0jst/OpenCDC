@@ -2,11 +2,14 @@
 
 ## Unreleased
 
-- **Community benchmark, open for contributions.** The maturity self-assessment gains a *Compare with others* panel: tell it your size band, NIS2 category, region, sector and operating model, and once enough organisations have contributed it shows the median level per function for similar organisations, and for each criterion the share that have it in place. Figures are published only for groups of ten or more, one attribute at a time. Users can contribute their own result anonymously: the tool shows exactly what is included (the five answers, the month, the framework version and the 60 statuses; no names, evidence, owners, dates or targets) and the user sends it by email. Raw contributions are never published; `benchmark/aggregate.py` produces the public `tools/benchmark.json` and scores exactly as the tool does. A new page explains the benchmark and summarises what SOC-CMM and ENISA have published in the meantime.
+- Nothing yet.
 
 ## v1.1.0 — 2026-09-23
 
-A usability and scoring release, built from three practitioner reviews of v1.0.0. It changes two DETECT maturity criteria; see **Scoring changes** below before comparing an assessment with one made under v1.0.0.
+A usability and scoring release, built from three practitioner reviews of v1.0.0, plus a new community benchmark. It changes two DETECT maturity criteria; see **Scoring changes** below before comparing an assessment with one made under v1.0.0.
+
+- **Community benchmark, open for contributions.** The maturity self-assessment gains a *Compare with others* panel: tell it your size band, NIS2 category, region, sector and operating model, and once enough organisations have contributed it shows the median level per function for similar organisations, and for each criterion the share that have it in place. Figures are published only for groups of ten or more, one attribute at a time. Users can contribute their own result anonymously: the tool shows exactly what is included (the five answers, the month, the framework version and the 60 statuses; no names, evidence, owners, dates or targets) and the user sends it by email. Raw contributions are never published; `benchmark/aggregate.py` produces the public `tools/benchmark.json` and scores exactly as the tool does. A new page explains the benchmark and summarises what SOC-CMM and ENISA have published in the meantime.
+- **"Start over" button on the maturity tool.** A clearly marked button in the header clears every saved answer, evidence note and assessor detail in this browser and begins a fresh assessment; a confirmation dialog spells out what is about to be lost so it can't be triggered by a stray click. The existing "Clear all answers" option (which keeps the assessor details and targets) stays available in the assessment-details panel.
 
 Corrections from a final self-review before release:
 

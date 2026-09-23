@@ -121,6 +121,8 @@
   .head-actions{display:flex;gap:8px;flex-wrap:wrap}
   .head-actions .btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
   .head-actions .btn:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}
+  .head-actions .btn.start-over{margin-left:16px;border:1px dashed rgba(255,180,160,.7);color:#ffd6cb}
+  .head-actions .btn.start-over:hover{background:rgba(220,90,60,.18);border-style:solid;border-color:#ffb4a0;color:#fff}
 
   .btn{border:1px solid var(--line);background:#fff;border-radius:6px;
     padding:6px 12px;font-size:.84rem;cursor:pointer;color:var(--ink)}
@@ -370,6 +372,7 @@
       <button class="btn" id="export-json">Export .json</button>
       <button class="btn" id="import-json">Import</button>
       <button class="btn" onclick="window.print()">Print / PDF</button>
+      <button class="btn start-over" id="start-over" title="Clear this browser's saved answers and begin a new assessment">↺ Start over</button>
     </div>
   </div>
 </header>
@@ -1168,6 +1171,11 @@ document.getElementById("reset-all").addEventListener("click", () => {
   if(!confirm("Clear every answer and evidence note? Your existing resume link keeps working, so copy it first if you may want to come back to it.")) return;
   state = { ...blankState(), meta: state.meta, targets: state.targets, strict: state.strict };
   saveState(); renderAll();
+});
+document.getElementById("start-over").addEventListener("click", () => {
+  if(!confirm("Start a brand-new assessment? This clears everything saved in this browser — every answer, evidence note, owner/due date, and the assessor details — and cannot be undone. Copy your resume link first if you want to keep today's progress.")) return;
+  state = blankState();
+  saveState(); renderAll(true);
 });
 document.getElementById("strict-evidence").addEventListener("change", e => {
   state.strict = e.target.checked; saveState(); renderAll(true);
