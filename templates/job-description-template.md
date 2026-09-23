@@ -1,6 +1,6 @@
 # ECSF Job Description Template
 
-> Fill from the ENISA ECSF Role Profiles document: pick the primary profile, copy/adapt its mission and tasks, add your specifics. Delete guidance quotes before publishing. Mapping guidance: docs/12-roles-and-competences.md.
+> Fill from the ENISA ECSF Role Profiles document: pick the primary profile, copy/adapt its mission and tasks, add your specifics. Delete guidance quotes before publishing. Mapping guidance: [Roles & competences](../docs/roles-and-competences.md).
 
 ## [Job title] — [team/CDC name]
 
@@ -36,7 +36,7 @@
 **Knowledge areas:** [ECSF key knowledge items, e.g., incident handling standards/methodologies, operating systems and network security, legal framework for security and data protection]
 
 ## Development path
-This role develops toward [Tier 2 / Detection Engineer / Threat Hunter / …] along the paths in docs/12-roles-and-competences.md; training budget and a personal skills matrix review twice yearly.
+This role develops toward [Tier 2 / Detection Engineer / Threat Hunter / …] along the paths in [Roles & competences](../docs/roles-and-competences.md); training budget and a personal skills matrix review twice yearly.
 
 ## What we offer / practicalities
 [Salary range where required or wise · shift compensation · training days · retainer of external DFIR meaning no lone-wolf pressure · etc.]

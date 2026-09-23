@@ -12,17 +12,17 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 
 | # | Question | Why it matters |
 |---|----------|----------------|
-| G1 | Who at executive level personally owns cyber risk, and do they know it? | NIS2 Art. 20 makes management accountable; an unnamed owner means no budget defence. ➜ [GOVERN](../docs/01-govern.md), GV-1 ⚠ "IT owns security" by default |
+| G1 | Who at executive level personally owns cyber risk, and do they know it? | NIS2 Art. 20 makes management accountable; an unnamed owner means no budget defence. ➜ [GOVERN](../docs/govern.md), GV-1 ⚠ "IT owns security" by default |
 | G2 | What exactly is in scope: which legal entities, countries, networks, cloud tenants, OT? What is explicitly out, and who covers that? | Undefined scope becomes disputed scope during an incident. ➜ [charter template](../templates/cdc-charter-template.md) §2 |
 | G3 | May the CDC isolate a production system at 03:00 without waking anyone? Up to which tier? | Containment speed is decided here, years before the incident. ➜ charter §4 ⚠ response stalls awaiting permission |
-| G4 | What is our risk appetite, stated per CIA objective and per crown-jewel service? | Without it, every trade-off is improvised. ➜ [CIA triad](../docs/07-cia-triad.md) §1 |
-| G5 | Which laws apply to which entity in which country, and who maintains that register? | Multi-country entities face different deadlines/channels per state. ➜ [EU regulatory landscape](../docs/17-eu-regulatory-landscape.md), [national annexes](../docs/annexes/README.md), [regulatory selector](../tools/regulatory-profile.html) |
-| G6 | MSSP-operated, in-house tiered, or capability-based: decided on your real constraints or on hope? | This choice shapes every DETECT/RESPOND design decision after it. ➜ **[Operating models](../docs/11-operating-models.md)** for the decision path, the staffing arithmetic and what can never be outsourced, plus the [MSSP checklist](../templates/mssp-requirements-checklist.md) |
+| G4 | What is our risk appetite, stated per CIA objective and per crown-jewel service? | Without it, every trade-off is improvised. ➜ [CIA triad](../docs/cia-triad.md) §1 |
+| G5 | Which laws apply to which entity in which country, and who maintains that register? | Multi-country entities face different deadlines/channels per state. ➜ [EU regulatory landscape](../docs/eu-regulatory-landscape.md), [national annexes](../docs/annexes/README.md), [regulatory selector](../tools/regulatory-profile.html) |
+| G6 | MSSP-operated, in-house tiered, or capability-based: decided on your real constraints or on hope? | This choice shapes every DETECT/RESPOND design decision after it. ➜ **[Operating models](../docs/operating-models.md)** for the decision path, the staffing arithmetic and what can never be outsourced, plus the [MSSP checklist](../templates/mssp-requirements-checklist.md) |
 | G7 | How do we require, verify and enforce supplier security through contracts, monitoring and exit? | NIS2 Art. 21(2)(d); your suppliers are your attack surface. ➜ GV-6 |
 | G8 | When did the board last train on cyber and join an exercise? | NIS2 Art. 20 training duty; also the fastest way to secure budget. ➜ RS-7 |
 | G9 | What does the CDC report upward, how often, and does anyone act on it? | Reporting nobody acts on is theatre. ➜ [metrics template](../templates/metrics-kpi-template.md) |
 | G10 | Who may accept a cyber risk, and where is that acceptance recorded? | Unrecorded acceptances resurface as "nobody told me". ➜ GV-2 |
-| G11 | How many security tools do we run, how many consoles does one case take, and when did we last retire one? | Tool sprawl taxes every case and buries data in silos. ➜ [Running the CDC](../docs/13-cdc-operations.md) §5 |
+| G11 | How many security tools do we run, how many consoles does one case take, and when did we last retire one? | Tool sprawl taxes every case and buries data in silos. ➜ [Running the CDC](../docs/cdc-operations.md) §5 |
 
 ## IDENTIFY — "What are we defending, against whom?"
 
@@ -58,13 +58,13 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 | D1 | If an attacker logged in with a stolen password right now, which log would show it, and is that log actually flowing to us? | Identity telemetry is the highest-value source; verify flow, not intent. ➜ DE-1 priority list |
 | D2 | Which of our crown jewels currently generate *zero* security telemetry? | Coverage gaps cluster exactly where impact is highest. ➜ DE-4 ⚠ cloud/SaaS blind spots |
 | D3 | For each detection in production: when did it last fire in a test? | Silently-broken rules are worse than no rules; they buy false confidence. ➜ DE-6 |
-| D4 | Does our use-case portfolio match our threat profile, or are we detecting yesterday's threats? | Balance C/I/A coverage against ID-5's profile. ➜ DE-2, [CIA triad](../docs/07-cia-triad.md) §3 |
+| D4 | Does our use-case portfolio match our threat profile, or are we detecting yesterday's threats? | Balance C/I/A coverage against ID-5's profile. ➜ DE-2, [CIA triad](../docs/cia-triad.md) §3 |
 | D5 | What happens to an alert at 02:00 on a Sunday, concretely, minute by minute? | Walk the path; every undefined step is response time lost. ➜ DE-3, staffing model |
 | D6 | Can our analysts see asset criticality and identity context *inside* the alert, or must they hunt for it? | Enrichment is triage speed. ➜ DE-3 |
 | D7 | Could an attacker with admin rights delete or alter the logs we'd need? | Log integrity is an Integrity objective in itself. ➜ DE-1, DE-7 |
 | D8 | When did we last go *looking* for an intruder rather than waiting for an alert? | Hunting finds what detections miss and seeds new detections. ➜ DE-5 |
 | D9 | What is our measured MTTD on real incidents, and is it trending the right way? | You cannot improve what you don't measure. ➜ [metrics template](../templates/metrics-kpi-template.md) |
-| D10 | Who owns the SIEM's hardware, OS and application respectively, and if it's cloud-hosted, who decided which data may be shipped there? | An unowned platform decays; unclassified telemetry export is an uncontrolled data transfer. ➜ [DETECT](../docs/04-detect.md), "Owning the SIEM platform" |
+| D10 | Who owns the SIEM's hardware, OS and application respectively, and if it's cloud-hosted, who decided which data may be shipped there? | An unowned platform decays; unclassified telemetry export is an uncontrolled data transfer. ➜ [DETECT](../docs/detect.md), "Owning the SIEM platform" |
 
 ## RESPOND — "When it happens, does the machine run?"
 
@@ -98,6 +98,6 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 1. Run all six workshops; log every weak answer as a backlog item tagged with its capability ID, such as `DE-4`.
 2. Score yourself with the [maturity self-assessment](maturity-self-assessment.md); the navigator answers *are* much of your evidence.
 3. Prioritise: fix GOVERN gaps first, since they block everything, then the cheapest blast-radius items P1, P3 and P4, then coverage at D1 and D2.
-4. Set level targets per function, using the [maturity model](../docs/08-maturity-model.md), and reassess annually, or after major organisational change.
+4. Set level targets per function, using the [maturity model](../docs/maturity-model.md), and reassess annually, or after major organisational change.
 
 *Open CDC Framework, licensed CC BY 4.0.*

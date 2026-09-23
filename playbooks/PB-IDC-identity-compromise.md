@@ -2,7 +2,7 @@
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
 
-> **Status: draft.** Attack-based playbook, published for field review. Tailor it to your identity platform and authority matrix before relying on it, and send corrections via CONTRIBUTING.md.
+> **Status: draft.** Attack-based playbook, published for field review. Tailor it to your identity platform and authority matrix before relying on it, and send corrections via [contributing](../CONTRIBUTING.md).
 > **Scope:** A user, administrator or service identity is suspected to be in adversary hands: password spray or stuffing success, MFA fatigue or adversary-in-the-middle phishing, token theft, malicious OAuth consent, or anomalous sign-ins. Related capabilities: PR-1, DE-3, RS-2, RS-4. Examples use Microsoft Entra ID and Active Directory because they are the most common; the steps apply to any identity provider.
 > **Legal note:** Sign-in and mailbox data are personal data. Follow your monitoring legal basis under GDPR and involve the DPO where the investigation reaches mailbox content. <!-- law:gdpr -->
 
@@ -17,7 +17,7 @@
 ## 1. Triage
 
 1. Establish what the adversary has: a password only, a session or refresh token, a registered MFA method, or an application consent. The containment differs for each.
-2. Check the identity's privilege. **Any privileged role, or access to identity infrastructure, raises the incident to major**: treat the tenant or domain as potentially compromised and follow [the first hour of a major incident](../docs/05-respond.md).
+2. Check the identity's privilege. **Any privileged role, or access to identity infrastructure, raises the incident to major**: treat the tenant or domain as potentially compromised and follow [the first hour of a major incident](../docs/respond.md).
 3. Scope from the sign-in logs: source IPs, user agents, devices, locations and the first anomalous sign-in. Pivot on those indicators across all identities, because spray and phishing campaigns rarely stop at one account.
 4. Classify severity per the IR plan; open the incident record and timeline.
 

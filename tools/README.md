@@ -51,7 +51,7 @@ the manager drops the returned files onto the page and gets:
 - a **team heatmap** of people against 50 skills in 8 domains, with per-skill coverage,
   *bus factor 1* and *nobody proficient* flags, and mentor markers;
 - a **gap analysis** against editable per-role target levels, with defaults derived
-  from [`docs/12-roles-and-competences.md`](../docs/12-roles-and-competences.md);
+  from [`docs/roles-and-competences.md`](../docs/roles-and-competences.md);
 - an **actions view**: whom to train, taking gap and motivation first, which in-house
   mentor pairings close gaps for free, and which skills to hire or buy;
 - **snapshot export and import** as JSON, to archive review rounds.
@@ -105,7 +105,7 @@ screen.
   without distorting the score. A toggle switches between counting
   "implemented" and the stricter evidence-based reading that counts only
   "implemented & evidenced". See the status scale in
-  [`docs/08-maturity-model.md`](../docs/08-maturity-model.md).
+  [`docs/maturity-model.md`](../docs/maturity-model.md).
 - **Staged auto-scoring**, exactly as the maturity model defines it: a function
   reaches Level *N* only when every criterion at *N* and every level below it is
   met, with no averaging up. The three lower states never move the level; they drive
@@ -124,7 +124,7 @@ screen.
   groups of ten or more. You can contribute your own result from the same panel:
   you see exactly what is included before you send it, by email, yourself. See
   [the community benchmark](../docs/benchmark.md).
-- **Target profiles** from [`docs/08-maturity-model.md`](../docs/08-maturity-model.md)'s
+- **Target profiles** from [`docs/maturity-model.md`](../docs/maturity-model.md)'s
   target-setting table, covering SME, NIS2 important and essential, and critical infrastructure,
   pre-fill a target per function, individually adjustable.
 - **Score chart** — current level vs. target, per function, plus a Result table

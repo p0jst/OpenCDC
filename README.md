@@ -10,7 +10,7 @@
 
 ---
 
-> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the OT profile on the roadmap.
+> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [About](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the OT profile on the roadmap.
 
 ## Why this framework exists
 
@@ -29,31 +29,31 @@ The framework is organised around the **six functions of NIST CSF 2.0**, each ma
 
 | # | Function | Question it answers | Doc |
 |---|----------|--------------------|-----|
-| 00 | Introduction & Design Principles | How do I use this framework? | [docs/00-introduction.md](docs/00-introduction.md) |
-| 01 | **GOVERN** | Who owns cyber risk, and how are decisions made? | [docs/01-govern.md](docs/01-govern.md) |
-| 02 | **IDENTIFY** | What are we defending, and what threatens it? | [docs/02-identify.md](docs/02-identify.md) |
-| 03 | **PROTECT** | How do we reduce the likelihood and impact of incidents? | [docs/03-protect.md](docs/03-protect.md) |
-| 04 | **DETECT** | How do we find adversary activity quickly? | [docs/04-detect.md](docs/04-detect.md) |
-| 05 | **RESPOND** | How do we contain and eradicate threats? | [docs/05-respond.md](docs/05-respond.md) |
-| 06 | **RECOVER** | How do we restore services and learn? | [docs/06-recover.md](docs/06-recover.md) |
+| 00 | Introduction & Design Principles | How do I use this framework? | [Introduction](docs/introduction.md) |
+| 01 | **GOVERN** | Who owns cyber risk, and how are decisions made? | [Govern](docs/govern.md) |
+| 02 | **IDENTIFY** | What are we defending, and what threatens it? | [Identify](docs/identify.md) |
+| 03 | **PROTECT** | How do we reduce the likelihood and impact of incidents? | [Protect](docs/protect.md) |
+| 04 | **DETECT** | How do we find adversary activity quickly? | [Detect](docs/detect.md) |
+| 05 | **RESPOND** | How do we contain and eradicate threats? | [Respond](docs/respond.md) |
+| 06 | **RECOVER** | How do we restore services and learn? | [Recover](docs/recover.md) |
 
 Cross-cutting documents, in reading order:
 
 | # | Document | What it gives you |
 |---|----------|-------------------|
-| 07 | [CIA Triad as a Design Lens](docs/07-cia-triad.md) | How Confidentiality, Integrity and Availability drive every CDC decision |
-| 08 | [Maturity Model](docs/08-maturity-model.md) | Four maturity levels with concrete criteria per function, and how to reuse an existing SOC-CMM, SIM3 or CIS assessment |
-| 09 | [Start Here: Prioritisation](docs/09-start-here.md) | The first 90 days and first year, in order, with exit criteria and anti-priorities |
-| 10 | [Implementation Tiers](docs/10-tiers.md) | Essential / Standard / Advanced overlay: which capabilities apply at your size |
-| 11 | [Operating Models](docs/11-operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs, what can never be outsourced, and the staffing arithmetic and cost template for the budget round |
-| 12 | [Roles & Competences](docs/12-roles-and-competences.md) | CDC roles, skills matrix, career paths and hiring, built on the ENISA ECSF |
-| 13 | [Running the CDC](docs/13-cdc-operations.md) | The loops that keep a live CDC improving: tuning, detection-as-code, team development, automation guardrails, tool discipline |
-| 14 | [Deep Dive: Detection-as-Code](docs/14-detection-as-code-deep-dive.md) | Repo layout, rule YAML anatomy, CI/CD pipeline, honest ATT&CK coverage scoring, Advanced tier |
-| 15 | [Deep Dive: CTI Capability](docs/15-cti-deep-dive.md) | Strategic/operational/tactical intelligence and the interfaces that feed the CDC, Advanced tier |
-| 16 | [CSIRT Community Layer](docs/16-csirt-community.md) | RFC 2350, TF-CSIRT/FIRST, SIM3 crosswalk for certification, living documentation |
-| 17 | [EU Regulatory Landscape](docs/17-eu-regulatory-landscape.md) | NIS2, GDPR, DORA, CRA, CER and ENISA mapped to CDC capabilities |
-| 18 | [CIS Controls Crosswalk](docs/18-cis-controls-crosswalk.md) | All 18 CIS Controls with concrete actions per control |
-| 19 | [References & Credits](docs/19-references.md) | Every source used by this framework |
+| 07 | [CIA Triad as a Design Lens](docs/cia-triad.md) | How Confidentiality, Integrity and Availability drive every CDC decision |
+| 08 | [Maturity Model](docs/maturity-model.md) | Four maturity levels with concrete criteria per function, and how to reuse an existing SOC-CMM, SIM3 or CIS assessment |
+| 09 | [Start Here: Prioritisation](docs/start-here.md) | The first 90 days and first year, in order, with exit criteria and anti-priorities |
+| 10 | [Implementation Tiers](docs/tiers.md) | Essential / Standard / Advanced overlay: which capabilities apply at your size |
+| 11 | [Operating Models](docs/operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs, what can never be outsourced, and the staffing arithmetic and cost template for the budget round |
+| 12 | [Roles & Competences](docs/roles-and-competences.md) | CDC roles, skills matrix, career paths and hiring, built on the ENISA ECSF |
+| 13 | [Running the CDC](docs/cdc-operations.md) | The loops that keep a live CDC improving: tuning, detection-as-code, team development, automation guardrails, tool discipline |
+| 14 | [Deep Dive: Detection-as-Code](docs/detection-as-code-deep-dive.md) | Repo layout, rule YAML anatomy, CI/CD pipeline, honest ATT&CK coverage scoring, Advanced tier |
+| 15 | [Deep Dive: CTI Capability](docs/cti-deep-dive.md) | Strategic/operational/tactical intelligence and the interfaces that feed the CDC, Advanced tier |
+| 16 | [CSIRT Community Layer](docs/csirt-community.md) | RFC 2350, TF-CSIRT/FIRST, SIM3 crosswalk for certification, living documentation |
+| 17 | [EU Regulatory Landscape](docs/eu-regulatory-landscape.md) | NIS2, GDPR, DORA, CRA, CER and ENISA mapped to CDC capabilities |
+| 18 | [CIS Controls Crosswalk](docs/cis-controls-crosswalk.md) | All 18 CIS Controls with concrete actions per control |
+| 19 | [References & Credits](docs/references.md) | Every source used by this framework |
 
 Practical assets:
 
@@ -81,23 +81,23 @@ Practical assets:
 
 ## How to use it
 
-1. **Read** [docs/00-introduction.md](docs/00-introduction.md), then [docs/09-start-here.md](docs/09-start-here.md) for the order of work, and pick your tier in [docs/10-tiers.md](docs/10-tiers.md).
-2. **Navigate** the design questions in [assessments/cdc-design-navigator.md](assessments/cdc-design-navigator.md): six workshops that surface your gaps.
-3. **Assess** your current state with [tools/maturity-assessment.html](tools/maturity-assessment.html), or the printable [assessments/maturity-self-assessment.md](assessments/maturity-self-assessment.md).
+1. **Read** the [introduction](docs/introduction.md), then [start here](docs/start-here.md) for the order of work, and pick your tier in [implementation tiers](docs/tiers.md).
+2. **Navigate** the design questions in the [design navigator](assessments/cdc-design-navigator.md): six workshops that surface your gaps.
+3. **Assess** your current state with the [maturity self-assessment tool](tools/maturity-assessment.html), or the printable [maturity self-assessment](assessments/maturity-self-assessment.md).
 4. **Plan** using the per-function documents: each contains capabilities, CIA mapping, maturity criteria, and EU regulatory hooks.
 5. **Operationalise** with the templates and playbooks; pick your country annex and set your legal profile in the selector tool.
 6. **Reassess** annually, or after major organisational change, and review open gap actions quarterly, tracking progress with the KPI template.
 
 ## About the author & project
 
-Written by a practitioner who spent a decade in the field, the last four of them building and running a 24/7/365 CDC, and fell into most of the holes this framework now warns about. The author is Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber Defence Center, and the GitHub account p0jst is his. The full story, what is deliberately out of scope, and how the project is maintained: [ABOUT.md](ABOUT.md).
+Written by a practitioner who spent a decade in the field, the last four of them building and running a 24/7/365 CDC, and fell into most of the holes this framework now warns about. The author is Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber Defence Center, and the GitHub account p0jst is his. The full story, what is deliberately out of scope, and how the project is maintained: [About](ABOUT.md).
 
 ## Contributing
 
-This is a community project. Contributions, translations and national-regulation mappings are very welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+This is a community project. Contributions, translations and national-regulation mappings are very welcome. See [Contributing](CONTRIBUTING.md).
 
 ## License
 
 Documentation is licensed under [Creative Commons Attribution 4.0 International](LICENSE), CC BY 4.0.
 
-This framework builds on publicly available works by NIST, ENISA, MITRE, FIRST and others. It is **not** endorsed by or affiliated with any of these organisations. All sources are credited in [docs/19-references.md](docs/19-references.md).
+This framework builds on publicly available works by NIST, ENISA, MITRE, FIRST and others. It is **not** endorsed by or affiliated with any of these organisations. All sources are credited in [references & credits](docs/references.md).

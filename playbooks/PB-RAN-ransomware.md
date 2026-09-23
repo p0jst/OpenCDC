@@ -2,7 +2,7 @@
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag standard">Standard</span>Response practice from experience; evidence handling follows RFC 3227 and NIST SP 800-86.</p>
 
-> **Status: draft.** Attack-based playbook, published for field review. Tailor it to your estate, backup architecture and authority matrix before relying on it, and send corrections via CONTRIBUTING.md.
+> **Status: draft.** Attack-based playbook, published for field review. Tailor it to your estate, backup architecture and authority matrix before relying on it, and send corrections via [contributing](../CONTRIBUTING.md).
 > **Scope:** Encryption in progress or discovered, a ransom note, or high-confidence precursors such as backup deletion, mass credential dumping or security tooling being disabled. Enterprise IT only: for anything touching OT, operations decides containment; see [ABOUT](../ABOUT.md). Related capabilities: RS-1 to RS-6, RC-1 to RC-3.
 > **Legal note:** Assume data was exfiltrated before encryption until you can show otherwise. Most current ransomware operations steal first. <!-- law:gdpr -->
 
@@ -16,7 +16,7 @@
 
 ## 1. Triage — the first hour
 
-Run [the first hour of a major incident](../docs/05-respond.md) in parallel with triage. In short:
+Run [the first hour of a major incident](../docs/respond.md) in parallel with triage. In short:
 
 1. **Do not power systems off.** Isolate instead (CON-05, CON-06).
 2. **Cut external connectivity and remote access** for affected sites (CON-11, CON-12). Encryption and exfiltration both need the network.
@@ -54,7 +54,7 @@ Then establish scope: which systems are encrypted, which are still spreading, an
 
 - **Recover identity first**: a trusted domain or forest (execute the forest-recovery plan if cleaning is not credible), then infrastructure, then services in the agreed order.
 - Restore from backups that pre-date the intrusion, not only the encryption. Scan restored systems before reconnecting them.
-- "Integrity before Availability": do not reconnect a restored segment until its identity and management plane are trusted. See [Recover](../docs/06-recover.md).
+- "Integrity before Availability": do not reconnect a restored segment until its identity and management plane are trusted. See [Recover](../docs/recover.md).
 - **Ransom payment** is a business and legal decision, not a CDC one. Check sanctions exposure with counsel and inform law enforcement. Payment does not remove the need to rebuild, because it does not remove the adversary's access.
 - Closure criteria: no adversary activity for [30] days after recovery; initial access closed; lessons-learned filed.
 

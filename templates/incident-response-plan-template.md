@@ -13,7 +13,7 @@
 | P3 — Medium | Probable incident, limited impact | Malware detected and blocked, persistence suspected | Same business day |
 | P4 — Low | Policy violation / no material impact | Isolated phishing click, no execution | Routine |
 
-> Classify severity against **CIA impact per affected asset class**, per docs/07-cia-triad.md, not against alert volume.
+> Classify severity against **CIA impact per affected asset class**, per [CIA as design lens](../docs/cia-triad.md), not against alert volume.
 
 ## 2. Roles
 
@@ -31,7 +31,7 @@
 
 1. **Detection & reporting** — sources: monitoring, users via [report channel], third parties, national CSIRT.
 2. **Triage & classification** — severity per §1; open incident record; start timeline log.
-3. **Containment** — per playbook; authority per CDC charter §4. Record every action with a timestamp, for evidential integrity. For a major incident, run the estate-wide first-hour actions in [RESPOND](../docs/05-respond.md) alongside the scenario playbook: do not power systems off, cut external connectivity and remote access, isolate backups, extend snapshot retention, and notify counsel and the insurer.
+3. **Containment** — per playbook; authority per CDC charter §4. Record every action with a timestamp, for evidential integrity. For a major incident, run the estate-wide first-hour actions in [RESPOND](../docs/respond.md) alongside the scenario playbook: do not power systems off, cut external connectivity and remote access, isolate backups, extend snapshot retention, and notify counsel and the insurer.
 4. **Eradication & investigation** — root cause; preserve evidence with hashing and the chain of custody form: [link].
 5. **Recovery** — integrity verification before reconnection; credential rotation; see recovery plans.
 6. **Post-incident** — blameless review within [10] working days for P1/P2; actions tracked in [system].

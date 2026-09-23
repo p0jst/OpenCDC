@@ -7,22 +7,22 @@ All are vendor-neutral; open source tooling examples are non-normative.
 
 ## By attack
 
-| ID | Scenario | Status | File |
-|----|----------|--------|------|
-| PB-IDC | Identity compromise: stolen passwords, tokens, MFA or app consent | Draft | [PB-IDC-identity-compromise.md](PB-IDC-identity-compromise.md) |
-| PB-BEC | Business email compromise and payment fraud | Draft | [PB-BEC-business-email-compromise.md](PB-BEC-business-email-compromise.md) |
-| PB-RAN | Ransomware | Draft | [PB-RAN-ransomware.md](PB-RAN-ransomware.md) |
+| ID | Scenario | Status |
+|----|----------|--------|
+| PB-IDC | [Identity compromise](PB-IDC-identity-compromise.md): stolen passwords, tokens, MFA or app consent | Draft |
+| PB-BEC | [Business email compromise and payment fraud](PB-BEC-business-email-compromise.md) | Draft |
+| PB-RAN | [Ransomware](PB-RAN-ransomware.md) | Draft |
 
-Drafts are published for field review: usable, but not yet checked by anyone other than the maintainer. Corrections and your own lessons are welcome via CONTRIBUTING.md.
+Drafts are published for field review: usable, but not yet checked by anyone other than the maintainer. Corrections and your own lessons are welcome via [contributing](../CONTRIBUTING.md).
 
 ## By platform
 
-| ID | Platform | File |
-|----|----------|------|
-| PB-W11 | Windows 11 laptop | PB-W11-windows11-laptop.md |
-| PB-MAC | macOS laptop, Intel & Apple Silicon | PB-MAC-macos-laptop.md |
-| PB-WSV | Windows Server, including domain controllers | PB-WSV-windows-server.md |
-| PB-LNX | Linux enterprise server, RHEL-class | PB-LNX-rhel-server.md |
+| ID | Platform |
+|----|----------|
+| PB-W11 | [Windows 11 laptop](PB-W11-windows11-laptop.md) |
+| PB-MAC | [macOS laptop, Intel & Apple Silicon](PB-MAC-macos-laptop.md) |
+| PB-WSV | [Windows Server, including domain controllers](PB-WSV-windows-server.md) |
+| PB-LNX | [Linux enterprise server, RHEL-class](PB-LNX-rhel-server.md) |
 
 **Scope: enterprise IT only.** These playbooks must not be applied to OT/ICS or telco core systems unadapted, because isolation and live-response actions can be unsafe there.
 
@@ -37,4 +37,5 @@ Adaptation checklist when importing any external playbook: replace product assum
 
 Shared principles: order of volatility per RFC 3227, chain of custody, hash
 everything, "Integrity before Availability" on recovery, and GDPR-aware
-handling of employee/personal data. See docs/05-respond.md and 06-recover.md.
+handling of employee/personal data. See [Respond](../docs/respond.md) and
+[Recover](../docs/recover.md).

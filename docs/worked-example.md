@@ -24,17 +24,17 @@ quarter's results.
 
 **Tier: Standard.** A regulated, mid-to-large organisation that needs all six
 functions measured, but not the validation and automation depth of Advanced.
-See [implementation tiers](10-tiers.md).
+See [implementation tiers](tiers.md).
 
 **Operating model: A+C hybrid.** Worked through the
-[decision path](11-operating-models.md#decision-path):
+[decision path](operating-models.md#decision-path):
 
 1. No log data is legally barred from leaving the company, so a provider is possible.
 2. Sorting runs through the night, so an attack at 02:00 hits operations at
    once; noticing it at 07:00 would be too late. Out-of-hours detection is
    needed within six months.
 3. Six approved posts cannot staff a 24/7 seat, which takes about 5.6 people on
-   its own ([the arithmetic](11-operating-models.md#staffing-and-cost-the-arithmetic)).
+   its own ([the arithmetic](operating-models.md#staffing-and-cost-the-arithmetic)).
    So a provider holds the watch from 17:00 to 07:00 and at weekends.
 4. The four existing staff are senior, and the estate is mostly Microsoft cloud
    and automatable, so the daytime team is capability-based (Model C) rather than
@@ -59,7 +59,7 @@ accepted risk.
 
 **Coverage-hours target:** out-of-hours detection by the provider, with an
 internal responder reachable within 30 minutes around the clock. See
-[coverage hours are a target, not a level](08-maturity-model.md#coverage-hours-are-a-target-not-a-level).
+[coverage hours are a target, not a level](maturity-model.md#coverage-hours-are-a-target-not-a-level).
 
 ## The charter, as signed
 
@@ -92,7 +92,7 @@ Needs approval first:
 
 ## The first 90 days
 
-Following [Start here](09-start-here.md), with named owners.
+Following [Start here](start-here.md), with named owners.
 
 | Weeks | What happened | Owner |
 |-------|---------------|-------|

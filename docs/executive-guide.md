@@ -52,7 +52,7 @@ Financial entities are covered by DORA instead: an initial report within four
 hours of classifying an incident as major, and no later than 24 hours after
 becoming aware of it. Your country's rules are in its
 [national annex](annexes/README.md); the full mapping is in the
-[EU regulatory landscape](17-eu-regulatory-landscape.md).
+[EU regulatory landscape](eu-regulatory-landscape.md).
 
 ## 4. What "good" looks like
 
@@ -71,7 +71,7 @@ Two things matter more than the headline number. **Balance:** Level 2 in every
 function beats Level 4 in one and Level 1 in another, because attackers use the
 weakest point. **Evidence:** ask what proves each score. An assessment without
 evidence tends to flatter itself. See the
-[maturity model](08-maturity-model.md).
+[maturity model](maturity-model.md).
 
 ## 5. Staffing and cost drivers
 
@@ -92,7 +92,7 @@ evidence tends to flatter itself. See the
   years, not one.
 
 The method and a cost template are in
-[staffing and cost](11-operating-models.md#staffing-and-cost-the-arithmetic).
+[staffing and cost](operating-models.md#staffing-and-cost-the-arithmetic).
 
 ## 6. What you can outsource, and what you cannot
 
@@ -107,7 +107,7 @@ alerts. You cannot buy:
 4. **Knowing what matters.** Which systems are critical, and what normal looks
    like, is your knowledge.
 
-See [operating models](11-operating-models.md).
+See [operating models](operating-models.md).
 
 ## 7. A 12, 24 and 36-month roadmap
 
@@ -120,7 +120,7 @@ See [operating models](11-operating-models.md).
 | **Month 24** | Level 3 in the functions your targets require. Coverage and response times measured; hunting on a schedule; lessons from incidents tracked to closure. |
 | **Month 36** | Targets met and evidenced. Operating model reviewed, insourcing or changing provider as the data suggests; detections validated by testing. |
 
-The first 90 days are laid out week by week in [Start here](09-start-here.md).
+The first 90 days are laid out week by week in [Start here](start-here.md).
 
 ## 8. What the board should see
 

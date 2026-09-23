@@ -15,7 +15,7 @@ contributions.
 
 - **It is context, not a target.** Your targets are a risk decision, set in
   GOVERN. Being at the median says nothing about whether that is enough for your
-  risks. See [target-setting guidance](08-maturity-model.md#target-setting-guidance).
+  risks. See [target-setting guidance](maturity-model.md#target-setting-guidance).
 - **It is self-assessed.** Contributors score themselves, mostly without
   evidence being checked, and organisations that choose to contribute tend to be
   the more mature ones. Expect the figures to run higher than an audited sample.

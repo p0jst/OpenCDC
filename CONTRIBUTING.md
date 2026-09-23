@@ -13,7 +13,7 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 ## Ground rules
 
 - **Vendor neutrality:** no product names in normative documents. Tooling examples belong in clearly marked non-normative appendices and must include open source options where they exist.
-- **Credit everything:** any content derived from another work must be attributed in the document's Sources section *and* in `docs/19-references.md`. Respect the source's license.
+- **Credit everything:** any content derived from another work must be attributed in the document's Sources section *and* in `docs/references.md`. Respect the source's license.
 - **No confidential material:** never contribute internal documents, real incident data, or client information.
 - **Regulatory content:** cite the EUR-Lex ELI link for any legal claim, and mark interpretation clearly as interpretation.
 - **Language:** contributions in English for core docs; translations maintained separately.

@@ -2,9 +2,9 @@
 
 ## Why this framework exists
 
-I have worked numerous years with critical infrastructure in cyber security. I started where many readers of this framework are now: as one of a few analysts in a large organisation, spending most of the time on reactive firefighting with little room to address root causes. After spending two years as the lead for DFIR I took over as manager, and over the following eighteen months the team developed from that starting point into a process-driven Cyber Defence Center with 24/7/365 in-house monitoring, organised as a capability-based, tierless SOC rather than a tiered one. Analysts own their cases end-to-end. The trade-offs behind that choice are the ones described in [Choosing your operating model](docs/11-operating-models.md), Model C.
+I have worked numerous years with critical infrastructure in cyber security. I started where many readers of this framework are now: as one of a few analysts in a large organisation, spending most of the time on reactive firefighting with little room to address root causes. After spending two years as the lead for DFIR I took over as manager, and over the following eighteen months the team developed from that starting point into a process-driven Cyber Defence Center with 24/7/365 in-house monitoring, organised as a capability-based, tierless SOC rather than a tiered one. Analysts own their cases end-to-end. The trade-offs behind that choice are the ones described in [Choosing your operating model](docs/operating-models.md), Model C.
 
-I have also served as both main and secondary sponsor in SIM3 assessments for national and international CSIRT teams pursuing TF-CSIRT certifications. Working on the sponsor side of maturity assessments across different teams shaped this framework's emphasis on living documentation, independent verification, and evidence over assertion; see [the CSIRT community layer](docs/16-csirt-community.md).
+I have also served as both main and secondary sponsor in SIM3 assessments for national and international CSIRT teams pursuing TF-CSIRT certifications. Working on the sponsor side of maturity assessments across different teams shaped this framework's emphasis on living documentation, independent verification, and evidence over assertion; see [the CSIRT community layer](docs/csirt-community.md).
 
 Along the way I encountered most of the problems this framework now addresses. Among them:
 
@@ -62,12 +62,12 @@ The GitHub account [p0jst](https://github.com/p0jst) is mine. Today the framewor
 
 - **Every page is dated.** The national annexes carry a status block with the date they were last verified, who verified them and when the next review is due. An annex without a second reviewer says so.
 - **Releases are versioned.** The current version is on the front page and in the [changelog](CHANGELOG.md); cite the version when you cite the framework.
-- **Reviewers wanted.** A second reviewer per national annex, and practitioners willing to check the maturity criteria against their own CDC, would do more for the framework's credibility than anything I can write. See [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Reviewers wanted.** A second reviewer per national annex, and practitioners willing to check the maturity criteria against their own CDC, would do more for the framework's credibility than anything I can write. See [Contributing](CONTRIBUTING.md).
 
 **Using OCDF?** If your team uses the framework and is willing to be listed, open an issue or a discussion. No organisation is listed here until it has asked to be.
 
 ## How you can help
 
-Corrections, national annex updates, translations, and above all your own pitfalls; see [CONTRIBUTING.md](CONTRIBUTING.md). If this framework spares your team one of the mistakes above, it has done its job.
+Corrections, national annex updates, translations, and above all your own pitfalls; see [Contributing](CONTRIBUTING.md). If this framework spares your team one of the mistakes above, it has done its job.
 
 Frederik B. Krogsgaard, 2026

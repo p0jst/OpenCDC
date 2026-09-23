@@ -1,10 +1,10 @@
 # National Annex — Netherlands
 
-> **Status as of July 2026:** Entering into force, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see CONTRIBUTING.md.
+> **Status as of July 2026:** Entering into force, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
-| Confidence | Last verified | Verified by | Second reviewer | Next review due |
-|------------|---------------|-------------|-----------------|-----------------|
-| [Needs verification](README.md#confidence-levels) | July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
+| Last verified | Verified by | Second reviewer | Next review due |
+|---------------|-------------|-----------------|-----------------|
+| July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
 
 ## NIS2 implementation
 

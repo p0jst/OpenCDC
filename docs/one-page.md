@@ -10,7 +10,7 @@ other page reads faster.
 1. **Pick a tier** (Essential, Standard or Advanced). It decides *which*
    capabilities apply to an organisation of your size and exposure.
 2. **Build the capabilities** in the six functions, in the order the
-   [first 90 days](09-start-here.md) sets out, people and process before tools.
+   [first 90 days](start-here.md) sets out, people and process before tools.
 3. **Measure how well you run them** on four maturity levels, criterion by
    criterion, with evidence.
 4. **Give every gap an owner and a date**, and reassess once a year.
@@ -23,19 +23,19 @@ require it.
 
 | Term | What it means | Where it lives |
 |------|---------------|----------------|
-| **CDC** | Cyber Defence Center: the organisational capability that governs, prevents, detects, responds and recovers. Used interchangeably with SOC here. | [Introduction](00-introduction.md) |
-| **Six functions** | Govern, Identify, Protect, Detect, Respond, Recover, taken from NIST CSF 2.0. Govern sits above the other five. | Documents [01](01-govern.md)–[06](06-recover.md) |
+| **CDC** | Cyber Defence Center: the organisational capability that governs, prevents, detects, responds and recovers. Used interchangeably with SOC here. | [Introduction](introduction.md) |
+| **Six functions** | Govern, Identify, Protect, Detect, Respond, Recover, taken from NIST CSF 2.0. Govern sits above the other five. | Documents [01](govern.md)–[06](recover.md) |
 | **Capability** | Something the CDC must be able to do, with an ID such as `DE-2` (detection engineering). 43 in total. | [Capability index](capability-index.md) |
-| **Tier E · S · A** | Essential, Standard, Advanced. Which capabilities apply at your size. Higher tiers include the lower ones. | [Implementation tiers](10-tiers.md) |
-| **Level 1–4** | Initial, Managed, Established, Optimising. How well you run the capabilities you have. Staged: a level counts only when every criterion at it and below is met. | [Maturity model](08-maturity-model.md) |
-| **Criterion status** | Each maturity criterion is scored on five states, from *not considered* to *implemented & evidenced*. Only the top two count, or only the top one with evidence-based scoring. | [Scoring method](08-maturity-model.md#criterion-status-scale) |
+| **Tier E · S · A** | Essential, Standard, Advanced. Which capabilities apply at your size. Higher tiers include the lower ones. | [Implementation tiers](tiers.md) |
+| **Level 1–4** | Initial, Managed, Established, Optimising. How well you run the capabilities you have. Staged: a level counts only when every criterion at it and below is met. | [Maturity model](maturity-model.md) |
+| **Criterion status** | Each maturity criterion is scored on five states, from *not considered* to *implemented & evidenced*. Only the top two count, or only the top one with evidence-based scoring. | [Scoring method](maturity-model.md#criterion-status-scale) |
 | **Evidence** | The document, export or test result that proves a criterion. Without it, a self-assessment is an opinion. | [Self-assessment tool](../tools/maturity-assessment.html) |
-| **Operating model** | Who runs the watch: a provider (A), an in-house tiered SOC (B), an in-house capability-based team (C), a hybrid, or a shared CDC (D). | [Operating models](11-operating-models.md) |
-| **[GATE] [HARD] [SOFT]** | How much a capability depends on another department: a decision it must take, work it must do, or input that improves the result. | [Introduction](00-introduction.md#dependency-markers-gate-hard-soft) |
-| **CIA mapping** | Whether a capability mainly protects confidentiality, integrity or availability. | [CIA triad](07-cia-triad.md) |
-| **Regulatory hooks** | The NIS2, GDPR, DORA and related articles each function helps you meet. | Each function document; [EU landscape](17-eu-regulatory-landscape.md) |
+| **Operating model** | Who runs the watch: a provider (A), an in-house tiered SOC (B), an in-house capability-based team (C), a hybrid, or a shared CDC (D). | [Operating models](operating-models.md) |
+| **[GATE] [HARD] [SOFT]** | How much a capability depends on another department: a decision it must take, work it must do, or input that improves the result. | [Introduction](introduction.md#dependency-markers-gate-hard-soft) |
+| **CIA mapping** | Whether a capability mainly protects confidentiality, integrity or availability. | [CIA triad](cia-triad.md) |
+| **Regulatory hooks** | The NIS2, GDPR, DORA and related articles each function helps you meet. | Each function document; [EU landscape](eu-regulatory-landscape.md) |
 | **National annex** | NIS2 status, authorities and reporting channels for one member state. | [Annexes](annexes/README.md) |
-| **ECSF roles** | The European Cybersecurity Skills Framework profiles the CDC's roles are built on. | [Roles & competences](12-roles-and-competences.md) |
+| **ECSF roles** | The European Cybersecurity Skills Framework profiles the CDC's roles are built on. | [Roles & competences](roles-and-competences.md) |
 | **Source labels** | Law · Standard · Guidance · OCDF · Practitioner: where a statement's authority comes from. | [Why trust this framework](trust.md) |
 
 ## What you get

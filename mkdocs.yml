@@ -82,6 +82,31 @@ markdown_extensions:
 
 plugins:
   - search
+  # Old numbered URLs (docs/01-govern.md etc., used before v1.2) redirect to
+  # the current un-numbered ones, so existing bookmarks and external links
+  # into opencdc.org keep working.
+  - redirects:
+      redirect_maps:
+        docs/00-introduction.md: docs/introduction.md
+        docs/01-govern.md: docs/govern.md
+        docs/02-identify.md: docs/identify.md
+        docs/03-protect.md: docs/protect.md
+        docs/04-detect.md: docs/detect.md
+        docs/05-respond.md: docs/respond.md
+        docs/06-recover.md: docs/recover.md
+        docs/07-cia-triad.md: docs/cia-triad.md
+        docs/08-maturity-model.md: docs/maturity-model.md
+        docs/09-start-here.md: docs/start-here.md
+        docs/10-tiers.md: docs/tiers.md
+        docs/11-operating-models.md: docs/operating-models.md
+        docs/12-roles-and-competences.md: docs/roles-and-competences.md
+        docs/13-cdc-operations.md: docs/cdc-operations.md
+        docs/14-detection-as-code-deep-dive.md: docs/detection-as-code-deep-dive.md
+        docs/15-cti-deep-dive.md: docs/cti-deep-dive.md
+        docs/16-csirt-community.md: docs/csirt-community.md
+        docs/17-eu-regulatory-landscape.md: docs/eu-regulatory-landscape.md
+        docs/18-cis-controls-crosswalk.md: docs/cis-controls-crosswalk.md
+        docs/19-references.md: docs/references.md
 
 extra:
   social:
@@ -96,36 +121,36 @@ nav:
   - Start:
       - OCDF on one page: docs/one-page.md
       - Executive guide: docs/executive-guide.md
-      - "Start here: the first 90 days": docs/09-start-here.md
-      - Implementation tiers: docs/10-tiers.md
+      - "Start here: the first 90 days": docs/start-here.md
+      - Implementation tiers: docs/tiers.md
       - Worked example: docs/worked-example.md
       - Design navigator for workshops: assessments/cdc-design-navigator.md
       - Maturity self-assessment: assessments/maturity-self-assessment.md
   - Framework:
-      - Introduction & design principles: docs/00-introduction.md
+      - Introduction & design principles: docs/introduction.md
       - All documents in reading order: docs/README.md
       - The six functions:
-          - Govern: docs/01-govern.md
-          - Identify: docs/02-identify.md
-          - Protect: docs/03-protect.md
-          - Detect: docs/04-detect.md
-          - Respond: docs/05-respond.md
-          - Recover: docs/06-recover.md
+          - Govern: docs/govern.md
+          - Identify: docs/identify.md
+          - Protect: docs/protect.md
+          - Detect: docs/detect.md
+          - Respond: docs/respond.md
+          - Recover: docs/recover.md
       - Lenses:
-          - CIA triad as design lens: docs/07-cia-triad.md
-          - Maturity model: docs/08-maturity-model.md
+          - CIA triad as design lens: docs/cia-triad.md
+          - Maturity model: docs/maturity-model.md
       - Capability index: docs/capability-index.md
   - Organisation & operations:
-      - Operating models: docs/11-operating-models.md
-      - Roles & competences: docs/12-roles-and-competences.md
-      - Running the CDC: docs/13-cdc-operations.md
+      - Operating models: docs/operating-models.md
+      - Roles & competences: docs/roles-and-competences.md
+      - Running the CDC: docs/cdc-operations.md
       - Deep dives:
-          - Detection-as-code: docs/14-detection-as-code-deep-dive.md
-          - CTI capability: docs/15-cti-deep-dive.md
-      - CSIRT community layer: docs/16-csirt-community.md
+          - Detection-as-code: docs/detection-as-code-deep-dive.md
+          - CTI capability: docs/cti-deep-dive.md
+      - CSIRT community layer: docs/csirt-community.md
   - Regulatory:
-      - EU regulatory landscape: docs/17-eu-regulatory-landscape.md
-      - CIS Controls crosswalk: docs/18-cis-controls-crosswalk.md
+      - EU regulatory landscape: docs/eu-regulatory-landscape.md
+      - CIS Controls crosswalk: docs/cis-controls-crosswalk.md
       - National annexes:
           - Overview: docs/annexes/README.md
           - Austria: docs/annexes/annex-at.md
@@ -187,4 +212,4 @@ nav:
       - Roadmap: ROADMAP.md
       - Contributing: CONTRIBUTING.md
       - Changelog: CHANGELOG.md
-      - References & credits: docs/19-references.md
+      - References & credits: docs/references.md

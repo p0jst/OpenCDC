@@ -104,6 +104,26 @@
   --ocdf-paper: #fbfaf7;
   --ocdf-line: #e3ded1;
   --ocdf-ink-soft: #5d6975;
+
+  /* One colour per CSF function, reusing the same family already trained
+     into the eye by the source-of-authority tags (law/standard/guidance/
+     ocdf) rather than introducing a second palette. This is the site's only
+     device for telling the six function pages apart at a glance — no icons,
+     no numbers, nothing added to the heading text itself. */
+  --ocdf-fn-govern: #123a6d;
+  --ocdf-fn-identify: #0e6e73;
+  --ocdf-fn-protect: #2a6a4f;
+  --ocdf-fn-detect: #6b4e16;
+  --ocdf-fn-respond: #8a1f2d;
+  --ocdf-fn-recover: #5b3a8f;
+}
+[data-md-color-scheme="slate"] {
+  --ocdf-fn-govern: #6f9bd6;
+  --ocdf-fn-identify: #6cc7cc;
+  --ocdf-fn-protect: #8fd1b3;
+  --ocdf-fn-detect: #e2c07e;
+  --ocdf-fn-respond: #e39aa4;
+  --ocdf-fn-recover: #b9a1e0;
 }
 
 /* ---------------------------------------------------------------- palette */
@@ -224,30 +244,37 @@
   color: var(--ocdf-ink-soft);
 }
 
-/* Document number, lifted out of the H1 by site/build_site.py */
-.md-typeset .ocdf-docnum {
-  font-family: var(--md-code-font-family);
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ocdf-ink-soft);
-  margin: 0 0 0.4rem;
+
+/* --------------------------------------------- per-function accent (docs) */
+
+/* The six function pages (GOVERN..RECOVER) share one template — same H1
+   pattern, same section order, same table shapes — which is exactly why
+   they read as interchangeable at a glance. A body class set per page
+   (see overrides/main.html) ties the page's heading, its "Core
+   capabilities" table and its section dividers to that function's colour,
+   so GOVERN and DETECT feel like different rooms in the same building
+   rather than the same page with the word swapped out. Nothing is added
+   to the page: no icon, no badge, no repeated label — just colour, on
+   elements already there. */
+body[class*="ocdf-fn-"] .md-typeset h1 {
+  padding-left: 0.6rem;
+  border-left: 4px solid var(--ocdf-fn-current);
 }
-.md-typeset .ocdf-docnum + h1 {
-  margin-top: 0;
+body[class*="ocdf-fn-"] .md-typeset h2 {
+  border-bottom-color: color-mix(in srgb, var(--ocdf-fn-current) 40%, var(--ocdf-rule));
 }
-/* chrome, not prose — no standing underline */
-.md-typeset .ocdf-docnum a {
-  color: inherit;
-  text-decoration: none;
+body[class*="ocdf-fn-"] .md-typeset table:not([class]) th {
+  background: color-mix(in srgb, var(--ocdf-fn-current) 14%, var(--ocdf-card-bg));
 }
-.md-typeset .ocdf-docnum a:hover,
-.md-typeset .ocdf-docnum a:focus-visible {
-  color: var(--md-typeset-a-color);
-  text-decoration: underline;
-  text-decoration-color: currentColor;
+body[class*="ocdf-fn-"] .md-typeset blockquote {
+  border-left-color: var(--ocdf-fn-current);
 }
+body.ocdf-fn-govern   { --ocdf-fn-current: var(--ocdf-fn-govern); }
+body.ocdf-fn-identify { --ocdf-fn-current: var(--ocdf-fn-identify); }
+body.ocdf-fn-protect  { --ocdf-fn-current: var(--ocdf-fn-protect); }
+body.ocdf-fn-detect   { --ocdf-fn-current: var(--ocdf-fn-detect); }
+body.ocdf-fn-respond  { --ocdf-fn-current: var(--ocdf-fn-respond); }
+body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* --------------------------------------------------------------- hero */
 
@@ -747,7 +774,7 @@
 }
 .md-typeset .ocdf-map p { margin: 0; }
 .md-typeset .ocdf-map .m-govern a {
-  background: var(--ocdf-eu);
+  background: var(--ocdf-fn-govern);
   color: #fff;
   text-align: center;
   font-size: 0.8rem;
@@ -770,10 +797,17 @@
   font-weight: 700;
 }
 .md-typeset .ocdf-map .m-flow a {
-  background: var(--ocdf-eu-soft);
-  border-top: 3px solid var(--ocdf-eu);
+  background: color-mix(in srgb, var(--ocdf-fn-current) 12%, var(--ocdf-card-bg));
+  border-top: 3px solid var(--ocdf-fn-current);
   text-align: center;
 }
+/* Same six colours as the function pages themselves, in function order —
+   the picture previews the colour a reader will meet again on each page. */
+.md-typeset .ocdf-map .m-flow > div:nth-child(1) { --ocdf-fn-current: var(--ocdf-fn-identify); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(2) { --ocdf-fn-current: var(--ocdf-fn-protect); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(3) { --ocdf-fn-current: var(--ocdf-fn-detect); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(4) { --ocdf-fn-current: var(--ocdf-fn-respond); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(5) { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .ocdf-map .m-loop {
   text-align: center;
   color: var(--ocdf-accent);
@@ -801,7 +835,6 @@
 }
 .md-typeset .ocdf-map .m-lenses a:hover { transform: none; box-shadow: none; }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-govern a { background: var(--ocdf-eu-mid); }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-flow a { border-top-color: #4a76ad; }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-lenses a { color: #8fb3e3; }
 @media screen and (max-width: 44.9375em) {
   .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1rem; }

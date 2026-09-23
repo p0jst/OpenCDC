@@ -62,12 +62,12 @@ gets it done.
 
     ---
 
-    The operational detail: [detection](docs/04-detect.md),
-    [detection-as-code](docs/14-detection-as-code-deep-dive.md), the
-    [CTI capability](docs/15-cti-deep-dive.md) and the
+    The operational detail: [detection](docs/detect.md),
+    [detection-as-code](docs/detection-as-code-deep-dive.md), the
+    [CTI capability](docs/cti-deep-dive.md) and the
     [IR playbooks](playbooks/README.md).
 
-    [Running the CDC →](docs/13-cdc-operations.md)
+    [Running the CDC →](docs/cdc-operations.md)
 
 -   :material-scale-balance:{ .lg .middle } **Compliance or legal**
 
@@ -77,7 +77,7 @@ gets it done.
     for all 27 member states, and a selector that shows only the laws that
     apply to you.
 
-    [EU regulatory landscape →](docs/17-eu-regulatory-landscape.md)
+    [EU regulatory landscape →](docs/eu-regulatory-landscape.md)
 
 </div>
 
@@ -86,24 +86,24 @@ gets it done.
 <div class="ocdf-map" markdown>
 
 <div class="m-govern" markdown>
-[**GOVERN** · mandate, risk, roles, budget, oversight](docs/01-govern.md)
+[**GOVERN** · mandate, risk, roles, budget, oversight](docs/govern.md)
 </div>
 
 <div class="m-flow" markdown>
-<div markdown>[**IDENTIFY**<br><span>what we defend and what threatens it</span>](docs/02-identify.md)</div>
-<div markdown>[**PROTECT**<br><span>reduce likelihood and blast radius</span>](docs/03-protect.md)</div>
-<div markdown>[**DETECT**<br><span>find adversary activity fast</span>](docs/04-detect.md)</div>
-<div markdown>[**RESPOND**<br><span>contain, eradicate, report</span>](docs/05-respond.md)</div>
-<div markdown>[**RECOVER**<br><span>restore trusted service, learn</span>](docs/06-recover.md)</div>
+<div markdown>[**IDENTIFY**<br><span>what we defend and what threatens it</span>](docs/identify.md)</div>
+<div markdown>[**PROTECT**<br><span>reduce likelihood and blast radius</span>](docs/protect.md)</div>
+<div markdown>[**DETECT**<br><span>find adversary activity fast</span>](docs/detect.md)</div>
+<div markdown>[**RESPOND**<br><span>contain, eradicate, report</span>](docs/respond.md)</div>
+<div markdown>[**RECOVER**<br><span>restore trusted service, learn</span>](docs/recover.md)</div>
 </div>
 
 <p class="m-loop">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</p>
 
 <p class="m-lenses" markdown>
-Seen through the [**CIA triad**](docs/07-cia-triad.md) and the
-[**regulatory layer**](docs/17-eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
-CRA, CER and 27 national annexes) · sized by [**tier**](docs/10-tiers.md)
-(E · S · A) · scored by [**level**](docs/08-maturity-model.md) (1–4) · proven
+Seen through the [**CIA triad**](docs/cia-triad.md) and the
+[**regulatory layer**](docs/eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
+CRA, CER and 27 national annexes) · sized by [**tier**](docs/tiers.md)
+(E · S · A) · scored by [**level**](docs/maturity-model.md) (1–4) · proven
 with [**evidence**](tools/maturity-assessment.html) · built in the order
 people › process › technology.
 </p>
@@ -123,17 +123,17 @@ fictional 2,500-person organisation in the [worked example](docs/worked-example.
 <div class="ocdf-path" markdown>
 
 1.  **Choose your tier.** Essential, Standard or Advanced decides how much of the
-    framework applies to you. [Implementation tiers](docs/10-tiers.md)
+    framework applies to you. [Implementation tiers](docs/tiers.md)
 2.  **Run the design workshops.** Six workshops, one per function, surface your
     gaps and the decisions nobody has taken yet. [Design navigator](assessments/cdc-design-navigator.md)
 3.  **Adopt the charter.** Mandate, scope and containment authority, signed
     before anything is bought. [CDC charter](templates/cdc-charter-template.md)
 4.  **Decide the operating model.** In-house, provider or hybrid, with the
-    staffing arithmetic and a cost template. [Operating models](docs/11-operating-models.md)
+    staffing arithmetic and a cost template. [Operating models](docs/operating-models.md)
 5.  **Assess where you are.** Score the maturity criteria and give every gap an
     owner and a due date. [Maturity self-assessment](tools/maturity-assessment.html)
 6.  **Work the first 90 days.** The order of work, week by week, with exit
-    criteria. [Start here](docs/09-start-here.md)
+    criteria. [Start here](docs/start-here.md)
 7.  **Set the operating rhythm.** The recurring work that keeps a CDC from
     decaying, and a detection portfolio that grows from your threat profile.
     [Annual calendar](templates/annual-calendar-template.md) ·

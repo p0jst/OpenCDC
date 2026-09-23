@@ -1,6 +1,6 @@
 # MSSP Requirements Checklist — Template
 
-> Use before signing or renewing a managed detection and monitoring contract under Model A or a hybrid; see docs/11-operating-models.md. Every unchecked box is a negotiation point or an accepted risk to record in GOVERN.
+> Use before signing or renewing a managed detection and monitoring contract under Model A or a hybrid; see [Operating models](../docs/operating-models.md). Every unchecked box is a negotiation point or an accepted risk to record in GOVERN.
 
 ## Data, privacy & residency
 - [ ] GDPR processor agreement under Art. 28 in place; sub-processors listed and change-notified

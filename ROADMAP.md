@@ -22,7 +22,7 @@ Planned work is grouped by priority, not by version number, so plans can move wi
 - [ ] Non-normative tooling appendix listing open source options per capability
 - [ ] First translations
 - [ ] OT/ICS extension profile: the IT/OT boundary, safety-first containment, OT monitoring and CER alignment. Moved up from "Later"; until it ships, see [If you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure)
-- [ ] Verify the SOC-CMM → OCDF mapping in the [maturity model](docs/08-maturity-model.md#reusing-an-existing-soc-cmm-or-sim3-assessment) against the current SOC-CMM release, and calibrate the score translation with teams that have run both
+- [ ] Verify the SOC-CMM → OCDF mapping in the [maturity model](docs/maturity-model.md#reusing-an-existing-soc-cmm-or-sim3-assessment) against the current SOC-CMM release, and calibrate the score translation with teams that have run both
 - [ ] A named second reviewer for every national annex, and the first annexes moved up to *verified against primary source*
 - [ ] Cloud CDC profile, moved up from "Later": identity and Microsoft 365, the AWS, Azure and GCP control planes, workload identities, service principals and OAuth applications, CI/CD and secrets, cloud logging, short-lived workloads, CSPM/CNAPP, and cloud-native incident response
 

@@ -30,6 +30,25 @@
   hides again when the footer cards come into view, so the two never show at
   once.
 #}
+{#
+  Tags <body> with the current CSF function, e.g. class="ocdf-fn-govern" on
+  /docs/govern/. site/extra.css reads it to colour that page's heading,
+  section dividers and capability table to the function's own accent — the
+  one thing that tells GOVERN and DETECT apart at a glance, since otherwise
+  they are the same template with the word swapped out. Client-side because
+  it depends only on the final URL, including the redirect stubs for the
+  old numbered paths, which land on the same coloured page once redirected.
+#}
+{% block scripts %}
+  {{ super() }}
+  <script>
+    (function () {
+      var m = location.pathname.match(/\/docs\/(govern|identify|protect|detect|respond|recover)\/?(?:#.*)?$/);
+      if (m) document.body.classList.add("ocdf-fn-" + m[1]);
+    })();
+  </script>
+{% endblock %}
+
 {% block footer %}
   {{ super() }}
   {% if page and (page.previous_page or page.next_page) %}

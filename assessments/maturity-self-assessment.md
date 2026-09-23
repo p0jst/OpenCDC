@@ -2,7 +2,7 @@
 
 > **Fill this out interactively:** the [interactive tool](../tools/maturity-assessment.html) gives you a status control and evidence field per criterion, automatic staged scoring, a score chart against your target profile, a **resume link** you can save and reopen to carry on later with no account and no cookie, and a JSON snapshot you can export and keep in version control. This document is the reference copy of the same criteria, useful to read offline, print, or copy into your own system.
 
-> Scoring rules: see the [maturity model](../docs/08-maturity-model.md). A level is achieved only when **all** its criteria and all lower-level criteria are met, **with evidence recorded**. Copy this file, date it, and keep assessments in version control to track the trend.
+> Scoring rules: see the [maturity model](../docs/maturity-model.md). A level is achieved only when **all** its criteria and all lower-level criteria are met, **with evidence recorded**. Copy this file, date it, and keep assessments in version control to track the trend.
 
 ## Status scale
 

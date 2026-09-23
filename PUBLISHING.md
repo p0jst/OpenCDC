@@ -18,7 +18,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 ## Community benchmark
 
 - Create the mailbox **benchmark@opencdc.org** on the opencdc.org domain before announcing the benchmark. The tool and the benchmark page already point to it; the address is set in one place, `BENCH_EMAIL` in `tools/maturity-assessment.html`.
-- How to handle contributions: [benchmark/README.md](benchmark/README.md).
+- How to handle contributions: [benchmark contributions guide](benchmark/README.md).
 
 ## Outstanding before the next release
 1. **Legal review of the reporting-deadline tables** and the national law references. Not done at v1.0.0; the release notes say so explicitly, and the site carries the "not legal advice" line on every page.
@@ -26,7 +26,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 3. Announce on community channels before broadcast channels.
 
 ## Cutting a release
-1. Update the version in six places: the README badge, the **Released** section of the ROADMAP, the citation line in `docs/19-references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, and on the landing page `site/index.md` both the eyebrow line and the "How current is this" box. Then add the release to the history above.
+1. Update the version in six places: the README badge, the **Released** section of the ROADMAP, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, and on the landing page `site/index.md` both the eyebrow line and the "How current is this" box. Then add the release to the history above.
 2. Push to `main`; confirm the Pages workflow deployed and the site is live.
 3. Create the release on GitHub, tag `vX.Y.Z` targeting `main`, and paste the notes. Keep the status-and-limitations section; it is what stops a reader treating the regulatory content as audited.
 

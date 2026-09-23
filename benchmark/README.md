@@ -1,7 +1,7 @@
 # Benchmark: maintainer notes
 
 How the community benchmark in the maturity self-assessment is run. The
-public explanation is in [docs/benchmark.md](../docs/benchmark.md).
+public explanation is in [the community benchmark](../docs/benchmark.md).
 
 ## Receiving contributions
 

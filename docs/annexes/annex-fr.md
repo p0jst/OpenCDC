@@ -1,6 +1,6 @@
 # National Annex — France
 
-> **Status as of July 2026:** Pending, still in the legislative process. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see CONTRIBUTING.md.
+> **Status as of July 2026:** Pending, still in the legislative process. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Confidence | Last verified | Verified by | Second reviewer | Next review due |
 |------------|---------------|-------------|-----------------|-----------------|

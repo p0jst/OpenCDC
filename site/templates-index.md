@@ -19,5 +19,5 @@ fill in and return.
 | [Annual operating calendar](annual-calendar-template.md) | Recurring CDC obligations through the year | Markdown |
 | [Skill self-assessment](skill-self-assessment.xlsx), or [CSV version](skill-self-assessment.csv) | Team skill mapping; upload the returned sheets into the [Team Skill Matrix](../tools/skill-matrix.html) | Excel / CSV download |
 
-See [Roles & competences](../docs/12-roles-and-competences.md) for how the
+See [Roles & competences](../docs/roles-and-competences.md) for how the
 skill mapping loop works end to end.
