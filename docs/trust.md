@@ -23,8 +23,9 @@ The framework documents carry these labels. Most have one under the title; the s
 
 - The EU legal texts the framework relies on are listed with links to the
   official versions on EUR-Lex in [references and credits](references.md).
-- The national annexes each show when they were last verified, by whom, and how
-  confident that verification is. See the [annex index](annexes/README.md).
+- The national annexes each show when they were last reviewed, by whom, and how
+  confident that review is — none is yet checked line by line against the
+  official gazette itself. See the [annex index](annexes/README.md).
 - The 60 maturity criteria are identical in the printable checklist and the
   interactive tool, and every capability ID used in the documents appears in the
   [capability index](capability-index.md).

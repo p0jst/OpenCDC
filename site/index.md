@@ -81,7 +81,34 @@ gets it done.
 
 </div>
 
+## What you get
+
+Not just pages read once — working through OCDF produces a stack of concrete
+artefacts you take into your own documentation system and governance process:
+
+<div class="ocdf-outputs" markdown>
+
+- **CDC charter** — mandate, scope and containment authority, signed before anything is bought. [Template](templates/cdc-charter-template.md)
+- **Target operating model** — in-house, MSSP, hybrid or shared, with the staffing arithmetic behind it. [Operating models](docs/operating-models.md)
+- **Capability baseline** — where you stand today, function by function, with evidence behind every score. [Maturity self-assessment](tools/maturity-assessment.html)
+- **90-day action plan** — every gap with an owner and a due date. [Start here](docs/start-here.md)
+- **Regulatory applicability profile** — which of NIS2, GDPR, DORA, CRA and CER actually apply to you, and your national annex. [Regulatory profile selector](tools/regulatory-profile.html)
+- **Detection portfolio** — use cases prioritised by your own threat profile, not a generic checklist. [Detection-as-code](docs/detection-as-code-deep-dive.md)
+- **Annual operating calendar** — the recurring work that keeps a CDC from decaying after go-live. [Template](templates/annual-calendar-template.md)
+- **Evidence register** — what backs every maturity score, exportable as a spreadsheet for board reporting. [Maturity self-assessment](tools/maturity-assessment.html)
+
+</div>
+
 ## The framework in one picture
+
+<p class="ocdf-dimensions-intro">OCDF has four independent dimensions — mix and match them for your organisation:</p>
+
+<div class="ocdf-dimensions" markdown>
+<div markdown><b>What</b><span>6 functions</span></div>
+<div markdown><b>How much</b><span>E · S · A tier</span></div>
+<div markdown><b>How well</b><span>L1–L4 maturity</span></div>
+<div markdown><b>Proof</b><span>Evidence</span></div>
+</div>
 
 <div class="ocdf-map" markdown>
 
@@ -114,6 +141,39 @@ Every function has the same parts: capabilities with IDs such as `DE-2`,
 maturity criteria per level, EU regulatory hooks, and a table of the other
 departments it depends on. [OCDF on one page](docs/one-page.md) explains all
 the terms in five minutes.
+
+## See OCDF in action
+
+A fictional 2,500-person parcel company goes from fragmented security work to
+a structured, evidenced CDC: tier decision, operating model, signed charter,
+first 90 days with owners, a ten-detection portfolio and the first board
+report — see every step in the [worked example](docs/worked-example.md).
+
+<div class="ocdf-example" markdown>
+
+<div class="ocdf-example__before" markdown>
+<p class="ocdf-example__label">Before</p>
+
+- Fragmented responsibilities
+- No clear containment authority
+- Reactive detection
+- Undefined regulatory ownership
+</div>
+
+<div class="ocdf-example__arrow" aria-hidden="true">→</div>
+
+<div class="ocdf-example__after" markdown>
+<p class="ocdf-example__label">After</p>
+
+- Defined mandate and charter
+- Chosen operating model
+- Capability baseline and 90-day plan
+- Maturity targets and evidence
+</div>
+
+</div>
+
+[Explore the worked example →](docs/worked-example.md){ .md-button .md-button--primary }
 
 ## Start building
 
@@ -152,7 +212,7 @@ under CC BY 4.0, also as a
 **Version 1.1.0**, released 23 September 2026 ([changelog](CHANGELOG.md)) ·
 written and maintained by one practitioner, Frederik B. Krogsgaard, formerly
 Senior Manager at the Norlys Cyber Defence Center. Each national annex states
-when it was verified and how confident that verification is; see
+when it was last reviewed and how confident that review is; see
 [why you can, and cannot, rely on this framework](docs/trust.md).
 
 **Scope: enterprise IT** — endpoints, servers, identity, cloud and SaaS. Not

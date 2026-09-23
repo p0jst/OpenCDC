@@ -1,8 +1,8 @@
 # National Annex — Denmark
 
-> Status: community-maintained; verified July 2026. Verify against retsinformation.dk and samsik.dk before relying on it. Not legal advice.
+> **Status as of July 2026:** In force. Community-maintained orientation, the reference annex for the framework. This is **not legal advice**; verify against retsinformation.dk and samsik.dk before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
-| Confidence | Last verified | Verified by | Second reviewer | Next review due |
+| Confidence | Last reviewed | Reviewed by | Second reviewer | Next review due |
 |------------|---------------|-------------|-----------------|-----------------|
 | [Maintainer reviewed](README.md#confidence-levels) | July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
 
