@@ -54,7 +54,7 @@ What the CDC should own at the boundary, even without an OT profile:
 
 What does **not** transfer: the platform playbooks. Isolating, rebooting or live-imaging an OT asset can have physical consequences. Use sector guidance (for example IEC 62443 and the ISA/IEC and ENISA OT material) and your vendors' procedures for anything below the DMZ.
 
-In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which goes beyond the EU baseline on 24/7 monitoring, segmentation and where operations centres may be located; see the [Danish annex](docs/annexes/annex-dk.md). The OT/ICS extension profile is planned for v0.3 on the [roadmap](ROADMAP.md).
+In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which goes beyond the EU baseline on 24/7 monitoring, segmentation and where operations centres may be located; see the [Danish annex](docs/annexes/annex-dk.md). The OT/ICS extension profile is planned for v1.2 on the [roadmap](ROADMAP.md).
 
 ## Maintainers and adoption
 

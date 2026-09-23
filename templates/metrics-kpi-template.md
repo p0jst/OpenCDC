@@ -16,7 +16,7 @@
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
 | MTTD | Median time from first malicious activity to detection, measured per confirmed incident | Trend ↓ | Detection engineering priorities |
-| ATT&CK coverage | % of threat-profile techniques with ≥1 validated detection | > 70% of profile | Use-case backlog |
+| ATT&CK coverage | % of the techniques in your threat profile at level 3 on the honesty scale in the [detection-as-code deep dive](../docs/14-detection-as-code-deep-dive.md) §4: detection deployed, log source live, and fired in test within 12 months | Trend ↑; always report the uncovered techniques by name | Use-case backlog |
 | Detection validation rate | % production detections tested and fired in the last 12 months | 100% | Purple-team scheduling |
 | False-positive rate | FP / total alerts per use case | Per-UC threshold | Tuning / retirement |
 | Triage SLA adherence | % alerts acknowledged within severity SLA | > 95% | Staffing model |
@@ -43,6 +43,8 @@
 - **Alert volume**, as in "we handled 40,000 alerts", rewards noise.
 - **Blocked attacks count** from perimeter devices, an unfalsifiable vanity metric.
 - **Tickets closed per analyst** — incentivises shallow triage.
+- **ATT&CK coverage across the whole matrix, or counted from rule tags alone.** A percentage of all techniques says nothing about your threats, and a tagged rule that never fired in test is not coverage.
+- **Number of use cases or rules.** More rules is more to maintain, not more protection.
 
 ## Reporting cadence
 

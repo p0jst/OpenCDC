@@ -19,7 +19,7 @@ Your telemetry, covering identity, endpoint, network and cloud, is forwarded to 
 **Fits:** SMEs and important entities without security hiring power; organisations needing 24/7 *now*.
 
 ### Model B — In-house tiered SOC, Tier 1 → 2 → 3
-The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires **8–12 FTE minimum** for the shift line alone.
+The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires **8–12 FTE** for the shift line with daytime capacity on top, and that still means one analyst alone at night; see [staffing and cost](#staffing-and-cost-the-arithmetic).
 
 | Pros | Cons |
 |------|------|
@@ -71,6 +71,80 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 | Exit strategy: could we insource in 3 years if we start with A? | Contract for it now: log ownership, rule portability, transition clause |
 
 **Record the decision** in the CDC charter, §3 services and §6 resourcing, with rationale and a review date. Operating models are 3-year decisions, not permanent ones. If choosing Model A, use the [MSSP requirements checklist](../templates/mssp-requirements-checklist.md) before signing anything.
+
+## Staffing and cost: the arithmetic
+
+A budget round needs numbers, and the numbers that matter most are specific to your country, your contracts and your estate. This section gives the method and the formulas; put your own figures in. Where it quotes a figure, the figure is an input you should replace, not a benchmark.
+
+### How many people one seat takes
+
+A *seat* is one analyst at the console at any given moment. Covering one seat around the clock means covering every hour of the year; each person you employ works far fewer than that.
+
+| Step | Formula | Example, Danish full-time contract |
+|------|---------|------------------------------------|
+| Hours to cover per seat | 24 × 365 | 8,760 h |
+| Contract hours per FTE | weekly hours × 52 | 37 × 52 = 1,924 h |
+| minus annual leave | your leave entitlement | 5 weeks: −185 h |
+| minus public holidays on weekdays | your calendar | ~9 days: −67 h |
+| minus sickness | your absence rate | ~8 days: −59 h |
+| minus training and exercises | your training plan | 5 days: −37 h |
+| **Available hours per FTE** | | **≈ 1,576 h** |
+| **FTE per 24/7 seat** | 8,760 ÷ available hours | **≈ 5.6** |
+
+Replace every number in the example column with your own. With six weeks of leave, or a higher absence rate, the answer moves towards 6. It never gets close to the "four or five people on a rota" that 24/7 plans often assume.
+
+Then build the line from seats:
+
+| Line | Hours per year | FTE, using 1,576 h |
+|------|----------------|--------------------|
+| One seat, 24/7 | 8,760 | 5.6 |
+| A second seat, weekdays 07–17 | 250 days × 10 h = 2,500 | 1.6 |
+| Detection engineering, off the shift rota | — | 1–2 |
+| Team lead or manager | — | 1 |
+| **Total** | | **≈ 9–10** |
+
+That is where the framework's 8–12 FTE for a 24/7 in-house line comes from. A second seat at night as well adds another 4 FTE. Two further constraints bite in practice: the EU Working Time Directive and national rules limit night work and require rest periods, which shapes the rota, and a rota with fewer than about six people leaves no slack when someone resigns.
+
+**The lone night analyst.** With one 24/7 seat, nights and weekends are a single person. Decide deliberately how that is made safe:
+
+- a named second-line responder on call, with a response-time target, and an automatic escalation to them if a P1 alert is not acknowledged in time
+- no containment action on crown jewels taken alone at night; record in the [containment action catalogue](../templates/containment-action-catalogue-template.md)'s notes column which actions need a second person
+- a welfare check-in and a clear rule for when to wake the on-call lead, so the analyst is never deciding alone whether something is serious enough
+- or an A+C hybrid, where a provider with several analysts on shift holds the night and your team holds the day
+
+### What it costs
+
+Build the cost from lines you can each defend separately. A single "SOC budget" number is the one finance will cut first.
+
+| Cost line | How to estimate it | Watch for |
+|-----------|--------------------|-----------|
+| **People** | FTE × fully loaded annual cost. Fully loaded means salary plus employer costs, pension, shift and on-call allowances, equipment and training; ask finance for your organisation's multiplier | Shift and on-call allowances are often left out and can be significant; recruitment fees and time-to-hire |
+| **SIEM or log platform** | Measure ingest, don't guess: sample two weeks of your priority log sources and extrapolate GB per day. Then apply the vendor's model: per GB ingested, per event rate, per asset or per user | Growth as sources are added; hot versus archive retention priced differently; parsing or search charged separately |
+| **Log retention** | GB per day × retention days × storage price, for each storage tier | Retention set by law or policy, not by what the licence includes |
+| **EDR** | Endpoints and servers × price per agent | Server and cloud workloads often priced differently from laptops |
+| **MSSP** | Quote against your measured inventory and ingest. Common models: per endpoint or asset, per user, per GB or event rate, or a flat tier | What is included: triage only, or response actions too; ingest caps and overage; onboarding fees; data return and exit costs |
+| **Internal team alongside an MSSP** | 1–3 FTE for governance, escalation, response and contract management | This line is often forgotten in "buy" business cases, and the MSSP cannot replace it |
+| **DFIR retainer** | Retainer fee plus pre-paid or discounted hours | Whether unused hours roll over; response-time guarantees |
+| **Training and exercises** | Per FTE per year, plus tabletop and technical exercises | Certification renewals; time away from the rota, already counted above |
+| **Engineering tooling** | Repositories, CI, test environments, automation platform | Usually small; skipped at a price |
+
+### Comparing the options over three years
+
+Operating models are three-year decisions, so compare them over three years, not one. Year one carries the build cost; for an in-house line it can take 12–24 months to reach full strength, and you pay for an MSSP or overtime in the meantime.
+
+| Cost line | Model A: MSSP | Model B: tiered in-house | Model C: capability-based | A+C hybrid |
+|-----------|---------------|--------------------------|---------------------------|------------|
+| People | | | | |
+| Platform and licences | | | | |
+| Log retention | | | | |
+| MSSP fees | | | | |
+| DFIR retainer | | | | |
+| Training and exercises | | | | |
+| One-off build and onboarding | | | | |
+| Exit or transition cost at year 3 | | | | |
+| **Total, years 1–3** | | | | |
+
+Fill in all four columns even when the answer looks obvious. The comparison is what convinces a board, and it records why the choice was made when it is reviewed in three years.
 
 ## Maturity note
 

@@ -10,7 +10,7 @@
 
 ---
 
-> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the roadmap for the OT profile planned for v0.3.
+> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [ABOUT.md](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the roadmap for the OT profile planned for v1.2.
 
 ## Why this framework exists
 
@@ -45,7 +45,7 @@ Cross-cutting documents, in reading order:
 | 08 | [Maturity Model](docs/08-maturity-model.md) | Four maturity levels with concrete criteria per function, and how to reuse an existing SOC-CMM, SIM3 or CIS assessment |
 | 09 | [Start Here: Prioritisation](docs/09-start-here.md) | The first 90 days and first year, in order, with exit criteria and anti-priorities |
 | 10 | [Implementation Tiers](docs/10-tiers.md) | Essential / Standard / Advanced overlay: which capabilities apply at your size |
-| 11 | [Operating Models](docs/11-operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs and what can never be outsourced |
+| 11 | [Operating Models](docs/11-operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs, what can never be outsourced, and the staffing arithmetic and cost template for the budget round |
 | 12 | [Roles & Competences](docs/12-roles-and-competences.md) | CDC roles, skills matrix, career paths and hiring, built on the ENISA ECSF |
 | 13 | [Running the CDC](docs/13-cdc-operations.md) | The loops that keep a live CDC improving: tuning, detection-as-code, team development, automation guardrails, tool discipline |
 | 14 | [Deep Dive: Detection-as-Code](docs/14-detection-as-code-deep-dive.md) | Repo layout, rule YAML anatomy, CI/CD pipeline, honest ATT&CK coverage scoring, Advanced tier |

@@ -56,15 +56,17 @@ The traditional split, where infrastructure maintains the server and OS and the 
 - **Tier 1/2 analysts**, or a tierless model at higher maturity, for triage and investigation.
 - **Detection engineers** — use case lifecycle; in small teams combined with analyst role.
 - **Threat hunter** — Level 3+ capability.
-- Minimum viable team for business-hours monitoring: **3–4 FTE**; sustained 24/7 in-house monitoring realistically requires **8–12 FTE**. Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
+- Minimum viable team for business-hours monitoring: **3–4 FTE**. One seat staffed around the clock takes roughly **5.5–6 FTE** once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at **8–12 FTE**, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](11-operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
 
 ## Maturity criteria
+
+Maturity measures how well detection works, not how many hours a day someone watches. Coverage hours are a target set by risk; see [coverage hours are a target, not a level](08-maturity-model.md#coverage-hours-are-a-target-not-a-level). A business-hours team with strong engineering can reach Level 3 if business hours plus tested on-call is what its risk decision calls for.
 
 | Level | Criteria |
 |-------|----------|
 | **1 — Initial** | Perimeter and AV alerts reviewed reactively; no central log platform or minimal sources; no documented use cases. |
-| **2 — Managed** | Central log platform with priority sources 1–3 onboarded; ~20+ documented use cases mapped to ATT&CK; triage runbook; business-hours coverage with on-call. |
-| **3 — Established** | Detection engineering lifecycle with version control and testing; coverage measured against ATT&CK and crown jewels; enrichment automated; regular hunting; 24/7 coverage, in-house or hybrid; MTTD tracked. |
+| **2 — Managed** | Central log platform with priority sources 1–3 onboarded; use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook; triage runbook; defined coverage hours with on-call. |
+| **3 — Established** | Detection engineering lifecycle with version control and testing; coverage measured against ATT&CK and crown jewels; enrichment automated; regular hunting; coverage hours meet the risk-based target set in GOVERN, with out-of-hours escalation tested; MTTD tracked. |
 | **4 — Optimising** | Continuous detection validation through purple teaming and emulation; detection-as-code with CI/CD; hunting output systematically converted to detections; coverage and false-positive rates trended and drive backlog. |
 
 ## EU regulatory hooks

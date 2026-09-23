@@ -28,7 +28,7 @@ Two layers keep the framework filterable:
 2. **Markdown docs:** law-specific sentences carry an HTML comment tag such as
    `<!-- law:nis2 -->` or `<!-- law:dk-nis2 -->`. These are invisible on GitHub
    but machine-readable, so future tooling can filter the plain docs the same way.
-   Roadmap v0.2 has a build script that generates per-profile Markdown and PDF.
+   Roadmap v1.1 has a build script that generates per-profile Markdown and PDF.
 
 ### Law IDs
 `nis2` `gdpr` `dora` `cra` `cer` for EU-wide instruments ·

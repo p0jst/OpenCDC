@@ -31,7 +31,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 
 ## Months 4–12
 
-- Detection: reach ~20+ ATT&CK-mapped use cases; establish the tuning loop and triage SLAs, per [Running the CDC](13-cdc-operations.md)
+- Detection: use cases for the top techniques in your threat profile, each with owner, ATT&CK mapping and runbook; establish the tuning loop and triage SLAs, per [Running the CDC](13-cdc-operations.md)
 - Response: containment technically tested; tabletop with management; DFIR retainer if not in-house
 - Recover: RTO/RPO agreed for crown jewels; rebuild-from-known-good procedure drafted
 - Govern: quarterly executive reporting running; supplier security clauses in new contracts

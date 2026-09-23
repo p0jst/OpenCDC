@@ -70,6 +70,21 @@ readings, and a criterion's status travels with its evidence note.
 
 Targets are risk decisions. Set them in GOVERN, with executive sign-off.
 
+### Coverage hours are a target, not a level
+
+How many hours a day someone watches the alerts is a risk decision, not a measure of maturity. An 8×5 team with tested on-call and strong engineering can be better run than a 24/7 line that only forwards tickets. The criteria therefore ask whether coverage hours **meet the target you set**, not whether they are 24/7.
+
+Set the target in GOVERN alongside the maturity targets, and record it in the charter's service table:
+
+| Organisation type | Typical coverage-hours target |
+|-------------------|-------------------------------|
+| SME, low regulatory exposure | Business hours, with on-call or an MSSP out of hours |
+| NIS2 *important* entity | Out-of-hours detection by MSSP, NOC or on-call, able to meet the 24 h early-warning clock |
+| NIS2 *essential* entity / DORA financial entity | 24/7 detection, in-house or hybrid, with a named responder reachable around the clock |
+| Critical infrastructure, high-threat sectors | 24/7 detection and 24/7 response authority, including for OT boundary events |
+
+National or sector law can set the floor for you: Danish energy-sector entities, for example, have a statutory 24/7 monitoring duty for critical installations; see the [Danish annex](annexes/annex-dk.md). Where the law sets it, the target is not a choice.
+
 ## Reassessment cadence
 
 - Full assessment: **annually**, or after major organisational change.

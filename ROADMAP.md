@@ -1,15 +1,17 @@
 # Roadmap
 
+Releases are numbered from v1.0.0 upwards: v1.1, v1.2 and so on add and correct content. Any change to a maturity criterion is listed under **Scoring changes** in the [changelog](CHANGELOG.md), so an assessment made under an earlier version can still be compared.
+
 ## v1.0.0 — current, released 2026-09-02
 Core framework: six CSF 2.0 functions with CIA mapping, maturity criteria, EU hooks and external-dependency tables. Design layer: start-here prioritisation, E/S/A tiers, operating models including MSSP and shared CDCs, ECSF-based roles. Operations layer: tuning, detection-as-code with its deep dive, the CTI deep dive, automation guardrails, tool discipline. Community layer: RFC 2350, TF-CSIRT/FIRST, SIM3 crosswalk, controls register, annual calendar. Regulatory layer: EU landscape, 27 national annexes, interactive law selector, CIS Controls crosswalk. Practical assets: 9 templates, 4 platform playbooks, design navigator, maturity self-assessment. Plus a published website with three dependency-free browser tools: regulatory profile selector, team skill matrix and maturity self-assessment.
 
-## v0.2
+## v1.1 — next
 - [ ] More platform playbooks. Candidates: Kubernetes/container platforms, network devices, hypervisors, Microsoft 365 / Entra ID tenants, and a general cloud-workload playbook
 - [ ] Scenario playbooks: take the three attack-based drafts (identity compromise, business email compromise, ransomware) out of draft after field review, then add insider data theft, supplier compromise and cloud-tenant takeover
 - [ ] Build script: generate per-profile Markdown and PDF from law tags
 - [ ] Machine-readable maturity assessment in YAML, plus a scoring script
 
-## v0.3
+## v1.2
 - [ ] Crosswalks: OCDF ↔ ISO/IEC 27001 Annex A ↔ NIS2 Art. 21(2)(a–j) ↔ DORA
 - [ ] Non-normative tooling appendix listing open source options per capability
 - [ ] First translations

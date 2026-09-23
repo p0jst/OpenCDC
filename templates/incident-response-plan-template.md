@@ -53,7 +53,7 @@
 
 ## 6. Playbook index
 
-> `PB-01`…`PB-06` below are placeholder IDs for **your own** scenario playbooks, so rename them to your scheme. The framework ships *platform* playbooks with different IDs: `PB-W11`, `PB-MAC`, `PB-WSV` and `PB-LNX`, listed in the [playbook index](../playbooks/README.md); scenario playbooks are on the roadmap for v0.2.
+> `PB-01`…`PB-06` below are placeholder IDs for **your own** scenario playbooks, so rename them to your scheme. The framework ships *attack* playbooks `PB-IDC`, `PB-BEC` and `PB-RAN`, as drafts, and *platform* playbooks `PB-W11`, `PB-MAC`, `PB-WSV` and `PB-LNX`, all listed in the [playbook index](../playbooks/README.md). Link them from your own scenario playbooks rather than renumbering them.
 
 | Scenario | Playbook | Last exercised |
 |----------|----------|----------------|

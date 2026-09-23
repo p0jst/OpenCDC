@@ -2,11 +2,26 @@
 
 ## Unreleased
 
+Changes from a second, deliberately critical review by a senior SOC manager:
+
+- **Staffing and cost, with the arithmetic.** [Operating models](docs/11-operating-models.md) gains "Staffing and cost: the arithmetic": how many people one seat takes around the clock, worked through step by step with inputs to replace; how the 8–12 FTE figure for a 24/7 line is built; how to make the lone night analyst safe; the cost lines to estimate, and what to watch for in each; and a three-year comparison table across the operating models. The staffing notes in DETECT and Model B now link to it.
+- **ATT&CK coverage metric tightened.** The metrics template now counts only techniques in your threat profile at level 3 on the honesty scale from the detection-as-code deep dive, drops the fixed 70% target in favour of a trend with the uncovered techniques named, and adds whole-matrix coverage and rule counts to the anti-patterns.
+- **Roadmap renumbered.** The planned releases after v1.0.0 were labelled v0.2 and v0.3; they are now v1.1 and v1.2, and the roadmap explains how releases are numbered. References in ABOUT, README, the landing page, the tools README and the IR plan template follow.
+
+### Scoring changes
+
+Two DETECT criteria changed. Assessments made under v1.0.0 can move, so compare with care:
+
+- **Level 3:** "24/7 monitoring, in-house or hybrid" becomes "Coverage hours meet the risk-based target set in GOVERN; out-of-hours escalation tested twice a year". Maturity measures how well detection works; how many hours a day someone watches is a risk decision. Under the old wording a well-run business-hours team, the capability-based Model C the framework itself describes, could never pass Level 2 in DETECT. The maturity model gains "Coverage hours are a target, not a level", with typical targets per organisation type. A DETECT score can rise under the new wording; it cannot fall.
+- **Level 2:** "≥ 20 documented use cases mapped to ATT&CK" becomes "Use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook". A rule count is the vanity metric the framework warns against elsewhere. A team with twenty unfocused rules may now fail this criterion; one with fewer rules aimed at its real threats may now pass.
+
+The interactive self-assessment keeps the same number and order of criteria, so existing resume links and snapshots still open; a criterion marked implemented under the old wording keeps that status and should be re-checked against the new one.
+
 - **Maturity self-assessment redesigned as a workspace**, inspired by the SIM3 self-assessment tool. Criteria sit on the left with one tab per function, each tab showing the function's level and how many criteria are met. A results panel on the right stays in view and updates on every click: target profiles as buttons, summary tiles, and three views: the score chart, the Result table, and a new **Open actions** list of the criteria still missing to reach your targets, each of which jumps to the criterion. Status is set with one click on a five-button row instead of a dropdown. On phones the results move below the criteria, with a summary bar pinned to the bottom of the screen. Scoring, resume links and snapshot files are unchanged, so existing links and exports keep working.
 
 Changes from a practitioner review of the site: a CDC manager from critical infrastructure read it cold and listed what would stop them relying on it.
 
-- **Critical infrastructure and OT.** ABOUT gains "If you run critical infrastructure": what applies as written, what the CDC should own at the IT/OT boundary even without an OT profile, and what does not transfer. The OT/ICS profile moves from "Later" to v0.3 on the roadmap. The landing page and README link to the new section.
+- **Critical infrastructure and OT.** ABOUT gains "If you run critical infrastructure": what applies as written, what the CDC should own at the IT/OT boundary even without an OT profile, and what does not transfer. The OT/ICS profile moves from "Later" to v1.2 on the roadmap. The landing page and README link to the new section.
 - **Annex currency.** All 27 national annexes open with a status block: last verified, verified by, second reviewer and next review due. The annex index shows the same columns under a "one reviewer so far" warning and commits to re-verification at least every six months.
 - **Reusing past assessments.** The maturity model gains a SOC-CMM → OCDF mapping by aspect, a rough and explicitly uncalibrated score translation, and pointers to the existing SIM3 and CIS Controls crosswalks.
 - **Attack-based playbooks**, published as drafts for field review: PB-IDC identity compromise, PB-BEC business email compromise and PB-RAN ransomware. They sit above the platform playbooks and hand off to them. PB-IDC fixes the containment order explicitly: block sign-in first, then revoke sessions immediately, because revoking while the account is enabled lets a password holder sign straight back in.

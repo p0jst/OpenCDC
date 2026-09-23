@@ -131,7 +131,7 @@ states.
     classified environments; see [About](ABOUT.md) for the reasoning. Running
     critical infrastructure? Read
     [what still applies at the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure);
-    an OT profile is planned for v0.3. Orientation only, not legal advice.
+    an OT profile is planned for v1.2. Orientation only, not legal advice.
 
 !!! info "How current is this?"
     **Version 1.0.0**, released 2 September 2026; see the [changelog](CHANGELOG.md).
