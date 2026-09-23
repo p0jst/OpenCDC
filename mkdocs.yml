@@ -42,7 +42,10 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
-    - navigation.sections
+    # navigation.sections deliberately left off: it forces every sub-list
+    # (27 national annexes, 9 templates, 7 playbooks...) permanently open in
+    # the sidebar. Without it the sidebar is a collapsed accordion that only
+    # opens the section you're actually in — far less to scan to find a page.
     - navigation.top
     - navigation.footer
     - navigation.indexes

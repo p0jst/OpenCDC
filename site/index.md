@@ -7,7 +7,7 @@ hide:
 
 <div class="ocdf-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>v1.1.0</span> · <span>Open source</span> · <span>CC BY 4.0</span> · <span>Vendor-neutral</span> · <span>Built for the EU</span></p>
+<p class="ocdf-eyebrow"><span>v1.1.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
 
 # Build and mature your Cyber Defence Center
 
@@ -99,18 +99,14 @@ gets it done.
 
 <p class="m-loop">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</p>
 
-<div class="m-lenses" markdown>
-<div markdown>[**CIA triad** · every capability states whether it protects confidentiality, integrity or availability](docs/07-cia-triad.md)</div>
-<div markdown>[**Regulatory layer** · NIS2, GDPR, DORA, CRA, CER and 27 national annexes](docs/17-eu-regulatory-landscape.md)</div>
-</div>
-
-<div class="m-measure" markdown>
-<div markdown>[**Tier E · S · A**<br><span>which capabilities apply at your size</span>](docs/10-tiers.md)</div>
-<div markdown>[**Level 1–4**<br><span>how well you run them</span>](docs/08-maturity-model.md)</div>
-<div markdown>[**Evidence**<br><span>what proves it to an auditor</span>](tools/maturity-assessment.html)</div>
-</div>
-
-<p class="m-base">Built in the order People › Process › Technology</p>
+<p class="m-lenses" markdown>
+Seen through the [**CIA triad**](docs/07-cia-triad.md) and the
+[**regulatory layer**](docs/17-eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
+CRA, CER and 27 national annexes) · sized by [**tier**](docs/10-tiers.md)
+(E · S · A) · scored by [**level**](docs/08-maturity-model.md) (1–4) · proven
+with [**evidence**](tools/maturity-assessment.html) · built in the order
+people › process › technology.
+</p>
 
 </div>
 
@@ -151,19 +147,18 @@ enter is sent anywhere. The whole framework is on [GitHub](https://github.com/p0
 under CC BY 4.0, also as a
 [zip download](https://github.com/p0jst/OpenCDC/archive/refs/heads/main.zip).
 
-!!! info "How current is this, and who wrote it?"
-    **Version 1.1.0**, released 23 September 2026; see the [changelog](CHANGELOG.md).
-    Written and maintained by one practitioner, Frederik B. Krogsgaard, formerly
-    Senior Manager at the Norlys Cyber Defence Center. Each national annex shows
-    when it was last verified and how confident that verification is.
-    [Why you can, and cannot, rely on this framework](docs/trust.md) sets out
-    which statements are law, which are standards and which are the author's own
-    judgement.
+<div class="ocdf-meta" markdown>
 
-!!! note "Scope"
-    The framework targets **enterprise IT environments**: endpoints, servers,
-    identity, cloud and SaaS. It is not designed for OT/ICS, telco core networks or
-    classified environments; see [About](ABOUT.md) for the reasoning. Running
-    critical infrastructure? Read
-    [what still applies at the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure);
-    an OT profile is on the [roadmap](ROADMAP.md). Orientation only, not legal advice.
+**Version 1.1.0**, released 23 September 2026 ([changelog](CHANGELOG.md)) ·
+written and maintained by one practitioner, Frederik B. Krogsgaard, formerly
+Senior Manager at the Norlys Cyber Defence Center. Each national annex states
+when it was verified and how confident that verification is; see
+[why you can, and cannot, rely on this framework](docs/trust.md).
+
+**Scope: enterprise IT** — endpoints, servers, identity, cloud and SaaS. Not
+designed for OT/ICS, telco core networks or classified environments ([why](ABOUT.md));
+running critical infrastructure, see
+[the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure) (an OT
+profile is on the [roadmap](ROADMAP.md)). Orientation only, not legal advice.
+
+</div>

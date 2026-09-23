@@ -783,39 +783,34 @@
   font-size: 0.68rem;
   margin: 0.2rem 0 0.8rem;
 }
-.md-typeset .ocdf-map .m-lenses,
-.md-typeset .ocdf-map .m-measure {
-  display: grid;
-  gap: 0.6rem;
-  margin-bottom: 0.6rem;
-}
-.md-typeset .ocdf-map .m-lenses { grid-template-columns: 1fr 1fr; }
-.md-typeset .ocdf-map .m-measure { grid-template-columns: repeat(3, 1fr); }
-.md-typeset .ocdf-map .m-lenses a {
-  border: 1px dashed var(--ocdf-eu-mid);
-}
-.md-typeset .ocdf-map .m-measure a {
-  border: 1px solid var(--ocdf-rule);
-  border-left: 3px solid var(--ocdf-accent);
-}
-.md-typeset .ocdf-map .m-base {
-  text-align: center;
-  font-size: 0.64rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ocdf-ink-soft);
+/* The five supporting ideas (CIA lens, regulatory layer, tier, level,
+   evidence) used to be five separate bordered boxes under the diagram.
+   They're the same links now, run as one quiet line of text — the diagram
+   above is the picture; this is a caption, not a second grid of tiles. */
+.md-typeset .ocdf-map .m-lenses {
+  margin: 0;
+  padding-top: 0.7rem;
   border-top: 1px solid var(--ocdf-rule);
-  padding-top: 0.6rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--ocdf-ink-soft);
 }
+.md-typeset .ocdf-map .m-lenses a {
+  display: inline;
+  padding: 0;
+  color: var(--ocdf-eu);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+.md-typeset .ocdf-map .m-lenses a:hover { transform: none; box-shadow: none; }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-govern a { background: var(--ocdf-eu-mid); }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-flow a { border-top-color: #4a76ad; }
+[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-lenses a { color: #8fb3e3; }
 @media screen and (max-width: 44.9375em) {
   .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1rem; }
   .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
     content: "↓"; right: auto; left: 50%; top: auto; bottom: -1rem; transform: translateX(-50%);
   }
-  .md-typeset .ocdf-map .m-lenses,
-  .md-typeset .ocdf-map .m-measure { grid-template-columns: 1fr; }
 }
 
 /* role cards: the last paragraph is the call to action — pin it to the
@@ -831,29 +826,29 @@
   font-weight: 650;
 }
 
-/* start-building path: a numbered list drawn as steps */
+/* start-building path: a numbered list, not seven stacked cards. A number
+   and a divider carry the rhythm; nothing here needs its own box. */
 .md-typeset .ocdf-path > ol {
   counter-reset: step;
   list-style: none;
-  margin: 0.8rem 0 1rem;
+  margin: 0.9rem 0 1.1rem;
   padding: 0;
-  display: grid;
-  gap: 0.5rem;
 }
 .md-typeset .ocdf-path > ol > li {
   counter-increment: step;
   position: relative;
   margin: 0;
-  padding: 0.65rem 0.9rem 0.65rem 2.9rem;
-  background: var(--ocdf-card-bg);
-  border: 1px solid var(--ocdf-rule);
-  border-radius: 6px;
+  padding: 0.7rem 0 0.7rem 2.6rem;
+  border-bottom: 1px solid var(--ocdf-rule);
+}
+.md-typeset .ocdf-path > ol > li:last-child {
+  border-bottom: none;
 }
 .md-typeset .ocdf-path > ol > li::before {
   content: counter(step);
   position: absolute;
-  left: 0.8rem;
-  top: 0.62rem;
+  left: 0;
+  top: 0.72rem;
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
@@ -866,6 +861,26 @@
 }
 .md-typeset .ocdf-path > ol > li p { margin: 0; }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-path > ol > li::before { background: var(--ocdf-eu-mid); }
+
+/* landing-page footnote: version/authorship + scope. Was two stacked
+   colored admonitions; two short muted paragraphs read the same facts
+   without announcing themselves as alerts. */
+.md-typeset .ocdf-meta {
+  margin-top: 1.6rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--ocdf-rule);
+  font-size: 0.72rem;
+  color: var(--ocdf-ink-soft);
+}
+.md-typeset .ocdf-meta p {
+  margin: 0 0 0.5rem;
+}
+.md-typeset .ocdf-meta p:last-child {
+  margin-bottom: 0;
+}
+.md-typeset .ocdf-meta strong {
+  color: var(--md-default-fg-color);
+}
 
 /* ------------------------------------------- source-of-authority labels */
 
