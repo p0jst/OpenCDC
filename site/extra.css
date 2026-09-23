@@ -562,15 +562,12 @@
 [data-md-color-scheme="slate"] .md-footer__button {
   color: #8fb3e3;
 }
-/* A lone "next" — the landing page — reads better left-aligned than pushed to
-   the right edge of a card with nothing opposite it. */
+/* A lone "next" — the landing page, with no previous page to pair against —
+   still belongs on the right: left is where "previous" would sit, and a
+   forward link parked on the left reads as a back button. */
 .md-footer__link--next:only-child {
-  margin-left: 0;
+  margin-left: auto;
   max-width: 26rem;
-}
-.md-footer__link--next:only-child .md-footer__title,
-.md-footer__link--next:only-child .md-footer__direction {
-  text-align: left;
 }
 
 /* On narrow screens Material hides the previous link's title, which with card
