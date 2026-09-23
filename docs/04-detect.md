@@ -6,6 +6,8 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 
 ## Core capabilities
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+
 | ID | Capability | Description |
 |----|-----------|-------------|
 | DE-1 | Log collection & management | Prioritised onboarding of log sources, covering identity, endpoint, network, cloud, email and critical applications, into a central platform; retention policy; time synchronisation; log integrity protection. |
@@ -18,6 +20,8 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 
 ## Log source onboarding priority — greenfield guidance
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>The author's ordering by detection value.</p>
+
 1. **Identity** — directory and IdP authentication, privileged actions; the highest detection value per gigabyte.
 2. **Endpoint**, meaning EDR telemetry, for process, persistence and lateral-movement visibility.
 3. **Email & web gateway** — dominant initial access vectors.
@@ -28,6 +32,8 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 **Remote and hybrid work note:** architectures retrofitted from on-prem assumptions go blind the moment a laptop leaves the VPN. Prioritise location-independent telemetry, since EDR and identity-provider logs follow the user everywhere, and verify that endpoint telemetry reaches you off-network before declaring source 1–2 coverage complete. The same applies per cloud/SaaS tenant: coverage is per environment, not per organisation.
 
 ## Owning the SIEM platform, in-house or cloud
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span></p>
 
 A SIEM that nobody clearly owns decays into an unpatched, undersized liability, and it is itself a crown jewel, holding your most sensitive telemetry and your detection logic. Before go-live, settle ownership in writing:
 
@@ -44,6 +50,8 @@ The traditional split, where infrastructure maintains the server and OS and the 
 
 ## CIA mapping
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
 | DE-1 Log management | ○ | ● | ○ | Log **integrity** is itself a control objective, since tampered logs destroy investigations and their evidential value. |
@@ -53,12 +61,16 @@ The traditional split, where infrastructure maintains the server and OS and the 
 
 ## Roles & staffing
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in document 11.</p>
+
 - **Tier 1/2 analysts**, or a tierless model at higher maturity, for triage and investigation.
 - **Detection engineers** — use case lifecycle; in small teams combined with analyst role.
 - **Threat hunter** — Level 3+ capability.
 - Minimum viable team for business-hours monitoring: **3–4 FTE**. One seat staffed around the clock takes roughly **5.5–6 FTE** once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at **8–12 FTE**, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](11-operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
 
 ## Maturity criteria
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
 
 Maturity measures how well detection works, not how many hours a day someone watches. Coverage hours are a target set by risk; see [coverage hours are a target, not a level](08-maturity-model.md#coverage-hours-are-a-target-not-a-level). A business-hours team with strong engineering can reach Level 3 if business hours plus tested on-call is what its risk decision calls for.
 
@@ -71,12 +83,16 @@ Maturity measures how well detection works, not how many hours a day someone wat
 
 ## EU regulatory hooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
+
 - **NIS2 Art. 21(2)(b)** — incident handling implies detection capability; **Art. 23** reporting deadlines, with early warning within 24h, are only achievable with functioning detection.
 - **GDPR Art. 33** — 72-hour breach notification to the supervisory authority starts at *awareness*; detection speed directly determines compliance feasibility.
 - **DORA Art. 10** — financial entities must have mechanisms to promptly detect anomalous activities.
 - **GDPR & employee monitoring** — security monitoring of user activity must respect data protection: define purpose limitation, retention, and access controls for security logs; involve the DPO. Log data about employees is personal data.
 
 ## External dependencies
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical dependencies from experience; yours will differ.</p>
 
 | Dependency | Party | Type | Agree up front |
 |-----------|-------|------|----------------|

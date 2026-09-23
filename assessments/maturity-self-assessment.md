@@ -19,9 +19,8 @@ does not average up.
 | `evidenced` | Implemented, with evidence recorded and, where the criterion says so, signed off or reviewed within the stated period. | **Yes** |
 
 Tick the box when the status is `implemented` or `evidenced`. For an
-evidence-based reading, closer to how an auditor would score it, and the
-honest one, since evidence-free self-assessment inflates scores by roughly a
-level, count only `evidenced`.
+evidence-based reading, closer to how an auditor would score it, count only
+`evidenced`. Scores without recorded evidence tend to come out higher.
 
 **Assessment date:** | **Assessors:** | **Evidence repository:**
 

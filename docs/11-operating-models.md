@@ -58,17 +58,29 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 3. **Statutory reporting** — the 24 h early warning is filed by *you*; an MSSP SLA of "notify within 4 h" already spent a sixth of your clock.
 4. **The regulatory applicability register and this framework's GOVERN function.**
 
-## Decision criteria — score each 1–5 and discuss
+## Decision path
 
-| Criterion | Pushes toward |
-|-----------|---------------|
-| Can we realistically hire and retain 8+ security FTE in our market? | No → A or C-hybrid |
-| Is our data too sensitive to leave the organisation, or hard under GDPR and data residency rules? | Yes → B or C |
-| Do we need 24/7 within 6 months? | Yes → A, possibly as a transitional step |
-| Is deep business context critical to triage, with bespoke apps, OT-adjacent IT or fraud? | Yes → B or C |
-| Do we have the engineering culture, meaning IaC and CI/CD, to build on? | Yes → C |
-| Budget model: OPEX-predictable vs headcount? | OPEX → A |
-| Exit strategy: could we insource in 3 years if we start with A? | Contract for it now: log ownership, rule portability, transition clause |
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>A sequence of constraints, not a score. Work down it and stop where a question decides the answer.</p>
+
+The operating model is usually decided by one or two hard constraints, not by adding up preferences. Take the questions in order:
+
+1. **Is any log data legally or contractually barred from leaving the organisation or the country?**
+   Yes → keep those sources in-house (**B** or **C**). A provider can still hold the watch over everything else, as a hybrid.
+2. **Do you need out-of-hours detection within six months?**
+   Yes → start with a provider (**A**, or **A+C** if you already have a team), and contract for exit from day one: log ownership, portable detections, a transition clause. Then continue down the path to decide what comes after.
+3. **Can you hire and keep the roughly 9–10 people a single 24/7 seat takes, with daytime capacity on top?** See [the arithmetic](#staffing-and-cost-the-arithmetic).
+   No → a provider holds nights and weekends (**A** or **A+C**). If you already run a 24/7 operations desk, it can be the out-of-hours first line instead.
+4. **Do you have, or can you hire, 5–8 senior people who work with version control and automation?**
+   Yes → a capability-based team (**C**), with a provider or on-call for nights.
+   No, but you can hire and train juniors → a tiered SOC (**B**).
+   Neither → **A**, with 1–3 internal people.
+5. **Does triage need deep business knowledge**, such as bespoke applications, fraud patterns or systems next to OT?
+   Yes → whatever the model, keep triage of those alerts in-house.
+
+Two things to settle whichever way the path goes:
+
+- **Budget shape.** Provider fees are predictable operating cost; an in-house team is headcount. Finance often has a preference; find out before you design around it.
+- **The three-year view.** Operating models are three-year decisions. If you start with a provider, write the conditions for insourcing, or for changing provider, into the contract now.
 
 **Record the decision** in the CDC charter, §3 services and §6 resourcing, with rationale and a review date. Operating models are 3-year decisions, not permanent ones. If choosing Model A, use the [MSSP requirements checklist](../templates/mssp-requirements-checklist.md) before signing anything.
 

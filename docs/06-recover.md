@@ -6,6 +6,8 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## Core capabilities
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+
 | ID | Capability | Description |
 |----|-----------|-------------|
 | RC-1 | Recovery planning | Documented recovery plans for crown-jewel services with RTO/RPO targets agreed with the business; restoration ordering based on dependencies carried over from IDENTIFY. |
@@ -24,6 +26,8 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## CIA mapping
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
 | RC-1 Recovery planning | ○ | ○ | ● | RTO/RPO are Availability commitments. |
@@ -32,11 +36,15 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## Roles & staffing
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in document 11.</p>
+
 - **Service/platform owners** execute restoration; the CDC verifies cleanliness.
 - **Incident manager** remains accountable until closure criteria are met.
 - **BCM coordinator** — interface to continuity management.
 
 ## Maturity criteria
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
 
 | Level | Criteria |
 |-------|----------|
@@ -47,12 +55,16 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## EU regulatory hooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
+
 - **NIS2 Art. 21(2)(c)** — business continuity, backup management, disaster recovery, and crisis management are explicitly required measures.
 - **NIS2 Art. 23** — the **final report**, due within 1 month, must include root cause, mitigation, and cross-border impact where applicable.
 - **DORA Art. 11–12** — response and recovery plans, backup policies and restoration procedures for financial entities, with testing obligations.
 - **GDPR Art. 32(1)(c)** — "the ability to restore the availability and access to personal data in a timely manner" is a named legal requirement.
 
 ## External dependencies
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical dependencies from experience; yours will differ.</p>
 
 | Dependency | Party | Type | Agree up front |
 |-----------|-------|------|----------------|

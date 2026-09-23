@@ -716,3 +716,207 @@
   .ocdf-hero { padding: 2.2rem 0.8rem 1.8rem; }
   .ocdf-stats { gap: 1rem 1.6rem; }
 }
+
+/* ------------------------------------------------ landing: framework map */
+
+.md-typeset .ocdf-map {
+  margin: 1rem 0 1.2rem;
+  padding: 1.1rem;
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 8px;
+  background: var(--ocdf-card-bg);
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+.md-typeset .ocdf-map a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 5px;
+  padding: 0.55rem 0.7rem;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.md-typeset .ocdf-map a:hover,
+.md-typeset .ocdf-map a:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(18, 58, 109, 0.14);
+}
+.md-typeset .ocdf-map a span {
+  color: var(--ocdf-ink-soft);
+  font-weight: 400;
+}
+.md-typeset .ocdf-map p { margin: 0; }
+.md-typeset .ocdf-map .m-govern a {
+  background: var(--ocdf-eu);
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.6rem;
+}
+.md-typeset .ocdf-map .m-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.1rem;
+  margin: 0.8rem 0 0.3rem;
+}
+.md-typeset .ocdf-map .m-flow > div { position: relative; }
+.md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ocdf-accent);
+  font-weight: 700;
+}
+.md-typeset .ocdf-map .m-flow a {
+  background: var(--ocdf-eu-soft);
+  border-top: 3px solid var(--ocdf-eu);
+  text-align: center;
+}
+.md-typeset .ocdf-map .m-loop {
+  text-align: center;
+  color: var(--ocdf-accent);
+  font-size: 0.68rem;
+  margin: 0.2rem 0 0.8rem;
+}
+.md-typeset .ocdf-map .m-lenses,
+.md-typeset .ocdf-map .m-measure {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.md-typeset .ocdf-map .m-lenses { grid-template-columns: 1fr 1fr; }
+.md-typeset .ocdf-map .m-measure { grid-template-columns: repeat(3, 1fr); }
+.md-typeset .ocdf-map .m-lenses a {
+  border: 1px dashed var(--ocdf-eu-mid);
+}
+.md-typeset .ocdf-map .m-measure a {
+  border: 1px solid var(--ocdf-rule);
+  border-left: 3px solid var(--ocdf-accent);
+}
+.md-typeset .ocdf-map .m-base {
+  text-align: center;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ocdf-ink-soft);
+  border-top: 1px solid var(--ocdf-rule);
+  padding-top: 0.6rem;
+}
+[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-govern a { background: var(--ocdf-eu-mid); }
+[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-flow a { border-top-color: #4a76ad; }
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1rem; }
+  .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
+    content: "↓"; right: auto; left: 50%; top: auto; bottom: -1rem; transform: translateX(-50%);
+  }
+  .md-typeset .ocdf-map .m-lenses,
+  .md-typeset .ocdf-map .m-measure { grid-template-columns: 1fr; }
+}
+
+/* role cards: the last paragraph is the call to action */
+.md-typeset .grid.cards.ocdf-roles > ul > li > p:last-child {
+  margin-bottom: 0;
+}
+.md-typeset .grid.cards.ocdf-roles > ul > li > p:last-child a {
+  font-weight: 650;
+}
+
+/* start-building path: a numbered list drawn as steps */
+.md-typeset .ocdf-path > ol {
+  counter-reset: step;
+  list-style: none;
+  margin: 0.8rem 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.md-typeset .ocdf-path > ol > li {
+  counter-increment: step;
+  position: relative;
+  margin: 0;
+  padding: 0.65rem 0.9rem 0.65rem 2.9rem;
+  background: var(--ocdf-card-bg);
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 6px;
+}
+.md-typeset .ocdf-path > ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0.8rem;
+  top: 0.62rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--ocdf-eu);
+  color: #fff;
+  font-weight: 650;
+  font-size: 0.72rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.md-typeset .ocdf-path > ol > li p { margin: 0; }
+[data-md-color-scheme="slate"] .md-typeset .ocdf-path > ol > li::before { background: var(--ocdf-eu-mid); }
+
+/* ------------------------------------------- source-of-authority labels */
+
+.md-typeset .src {
+  font-size: 0.66rem;
+  color: var(--ocdf-ink-soft);
+  margin: -0.4rem 0 0.8rem;
+}
+.md-typeset .src-tag {
+  display: inline-block;
+  font-family: var(--md-code-font-family, "IBM Plex Mono"), monospace;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.05rem 0.45rem;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  vertical-align: 0.05rem;
+  border: 1px solid currentColor;
+}
+.md-typeset .src-tag.law { color: #8a1f2d; }
+.md-typeset .src-tag.standard { color: #123a6d; }
+.md-typeset .src-tag.guidance { color: #2a6a4f; }
+.md-typeset .src-tag.ocdf { color: #6b4e16; }
+.md-typeset .src-tag.practitioner { color: #555f6b; }
+[data-md-color-scheme="slate"] .md-typeset .src-tag.law { color: #e39aa4; }
+[data-md-color-scheme="slate"] .md-typeset .src-tag.standard { color: #8fb3e3; }
+[data-md-color-scheme="slate"] .md-typeset .src-tag.guidance { color: #8fd1b3; }
+[data-md-color-scheme="slate"] .md-typeset .src-tag.ocdf { color: #e2c07e; }
+[data-md-color-scheme="slate"] .md-typeset .src-tag.practitioner { color: #b4bec9; }
+
+/* capability index filter bar */
+.md-typeset .cap-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  align-items: center;
+  margin: 0.8rem 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--ocdf-card-bg);
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 6px;
+  font-size: 0.7rem;
+}
+.md-typeset .cap-filter label { display: inline-flex; gap: 0.35rem; align-items: center; }
+.md-typeset .cap-filter select,
+.md-typeset .cap-filter input {
+  font: inherit;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.md-typeset .cap-filter output { color: var(--ocdf-ink-soft); margin-left: auto; }
+.md-typeset .grid.cards.ocdf-roles {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
+}
+[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-loop,
+[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after { color: #d98a94; }

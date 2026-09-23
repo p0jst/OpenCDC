@@ -112,6 +112,11 @@ screen.
   a separate progress view instead: a hatched segment on the score chart showing
   how far into the next level the function has come, and a per-function
   breakdown in the Result table.
+- **Owner and due date per criterion.** Every gap can carry who owns it and by
+  when; the Open actions list shows them, counts the gaps still without an owner,
+  and **exports the action plan as a spreadsheet file** (semicolon-separated
+  with a byte-order mark, so it opens in columns in Excel, including Danish and
+  other comma-decimal locales).
 - **Target profiles** from [`docs/08-maturity-model.md`](../docs/08-maturity-model.md)'s
   target-setting table, covering SME, NIS2 important and essential, and critical infrastructure,
   pre-fill a target per function, individually adjustable.

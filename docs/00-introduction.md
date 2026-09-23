@@ -64,6 +64,8 @@ Every function document, 01–06, follows the same layout:
 7. **External dependencies** — who outside the CDC this function depends on, marked [GATE]/[HARD]/[SOFT].
 8. **Sources** — credited references for that document.
 
+Sections that make claims carry a source label, **Law**, **Standard**, **Guidance**, **OCDF** or **Practitioner**, so you can see whether a statement comes from legislation, a published standard, recognised guidance, this framework's own design, or the author's experience. See [why trust this framework](trust.md).
+
 ## Attribution note
 
 This framework references and builds on the NIST Cybersecurity Framework 2.0, NIST Special Publications, ENISA publications, MITRE ATT&CK®, and FIRST resources. Full credits: [References & credits](19-references.md).

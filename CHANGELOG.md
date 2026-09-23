@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+Changes from a third review, by a senior SOC/CDC manager, whose verdict was "an excellent framework, not yet an equally excellent product": the content was stronger than the experience of finding your way into it.
+
+- **New landing page.** Entry points by role (executive, SOC manager, analyst or engineer, compliance), the whole framework in one picture, and a seven-step "start building" path that links each step to the page or tool that does it. The old six feature cards are folded into these.
+- **OCDF on one page.** Every term the framework uses, such as functions, capabilities, tiers, levels, criterion status, operating models and dependency markers, explained in one table with how the pieces fit.
+- **Executive guide.** The 30-minute version for a CISO, board member or sponsor: what a CDC is, the risk it reduces, what NIS2 asks of management, what good looks like, staffing and cost drivers, what can and cannot be outsourced, a 12/24/36-month roadmap, board metrics and ten questions to ask the SOC.
+- **Worked example.** A fictional 2,500-person Danish parcel company taken through the framework: tier, operating-model decision, team, targets, signed charter excerpt, first 90 days with owners, a ten-detection portfolio, the maturity baseline turned into an action plan, and the first board report.
+- **Source labels.** Sections that make claims are labelled **Law**, **Standard**, **Guidance**, **OCDF** or **Practitioner**, across the six function documents and Start here. A new page, *Why trust this framework*, explains the labels, what has been checked and what has not.
+- **Annex confidence levels.** Each national annex now states one of four levels, from *verified against primary source* to *pending legislative change*, in its status block and in the index. None is yet at the top level; that is stated openly.
+- **Operating-model decision path.** The "score each criterion 1–5" table is replaced by five questions taken in order, each of which can decide the model. The design navigator's question G6 follows.
+- **Maturity tool: owner and due date per criterion, and an action-plan export.** The open-actions list shows who owns each gap and by when, counts how many are still unowned, and exports as a spreadsheet file that opens directly in Excel, including Danish Excel. Owners and dates travel in the resume link and the snapshot file; older links still open.
+- **Capability index filters** by function, by the tier you are at, and by free text.
+- **Unsourced claim reworded.** "Evidence-free self-assessment inflates scores by roughly one level" was stated as fact in four places; it is now presented as the author's observation.
+- **Roadmap.** The cloud CDC profile moves up to v1.2 with the scope the review proposed; v1.1 gains filled-in template examples, worked examples at other sizes and a machine-readable framework; a CDC builder is added under Later.
+
+### Not taken up from the review
+
+- *A reference "25-person SOC"*: the review's own example described six people plus a managed service. The worked example uses that team, inside a 2,500-person company.
+- *Reference architectures for 50, 500, 5,000 and 50,000 employees*: one worked example first, done properly; the other sizes are on the roadmap.
+- *The CDC builder*: the review's strongest idea, and a real project. It needs the machine-readable framework first, so it is on the roadmap rather than rushed.
+
 Changes from a second, deliberately critical review by a senior SOC manager:
 
 - **Staffing and cost, with the arithmetic.** [Operating models](docs/11-operating-models.md) gains "Staffing and cost: the arithmetic": how many people one seat takes around the clock, worked through step by step with inputs to replace; how the 8–12 FTE figure for a 24/7 line is built; how to make the lone night analyst safe; the cost lines to estimate, and what to watch for in each; and a three-year comparison table across the operating models. The staffing notes in DETECT and Model B now link to it.

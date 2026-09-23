@@ -91,9 +91,12 @@ copyright: >-
 nav:
   - Home: index.md
   - Start:
+      - OCDF on one page: docs/one-page.md
+      - Executive guide: docs/executive-guide.md
       - Introduction & design principles: docs/00-introduction.md
       - "Start here: the first 90 days": docs/09-start-here.md
       - Implementation tiers: docs/10-tiers.md
+      - Worked example: docs/worked-example.md
       - Reading guide: docs/README.md
       - Design navigator for workshops: assessments/cdc-design-navigator.md
       - Maturity self-assessment: assessments/maturity-self-assessment.md
@@ -176,6 +179,7 @@ nav:
           - RHEL Linux server: playbooks/PB-LNX-rhel-server.md
   - Project:
       - About: ABOUT.md
+      - Why trust this framework: docs/trust.md
       - Roadmap: ROADMAP.md
       - Contributing: CONTRIBUTING.md
       - Changelog: CHANGELOG.md

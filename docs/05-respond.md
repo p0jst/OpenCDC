@@ -6,6 +6,8 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 
 ## Core capabilities
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+
 | ID | Capability | Description |
 |----|-----------|-------------|
 | RS-1 | Incident response plan | Approved IR plan: definitions, severity classification, roles, escalation, decision authority including who may disconnect production, out-of-band communications. |
@@ -17,6 +19,8 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 | RS-7 | Exercises | Tabletop and technical exercises at least annually, including management under the NIS2 training obligation, and statutory-reporting drills. |
 
 ## The first hour of a major incident
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Lessons from major incidents; agree them in the charter before you need them.</p>
 
 Playbooks handle the specific scenario. These are the estate-wide moves that apply to almost any
 major compromise, and the ones most often skipped under pressure. Pre-agree them in charter §4
@@ -63,6 +67,8 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 
 ## EU statutory reporting timelines — build these into playbooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>From the legal texts; national transpositions may add detail. Not legal advice.</p>
+
 | Regime | Trigger | Deadline | Recipient |
 |--------|---------|----------|-----------|
 | **NIS2 Art. 23** | Significant incident | **Early warning ≤ 24 h**; incident notification ≤ 72 h; final report ≤ 1 month | National CSIRT / competent authority |
@@ -74,9 +80,13 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 
 ## Case closure taxonomy
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
+
 Standardise how every case closes. It is the foundation of honest metrics, tuning feedback and comparable statistics: **true positive with impact**, where a CIA attribute was breached, making it an incident whose reporting duties must be assessed; **true positive without impact**, where there was malicious intent but no harm done; **indeterminate**; or **false positive**, which feeds the tuning loop in doc 13. For incident-type classification, the open VERIS vocabulary of malware, hacking, social, misuse, error, physical and environmental keeps year-over-year and peer statistics comparable.
 
 ## CIA mapping
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -86,12 +96,16 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 ## Roles & staffing
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in document 11.</p>
+
 - **Incident manager/commander** — coordinates; distinct from technical lead in larger incidents.
 - **Technical responders** — often the same analysts as DETECT.
 - **Legal/DPO and communications** — mandatory members of the extended IR team.
 - **Retainers** — consider an external DFIR retainer at Level 2+ if in-house forensics is not viable, and identify external counsel on the same basis.
 
 ## Maturity criteria
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
 
 | Level | Criteria |
 |-------|----------|
@@ -102,12 +116,16 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 ## EU regulatory hooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
+
 - **NIS2 Art. 21(2)(b)** incident handling; **Art. 23** reporting; see the table above.
 - **GDPR Art. 33/34** — breach notification; document *all* breaches internally, even those not notified, per Art. 33(5).
 - **DORA Art. 17–19** — ICT incident management, classification and reporting for financial entities.
 - **ENISA / national CSIRT good practice** — align severity taxonomies with your national CSIRT's scheme where one exists to ease reporting.
 
 ## External dependencies
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical dependencies from experience; yours will differ.</p>
 
 | Dependency | Party | Type | Agree up front |
 |-----------|-------|------|----------------|

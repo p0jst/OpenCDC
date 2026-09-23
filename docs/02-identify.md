@@ -6,6 +6,8 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## Core capabilities
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+
 | ID | Capability | Description |
 |----|-----------|-------------|
 | ID-1 | Asset inventory | Continuously maintained inventory of hardware, software, cloud resources, data flows, and their owners. Includes shadow-IT discovery. |
@@ -18,6 +20,8 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## CIA mapping
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
 | ID-1 Asset inventory | ● | ● | ● | Foundation for protecting all objectives. |
@@ -28,12 +32,16 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## Roles & staffing
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in document 11.</p>
+
 - **Asset and configuration owners** in IT operations.
 - **CTI analyst** — may be part-time or shared at Level 1–2.
 - **Vulnerability analyst** — often combined with detection engineering in small teams.
 - **Data Protection Officer** — for data mapping and GDPR records of processing under Art. 30, which double as excellent data-classification input.
 
 ## Maturity criteria
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
 
 | Level | Criteria |
 |-------|----------|
@@ -44,6 +52,8 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## EU regulatory hooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
+
 - **NIS2 Art. 21(2)(a), (e)** — risk analysis policies and vulnerability handling/disclosure.
 - **NIS2 Art. 21(2)(d)** — supply chain security requires knowing your suppliers and dependencies, which is an asset and dependency inventory.
 - **GDPR Art. 30** — records of processing activities: reuse as data-flow inventory.
@@ -52,6 +62,8 @@ Understand what you are defending and what threatens it. Every downstream capabi
 - **ENISA Threat Landscape**, published annually, is a recommended baseline input for the threat profile.
 
 ## External dependencies
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical dependencies from experience; yours will differ.</p>
 
 | Dependency | Party | Type | Agree up front |
 |-----------|-------|------|----------------|

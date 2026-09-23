@@ -301,6 +301,12 @@
   .actions-list button:hover{background:var(--eu-soft)}
   .actions-list button[data-s="1"]{border-left-color:var(--s1)}
   .actions-list button[data-s="2"]{border-left-color:var(--s2)}
+  .actions-list .aown{display:block;font-size:.72rem;color:var(--eu);margin-top:2px}
+  .actions-list .aown.none{color:var(--accent)}
+  .plan-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);margin:0 0 8px}
+  .ev input.own{flex:0 0 150px}
+  .ev input.due{flex:0 0 130px}
+  @media (max-width:700px){ .ev{flex-wrap:wrap} .ev input.own,.ev input.due{flex:1 1 45%} }
   .actions-list .af{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block}
   .empty{font-size:.82rem;color:var(--muted);margin:4px 0}
   .pfoot{font-size:.74rem;color:var(--muted);margin:10px 0 0}
@@ -430,6 +436,8 @@
     </div>
     <div class="rview" data-view="actions">
       <p class="pfoot" id="actions-intro" style="margin-top:0"></p>
+      <div class="plan-bar"><span id="actions-owned"></span>
+        <button class="btn" id="export-plan" title="Download the open actions as a spreadsheet">Export action plan (.csv)</button></div>
       <ul class="actions-list" id="actions"></ul>
     </div>
     <p class="pfoot">Reassess annually or after major change; review open actions quarterly. Export a snapshot
@@ -444,10 +452,10 @@
 
 <footer>
   Open CDC Framework · CC BY 4.0 · Criteria mirror <code>assessments/maturity-self-assessment.md</code>. Orientation
-  only, and evidence-free self-assessment inflates scores by roughly one level.
+  only. Scores without recorded evidence tend to come out higher than evidenced ones.
 </footer>
 <script>
-const CATALOG = {"functions":[{"id":"GOVERN","name":"Govern","levels":{"2":["Signed CDC charter defining mission, scope and authority","Security policies approved and reviewed within last 12 months","RACI for security roles exists"],"3":["Cyber risk items appear in the enterprise risk register with owners","Quarterly (or better) reporting to executive management","Supplier contracts include security requirements; supplier register maintained","Multi-year budget/staffing plan approved"],"4":["Management completed cybersecurity training and participated in an exercise in last 12 months","Resource decisions demonstrably driven by risk/maturity data"]}},{"id":"IDENTIFY","name":"Identify","levels":{"2":["Automated asset discovery on core networks","Vulnerability scanning at least quarterly on core estate","Subscribed to national CSIRT / ENISA advisories","Crown-jewel services listed with owners"],"3":["Inventory accuracy measured, > 90%","Documented threat profile mapped to MITRE ATT&CK, reviewed annually","Risk-based remediation SLAs defined and tracked","Annual risk assessment feeds budget/backlog"],"4":["Continuous attack-surface monitoring incl. cloud/SaaS","Threat intel demonstrably drives hunts and new detections (traceable)"]}},{"id":"PROTECT","name":"Protect","levels":{"2":["MFA enforced for all remote and administrative access","Hardening baselines defined for main platforms","Patching SLA for critical vulnerabilities defined and measured","Backup restore tested within last 12 months"],"3":["Phishing-resistant MFA for privileged accounts; PAM operational","Network segmentation isolates crown-jewel zones","Offline/immutable backup copy for critical data","Control coverage measured (e.g., % endpoints with EDR ≥ 95%)"],"4":["Continuous/periodic technical control validation (attack simulation)","Security requirements embedded in procurement and SDLC with verification"]}},{"id":"DETECT","name":"Detect","levels":{"2":["Central log platform; identity, endpoint and email sources onboarded","Use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook","Triage runbook with severity matrix","Defined coverage hours with on-call arrangement"],"3":["Detection lifecycle with version control and testing","Coverage measured against ATT&CK and crown jewels; gaps drive backlog","Coverage hours meet the risk-based target set in GOVERN; out-of-hours escalation tested twice a year","MTTD measured per confirmed incident","Threat hunting performed on a schedule"],"4":["All production detections validated (fired in test) within 12 months","Detection-as-code with CI/CD pipeline","FP rates and coverage trended, demonstrably driving engineering"]}},{"id":"RESPOND","name":"Respond","levels":{"2":["Approved IR plan with severity classification and roles","Playbooks for top scenarios incl. ransomware and data breach","Statutory reporting contacts and templates prepared (NIS2/GDPR/DORA as applicable)","Tabletop exercise within last 12 months"],"3":["Containment authority pre-agreed in charter; isolation technically tested","Forensic capability in-house or via retainer, with chain-of-custody procedure","Reporting drill executed against statutory deadlines","Post-incident reviews with tracked actions for all P1/P2"],"4":["MTTC trended; containment steps automated with approval gates","Cross-functional crisis exercise incl. management and comms within 12 months"]}},{"id":"RECOVER","name":"Recover","levels":{"2":["Recovery plans with RTO/RPO for crown-jewel services","Restore tests annually","Post-incident review process defined"],"3":["Rebuild-from-known-good procedure; integrity verification before reconnection","Credential rotation standard in recovery runbooks","Joint BCM/CDC exercise within 12 months","Lessons-learned actions tracked to closure"],"4":["Ransomware-scale recovery exercised; measured recovery vs. RTO","Demonstrable control/detection changes originating from incidents"]}}],"profiles":{"SME, low regulatory exposure":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":2,"RECOVER":2},"NIS2 important entity":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":3,"RECOVER":2},"NIS2 essential entity / DORA financial entity":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":3,"RESPOND":3,"RECOVER":3},"Critical infrastructure, high-threat sectors":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":4,"RESPOND":4,"RECOVER":3}}}
+const CATALOG = {"functions":[{"id":"GOVERN","name":"Govern","levels":{"2":["Signed CDC charter defining mission, scope and authority","Security policies approved and reviewed within last 12 months","RACI for security roles exists"],"3":["Cyber risk items appear in the enterprise risk register with owners","Quarterly or more frequent reporting to executive management","Supplier contracts include security requirements; supplier register maintained","Multi-year budget/staffing plan approved"],"4":["Management completed cybersecurity training and participated in an exercise in last 12 months","Resource decisions demonstrably driven by risk/maturity data"]}},{"id":"IDENTIFY","name":"Identify","levels":{"2":["Automated asset discovery on core networks","Vulnerability scanning at least quarterly on core estate","Subscribed to national CSIRT / ENISA advisories","Crown-jewel services listed with owners"],"3":["Inventory accuracy measured, > 90%","Documented threat profile mapped to MITRE ATT&CK, reviewed annually","Risk-based remediation SLAs defined and tracked","Annual risk assessment feeds budget/backlog"],"4":["Continuous attack-surface monitoring incl. cloud/SaaS","Threat intel demonstrably drives hunts and new detections, traceably"]}},{"id":"PROTECT","name":"Protect","levels":{"2":["MFA enforced for all remote and administrative access","Hardening baselines defined for main platforms","Patching SLA for critical vulnerabilities defined and measured","Backup restore tested within last 12 months"],"3":["Phishing-resistant MFA for privileged accounts; PAM operational","Network segmentation isolates crown-jewel zones","Offline/immutable backup copy for critical data","Control coverage measured, such as % endpoints with EDR ≥ 95%"],"4":["Continuous or periodic technical control validation through attack simulation","Security requirements embedded in procurement and SDLC with verification"]}},{"id":"DETECT","name":"Detect","levels":{"2":["Central log platform; identity, endpoint and email sources onboarded","Use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook","Triage runbook with severity matrix","Defined coverage hours with on-call arrangement"],"3":["Detection lifecycle with version control and testing","Coverage measured against ATT&CK and crown jewels; gaps drive backlog","Coverage hours meet the risk-based target set in GOVERN; out-of-hours escalation tested twice a year","MTTD measured per confirmed incident","Threat hunting performed on a schedule"],"4":["All production detections validated by firing in test within 12 months","Detection-as-code with CI/CD pipeline","FP rates and coverage trended, demonstrably driving engineering"]}},{"id":"RESPOND","name":"Respond","levels":{"2":["Approved IR plan with severity classification and roles","Playbooks for top scenarios incl. ransomware and data breach","Statutory reporting contacts and templates prepared for NIS2, GDPR and DORA as applicable","Tabletop exercise within last 12 months"],"3":["Containment authority pre-agreed in charter; isolation technically tested","Forensic capability in-house or via retainer, with chain-of-custody procedure","Reporting drill executed against statutory deadlines","Post-incident reviews with tracked actions for all P1/P2"],"4":["MTTC trended; containment steps automated with approval gates","Cross-functional crisis exercise incl. management and comms within 12 months"]}},{"id":"RECOVER","name":"Recover","levels":{"2":["Recovery plans with RTO/RPO for crown-jewel services","Restore tests annually","Post-incident review process defined"],"3":["Rebuild-from-known-good procedure; integrity verification before reconnection","Credential rotation standard in recovery runbooks","Joint BCM/CDC exercise within 12 months","Lessons-learned actions tracked to closure"],"4":["Ransomware-scale recovery exercised; measured recovery vs. RTO","Demonstrable control/detection changes originating from incidents"]}}],"profiles":{"SME, low regulatory exposure":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":2,"RECOVER":2},"NIS2 important entity":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":3,"RECOVER":2},"NIS2 essential entity / DORA financial entity":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":3,"RESPOND":3,"RECOVER":3},"Critical infrastructure, high-threat sectors":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":4,"RESPOND":4,"RECOVER":3}}}
 ;
 </script>
 <script>
@@ -466,7 +474,7 @@ const STATES = [
   {v:4, label:"Implemented & evidenced",    short:"implemented & evidenced"}
 ];
 function blankState(){
-  return { meta:{name:"",date:"",evrepo:"",profile:""}, states:{}, evidence:{}, targets:{}, strict:false };
+  return { meta:{name:"",date:"",evrepo:"",profile:""}, states:{}, evidence:{}, owner:{}, due:{}, targets:{}, strict:false };
 }
 let state = blankState();
 function statusOf(key){ return state.states[key] || 0; }
@@ -508,6 +516,9 @@ function encodeState(){
   });
   const ev = {};
   keys.forEach((k, i) => { const v = state.evidence[k]; if(v) ev[i] = v; });
+  /* owner and due date travel sparsely, like evidence: only filled-in criteria */
+  const ow = {}, du = {};
+  keys.forEach((k, i) => { if(state.owner[k]) ow[i] = state.owner[k]; if(state.due[k]) du[i] = state.due[k]; });
   const payload = {
     v: 2,
     m: [state.meta.name||"", state.meta.date||"", state.meta.evrepo||"", state.meta.profile||""],
@@ -516,6 +527,8 @@ function encodeState(){
   };
   if(state.strict) payload.x = 1;
   if(Object.keys(ev).length) payload.e = ev;
+  if(Object.keys(ow).length) payload.o = ow;
+  if(Object.keys(du).length) payload.d = du;
   return b64uEncode(new TextEncoder().encode(JSON.stringify(payload)));
 }
 
@@ -540,6 +553,8 @@ function decodeState(token){
   }
   (p.t || "").split("").forEach((d, i) => { const n = Number(d); if(n && FUNCS[i]) s.targets[FUNCS[i].id] = n; });
   for(const [i, txt] of Object.entries(p.e || {})) if(keys[i]) s.evidence[keys[i]] = txt;
+  for(const [i, txt] of Object.entries(p.o || {})) if(keys[i]) s.owner[keys[i]] = txt;
+  for(const [i, txt] of Object.entries(p.d || {})) if(keys[i]) s.due[keys[i]] = txt;
   return s;
 }
 
@@ -549,6 +564,9 @@ function migrate(s){
   if(!s) return blankState();
   const out = {...blankState(), ...s};
   if(!out.states) out.states = {};
+  if(!out.owner) out.owner = {};
+  if(!out.due) out.due = {};
+  if(!out.evidence) out.evidence = {};
   if(s.checks){
     for(const [k, v] of Object.entries(s.checks)) if(v && !out.states[k]) out.states[k] = 3;
     delete out.checks;
@@ -759,11 +777,15 @@ function renderActions(){
   const hasTargets = Object.keys(state.targets).length > 0;
   document.getElementById("actions-tab").textContent = `Open actions (${acts.length})`;
   document.getElementById("actions-intro").textContent = hasTargets
-    ? "Criteria still missing to reach your targets. Click one to go to it."
+    ? "Criteria still missing to reach your targets. Click one to go to it and give it an owner and a due date."
     : "Criteria still missing to reach the next level in each function. Pick a target profile to plan further ahead.";
+  const owned = acts.filter(a => state.owner[a.key] && state.due[a.key]).length;
+  document.getElementById("actions-owned").textContent = acts.length ? `${owned} of ${acts.length} have an owner and a due date.` : "";
   const ul = document.getElementById("actions");
   ul.innerHTML = acts.length ? acts.map(a =>
-    `<li><button data-s="${a.s}" data-jump="${a.key}"><span class="af">${esc(a.f.name)} · L${a.lvl} · ${esc(STATES[a.s].short)}</span>${esc(a.text)}</button></li>`
+    `<li><button data-s="${a.s}" data-jump="${a.key}"><span class="af">${esc(a.f.name)} · L${a.lvl} · ${esc(STATES[a.s].short)}</span>${esc(a.text)}${
+      (state.owner[a.key] || state.due[a.key]) ? `<span class="aown">${esc(state.owner[a.key] || "no owner")} · ${esc(state.due[a.key] || "no date")}</span>` : `<span class="aown none">No owner or date yet</span>`
+    }</button></li>`
   ).join("") : `<li class="empty">Nothing open. Every function is at or above its target.</li>`;
   ul.querySelectorAll("[data-jump]").forEach(b => b.addEventListener("click", () => jumpTo(b.dataset.jump)));
 }
@@ -805,7 +827,9 @@ function critHtml(f, lvl, i, text){
       ${STATES.map(s => `<label class="s${s.v}${s.v===st?" on":""}"><input type="radio" name="r-${id}" value="${s.v}" data-key="${key}"${s.v===st?" checked":""}>${esc(s.label)}</label>`).join("")}
     </div>
     <div class="ev"><input type="text" data-ev="${key}" value="${esc(ev)}" aria-label="Evidence"
-      placeholder="Evidence (optional): document, screenshot, metric export…"></div>
+      placeholder="Evidence (optional): document, screenshot, metric export…">
+      <input type="text" class="own" data-own="${key}" value="${esc(state.owner[key] || "")}" aria-label="Owner" placeholder="Owner">
+      <input type="text" class="due" data-due="${key}" value="${esc(state.due[key] || "")}" aria-label="Due" placeholder="Due, e.g. Q2 2027"></div>
   </div>`;
 }
 
@@ -851,6 +875,12 @@ function renderFunctions(){
   }));
   host.querySelectorAll("input[type=text][data-ev]").forEach(inp => inp.addEventListener("input", () => {
     state.evidence[inp.dataset.ev] = inp.value; saveState();
+  }));
+  host.querySelectorAll("input[data-own]").forEach(inp => inp.addEventListener("input", () => {
+    state.owner[inp.dataset.own] = inp.value; saveState(); renderActions();
+  }));
+  host.querySelectorAll("input[data-due]").forEach(inp => inp.addEventListener("input", () => {
+    state.due[inp.dataset.due] = inp.value; saveState(); renderActions();
   }));
   host.querySelectorAll("select[data-target]").forEach(sel => sel.addEventListener("change", () => {
     const v = sel.value ? Number(sel.value) : null;
@@ -913,6 +943,25 @@ function renderMbar(){
 }
 document.getElementById("mbar-go").addEventListener("click", () =>
   document.querySelector(".panel").scrollIntoView({behavior:"smooth", block:"start"}));
+
+/* Action plan: every open criterion as a row a manager can take into a tracker.
+   Semicolon-separated with a BOM, so spreadsheet programs in comma-decimal
+   locales, Danish Excel among them, open it in columns without an import wizard. */
+function exportPlan(){
+  const cell = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+  const rows = [["Function","Level","Criterion","Status","Evidence","Owner","Due","Current level","Target"]];
+  for(const a of openActions()){
+    rows.push([a.f.name, "L" + a.lvl, a.text, STATES[a.s].label, state.evidence[a.key] || "",
+      state.owner[a.key] || "", state.due[a.key] || "", "L" + functionScore(a.f),
+      state.targets[a.f.id] ? "L" + state.targets[a.f.id] : ""]);
+  }
+  const csv = "\ufeff" + rows.map(r => r.map(cell).join(";")).join("\r\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+  a.download = "ocdf-action-plan-" + (state.meta.date || new Date().toISOString().slice(0,10)) + ".csv";
+  a.click(); URL.revokeObjectURL(a.href);
+}
+document.getElementById("export-plan").addEventListener("click", exportPlan);
 
 function renderAll(skipFunctions){
   renderMbar(); renderMeta(); renderTiles(); renderChart(); renderResult(); renderActions(); renderTabs();

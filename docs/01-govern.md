@@ -8,6 +8,8 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## Core capabilities
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+
 | ID | Capability | Description |
 |----|-----------|-------------|
 | GV-1 | CDC charter & mandate | A signed document defining the CDC's mission, scope covering business units, geographies and asset classes, authority such as the right to isolate systems, and reporting line. |
@@ -20,6 +22,8 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## CIA mapping
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
 | GV-1 Charter | ● | ● | ● | Governance protects all three objectives by ensuring someone is accountable for each. |
@@ -31,12 +35,16 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## Roles & staffing
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in document 11.</p>
+
 - **Executive sponsor**, a board member or C-level, owns cyber risk acceptance.
 - **CISO / Head of Security** — owns the policy framework.
 - **CDC Director / SOC Manager** — owns the charter execution and reports maturity.
 - **GRC / Legal / DPO** — owns regulatory interpretation for GDPR Art. 33 breach notification and NIS2 reporting.
 
 ## Maturity criteria
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
 
 | Level | Criteria |
 |-------|----------|
@@ -47,6 +55,8 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## EU regulatory hooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
+
 - **NIS2 Directive (EU) 2022/2555, Art. 20** — management bodies must *approve* cybersecurity risk-management measures, *oversee* their implementation, and *follow training*; managers can be held liable.
 - **NIS2 Art. 21(1)** — requires an "all-hazards" risk-based approach proportionate to the entity's exposure.
 - **DORA (EU) 2022/2554, Art. 5** — for financial entities, the management body bears final responsibility for ICT risk management.
@@ -54,6 +64,8 @@ Establish the mandate, accountability, and decision-making structures that let t
 - **ENISA NCSS & sectoral guidance** — national cybersecurity strategy alignment for public bodies.
 
 ## External dependencies
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical dependencies from experience; yours will differ.</p>
 
 | Dependency | Party | Type | Agree up front |
 |-----------|-------|------|----------------|

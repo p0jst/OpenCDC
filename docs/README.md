@@ -1,5 +1,11 @@
 # Documentation index
 
+New here? Start with [OCDF on one page](one-page.md) for the terms, the
+[executive guide](executive-guide.md) if you are sponsoring or funding a CDC, or
+the [worked example](worked-example.md) to see the framework applied to one
+organisation. [Why trust this framework](trust.md) explains what is law, what is
+standard and what is the author's judgement.
+
 Reading order for a new CDC programme: 00 → 09 to start → 10 to pick a tier → 01–06 for the functions, with 07–08 as lenses → 11–13 for organisation and operations → 14–16 for the advanced and community layers → 17–18 for the regulatory and CIS crosswalks. 19 holds all credits. Dependency markers [GATE]/[HARD]/[SOFT] are defined in 00.
 
 | # | File | Area |

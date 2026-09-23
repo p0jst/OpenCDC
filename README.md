@@ -65,6 +65,13 @@ Practical assets:
 - [`tools/maturity-assessment.html`](tools/maturity-assessment.html) — interactive maturity self-assessment: score every criterion on a five-point status scale, get automatic staged scoring, a score-vs-target chart, a resume link that restores your progress on any device, and an exportable snapshot to track the trend over time. Host via GitHub Pages or open locally.
 - [`docs/annexes/`](docs/annexes/) — national annexes for all 27 EU member states, status verified July 2026. Each annex shows when it was last verified, by whom, and when the next review is due.
 
+## New readers
+
+- [OCDF on one page](docs/one-page.md): every term in the framework, in five minutes.
+- [Executive guide](docs/executive-guide.md): the 30-minute version for a CISO, board member or sponsor.
+- [Worked example](docs/worked-example.md): the framework applied to a fictional 2,500-person company, from charter to first board report.
+- [Why trust this framework](docs/trust.md): which statements are law, standard, guidance, this framework's design, or the author's experience.
+
 ## Who is this for?
 
 - **CISOs and CDC/SOC directors** planning a new capability or a maturity programme.

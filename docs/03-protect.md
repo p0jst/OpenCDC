@@ -6,6 +6,8 @@ Reduce the likelihood and blast radius of incidents through preventive controls.
 
 ## Core capabilities
 
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+
 | ID | Capability | Description |
 |----|-----------|-------------|
 | PR-1 | Identity & access management | Centralised identity, MFA that is phishing-resistant for admins, least privilege, joiner/mover/leaver process, quarterly dormant-account review, service-account inventory with owners, privileged access management. |
@@ -32,6 +34,8 @@ Ownership follows the SIEM pattern in doc 04: platform teams operate the mechani
 
 ## CIA mapping
 
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
 | PR-1 IAM | ● | ● | ○ | Access control is the primary confidentiality/integrity control. |
@@ -43,11 +47,15 @@ Ownership follows the SIEM pattern in doc 04: platform teams operate the mechani
 
 ## Roles & staffing
 
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in document 11.</p>
+
 - **IT/platform teams** operate most controls; the CDC defines requirements and verifies via posture monitoring.
 - **Security engineers** in the CDC own EDR, hardening verification, and control telemetry.
 - **Awareness lead** — often shared with HR/communications.
 
 ## Maturity criteria
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
 
 | Level | Criteria |
 |-------|----------|
@@ -58,6 +66,8 @@ Ownership follows the SIEM pattern in doc 04: platform teams operate the mechani
 
 ## EU regulatory hooks
 
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
+
 - **NIS2 Art. 21(2)** — explicitly requires, among others: (g) basic cyber hygiene practices and cybersecurity training; (h) policies and procedures on the use of cryptography and, where appropriate, encryption; (i) human resources security, access control policies and asset management; (j) MFA or continuous authentication solutions, where appropriate.
 - **Commission Implementing Regulation (EU) 2024/2690** — technical requirements detailing NIS2 Art. 21 measures for digital infrastructure entities; useful as a control checklist even outside its formal scope.
 - **GDPR Art. 32** — encryption and pseudonymisation named as example measures.
@@ -65,6 +75,8 @@ Ownership follows the SIEM pattern in doc 04: platform teams operate the mechani
 - **CIS Benchmarks / ENISA guidance** — recommended hardening baselines.
 
 ## External dependencies
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical dependencies from experience; yours will differ.</p>
 
 | Dependency | Party | Type | Agree up front |
 |-----------|-------|------|----------------|

@@ -2,9 +2,9 @@
 
 > Status: community-maintained; verified July 2026. Verify against retsinformation.dk and samsik.dk before relying on it. Not legal advice.
 
-| Last verified | Verified by | Second reviewer | Next review due |
-|---------------|-------------|-----------------|-----------------|
-| July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
+| Confidence | Last verified | Verified by | Second reviewer | Next review due |
+|------------|---------------|-------------|-----------------|-----------------|
+| [Maintainer reviewed](README.md#confidence-levels) | July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
 
 ## The Danish implementation landscape
 

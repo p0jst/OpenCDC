@@ -26,7 +26,7 @@ Tier, set in [implementation tiers](10-tiers.md), selects *which* capabilities a
 1. For each function, review the maturity criteria table and the [self-assessment checklist](../assessments/maturity-self-assessment.md).
 2. Score each criterion on the five-point status scale below rather than as a yes/no tick.
 3. A level is achieved only when **all** criteria of that level and the levels below are met. That is "staged" scoring, with no averaging up.
-4. Record evidence for each criterion: documents, screenshots, metric exports. Evidence-free self-assessment inflates scores by roughly one level.
+4. Record evidence for each criterion: documents, screenshots, metric exports. In the author's experience, an assessment without recorded evidence tends to come out about a level higher than one that has to show its evidence. That is an observation, not a measured figure.
 5. Plot the six function scores as a radar/spider profile. **A balanced Level 2 beats a spiky profile with Level 4 detection and Level 1 governance**, because attackers exploit the weakest function.
 
 ### Criterion status scale
@@ -54,8 +54,8 @@ criteria met, one partly in place", never as a weighted score.
 
 **Evidence-based scoring.** Counting only *implemented & evidenced* is the
 stricter reading, and the one to use when the assessment will be shown to an
-auditor, a regulator or a board. Expect it to knock roughly a level off a first
-self-assessment; that gap is the point, not a failure of the method. The
+auditor, a regulator or a board. Expect it to lower a first self-assessment, often by a
+level in the author's experience; that gap is the point, not a failure of the method. The
 [interactive tool](../tools/maturity-assessment.html) has a toggle for both
 readings, and a criterion's status travels with its evidence note.
 
