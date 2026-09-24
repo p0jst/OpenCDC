@@ -59,13 +59,12 @@ artefacts you take into your own documentation system and governance process:
 
 ## The framework in one picture
 
-<p class="ocdf-dimensions-intro">Every capability in OCDF answers four questions, in this order:</p>
+<p class="ocdf-dimensions-intro">Every capability in OCDF is described in three ways:</p>
 
 <div class="ocdf-dimensions" markdown>
 <div markdown><b>What</b><span>6 functions</span><i>Cover all six</i></div>
 <div markdown><b>How much</b><span>E · S · A tier</span><i>You choose</i></div>
-<div markdown><b>How well</b><span>L1–L4 maturity</span><i>You score</i></div>
-<div markdown><b>Proof</b><span>Evidence</span><i>Backs every score</i></div>
+<div markdown><b>How well</b><span>L1–L4 maturity</span><i>Scored against set criteria</i></div>
 </div>
 
 <div class="ocdf-map" markdown>
@@ -88,8 +87,8 @@ artefacts you take into your own documentation system and governance process:
 Seen through the [**CIA triad**](docs/cia-triad.md) and the
 [**regulatory layer**](docs/eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
 CRA, CER and 27 national annexes) · sized by [**tier**](docs/tiers.md)
-(E · S · A) · scored by [**level**](docs/maturity-model.md) (1–4) · proven
-with [**evidence**](tools/maturity-assessment.html) · built in the order
+(E · S · A) · scored by [**level**](docs/maturity-model.md) (1–4) and recorded
+in an [**evidence register**](tools/maturity-assessment.html) · built in the order
 people › process › technology.
 </p>
 

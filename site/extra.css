@@ -781,9 +781,9 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* ------------------------------------------ landing: three axes */
 
-/* Four questions in order, not four free choices: what is fixed (all six
-   functions), how much is chosen (tier), how well is measured (level), and
-   evidence proves the score. The chevrons on the seams carry the order. */
+/* Three descriptions, in order: what is fixed (all six functions), how much
+   is chosen (tier), how well is measured (level). The chevrons on the seams
+   carry the order. */
 
 .md-typeset .ocdf-dimensions-intro {
   margin: 0.9rem 0 0.7rem;
@@ -792,7 +792,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .ocdf-dimensions {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 0 1.1rem;
   border: 1px solid var(--ocdf-rule);
   border-radius: 8px;
