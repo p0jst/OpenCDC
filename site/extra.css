@@ -895,84 +895,229 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* ------------------------------------------------ landing: framework map */
 
+/* The map is one picture: GOVERN oversees the five functions (the connector
+   under it drops into each card), the five run left to right, and RECOVER
+   loops back into IDENTIFY. Colours are the function colours used on the
+   function pages; every line that shows flow is the same neutral ink, so
+   no connector competes with RESPOND red. */
 .md-typeset .ocdf-map {
+  --map-gap: 1.1rem;
+  --map-tie: 1.1rem;
+  --map-line: color-mix(in srgb, var(--ocdf-ink-soft) 65%, transparent);
   margin: 1rem 0 1.2rem;
-  padding: 1.1rem;
+  padding: 1.2rem 1.2rem 1rem;
   border: 1px solid var(--ocdf-rule);
   border-radius: 8px;
   background: var(--ocdf-card-bg);
   font-size: 0.72rem;
   line-height: 1.35;
 }
-.md-typeset .ocdf-map a {
+.md-typeset .ocdf-map p { margin: 0; }
+
+/* cards: GOVERN and the five functions share one style */
+.md-typeset .ocdf-map .m-govern a,
+.md-typeset .ocdf-map .m-flow a {
   display: block;
   height: 100%;
-  text-decoration: none;
   color: inherit;
-  border-radius: 5px;
-  padding: 0.55rem 0.7rem;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--ocdf-fn-current) 9%, var(--ocdf-card-bg));
+  border: 1px solid color-mix(in srgb, var(--ocdf-fn-current) 28%, var(--ocdf-rule));
+  border-top: 3px solid var(--ocdf-fn-current);
+  border-radius: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
-.md-typeset .ocdf-map a:hover,
-.md-typeset .ocdf-map a:focus-visible {
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(18, 58, 109, 0.14);
+.md-typeset .ocdf-map .m-govern a:hover,
+.md-typeset .ocdf-map .m-flow a:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--ocdf-fn-current) 15%, var(--ocdf-card-bg));
+  border-color: color-mix(in srgb, var(--ocdf-fn-current) 55%, var(--ocdf-rule));
+  border-top-color: var(--ocdf-fn-current);
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--ocdf-fn-current) 70%, transparent);
 }
-.md-typeset .ocdf-map a span {
-  color: var(--ocdf-ink-soft);
-  font-weight: 400;
+.md-typeset .ocdf-map .m-govern a:focus-visible,
+.md-typeset .ocdf-map .m-flow a:focus-visible {
+  outline: 2px solid var(--ocdf-fn-current);
+  outline-offset: 2px;
 }
-.md-typeset .ocdf-map p { margin: 0; }
+.md-typeset .ocdf-map .m-govern a::before,
+.md-typeset .ocdf-map .m-flow a::before {
+  content: "";
+  background: var(--ocdf-fn-current);
+  -webkit-mask: var(--map-icon) center / contain no-repeat;
+  mask: var(--map-icon) center / contain no-repeat;
+}
+.md-typeset .ocdf-map strong {
+  color: var(--ocdf-fn-current);
+  letter-spacing: 0.06em;
+}
+
+/* GOVERN: one wide card, icon beside the text */
+.md-typeset .ocdf-map .m-govern {
+  --ocdf-fn-current: var(--ocdf-fn-govern);
+  --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 20h18M4 9h16M12 3l8 6H4zM6 9v8M10 9v8M14 9v8M18 9v8'/%3E%3C/svg%3E");
+}
 .md-typeset .ocdf-map .m-govern a {
-  background: var(--ocdf-fn-govern);
-  color: #fff;
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.9rem;
+  white-space: pre-wrap;
+  color: var(--ocdf-ink-soft);
+  font-size: 0.78rem;
 }
+.md-typeset .ocdf-map .m-govern a::before {
+  flex: none;
+  margin-right: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* the five functions */
 .md-typeset .ocdf-map .m-flow {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.1rem;
-  margin: 0.8rem 0 0.3rem;
+  gap: var(--map-gap);
+  margin: var(--map-tie) 0 0.3rem;
 }
-.md-typeset .ocdf-map .m-flow > div {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-/* Markdown wraps each link in a <p>; let it fill the grid cell so all five boxes share the tallest one's height. */
-.md-typeset .ocdf-map .m-flow > div > p { flex: 1; }
-.md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
-  content: "→";
-  position: absolute;
-  right: -0.95rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--ocdf-accent);
-  font-weight: 700;
-}
+.md-typeset .ocdf-map .m-flow > div { position: relative; }
+/* Markdown wraps each link in a <p>; let it fill the grid cell so all five boxes match the tallest. */
+.md-typeset .ocdf-map .m-flow > div > p { height: 100%; }
 .md-typeset .ocdf-map .m-flow a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: color-mix(in srgb, var(--ocdf-fn-current) 12%, var(--ocdf-card-bg));
-  border-top: 3px solid var(--ocdf-fn-current);
+  padding: 0.8rem 0.65rem 0.75rem;
   text-align: center;
 }
-/* Same six colours as the function pages themselves, in function order —
-   the picture previews the colour a reader will meet again on each page. */
-.md-typeset .ocdf-map .m-flow > div:nth-child(1) { --ocdf-fn-current: var(--ocdf-fn-identify); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(2) { --ocdf-fn-current: var(--ocdf-fn-protect); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(3) { --ocdf-fn-current: var(--ocdf-fn-detect); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(4) { --ocdf-fn-current: var(--ocdf-fn-respond); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(5) { --ocdf-fn-current: var(--ocdf-fn-recover); }
+.md-typeset .ocdf-map .m-flow a::before {
+  display: block;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin: 0 auto 0.45rem;
+}
+.md-typeset .ocdf-map .m-flow a strong { font-size: 0.74rem; }
+.md-typeset .ocdf-map .m-flow a span {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--ocdf-ink-soft);
+  text-wrap: balance;
+}
+/* Same six colours as the function pages, in function order, each with its icon. */
+.md-typeset .ocdf-map .m-flow > div:nth-child(1) { --ocdf-fn-current: var(--ocdf-fn-identify); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 1.5v3.5M12 19v3.5M1.5 12H5M19 12h3.5'/%3E%3C/svg%3E"); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(2) { --ocdf-fn-current: var(--ocdf-fn-protect); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z'/%3E%3Cpath d='M8.8 12.2l2.2 2.2 4.4-4.6'/%3E%3C/svg%3E"); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(3) { --ocdf-fn-current: var(--ocdf-fn-detect); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 12S5.3 5.5 12 5.5 22.5 12 22.5 12 18.7 18.5 12 18.5 1.5 12 1.5 12z'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3C/svg%3E"); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(4) { --ocdf-fn-current: var(--ocdf-fn-respond); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13.5 2L4.5 13.5h6.5L10 22l9.5-11.5H13z'/%3E%3C/svg%3E"); }
+.md-typeset .ocdf-map .m-flow > div:nth-child(5) { --ocdf-fn-current: var(--ocdf-fn-recover); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 12a8 8 0 1 1-2.35-5.65'/%3E%3Cpath d='M20 3.5v5h-5'/%3E%3C/svg%3E"); }
+
+/* chevrons between the functions, drawn rather than typed */
+.md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(var(--map-gap) / -2 - 0.24rem);
+  width: 0.42rem;
+  height: 0.42rem;
+  border-top: 2px solid var(--map-line);
+  border-right: 2px solid var(--map-line);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* The loop sits under the grid; each leg is centred under its column,
+   half a column in from the edge (five columns, four gaps). */
 .md-typeset .ocdf-map .m-loop {
   text-align: center;
-  color: var(--ocdf-accent);
+  color: var(--ocdf-ink-soft);
   font-size: 0.68rem;
-  margin: 0.2rem 0 0.8rem;
+  margin: 0.3rem 0 0.9rem;
 }
+.md-typeset .ocdf-map .m-loop-label { display: none; }
+
+@media screen and (min-width: 45em) {
+  /* GOVERN connector: a stem from the card, a rail across, a drop into each function */
+  .md-typeset .ocdf-map .m-flow::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--map-tie) * -1);
+    left: calc((100% - 4 * var(--map-gap)) / 10);
+    right: calc((100% - 4 * var(--map-gap)) / 10);
+    height: var(--map-tie);
+    --tie: color-mix(in srgb, var(--ocdf-fn-govern) 45%, var(--ocdf-rule));
+    background:
+      linear-gradient(var(--tie), var(--tie)) 50% 0 / 2px 50% no-repeat,
+      linear-gradient(var(--tie), var(--tie)) 0 50% / 100% 2px no-repeat,
+      linear-gradient(var(--tie), var(--tie)) 0% 100% / 2px 50% no-repeat,
+      linear-gradient(var(--tie), var(--tie)) 25% 100% / 2px 50% no-repeat,
+      linear-gradient(var(--tie), var(--tie)) 50% 100% / 2px 50% no-repeat,
+      linear-gradient(var(--tie), var(--tie)) 75% 100% / 2px 50% no-repeat,
+      linear-gradient(var(--tie), var(--tie)) 100% 100% / 2px 50% no-repeat;
+  }
+
+  .md-typeset .ocdf-map .m-loop {
+    --loop-inset: calc((100% - 4 * var(--map-gap)) / 10);
+    position: relative;
+    height: 1.55rem;
+    margin: 0 0 0.9rem;
+  }
+  .md-typeset .ocdf-map .m-loop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--loop-inset);
+    right: var(--loop-inset);
+    height: 1.05rem;
+    border: 2px solid var(--map-line);
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .md-typeset .ocdf-map .m-loop::after {
+    content: "";
+    position: absolute;
+    top: 0.05rem;
+    left: calc(var(--loop-inset) + 1px - 0.21rem);
+    width: 0.42rem;
+    height: 0.42rem;
+    border-top: 2px solid var(--map-line);
+    border-left: 2px solid var(--map-line);
+    transform: rotate(45deg);
+  }
+  .md-typeset .ocdf-map .m-loop-label {
+    display: block;
+    position: absolute;
+    top: calc(1.05rem - 1px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 0.55rem;
+    background: var(--ocdf-card-bg);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .md-typeset .ocdf-map .m-loop-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 1.2rem; }
+  .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    left: 50%;
+    bottom: calc(-0.6rem - 0.24rem);
+    transform: translateX(-50%) rotate(135deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .ocdf-map a { transition: none; }
+  .md-typeset .ocdf-map a:hover { transform: none; }
+}
+
 /* The five supporting ideas (CIA lens, regulatory layer, tier, level,
    evidence) used to be five separate bordered boxes under the diagram.
    They're the same links now, run as one quiet line of text — the diagram
@@ -993,14 +1138,8 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
 }
 .md-typeset .ocdf-map .m-lenses a:hover { transform: none; box-shadow: none; }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-govern a { background: var(--ocdf-eu-mid); }
+.md-typeset .ocdf-map .m-lenses strong { color: inherit; letter-spacing: 0; }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-lenses a { color: #8fb3e3; }
-@media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1rem; }
-  .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
-    content: "↓"; right: auto; left: 50%; top: auto; bottom: -1rem; transform: translateX(-50%);
-  }
-}
 
 /* role cards: the last paragraph is the call to action — pin it to the
    card's bottom edge instead of trailing the body text, so the links line
@@ -1129,5 +1268,3 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .grid.cards.ocdf-roles {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-loop,
-[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after { color: #d98a94; }

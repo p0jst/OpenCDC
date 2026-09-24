@@ -124,7 +124,7 @@ artefacts you take into your own documentation system and governance process:
 <div markdown>[**RECOVER**<br><span>restore trusted service, learn</span>](docs/recover.md)</div>
 </div>
 
-<p class="m-loop">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</p>
+<p class="m-loop"><span class="m-loop-label" aria-hidden="true">Lessons learned</span><span class="m-loop-text">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</span></p>
 
 <p class="m-lenses" markdown>
 Seen through the [**CIA triad**](docs/cia-triad.md) and the
