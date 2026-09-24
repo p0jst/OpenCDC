@@ -779,7 +779,11 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   .md-typeset .ocdf-outputs > ul { grid-template-columns: 1fr; }
 }
 
-/* --------------------------------------------- landing: four dimensions */
+/* ------------------------------------------ landing: three axes */
+
+/* What is fixed (all six functions), how much is chosen (tier), how well
+   is measured (level). Evidence is not a fourth axis; it backs the level
+   score, so it is named under How well rather than given its own tile. */
 
 .md-typeset .ocdf-dimensions-intro {
   margin: 0.9rem 0 0.7rem;
@@ -788,7 +792,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .ocdf-dimensions {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 0 1.1rem;
   border: 1px solid var(--ocdf-rule);
   border-radius: 8px;
@@ -822,10 +826,17 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   font-weight: 620;
   color: var(--md-default-fg-color);
 }
+.md-typeset .ocdf-dimensions i {
+  display: block;
+  margin-top: 0.25rem;
+  font-style: normal;
+  font-size: 0.66rem;
+  color: var(--ocdf-ink-soft);
+}
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-dimensions { grid-template-columns: repeat(2, 1fr); }
-  .md-typeset .ocdf-dimensions > div:nth-child(3) { border-left: none; }
-  .md-typeset .ocdf-dimensions > div:nth-child(n+3) { border-top: 1px solid var(--ocdf-rule); }
+  .md-typeset .ocdf-dimensions { grid-template-columns: 1fr; }
+  .md-typeset .ocdf-dimensions > div { border-left: none; }
+  .md-typeset .ocdf-dimensions > div + div { border-top: 1px solid var(--ocdf-rule); }
 }
 
 /* ---------------------------------------------- landing: worked example */

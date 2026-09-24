@@ -101,13 +101,12 @@ artefacts you take into your own documentation system and governance process:
 
 ## The framework in one picture
 
-<p class="ocdf-dimensions-intro">OCDF has four independent dimensions — mix and match them for your organisation:</p>
+<p class="ocdf-dimensions-intro">Every capability in OCDF sits on three axes, and every score is backed by evidence:</p>
 
 <div class="ocdf-dimensions" markdown>
-<div markdown><b>What</b><span>6 functions</span></div>
-<div markdown><b>How much</b><span>E · S · A tier</span></div>
-<div markdown><b>How well</b><span>L1–L4 maturity</span></div>
-<div markdown><b>Proof</b><span>Evidence</span></div>
+<div markdown><b>What</b><span>6 functions</span><i>Cover all six</i></div>
+<div markdown><b>How much</b><span>E · S · A tier</span><i>You choose</i></div>
+<div markdown><b>How well</b><span>L1–L4 maturity</span><i>You score, backed by evidence</i></div>
 </div>
 
 <div class="ocdf-map" markdown>
