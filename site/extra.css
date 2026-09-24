@@ -936,7 +936,13 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   gap: 1.1rem;
   margin: 0.8rem 0 0.3rem;
 }
-.md-typeset .ocdf-map .m-flow > div { position: relative; }
+.md-typeset .ocdf-map .m-flow > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+/* Markdown wraps each link in a <p>; let it fill the grid cell so all five boxes share the tallest one's height. */
+.md-typeset .ocdf-map .m-flow > div > p { flex: 1; }
 .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
   content: "→";
   position: absolute;
@@ -947,6 +953,9 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   font-weight: 700;
 }
 .md-typeset .ocdf-map .m-flow a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: color-mix(in srgb, var(--ocdf-fn-current) 12%, var(--ocdf-card-bg));
   border-top: 3px solid var(--ocdf-fn-current);
   text-align: center;
