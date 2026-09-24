@@ -2,9 +2,15 @@
 
 > **Status as of July 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
-| Last reviewed | Reviewed by | Second reviewer | Next review due |
-|---------------|-------------|-----------------|-----------------|
-| July 2026 | Frederik B. Krogsgaard, maintainer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) | January 2027 |
+| Review | Status |
+|--------|--------|
+| Confidence | [Pending legislative change](README.md#confidence-levels) |
+| Checked line by line against the legal text | No |
+| Reviewed by a lawyer | No |
+| Last reviewed | July 2026 |
+| Reviewed by | Frederik B. Krogsgaard, maintainer |
+| Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
+| Next review due | January 2027 |
 
 ## NIS2 implementation
 

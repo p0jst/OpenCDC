@@ -12,8 +12,9 @@ flags seriously and open an issue with corrections.
 > for exactly what each one means. Before you cite an annex to an auditor or
 > regulator, check the date it was last reviewed and confirm the key facts
 > against the official sources listed in it. Each annex opens with a status
-> block showing its confidence level, when it was last reviewed, by whom, and
-> when the next review is due. Annexes are re-reviewed at least every six
+> block showing its confidence level, whether it has been checked line by line
+> against the legal text or reviewed by a lawyer, when it was last reviewed, by
+> whom, and when the next review is due. Annexes are re-reviewed at least every six
 > months. A second reviewer per country is the most useful contribution you
 > can make; see [CONTRIBUTING](../../CONTRIBUTING.md).
 
@@ -59,7 +60,7 @@ Each annex carries one of four confidence levels, so you can see how far to rely
 | **Pending legislative change** | The national law is not yet in force; expect the content to change. |
 
 No annex is yet marked *verified against primary source* — every one currently
-sits at maintainer-reviewed or below. Moving an annex up a level is a good
+sits at maintainer-reviewed or below. None has been reviewed by a lawyer. Moving an annex up a level is a good
 first contribution.
 
 Naming convention: `annex-<ISO 3166-1 alpha-2>.md`. Denmark is the reference

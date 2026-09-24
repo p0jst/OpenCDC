@@ -781,9 +781,9 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* ------------------------------------------ landing: three axes */
 
-/* What is fixed (all six functions), how much is chosen (tier), how well
-   is measured (level). Evidence is not a fourth axis; it backs the level
-   score, so it is named under How well rather than given its own tile. */
+/* Four questions in order, not four free choices: what is fixed (all six
+   functions), how much is chosen (tier), how well is measured (level), and
+   evidence proves the score. The chevrons on the seams carry the order. */
 
 .md-typeset .ocdf-dimensions-intro {
   margin: 0.9rem 0 0.7rem;
@@ -792,7 +792,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .ocdf-dimensions {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 0 1.1rem;
   border: 1px solid var(--ocdf-rule);
   border-radius: 8px;
@@ -832,6 +832,41 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   font-style: normal;
   font-size: 0.66rem;
   color: var(--ocdf-ink-soft);
+}
+.md-typeset .ocdf-dimensions > div { position: relative; }
+.md-typeset .ocdf-dimensions > div:not(:last-child)::before,
+.md-typeset .ocdf-dimensions > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+.md-typeset .ocdf-dimensions > div:not(:last-child)::before {
+  right: -0.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: -0.6rem;
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 50%;
+  background: var(--ocdf-card-bg);
+}
+.md-typeset .ocdf-dimensions > div:not(:last-child)::after {
+  right: calc(-0.2rem + 1px);
+  width: 0.34rem;
+  height: 0.34rem;
+  margin-top: -0.17rem;
+  border-top: 1.5px solid var(--ocdf-ink-soft);
+  border-right: 1.5px solid var(--ocdf-ink-soft);
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .ocdf-dimensions > div:not(:last-child)::before {
+    top: auto; right: auto; left: 50%; bottom: -0.6rem; margin: 0 0 0 -0.6rem;
+  }
+  .md-typeset .ocdf-dimensions > div:not(:last-child)::after {
+    top: auto; right: auto; left: 50%; bottom: -0.02rem; margin: 0 0 0 -0.17rem;
+    transform: rotate(135deg);
+  }
 }
 @media screen and (max-width: 44.9375em) {
   .md-typeset .ocdf-dimensions { grid-template-columns: 1fr; }
@@ -889,9 +924,12 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .ocdf-example__arrow {
   align-self: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--ocdf-accent);
+  justify-self: center;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 2px solid color-mix(in srgb, var(--ocdf-ink-soft) 65%, transparent);
+  border-right: 2px solid color-mix(in srgb, var(--ocdf-ink-soft) 65%, transparent);
+  transform: rotate(45deg);
 }
 @media screen and (max-width: 44.9375em) {
   .md-typeset .ocdf-example {
@@ -899,7 +937,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
     text-align: left;
   }
   .md-typeset .ocdf-example__arrow {
-    transform: rotate(90deg);
+    transform: rotate(135deg);
     justify-self: center;
   }
 }
@@ -1278,4 +1316,149 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .cap-filter output { color: var(--ocdf-ink-soft); margin-left: auto; }
 .md-typeset .grid.cards.ocdf-roles {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
+}
+
+/* ------------------------------------------ landing: hero assurances */
+
+/* What a security reader wants to know before clicking: no account, no data
+   leaving the browser, nothing to be locked into. */
+.md-typeset .ocdf-hero .ocdf-assure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 1.3rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.66rem;
+  color: var(--ocdf-ink-soft);
+}
+.md-typeset .ocdf-hero .ocdf-assure li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+}
+.md-typeset .ocdf-hero .ocdf-assure li::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.28rem;
+  margin-top: -0.12rem;
+  border-left: 1.5px solid var(--ocdf-fn-protect);
+  border-bottom: 1.5px solid var(--ocdf-fn-protect);
+  transform: rotate(-45deg);
+}
+
+/* ------------------------------------------ landing: worked example case */
+
+/* The worked example is the proof of the method, so it gets one card:
+   the organisation in facts, before and after, and the maturity it reached. */
+.md-typeset .ocdf-case {
+  margin: 1rem 0 1.2rem;
+  padding: 1.1rem 1.2rem 1rem;
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 8px;
+  background: var(--ocdf-card-bg);
+}
+.md-typeset .ocdf-case .ocdf-example { margin: 0.9rem 0 0; }
+.md-typeset .ocdf-case ul.ocdf-case__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.md-typeset .ocdf-case ul.ocdf-case__facts > li {
+  margin: 0;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--ocdf-rule);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  color: var(--ocdf-ink-soft);
+}
+.md-typeset .ocdf-case ul.ocdf-case__facts b {
+  color: var(--md-default-fg-color);
+  font-weight: 620;
+}
+
+.md-typeset .ocdf-levels {
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--ocdf-rule);
+  font-size: 0.68rem;
+}
+.md-typeset .ocdf-levels__title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  margin: 0 0 0.6rem;
+  font-weight: 620;
+}
+.md-typeset .ocdf-levels__title span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 400;
+  color: var(--ocdf-ink-soft);
+}
+.md-typeset .ocdf-levels__title i {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.45rem;
+  border-radius: 2px;
+}
+.md-typeset .ocdf-levels__title i.now { background: var(--ocdf-ink-soft); }
+.md-typeset .ocdf-levels__title i.target {
+  margin-left: 0.5rem;
+  box-shadow: inset 0 0 0 1.5px var(--ocdf-ink-soft);
+}
+.md-typeset .ocdf-levels > div,
+.md-typeset .ocdf-levels__scale {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0.28rem 0;
+}
+.md-typeset .ocdf-levels > div > b {
+  color: var(--ocdf-fn-current);
+  font-weight: 620;
+}
+.md-typeset .ocdf-levels > div > span {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+.md-typeset .ocdf-levels > div i {
+  display: block;
+  height: 0.55rem;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--ocdf-ink-soft) 14%, var(--ocdf-card-bg));
+}
+.md-typeset .ocdf-levels > div i.n { background: var(--ocdf-fn-current); }
+.md-typeset .ocdf-levels > div i.t {
+  background: color-mix(in srgb, var(--ocdf-fn-current) 14%, var(--ocdf-card-bg));
+  box-shadow: inset 0 0 0 1.5px var(--ocdf-fn-current);
+}
+.md-typeset .ocdf-levels > div:nth-of-type(1) { --ocdf-fn-current: var(--ocdf-fn-govern); }
+.md-typeset .ocdf-levels > div:nth-of-type(2) { --ocdf-fn-current: var(--ocdf-fn-identify); }
+.md-typeset .ocdf-levels > div:nth-of-type(3) { --ocdf-fn-current: var(--ocdf-fn-protect); }
+.md-typeset .ocdf-levels > div:nth-of-type(4) { --ocdf-fn-current: var(--ocdf-fn-detect); }
+.md-typeset .ocdf-levels > div:nth-of-type(5) { --ocdf-fn-current: var(--ocdf-fn-respond); }
+.md-typeset .ocdf-levels > div:nth-of-type(6) { --ocdf-fn-current: var(--ocdf-fn-recover); }
+.md-typeset .ocdf-levels__scale { margin-top: 0.15rem; }
+.md-typeset .ocdf-levels__scale::before { content: ""; }
+.md-typeset .ocdf-levels__scale {
+  grid-template-columns: 5rem repeat(4, 1fr);
+  column-gap: 0.7rem;
+  color: var(--ocdf-ink-soft);
+  font-size: 0.6rem;
+  text-align: center;
+}
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .ocdf-levels > div,
+  .md-typeset .ocdf-levels__scale { grid-template-columns: 4.2rem 1fr; }
+  .md-typeset .ocdf-levels__scale { grid-template-columns: 4.2rem repeat(4, 1fr); }
 }

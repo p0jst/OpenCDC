@@ -21,9 +21,14 @@ gets it done.
 
 <div class="ocdf-cta" markdown>
 [Start building](#start-building){ .md-button .md-button--primary }
-[OCDF on one page](docs/one-page.md){ .md-button }
-[Assess your maturity](tools/maturity-assessment.html){ .md-button }
+[Understand OCDF in 5 minutes](docs/one-page.md){ .md-button }
 </div>
+
+<ul class="ocdf-assure">
+<li>No account</li>
+<li>Tools run in your browser</li>
+<li>Plain documents you own</li>
+</ul>
 
 <div class="ocdf-stats" markdown>
 <div markdown><b>6</b><span>CSF functions</span></div>
@@ -33,6 +38,123 @@ gets it done.
 </div>
 
 </div>
+
+## What you get
+
+Not just pages read once — working through OCDF produces a stack of concrete
+artefacts you take into your own documentation system and governance process:
+
+<div class="ocdf-outputs" markdown>
+
+- **CDC charter** — mandate, scope and containment authority, signed before anything is bought. [Template](templates/cdc-charter-template.md)
+- **Target operating model** — in-house, MSSP, hybrid or shared, with the staffing arithmetic behind it. [Operating models](docs/operating-models.md)
+- **Capability baseline** — where you stand today, function by function, with evidence behind every score. [Maturity self-assessment](tools/maturity-assessment.html)
+- **90-day action plan** — every gap with an owner and a due date. [Start here](docs/start-here.md)
+- **Regulatory applicability profile** — which of NIS2, GDPR, DORA, CRA and CER actually apply to you, and your national annex. [Regulatory profile selector](tools/regulatory-profile.html)
+- **Detection portfolio** — use cases prioritised by your own threat profile, not a generic checklist. [Detection-as-code](docs/detection-as-code-deep-dive.md)
+- **Annual operating calendar** — the recurring work that keeps a CDC from decaying after go-live. [Template](templates/annual-calendar-template.md)
+- **Evidence register** — what backs every maturity score, exportable as a spreadsheet for board reporting. [Maturity self-assessment](tools/maturity-assessment.html)
+
+</div>
+
+## The framework in one picture
+
+<p class="ocdf-dimensions-intro">Every capability in OCDF answers four questions, in this order:</p>
+
+<div class="ocdf-dimensions" markdown>
+<div markdown><b>What</b><span>6 functions</span><i>Cover all six</i></div>
+<div markdown><b>How much</b><span>E · S · A tier</span><i>You choose</i></div>
+<div markdown><b>How well</b><span>L1–L4 maturity</span><i>You score</i></div>
+<div markdown><b>Proof</b><span>Evidence</span><i>Backs every score</i></div>
+</div>
+
+<div class="ocdf-map" markdown>
+
+<div class="m-govern" markdown>
+[**GOVERN** · mandate, risk, roles, budget, oversight](docs/govern.md)
+</div>
+
+<div class="m-flow" markdown>
+<div markdown>[**IDENTIFY**<br><span>what we defend and what threatens it</span>](docs/identify.md)</div>
+<div markdown>[**PROTECT**<br><span>reduce likelihood and blast radius</span>](docs/protect.md)</div>
+<div markdown>[**DETECT**<br><span>find adversary activity fast</span>](docs/detect.md)</div>
+<div markdown>[**RESPOND**<br><span>contain, eradicate, report</span>](docs/respond.md)</div>
+<div markdown>[**RECOVER**<br><span>restore trusted service, learn</span>](docs/recover.md)</div>
+</div>
+
+<p class="m-loop"><span class="m-loop-label" aria-hidden="true">Lessons learned</span><span class="m-loop-text">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</span></p>
+
+<p class="m-lenses" markdown>
+Seen through the [**CIA triad**](docs/cia-triad.md) and the
+[**regulatory layer**](docs/eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
+CRA, CER and 27 national annexes) · sized by [**tier**](docs/tiers.md)
+(E · S · A) · scored by [**level**](docs/maturity-model.md) (1–4) · proven
+with [**evidence**](tools/maturity-assessment.html) · built in the order
+people › process › technology.
+</p>
+
+</div>
+
+Every function has the same parts: capabilities with IDs such as `DE-2`,
+maturity criteria per level, EU regulatory hooks, and a table of the other
+departments it depends on. [OCDF on one page](docs/one-page.md) explains all
+the terms in five minutes.
+
+## See OCDF in action
+
+A fictional 2,500-person parcel company goes from fragmented security work to
+a structured, evidenced CDC: tier decision, operating model, signed charter,
+first 90 days with owners, a ten-detection portfolio and the first board
+report. Every step is in the [worked example](docs/worked-example.md).
+
+<div class="ocdf-case" markdown>
+
+<ul class="ocdf-case__facts">
+<li><b>2,500</b> employees</li>
+<li><b>14</b> sites, night operations</li>
+<li>NIS2 <b>important</b> entity</li>
+<li><b>Standard</b> tier</li>
+<li><b>Hybrid</b> operating model</li>
+</ul>
+
+<div class="ocdf-example" markdown>
+
+<div class="ocdf-example__before" markdown>
+<p class="ocdf-example__label">Before</p>
+
+- Fragmented responsibilities
+- No clear containment authority
+- Reactive detection
+- Undefined regulatory ownership
+</div>
+
+<div class="ocdf-example__arrow" aria-hidden="true"></div>
+
+<div class="ocdf-example__after" markdown>
+<p class="ocdf-example__label">After</p>
+
+- Defined mandate and charter
+- Chosen operating model
+- Capability baseline and 90-day plan
+- Maturity targets and evidence
+</div>
+
+</div>
+
+<div class="ocdf-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 2, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
+<p class="ocdf-levels__title">Maturity after 12 weeks <span><i class="now"></i>Level now <i class="target"></i>Target</span></p>
+<div><b>Govern</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Identify</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
+<div><b>Protect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Detect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Respond</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Recover</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
+<p class="ocdf-levels__scale" aria-hidden="true"><span>L1</span><span>L2</span><span>L3</span><span>L4</span></p>
+</div>
+
+</div>
+
+[Explore the worked example →](docs/worked-example.md){ .md-button }
 
 ## Where are you coming from?
 
@@ -81,99 +203,6 @@ gets it done.
 
 </div>
 
-## What you get
-
-Not just pages read once — working through OCDF produces a stack of concrete
-artefacts you take into your own documentation system and governance process:
-
-<div class="ocdf-outputs" markdown>
-
-- **CDC charter** — mandate, scope and containment authority, signed before anything is bought. [Template](templates/cdc-charter-template.md)
-- **Target operating model** — in-house, MSSP, hybrid or shared, with the staffing arithmetic behind it. [Operating models](docs/operating-models.md)
-- **Capability baseline** — where you stand today, function by function, with evidence behind every score. [Maturity self-assessment](tools/maturity-assessment.html)
-- **90-day action plan** — every gap with an owner and a due date. [Start here](docs/start-here.md)
-- **Regulatory applicability profile** — which of NIS2, GDPR, DORA, CRA and CER actually apply to you, and your national annex. [Regulatory profile selector](tools/regulatory-profile.html)
-- **Detection portfolio** — use cases prioritised by your own threat profile, not a generic checklist. [Detection-as-code](docs/detection-as-code-deep-dive.md)
-- **Annual operating calendar** — the recurring work that keeps a CDC from decaying after go-live. [Template](templates/annual-calendar-template.md)
-- **Evidence register** — what backs every maturity score, exportable as a spreadsheet for board reporting. [Maturity self-assessment](tools/maturity-assessment.html)
-
-</div>
-
-## The framework in one picture
-
-<p class="ocdf-dimensions-intro">Every capability in OCDF sits on three axes, and every score is backed by evidence:</p>
-
-<div class="ocdf-dimensions" markdown>
-<div markdown><b>What</b><span>6 functions</span><i>Cover all six</i></div>
-<div markdown><b>How much</b><span>E · S · A tier</span><i>You choose</i></div>
-<div markdown><b>How well</b><span>L1–L4 maturity</span><i>You score, backed by evidence</i></div>
-</div>
-
-<div class="ocdf-map" markdown>
-
-<div class="m-govern" markdown>
-[**GOVERN** · mandate, risk, roles, budget, oversight](docs/govern.md)
-</div>
-
-<div class="m-flow" markdown>
-<div markdown>[**IDENTIFY**<br><span>what we defend and what threatens it</span>](docs/identify.md)</div>
-<div markdown>[**PROTECT**<br><span>reduce likelihood and blast radius</span>](docs/protect.md)</div>
-<div markdown>[**DETECT**<br><span>find adversary activity fast</span>](docs/detect.md)</div>
-<div markdown>[**RESPOND**<br><span>contain, eradicate, report</span>](docs/respond.md)</div>
-<div markdown>[**RECOVER**<br><span>restore trusted service, learn</span>](docs/recover.md)</div>
-</div>
-
-<p class="m-loop"><span class="m-loop-label" aria-hidden="true">Lessons learned</span><span class="m-loop-text">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</span></p>
-
-<p class="m-lenses" markdown>
-Seen through the [**CIA triad**](docs/cia-triad.md) and the
-[**regulatory layer**](docs/eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
-CRA, CER and 27 national annexes) · sized by [**tier**](docs/tiers.md)
-(E · S · A) · scored by [**level**](docs/maturity-model.md) (1–4) · proven
-with [**evidence**](tools/maturity-assessment.html) · built in the order
-people › process › technology.
-</p>
-
-</div>
-
-Every function has the same parts: capabilities with IDs such as `DE-2`,
-maturity criteria per level, EU regulatory hooks, and a table of the other
-departments it depends on. [OCDF on one page](docs/one-page.md) explains all
-the terms in five minutes.
-
-## See OCDF in action
-
-A fictional 2,500-person parcel company goes from fragmented security work to
-a structured, evidenced CDC: tier decision, operating model, signed charter,
-first 90 days with owners, a ten-detection portfolio and the first board
-report — see every step in the [worked example](docs/worked-example.md).
-
-<div class="ocdf-example" markdown>
-
-<div class="ocdf-example__before" markdown>
-<p class="ocdf-example__label">Before</p>
-
-- Fragmented responsibilities
-- No clear containment authority
-- Reactive detection
-- Undefined regulatory ownership
-</div>
-
-<div class="ocdf-example__arrow" aria-hidden="true">→</div>
-
-<div class="ocdf-example__after" markdown>
-<p class="ocdf-example__label">After</p>
-
-- Defined mandate and charter
-- Chosen operating model
-- Capability baseline and 90-day plan
-- Maturity targets and evidence
-</div>
-
-</div>
-
-[Explore the worked example →](docs/worked-example.md){ .md-button .md-button--primary }
-
 ## Start building
 
 Seven steps, each with the page or tool that does it. See them carried out for a
@@ -209,8 +238,8 @@ under CC BY 4.0, also as a
 <div class="ocdf-meta" markdown>
 
 **Version 1.1.0**, released 23 September 2026 ([changelog](CHANGELOG.md)) ·
-written and maintained by one practitioner, Frederik B. Krogsgaard, formerly
-Senior Manager at the Norlys Cyber Defence Center. Each national annex states
+maintained by Frederik B. Krogsgaard, former Senior Manager at the Norlys
+Cyber Defence Center. An independent, practitioner-led project. Each national annex states
 when it was last reviewed and how confident that review is; see
 [why you can, and cannot, rely on this framework](docs/trust.md).
 
