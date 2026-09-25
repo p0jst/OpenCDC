@@ -87,7 +87,7 @@ artefacts you take into your own documentation system and governance process:
 <div class="ocdf-map" markdown>
 
 <div class="m-govern" markdown>
-[**GOVERN** · mandate, risk, roles, budget, oversight](docs/govern.md)
+[**GOVERN**<br><span>mandate, risk, roles, budget, oversight</span>](docs/govern.md)
 </div>
 
 <div class="m-flow" markdown>

@@ -1015,10 +1015,13 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   align-items: center;
   justify-content: center;
   padding: 0.6rem 0.9rem;
-  white-space: pre-wrap;
   color: var(--ocdf-ink-soft);
   font-size: 0.78rem;
 }
+/* wide screens: one line, "GOVERN · mandate, ..." */
+.md-typeset .ocdf-map .m-govern a br { display: none; }
+.md-typeset .ocdf-map .m-govern a span { margin-left: 0.35em; }
+.md-typeset .ocdf-map .m-govern a span::before { content: "· "; }
 .md-typeset .ocdf-map .m-govern a::before {
   flex: none;
   margin-right: 0.5rem;
@@ -1156,18 +1159,28 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 
 @media screen and (max-width: 44.9375em) {
-  /* On a phone the GOVERN line wraps as plain text; as a flex row the word
-     GOVERN itself was squeezed and broke mid-word. */
+  /* On a phone GOVERN is built like the function cards below it:
+     icon on top, the name, then the description on its own line. */
   .md-typeset .ocdf-map .m-govern a {
     display: block;
+    padding: 0.8rem 0.65rem 0.75rem;
     text-align: center;
-    white-space: normal;
+    font-size: 0.72rem;
   }
   .md-typeset .ocdf-map .m-govern a::before {
-    display: inline-block;
-    vertical-align: -0.25rem;
+    display: block;
+    width: 1.55rem;
+    height: 1.55rem;
+    margin: 0 auto 0.45rem;
   }
-  .md-typeset .ocdf-map .m-govern strong { white-space: nowrap; }
+  .md-typeset .ocdf-map .m-govern strong { font-size: 0.74rem; }
+  .md-typeset .ocdf-map .m-govern a br { display: inline; }
+  .md-typeset .ocdf-map .m-govern a span {
+    display: block;
+    margin: 0.15rem 0 0;
+    text-wrap: balance;
+  }
+  .md-typeset .ocdf-map .m-govern a span::before { content: none; }
   .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 1.2rem; }
   .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
     top: auto;
