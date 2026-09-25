@@ -1156,6 +1156,18 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 
 @media screen and (max-width: 44.9375em) {
+  /* On a phone the GOVERN line wraps as plain text; as a flex row the word
+     GOVERN itself was squeezed and broke mid-word. */
+  .md-typeset .ocdf-map .m-govern a {
+    display: block;
+    text-align: center;
+    white-space: normal;
+  }
+  .md-typeset .ocdf-map .m-govern a::before {
+    display: inline-block;
+    vertical-align: -0.25rem;
+  }
+  .md-typeset .ocdf-map .m-govern strong { white-space: nowrap; }
   .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 1.2rem; }
   .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
     top: auto;
