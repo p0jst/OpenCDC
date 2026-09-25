@@ -745,24 +745,27 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* ------------------------------------------------- landing: what you get */
 
-/* Concrete artefacts, not another reading list — two columns of short,
-   bold-led lines rather than a card each, since eight cards in a row would
-   just be more of the same box the reader has already seen twice above. */
-.md-typeset .ocdf-outputs > ul {
+/* Concrete artefacts, not another reading list. Eight outputs grouped by
+   the phase that produces them, Design, Build and Run, in three columns of
+   short bold-led lines rather than a card each. */
+.md-typeset .ocdf-outputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2rem;
   margin: 1rem 0 1.4rem;
+}
+.md-typeset .ocdf-outputs ul {
+  margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 2rem;
 }
-.md-typeset .ocdf-outputs > ul > li {
+.md-typeset .ocdf-outputs ul > li {
   position: relative;
   margin: 0;
   padding: 0.65rem 0 0.65rem 1.1rem;
   border-bottom: 1px solid var(--ocdf-rule);
 }
-.md-typeset .ocdf-outputs > ul > li::before {
+.md-typeset .ocdf-outputs ul > li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -772,11 +775,12 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   border-radius: 50%;
   background: var(--ocdf-eu);
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-outputs > ul > li::before {
+[data-md-color-scheme="slate"] .md-typeset .ocdf-outputs ul > li::before {
   background: #8fb3e3;
 }
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-outputs > ul { grid-template-columns: 1fr; }
+  .md-typeset .ocdf-outputs { grid-template-columns: 1fr; }
+  .md-typeset .ocdf-outputs > div + div .ocdf-phase { margin-top: 1.2rem; }
 }
 
 /* ------------------------------------------ landing: three axes */
@@ -1205,10 +1209,10 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* start-building path: a numbered list, not seven stacked cards. A number
    and a divider carry the rhythm; nothing here needs its own box. */
+.md-typeset .ocdf-path { counter-reset: step; }
 .md-typeset .ocdf-path > ol {
-  counter-reset: step;
   list-style: none;
-  margin: 0.9rem 0 1.1rem;
+  margin: 0.3rem 0 0.9rem;
   padding: 0;
 }
 .md-typeset .ocdf-path > ol > li {
@@ -1461,4 +1465,34 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   .md-typeset .ocdf-levels > div,
   .md-typeset .ocdf-levels__scale { grid-template-columns: 4.2rem 1fr; }
   .md-typeset .ocdf-levels__scale { grid-template-columns: 4.2rem repeat(4, 1fr); }
+}
+
+/* ---------------------------------- landing: Design, Build, Run labels */
+
+/* The same three phase labels head the outputs and the seven steps, so the
+   reader sees which step produces which artefact. */
+.md-typeset .ocdf-phase {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.6rem 0 0.2rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ocdf-eu);
+}
+.md-typeset .ocdf-phase::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--ocdf-eu) 35%, var(--ocdf-rule));
+}
+[data-md-color-scheme="slate"] .md-typeset .ocdf-phase { color: #8fb3e3; }
+.md-typeset .ocdf-path .ocdf-output {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.66rem;
+  color: var(--ocdf-ink-soft);
 }

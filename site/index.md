@@ -46,14 +46,31 @@ artefacts you take into your own documentation system and governance process:
 
 <div class="ocdf-outputs" markdown>
 
+<div markdown>
+<p class="ocdf-phase">Design</p>
+
 - **CDC charter** — mandate, scope and containment authority, signed before anything is bought. [Template](templates/cdc-charter-template.md)
 - **Target operating model** — in-house, MSSP, hybrid or shared, with the staffing arithmetic behind it. [Operating models](docs/operating-models.md)
+- **Regulatory applicability profile** — which of NIS2, GDPR, DORA, CRA and CER actually apply to you, and your national annex. [Regulatory profile selector](tools/regulatory-profile.html)
+
+</div>
+
+<div markdown>
+<p class="ocdf-phase">Build</p>
+
 - **Capability baseline** — where you stand today, function by function, with evidence behind every score. [Maturity self-assessment](tools/maturity-assessment.html)
 - **90-day action plan** — every gap with an owner and a due date. [Start here](docs/start-here.md)
-- **Regulatory applicability profile** — which of NIS2, GDPR, DORA, CRA and CER actually apply to you, and your national annex. [Regulatory profile selector](tools/regulatory-profile.html)
 - **Detection portfolio** — use cases prioritised by your own threat profile, not a generic checklist. [Detection-as-code](docs/detection-as-code-deep-dive.md)
+
+</div>
+
+<div markdown>
+<p class="ocdf-phase">Run</p>
+
 - **Annual operating calendar** — the recurring work that keeps a CDC from decaying after go-live. [Template](templates/annual-calendar-template.md)
 - **Evidence register** — what backs every maturity score, exportable as a spreadsheet for board reporting. [Maturity self-assessment](tools/maturity-assessment.html)
+
+</div>
 
 </div>
 
@@ -209,22 +226,37 @@ fictional 2,500-person organisation in the [worked example](docs/worked-example.
 
 <div class="ocdf-path" markdown>
 
+<p class="ocdf-phase">Design</p>
+
 1.  **Choose your tier.** Essential, Standard or Advanced decides how much of the
     framework applies to you. [Implementation tiers](docs/tiers.md)
+    <span class="ocdf-output">Output: target tier</span>
 2.  **Run the design workshops.** Six workshops, one per function, surface your
     gaps and the decisions nobody has taken yet. [Design navigator](assessments/cdc-design-navigator.md)
+    <span class="ocdf-output">Output: design gaps logged as backlog items</span>
 3.  **Adopt the charter.** Mandate, scope and containment authority, signed
     before anything is bought. [CDC charter](templates/cdc-charter-template.md)
+    <span class="ocdf-output">Output: signed charter</span>
 4.  **Decide the operating model.** In-house, provider or hybrid, with the
     staffing arithmetic and a cost template. [Operating models](docs/operating-models.md)
+    <span class="ocdf-output">Output: target operating model and staffing numbers</span>
+
+<p class="ocdf-phase">Build</p>
+
 5.  **Assess where you are.** Score the maturity criteria and give every gap an
     owner and a due date. [Maturity self-assessment](tools/maturity-assessment.html)
+    <span class="ocdf-output">Output: scored baseline and an owned action plan</span>
 6.  **Work the first 90 days.** The order of work, week by week, with exit
     criteria. [Start here](docs/start-here.md)
+    <span class="ocdf-output">Output: day-90 exit criteria met</span>
+
+<p class="ocdf-phase">Run</p>
+
 7.  **Set the operating rhythm.** The recurring work that keeps a CDC from
     decaying, and a detection portfolio that grows from your threat profile.
     [Annual calendar](templates/annual-calendar-template.md) ·
     [Detection use case](templates/detection-use-case-template.md)
+    <span class="ocdf-output">Output: annual calendar and a growing detection portfolio</span>
 
 </div>
 
