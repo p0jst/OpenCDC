@@ -34,10 +34,13 @@ the message body or as an attached `ocdf-benchmark-contribution.json`.
 
 ## When the criteria change
 
-Each contribution records the framework version. If a release changes the
-criteria, contributions made under an older version need mapping to the new
-list before they are aggregated, or must be left out. Record the decision in
-the changelog under **Scoring changes**.
+Each contribution records the framework version and the criteria set,
+`criteria_set`. The script aggregates only the current set, `CRITERIA_SET` in
+`aggregate.py`, and rejects the rest with a message. Criteria set 2 arrived
+with the NIS2 legal floor, after v1.1.0; a set-1 contribution cannot be mapped
+reliably, because new Level 2 criteria have no set-1 answer, so ask its sender
+to re-score in the current tool. Record every change of set in the changelog
+under **Scoring changes**.
 
 ## Removal requests
 

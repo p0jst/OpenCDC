@@ -87,7 +87,7 @@ anything else it escalates to the on-call responder.
 Needs approval first:
 
 - isolating a tier-1 sorting-hub server: Head of Operations on duty
-- statutory notifications: General Counsel and DPO approve, the CDC files
+- statutory notifications: General Counsel and DPO approve, or their named deputies out of hours; the CDC files
 - engaging the forensic retainer: CDC manager, informing the CISO
 
 ## The first 90 days
@@ -102,6 +102,7 @@ Following [Start here](start-here.md), with named owners.
 | 3–8 | Critical services agreed with the business: sorting control, route planning, customer tracking, payroll | CISO, business owners |
 | 4–10 | MFA enforced for all remote and admin access; one immutable backup copy restore-tested | IAM lead, Infrastructure |
 | 6–12 | Entra ID, endpoint and Microsoft 365 logs onboarded and sent to the provider | Detection engineer |
+| 6 | Executive board approves the security measures; board cybersecurity training booked for week 14 | CISO |
 | 8–12 | Incident plan v1; ransomware, data-breach and identity playbooks adopted; tabletop exercise with management and a NIS2 reporting drill against the 24-hour clock | CDC manager, Legal |
 | 12 | Baseline maturity assessment; action plan published | CDC manager |
 
@@ -140,23 +141,24 @@ due dates filled in.
 
 | Function | Level now | Target |
 |----------|-----------|--------|
-| Govern | 2 | 3 |
+| Govern | 1 | 3 |
 | Identify | 1 | 2 |
 | Protect | 2 | 3 |
 | Detect | 2 | 3 |
 | Respond | 2 | 3 |
 | Recover | 1 | 2 |
 
-An excerpt of the action plan, six of the open actions:
+Govern, Identify and Recover sit below Level 2, which for a NIS2 entity is the legal floor: each has a measure the law requires that is not yet in place even in basic form. Those actions go first. An excerpt of the action plan, seven of the open actions:
 
 | Criterion missing | Status | Evidence so far | Owner | Due |
 |-------------------|--------|-----------------|-------|-----|
-| Identify L2: automated asset discovery on core networks | Partially in place | Endpoint inventory only; servers in a spreadsheet | Infrastructure lead | Q1 |
-| Recover L2: restore tests annually | Partially in place | One restore test; route planning not yet tested | Infrastructure lead | Q1 |
+| Govern L2 · NIS2: security requirements in contracts with critical suppliers | Partially in place | The provider contract has them; 3 of 11 other critical suppliers reviewed | Procurement lead | Q1 |
+| Govern L2 · NIS2: management body trained within 12 months | Planned | Board training booked for week 14 | CISO | Q1 |
+| Identify L2 · NIS2: automated asset discovery on core networks | Partially in place | Endpoint inventory only; servers in a spreadsheet | Infrastructure lead | Q1 |
+| Recover L2 · NIS2: a crown-jewel service restored end to end against its RTO | Partially in place | Payroll database restored, not timed against its RTO; route planning not yet tested | Infrastructure lead | Q1 |
 | Detect L3: detection lifecycle with version control and testing | Planned | Rules in a repository, no tests yet | Detection engineer | Q2 |
 | Respond L3: containment authority technically tested | Partially in place | Laptop isolation tested; server isolation not | CDC manager | Q1 |
 | Govern L3: quarterly reporting to executive management | Planned | First report scheduled | CISO | Q1 |
-| Protect L3: phishing-resistant MFA for privileged accounts | Planned | Hardware keys ordered | IAM lead | Q2 |
 
 ## The first quarterly board report
 
@@ -168,7 +170,7 @@ recommends.
 | Functions at or above target | 0 of 6 | New baseline | Plan above closes Identify and Recover gaps in Q1 |
 | Median time to detect, serious incidents | 6 h (2 incidents) | New baseline | Both were phishing leading to mailbox access |
 | Median time to contain, serious incidents | 40 min | New baseline | Account disabled and sessions revoked by the on-call responder |
-| Statutory notifications on time | 1 of 1 | — | Early warning filed after 9 hours |
+| Statutory notifications on time | 2 of 2 | — | NIS2 early warning after 9 hours. GDPR: one mailbox held customer data and was notified to Datatilsynet after 50 hours; the other was assessed and documented as not notifiable, per Art. 33(5) |
 | Critical services with a restore test in 12 months | 1 of 4 | — | Route planning, tracking and payroll scheduled |
 | Overdue actions | 0 | — | |
 
@@ -181,6 +183,8 @@ recommends.
 - The portfolio stayed small and tested. Coverage grows from the threat profile,
   not from importing rules.
 - Every gap has a name and a date next to it. That is what turned the maturity
-  score into a plan.
+  score into a plan, and the gaps below the legal floor went to the top of it.
+- The two incidents were detected after six hours, not minutes. Fast containment
+  saved them; detection speed is where the next quarter's engineering goes.
 
 *Open CDC Framework, licensed CC BY 4.0. All organisations, people and figures on this page are fictional.*

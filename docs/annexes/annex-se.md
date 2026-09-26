@@ -1,5 +1,6 @@
 # National Annex — Sweden
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | MSB (Myndigheten för samhällsskydd och beredskap) coordinating + sector supervisory authorities |
 | National CSIRT / reporting | CERT-SE at MSB |
 | Official starting point | https://www.msb.se |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

@@ -1,5 +1,6 @@
 # National Annex — Portugal
 
+<!-- countries:begin -->
 > **Status as of July 2026:** Adopted. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | CNCS (Centro Nacional de Cibersegurança) |
 | National CSIRT / reporting | CERT.PT at CNCS |
 | Official starting point | https://www.cncs.gov.pt |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

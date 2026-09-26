@@ -24,11 +24,16 @@ The framework documents carry these labels. Most have one under the title; the s
 - The EU legal texts the framework relies on are listed with links to the
   official versions on EUR-Lex in [references and credits](references.md).
 - The national annexes each show when they were last reviewed, by whom, and how
-  confident that review is — none is yet checked line by line against the
+  confident that review is. None is yet checked line by line against the
   official gazette itself. See the [annex index](annexes/README.md).
-- The 60 maturity criteria are identical in the printable checklist and the
-  interactive tool, and every capability ID used in the documents appears in the
-  [capability index](capability-index.md).
+- Every piece of data that lives in more than one file is checked automatically
+  on each site build, by `tools/check_consistency.py`: the 71 maturity criteria
+  in the checklist and the tool, the skill catalogue in the tool and the sheets,
+  the country data in the annexes and the selector, and every capability ID used
+  in the documents against the [capability index](capability-index.md).
+- The Level 2 criteria have been mapped against NIS2 Art. 20, 21 and 23 in the
+  [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md), so the legal floor
+  is visible in the criteria themselves.
 
 **Not checked:**
 

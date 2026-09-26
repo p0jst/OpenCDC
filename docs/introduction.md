@@ -22,7 +22,7 @@ This framework is written for **enterprise IT** security operations. OT/ICS envi
 ## Design principles
 
 1. **Standards-first.** The backbone is NIST CSF 2.0. Detection engineering references MITRE ATT&CK. Incident handling references NIST SP 800-61 and FIRST/ENISA good practice. This maximises interoperability with auditors, regulators, and peer organisations.
-2. **CIA as the design lens.** Every capability in this framework states which legs of the CIA triad it primarily protects. If you cannot articulate what a control does for Confidentiality, Integrity or Availability, question whether you need it.
+2. **CIA as the design lens.** Every capability in this framework states which legs of the CIA triad it protects, or that it is an enabler the others depend on, such as governance and exercises. For a technical control, if you cannot articulate what it does for Confidentiality, Integrity or Availability, question whether you need it.
 3. **EU-regulation aware.** Each function document contains an "EU regulatory hooks" section mapping capabilities to NIS2, DORA, GDPR and related obligations. The framework helps demonstrate compliance; it is not legal advice.
 4. **People > Process > Technology, in that order.** Most SOC failures are organisational, not technical. Governance and staffing come before tooling in every build sequence.
 5. **Maturity is incremental.** The framework defines four maturity levels; see the [maturity model](maturity-model.md). Level 2 is achievable by a small team in months, not years.
@@ -30,18 +30,23 @@ This framework is written for **enterprise IT** security operations. OT/ICS envi
 
 ## The greenfield build sequence
 
-If you are building a CDC from the ground up, the recommended order is:
+If you are building a CDC from the ground up, every function starts in the first
+90 days, in its minimum form, and then matures in the order of its dependencies:
 
-| Phase | Indicative duration | Focus | Framework docs |
-|-------|----------------------|-------|----------------|
-| 1. Mandate | 1–2 months | Charter, sponsorship, scope, budget, risk appetite | Govern |
-| 2. Visibility | 2–4 months | Asset inventory, log sources, network visibility | Identify |
-| 3. Foundation controls | 2–6 months | Identity, hardening, backup, segmentation | Protect |
-| 4. Detection | 3–6 months | SIEM/log pipeline, first use cases, triage process | Detect |
-| 5. Response | 2–4 months | IR plan, playbooks, exercises, reporting duties | Respond |
-| 6. Resilience | 2–4 months | Recovery plans, lessons-learned loop, continuous improvement | Recover |
+| Stream | First 90 days, the minimum | Then, to maturity | Framework docs |
+|--------|---------------------------|-------------------|----------------|
+| Mandate | Signed charter with containment authority; regulatory applicability register | Risk integration, multi-year budget, executive reporting | Govern |
+| Visibility | Crown jewels agreed; priority log sources identified | Asset inventory accuracy, threat profile, risk assessment | Identify |
+| Foundation controls | MFA, one tested offline backup, admin-path segmentation | Hardening, segmentation, data security | Protect |
+| Detection | Identity, endpoint and email telemetry flowing, in-house or to a provider | Use-case lifecycle, coverage measurement, hunting | Detect |
+| Response | IR plan v1, top playbooks, **one reporting drill against the 24 h clock** | Tested containment, forensics, management exercises | Respond |
+| Resilience | Recovery priorities for the crown jewels | Tested restores against RTO, lessons-learned loop | Recover |
 
-Phases overlap in practice; the ordering reflects dependencies: you cannot detect what you cannot see, and you cannot respond to what you cannot detect.
+The reporting duty applies from the day an entity is in scope, so response and
+reporting cannot wait for detection to mature. The dependencies still shape the
+second column: you cannot detect what you cannot see, and you cannot measure
+coverage before detections exist. The week-by-week order is in
+[Start here](start-here.md).
 
 ## Dependency markers: [GATE] / [HARD] / [SOFT]
 
@@ -57,13 +62,13 @@ Two rules of use: first, every [HARD] on the critical path of the 90-day plan in
 
 ## How each function document is structured
 
-Every function document, 01–06, follows the same layout:
+Every function document, from Govern to Recover, follows the same layout:
 
 1. **Objective** — what the function achieves.
 2. **Core capabilities** — the concrete things your CDC must be able to do.
 3. **CIA mapping** — which triad objectives each capability serves.
 4. **Roles & staffing** — who does the work.
-5. **Maturity criteria** — what Levels 1–4 look like for this function.
+5. **Maturity criteria** — a link to the function's scored criteria in the maturity self-assessment, the single source for them.
 6. **EU regulatory hooks** — relevant NIS2/DORA/GDPR articles and ENISA guidance.
 7. **External dependencies** — who outside the CDC this function depends on, marked [GATE]/[HARD]/[SOFT].
 8. **Sources** — credited references for that document.

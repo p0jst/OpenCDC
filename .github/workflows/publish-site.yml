@@ -26,6 +26,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install mkdocs-material mkdocs-redirects
+      - run: python tools/check_consistency.py
       - run: python site/build_site.py
       - run: mkdocs build
       - uses: actions/upload-pages-artifact@v5

@@ -5,7 +5,7 @@
 The [maturity self-assessment](../tools/maturity-assessment.html) can show how
 your scores compare with other organisations like yours: the median level per
 function, and for each criterion the share of organisations that have it in
-place. The figures come from anonymous contributions by the tool's users.
+place. The figures come from contributions by the tool's users, which carry no organisation name and are published only as aggregates.
 
 **Status: collecting.** The benchmark opened on 23 September 2026 and has no
 published figures yet. They appear group by group as each reaches ten
@@ -25,7 +25,7 @@ contributions.
 
 ## What a contribution contains
 
-When you choose **Contribute your result anonymously** in the tool, you see the
+When you choose **Contribute your result** in the tool, you see the
 exact content before anything is sent:
 
 | Included | Not included |
@@ -35,7 +35,7 @@ exact content before anything is sent:
 | Region: Nordics, Western, Central and Eastern, or Southern Europe, or outside the EU | Evidence notes, owners, due dates |
 | Sector, from a short list | Targets and target profile |
 | Operating model | Assessors' names, assessment date (only the month) |
-| The status of each of the 60 criteria, and whether evidence-based scoring was on | Anything else from your assessment link |
+| The status of each of the 71 criteria, and whether evidence-based scoring was on | Anything else from your assessment link |
 | The month and the framework version | |
 
 Nothing is sent by the tool itself. You email the contribution, or download the
@@ -50,9 +50,13 @@ file and send it, to **benchmark@opencdc.org**.
 - **Groups are never combined.** You can compare with organisations of your
   size, or of your NIS2 category, or of your region, but not "your size in your
   region", which could narrow a group to a handful of recognisable organisations.
-- **Your email address** is used only to receive the contribution. It is not
-  stored with the data or published. Ask for your contribution to be removed at
-  any time by writing to the same address.
+- **Contributions are not anonymous to the maintainer.** They arrive by email,
+  so the maintainer sees who sent them. They are anonymous in what is published:
+  no figure names or describes a single organisation.
+- **Your email address** stays only in the benchmark mailbox, which is
+  access-controlled. It is never stored with the contribution data or published.
+  The mailbox is what lets you ask, from the same address, for your contribution
+  to be removed; the email goes with it.
 - **The aggregate is published** as [`tools/benchmark.json`](https://github.com/p0jst/OpenCDC/blob/main/tools/benchmark.json)
   under CC BY 4.0, and recomputed as contributions arrive. The script that
   produces it, [`benchmark/aggregate.py`](https://github.com/p0jst/OpenCDC/blob/main/benchmark/aggregate.py),

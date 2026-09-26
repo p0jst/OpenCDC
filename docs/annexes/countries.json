@@ -1,0 +1,517 @@
+{
+  "at": {
+    "name": "Austria",
+    "status": "In force from 1 October 2026",
+    "confidence": "Maintainer reviewed",
+    "law": "Netz- und Informationssystemsicherheitsgesetz 2026 (NISG 2026), BGBl. I Nr. 94/2025, in force on 1 October 2026. Initial registration is due by 1 January 2027.",
+    "authority": "Bundesamt für Cybersicherheit, a new federal office under the Bundesministerium für Inneres",
+    "csirt": "CERT.at / GovCERT Austria; significant incidents are reported through the NIS2 Services application in the Unternehmensserviceportal (USP)",
+    "link": "https://www.usp.gv.at",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "be": {
+    "name": "Belgium",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Loi/Wet of 26 April 2024 transposing NIS2, in force 18 October 2024, one of the first in the EU",
+    "authority": "Centre for Cybersecurity Belgium (CCB)",
+    "csirt": "CCB / cert.be",
+    "link": "https://ccb.belgium.be",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "bg": {
+    "name": "Bulgaria",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Amendment to the Cybersecurity Act (Закон за киберсигурност), State Gazette No. 17 of 13 February 2026, in force same date",
+    "authority": "National Cybersecurity Coordinator / Ministry of e-Government",
+    "csirt": "CERT Bulgaria at govcert.bg",
+    "link": "https://www.gov.bg",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "hr": {
+    "name": "Croatia",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Zakon o kibernetičkoj sigurnosti (Cybersecurity Act), NN 14/2024, in force 15 February 2024; first member state to transpose",
+    "authority": "Sigurnosno-obavještajna agencija (SOA), the central state authority for cybersecurity",
+    "csirt": "Croatian national CERT at CARNET / ZSIS CERT",
+    "link": "https://www.soa.hr",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "cy": {
+    "name": "Cyprus",
+    "status": "Adopted, completeness unverified",
+    "confidence": "Needs verification",
+    "law": "Cybersecurity law transposing NIS2 (Ο περί Κυβερνοασφάλειας Νόμος), adopted. The Commission still listed Cyprus in the May 2025 reasoned opinions pending full notification; verify current status.",
+    "authority": "Digital Security Authority (DSA / Αρχή Ψηφιακής Ασφάλειας)",
+    "csirt": "CSIRT-CY",
+    "link": "https://dsa.cy",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "cz": {
+    "name": "Czechia",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "New Cybersecurity Act (nový zákon o kybernetické bezpečnosti, 2025) replacing Act 181/2014, effective 1 November 2025",
+    "authority": "NÚKIB (Národní úřad pro kybernetickou a informační bezpečnost)",
+    "csirt": "GovCERT.CZ under NÚKIB, and national CSIRT.CZ",
+    "link": "https://nukib.gov.cz",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "dk": {
+    "name": "Denmark",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Family of acts in force since 2025: NIS 2-loven (Lov nr. 434/2025), Lov om styrket beredskab i energisektoren (Lov nr. 258/2025), Lov om sikkerhed og beredskab i telesektoren and CER-loven; finance via Lov om finansiel virksomhed",
+    "authority": "Styrelsen for Samfundssikkerhed (SAMSIK) + sector authorities",
+    "csirt": "SAMSIK, Styrelsen for Samfundssikkerhed, is the national CSIRT. Reporting via virk.dk; energy-sector entities report to Energistyrelsen, and to the CSIRT as well when network and information security was compromised",
+    "link": "https://samsik.dk/nis2",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No",
+    "note": "NIS2/CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates and is the national CSIRT, and sector authorities supervise their sectors; Energistyrelsen supervises energy, with its own reporting rules under BEK 260. SAMSIK guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
+    "acts": [
+      {
+        "id": "dk-nis2",
+        "name": "NIS 2-loven",
+        "stamp": "DK·NIS2",
+        "desc": "Lov nr. 434/2025 — horizontal Danish NIS2 act"
+      },
+      {
+        "id": "dk-energi",
+        "name": "Lov om styrket beredskab i energisektoren",
+        "stamp": "DK·ENERGI",
+        "desc": "Lov nr. 258/2025 — energy sector, NIS2 + CER combined, five preparedness levels"
+      },
+      {
+        "id": "dk-tele",
+        "name": "Lov om sikkerhed og beredskab i telesektoren",
+        "stamp": "DK·TELE",
+        "desc": "Telecom sector NIS2 implementation"
+      },
+      {
+        "id": "dk-cer",
+        "name": "CER-loven",
+        "stamp": "DK·CER",
+        "desc": "Kritiske enheders modstandsdygtighed"
+      },
+      {
+        "id": "dk-fin",
+        "name": "Lov om finansiel virksomhed § 333 ff.",
+        "stamp": "DK·FIN",
+        "desc": "Financial sector, aligned with DORA — tick DORA above as well"
+      }
+    ],
+    "reporting": [
+      {
+        "laws": [
+          "dk-nis2",
+          "dk-tele"
+        ],
+        "regime": "Denmark — national channel",
+        "stamp": "DK",
+        "trigger": "Significant incident, entities under NIS 2-loven or the tele act",
+        "deadline": "NIS2 pattern: 24 h / 72 h / 1 month",
+        "recipient": "Via <b>virk.dk</b> — CSIRT function: SAMSIK"
+      },
+      {
+        "laws": [
+          "dk-energi"
+        ],
+        "regime": "Denmark — energy sector",
+        "stamp": "DK·ENERGI",
+        "trigger": "Significant incident, energy-sector entities",
+        "deadline": "24 h / 72 h status / 1 month incident report",
+        "recipient": "<b>Energistyrelsen</b>; incidents that compromised network and information security also to the CSIRT, through the channel it designates; electricity, gas and hydrogen entities also alert Energinet (BEK 260 §§ 77–79)"
+      }
+    ],
+    "hooks": {
+      "govern": [
+        {
+          "laws": [
+            "dk-nis2"
+          ],
+          "stamp": "DK·NIS2",
+          "text": "Registration duty on virk.dk for covered entities, per NIS 2-loven § 33."
+        },
+        {
+          "laws": [
+            "dk-energi"
+          ],
+          "stamp": "DK·ENERGI",
+          "text": "Top management approves the preparedness plans and is accountable for them; at levels 4 and 5 the preparedness and cyber coordinator must be separate from the management that approves them."
+        }
+      ],
+      "protect": [
+        {
+          "laws": [
+            "dk-energi"
+          ],
+          "stamp": "DK·ENERGI",
+          "text": "Every entity segments its supply-critical systems behind a DMZ or equivalent; levels 4 and 5 separate those networks physically (BEK 260 § 62)."
+        }
+      ],
+      "detect": [
+        {
+          "laws": [
+            "dk-energi"
+          ],
+          "stamp": "DK·ENERGI",
+          "text": "Levels 4 and 5 log and monitor to identify incidents in real time, respond in real time, keep logs for 13 months and hand them to their IT security service within 24 h (BEK 260 §§ 66–69)."
+        }
+      ],
+      "respond": [
+        {
+          "laws": [
+            "dk-nis2",
+            "dk-tele"
+          ],
+          "stamp": "DK",
+          "text": "Report via virk.dk; drill the flow against the 24 h early-warning clock."
+        },
+        {
+          "laws": [
+            "dk-energi"
+          ],
+          "stamp": "DK·ENERGI",
+          "text": "Report significant incidents to Energistyrelsen within 24 h, with status within 72 h and a report within one month. Exercise the preparedness plans yearly at levels 3 to 5 and every second year at level 2, with a yearly recovery exercise of supply-critical systems at levels 4 and 5 (BEK 260 §§ 21, 77–78)."
+        }
+      ]
+    },
+    "disclaimer": "Community-maintained orientation, the reference annex for the framework. This is **not legal advice**; verify against retsinformation.dk and samsik.dk before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md)."
+  },
+  "ee": {
+    "name": "Estonia",
+    "status": "Adopted, awaiting verification",
+    "confidence": "Needs verification",
+    "law": "Amendments to the Cybersecurity Act (küberturvalisuse seadus) transposing NIS2, adopted 2025; verify the exact entry into force",
+    "authority": "Riigi Infosüsteemi Amet (RIA, Information System Authority)",
+    "csirt": "CERT-EE, part of RIA",
+    "link": "https://www.ria.ee",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "fi": {
+    "name": "Finland",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Kyberturvallisuuslaki (Cybersecurity Act 124/2025), in force 8 April 2025",
+    "authority": "Traficom (Finnish Transport and Communications Agency) + sector authorities",
+    "csirt": "NCSC-FI / Kyberturvallisuuskeskus, part of Traficom",
+    "link": "https://www.kyberturvallisuuskeskus.fi",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "fr": {
+    "name": "France",
+    "status": "Pending, in the legislative process",
+    "confidence": "Pending legislative change",
+    "law": "Projet de loi relative à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments, still in the legislative process as of mid-2026; verify. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2.",
+    "authority": "ANSSI (Agence nationale de la sécurité des systèmes d'information)",
+    "csirt": "CERT-FR",
+    "link": "https://cyber.gouv.fr",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "de": {
+    "name": "Germany",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG), amending the BSIG, in force 6 December 2025",
+    "authority": "BSI (Bundesamt für Sicherheit in der Informationstechnik)",
+    "csirt": "CERT-Bund, part of BSI",
+    "link": "https://www.bsi.bund.de/nis-2",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "gr": {
+    "name": "Greece",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Law 5160/2024 transposing NIS2, in force November 2024",
+    "authority": "National Cybersecurity Authority / Εθνική Αρχή Κυβερνοασφάλειας, under the Ministry of Digital Governance",
+    "csirt": "National CSIRT-GR",
+    "link": "https://mindigital.gr",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "hu": {
+    "name": "Hungary",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Act LXIX of 2024 on Hungary's cybersecurity, in force 1 January 2025",
+    "authority": "SZTFH (Regulated Activities Supervisory Authority)",
+    "csirt": "NBSZ NKI (National Cyber Security Center)",
+    "link": "https://nki.gov.hu",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "ie": {
+    "name": "Ireland",
+    "status": "Pending, awaiting verification",
+    "confidence": "Pending legislative change",
+    "law": "National Cyber Security Bill, still completing passage as of mid-2026. Verify; adoption is reported imminent and possibly complete. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2.",
+    "authority": "NCSC Ireland as lead competent authority, plus sector regulators",
+    "csirt": "CSIRT-IE at NCSC",
+    "link": "https://www.ncsc.gov.ie",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "it": {
+    "name": "Italy",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Decreto legislativo 138/2024, in force October 2024",
+    "authority": "ACN (Agenzia per la Cybersicurezza Nazionale)",
+    "csirt": "CSIRT Italia at ACN",
+    "link": "https://www.acn.gov.it",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "lv": {
+    "name": "Latvia",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Nacionālās kiberdrošības likums (National Cybersecurity Law), in force 1 September 2024",
+    "authority": "National Cybersecurity Centre under the Ministry of Defence",
+    "csirt": "CERT.LV",
+    "link": "https://www.ncsc.gov.lv",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "lt": {
+    "name": "Lithuania",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Amended Kibernetinio saugumo įstatymas (Cybersecurity Law), applying from 18 October 2024; among the first transpositions",
+    "authority": "NKSC (National Cyber Security Centre under MoND)",
+    "csirt": "CERT-LT at NKSC",
+    "link": "https://www.nksc.lt",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "lu": {
+    "name": "Luxembourg",
+    "status": "Pending, awaiting verification",
+    "confidence": "Pending legislative change",
+    "law": "Bill n°8364 transposing NIS2, still in legislative process as of mid-2026; verify",
+    "authority": "ILR (Institut Luxembourgeois de Régulation) for most sectors; CSSF for finance",
+    "csirt": "CIRCL and GOVCERT.LU",
+    "link": "https://www.ilr.lu",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "mt": {
+    "name": "Malta",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Measures for a High Common Level of Cybersecurity Regulations, subsidiary legislation transposing NIS2, 2024",
+    "authority": "CSA, the Critical Infrastructure Protection Directorate / Malta's designated competent authority",
+    "csirt": "CSIRTMalta",
+    "link": "https://csirtmalta.gov.mt",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "nl": {
+    "name": "Netherlands",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Cyberbeveiligingswet (Cbw) and Wet weerbaarheid kritieke entiteiten (Wwke, the CER transposition), adopted by the Eerste Kamer on 7 July 2026 and in force since 15 August 2026, with no transition period. Registration with NCSC-NL was due by the same date.",
+    "authority": "Sector supervisory authorities, with RDI (Rijksinspectie Digitale Infrastructuur) for digital infrastructure",
+    "csirt": "NCSC-NL; incidents are reported through the national reporting portal to the CSIRT and the competent authority",
+    "link": "https://www.ncsc.nl",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "pl": {
+    "name": "Poland",
+    "status": "In force",
+    "confidence": "Needs verification",
+    "law": "Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (KSC amendment), signed on 19 February 2026 and in force since early April 2026. Applications to the register of essential and important entities are due by early October 2026, and the obligations apply from April 2027; verify the exact dates in Dziennik Ustaw.",
+    "authority": "Ministry of Digital Affairs + sector authorities",
+    "csirt": "CSIRT NASK, CSIRT GOV and CSIRT MON, a three-CSIRT model",
+    "link": "https://www.gov.pl/web/cyfryzacja",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "pt": {
+    "name": "Portugal",
+    "status": "Adopted",
+    "confidence": "Maintainer reviewed",
+    "law": "Regime jurídico da cibersegurança, the decree-law transposing NIS2, adopted 2025; verify its number and date of entry into force",
+    "authority": "CNCS (Centro Nacional de Cibersegurança)",
+    "csirt": "CERT.PT at CNCS",
+    "link": "https://www.cncs.gov.pt",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "ro": {
+    "name": "Romania",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "OUG nr. 155/2024, the emergency ordinance transposing NIS2, in force end of December 2024",
+    "authority": "DNSC (Directoratul Național de Securitate Cibernetică)",
+    "csirt": "DNSC national CSIRT",
+    "link": "https://www.dnsc.ro",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "sk": {
+    "name": "Slovakia",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Act No. 366/2024 amending Act No. 69/2018 on Cybersecurity, effective 1 January 2025",
+    "authority": "NBÚ (Národný bezpečnostný úrad)",
+    "csirt": "SK-CERT at NBÚ",
+    "link": "https://www.nbu.gov.sk",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "si": {
+    "name": "Slovenia",
+    "status": "In force, secondary acts unverified",
+    "confidence": "Needs verification",
+    "law": "ZInfV-1 (Zakon o informacijski varnosti, new Information Security Act transposing NIS2), adopted 2025",
+    "authority": "Urad RS za informacijsko varnost (URSIV)",
+    "csirt": "SI-CERT",
+    "link": "https://www.gov.si/drzavni-organi/organi-v-sestavi/urad-za-informacijsko-varnost/",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "es": {
+    "name": "Spain",
+    "status": "Pending, awaiting verification",
+    "confidence": "Pending legislative change",
+    "law": "Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, still in legislative process as of mid-2026; verify. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2.",
+    "authority": "Expected: National Cybersecurity Centre coordination; CCN for the public sector, INCIBE for private entities and citizens, sector authorities",
+    "csirt": "CCN-CERT, INCIBE-CERT, ESPDEF-CERT",
+    "link": "https://www.incibe.es",
+    "last_reviewed": "September 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "March 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  },
+  "se": {
+    "name": "Sweden",
+    "status": "In force",
+    "confidence": "Maintainer reviewed",
+    "law": "Cybersäkerhetslagen, the new Cybersecurity Act transposing NIS2, adopted 2025, in force January 2026; verify the exact date",
+    "authority": "MSB (Myndigheten för samhällsskydd och beredskap) coordinating + sector supervisory authorities",
+    "csirt": "CERT-SE at MSB",
+    "link": "https://www.msb.se",
+    "last_reviewed": "July 2026",
+    "reviewed_by": "Frederik B. Krogsgaard, maintainer",
+    "second_reviewer": "Wanted",
+    "next_review": "January 2027",
+    "checked_against_legal_text": "No",
+    "lawyer_reviewed": "No"
+  }
+}

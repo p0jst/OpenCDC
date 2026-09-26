@@ -1,5 +1,6 @@
 # National Annex — Italy
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | ACN (Agenzia per la Cybersicurezza Nazionale) |
 | National CSIRT / reporting | CSIRT Italia at ACN |
 | Official starting point | https://www.acn.gov.it |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

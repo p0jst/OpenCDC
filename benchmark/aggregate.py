@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Aggregate anonymous maturity-assessment contributions into tools/benchmark.json.
+"""Aggregate maturity-assessment contributions into tools/benchmark.json.
 
 Raw contributions stay private: keep them in benchmark/submissions/ (git-ignored)
 and publish only the output of this script. Groups smaller than MIN_GROUP are
@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TOOL = ROOT / "tools" / "maturity-assessment.html"
 OUT = ROOT / "tools" / "benchmark.json"
 MIN_GROUP = 10
+# Criteria set 2 arrived with the NIS2 legal floor at Level 2; set-1 statuses mean different criteria.
+CRITERIA_SET = 2
 
 SIZES = ["1-49", "50-249", "250-999", "1000-4999", "5000+"]
 NIS2 = ["essential", "important", "not-in-scope", "unsure"]
@@ -67,6 +69,8 @@ def level(funcs, order, statuses, fid, strict):
 def validate(c, n_criteria):
     if c.get("ocdf_benchmark") != 1:
         return "not an OCDF benchmark contribution"
+    if c.get("criteria_set", 1) != CRITERIA_SET:
+        return f"made against criteria set {c.get('criteria_set', 1)}; only set {CRITERIA_SET} is aggregated, so ask the contributor to re-score"
     s = c.get("statuses", "")
     if len(s) != n_criteria or not re.fullmatch(r"[0-4]+", s):
         return f"statuses must be {n_criteria} digits 0-4"

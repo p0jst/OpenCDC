@@ -1,5 +1,6 @@
 # National Annex — Malta
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | CSA, the Critical Infrastructure Protection Directorate / Malta's designated competent authority |
 | National CSIRT / reporting | CSIRTMalta |
 | Official starting point | https://csirtmalta.gov.mt |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

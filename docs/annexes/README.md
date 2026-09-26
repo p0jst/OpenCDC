@@ -1,9 +1,11 @@
 # National Annexes — all 27 EU member states
 
 Per-country NIS2 implementation status, competent authority, national CSIRT and
-CDC-relevant notes. Status column reflects the maintainer's review as of
-**July 2026**; national situations change, so treat "unverified" and "pending"
-flags seriously and open an issue with corrections.
+CDC-relevant notes. The table shows when each country was last reviewed; national situations
+change, so treat "unverified" and "pending" flags seriously and open an issue
+with corrections. Country facts are edited in one place,
+[`countries.json`](countries.json), and `python tools/build_countries.py`
+writes them into this table, the annexes and the regulatory selector.
 
 > **One reviewer so far, none yet checked against primary sources.** Every
 > annex has been reviewed by the maintainer only, against authority websites
@@ -18,35 +20,37 @@ flags seriously and open an issue with corrections.
 > months. A second reviewer per country is the most useful contribution you
 > can make; see [CONTRIBUTING](../../CONTRIBUTING.md).
 
+<!-- countries:begin -->
 | Country | Status | Confidence | Last reviewed | Second reviewer | Next review | Annex |
 |---------|--------|------------|---------------|-----------------|-------------|-------|
-| Austria | Adopted and phasing in | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-at.md) |
+| Austria | In force from 1 October 2026 | Maintainer reviewed | Sep 2026 | Wanted | Mar 2027 | [Open](annex-at.md) |
 | Belgium | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-be.md) |
 | Bulgaria | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-bg.md) |
 | Croatia | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-hr.md) |
 | Cyprus | Adopted, completeness unverified | Needs verification | Jul 2026 | Wanted | Jan 2027 | [Open](annex-cy.md) |
 | Czechia | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-cz.md) |
-| Denmark | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-dk.md) |
+| Denmark | In force | Maintainer reviewed | Sep 2026 | Wanted | Mar 2027 | [Open](annex-dk.md) |
 | Estonia | Adopted, awaiting verification | Needs verification | Jul 2026 | Wanted | Jan 2027 | [Open](annex-ee.md) |
 | Finland | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-fi.md) |
-| France | Pending, in the legislative process | Pending legislative change | Jul 2026 | Wanted | Jan 2027 | [Open](annex-fr.md) |
+| France | Pending, in the legislative process | Pending legislative change | Sep 2026 | Wanted | Mar 2027 | [Open](annex-fr.md) |
 | Germany | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-de.md) |
 | Greece | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-gr.md) |
 | Hungary | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-hu.md) |
-| Ireland | Pending, awaiting verification | Pending legislative change | Jul 2026 | Wanted | Jan 2027 | [Open](annex-ie.md) |
+| Ireland | Pending, awaiting verification | Pending legislative change | Sep 2026 | Wanted | Mar 2027 | [Open](annex-ie.md) |
 | Italy | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-it.md) |
 | Latvia | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-lv.md) |
 | Lithuania | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-lt.md) |
 | Luxembourg | Pending, awaiting verification | Pending legislative change | Jul 2026 | Wanted | Jan 2027 | [Open](annex-lu.md) |
 | Malta | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-mt.md) |
-| Netherlands | Entering into force, awaiting verification | Needs verification | Jul 2026 | Wanted | Jan 2027 | [Open](annex-nl.md) |
-| Poland | Pending, nearing adoption, awaiting verification | Pending legislative change | Jul 2026 | Wanted | Jan 2027 | [Open](annex-pl.md) |
+| Netherlands | In force | Maintainer reviewed | Sep 2026 | Wanted | Mar 2027 | [Open](annex-nl.md) |
+| Poland | In force | Needs verification | Sep 2026 | Wanted | Mar 2027 | [Open](annex-pl.md) |
 | Portugal | Adopted | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-pt.md) |
 | Romania | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-ro.md) |
 | Slovakia | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-sk.md) |
 | Slovenia | In force, secondary acts unverified | Needs verification | Jul 2026 | Wanted | Jan 2027 | [Open](annex-si.md) |
-| Spain | Pending, awaiting verification | Pending legislative change | Jul 2026 | Wanted | Jan 2027 | [Open](annex-es.md) |
+| Spain | Pending, awaiting verification | Pending legislative change | Sep 2026 | Wanted | Mar 2027 | [Open](annex-es.md) |
 | Sweden | In force | Maintainer reviewed | Jul 2026 | Wanted | Jan 2027 | [Open](annex-se.md) |
+<!-- countries:end -->
 
 ## Confidence levels
 

@@ -186,6 +186,7 @@
   .crit.flash{animation:flash 1.2s ease}
   @keyframes flash{0%,40%{box-shadow:0 0 0 3px #f2c14e}100%{box-shadow:0 0 0 0 transparent}}
   .crit .ctext{font-size:.92rem;font-weight:500;margin:0 0 8px}
+  .nis2tag{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.66rem;letter-spacing:.04em;border:1px solid var(--eu);color:var(--eu);border-radius:3px;padding:0 5px;margin-left:6px;vertical-align:1px;white-space:nowrap;font-weight:500}
   .seg{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}
   .seg label{position:relative;cursor:pointer;font-size:.74rem;line-height:1.25;text-align:center;
     padding:6px 4px;border-right:1px solid var(--line-soft);color:var(--muted);background:#fff;user-select:none}
@@ -485,9 +486,9 @@
     </div>
     <div id="bench-out" class="bout"></div>
     <details class="contrib" id="contrib">
-      <summary>Contribute your result anonymously</summary>
+      <summary>Contribute your result</summary>
       <p>Help build the benchmark. The contribution contains <b>only</b> the five answers above, the month, the
-         framework version and the status of each of the 60 criteria. It does <b>not</b> contain your organisation's
+         framework version and the status of each of the 71 criteria. It does <b>not</b> contain your organisation's
          name, evidence notes, owners, due dates, targets or the assessors' names. You see exactly what is sent, and
          nothing leaves your browser until you send it yourself.</p>
       <button class="btn primary" id="contrib-prep">Prepare contribution</button>
@@ -514,11 +515,21 @@
   only. Scores without recorded evidence tend to come out higher than evidenced ones.
 </footer>
 <script>
-const CATALOG = {"functions":[{"id":"GOVERN","name":"Govern","levels":{"2":["Signed CDC charter defining mission, scope and authority","Security policies approved and reviewed within last 12 months","RACI for security roles exists"],"3":["Cyber risk items appear in the enterprise risk register with owners","Quarterly or more frequent reporting to executive management","Supplier contracts include security requirements; supplier register maintained","Multi-year budget/staffing plan approved"],"4":["Management completed cybersecurity training and participated in an exercise in last 12 months","Resource decisions demonstrably driven by risk/maturity data"]}},{"id":"IDENTIFY","name":"Identify","levels":{"2":["Automated asset discovery on core networks","Vulnerability scanning at least quarterly on core estate","Subscribed to national CSIRT / ENISA advisories","Crown-jewel services listed with owners"],"3":["Inventory accuracy measured, > 90%","Documented threat profile mapped to MITRE ATT&CK, reviewed annually","Risk-based remediation SLAs defined and tracked","Annual risk assessment feeds budget/backlog"],"4":["Continuous attack-surface monitoring incl. cloud/SaaS","Threat intel demonstrably drives hunts and new detections, traceably"]}},{"id":"PROTECT","name":"Protect","levels":{"2":["MFA enforced for all remote and administrative access","Hardening baselines defined for main platforms","Patching SLA for critical vulnerabilities defined and measured","Backup restore tested within last 12 months"],"3":["Phishing-resistant MFA for privileged accounts; PAM operational","Network segmentation isolates crown-jewel zones","Offline/immutable backup copy for critical data","Control coverage measured, such as % endpoints with EDR ≥ 95%"],"4":["Continuous or periodic technical control validation through attack simulation","Security requirements embedded in procurement and SDLC with verification"]}},{"id":"DETECT","name":"Detect","levels":{"2":["Central log platform; identity, endpoint and email sources onboarded","Use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook","Triage runbook with severity matrix","Defined coverage hours with on-call arrangement"],"3":["Detection lifecycle with version control and testing","Coverage measured against ATT&CK and crown jewels; gaps drive backlog","Coverage hours meet the risk-based target set in GOVERN; out-of-hours escalation tested twice a year","MTTD measured per confirmed incident","Threat hunting performed on a schedule"],"4":["All production detections validated by firing in test within 12 months","Detection-as-code with CI/CD pipeline","FP rates and coverage trended, demonstrably driving engineering"]}},{"id":"RESPOND","name":"Respond","levels":{"2":["Approved IR plan with severity classification and roles","Playbooks for top scenarios incl. ransomware and data breach","Statutory reporting contacts and templates prepared for NIS2, GDPR and DORA as applicable","Tabletop exercise within last 12 months"],"3":["Containment authority pre-agreed in charter; isolation technically tested","Forensic capability in-house or via retainer, with chain-of-custody procedure","Reporting drill executed against statutory deadlines","Post-incident reviews with tracked actions for all P1/P2"],"4":["MTTC trended; containment steps automated with approval gates","Cross-functional crisis exercise incl. management and comms within 12 months"]}},{"id":"RECOVER","name":"Recover","levels":{"2":["Recovery plans with RTO/RPO for crown-jewel services","Restore tests annually","Post-incident review process defined"],"3":["Rebuild-from-known-good procedure; integrity verification before reconnection","Credential rotation standard in recovery runbooks","Joint BCM/CDC exercise within 12 months","Lessons-learned actions tracked to closure"],"4":["Ransomware-scale recovery exercised; measured recovery vs. RTO","Demonstrable control/detection changes originating from incidents"]}}],"profiles":{"SME, low regulatory exposure":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":2,"RECOVER":2},"NIS2 important entity":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":3,"RECOVER":2},"NIS2 essential entity / DORA financial entity":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":3,"RESPOND":3,"RECOVER":3},"Critical infrastructure, high-threat sectors":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":4,"RESPOND":4,"RECOVER":3}}}
+const CATALOG = {"functions":[{"id":"GOVERN","name":"Govern","levels":{"2":["Signed CDC charter defining mission, scope and authority","Security policies approved and reviewed within last 12 months","RACI for security roles exists","Management body has approved the cybersecurity risk-management measures, and its members completed cybersecurity training within the last 12 months","Security requirements in contracts with critical suppliers and service providers; list of critical suppliers maintained","Effectiveness of the security measures assessed at least annually, for example with this self-assessment, and reported to management"],"3":["Cyber risk items appear in the enterprise risk register with owners","Quarterly or more frequent reporting to executive management","Supplier security requirements in all relevant contracts; supplier risk assessed and reviewed at least annually","Multi-year budget/staffing plan approved"],"4":["Management body took part in a board-level crisis exercise within the last 12 months","Resource decisions demonstrably driven by risk/maturity data"]},"nis2":{"2":["","21(2)(a)","","Art. 20","21(2)(d)","21(2)(f)"],"3":["","","21(2)(d)",""],"4":["",""]}},{"id":"IDENTIFY","name":"Identify","levels":{"2":["Automated asset discovery on core networks","Vulnerability scanning at least quarterly on core estate","Subscribed to national CSIRT / ENISA advisories","Crown-jewel services agreed in writing with the business, each with an owner","Risk analysis of network and information systems performed and approved within the last 12 months","Short threat profile documented: the threat types and actors most relevant to the sector"],"3":["Inventory accuracy measured, > 90%","Documented threat profile mapped to MITRE ATT&CK, reviewed annually","Risk-based remediation SLAs defined and tracked","Risk assessment results drive budget and backlog, with decisions recorded"],"4":["Continuous attack-surface monitoring incl. cloud/SaaS","Threat intel demonstrably drives hunts and new detections, traceably"]},"nis2":{"2":["21(2)(i)","21(2)(e)","","","21(2)(a)",""],"3":["","","",""],"4":["",""]}},{"id":"PROTECT","name":"Protect","levels":{"2":["MFA enforced for all remote and administrative access","Hardening baselines defined for main platforms","Patching SLA for critical vulnerabilities defined and measured","Backup restore tested within last 12 months","Offline/immutable backup copy for critical data","Cryptography policy approved, covering data in transit and at rest","Security awareness training completed by all staff within the last 12 months","Security requirements applied when acquiring or changing critical systems, including how their vulnerabilities are handled"],"3":["Phishing-resistant MFA for privileged accounts; PAM operational","Network segmentation isolates crown-jewel zones","Backup infrastructure separated from the production identity domain, with its own credentials","Control coverage measured, such as % endpoints with EDR ≥ 95%"],"4":["Continuous or periodic technical control validation through attack simulation","Security requirements embedded in procurement and SDLC with verification"]},"nis2":{"2":["21(2)(j)","21(2)(g)","21(2)(e)","21(2)(c)","21(2)(c)","21(2)(h)","21(2)(g)","21(2)(e)"],"3":["","","",""],"4":["",""]}},{"id":"DETECT","name":"Detect","levels":{"2":["Central log platform; identity, endpoint and email sources onboarded","Use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook","Triage runbook with severity matrix","Defined coverage hours with on-call arrangement"],"3":["Detection lifecycle with version control and testing","Coverage measured against ATT&CK and crown jewels; gaps drive backlog","Coverage hours meet the risk-based target set in GOVERN; out-of-hours escalation tested twice a year","MTTD measured per confirmed incident","Threat hunting performed on a schedule"],"4":["All production detections validated by firing in test within 12 months","Detection-as-code with CI/CD pipeline","FP rates and coverage trended, demonstrably driving engineering"]},"nis2":{"2":["21(2)(b)","","21(2)(b)",""],"3":["","","","",""],"4":["","",""]}},{"id":"RESPOND","name":"Respond","levels":{"2":["Approved IR plan with severity classification and roles","Playbooks for top scenarios incl. ransomware and data breach","Statutory reporting contacts and templates prepared for NIS2, GDPR and DORA as applicable","Tabletop exercise within last 12 months","Reporting drill executed against the statutory deadlines within the last 12 months","Escalation from incident to the organisation's crisis management defined, with named decision-makers"],"3":["Containment authority pre-agreed in charter; isolation technically tested","Forensic capability in-house or via retainer, with chain-of-custody procedure","Exercises include management and communications, not only the technical team","Post-incident reviews with tracked actions for all P1/P2"],"4":["MTTC trended; containment steps automated with approval gates","Cross-functional crisis exercise incl. management and comms within 12 months"]},"nis2":{"2":["21(2)(b)","21(2)(b)","Art. 23","21(2)(b)","Art. 23","21(2)(c)"],"3":["","","",""],"4":["",""]}},{"id":"RECOVER","name":"Recover","levels":{"2":["Recovery plans with RTO/RPO for crown-jewel services","At least one crown-jewel service restored end to end and timed against its RTO within the last 12 months","Post-incident review process defined"],"3":["Rebuild-from-known-good procedure; integrity verification before reconnection","Credential rotation standard in recovery runbooks","Joint BCM/CDC exercise within 12 months","Lessons-learned actions tracked to closure"],"4":["Ransomware-scale recovery exercised; measured recovery vs. RTO","Demonstrable control/detection changes originating from incidents"]},"nis2":{"2":["21(2)(c)","21(2)(c)",""],"3":["","","",""],"4":["",""]}}],"profiles":{"SME, low regulatory exposure":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":2,"RECOVER":2},"NIS2 important entity":{"GOVERN":2,"IDENTIFY":2,"PROTECT":2,"DETECT":2,"RESPOND":3,"RECOVER":2},"NIS2 essential entity / DORA financial entity":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":3,"RESPOND":3,"RECOVER":3},"Critical infrastructure, high-threat sectors":{"GOVERN":3,"IDENTIFY":3,"PROTECT":3,"DETECT":4,"RESPOND":4,"RECOVER":3}}}
 ;
 </script>
 <script>
 "use strict";
+const CRITERIA_SET = 2;
+/* Criteria set 1 (v1.0.0 to v1.1.0) had 60 criteria in a different order.
+   CRITERIA_V1_ORDER lists its keys in link order; CRITERIA_V1_MAP says where
+   each one moved, so saved assessments and old resume links keep their answers. */
+const CRITERIA_V1_ORDER = ["GOVERN|2|0", "GOVERN|2|1", "GOVERN|2|2", "GOVERN|3|0", "GOVERN|3|1", "GOVERN|3|2", "GOVERN|3|3", "GOVERN|4|0", "GOVERN|4|1", "IDENTIFY|2|0", "IDENTIFY|2|1", "IDENTIFY|2|2", "IDENTIFY|2|3", "IDENTIFY|3|0", "IDENTIFY|3|1", "IDENTIFY|3|2", "IDENTIFY|3|3", "IDENTIFY|4|0", "IDENTIFY|4|1", "PROTECT|2|0", "PROTECT|2|1", "PROTECT|2|2", "PROTECT|2|3", "PROTECT|3|0", "PROTECT|3|1", "PROTECT|3|2", "PROTECT|3|3", "PROTECT|4|0", "PROTECT|4|1", "DETECT|2|0", "DETECT|2|1", "DETECT|2|2", "DETECT|2|3", "DETECT|3|0", "DETECT|3|1", "DETECT|3|2", "DETECT|3|3", "DETECT|3|4", "DETECT|4|0", "DETECT|4|1", "DETECT|4|2", "RESPOND|2|0", "RESPOND|2|1", "RESPOND|2|2", "RESPOND|2|3", "RESPOND|3|0", "RESPOND|3|1", "RESPOND|3|2", "RESPOND|3|3", "RESPOND|4|0", "RESPOND|4|1", "RECOVER|2|0", "RECOVER|2|1", "RECOVER|2|2", "RECOVER|3|0", "RECOVER|3|1", "RECOVER|3|2", "RECOVER|3|3", "RECOVER|4|0", "RECOVER|4|1"];
+/* Set-1 criteria whose wording got stricter in set 2. Their answers move, but a
+   met status drops to "partially in place" with a note, so nobody is scored on
+   a criterion they never assessed. */
+const CRITERIA_V1_RECHECK = {"GOVERN|3|2":"it now asks for supplier risk reviewed at least annually","GOVERN|4|0":"it now also asks for the management body's approval of the measures","IDENTIFY|2|3":"crown jewels must now be agreed in writing with the business","RECOVER|2|1":"it now asks for a crown-jewel service restored end to end and timed against its RTO"};
+const CRITERIA_V1_MAP = {"GOVERN|2|0": "GOVERN|2|0", "GOVERN|2|1": "GOVERN|2|1", "GOVERN|2|2": "GOVERN|2|2", "GOVERN|3|0": "GOVERN|3|0", "GOVERN|3|1": "GOVERN|3|1", "GOVERN|3|2": "GOVERN|3|2", "GOVERN|3|3": "GOVERN|3|3", "GOVERN|4|0": "GOVERN|2|3", "GOVERN|4|1": "GOVERN|4|1", "IDENTIFY|2|0": "IDENTIFY|2|0", "IDENTIFY|2|1": "IDENTIFY|2|1", "IDENTIFY|2|2": "IDENTIFY|2|2", "IDENTIFY|2|3": "IDENTIFY|2|3", "IDENTIFY|3|0": "IDENTIFY|3|0", "IDENTIFY|3|1": "IDENTIFY|3|1", "IDENTIFY|3|2": "IDENTIFY|3|2", "IDENTIFY|3|3": "IDENTIFY|2|4", "IDENTIFY|4|0": "IDENTIFY|4|0", "IDENTIFY|4|1": "IDENTIFY|4|1", "PROTECT|2|0": "PROTECT|2|0", "PROTECT|2|1": "PROTECT|2|1", "PROTECT|2|2": "PROTECT|2|2", "PROTECT|2|3": "PROTECT|2|3", "PROTECT|3|0": "PROTECT|3|0", "PROTECT|3|1": "PROTECT|3|1", "PROTECT|3|2": "PROTECT|2|4", "PROTECT|3|3": "PROTECT|3|3", "PROTECT|4|0": "PROTECT|4|0", "PROTECT|4|1": "PROTECT|4|1", "DETECT|2|0": "DETECT|2|0", "DETECT|2|1": "DETECT|2|1", "DETECT|2|2": "DETECT|2|2", "DETECT|2|3": "DETECT|2|3", "DETECT|3|0": "DETECT|3|0", "DETECT|3|1": "DETECT|3|1", "DETECT|3|2": "DETECT|3|2", "DETECT|3|3": "DETECT|3|3", "DETECT|3|4": "DETECT|3|4", "DETECT|4|0": "DETECT|4|0", "DETECT|4|1": "DETECT|4|1", "DETECT|4|2": "DETECT|4|2", "RESPOND|2|0": "RESPOND|2|0", "RESPOND|2|1": "RESPOND|2|1", "RESPOND|2|2": "RESPOND|2|2", "RESPOND|2|3": "RESPOND|2|3", "RESPOND|3|0": "RESPOND|3|0", "RESPOND|3|1": "RESPOND|3|1", "RESPOND|3|2": "RESPOND|2|4", "RESPOND|3|3": "RESPOND|3|3", "RESPOND|4|0": "RESPOND|4|0", "RESPOND|4|1": "RESPOND|4|1", "RECOVER|2|0": "RECOVER|2|0", "RECOVER|2|1": "RECOVER|2|1", "RECOVER|2|2": "RECOVER|2|2", "RECOVER|3|0": "RECOVER|3|0", "RECOVER|3|1": "RECOVER|3|1", "RECOVER|3|2": "RECOVER|3|2", "RECOVER|3|3": "RECOVER|3|3", "RECOVER|4|0": "RECOVER|4|0", "RECOVER|4|1": "RECOVER|4|1"};
 const LS_KEY = "ocdf-maturity-assessment-v1";
 const FUNCS = CATALOG.functions;
 const LEVEL_NAMES = {1:"Initial",2:"Managed",3:"Established",4:"Optimising"};
@@ -534,7 +545,7 @@ const STATES = [
 ];
 const BENCH_FIELDS = ["size", "nis2", "region", "sector", "model"];
 function blankState(){
-  return { meta:{name:"",date:"",evrepo:"",profile:""}, bench:{}, states:{}, evidence:{}, owner:{}, due:{}, targets:{}, strict:false };
+  return { criteriaSet:CRITERIA_SET, meta:{name:"",date:"",evrepo:"",profile:""}, bench:{}, states:{}, evidence:{}, owner:{}, due:{}, targets:{}, strict:false };
 }
 let state = blankState();
 function statusOf(key){ return state.states[key] || 0; }
@@ -580,7 +591,7 @@ function encodeState(){
   const ow = {}, du = {};
   keys.forEach((k, i) => { if(state.owner[k]) ow[i] = state.owner[k]; if(state.due[k]) du[i] = state.due[k]; });
   const payload = {
-    v: 2,
+    v: 3,
     m: [state.meta.name||"", state.meta.date||"", state.meta.evrepo||"", state.meta.profile||""],
     s: b64uEncode(bytes),
     t: FUNCS.map(f => state.targets[f.id] || 0).join("")
@@ -595,12 +606,14 @@ function encodeState(){
 
 function decodeState(token){
   const p = JSON.parse(new TextDecoder().decode(b64uDecode(token)));
-  if(!p || (p.v !== 1 && p.v !== 2)) throw new Error("unrecognised link version");
-  const keys = critList();
+  if(!p || ![1, 2, 3].includes(p.v)) throw new Error("unrecognised link version");
+  /* links before v3 were written against criteria set 1: read them in that
+     order, then move every answer to where its criterion lives now */
+  const keys = p.v === 3 ? critList() : CRITERIA_V1_ORDER;
   const s = blankState();
   const m = p.m || [];
   s.meta = { name:m[0]||"", date:m[1]||"", evrepo:m[2]||"", profile:m[3]||"" };
-  if(p.v === 2){
+  if(p.v >= 2){
     const bytes = b64uDecode(p.s || "");
     keys.forEach((k, i) => {
       const b = bytes[i >> 1] || 0;
@@ -617,6 +630,30 @@ function decodeState(token){
   for(const [i, txt] of Object.entries(p.o || {})) if(keys[i]) s.owner[keys[i]] = txt;
   for(const [i, txt] of Object.entries(p.d || {})) if(keys[i]) s.due[keys[i]] = txt;
   (p.b || []).forEach((v, i) => { if(v && BENCH_FIELDS[i]) s.bench[BENCH_FIELDS[i]] = v; });
+  s.criteriaSet = p.v === 3 ? CRITERIA_SET : 1;
+  return migrate(s);
+}
+
+/* Move answers recorded against criteria set 1 to their current keys. */
+function remapCriteria(s){
+  if((s.criteriaSet || 1) >= CRITERIA_SET) return s;
+  for(const field of ["states", "evidence", "owner", "due"]){
+    const src = s[field] || {}, dst = {};
+    for(const [k, v] of Object.entries(src)){
+      const nk = CRITERIA_V1_MAP[k];
+      if(nk) dst[nk] = v;
+    }
+    s[field] = dst;
+  }
+  for(const [k, why] of Object.entries(CRITERIA_V1_RECHECK)){
+    const nk = CRITERIA_V1_MAP[k];
+    if((s.states[nk] || 0) >= 3){
+      s.states[nk] = 2;
+      s.evidence[nk] = "Re-check: this criterion was tightened; " + why + ". Your earlier answer was met." + (s.evidence[nk] ? " " + s.evidence[nk] : "");
+    }
+  }
+  s.criteriaSet = CRITERIA_SET;
+  s.migratedFromSet1 = true;
   return s;
 }
 
@@ -635,7 +672,7 @@ function migrate(s){
     delete out.checks;
   }
   out.strict = !!out.strict;
-  return out;
+  return remapCriteria(out);
 }
 
 let shareUrl = "";
@@ -656,7 +693,7 @@ function loadState(){
     try{ state = decodeState(hash.slice(HASH_PREFIX.length)); saveState(); return; }
     catch(e){ alert("That resume link could not be read (" + e.message + "). Starting from what this browser has saved."); }
   }
-  try{ const raw = localStorage.getItem(LS_KEY); if(raw){ const s = JSON.parse(raw); if(s) state = migrate({...state, ...s}); } }catch(e){}
+  try{ const raw = localStorage.getItem(LS_KEY); if(raw){ const s = JSON.parse(raw); if(s) state = migrate({...state, ...s, criteriaSet: s.criteriaSet || 1}); } }catch(e){}
 }
 function saveState(){
   try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){}
@@ -879,13 +916,18 @@ function renderTabs(){
   });
 }
 
+/* Criteria that carry the NIS2 legal floor show the article they serve. */
+function nis2Tag(f, lvl, i){
+  const ref = ((f.nis2 || {})[lvl] || [])[i];
+  return ref ? ` <span class="nis2tag" title="Minimum form of a measure required by NIS2; see the NIS2 Article 21 crosswalk">NIS2 ${esc(ref)}</span>` : "";
+}
 function critHtml(f, lvl, i, text){
   const key = critKey(f.id, lvl, i);
   const st = statusOf(key);
   const ev = state.evidence[key] || "";
   const id = key.replace(/\|/g, "-");
   return `<div class="crit" data-state="${st}" data-critkey="${key}" id="c-${id}">
-    <p class="ctext" id="t-${id}">${esc(text)}</p>
+    <p class="ctext" id="t-${id}">${esc(text)}${nis2Tag(f, lvl, i)}</p>
     <p class="cbench" data-cb="${key}"></p>
     <div class="seg" role="radiogroup" aria-labelledby="t-${id}">
       ${STATES.map(s => `<label class="s${s.v}${s.v===st?" on":""}"><input type="radio" name="r-${id}" value="${s.v}" data-key="${key}"${s.v===st?" checked":""}>${esc(s.label)}</label>`).join("")}
@@ -914,7 +956,7 @@ function renderFunctions(){
           <span class="lvl-pill${score===1?" l1":""}" data-pill="${f.id}">L${score} · ${LEVEL_NAMES[score]}</span>
         </div>
       </div>
-      <p class="fintro">Criteria for this function are explained in <a href="../docs/0${fi+1}-${f.id.toLowerCase()}/">${esc(f.name)}</a>, under “Maturity criteria”. Level 1 needs nothing: it is where every function starts.</p>`;
+      <p class="fintro">What this function covers, and why these criteria, is explained in <a href="../docs/${f.id.toLowerCase()}/">${esc(f.name)}</a>. Level 1 needs nothing: it is where every function starts. Criteria tagged NIS2 are the legal floor for entities in scope.</p>`;
     for(const lvl of [2,3,4]){
       const c = levelCounts(f, lvl);
       html += `<div class="level-block"><h3>Level ${lvl} · ${LEVEL_NAMES[lvl]}
@@ -1101,6 +1143,7 @@ function contribution(){
   const keys = critList();
   return {
     ocdf_benchmark: 1,
+    criteria_set: CRITERIA_SET,
     framework: FRAMEWORK_VERSION,
     month: new Date().toISOString().slice(0, 7),
     size: state.bench.size || "", nis2: state.bench.nis2 || "", region: state.bench.region || "",
@@ -1163,7 +1206,7 @@ jsonInput.addEventListener("change", async () => {
   try{
     const s = JSON.parse(await f.text());
     if(!s.states && !s.checks) throw new Error("not a maturity-assessment snapshot");
-    state = migrate({...blankState(), ...s});
+    state = migrate({...blankState(), ...s, criteriaSet: s.criteriaSet || 1});
     saveState(); renderAll();
   }catch(e){ alert("Could not import: " + e.message); }
 });

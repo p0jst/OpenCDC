@@ -1,25 +1,27 @@
 # National Annex — France
 
-> **Status as of July 2026:** Pending, still in the legislative process. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+<!-- countries:begin -->
+> **Status as of September 2026:** Pending, in the legislative process. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Pending legislative change](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | September 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | March 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Projet de loi relative à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments, still in the legislative process as of mid-2026; verify |
+| Implementing law | Projet de loi relative à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments, still in the legislative process as of mid-2026; verify. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2. |
 | Competent authority | ANSSI (Agence nationale de la sécurité des systèmes d'information) |
 | National CSIRT / reporting | CERT-FR |
 | Official starting point | https://cyber.gouv.fr |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 
