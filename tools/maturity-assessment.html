@@ -1218,7 +1218,7 @@ document.getElementById("reset-all").addEventListener("click", () => {
 document.getElementById("start-over").addEventListener("click", () => {
   if(!confirm("Start a brand-new assessment? This clears everything saved in this browser — every answer, evidence note, owner/due date, and the assessor details — and cannot be undone. Copy your resume link first if you want to keep today's progress.")) return;
   state = blankState();
-  saveState(); renderAll(true);
+  saveState(); renderAll();   // full render: the criterion cards must drop their old selections too
 });
 document.getElementById("strict-evidence").addEventListener("change", e => {
   state.strict = e.target.checked; saveState(); renderAll(true);
