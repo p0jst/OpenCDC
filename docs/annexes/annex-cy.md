@@ -1,6 +1,7 @@
 # National Annex — Cyprus
 
-> **Status as of July 2026:** Adopted. Verify completeness. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+<!-- countries:begin -->
+> **Status as of July 2026:** Adopted, completeness unverified. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
@@ -20,6 +21,7 @@
 | Competent authority | Digital Security Authority (DSA / Αρχή Ψηφιακής Ασφάλειας) |
 | National CSIRT / reporting | CSIRT-CY |
 | Official starting point | https://dsa.cy |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

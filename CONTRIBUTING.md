@@ -4,7 +4,7 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 
 ## What we're especially looking for
 
-1. **National annexes** — NIS2 transposition specifics, national CSIRT contacts and reporting portals, per member state, as `docs/annexes/annex-<ISO country code>.md`.
+1. **National annexes** — NIS2 transposition specifics, national CSIRT contacts and reporting portals, per member state. Status, law, authority, CSIRT and review dates are edited in `docs/annexes/countries.json` and written out by `python tools/build_countries.py`; country notes and anything longer go in `docs/annexes/annex-<ISO country code>.md`, outside the generated block.
 2. **Translations** — the framework aims to be available in EU languages, under `i18n/<lang>/`.
 3. **Templates & playbooks** — additional scenario playbooks, report templates for statutory notifications.
 4. **Corrections** — factual, regulatory, or attribution fixes; high priority, so open an issue immediately.
@@ -23,7 +23,9 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 1. Open an **issue** describing the change, using the templates.
 2. For text changes: fork → branch, named `docs/<topic>` or `fix/<topic>` → pull request referencing the issue.
 3. One logical change per PR; keep the document structure intact for function docs: Objective, Capabilities, CIA mapping, Roles & staffing, Maturity, EU hooks, External dependencies, Sources.
-4. A maintainer will review for accuracy, neutrality, and attribution before merging.
+4. **Maturity criteria** are edited only in `assessments/maturity-self-assessment.md`, then mirrored in the tool's `CATALOG`. Any change to a criterion is a scoring change: note it in the changelog, and if it moves or adds criteria, raise `CRITERIA_SET` and extend the migration map in the tool.
+5. Run `python tools/check_consistency.py` before opening the pull request; the site build runs it too and fails on drift.
+6. A maintainer will review for accuracy, neutrality, and attribution before merging.
 
 ## Licensing of contributions
 

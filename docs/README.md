@@ -6,7 +6,12 @@ the [worked example](worked-example.md) to see the framework applied to one
 organisation. [Why trust this framework](trust.md) explains what is law, what is
 standard and what is the author's judgement.
 
-Reading order for a new CDC programme: start with the
+To *build* a CDC, follow the seven steps under **Start building** on the
+[home page](https://opencdc.org/#start-building); they are the one path through the
+framework, and each step links to the page it needs. The reading order below is
+for reading the framework through, not for the order of work.
+
+Reading order: start with the
 [introduction](introduction.md), then [start here](start-here.md) to
 prioritise and [implementation tiers](tiers.md) to pick a tier, then the six
 functions below with [CIA as design lens](cia-triad.md) and the
@@ -31,6 +36,8 @@ introduction.
 | [CTI deep dive](cti-deep-dive.md) | Advanced: CTI programme |
 | [CSIRT community layer](csirt-community.md) | Community, certification, living docs |
 | [EU regulatory landscape](eu-regulatory-landscape.md) | EU law layer, plus [annexes](annexes/README.md) |
+| [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) | NIS2 obligations → capabilities and the Level 2 floor |
+| [NIST CSF 2.0 crosswalk](csf-crosswalk.md) | CSF 2.0 categories → capabilities |
 | [CIS Controls crosswalk](cis-controls-crosswalk.md) | CIS Controls with concrete actions |
 | [References](references.md) | Sources & credits |
 

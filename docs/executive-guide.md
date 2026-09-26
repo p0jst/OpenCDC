@@ -63,13 +63,20 @@ Maturity is measured per function on four levels. Typical targets:
 | Organisation | Target |
 |--------------|--------|
 | SME, low regulatory exposure | Level 2 in every function |
-| NIS2 important entity | Level 2–3, with Respond at 3 for the reporting deadlines |
+| NIS2 important entity | Level 2 in every function, with Respond at 3 for the reporting deadlines |
 | NIS2 essential entity or DORA financial entity | Level 3 in every function |
 | Critical infrastructure, high-threat sectors | Level 3–4, with Detect and Respond at 4 |
 
+For an organisation in NIS2 scope, **Level 2 in every function is the legal
+floor**: the Level 2 criteria contain the minimum form of every measure the law
+requires, and a lower score means a measure is missing, whatever the target
+says. See the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md).
+
 Two things matter more than the headline number. **Balance:** Level 2 in every
-function beats Level 4 in one and Level 1 in another, because attackers use the
-weakest point. **Evidence:** ask what proves each score. An assessment without
+function beats Level 4 in one and Level 1 in another, because the functions
+depend on each other. Excellent detection is wasted without the authority to
+contain, the reporting path or the backups to recover. **Evidence:** ask what
+proves each score. An assessment without
 evidence tends to flatter itself. See the
 [maturity model](maturity-model.md).
 
@@ -100,8 +107,9 @@ You can buy the watch: a provider can monitor around the clock and triage
 alerts. You cannot buy:
 
 1. **Accountability and risk acceptance.** They stay with management by law.
-2. **The authority to shut down your own production systems.** A provider can
-   recommend; your charter decides who may act.
+2. **The authority to shut down your own production systems.** You can let a
+   provider act on your behalf, as managed detection and response contracts do,
+   but your charter decides what it may do alone and who of yours decides the rest.
 3. **Statutory reporting.** The 24-hour early warning is filed by you. A provider
    that alerts you after four hours has already used a sixth of the time.
 4. **Knowing what matters.** Which systems are critical, and what normal looks
@@ -116,7 +124,7 @@ See [operating models](operating-models.md).
 | By | Outcome |
 |----|---------|
 | **Month 3** | Signed charter with containment authority; operating model decided; critical systems agreed; identity and endpoint monitoring live; one reporting drill done against the 24-hour clock. |
-| **Month 12** | Level 2 in every function. Detection built around your real threats; tuning routine running; incident plan exercised with management; restores tested for critical systems. |
+| **Month 12** | Level 2 in every function, which for a NIS2 entity is the legal floor. Detection built around your real threats; tuning routine running; incident plan exercised with management; restores tested for critical systems. |
 | **Month 24** | Level 3 in the functions your targets require. Coverage and response times measured; hunting on a schedule; lessons from incidents tracked to closure. |
 | **Month 36** | Targets met and evidenced. Operating model reviewed, insourcing or changing provider as the data suggests; detections validated by testing. |
 

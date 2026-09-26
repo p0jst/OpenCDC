@@ -1,5 +1,6 @@
 # National Annex — Czechia
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | NÚKIB (Národní úřad pro kybernetickou a informační bezpečnost) |
 | National CSIRT / reporting | GovCERT.CZ under NÚKIB, and national CSIRT.CZ |
 | Official starting point | https://nukib.gov.cz |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

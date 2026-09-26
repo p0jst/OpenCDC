@@ -112,8 +112,10 @@ people › process › technology.
 </div>
 
 Every function has the same parts: capabilities with IDs such as `DE-2`,
-maturity criteria per level, EU regulatory hooks, and a table of the other
-departments it depends on. [OCDF on one page](docs/one-page.md) explains all
+scored maturity criteria, EU regulatory hooks, and a table of the other
+departments it depends on. Level 2 in every function is also the NIS2 floor:
+it covers each measure the law requires, as mapped in the
+[NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md). [OCDF on one page](docs/one-page.md) explains all
 the terms in five minutes.
 
 ## See OCDF in action
@@ -157,9 +159,9 @@ report. Every step is in the [worked example](docs/worked-example.md).
 
 </div>
 
-<div class="ocdf-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 2, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
+<div class="ocdf-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 1, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
 <p class="ocdf-levels__title">Maturity after 12 weeks <span><i class="now"></i>Level now <i class="target"></i>Target</span></p>
-<div><b>Govern</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Govern</b><span><i class="n"></i><i></i><i class="t"></i><i></i></span></div>
 <div><b>Identify</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
 <div><b>Protect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
 <div><b>Detect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
@@ -274,7 +276,7 @@ Cyber Defence Center. An independent, practitioner-led project. Each national an
 when it was last reviewed and how confident that review is; see
 [why you can, and cannot, rely on this framework](docs/trust.md).
 
-**Scope: enterprise IT** — endpoints, servers, identity, cloud and SaaS. Not
+**Scope: enterprise IT**: endpoints, servers, identity, cloud and SaaS, with cloud-specific depth still to come on the [roadmap](ROADMAP.md). Not
 designed for OT/ICS, telco core networks or classified environments ([why](ABOUT.md));
 running critical infrastructure, see
 [the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure) (an OT

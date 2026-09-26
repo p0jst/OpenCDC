@@ -1,5 +1,6 @@
 # National Annex — Hungary
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | SZTFH (Regulated Activities Supervisory Authority) |
 | National CSIRT / reporting | NBSZ NKI (National Cyber Security Center) |
 | Official starting point | https://nki.gov.hu |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

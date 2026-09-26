@@ -1,5 +1,6 @@
 # National Annex — Slovakia
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | NBÚ (Národný bezpečnostný úrad) |
 | National CSIRT / reporting | SK-CERT at NBÚ |
 | Official starting point | https://www.nbu.gov.sk |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

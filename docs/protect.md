@@ -10,7 +10,7 @@ Reduce the likelihood and blast radius of incidents through preventive controls.
 
 | ID | Capability | Description |
 |----|-----------|-------------|
-| PR-1 | Identity & access management | Centralised identity, MFA that is phishing-resistant for admins, least privilege, joiner/mover/leaver process, quarterly dormant-account review, service-account inventory with owners, privileged access management. |
+| PR-1 | Identity & access management | Centralised identity, MFA that is phishing-resistant for admins, least privilege, joiner/mover/leaver process, quarterly dormant-account review, service-account inventory with owners, privileged access management. The CDC's own platforms, meaning the SIEM, EDR console, automation and case tooling, are among the most privileged systems in the estate: separate admin accounts, phishing-resistant MFA and logging of the CDC's own actions apply to them first. |
 | PR-2 | Awareness & training | Role-based security training; phishing simulations; specific training for developers and admins; management training under the NIS2 Art. 20 obligation. |
 | PR-3 | Data security | Encryption at rest and in transit, key management, data loss prevention proportionate to classification. |
 | PR-4 | Platform hardening & secure configuration | Hardening baselines such as CIS Benchmarks, configuration monitoring, EDR and endpoint protection deployment, and **application control**, covered below. |
@@ -44,6 +44,11 @@ Ownership follows the SIEM pattern in [Detect](detect.md): platform teams operat
 | PR-6 Segmentation | ● | ○ | ● | Contains lateral movement for C and limits outage blast radius for A. |
 | PR-9 Email/web protections | ● | ● | ○ | Cuts phishing and BEC for C, and malware delivery for I, at the front door; DMARC also protects your domain's authenticity toward others. |
 | PR-7 Backups/redundancy | ○ | ● | ● | The core Availability control; immutable backups also protect Integrity against ransomware encryption/tampering. |
+| PR-2 Awareness | ● | ● | ○ | Phishing and social engineering target credentials and payments first, which are Confidentiality and Integrity. |
+| PR-5 Patching | ● | ● | ● | Unpatched exploitable software threatens all three; prioritise by the objective the exposed asset carries. |
+| PR-8 Secure development & change | ○ | ● | ○ | Change control and code review protect the Integrity of what runs in production. |
+
+*● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
@@ -55,14 +60,9 @@ Ownership follows the SIEM pattern in [Detect](detect.md): platform teams operat
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
 
-| Level | Criteria |
-|-------|----------|
-| **1 — Initial** | MFA for remote access only; annual generic awareness training; backups exist but restore untested; patching best-effort. |
-| **2 — Managed** | MFA broadly enforced; hardening baselines defined for main platforms; patching SLAs for critical vulnerabilities; backup restores tested annually. |
-| **3 — Established** | Phishing-resistant MFA for privileged access; PAM in place; segmentation of critical zones; immutable/offline backup copy; control coverage measured, such as % endpoints with EDR; application control enforced on critical servers, script control broadly. |
-| **4 — Optimising** | Continuous control validation through attack simulation and similar; zero-trust roadmap; protection telemetry feeds detection engineering; secure-by-design embedded in procurement and development; application allowlisting extended to standard workstation builds. |
+The criteria that score PROTECT are kept in one place for all six functions: the [maturity self-assessment, PROTECT](../assessments/maturity-self-assessment.md#protect), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(c), (e), (g), (h) and (j), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
 ## EU regulatory hooks
 

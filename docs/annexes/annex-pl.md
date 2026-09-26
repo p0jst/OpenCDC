@@ -1,25 +1,27 @@
 # National Annex — Poland
 
-> **Status as of July 2026:** Pending, nearing adoption, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+<!-- countries:begin -->
+> **Status as of September 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
-| Confidence | [Pending legislative change](README.md#confidence-levels) |
+| Confidence | [Needs verification](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | September 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | March 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (KSC amendment), in final legislative stages as of early–mid 2026; verify |
+| Implementing law | Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (KSC amendment), signed on 19 February 2026 and in force since early April 2026. Applications to the register of essential and important entities are due by early October 2026, and the obligations apply from April 2027; verify the exact dates in Dziennik Ustaw. |
 | Competent authority | Ministry of Digital Affairs + sector authorities |
 | National CSIRT / reporting | CSIRT NASK, CSIRT GOV and CSIRT MON, a three-CSIRT model |
 | Official starting point | https://www.gov.pl/web/cyfryzacja |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

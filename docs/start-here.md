@@ -39,7 +39,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 - Response: containment technically tested; tabletop with management; DFIR retainer if not in-house
 - Recover: RTO/RPO agreed for crown jewels; rebuild-from-known-good procedure drafted
 - Govern: quarterly executive reporting running; supplier security clauses in new contracts
-- Reassess maturity at month 12; set year-2 targets per function, aiming for a balanced Level 2 with RESPOND at 3 if NIS2 important, or Level 3 across all functions if NIS2 essential
+- Reassess maturity at month 12. For a NIS2 entity, Level 2 in every function is the legal floor and the first target; above it, set year-2 targets per function, such as RESPOND at 3 for an important entity or Level 3 across all functions for an essential one
 
 ## Anti-priorities — deliberately NOT first-year work
 
