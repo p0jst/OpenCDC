@@ -8,7 +8,7 @@ addresses capabilities by ID throughout, so this is the page to come back to
 whenever a reference like `PR-7` or `DE-4` appears and you want the detail.
 
 Tier column: **E** Essential, **S** Standard, **A** Advanced. Higher tiers
-include everything below them, so an S-tier CDC adopts the E rows too. The NIS2
+include everything below them, so an S-tier CDC adopts the E rows too. Two S-tier capabilities, DE-2 and PR-8, also have a basic form in Essential; the [tier map](tiers.md#capability-tier-map) says which. The NIS2
 column marks the capabilities that carry the legal floor: the article or
 Art. 21(2) point whose minimum they deliver. For an entity in NIS2 scope a marked
 capability is never "above tier"; do at least its Level 2 form. PR-8 is the one
@@ -57,7 +57,7 @@ filter by function or by your tier to see just what applies to you.
 | **DE-5** | Threat hunting | [DETECT](detect.md) | S |  |
 | **DE-6** | Detection validation | [DETECT](detect.md) | A |  |
 | **DE-7** | Anomaly & integrity monitoring | [DETECT](detect.md) | S |  |
-| **RS-1** | Incident response plan | [RESPOND](respond.md) | E | 21(2)(b) |
+| **RS-1** | Incident response plan | [RESPOND](respond.md) | E | 21(2)(b), (j) |
 | **RS-2** | Playbooks | [RESPOND](respond.md) | E | 21(2)(b) |
 | **RS-3** | Incident analysis & forensics | [RESPOND](respond.md) | S |  |
 | **RS-4** | Containment & eradication | [RESPOND](respond.md) | E | 21(2)(b) |

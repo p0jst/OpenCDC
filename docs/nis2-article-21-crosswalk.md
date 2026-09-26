@@ -15,7 +15,8 @@ not in what an entity must do. OCDF therefore puts the minimum form of every
 measure into the **Essential tier** and the **Level 2 criteria**:
 
 - Reaching **Level 2 in every function** covers each measure below at least in
-  basic form, in this framework's reading.
+  basic form, in this framework's reading, apart from the two gaps named under
+  the table.
 - A capability that carries the legal floor is never "above tier" for an entity
   in NIS2 scope, whatever tier it picked. See [the legal floor](tiers.md#the-legal-floor).
 - Level 3 and 4 criteria go further than the law asks. They are risk decisions,
@@ -30,7 +31,7 @@ list; check your [national annex](annexes/README.md).
 
 | Obligation | What it asks, paraphrased | OCDF capabilities | Level 2 criteria that meet the minimum |
 |------------|---------------------------|-------------------|----------------------------------------|
-| **Art. 20(1)** Governance | The management body approves the cybersecurity risk-management measures, oversees their implementation and can be held liable | GV-1, GV-7 | GOVERN: signed charter; management body has approved the measures and completed training |
+| **Art. 20(1)** Governance | The management body approves the cybersecurity risk-management measures, oversees their implementation and can be held liable | GV-1, GV-7 | GOVERN: management body has approved the measures and completed training |
 | **Art. 20(2)** Training | Members of the management body follow training; employees are encouraged to receive similar training regularly | GV-7, PR-2 | GOVERN: management training within 12 months · PROTECT: awareness training for all staff |
 | **Art. 21(1)** Approach | Appropriate and proportionate technical, operational and organisational measures, based on an all-hazards approach | GV-2, ID-6 | IDENTIFY: risk analysis performed and approved within 12 months |
 | **21(2)(a)** | Policies on risk analysis and information system security | GV-3, ID-6 | GOVERN: security policies approved and reviewed · IDENTIFY: risk analysis |

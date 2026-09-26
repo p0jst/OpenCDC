@@ -525,6 +525,10 @@ const CRITERIA_SET = 2;
    CRITERIA_V1_ORDER lists its keys in link order; CRITERIA_V1_MAP says where
    each one moved, so saved assessments and old resume links keep their answers. */
 const CRITERIA_V1_ORDER = ["GOVERN|2|0", "GOVERN|2|1", "GOVERN|2|2", "GOVERN|3|0", "GOVERN|3|1", "GOVERN|3|2", "GOVERN|3|3", "GOVERN|4|0", "GOVERN|4|1", "IDENTIFY|2|0", "IDENTIFY|2|1", "IDENTIFY|2|2", "IDENTIFY|2|3", "IDENTIFY|3|0", "IDENTIFY|3|1", "IDENTIFY|3|2", "IDENTIFY|3|3", "IDENTIFY|4|0", "IDENTIFY|4|1", "PROTECT|2|0", "PROTECT|2|1", "PROTECT|2|2", "PROTECT|2|3", "PROTECT|3|0", "PROTECT|3|1", "PROTECT|3|2", "PROTECT|3|3", "PROTECT|4|0", "PROTECT|4|1", "DETECT|2|0", "DETECT|2|1", "DETECT|2|2", "DETECT|2|3", "DETECT|3|0", "DETECT|3|1", "DETECT|3|2", "DETECT|3|3", "DETECT|3|4", "DETECT|4|0", "DETECT|4|1", "DETECT|4|2", "RESPOND|2|0", "RESPOND|2|1", "RESPOND|2|2", "RESPOND|2|3", "RESPOND|3|0", "RESPOND|3|1", "RESPOND|3|2", "RESPOND|3|3", "RESPOND|4|0", "RESPOND|4|1", "RECOVER|2|0", "RECOVER|2|1", "RECOVER|2|2", "RECOVER|3|0", "RECOVER|3|1", "RECOVER|3|2", "RECOVER|3|3", "RECOVER|4|0", "RECOVER|4|1"];
+/* Set-1 criteria whose wording got stricter in set 2. Their answers move, but a
+   met status drops to "partially in place" with a note, so nobody is scored on
+   a criterion they never assessed. */
+const CRITERIA_V1_RECHECK = {"GOVERN|3|2":"it now asks for supplier risk reviewed at least annually","GOVERN|4|0":"it now also asks for the management body's approval of the measures","IDENTIFY|2|3":"crown jewels must now be agreed in writing with the business","RECOVER|2|1":"it now asks for a crown-jewel service restored end to end and timed against its RTO"};
 const CRITERIA_V1_MAP = {"GOVERN|2|0": "GOVERN|2|0", "GOVERN|2|1": "GOVERN|2|1", "GOVERN|2|2": "GOVERN|2|2", "GOVERN|3|0": "GOVERN|3|0", "GOVERN|3|1": "GOVERN|3|1", "GOVERN|3|2": "GOVERN|3|2", "GOVERN|3|3": "GOVERN|3|3", "GOVERN|4|0": "GOVERN|2|3", "GOVERN|4|1": "GOVERN|4|1", "IDENTIFY|2|0": "IDENTIFY|2|0", "IDENTIFY|2|1": "IDENTIFY|2|1", "IDENTIFY|2|2": "IDENTIFY|2|2", "IDENTIFY|2|3": "IDENTIFY|2|3", "IDENTIFY|3|0": "IDENTIFY|3|0", "IDENTIFY|3|1": "IDENTIFY|3|1", "IDENTIFY|3|2": "IDENTIFY|3|2", "IDENTIFY|3|3": "IDENTIFY|2|4", "IDENTIFY|4|0": "IDENTIFY|4|0", "IDENTIFY|4|1": "IDENTIFY|4|1", "PROTECT|2|0": "PROTECT|2|0", "PROTECT|2|1": "PROTECT|2|1", "PROTECT|2|2": "PROTECT|2|2", "PROTECT|2|3": "PROTECT|2|3", "PROTECT|3|0": "PROTECT|3|0", "PROTECT|3|1": "PROTECT|3|1", "PROTECT|3|2": "PROTECT|2|4", "PROTECT|3|3": "PROTECT|3|3", "PROTECT|4|0": "PROTECT|4|0", "PROTECT|4|1": "PROTECT|4|1", "DETECT|2|0": "DETECT|2|0", "DETECT|2|1": "DETECT|2|1", "DETECT|2|2": "DETECT|2|2", "DETECT|2|3": "DETECT|2|3", "DETECT|3|0": "DETECT|3|0", "DETECT|3|1": "DETECT|3|1", "DETECT|3|2": "DETECT|3|2", "DETECT|3|3": "DETECT|3|3", "DETECT|3|4": "DETECT|3|4", "DETECT|4|0": "DETECT|4|0", "DETECT|4|1": "DETECT|4|1", "DETECT|4|2": "DETECT|4|2", "RESPOND|2|0": "RESPOND|2|0", "RESPOND|2|1": "RESPOND|2|1", "RESPOND|2|2": "RESPOND|2|2", "RESPOND|2|3": "RESPOND|2|3", "RESPOND|3|0": "RESPOND|3|0", "RESPOND|3|1": "RESPOND|3|1", "RESPOND|3|2": "RESPOND|2|4", "RESPOND|3|3": "RESPOND|3|3", "RESPOND|4|0": "RESPOND|4|0", "RESPOND|4|1": "RESPOND|4|1", "RECOVER|2|0": "RECOVER|2|0", "RECOVER|2|1": "RECOVER|2|1", "RECOVER|2|2": "RECOVER|2|2", "RECOVER|3|0": "RECOVER|3|0", "RECOVER|3|1": "RECOVER|3|1", "RECOVER|3|2": "RECOVER|3|2", "RECOVER|3|3": "RECOVER|3|3", "RECOVER|4|0": "RECOVER|4|0", "RECOVER|4|1": "RECOVER|4|1"};
 const LS_KEY = "ocdf-maturity-assessment-v1";
 const FUNCS = CATALOG.functions;
@@ -640,6 +644,13 @@ function remapCriteria(s){
       if(nk) dst[nk] = v;
     }
     s[field] = dst;
+  }
+  for(const [k, why] of Object.entries(CRITERIA_V1_RECHECK)){
+    const nk = CRITERIA_V1_MAP[k];
+    if((s.states[nk] || 0) >= 3){
+      s.states[nk] = 2;
+      s.evidence[nk] = "Re-check: this criterion was tightened; " + why + ". Your earlier answer was met." + (s.evidence[nk] ? " " + s.evidence[nk] : "");
+    }
   }
   s.criteriaSet = CRITERIA_SET;
   s.migratedFromSet1 = true;

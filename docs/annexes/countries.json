@@ -95,7 +95,7 @@
     "confidence": "Maintainer reviewed",
     "law": "Family of acts in force since 2025: NIS 2-loven (Lov nr. 434/2025), Lov om styrket beredskab i energisektoren (Lov nr. 258/2025), Lov om sikkerhed og beredskab i telesektoren and CER-loven; finance via Lov om finansiel virksomhed",
     "authority": "Styrelsen for Samfundssikkerhed (SAMSIK) + sector authorities",
-    "csirt": "CFCS, Center for Cybersikkerhed, part of SAMSIK since January 2025. Reporting via virk.dk, except energy-sector entities, which report to Energistyrelsen",
+    "csirt": "CFCS, Center for Cybersikkerhed, part of SAMSIK since January 2025. Reporting via virk.dk; energy-sector entities report to Energistyrelsen, and to the CSIRT as well when network and information security was compromised",
     "link": "https://samsik.dk/nis2",
     "last_reviewed": "September 2026",
     "reviewed_by": "Frederik B. Krogsgaard, maintainer",
@@ -103,7 +103,7 @@
     "next_review": "March 2027",
     "checked_against_legal_text": "No",
     "lawyer_reviewed": "No",
-    "note": "NIS2/CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates, CFCS (part of SAMSIK since January 2025) is the CSIRT, and sector authorities supervise their sectors; Energistyrelsen supervises energy and receives its incident reports. SAMSIK/CFCS guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
+    "note": "NIS2/CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates, CFCS (part of SAMSIK since January 2025) is the CSIRT, and sector authorities supervise their sectors; Energistyrelsen supervises energy, with its own reporting rules under BEK 260. SAMSIK/CFCS guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
     "acts": [
       {
         "id": "dk-nis2",
@@ -155,8 +155,8 @@
         "regime": "Denmark — energy sector",
         "stamp": "DK·ENERGI",
         "trigger": "Significant incident, energy-sector entities",
-        "deadline": "24 h / 72 h status / 1 month final report",
-        "recipient": "<b>Energistyrelsen</b>, the Danish Energy Agency, which supervises the sector"
+        "deadline": "24 h / 72 h status / 1 month incident report",
+        "recipient": "<b>Energistyrelsen</b>; incidents that compromised network and information security also to the CSIRT, through the channel it designates; electricity, gas and hydrogen entities also alert Energinet (BEK 260 §§ 77–79)"
       }
     ],
     "hooks": {
@@ -182,7 +182,7 @@
             "dk-energi"
           ],
           "stamp": "DK·ENERGI",
-          "text": "Requirements scale with the entity's preparedness level, 1 to 5: IT/OT network segmentation at levels 4 and 5, physical security integration, and security clearance for key personnel at the highest levels."
+          "text": "Every entity segments its supply-critical systems behind a DMZ or equivalent; levels 4 and 5 separate those networks physically (BEK 260 § 62)."
         }
       ],
       "detect": [
@@ -191,7 +191,7 @@
             "dk-energi"
           ],
           "stamp": "DK·ENERGI",
-          "text": "Real-time monitoring is required at preparedness level 5, the largest installations and transmission operators; lower levels set their monitoring from their risk assessment."
+          "text": "Levels 4 and 5 log and monitor to identify incidents in real time, respond in real time, keep logs for 13 months and hand them to their IT security service within 24 h (BEK 260 §§ 66–69)."
         }
       ],
       "respond": [
@@ -208,7 +208,7 @@
             "dk-energi"
           ],
           "stamp": "DK·ENERGI",
-          "text": "Report significant incidents to Energistyrelsen within 24 h; annual exercises are required at levels 3 to 5."
+          "text": "Report significant incidents to Energistyrelsen within 24 h, with status within 72 h and a report within one month. Exercise the preparedness plans yearly at levels 3 to 5 and every second year at level 2, with a yearly recovery exercise of supply-critical systems at levels 4 and 5 (BEK 260 §§ 21, 77–78)."
         }
       ]
     },
