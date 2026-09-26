@@ -1,6 +1,7 @@
 # National Annex — Slovenia
 
-> **Status as of July 2026:** In force. Verify the secondary acts. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+<!-- countries:begin -->
+> **Status as of July 2026:** In force, secondary acts unverified. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
@@ -20,6 +21,7 @@
 | Competent authority | Urad RS za informacijsko varnost (URSIV) |
 | National CSIRT / reporting | SI-CERT |
 | Official starting point | https://www.gov.si/drzavni-organi/organi-v-sestavi/urad-za-informacijsko-varnost/ |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

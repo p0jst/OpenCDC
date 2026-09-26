@@ -28,7 +28,7 @@ Applies to virtually every CDC because security operations process personal data
 Digital operational resilience for the **financial sector**, applicable since **17 January 2025**. Directly applicable regulation, with no transposition. ICT risk management in Art. 5–16, incident classification and reporting in Art. 17–23, resilience testing including threat-led penetration testing or TLPT in Art. 24–27, and ICT third-party risk in Art. 28–44.
 
 ### CRA — Cyber Resilience Act, Regulation (EU) 2024/2847
-Security requirements for **products with digital elements** placed on the EU market; main obligations apply from **December 2027**, with vulnerability/incident reporting obligations for manufacturers starting earlier, in September 2026. CDC relevance: procurement leverage, and manufacturer reporting duties if your organisation ships digital products.
+Security requirements for **products with digital elements** placed on the EU market; main obligations apply from **11 December 2027**, and the manufacturers' duty to report actively exploited vulnerabilities and severe incidents has applied since **11 September 2026**. CDC relevance: procurement leverage, and manufacturer reporting duties if your organisation ships digital products.
 
 ### CER — Directive (EU) 2022/2557
 Resilience of critical entities, the physical, all-hazards counterpart of NIS2. Relevant for critical infrastructure operators' crisis-management interface.
@@ -49,7 +49,7 @@ ENISA's permanent mandate and the EU cybersecurity certification framework, such
 ## Practical compliance pattern for a CDC
 
 1. **Determine applicability** at GOVERN: which regimes apply, in which member states, for which legal entities. Output: a regulatory applicability register.
-2. **Map obligations to capabilities**: use the "EU regulatory hooks" sections in docs 01–06 as a starting crosswalk.
+2. **Map obligations to capabilities**: use the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) and the "EU regulatory hooks" section in each function document.
 3. **Prepare reporting machinery** at RESPOND: contact lists, report templates per regime, and drilled procedures. Deadlines are too short to improvise.
 4. **Evidence continuously**: NIS2 Art. 21(2)(f) requires *assessing the effectiveness* of measures, and your maturity assessments and metrics, in the templates, are that evidence.
 

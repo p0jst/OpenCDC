@@ -58,6 +58,10 @@ The traditional split, where infrastructure maintains the server and OS and the 
 | DE-2/DE-4 Use cases & coverage | ● | ● | ● | Exfiltration detections serve C; tampering/ransomware detections serve I/A. Balance the portfolio against your threat profile. |
 | DE-3 Triage | ● | ● | ● | Severity matrix should explicitly weigh CIA impact per asset class. |
 | DE-7 Integrity monitoring | ○ | ● | ○ | Direct Integrity control. |
+| DE-5 Hunting | ● | ● | ○ | Hunting finds the quiet, persistent intrusions detections miss, which are mostly espionage and preparation for tampering. |
+| DE-6 Validation | ○ | ● | ○ | Proves the detection portfolio does what it claims: the Integrity of the CDC's own output. |
+
+*● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
@@ -70,16 +74,9 @@ The traditional split, where infrastructure maintains the server and OS and the 
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
 
-Maturity measures how well detection works, not how many hours a day someone watches. Coverage hours are a target set by risk; see [coverage hours are a target, not a level](maturity-model.md#coverage-hours-are-a-target-not-a-level). A business-hours team with strong engineering can reach Level 3 if business hours plus tested on-call is what its risk decision calls for.
-
-| Level | Criteria |
-|-------|----------|
-| **1 — Initial** | Perimeter and AV alerts reviewed reactively; no central log platform or minimal sources; no documented use cases. |
-| **2 — Managed** | Central log platform with priority sources 1–3 onboarded; use cases documented for the top techniques in the threat profile, each with owner, ATT&CK mapping and runbook; triage runbook; defined coverage hours with on-call. |
-| **3 — Established** | Detection engineering lifecycle with version control and testing; coverage measured against ATT&CK and crown jewels; enrichment automated; regular hunting; coverage hours meet the risk-based target set in GOVERN, with out-of-hours escalation tested; MTTD tracked. |
-| **4 — Optimising** | Continuous detection validation through purple teaming and emulation; detection-as-code with CI/CD; hunting output systematically converted to detections; coverage and false-positive rates trended and drive backlog. |
+The criteria that score DETECT are kept in one place for all six functions: the [maturity self-assessment, DETECT](../assessments/maturity-self-assessment.md#detect), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(b), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
 ## EU regulatory hooks
 

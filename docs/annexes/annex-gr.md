@@ -1,5 +1,6 @@
 # National Annex — Greece
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | National Cybersecurity Authority / Εθνική Αρχή Κυβερνοασφάλειας, under the Ministry of Digital Governance |
 | National CSIRT / reporting | National CSIRT-GR |
 | Official starting point | https://mindigital.gr |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

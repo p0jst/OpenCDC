@@ -42,7 +42,10 @@
 
 - **Personal data breach?** → DPO assesses risk → if notifiable: DPA within **72 h of awareness** under GDPR Art. 33; data subjects if high risk, under Art. 34. Document all breaches, including non-notified.
 - **NIS2 significant incident?** → early warning to national CSIRT **≤ 24 h**, notification ≤ 72 h, final report ≤ 1 month, per Art. 23.
-- **DORA major incident at a financial entity?** → per Art. 19 timelines.
+- **Significant for the recipients of our services?** → inform affected customers without undue delay, with the measures they can take, per NIS2 Art. 23(1)–(2).
+- **DORA major incident at a financial entity?** → initial notification ≤ 4 h from classification as major and no later than 24 h from awareness; intermediate report ≤ 72 h; final report ≤ 1 month, per Art. 19.
+- **Critical entity under CER, essential service disrupted?** → initial notification to the CER competent authority ≤ 24 h, detailed report ≤ 1 month, per CER Art. 15.
+- **Our definition of "significant":** … *write here the NIS2 Art. 23(3) criteria as your country or, for digital entities, Implementing Regulation (EU) 2024/2690 defines them, and link it to the severity classes in §1.*
 - **Law enforcement?** → decision by [role]; national cybercrime unit contact: […].
 
 ## 5. Communications

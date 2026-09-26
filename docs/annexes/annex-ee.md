@@ -1,5 +1,6 @@
 # National Annex — Estonia
 
+<!-- countries:begin -->
 > **Status as of July 2026:** Adopted, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | Riigi Infosüsteemi Amet (RIA, Information System Authority) |
 | National CSIRT / reporting | CERT-EE, part of RIA |
 | Official starting point | https://www.ria.ee |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

@@ -1,25 +1,27 @@
 # National Annex — Spain
 
-> **Status as of July 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+<!-- countries:begin -->
+> **Status as of September 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Pending legislative change](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | September 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | March 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, still in legislative process as of mid-2026; verify. |
+| Implementing law | Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, still in legislative process as of mid-2026; verify. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2. |
 | Competent authority | Expected: National Cybersecurity Centre coordination; CCN for the public sector, INCIBE for private entities and citizens, sector authorities |
 | National CSIRT / reporting | CCN-CERT, INCIBE-CERT, ESPDEF-CERT |
 | Official starting point | https://www.incibe.es |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

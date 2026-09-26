@@ -82,7 +82,7 @@ markdown_extensions:
 
 plugins:
   - search
-  # Old numbered URLs (docs/01-govern.md etc., used before v1.2) redirect to
+  # Old numbered URLs (docs/01-govern.md etc., used up to v1.0.0) redirect to
   # the current un-numbered ones, so existing bookmarks and external links
   # into opencdc.org keep working.
   - redirects:
@@ -150,6 +150,8 @@ nav:
       - CSIRT community layer: docs/csirt-community.md
   - Regulatory:
       - EU regulatory landscape: docs/eu-regulatory-landscape.md
+      - NIS2 Article 21 crosswalk: docs/nis2-article-21-crosswalk.md
+      - NIST CSF 2.0 crosswalk: docs/csf-crosswalk.md
       - CIS Controls crosswalk: docs/cis-controls-crosswalk.md
       - National annexes:
           - Overview: docs/annexes/README.md

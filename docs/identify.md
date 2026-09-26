@@ -29,6 +29,10 @@ Understand what you are defending and what threatens it. Every downstream capabi
 | ID-3 Crown jewels | ○ | ● | ● | Business-critical services are usually Availability/Integrity-driven. |
 | ID-4 Vulnerability mgmt | ● | ● | ● | Vulnerabilities threaten all three objectives. |
 | ID-5 Threat intel | ● | ● | ● | Ransomware threatens A/I; espionage threatens C, so the threat profile tells you which dominates. |
+| ID-6 Risk assessment | ● | ● | ● | Rates impact per objective; the output is where each objective's appetite is exceeded. |
+| ID-7 Improvement | ○ | ○ | ○ | An enabler: it serves whichever objective the finding concerns. |
+
+*● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
@@ -41,14 +45,9 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
 
-| Level | Criteria |
-|-------|----------|
-| **1 — Initial** | Spreadsheet-based inventory, updated manually; annual vulnerability scan; no documented threat profile. |
-| **2 — Managed** | Automated discovery for core networks; quarterly scanning; subscribed to national CSIRT advisories; crown jewels identified informally. |
-| **3 — Established** | CMDB/inventory >90% accurate and reconciled automatically; risk-based vulnerability remediation SLAs; documented threat profile mapped to ATT&CK; annual risk assessment feeding budget. |
-| **4 — Optimising** | Near-real-time asset and attack-surface visibility incl. cloud/SaaS; threat intel drives proactive hunting and detection engineering; risk quantification trended over time. |
+The criteria that score IDENTIFY are kept in one place for all six functions: the [maturity self-assessment, IDENTIFY](../assessments/maturity-self-assessment.md#identify), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(a), (e) and (i), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
 ## EU regulatory hooks
 

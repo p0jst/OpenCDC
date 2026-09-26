@@ -1,5 +1,6 @@
 # National Annex — Latvia
 
+<!-- countries:begin -->
 > **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | National Cybersecurity Centre under the Ministry of Defence |
 | National CSIRT / reporting | CERT.LV |
 | Official starting point | https://www.ncsc.gov.lv |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

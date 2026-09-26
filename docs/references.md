@@ -41,12 +41,12 @@ This framework synthesises and builds upon the following publicly available work
 ## Maturity models & incident response communities
 
 - Rob van Os, **SOC-CMM**, the *Capability Maturity Model for Security Operations Centers*. https://www.soc-cmm.com. Free to use, and referenced here as a complementary deep-dive model.
-- Open CSIRT Foundation, **SIM3**, the *Security Incident Management Maturity Model*. https://opencsirt.org
+- Open CSIRT Foundation, **SIM3 v2 interim**, the *Security Incident Management Maturity Model*, 1 January 2023. https://opencsirt.org/csirt-maturity/sim3-and-references/
 - **FIRST**, *CSIRT Services Framework* v2.1. https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1
 - **FIRST**, *Traffic Light Protocol (TLP) 2.0*. https://www.first.org/tlp/
 - TF-CSIRT / **Trusted Introducer**, for European CSIRT listing, accreditation and certification. https://www.trusted-introducer.org
 - IETF **RFC 2350**, *Expectations for Computer Security Incident Response*; **RFC 2142**, *Mailbox Names for Common Services, Roles and Functions*.
-- **VERIS** — *Vocabulary for Event Recording and Incident Sharing*. http://veriscommunity.net
+- **VERIS** — *Vocabulary for Event Recording and Incident Sharing*. https://verisframework.org
 - CMMI Institute, *Capability Maturity Model Integration*, the conceptual basis for staged maturity levels.
 
 ## Incident response playbook baselines

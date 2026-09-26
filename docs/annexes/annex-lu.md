@@ -1,5 +1,6 @@
 # National Annex — Luxembourg
 
+<!-- countries:begin -->
 > **Status as of July 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
@@ -20,6 +21,7 @@
 | Competent authority | ILR (Institut Luxembourgeois de Régulation) for most sectors; CSSF for finance |
 | National CSIRT / reporting | CIRCL and GOVCERT.LU |
 | Official starting point | https://www.ilr.lu |
+<!-- countries:end -->
 
 ## Country notes for your CDC
 

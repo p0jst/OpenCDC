@@ -2,20 +2,26 @@
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>The models and decision path are this framework's; staffing figures and trade-offs come from experience.</p>
 
-> **This is a decision document.** Before designing anything in DETECT or RESPOND, the organisation must choose how 24/7/365 monitoring and alerting will be operated. There are three core archetypes plus a shared/community variant, each with real trade-offs. Related: GOVERN GV-5, navigator question G6, charter template §3/§6.
+> **This is a decision document.** Before designing anything in DETECT or RESPOND, the organisation must decide how many hours a day it needs someone watching, a risk decision set in GOVERN per [coverage hours are a target, not a level](maturity-model.md#coverage-hours-are-a-target-not-a-level), and who does the watching in and out of hours. There are three core archetypes plus a shared/community variant, each with real trade-offs. Related: GOVERN GV-5, navigator question G6, charter template §3/§6.
 
 ## The three archetypes
 
-### Model A — MSSP-operated, "telemetry out, alerts in"
-Your telemetry, covering identity, endpoint, network and cloud, is forwarded to a Managed Security Service Provider who runs 24/7/365 eyes-on-glass triage and alerts you on qualified incidents. You retain a small internal function, often 1–3 FTE, for governance, escalation reception, and response coordination.
+### Model A — provider-operated, "telemetry out, alerts or actions in"
+Your telemetry, covering identity, endpoint, network and cloud, is forwarded to a provider who runs 24/7/365 triage. You retain a small internal function, often 1–3 FTE, for governance, escalation reception, and response coordination. Providers come in three shapes, and the difference matters more than the label:
+
+- **MSSP, monitoring only:** the provider watches your SIEM or its own, and alerts you on qualified incidents. Every containment action is yours.
+- **MDR, managed detection and response:** usually built on the provider's EDR and identity tooling, with the provider allowed to act, such as isolating a host or disabling an account, within a mandate you grant. The most common model for small and mid-sized organisations today.
+- **Co-managed SIEM:** you own the platform and the detections, the provider works in it out of hours. Keeps coverage measurable and exit easy, at the cost of running the platform yourself.
+
+Whichever shape, write the provider's containment mandate into the [containment action catalogue](../templates/containment-action-catalogue-template.md): which actions it may take alone, on which assets, and which it must escalate.
 
 | Pros | Cons |
 |------|------|
 | 24/7 from day one, without hiring 8–12 FTE | Analysts lack your business context, so expect generic triage on your crown jewels |
 | Predictable OPEX; scales up/down contractually | Multi-tenant attention: your P3 competes with another client's P1 |
 | Access to scarce skills like DFIR and hunting that you can't retain solo | Telemetry leaves the organisation, so data residency, GDPR processor terms and log ownership must be contractually nailed down |
-| Mature process, tooling and threat intel included | Detection logic is often opaque; you can't measure ATT&CK coverage you can't see |
-| Fastest route to NIS2 24 h reporting readiness | **Accountability never transfers:** NIS2 Art. 20 liability, risk acceptance and statutory reporting remain yours regardless of contract |
+| Mature process, tooling and threat intel included | Detection logic is often opaque; you can't measure ATT&CK coverage you can't see, unless the contract gives you the rules or the model is co-managed |
+| Fastest route to round-the-clock detection, and with MDR to containment at night | **Accountability never transfers:** NIS2 Art. 20 liability, risk acceptance and statutory reporting remain yours regardless of contract |
 | | Exit is hard: proprietary formats and lost tuning history create lock-in |
 
 **Fits:** SMEs and important entities without security hiring power; organisations needing 24/7 *now*.
@@ -34,13 +40,13 @@ The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier
 **Fits:** large/essential entities, high-confidentiality sectors, organisations at Level 3+ ambitions with hiring power.
 
 ### Model C — In-house capability-based, "tierless"
-No tiers: analysts own alerts end-to-end, from detect through investigate to contain, organised by *capability*, meaning detection engineering, hunting and response, rather than seniority layers. Heavy investment in automation/SOAR replaces the Tier 1 filter. Often run 8×5 plus on-call, or follow-the-sun in multinationals.
+No tiers: analysts own alerts end-to-end, from detect through investigate to contain, organised by *capability*, meaning detection engineering, hunting and response, rather than seniority layers. Automation replaces the Tier 1 filter: enrichment, deduplication and routine closure scripted from the start, with a dedicated SOAR platform only once alert volume justifies one. Often run 8×5 plus on-call, or follow-the-sun in multinationals.
 
 | Pros | Cons |
 |------|------|
 | Richer work → better retention than a Tier 1 line | Requires all-senior hiring, which is expensive and scarce; no junior entry ramp unless you deliberately build one |
 | No hand-off losses; ownership drives quality | 24/7 coverage is the hard problem: on-call fatigue or follow-the-sun complexity |
-| Automation-first mindset compounds efficiency | Demands mature engineering culture, meaning detection-as-code and SOAR, from day one |
+| Automation-first mindset compounds efficiency | Demands an engineering culture from day one: version-controlled detections and scripted enrichment, even before any SOAR platform |
 | Detection engineering and response cross-pollinate naturally | Small teams are fragile: two resignations can break coverage |
 
 **Fits:** engineering-strong organisations, cloud-native environments, teams of ~5–8 senior FTE that accept on-call rather than shift coverage.
@@ -56,7 +62,7 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 ## What can NEVER be outsourced, in any model
 
 1. **Risk acceptance and management accountability** — NIS2 Art. 20 liability sits with your management, full stop.
-2. **Containment authority over crown jewels** — the MSSP may recommend; who may isolate your production is a charter §4 decision.
+2. **Containment authority over crown jewels** — you can delegate actions to a provider, as MDR contracts do, but the authority stays yours: the charter §4 and the containment catalogue decide what the provider may do alone, and anything on the crown jewels comes back to a named person of yours.
 3. **Statutory reporting** — the 24 h early warning is filed by *you*; an MSSP SLA of "notify within 4 h" already spent a sixth of your clock.
 4. **The regulatory applicability register and this framework's GOVERN function.**
 

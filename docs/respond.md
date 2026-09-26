@@ -11,7 +11,7 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 | ID | Capability | Description |
 |----|-----------|-------------|
 | RS-1 | Incident response plan | Approved IR plan: definitions, severity classification, roles, escalation, decision authority including who may disconnect production, out-of-band communications. |
-| RS-2 | Playbooks | Scenario-specific runbooks for the most likely incident types: phishing/BEC, ransomware, credential compromise, data breach, DDoS and supplier compromise. |
+| RS-2 | Playbooks | Scenario-specific runbooks for the incident types your threat profile makes most likely, typically phishing/BEC, ransomware, credential compromise and data breach, and often DDoS and supplier compromise. OCDF ships drafts for identity compromise, BEC and ransomware in [playbooks](../playbooks/README.md); the others are on the roadmap, so write them from the external baselines listed there. |
 | RS-3 | Incident analysis & forensics | Evidence collection and preservation with chain of custody, forensic imaging capability in-house or retained, root-cause analysis per CSF 2.0 RS.AN. |
 | RS-4 | Containment & eradication | Technical ability to isolate hosts, disable accounts, block indicators, and revoke sessions, all with pre-agreed authority. |
 | RS-5 | Incident reporting & communication | Internal escalation matrix plus **external statutory reporting**: national CSIRT or competent authority under NIS2, data protection authority under GDPR, sector regulators under DORA, affected data subjects, law enforcement. |
@@ -74,9 +74,13 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 | **NIS2 Art. 23** | Significant incident | **Early warning ≤ 24 h**; incident notification ≤ 72 h; final report ≤ 1 month | National CSIRT / competent authority |
 | **GDPR Art. 33** | Personal data breach posing a risk to individuals | **≤ 72 h from awareness** | Data protection authority |
 | **GDPR Art. 34** | High risk to individuals | Without undue delay | Affected data subjects |
+| **NIS2 Art. 23(1)–(2)** | Significant incident likely to affect the recipients of your services; significant cyber threat | Without undue delay | The affected recipients of your services, with the measures they can take |
 | **DORA Art. 19** | Major ICT-related incident at financial entities | Initial ≤ 4 h from classification / ≤ 24 h from awareness; intermediate ≤ 72 h; final ≤ 1 month | Competent financial authority |
+| **CER Art. 15** | Incident that significantly disrupts, or could significantly disrupt, an essential service of a designated critical entity | Initial notification ≤ 24 h from awareness; detailed report ≤ 1 month | Competent authority under the national CER law |
 
-> Member-state transpositions of NIS2 may add national specifics, so maintain a country annex for each jurisdiction you operate in. Community contributions of national annexes are welcome; see CONTRIBUTING.
+**What counts as significant.** Under NIS2 Art. 23(3) an incident is significant if it has caused or can cause severe operational disruption or financial loss to the entity, or considerable material or non-material damage to others. Commission Implementing Regulation (EU) 2024/2690 sets concrete thresholds for digital infrastructure and digital service providers, and many member states publish guidance for other sectors. Write the definition that applies to you into the IR plan's severity classification, so the on-call analyst does not have to interpret the directive at 03:00.
+
+> Member-state transpositions of NIS2 may add national specifics, such as a different recipient for one sector, so maintain a country annex for each jurisdiction you operate in. In Denmark, for example, energy-sector entities report to Energistyrelsen rather than via virk.dk. Community contributions of national annexes are welcome; see CONTRIBUTING.
 
 ## Case closure taxonomy
 
@@ -93,6 +97,12 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 | RS-2 Playbooks | ● | ● | ● | Ransomware playbooks defend A/I; breach playbooks defend C. |
 | RS-3 Forensics | ○ | ● | ○ | Evidence integrity through hashing and chain of custody is an Integrity discipline. |
 | RS-4 Containment | ● | ● | ● | Containment trades short-term Availability for protection of C and I, so the decision authority for that trade-off must be pre-agreed at GOVERN level. |
+| RS-1 IR plan | ● | ● | ● | The plan's severity classes should weigh impact per objective, so the response matches what is at stake. |
+| RS-5 Reporting & communication | ● | ○ | ○ | Reporting channels carry sensitive incident detail; the GDPR duties it serves are about Confidentiality breaches. |
+| RS-6 Crisis interface | ○ | ○ | ● | Escalates when an incident threatens the continuity of the business, an Availability decision. |
+| RS-7 Exercises | ○ | ○ | ○ | An enabler: exercise the scenario that threatens your dominant objective, usually ransomware for A and I, breach for C. |
+
+*● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
@@ -105,14 +115,9 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
 
-| Level | Criteria |
-|-------|----------|
-| **1 — Initial** | Ad-hoc response by IT; no approved plan; reporting duties not mapped. |
-| **2 — Managed** | Approved IR plan; playbooks for top 3–5 scenarios; statutory reporting contacts and templates prepared; annual tabletop. |
-| **3 — Established** | Containment actions pre-authorised and technically automatable; forensic capability in-house or retained; exercises include management and reporting drills; post-incident reviews feed improvements. |
-| **4 — Optimising** | Response metrics MTTC and MTTR trended; cross-functional crisis exercises with suppliers; automation of enrichment and containment with human approval gates; lessons systematically drive PROTECT/DETECT changes. |
+The criteria that score RESPOND are kept in one place for all six functions: the [maturity self-assessment, RESPOND](../assessments/maturity-self-assessment.md#respond), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(b) and (c), and Art. 23, marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
 ## EU regulatory hooks
 
@@ -145,8 +150,8 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 - NIST SP 800-61 Rev. 3, *Incident Response Recommendations and Considerations for Cybersecurity Risk Management*, 2025. https://doi.org/10.6028/NIST.SP.800-61r3
 - NIST CSF 2.0, CSWP 29: RESPOND function.
 - FIRST, *Computer Security Incident Response Team Services Framework* v2.1. https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1
-- NIS2: Directive (EU) 2022/2555 Art. 23; GDPR Art. 33–34; DORA: Regulation (EU) 2022/2554 Art. 17–19.
-- VERIS, the *Vocabulary for Event Recording and Incident Sharing*. http://veriscommunity.net
+- NIS2: Directive (EU) 2022/2555 Art. 23; Commission Implementing Regulation (EU) 2024/2690; GDPR Art. 33–34; DORA: Regulation (EU) 2022/2554 Art. 17–19; CER: Directive (EU) 2022/2557 Art. 15.
+- VERIS, the *Vocabulary for Event Recording and Incident Sharing*. https://verisframework.org
 - Microsoft incident response playbooks: baseline runbooks; adapt them to your environment. https://learn.microsoft.com/security/operations/incident-response-playbooks
 - CISA, *Federal Government Cybersecurity Incident and Vulnerability Response Playbooks*, 2021. https://www.cisa.gov
 

@@ -33,6 +33,11 @@ Restore affected services in a trustworthy state, communicate honestly during re
 | RC-1 Recovery planning | ○ | ○ | ● | RTO/RPO are Availability commitments. |
 | RC-2 Trusted restoration | ○ | ● | ● | Restoring a backdoored system restores the breach: **Integrity verification before Availability restoration** is the core principle of this function. |
 | RC-4 Communication | ● | ○ | ○ | Recovery comms must not leak sensitive investigation details, which is the Confidentiality of incident data. |
+| RC-3 Verified execution | ○ | ● | ● | Recovery is declared complete only when integrity checks pass, then service returns. |
+| RC-5 Lessons learned | ○ | ○ | ○ | An enabler: it serves whichever objective the incident breached. |
+| RC-6 BCM integration | ○ | ○ | ● | Business continuity is the organisation's Availability plan; the CDC plugs into it. |
+
+*● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
@@ -44,14 +49,9 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
 
-| Level | Criteria |
-|-------|----------|
-| **1 — Initial** | Restoration improvised; backups untested; no post-incident reviews. |
-| **2 — Managed** | Recovery plans and RTO/RPO for critical services; annual restore test; post-incident reviews held for major incidents. |
-| **3 — Established** | Rebuild-from-known-good procedures; integrity verification gates before reconnection; lessons-learned actions tracked to closure; joint BCM/CDC exercise annually. |
-| **4 — Optimising** | Recovery time capabilities measured against RTO in realistic exercises including ransomware-scale scenarios; improvement loop metrics show incidents driving control changes; supplier recovery dependencies tested. |
+The criteria that score RECOVER are kept in one place for all six functions: the [maturity self-assessment, RECOVER](../assessments/maturity-self-assessment.md#recover), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(c), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
 ## EU regulatory hooks
 

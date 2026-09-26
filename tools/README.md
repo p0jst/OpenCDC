@@ -8,10 +8,12 @@ a local file.
 
 **[▸ Open the Regulatory Profile Selector](regulatory-profile.html)**
 
-Users **tick the laws that apply to them**: NIS2, GDPR, DORA, CRA, CER, and national acts such as Denmark's
-NIS 2-loven and Lov om styrket beredskab i energisektoren. All regulatory
-references in the page show or hide to match the selected profile, and
-"Print / save PDF" exports a tailored document.
+Users **tick the laws that apply to them**: NIS2, GDPR, DORA, CRA, CER, and their
+member state. Where a country's national acts are mapped individually, they appear
+underneath its checkbox once it is ticked, such as Denmark's NIS 2-loven and Lov om
+styrket beredskab i energisektoren, so every visitor sees only their own country's
+detail. All regulatory references in the page show or hide to match the selected
+profile, and "Print / save PDF" exports a tailored document.
 
 ### Hosting
 - Works locally: just open the file in a browser.
@@ -38,6 +40,44 @@ Denmark is tagged per act, as `dk-nis2`, `dk-energi`, `dk-tele`, `dk-cer` and `d
 reference example; contributors adding the same granularity for another country should
 follow the pattern `<iso2>-<shortname>`.
 
+### Adding per-act detail for a country
+
+Country facts live in one file, [`docs/annexes/countries.json`](../docs/annexes/countries.json).
+Edit it there, then run `python tools/build_countries.py`: the script writes the
+data into the selector's `COUNTRIES` object, the annex index and the generated
+block at the top of each annex. The site build runs the script with `--check` and
+fails if a copy is out of date, so the three can no longer drift apart. Never edit
+`COUNTRIES` in the HTML by hand.
+
+Besides the base fields `name`, `status`, `confidence`, `law`, `authority`, `csirt`,
+`link` and the review fields, a country entry may carry:
+
+```js
+"fi": {
+  "name": "Finland", "status": "In force", "law": "…", "authority": "…", "csirt": "…", "link": "…",
+  "note": "Optional extra sentence for the country card.",
+  "acts": [
+    {"id": "fi-kyber", "name": "Kyberturvallisuuslaki", "stamp": "FI·KYBER", "desc": "Act 124/2025 — horizontal NIS2 act"}
+  ],
+  "reporting": [
+    {"laws": ["fi-kyber"], "regime": "Finland — national channel", "stamp": "FI",
+     "trigger": "…", "deadline": "…", "recipient": "…"}
+  ],
+  "hooks": {
+    "govern":  [{"laws": ["fi-kyber"], "stamp": "FI·KYBER", "text": "…"}],
+    "respond": [{"laws": ["fi-kyber"], "stamp": "FI", "text": "…"}]
+  }
+}
+```
+
+- `acts` become checkboxes nested under the country, shown only while the country is ticked.
+- `reporting` rows join the deadline table in section 1; `hooks` join the matching
+  function list in section 2: `govern`, `identify`, `protect`, `detect`, `respond` or `recover`.
+- An item is visible when any id in its `laws` is selected. Use the act ids, not
+  `<iso2>-nat`, so the detail follows the acts the user actually ticked.
+- Describe each act in the hand-written part of the country's annex, with its tag
+  in the table, as `annex-dk.md` does.
+
 ## skill-matrix.html — Tool 02, team skill matrix
 
 **[▸ Open the Team Skill Matrix](skill-matrix.html)**
@@ -48,7 +88,7 @@ either [`templates/skill-self-assessment.xlsx`](../templates/skill-self-assessme
 or the [CSV version](../templates/skill-self-assessment.csv), and send it back;
 the manager drops the returned files onto the page and gets:
 
-- a **team heatmap** of people against 50 skills in 8 domains, with per-skill coverage,
+- a **team heatmap** of people against 47 skills in 8 domains, with per-skill coverage,
   *bus factor 1* and *nobody proficient* flags, and mentor markers;
 - a **gap analysis** against editable per-role target levels, with defaults derived
   from [`docs/roles-and-competences.md`](../docs/roles-and-competences.md);
@@ -88,7 +128,7 @@ both the sheet and the tool if you change skill IDs.
 
 Turns [`assessments/maturity-self-assessment.md`](../assessments/maturity-self-assessment.md)
 into something you actually fill out, instead of a markdown checklist whose
-boxes cannot be ticked in the browser. All 60 criteria across the
+boxes cannot be ticked in the browser. All 71 criteria across the
 six CSF functions get a status of their own and an optional evidence field.
 
 The layout is a workspace, in the spirit of the SIM3 self-assessment tool:
@@ -120,7 +160,7 @@ screen.
 - **Community benchmark.** Tell the tool your size band, NIS2 category, region,
   sector and operating model, and it compares your level per function with the
   median of similar organisations, and shows for each criterion the share that
-  have it in place. Figures come from anonymous contributions and appear only for
+  have it in place. Figures come from user contributions, published only as aggregates, and appear only for
   groups of ten or more. You can contribute your own result from the same panel:
   you see exactly what is included before you send it, by email, yourself. See
   [the community benchmark](../docs/benchmark.md).

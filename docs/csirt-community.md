@@ -21,7 +21,7 @@ Practical rules learned the hard way across the community: send a *named, consis
 
 ## 3. SIM3 and certification-grade maturity
 
-**SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
+**SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, currently in version **v2 interim** of 1 January 2023, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
 
 OCDF and SIM3 are complementary: OCDF says *what to build*, SIM3 audits *whether it's institutionalised*. Crosswalk for teams pursuing certification, or just wanting SIM3's discipline:
 
@@ -65,10 +65,10 @@ Recurring obligations die in backlogs unless scheduled. Maintain an annual wheel
 ## Sources
 
 - IETF RFC 2350, *Expectations for Computer Security Incident Response*; RFC 2142, *Mailbox Names for Common Services, Roles and Functions*. https://www.rfc-editor.org
-- Open CSIRT Foundation, *SIM3: Security Incident Management Maturity Model*. https://opencsirt.org/maturity/sim3/
+- Open CSIRT Foundation, *SIM3 v2 interim: Security Incident Management Maturity Model*, 1 January 2023. https://opencsirt.org/wp-content/uploads/2023/11/SIM3_v2_interim_standard.pdf. A full v2, extending the model to SOCs, ISACs and PSIRTs, is expected during 2026: https://opencsirt.org/csirt-maturity/sim3-and-references/
 - TF-CSIRT / Trusted Introducer, for listing, accreditation and certification. https://www.trusted-introducer.org
 - FIRST, for membership, the *CSIRT Services Framework* and *TLP 2.0*. https://www.first.org
 - ENISA, for CSIRT maturity resources and self-assessment. https://www.enisa.europa.eu
-- VERIS, the *Vocabulary for Event Recording and Incident Sharing*. http://veriscommunity.net
+- VERIS, the *Vocabulary for Event Recording and Incident Sharing*. https://verisframework.org
 
 *Open CDC Framework, licensed CC BY 4.0.*

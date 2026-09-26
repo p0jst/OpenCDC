@@ -16,7 +16,7 @@ Establish the mandate, accountability, and decision-making structures that let t
 | GV-2 | Risk management integration | The CDC feeds into and consumes from the enterprise risk register; cyber risk appetite is defined by leadership. |
 | GV-3 | Policy framework | Security policies for acceptable use, logging, access and incident response exist, are approved, versioned, and reviewed at least annually. |
 | GV-4 | Roles & accountability | RACI covering CISO, CDC director, analysts, IT operations, legal/DPO, communications, and executive management. |
-| GV-5 | Budget & resourcing governance | Multi-year funding model; staffing plan; sourcing strategy across in-house, hybrid and MSSP. |
+| GV-5 | Budget & resourcing governance | Multi-year funding model; staffing plan; sourcing strategy across in-house, hybrid and provider; and the CDC team's own development: training budget, skills mapping per [Roles & competences](roles-and-competences.md), succession for single points of knowledge. |
 | GV-6 | Supply chain risk governance | Third-party and supplier cyber risk requirements, contract clauses, and monitoring, per CSF 2.0 GV.SC and NIS2 Art. 21(2)(d). |
 | GV-7 | Oversight & reporting | Regular reporting to executive management and, where applicable, the board; management approval and training obligations under NIS2 Art. 20. |
 
@@ -30,8 +30,11 @@ Establish the mandate, accountability, and decision-making structures that let t
 | GV-2 Risk mgmt | ● | ● | ● | Risk appetite statements should be expressed per CIA objective, such as "no tolerance for integrity loss in payment data". |
 | GV-3 Policies | ● | ● | ○ | Data classification and access policies primarily serve Confidentiality and Integrity. |
 | GV-6 Supply chain | ● | ● | ● | Suppliers can compromise any objective; availability of outsourced services is a distinct risk. |
+| GV-4 Roles & accountability | ○ | ○ | ○ | An enabler: it serves all three only through the owners it names. Its test is whether each crown jewel's C, I and A has a named owner. |
+| GV-5 Budget & resourcing | ○ | ○ | ● | Under-resourcing shows first as lost coverage hours and slow restores, which are Availability failures. |
+| GV-7 Oversight & reporting | ○ | ○ | ○ | An enabler: reporting protects nothing itself, but it is how management sees which objective is drifting from its appetite. |
 
-*● primary, ○ secondary*
+*● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
@@ -44,14 +47,9 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria, informed by the NIST CSF tiers. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
 
-| Level | Criteria |
-|-------|----------|
-| **1 — Initial** | Informal mandate; security reports into IT; policies exist but are outdated; no defined risk appetite. |
-| **2 — Managed** | Signed CDC charter; annual policy review; basic RACI; ad-hoc executive reporting. |
-| **3 — Established** | Cyber risk integrated in enterprise risk management; quarterly board reporting; supply-chain security clauses in contracts; budget planned over 2+ years. |
-| **4 — Optimising** | Risk-based resource allocation with quantified risk; governance KPIs trended; management trained and tested through board-level crisis exercises; continuous alignment with regulatory change. |
+The criteria that score GOVERN are kept in one place for all six functions: the [maturity self-assessment, GOVERN](../assessments/maturity-self-assessment.md#govern), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 20 and Art. 21(2)(a), (d) and (f), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
 ## EU regulatory hooks
 

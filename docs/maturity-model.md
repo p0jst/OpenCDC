@@ -17,19 +17,21 @@ We deliberately use four levels rather than five: in practice the difference bet
 | **3** | Established | "It's measured and consistent." Processes are integrated, coverage is broad, metrics exist, and output of one function feeds another. |
 | **4** | Optimising | "It improves itself." Data-driven, validated, trended; lessons systematically change the system. |
 
-Per-function criteria live in each function document, under "Maturity criteria" in docs 01–06.
+The scored criteria for every function live in one place, the [maturity self-assessment](../assessments/maturity-self-assessment.md); the [interactive tool](../tools/maturity-assessment.html) carries the same text. The function documents link there rather than keeping their own copy.
+
+**Level 2 is also the NIS2 floor.** The Level 2 criteria include the minimum form of every measure NIS2 Art. 20 and 21 require, marked with the article they serve. An entity in NIS2 scope should treat Level 2 in every function as the least it can defend, whatever its target; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md).
 
 ## Relationship to tiers
 
-Tier, set in [implementation tiers](tiers.md), selects *which* capabilities apply; maturity measures *how well* you run the selected set. Score only capabilities at or below your tier; mark the rest "above tier".
+Tier, set in [implementation tiers](tiers.md), selects *which* capabilities apply; maturity measures *how well* you run the selected set. Score only capabilities at or below your tier, and write "above tier" in the evidence field of a criterion that belongs to a higher tier, so a reader can tell a deliberate choice from a gap. Two limits apply: a criterion that carries the NIS2 floor is never above tier for an entity in scope, and a function only reaches a level when all its criteria at that level are met, so an above-tier criterion caps that function's level. Set the function's target below that level.
 
 ## Scoring method
 
-1. For each function, review the maturity criteria table and the [self-assessment checklist](../assessments/maturity-self-assessment.md).
+1. For each function, work through its criteria in the [self-assessment checklist](../assessments/maturity-self-assessment.md) or the [interactive tool](../tools/maturity-assessment.html).
 2. Score each criterion on the five-point status scale below rather than as a yes/no tick.
 3. A level is achieved only when **all** criteria of that level and the levels below are met. That is "staged" scoring, with no averaging up.
 4. Record evidence for each criterion: documents, screenshots, metric exports. In the author's experience, an assessment without recorded evidence tends to come out about a level higher than one that has to show its evidence. That is an observation, not a measured figure.
-5. Plot the six function scores as a radar/spider profile. **A balanced Level 2 beats a spiky profile with Level 4 detection and Level 1 governance**, because attackers exploit the weakest function.
+5. Plot the six function scores as a radar/spider profile. **A balanced Level 2 beats a spiky profile with Level 4 detection and Level 1 governance.** The functions depend on each other: excellent detection is wasted without the authority to contain, the reporting path to meet the legal clock, or the backups to recover. A weak function caps what the strong ones can deliver.
 
 ### Criterion status scale
 
@@ -66,11 +68,11 @@ readings, and a criterion's status travels with its evidence note.
 | Organisation type | Suggested target profile |
 |-------------------|--------------------------|
 | SME, low regulatory exposure | Level 2 across all functions |
-| NIS2 *important* entity | Level 2–3, with RESPOND at 3 for the reporting deadlines |
+| NIS2 *important* entity | Level 2 across all functions as the floor, with RESPOND at 3 for the reporting deadlines |
 | NIS2 *essential* entity / DORA financial entity | Level 3 across all functions |
 | Critical infrastructure, high-threat sectors | Level 3–4, prioritising DETECT/RESPOND at 4 |
 
-Targets are risk decisions. Set them in GOVERN, with executive sign-off.
+Targets are risk decisions. Set them in GOVERN, with executive sign-off. Above the legal floor at Level 2, the difference between the rows is exposure and scrutiny, not law: essential entities are supervised before the fact, and the sectors in the last row are the ones attackers pick.
 
 ### Coverage hours are a target, not a level
 
@@ -85,7 +87,7 @@ Set the target in GOVERN alongside the maturity targets, and record it in the ch
 | NIS2 *essential* entity / DORA financial entity | 24/7 detection, in-house or hybrid, with a named responder reachable around the clock |
 | Critical infrastructure, high-threat sectors | 24/7 detection and 24/7 response authority, including for OT boundary events |
 
-National or sector law can set the floor for you: Danish energy-sector entities, for example, have a statutory 24/7 monitoring duty for critical installations; see the [Danish annex](annexes/annex-dk.md). Where the law sets it, the target is not a choice.
+National or sector law can set the floor for you: Danish energy-sector entities at the highest preparedness level, for example, have a statutory real-time monitoring duty; see the [Danish annex](annexes/annex-dk.md). Where the law sets it, the target is not a choice.
 
 ## Reassessment cadence
 
@@ -106,7 +108,7 @@ National or sector law can set the floor for you: Danish energy-sector entities,
 
 The [self-assessment tool](../tools/maturity-assessment.html) can compare your
 scores with other organisations of the same size, NIS2 category or region, using
-anonymous contributions from its users. The comparison is context, not a target:
+contributions from its users, published only as aggregates. The comparison is context, not a target:
 set targets from your own risks, as above. How it works, what a contribution
 contains, and what other published surveys have found in the meantime:
 [community benchmark](benchmark.md).
@@ -128,11 +130,11 @@ SOC-CMM groups its aspects into five domains. The table maps each aspect to the 
 | Business | Privacy & policy | GV-3, PR-3 | [Govern](govern.md), [EU regulatory landscape](eu-regulatory-landscape.md) |
 | People | Employees | GV-5 | [Roles & competences](roles-and-competences.md) |
 | People | Roles & hierarchy | GV-4 | [Operating models](operating-models.md), [Roles & competences](roles-and-competences.md) |
-| People | People management | — | [Roles & competences](roles-and-competences.md), [Running the CDC](cdc-operations.md) |
+| People | People management | GV-5 | [Roles & competences](roles-and-competences.md), [Running the CDC](cdc-operations.md) |
 | People | Knowledge management | RS-2 | [Running the CDC](cdc-operations.md), [CSIRT community layer](csirt-community.md) |
-| People | Training & education | — | [Roles & competences](roles-and-competences.md) |
+| People | Training & education | GV-5 | [Roles & competences](roles-and-competences.md), [team skill matrix](../tools/skill-matrix.html) |
 | Process | SOC management | GV-7, RC-5 | [Running the CDC](cdc-operations.md) |
-| Process | Operations & facilities | PR-7 | [Operating models](operating-models.md), [Running the CDC](cdc-operations.md) |
+| Process | Operations & facilities | GV-5, PR-1 | [Operating models](operating-models.md), [Running the CDC](cdc-operations.md), [CIA triad: the CDC applies it to itself](cia-triad.md#6-the-cdc-applies-the-triad-to-itself) |
 | Process | Reporting & communication | GV-7, RS-5, RC-4 | [Metrics & KPI template](../templates/metrics-kpi-template.md) |
 | Process | Use case management | DE-2, DE-4 | [Detect](detect.md), [Detection use case template](../templates/detection-use-case-template.md) |
 | Process | Detection engineering & validation | DE-2, DE-6 | [Detection-as-code deep dive](detection-as-code-deep-dive.md) |
@@ -164,7 +166,7 @@ SOC-CMM groups its aspects into five domains. The table maps each aspect to the 
 - NIST CSF 2.0, CSWP 29: Tiers concept. https://doi.org/10.6028/NIST.CSWP.29
 - R. van Os, *SOC-CMM: Capability Maturity Model for Security Operations Centers*. https://www.soc-cmm.com
 - ENISA, *CSIRT Maturity Framework*. https://www.enisa.europa.eu
-- Open CSIRT Foundation, *SIM3: Security Incident Management Maturity Model*. https://opencsirt.org
+- Open CSIRT Foundation, *SIM3 v2 interim: Security Incident Management Maturity Model*, 2023. https://opencsirt.org/csirt-maturity/sim3-and-references/
 - CMMI Institute, *Capability Maturity Model Integration*.
 
 *Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
