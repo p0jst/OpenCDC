@@ -87,7 +87,7 @@ Set the target in GOVERN alongside the maturity targets, and record it in the ch
 | NIS2 *essential* entity / DORA financial entity | 24/7 detection, in-house or hybrid, with a named responder reachable around the clock |
 | Critical infrastructure, high-threat sectors | 24/7 detection and 24/7 response authority, including for OT boundary events |
 
-National or sector law can set the floor for you: Danish energy-sector entities at the highest preparedness level, for example, have a statutory real-time monitoring duty; see the [Danish annex](annexes/annex-dk.md). Where the law sets it, the target is not a choice.
+National or sector law can set the floor for you: Danish energy-sector entities at preparedness levels 4 and 5, for example, have a statutory duty to monitor and respond in real time; see the [Danish annex](annexes/annex-dk.md). Where the law sets it, the target is not a choice.
 
 ## Reassessment cadence
 

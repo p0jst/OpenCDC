@@ -80,7 +80,7 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 
 **What counts as significant.** Under NIS2 Art. 23(3) an incident is significant if it has caused or can cause severe operational disruption or financial loss to the entity, or considerable material or non-material damage to others. Commission Implementing Regulation (EU) 2024/2690 sets concrete thresholds for digital infrastructure and digital service providers, and many member states publish guidance for other sectors. Write the definition that applies to you into the IR plan's severity classification, so the on-call analyst does not have to interpret the directive at 03:00.
 
-> Member-state transpositions of NIS2 may add national specifics, such as a different recipient for one sector, so maintain a country annex for each jurisdiction you operate in. In Denmark, for example, energy-sector entities report to Energistyrelsen rather than via virk.dk. Community contributions of national annexes are welcome; see CONTRIBUTING.
+> Member-state transpositions of NIS2 may add national specifics, such as a different recipient for one sector, so maintain a country annex for each jurisdiction you operate in. In Denmark, for example, energy-sector entities report to Energistyrelsen, and to the CSIRT when network security was compromised, instead of through virk.dk. Community contributions of national annexes are welcome; see CONTRIBUTING.
 
 ## Case closure taxonomy
 
