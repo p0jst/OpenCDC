@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-- Nothing yet.
+- **Regulatory profile selector: national acts nest under their country.** The Danish acts no longer sit in a fixed "Denmark — detailed acts" section that every visitor saw, whatever their country. They now appear underneath the Denmark checkbox when it is ticked, and are cleared when it is unticked, so a Finnish or German user sees the same EU instruments plus their own country and nothing Danish. Each country in the list says how many acts are mapped, and country cards without per-act detail say so.
+- **National detail is now data, not HTML.** Per-act checkboxes, national reporting rows and national hooks per framework function are all generated from the country's entry in `COUNTRIES`, through the fields `acts`, `reporting`, `hooks` and `note`. Bringing another country to Denmark's depth means editing one data entry, without touching the page layout; `tools/README.md` shows the format. Denmark also gains its fifth act, `dk-fin` (Lov om finansiel virksomhed), which the tagging convention already listed.
 
 ## v1.1.0 — 2026-09-23
 

@@ -8,10 +8,12 @@ a local file.
 
 **[▸ Open the Regulatory Profile Selector](regulatory-profile.html)**
 
-Users **tick the laws that apply to them**: NIS2, GDPR, DORA, CRA, CER, and national acts such as Denmark's
-NIS 2-loven and Lov om styrket beredskab i energisektoren. All regulatory
-references in the page show or hide to match the selected profile, and
-"Print / save PDF" exports a tailored document.
+Users **tick the laws that apply to them**: NIS2, GDPR, DORA, CRA, CER, and their
+member state. Where a country's national acts are mapped individually, they appear
+underneath its checkbox once it is ticked, such as Denmark's NIS 2-loven and Lov om
+styrket beredskab i energisektoren, so every visitor sees only their own country's
+detail. All regulatory references in the page show or hide to match the selected
+profile, and "Print / save PDF" exports a tailored document.
 
 ### Hosting
 - Works locally: just open the file in a browser.
@@ -37,6 +39,38 @@ National implementations use `<iso2>-nat`, such as `de-nat` or `fr-nat`, one tag
 Denmark is tagged per act, as `dk-nis2`, `dk-energi`, `dk-tele`, `dk-cer` and `dk-fin`, for the
 reference example; contributors adding the same granularity for another country should
 follow the pattern `<iso2>-<shortname>`.
+
+### Adding per-act detail for a country
+
+Everything national in the selector is generated from the `COUNTRIES` object at the
+top of the page's script; no HTML needs editing. Besides the base fields `n`,
+`status`, `law`, `auth`, `csirt` and `link`, a country entry may carry:
+
+```js
+"fi": {
+  "n": "Finland", "status": "In force", "law": "…", "auth": "…", "csirt": "…", "link": "…",
+  "note": "Optional extra sentence for the country card.",
+  "acts": [
+    {"id": "fi-kyber", "name": "Kyberturvallisuuslaki", "stamp": "FI·KYBER", "desc": "Act 124/2025 — horizontal NIS2 act"}
+  ],
+  "reporting": [
+    {"laws": ["fi-kyber"], "regime": "Finland — national channel", "stamp": "FI",
+     "trigger": "…", "deadline": "…", "recipient": "…"}
+  ],
+  "hooks": {
+    "govern":  [{"laws": ["fi-kyber"], "stamp": "FI·KYBER", "text": "…"}],
+    "respond": [{"laws": ["fi-kyber"], "stamp": "FI", "text": "…"}]
+  }
+}
+```
+
+- `acts` become checkboxes nested under the country, shown only while the country is ticked.
+- `reporting` rows join the deadline table in section 1; `hooks` join the matching
+  function list in section 2: `govern`, `identify`, `protect`, `detect`, `respond` or `recover`.
+- An item is visible when any id in its `laws` is selected. Use the act ids, not
+  `<iso2>-nat`, so the detail follows the acts the user actually ticked.
+- Mirror each act in the country's annex under `docs/annexes/`, with its tag in the
+  table, as `annex-dk.md` does.
 
 ## skill-matrix.html — Tool 02, team skill matrix
 
