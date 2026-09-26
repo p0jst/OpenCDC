@@ -175,7 +175,11 @@ screen.
   always holds a unique link that restores exactly the current state. Copy it,
   mail it to yourself or paste it into a ticket, and continue later on any
   device or browser, with no account, no cookie and no server. The fragment is never
-  sent in an HTTP request, so the data stays with whoever holds the link.
+  sent in an HTTP request, so the data stays with whoever holds the link. Because the
+  link *is* the data, it changes with every answer: to carry on another day on the same
+  computer, open the tool's plain address; save a link to move device or keep a copy.
+  If you open a link that differs from what the browser has saved, the tool asks
+  which version to keep, so an old bookmark cannot overwrite newer work.
 - **Snapshot export and import** as JSON, so you can date and keep assessments in
   version control to track the trend, per the reassessment cadence in the
   maturity model doc. Prefer this over the link for long-term archiving, and

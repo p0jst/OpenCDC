@@ -128,6 +128,19 @@
     padding:6px 12px;font-size:.84rem;cursor:pointer;color:var(--ink)}
   .btn:hover{border-color:var(--eu);color:var(--eu)}
   .btn.primary{background:var(--eu);color:#fff;border-color:var(--eu);font-weight:600}
+  /* version-conflict dialog: a resume link that differs from this browser's copy */
+  .vc-back{position:fixed;inset:0;background:rgba(20,30,50,.45);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px}
+  .vc-back[hidden]{display:none}
+  .vc{background:#fff;border-radius:10px;max-width:560px;width:100%;padding:20px 22px;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+  .vc h2{margin:0 0 8px;font-size:1.1rem}
+  .vc p{margin:0 0 12px;font-size:.9rem}
+  .vc-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 6px}
+  .vc-opt{border:1px solid var(--line);border-radius:8px;padding:12px;text-align:left;background:#fff;cursor:pointer;font:inherit;color:var(--ink)}
+  .vc-opt:hover,.vc-opt:focus-visible{border-color:var(--eu);outline:2px solid var(--eu);outline-offset:1px}
+  .vc-opt b{display:block;margin-bottom:4px}
+  .vc-opt span{display:block;font-size:.8rem;color:var(--muted)}
+  .vc-note{font-size:.78rem;color:var(--muted)}
+  @media (max-width:560px){ .vc-opts{grid-template-columns:1fr} }
   .btn.primary:hover{background:var(--eu-dark);color:#fff}
   .btn.danger:hover{border-color:var(--accent);color:var(--accent)}
   .btn:focus-visible,.tab:focus-visible,.chip:focus-visible,.seg label:focus-within{outline:2px solid var(--eu);outline-offset:2px}
@@ -507,6 +520,18 @@
 
 </div>
 
+<div class="vc-back" id="vc" hidden>
+  <div class="vc" role="dialog" aria-modal="true" aria-labelledby="vc-title">
+    <h2 id="vc-title">Two versions of this assessment</h2>
+    <p>The link you opened holds different answers from the ones this browser has saved. Pick the one to continue with. The other is replaced in this browser.</p>
+    <div class="vc-opts">
+      <button type="button" class="vc-opt" id="vc-link"><b>Use the link's version</b><span id="vc-link-sum"></span></button>
+      <button type="button" class="vc-opt" id="vc-browser"><b>Keep this browser's version</b><span id="vc-browser-sum"></span></button>
+    </div>
+    <p class="vc-note">Tip: to carry on another day on this computer, open the tool's plain address without anything after #. Save a link only to move to another device or to keep a copy.</p>
+  </div>
+</div>
+
 <div class="mbar" id="mbar" aria-live="polite"><span id="mbar-txt"></span>
   <button class="btn" id="mbar-go">Results ↓</button></div>
 
@@ -601,6 +626,7 @@ function encodeState(){
   if(Object.keys(ow).length) payload.o = ow;
   if(Object.keys(du).length) payload.d = du;
   if(Object.values(state.bench || {}).some(Boolean)) payload.b = BENCH_FIELDS.map(k => state.bench[k] || "");
+  if(state.updated) payload.u = state.updated;
   return b64uEncode(new TextEncoder().encode(JSON.stringify(payload)));
 }
 
@@ -631,6 +657,7 @@ function decodeState(token){
   for(const [i, txt] of Object.entries(p.d || {})) if(keys[i]) s.due[keys[i]] = txt;
   (p.b || []).forEach((v, i) => { if(v && BENCH_FIELDS[i]) s.bench[BENCH_FIELDS[i]] = v; });
   s.criteriaSet = p.v === 3 ? CRITERIA_SET : 1;
+  if(p.u) s.updated = p.u;
   return migrate(s);
 }
 
@@ -684,18 +711,84 @@ function syncShareLink(){
   const box = document.getElementById("share-url");
   if(box && document.activeElement !== box) box.value = shareUrl;
   document.getElementById("resume").classList.toggle("long", shareUrl.length > 2000);
-  try{ history.replaceState(null, "", HASH_PREFIX + encodeState()); }catch(e){}
+  if(!pendingLinkState){ try{ history.replaceState(null, "", HASH_PREFIX + encodeState()); }catch(e){} }
 }
 
+/* The part of the state that counts as "the answers": used to tell whether a
+   resume link and this browser's copy really differ. */
+function contentKey(s){
+  return JSON.stringify([s.states || {}, s.evidence || {}, s.owner || {}, s.due || {},
+    s.targets || {}, s.meta || {}, !!s.strict, s.bench || {}]);
+}
+function hasAnswers(s){
+  return Object.keys(s.states || {}).length > 0 || Object.values(s.evidence || {}).some(Boolean);
+}
+function browserCopy(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return null;
+    const s = JSON.parse(raw);
+    return s ? migrate({...blankState(), ...s, criteriaSet: s.criteriaSet || 1}) : null;
+  }catch(e){ return null; }
+}
+function summary(s){
+  const n = Object.values(s.states || {}).filter(v => v > 0).length;
+  const met = Object.values(s.states || {}).filter(v => v >= 3).length;
+  let when = "date of last change not recorded";
+  if(s.updated){
+    const d = new Date(s.updated);
+    if(!isNaN(d)) when = "last changed " + d.toLocaleString(undefined, {dateStyle:"medium", timeStyle:"short"});
+  }
+  return n + (n === 1 ? " criterion" : " criteria") + " answered, " + met + " met · " + when;
+}
+
+/* Opening a resume link used to replace this browser's copy silently, so an
+   old bookmark could wipe newer work. Now, when both exist and differ, the
+   browser's copy stays on screen and the user chooses. */
+let pendingLinkState = null;
 function loadState(){
   const hash = location.hash || "";
+  const saved = browserCopy();
   if(hash.startsWith(HASH_PREFIX)){
-    try{ state = decodeState(hash.slice(HASH_PREFIX.length)); saveState(); return; }
+    let linked = null;
+    try{ linked = decodeState(hash.slice(HASH_PREFIX.length)); }
     catch(e){ alert("That resume link could not be read (" + e.message + "). Starting from what this browser has saved."); }
+    if(linked){
+      if(saved && hasAnswers(saved) && contentKey(saved) !== contentKey(linked)){
+        state = saved;
+        pendingLinkState = linked;
+        return;
+      }
+      state = linked; saveState(); return;
+    }
   }
-  try{ const raw = localStorage.getItem(LS_KEY); if(raw){ const s = JSON.parse(raw); if(s) state = migrate({...state, ...s, criteriaSet: s.criteriaSet || 1}); } }catch(e){}
+  if(saved) state = saved;
 }
+function showVersionChoice(){
+  if(!pendingLinkState) return;
+  const dlg = document.getElementById("vc");
+  document.getElementById("vc-link-sum").textContent = summary(pendingLinkState);
+  document.getElementById("vc-browser-sum").textContent = summary(state);
+  dlg.hidden = false;
+  document.getElementById("vc-browser").focus();
+}
+function closeVersionChoice(useLink){
+  if(useLink && pendingLinkState) state = pendingLinkState;
+  pendingLinkState = null;
+  document.getElementById("vc").hidden = true;
+  saveState(); renderAll();
+}
+document.getElementById("vc-link").addEventListener("click", () => closeVersionChoice(true));
+document.getElementById("vc-browser").addEventListener("click", () => closeVersionChoice(false));
+document.addEventListener("keydown", e => {
+  if(e.key === "Escape" && !document.getElementById("vc").hidden) closeVersionChoice(false);
+});
+
+let lastSavedKey = null;
 function saveState(){
+  const key = contentKey(state);
+  if(lastSavedKey !== null && key !== lastSavedKey) state.updated = new Date().toISOString();
+  lastSavedKey = key;
   try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){}
   syncShareLink();
 }
@@ -1242,13 +1335,15 @@ document.getElementById("mail-url").addEventListener("click", () => {
 });
 window.addEventListener("hashchange", () => {
   if(location.hash === HASH_PREFIX + encodeState()) return;
-  loadState(); renderAll();
+  loadState(); renderAll(); showVersionChoice();
 });
 
 loadState();
+lastSavedKey = contentKey(state);
 renderAll();
 setView(activeView);
 syncShareLink();
+showVersionChoice();
 </script>
 </body>
 </html>
