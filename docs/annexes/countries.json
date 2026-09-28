@@ -103,7 +103,7 @@
     "next_review": "March 2027",
     "checked_against_legal_text": "No",
     "lawyer_reviewed": "No",
-    "note": "NIS2/CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates and is the national CSIRT, and sector authorities supervise their sectors; Energistyrelsen supervises energy, with its own reporting rules under BEK 260. SAMSIK guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
+    "note": "NIS2 and CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates across sectors, and sector authorities supervise their own; Energistyrelsen supervises energy, with its own reporting rules under BEK 260. SAMSIK guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
     "acts": [
       {
         "id": "dk-nis2",

@@ -157,11 +157,16 @@
   footer{max-width:1200px;margin:0 auto;padding:18px 34px;border-top:1px solid var(--line);
     font-size:.78rem;color:var(--muted)}
   @media (max-width:820px){ main{grid-template-columns:1fr} aside{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--line)} article{padding:22px 18px 60px} }
+  .print-profile{display:none;grid-template-columns:max-content 1fr;gap:3px 14px;margin:10px 0 0;font-size:.9rem}
+  .print-profile dt{color:var(--muted)}
+  .print-profile dd{margin:0}
   @media print{
     .sitenav{display:none !important}
     aside,.panel-actions,#status,.hidden-note{display:none !important}
     header{background:#fff;color:var(--ink);border-bottom:2px solid var(--ink)}
     header p,.doc-id{color:var(--muted)}
+    .noprint{display:none !important}
+    .print-profile{display:grid !important}
     body{font-size:12px}
   }
   @media (prefers-reduced-motion:reduce){ [data-law]{transition:none} }
@@ -181,9 +186,10 @@
 <header>
   <div class="doc-id">Open CDC Framework · Tool 01</div>
   <h1>Regulatory Profile Selector</h1>
-  <p>Tick the laws that apply to your organisation. Every regulatory reference in this document shows or hides
+  <p class="noprint">Tick the laws that apply to your organisation. Every regulatory reference in this document shows or hides
      to match your profile. Use <em>Print / save PDF</em> to export your tailored version.
      Orientation only, not legal advice.</p>
+  <dl class="print-profile" id="print-profile"></dl>
 </header>
 
 <main>
@@ -214,7 +220,7 @@
 
 <article>
   <h2>1 · Statutory incident-reporting deadlines</h2>
-  <p>Rows appear only for regimes in your profile. Build these clocks into your incident response plan, at §4 of the IR plan template.</p>
+  <p>Rows appear only for regimes in your profile. Build these clocks into your incident response plan, at §4 of the <a href="../templates/incident-response-plan-template/">IR plan template</a>.</p>
   <table>
     <thead><tr><th>Regime</th><th>Trigger</th><th>Deadline</th><th>Recipient</th></tr></thead>
     <tbody id="report-rows">
@@ -258,7 +264,7 @@
   <h3>DETECT</h3>
   <ul data-fn="detect">
     <li data-law="nis2">Reporting deadlines are only achievable with functioning detection, per NIS2 Art. 21(2)(b), 23. <span class="stamp">NIS2</span></li>
-    <li data-law="gdpr">Detection speed determines 72 h feasibility; security logs about employees are personal data, so purpose-limit them. Per GDPR Art. 33 and Art. 5. <span class="stamp">GDPR</span></li>
+    <li data-law="gdpr">Detection speed decides whether the 72 h deadline can be met, per GDPR Art. 33; security logs about employees are personal data, so limit them to their purpose, per Art. 5. <span class="stamp">GDPR</span></li>
     <li data-law="dora">Prompt anomaly-detection mechanisms, per DORA Art. 10. <span class="stamp">DORA</span></li>
   </ul>
 
@@ -279,17 +285,17 @@
   <div class="hidden-note" data-hiddennote>Some regulatory hooks are hidden by your profile.</div>
 
   <h2>3 · National implementations across all 27 member states</h2>
-  <p>Tick your member states in the panel. Each country's review date and confidence are in its annex under <code>docs/annexes/</code>; always confirm against the national gazette.</p>
+  <p><span class="noprint">Tick your member states in the panel. </span>Each country's review date and confidence are in its <a href="../docs/annexes/">national annex</a>; always confirm against the national gazette.</p>
   <div id="country-cards"></div>
-  <div class="callout" data-law="nis2">
-    <b>Your country:</b> tick it in the panel to see its implementation. Countries mapped act by act list those acts under their checkbox; for the others, a per-act contribution in <code>COUNTRIES</code> brings them to the same depth, see <code>tools/README.md</code>.
+  <div class="callout noprint" data-law="nis2">
+    <b>Your country:</b> tick it in the panel to see its implementation. Where a country's acts are mapped one by one, they appear under its checkbox. The other countries show their main NIS2 law only; <a href="../CONTRIBUTING/">contributions</a> that add the sector acts are welcome.
   </div>
   <div class="hidden-note" data-hiddennote>Country notes are hidden by your profile.</div>
 </article>
 </main>
 
 <footer>
-  Open CDC Framework · CC BY 4.0 · References: docs/references.md · This tool renders orientation content only; verify against EUR-Lex and national law.
+  Open CDC Framework · CC BY 4.0 · <a href="../docs/references/">References</a> · Orientation only, not legal advice; verify against EUR-Lex and national law.
 </footer>
 
 <script>
@@ -350,7 +356,7 @@ const COUNTRIES = {
   "auth": "Styrelsen for Samfundssikkerhed (SAMSIK) + sector authorities",
   "csirt": "SAMSIK, Styrelsen for Samfundssikkerhed, is the national CSIRT. Reporting via virk.dk; energy-sector entities report to Energistyrelsen, and to the CSIRT as well when network and information security was compromised",
   "link": "https://samsik.dk/nis2",
-  "note": "NIS2/CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates and is the national CSIRT, and sector authorities supervise their sectors; Energistyrelsen supervises energy, with its own reporting rules under BEK 260. SAMSIK guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
+  "note": "NIS2 and CER arrive as a <em>family</em> of acts rather than one law. SAMSIK coordinates across sectors, and sector authorities supervise their own; Energistyrelsen supervises energy, with its own reporting rules under BEK 260. SAMSIK guidance uses <em>skal / bør / kan</em> tiers; map your control evidence to it.",
   "acts": [
    {
     "id": "dk-nis2",
@@ -680,7 +686,7 @@ const COUNTRIES = {
     const card = document.createElement('div');
     card.className = 'callout nat';
     card.setAttribute('data-law', [tag].concat(actIds).join(' '));
-    card.innerHTML = '<b>'+c.n+'</b> — <i>'+c.status+'</i><br>'
+    card.innerHTML = '<b>'+c.n+'</b> · <i>'+c.status+'</i><br>'
       + '<b>Law:</b> '+c.law+'<br>'
       + '<b>Authority:</b> '+c.auth+' · <b>CSIRT/reporting:</b> '+c.csirt+'<br>'
       + (c.note ? c.note+'<br>' : '')
@@ -688,7 +694,7 @@ const COUNTRIES = {
           ? '<ul class="card-acts">'+acts.map(a=>'<li>'+a.name+' '+stamp(a.stamp)+'</li>').join('')+'</ul>'
           : '<i>Per-act detail not yet contributed for this country.</i><br>')
       + '<b>Start here:</b> <a href="'+c.link+'" rel="noopener">'+c.link+'</a>'
-      + ' · Full annex: <code>docs/annexes/annex-'+iso+'.md</code>';
+      + ' · <a href="../docs/annexes/annex-'+iso+'/">Full annex</a>';
     cardHost.appendChild(card);
   });
 })();
@@ -726,7 +732,32 @@ const COUNTRIES = {
       const scope = note.parentElement.querySelectorAll('.law-hidden').length;
       note.style.display = scope ? '' : 'none';
     });
-    status.innerHTML = '<b>'+on.size+'</b> law'+(on.size===1?'':'s')+' selected · <b>'+hidden+'</b> reference'+(hidden===1?'':'s')+' hidden';
+    const picked = boxes.filter(b=>b.checked);
+    const eu = picked.filter(b=>!b.dataset.parent && !/-nat$/.test(b.dataset.toggle));
+    const countries = picked.filter(b=>/-nat$/.test(b.dataset.toggle));
+    const acts = picked.filter(b=>b.dataset.parent);
+    const n = (k, one, many) => '<b>'+k+'</b> '+(k===1 ? one : many);
+    const parts = [];
+    if(eu.length) parts.push(n(eu.length, 'EU instrument', 'EU instruments'));
+    if(countries.length) parts.push(n(countries.length, 'country', 'countries'));
+    if(acts.length) parts.push(n(acts.length, 'national act', 'national acts'));
+    status.innerHTML = (parts.length ? parts.join(', ')+' selected' : 'Nothing selected')
+      + ' · <b>'+hidden+'</b> reference'+(hidden===1?'':'s')+' hidden';
+    renderPrintProfile(eu, countries, acts);
+  }
+
+  // Shown only on paper, so a printed profile says what it was made for.
+  const nameOf = b => b.closest('label').querySelector('b').firstChild.textContent.trim();
+  function renderPrintProfile(eu, countries, acts){
+    const rows = [['EU instruments', eu.map(nameOf).join(', ') || 'none']];
+    countries.forEach(c=>{
+      const own = acts.filter(a=>a.dataset.parent===c.dataset.toggle).map(nameOf);
+      rows.push([nameOf(c), own.length ? own.join(', ') : 'no specific acts ticked']);
+    });
+    rows.push(['Printed', new Date().toISOString().slice(0,10)]);
+    rows.push(['Status', 'Orientation only, not legal advice']);
+    const esc = s => String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+    document.getElementById('print-profile').innerHTML = rows.map(([k,v])=>'<dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd>').join('');
   }
 
   boxes.forEach(b=>b.addEventListener('change', apply));

@@ -247,7 +247,7 @@
   <h1>Team Skill Matrix</h1>
   <p>Map your team's skills, spot the gaps, and decide what to <b>train</b>, <b>mentor</b> or <b>hire</b>.
      Each team member fills in the self-assessment sheet; you upload the returned files here.
-     Re-uploading a sheet for the same person updates their entry. Everything stays in your browser —
+     Re-uploading a sheet for the same person updates their entry. Everything stays in your browser;
      no data leaves this page.</p>
 </header>
 
@@ -258,7 +258,7 @@
     <div class="step"><span class="num">1</span><br><b>Distribute the sheet.</b><br>
       Send every team member the self-assessment:
       <a href="../templates/skill-self-assessment.xlsx" download>Excel template</a> ·
-      <a href="../templates/skill-self-assessment.csv" download>CSV version</a>. It takes ~15 minutes to fill in.</div>
+      <a href="../templates/skill-self-assessment.csv" download>CSV version</a>. It takes about 15 minutes to fill in.</div>
     <div class="step"><span class="num">2</span><br><b>Collect &amp; upload.</b><br>
       Drop the returned files below; several at once is fine. New sheets for the same person
       overwrite their previous answers, so re-run the exercise any time.</div>
@@ -338,15 +338,14 @@
     </div>
     <p style="font-size:.82rem;color:var(--muted)">Data lives only in this browser, in localStorage.
     Export a snapshot to archive a review round, move to another machine, or share with a co-manager.</p>
-    <table class="people" id="people-table"></table>
+    <div class="scrollbox"><table class="people" id="people-table"></table></div>
   </section>
 </div>
 
 </main>
 
 <footer>
-  Open CDC Framework · CC BY 4.0 · Skill catalogue and role targets build on docs/roles-and-competences.md, aligned with the ENISA ECSF.
-  <span class="noprint">Single file, no dependencies, working offline and via GitHub Pages.</span>
+  Open CDC Framework · CC BY 4.0 · Skill catalogue and role targets build on <a href="../docs/roles-and-competences/">Roles &amp; competences</a>, aligned with the ENISA ECSF.
   Skill data is personal data under GDPR, so collect it transparently, use it for development, keep access limited.
 </footer>
 
@@ -413,7 +412,7 @@ function parseRows(rows, filename){
       break;
     }
   }
-  if(headerIdx < 0) return { error: "no 'Skill ID' header row found — is this the OCDF sheet?" };
+  if(headerIdx < 0) return { error: "no 'Skill ID' header row found. Is this the OCDF self-assessment sheet?" };
   const levels = {}, interest = {};
   let rated = 0;
   for(let i = headerIdx + 1; i < rows.length; i++){
@@ -435,7 +434,21 @@ function parseRows(rows, filename){
   return { name, role, date, levels, interest, rated };
 }
 
+/* Excel saves CSV with the list separator of the user's locale: a semicolon in
+   Danish, German and most comma-decimal locales, and often in Windows-1252
+   rather than UTF-8. Detect both instead of rejecting the file. */
+function decodeCsv(buf){
+  try{ return new TextDecoder("utf-8", {fatal:true}).decode(buf); }
+  catch(e){ return new TextDecoder("windows-1252").decode(buf); }
+}
+function csvDelimiter(text){
+  const lines = text.replace(/^\ufeff/, "").split(/\r?\n/).slice(0, 12);
+  const score = d => lines.reduce((n, l) => n + l.split(d).length - 1, 0);
+  return [";", "\t", ","].reduce((best, d) => score(d) > score(best) ? d : best, ",");
+}
 function csvToRows(text){
+  text = text.replace(/^\ufeff/, "");
+  const delim = csvDelimiter(text);
   const rows = []; let row = [], field = "", inQ = false;
   for(let i = 0; i < text.length; i++){
     const ch = text[i];
@@ -443,7 +456,7 @@ function csvToRows(text){
       if(ch === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else inQ = false; }
       else field += ch;
     } else if(ch === '"') inQ = true;
-    else if(ch === ',') { row.push(field); field = ""; }
+    else if(ch === delim) { row.push(field); field = ""; }
     else if(ch === '\n' || ch === '\r'){
       if(ch === '\r' && text[i+1] === '\n') i++;
       row.push(field); rows.push(row); row = []; field = "";
@@ -488,7 +501,7 @@ async function unzip(buf){
 
 async function xlsxToSheets(buf){
   if(typeof DecompressionStream === "undefined")
-    throw new Error("this browser cannot read .xlsx directly — please use the CSV version of the sheet");
+    throw new Error("this browser cannot read .xlsx files. Use the CSV version of the sheet instead");
   const z = await unzip(buf);
   const parser = new DOMParser();
   const sst = [];
@@ -544,7 +557,7 @@ async function handleFiles(files){
     try{
       let rows;
       if(/\.csv$/i.test(f.name)){
-        rows = csvToRows(await f.text());
+        rows = csvToRows(decodeCsv(await f.arrayBuffer()));
       } else if(/\.xlsx$/i.test(f.name)){
         const sheets = await xlsxToSheets(await f.arrayBuffer());
         rows = sheets.reduce((best, s) => skillIdCount(s) > skillIdCount(best) ? s : best, sheets[0] || []);
@@ -571,7 +584,9 @@ function addPerson(p, source){
   };
   saveState();
   const note = p.rated < SKILLS.length ? ` (${p.rated} of ${SKILLS.length} skills rated)` : "";
-  log(`${existed ? "↻ updated" : "✓ added"} ${p.name} — ${p.role}${note}`, existed ? "log-warn" : "log-ok");
+  log(`${existed ? "↻ updated" : "✓ added"} ${p.name}, ${p.role}${note}`, existed ? "log-warn" : "log-ok");
+  if(!ROLES.includes(p.role) || p.role === "Other")
+    log(`! ${p.name}: the role "${p.role}" has no role targets, so this person is left out of the gap analysis and training suggestions. Pick a role under People & data.`, "log-warn");
 }
 
 /* ---------- derived numbers ---------- */
@@ -699,9 +714,10 @@ function renderGaps(){
   }
   sh += "</tbody>";
   document.getElementById("gapsum").innerHTML = sums.length ? sh :
-    `<tbody><tr><td style="padding:10px" class="skillname">No gaps against the current targets — either a strong team, or targets set too low.</td></tr></tbody>`;
+    `<tbody><tr><td style="padding:10px" class="skillname">Nobody is below their role target. If that looks too good, check the levels under Role targets.</td></tr></tbody>`;
 }
 
+const MAX_TRAIN = 10, MAX_MENTOR = 8, MAX_HIRE = 8;
 function renderActions(){
   const ppl = peopleList();
   const train = [], mentor = [], hire = [];
@@ -717,38 +733,52 @@ function renderActions(){
       if(d <= 0) continue;
       const wants = !!p.interest[s.id];
       train.push({ p, s, d, wants, t, lv });
-      if(mentors.length && mentors[0].name !== p.name){
-        mentor.push({ learner: p, s, coach: mentors[0], wants });
-      }
+      const coaches = mentors.filter(m => m.name !== p.name);
+      if(coaches.length) mentor.push({ learner: p, s, coaches, wants });
     }
     if(teamNeeds(s.id) && c.prof === 0){
       const interested = ppl.filter(p => p.interest[s.id] && (p.levels[s.id] ?? 0) >= 1);
-      hire.push({ s, interested, maxLv: Math.max(0, ...ppl.map(p => p.levels[s.id] ?? 0)) });
+      const basic = ppl.filter(p => (p.levels[s.id] ?? 0) >= 1);
+      hire.push({ s, interested, basic, maxLv: Math.max(0, ...ppl.map(p => p.levels[s.id] ?? 0)) });
     }
   }
   train.sort((a,b) => (b.wants - a.wants) || (b.d - a.d));
   mentor.sort((a,b) => (b.wants - a.wants));
+  /* Spread the pairings: each pairing goes to the coach with the fewest
+     mentees so far, so one strong person does not get every learner. */
+  const load = {};
+  const shownMentor = mentor.slice(0, MAX_MENTOR).map(x => {
+    const coach = x.coaches.slice().sort((a,b) => (load[a.name] || 0) - (load[b.name] || 0))[0];
+    load[coach.name] = (load[coach.name] || 0) + 1;
+    return {...x, coach};
+  });
   const fmt = n => n.split(" ")[0];
-  const trainHtml = train.slice(0, 10).map(x =>
-    `<li><b>${esc(x.p.name)}</b> — ${esc(x.s.name)} <span class="pill">${x.lv} → ${x.t}</span>${x.wants ? ' <span class="pill" style="background:#e7f2ea;color:var(--ok)">wants to grow</span>' : ""}
-     <span class="why">${x.wants ? "Below role target and motivated — highest training ROI." : "Below the target for " + esc(x.p.role) + "."}</span></li>`).join("");
-  const mentorHtml = mentor.slice(0, 8).map(x =>
-    `<li><b>${esc(fmt(x.coach.name))}</b> coaches <b>${esc(fmt(x.learner.name))}</b> — ${esc(x.s.name)}${x.wants ? ' <span class="pill" style="background:#e7f2ea;color:var(--ok)">wants to grow</span>' : ""}
-     <span class="why">In-house mentor at level 3 — cheaper and stickier than external training.</span></li>`).join("");
-  const hireHtml = hire.slice(0, 8).map(x => {
-    const canGrow = x.interested.length;
+  const names = list => list.map(p => esc(fmt(p.name))).join(", ");
+  const grow = ' <span class="pill" style="background:#e7f2ea;color:var(--ok)">wants to grow</span>';
+  const more = (n, shown, where) => n > shown ? `<p class="sub">${shown} of ${n} shown.${where ? " " + where : ""}</p>` : "";
+  const trainHtml = train.slice(0, MAX_TRAIN).map(x =>
+    `<li><b>${esc(x.p.name)}</b>, ${esc(x.s.name)} <span class="pill">${x.lv} → ${x.t}</span>${x.wants ? grow : ""}</li>`).join("");
+  const mentorHtml = shownMentor.map(x =>
+    `<li><b>${esc(fmt(x.coach.name))}</b> coaches <b>${esc(fmt(x.learner.name))}</b> in ${esc(x.s.name)}${x.wants ? grow : ""}</li>`).join("");
+  const hireHtml = hire.slice(0, MAX_HIRE).map(x => {
+    let why;
+    if(x.interested.length)
+      why = "Nobody is proficient, but " + names(x.interested) + (x.interested.length === 1 ? " wants" : " want") + " to grow in it. Consider training before hiring.";
+    else if(x.basic.length)
+      why = "Nobody is proficient. " + names(x.basic) + (x.basic.length === 1 ? " has" : " have") +
+        " a basic level to build on but did not ask to grow in it. Ask before you hire or buy.";
+    else
+      why = "Nobody has this skill. Look for it in your next hire, or buy it as a service.";
     return `<li><b>${esc(x.s.name)}</b> <span class="pill">team max: ${x.maxLv}</span>
-     <span class="why">${canGrow
-        ? "Nobody proficient, but " + x.interested.map(p => esc(fmt(p.name))).join(", ") + " could be skilled up — consider training before hiring."
-        : "Nobody proficient and no basis to grow from — look for this skill in your next hire or buy it as a service."}</span></li>`;
+     <span class="why">${why}</span></li>`;
   }).join("");
   document.getElementById("action-cards").innerHTML = `
-    <div class="card"><h3>Skill up</h3><p class="sub">People below their role target — motivated learners first</p>
-      ${trainHtml ? `<ul>${trainHtml}</ul>` : `<div class="empty-note">Nobody is below target. Raise the bar in Role targets, or celebrate.</div>`}</div>
-    <div class="card mentor"><h3>Mentor pairings</h3><p class="sub">Close gaps with the expertise you already have</p>
-      ${mentorHtml ? `<ul>${mentorHtml}</ul>` : `<div class="empty-note">No internal mentor matches the current gaps.</div>`}</div>
-    <div class="card hire"><h3>Hire or buy</h3><p class="sub">Needed by the team, nobody proficient</p>
-      ${hireHtml ? `<ul>${hireHtml}</ul>` : `<div class="empty-note">Every needed skill has at least one proficient person. Watch the bus-factor-1 flags on the heatmap.</div>`}</div>`;
+    <div class="card"><h3>Skill up</h3><p class="sub">People below their role target, current level → target. Those who asked to grow come first, then the largest gaps.</p>
+      ${trainHtml ? `<ul>${trainHtml}</ul>${more(train.length, MAX_TRAIN, "The Gap analysis tab lists every gap.")}` : `<div class="empty-note">Nobody is below their role target. If that looks too good, check the levels under Role targets.</div>`}</div>
+    <div class="card mentor"><h3>Mentor pairings</h3><p class="sub">A colleague at level 3 coaches someone below target. Pairings are spread so no one coach gets them all.</p>
+      ${mentorHtml ? `<ul>${mentorHtml}</ul>${more(mentor.length, MAX_MENTOR)}` : `<div class="empty-note">No colleague at level 3 matches the current gaps.</div>`}</div>
+    <div class="card hire"><h3>Hire or buy</h3><p class="sub">Skills a role on the team needs at level 2 or higher, where nobody is proficient</p>
+      ${hireHtml ? `<ul>${hireHtml}</ul>${more(hire.length, MAX_HIRE)}` : `<div class="empty-note">Every needed skill has at least one proficient person. Watch the bus-factor-1 flags on the heatmap.</div>`}</div>`;
 }
 
 function renderTargets(){
@@ -785,7 +815,9 @@ function renderPeople(){
   const ppl = peopleList();
   let html = `<tr><th>Name</th><th>Role</th><th>Assessment date</th><th>Uploaded</th><th>Skills rated</th><th>Source file</th><th></th></tr>`;
   for(const p of ppl){
-    html += `<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.role)}</td><td>${esc(p.date || "—")}</td>
+    const opts = (ROLES.includes(p.role) ? ROLES : [p.role, ...ROLES])
+      .map(r => `<option${r === p.role ? " selected" : ""}>${esc(r)}</option>`).join("");
+    html += `<tr><td><b>${esc(p.name)}</b></td><td><select data-role-of="${esc(p.name.trim().toLowerCase())}" aria-label="Role of ${esc(p.name)}">${opts}</select></td><td>${esc(p.date || "—")}</td>
       <td>${esc(p.uploadedAt || "—")}</td><td>${Object.keys(p.levels).length} / ${SKILLS.length}</td>
       <td style="color:var(--muted)">${esc(p.source || "—")}</td>
       <td><button class="btn danger" data-remove="${esc(p.name.trim().toLowerCase())}">Remove</button></td></tr>`;
@@ -793,7 +825,12 @@ function renderPeople(){
   const el = document.getElementById("people-table");
   el.innerHTML = html;
   el.querySelectorAll("[data-remove]").forEach(b => b.addEventListener("click", () => {
+    const p = state.people[b.dataset.remove];
+    if(!confirm("Remove " + (p ? p.name : "this person") + " from the matrix?")) return;
     delete state.people[b.dataset.remove]; saveState(); render();
+  }));
+  el.querySelectorAll("[data-role-of]").forEach(s => s.addEventListener("change", () => {
+    state.people[s.dataset.roleOf].role = s.value; saveState(); render();
   }));
 }
 
@@ -873,10 +910,12 @@ document.getElementById("export-json").addEventListener("click", () => {
 });
 document.getElementById("import-json2").addEventListener("click", importSnapshot);
 document.getElementById("clear-all").addEventListener("click", () => {
+  if(!confirm("Remove every person and their answers from this browser? Your role targets are kept. This cannot be undone, so export a snapshot first if you may need the data again.")) return;
   state = { people: {}, targets: state.targets };
   saveState(); document.getElementById("upload-log").innerHTML = ""; render();
 });
 document.getElementById("reset-targets").addEventListener("click", () => {
+  if(!confirm("Replace your edited role targets with the framework defaults?")) return;
   state.targets = null; saveState(); render();
 });
 

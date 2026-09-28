@@ -26,7 +26,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 3. Announce on community channels before broadcast channels.
 
 ## Cutting a release
-1. Update the version in five places: the README badge, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, and on the landing page `site/index.md` both the eyebrow line and the "How current is this" box. Then add the release to the history above.
+1. Update the version in six places: the README badge, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, on the landing page `site/index.md` both the eyebrow line and the "How current is this" box, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
 2. Push to `main`; confirm the Pages workflow deployed and the site is live.
 3. Create the release on GitHub, tag `vX.Y.Z` targeting `main`, and paste the notes. Keep the status-and-limitations section; it is what stops a reader treating the regulatory content as audited.
 

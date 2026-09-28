@@ -340,18 +340,25 @@
   .plan-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);margin:0 0 8px}
   .ev input.own{flex:0 0 150px}
   .ev input.due{flex:0 0 130px}
-  @media (max-width:700px){ .ev{flex-wrap:wrap} .ev input.own,.ev input.due{flex:1 1 45%} }
+  @media (max-width:700px){ .ev{flex-wrap:wrap} .ev input{flex:1 1 100%} .ev input.own,.ev input.due{flex:1 1 40%} }
   .actions-list .af{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block}
   .empty{font-size:.82rem;color:var(--muted);margin:4px 0}
   .pfoot{font-size:.74rem;color:var(--muted);margin:10px 0 0}
 
+  .print-meta{display:none;grid-template-columns:max-content 1fr;gap:3px 14px;margin:10px 0 0;font-size:.85rem}
+  .print-meta dt{color:var(--muted)}
+  .print-meta dd{margin:0}
   footer{max-width:1440px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted)}
 
   @media print{
-    #bench,.cbench,.sitenav,.mbar,.head-actions,.ftabs,.fnav,details.setup,.resume,.rtabs,.strict,.chips,.ev input:placeholder-shown{display:none !important}
+    #bench,.cbench,.sitenav,.mbar,.head-actions,.ftabs,.fnav,details.setup,.resume,.rtabs,.strict,.chips,.ev input:placeholder-shown,header .head-inner p,.pblock.targets,.click-hint{display:none !important}
+    .print-meta{display:grid !important}
+    #export-plan{display:none !important}
+    .barfill,.barprog,.bartick,.bartrack,.legend .sw,.tile,.cnt,.lvl-pill,.seg label.on{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     header{background:#fff;color:var(--ink);border-bottom:2px solid var(--ink)}
     header p,.doc-id{color:var(--muted)}
-    .workspace{display:block;padding:0}
+    .workspace{display:flex;flex-direction:column;padding:0}
+    .panel{order:-1;margin-bottom:18px;page-break-after:always}
     .panel{position:static;max-height:none;box-shadow:none;border:0}
     .rview{display:block !important;margin-bottom:10px}
     .fpanel{display:block !important;border:0;padding:0;page-break-inside:auto}
@@ -377,9 +384,10 @@
     <div>
       <div class="doc-id">Open CDC Framework · Tool 03</div>
       <h1>Maturity Self-Assessment</h1>
+      <dl class="print-meta" id="print-meta"></dl>
       <p>Pick a function, then click a status for each criterion; the score and open actions update as
          you go. A level counts only when <b>every</b> criterion at that level and below is
-         implemented: staged scoring, no averaging up. See <a href="../docs/08-maturity-model/">the maturity model</a>.
+         implemented: staged scoring, no averaging up. See <a href="../docs/maturity-model/">the maturity model</a>.
          Nothing is sent anywhere.</p>
     </div>
     <div class="head-actions">
@@ -406,7 +414,7 @@
       <p>Each criterion is scored on a five-point scale. <b>Only “implemented” and “implemented &amp; evidenced”
          count towards a level.</b> The three states below them record work in flight without moving the score,
          because the maturity model is staged and does not average up. See
-         <a href="../docs/08-maturity-model/">the scoring method</a>.</p>
+         <a href="../docs/maturity-model/#scoring-method">the scoring method</a>.</p>
       <div class="scale-key">
         <span><i style="background:var(--s0)"></i>Not considered</span>
         <span><i style="background:var(--s1)"></i>Planned</span>
@@ -434,11 +442,11 @@
     </div>
     <p class="rnote">No account, no server: your answers live in this link and in this browser. Whoever holds the
        link holds the assessment.</p>
-    <p class="resume-warn">This link has grown long because of the evidence notes. Some mail clients break links
-       over ~2 000 characters, so use <b>Export .json</b> for long-term archiving.</p>
+    <p class="resume-warn">This link has grown long because of the evidence notes. Some mail programs break links
+       longer than about 2,000 characters, so use <b>Export .json</b> for long-term archiving.</p>
   </section>
 
-  <section class="pblock">
+  <section class="pblock targets">
     <div class="ptitle"><span>Target profile</span></div>
     <div class="chips" id="profiles" role="group" aria-label="Target profile"></div>
     <label class="strict"><input type="checkbox" id="strict-evidence">
@@ -464,7 +472,7 @@
         <span><span class="sw" style="background:repeating-linear-gradient(135deg,#9db6d8 0 3px,#c3d3e9 3px 6px)"></span>Into next level</span>
         <span><span class="sw" style="background:var(--accent);width:3px"></span>Target</span>
       </div>
-      <p class="pfoot">Click a function to open it.</p>
+      <p class="pfoot click-hint">Click a function to open it.</p>
     </div>
     <div class="rview" data-view="table">
       <table class="result" id="result-table"></table>
@@ -476,7 +484,7 @@
       <ul class="actions-list" id="actions"></ul>
     </div>
     <p class="pfoot">Reassess annually or after major change; review open actions quarterly. Export a snapshot
-       each round to track the trend; see <a href="../docs/08-maturity-model/">reassessment cadence</a>.</p>
+       each round to track the trend; see <a href="../docs/maturity-model/#reassessment-cadence">reassessment cadence</a>.</p>
   </section>
 
   <section class="pblock" id="bench">
@@ -495,7 +503,7 @@
         <option>Postal and courier</option><option>Food</option><option>Research and education</option><option>Other</option></select></label>
       <label>Operating model <select data-b="model"><option value="">—</option><option value="A">A: provider (MSSP)</option>
         <option value="B">B: in-house, tiered</option><option value="C">C: in-house, capability-based</option>
-        <option value="hybrid">Hybrid</option><option value="D">D: shared CDC</option><option value="none">No SOC yet</option></select></label>
+        <option value="D">D: shared CDC</option><option value="hybrid">Hybrid</option><option value="none">No SOC yet</option></select></label>
     </div>
     <div id="bench-out" class="bout"></div>
     <details class="contrib" id="contrib">
@@ -528,7 +536,7 @@
       <button type="button" class="vc-opt" id="vc-link"><b>Use the link's version</b><span id="vc-link-sum"></span></button>
       <button type="button" class="vc-opt" id="vc-browser"><b>Keep this browser's version</b><span id="vc-browser-sum"></span></button>
     </div>
-    <p class="vc-note">Tip: to carry on another day on this computer, open the tool's plain address without anything after #. Save a link only to move to another device or to keep a copy.</p>
+    <p class="vc-note">To carry on another day on this computer, open the tool again; this browser keeps your answers. Use the link to move to another device or to keep a copy.</p>
   </div>
 </div>
 
@@ -711,7 +719,13 @@ function syncShareLink(){
   const box = document.getElementById("share-url");
   if(box && document.activeElement !== box) box.value = shareUrl;
   document.getElementById("resume").classList.toggle("long", shareUrl.length > 2000);
-  if(!pendingLinkState){ try{ history.replaceState(null, "", HASH_PREFIX + encodeState()); }catch(e){} }
+}
+/* The address bar is left alone while you work, so a bookmark of this page
+   always opens what this browser has saved. A resume link is read once and
+   then removed from the address bar. */
+function clearLinkFromAddressBar(){
+  if(!location.hash) return;
+  try{ history.replaceState(null, "", location.pathname + location.search); }catch(e){}
 }
 
 /* The part of the state that counts as "the answers": used to tell whether a
@@ -752,14 +766,17 @@ function loadState(){
   if(hash.startsWith(HASH_PREFIX)){
     let linked = null;
     try{ linked = decodeState(hash.slice(HASH_PREFIX.length)); }
-    catch(e){ alert("That resume link could not be read (" + e.message + "). Starting from what this browser has saved."); }
+    catch(e){
+      clearLinkFromAddressBar();
+      alert("That resume link could not be read. It may have been cut off; some mail programs shorten long links. Continuing with the answers this browser has saved.");
+    }
     if(linked){
       if(saved && hasAnswers(saved) && contentKey(saved) !== contentKey(linked)){
         state = saved;
         pendingLinkState = linked;
         return;
       }
-      state = linked; saveState(); return;
+      state = linked; saveState(); clearLinkFromAddressBar(); return;
     }
   }
   if(saved) state = saved;
@@ -775,6 +792,7 @@ function showVersionChoice(){
 function closeVersionChoice(useLink){
   if(useLink && pendingLinkState) state = pendingLinkState;
   pendingLinkState = null;
+  clearLinkFromAddressBar();
   document.getElementById("vc").hidden = true;
   saveState(); renderAll();
 }
@@ -881,16 +899,35 @@ function openActions(){
   return out;
 }
 
+const FUNC_ABBR = {GOVERN:"GV", IDENTIFY:"ID", PROTECT:"PR", DETECT:"DE", RESPOND:"RS", RECOVER:"RC"};
+/* Shown only on paper: who assessed, when, against which targets. */
+function renderPrintMeta(){
+  const hasTargets = Object.keys(state.targets).length > 0;
+  const rows = [
+    ["Assessors", state.meta.name || "not recorded"],
+    ["Assessment date", state.meta.date || "not recorded"],
+    ["Evidence repository", state.meta.evrepo || "not recorded"],
+    ["Target profile", state.meta.profile || (hasTargets
+        ? "custom: " + FUNCS.map(f => FUNC_ABBR[f.id] + " " + (state.targets[f.id] || "–")).join(" · ")
+        : "none, score only")],
+    ["Scoring", state.strict ? "evidence-based: only implemented & evidenced counts" : "implemented or implemented & evidenced counts"],
+    ["Criteria set", CRITERIA_SET + ", OCDF " + FRAMEWORK_VERSION],
+    ["Printed", new Date().toISOString().slice(0, 10)]
+  ];
+  document.getElementById("print-meta").innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+}
+window.addEventListener("beforeprint", renderPrintMeta);
 function renderMeta(){
   document.getElementById("f-name").value = state.meta.name || "";
   document.getElementById("f-date").value = state.meta.date || "";
   document.getElementById("f-evrepo").value = state.meta.evrepo || "";
   document.getElementById("strict-evidence").checked = !!state.strict;
+  renderPrintMeta();
   const host = document.getElementById("profiles");
   const custom = !state.meta.profile && Object.keys(state.targets).length;
   host.innerHTML = Object.entries(CATALOG.profiles).map(([name, t]) =>
       `<button class="chip" data-profile="${esc(name)}" aria-pressed="${state.meta.profile===name}">${esc(name)}
-         <small>${FUNCS.map(f => f.name[0] + t[f.id]).join(" ")}</small></button>`).join("") +
+         <small>${FUNCS.map(f => FUNC_ABBR[f.id] + " " + t[f.id]).join(" · ")}</small></button>`).join("") +
     `<button class="chip" data-profile="" aria-pressed="${!state.meta.profile}">${custom ? "Custom targets" : "No target"}
        <small>${custom ? "set per function" : "score only"}</small></button>`;
   host.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
@@ -1188,7 +1225,8 @@ function groupLabel(by, key){
   if(by === "size") return "organisations with " + key.replace("-", "–") + " employees";
   if(by === "nis2") return ({essential:"NIS2 essential entities", important:"NIS2 important entities",
     "not-in-scope":"organisations outside NIS2", unsure:"organisations unsure of NIS2 status"})[key];
-  return "organisations in " + key;
+  if(key === "Outside the EU") return "organisations outside the EU";
+  return "organisations in " + (key === "Nordics" ? "the Nordics" : key);
 }
 function renderBench(){
   const out = document.getElementById("bench-out");
@@ -1254,7 +1292,7 @@ document.getElementById("contrib-prep").addEventListener("click", () => {
   document.getElementById("contrib-json").textContent = JSON.stringify(c, null, 1);
   const problems = [];
   if(missing.length) problems.push("answer all five questions above first (missing: " + missing.join(", ") + ")");
-  if(answered < 20) problems.push("score more of the criteria first; only " + answered + " of 60 have a status");
+  if(answered < 20) problems.push("score more of the criteria first; only " + answered + " of " + critList().length + " have a status");
   ["contrib-mail", "contrib-dl", "contrib-copy"].forEach(id => document.getElementById(id).disabled = problems.length > 0);
   note.textContent = problems.length ? "Before you send: " + problems.join("; ") + "."
     : "Email opens your mail program with this text ready to send to " + BENCH_EMAIL + ". Your email address is only used to receive it and is never published.";
@@ -1309,7 +1347,7 @@ document.getElementById("reset-all").addEventListener("click", () => {
   saveState(); renderAll();
 });
 document.getElementById("start-over").addEventListener("click", () => {
-  if(!confirm("Start a brand-new assessment? This clears everything saved in this browser — every answer, evidence note, owner/due date, and the assessor details — and cannot be undone. Copy your resume link first if you want to keep today's progress.")) return;
+  if(!confirm("Start a new assessment? This clears everything saved in this browser: every answer, evidence note, owner, due date and the assessor details. It cannot be undone, so copy your assessment link first if you want to keep today's progress.")) return;
   state = blankState();
   saveState(); renderAll();   // full render: the criterion cards must drop their old selections too
 });
@@ -1330,7 +1368,7 @@ document.getElementById("copy-url").addEventListener("click", async () => {
 });
 document.getElementById("mail-url").addEventListener("click", () => {
   const d = state.meta.date || new Date().toISOString().slice(0,10);
-  location.href = "mailto:?subject=" + encodeURIComponent("CDC maturity self-assessment — resume link (" + d + ")") +
+  location.href = "mailto:?subject=" + encodeURIComponent("CDC maturity self-assessment, resume link " + d) +
     "&body=" + encodeURIComponent("Open this link to continue the assessment where it was left off:\n\n" + shareUrl + "\n");
 });
 window.addEventListener("hashchange", () => {
