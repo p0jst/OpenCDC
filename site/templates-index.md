@@ -15,6 +15,8 @@ fill in and return.
 | [ECSF job description](job-description-template.md) | Hiring against ECSF profiles | Markdown |
 | [MSSP requirements checklist](mssp-requirements-checklist.md) | Procuring and steering an MSSP | Markdown |
 | [Containment action catalogue](containment-action-catalogue-template.md) | Pre-approved containment actions | Markdown |
+| [Scenario playbook](scenario-playbook-template.md) | Your own playbook per incident type, such as ransomware or BEC | Markdown |
+| [Platform playbook](platform-playbook-template.md) | Your own response and forensics steps per platform | Markdown |
 | [Controls register](controls-register-template.md) | Tracking controls and evidence | Markdown |
 | [Annual operating calendar](annual-calendar-template.md) | Recurring CDC obligations through the year | Markdown |
 | [Skill self-assessment](skill-self-assessment.xlsx), or [CSV version](skill-self-assessment.csv) | Team skill mapping; upload the returned sheets into the [Team Skill Matrix](../tools/skill-matrix.html) | Excel / CSV download |

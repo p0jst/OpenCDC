@@ -17,7 +17,7 @@ The four terms below are the foundation; every other term the framework uses is 
 
 ## Scope boundary: IT, not OT/telco
 
-This framework is written for **enterprise IT** security operations. OT/ICS environments, where availability and physical safety dominate and active scanning or host isolation can be hazardous, and telco core networks, separately regulated in most member states, require different technical approaches. Do not apply the PROTECT/DETECT/RESPOND content or the platform playbooks to those domains unadapted. The governance and maturity concepts transfer; the technical guidance does not. See [About](../ABOUT.md) and the roadmap's OT extension profile.
+This framework is written for **enterprise IT** security operations. OT/ICS environments, where availability and physical safety dominate and active scanning or host isolation can be hazardous, and telco core networks, separately regulated in most member states, require different technical approaches. Do not apply the PROTECT/DETECT/RESPOND content to those domains unadapted. The governance and maturity concepts transfer; the technical guidance does not. See [About](../ABOUT.md) and [the IT/OT interface](it-ot-interface.md).
 
 ## Design principles
 

@@ -205,7 +205,7 @@ report. Every step is in the [worked example](docs/worked-example.md).
     The operational detail: [detection](docs/detect.md),
     [detection-as-code](docs/detection-as-code-deep-dive.md), the
     [CTI capability](docs/cti-deep-dive.md) and the
-    [IR playbooks](playbooks/README.md).
+    [playbook templates](templates/scenario-playbook-template.md).
 
     [Running the CDC →](docs/cdc-operations.md)
 
@@ -276,10 +276,10 @@ Cyber Defence Center. An independent, practitioner-led project. Each national an
 when it was last reviewed and how confident that review is; see
 [why you can, and cannot, rely on this framework](docs/trust.md).
 
-**Scope: enterprise IT**: endpoints, servers, identity, cloud and SaaS, with cloud-specific depth still to come on the [roadmap](ROADMAP.md). Not
+**Scope: enterprise IT**: endpoints, servers, identity, cloud and SaaS, with limited cloud-specific depth so far. Not
 designed for OT/ICS, telco core networks or classified environments ([why](ABOUT.md));
 running critical infrastructure, see
-[the IT/OT boundary](ABOUT.md#if-you-run-critical-infrastructure) (an OT
-profile is on the [roadmap](ROADMAP.md)). Orientation only, not legal advice.
+[what still applies](ABOUT.md#if-you-run-critical-infrastructure) and
+[the IT/OT interface](docs/it-ot-interface.md). Orientation only, not legal advice.
 
 </div>

@@ -26,7 +26,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 | 3–8 | Crown-jewel workshop with the business, I1; C/I/A impact rating per service | ID-3, [CIA triad](cia-triad.md) |
 | 4–10 | Blast-radius sprint: MFA everywhere at P1, one offline or immutable backup copy restore-tested at P3, admin-path segmentation quick wins at P4 | [PROTECT](protect.md) |
 | 6–12 | Onboard priority log sources 1–3, namely identity, endpoint and email, in-house or to the MSSP | [DETECT](detect.md), DE-1 priority list |
-| 8–12 | IR plan v1 + ransomware & breach playbooks; statutory reporting contacts and one **reporting drill against the 24 h clock** | [RESPOND](respond.md), [playbooks](../playbooks/README.md), your [national annex](annexes/README.md) |
+| 8–12 | IR plan v1 + ransomware & breach playbooks; statutory reporting contacts and one **reporting drill against the 24 h clock** | [RESPOND](respond.md), [playbook template](../templates/scenario-playbook-template.md), your [national annex](annexes/README.md) |
 | 12 | Baseline maturity self-assessment; publish the gap backlog | [Maturity self-assessment](../assessments/maturity-self-assessment.md) |
 
 **Dependency warning:** most of the 90-day rows above contain a [GATE] or [HARD] dependency on another department: charter sign-off [GATE], log onboarding [HARD on system owners], MFA rollout [HARD on IAM], and the reporting drill [GATE on legal and DPO participation]. See each function document's "External dependencies" table and the marker convention in [Introduction](introduction.md). Secure named counterparts for every [HARD] on this plan before week 1; it is the most common silent killer of new CDC timelines.

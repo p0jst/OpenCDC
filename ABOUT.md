@@ -29,7 +29,7 @@ In scope: building and maturing a CDC/SOC for organisations mainly across the EU
 
 Explicitly out of scope for now:
 
-- OT/ICS environments: industrial control systems, SCADA, building automation. OT monitoring, safety-first response and the Purdue-model realities differ fundamentally from IT, and applying IT playbooks to OT can be dangerous. An OT extension profile is on the [roadmap](ROADMAP.md).
+- OT/ICS environments: industrial control systems, SCADA, building automation. OT monitoring, safety-first response and the Purdue-model realities differ fundamentally from IT, and applying IT playbooks to OT can be dangerous.
 - Telco core networks, covering signalling, RAN and lawful intercept environments. These are regulated separately in most member states and operationally distinct.
 - Defence/classified environments and other regimes with their own mandatory frameworks.
 
@@ -52,9 +52,9 @@ What the CDC should own at the boundary, even without an OT profile:
 - a written agreement with operations on who decides OT containment. The CDC advises; the plant or grid operator decides, because safety and availability outrank evidence in OT
 - a joint exercise at least once a year where an IT incident threatens to cross into OT
 
-What does **not** transfer: the platform playbooks. Isolating, rebooting or live-imaging an OT asset can have physical consequences. Use sector guidance (for example IEC 62443 and the ISA/IEC and ENISA OT material) and your vendors' procedures for anything below the DMZ.
+What does **not** transfer: host-level response steps written for IT. Isolating, rebooting or live-imaging an OT asset can have physical consequences. Use sector guidance (for example IEC 62443 and the ISA/IEC and ENISA OT material) and your vendors' procedures for anything below the DMZ.
 
-In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which scales its requirements over five preparedness levels and at levels 4 and 5 goes beyond the EU baseline, with real-time monitoring and response and physically separated networks for supply-critical systems; see the [Danish annex](docs/annexes/annex-dk.md). The OT/ICS extension profile is on the [roadmap](ROADMAP.md).
+In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which scales its requirements over five preparedness levels and at levels 4 and 5 goes beyond the EU baseline, with real-time monitoring and response and physically separated networks for supply-critical systems; see the [Danish annex](docs/annexes/annex-dk.md). [The IT/OT interface](docs/it-ot-interface.md) turns this section into operating guidance: the conduit register, boundary detections, containment decision owners, reporting across the boundary, and a table of which BEK 260 requirements OCDF covers and which it does not.
 
 ## Maintainers and adoption
 

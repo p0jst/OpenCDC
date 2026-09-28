@@ -93,7 +93,7 @@ def check_capability_ids():
     index = (ROOT / "docs" / "capability-index.md").read_text(encoding="utf-8")
     known = set(re.findall(r"\*\*((?:GV|ID|PR|DE|RS|RC)-\d)\*\*", index))
     for p in list((ROOT / "docs").glob("*.md")) + list((ROOT / "assessments").glob("*.md")) \
-            + list((ROOT / "templates").glob("*.md")) + list((ROOT / "playbooks").glob("*.md")):
+            + list((ROOT / "templates").glob("*.md")):
         for cid in set(re.findall(r"(?<![\w-])((?:GV|ID|PR|DE|RS|RC)-\d)(?![\d-])", p.read_text(encoding="utf-8"))):
             if cid not in known:
                 errors.append(f"unknown capability ID {cid} in {p.relative_to(ROOT)}")

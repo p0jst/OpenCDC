@@ -6,7 +6,7 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 
 1. **National annexes** — NIS2 transposition specifics, national CSIRT contacts and reporting portals, per member state. Status, law, authority, CSIRT and review dates are edited in `docs/annexes/countries.json` and written out by `python tools/build_countries.py`; country notes and anything longer go in `docs/annexes/annex-<ISO country code>.md`, outside the generated block.
 2. **Translations** — the framework aims to be available in EU languages, under `i18n/<lang>/`.
-3. **Templates & playbooks** — additional scenario playbooks, report templates for statutory notifications.
+3. **Templates** — improvements to the playbook templates, report templates for statutory notifications. OCDF does not ship ready-made playbooks.
 4. **Corrections** — factual, regulatory, or attribution fixes; high priority, so open an issue immediately.
 5. **Field feedback** — did the maturity criteria match reality in your assessment? Open a discussion.
 

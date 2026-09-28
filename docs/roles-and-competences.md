@@ -26,7 +26,7 @@ A CDC job title rarely equals exactly one ECSF profile. Most operational roles a
 | Detection Engineer | **Cybersecurity Implementer** | Cyber Incident Responder, Researcher | DE-1, DE-2, DE-6 |
 | Threat Hunter | **Cyber Threat Intelligence Specialist** | Cyber Incident Responder | DE-5, ID-5 |
 | CTI Analyst | **Cyber Threat Intelligence Specialist** | — | ID-5 |
-| DFIR Specialist | **Digital Forensics Investigator** | Cyber Incident Responder | RS-3, playbooks/ |
+| DFIR Specialist | **Digital Forensics Investigator** | Cyber Incident Responder | RS-3, platform playbooks |
 | Vulnerability Analyst | **Cybersecurity Implementer** | Penetration Tester | ID-4, PR-5 |
 | Security Engineer, platform and EDR | **Cybersecurity Implementer** | Cybersecurity Architect | PR-4, PR-6, DE-1 |
 | CDC/SOC Architect | **Cybersecurity Architect** | Implementer | all functions, design |

@@ -45,12 +45,15 @@ Denmark implemented NIS2 and CER through a **family of laws** in force since 202
 
    Key personnel may also need security clearance under the separate *bekendtgørelse om sikkerhedsgodkendelser i energisektoren*. Confirm your level with Energistyrelsen, then set DETECT and GOVERN targets to match: Level 3–4 at levels 4 and 5, the ordinary targets below them.
 
+   These requirements apply to the whole entity, OT included, while OCDF is scoped to IT. [The IT/OT interface](../it-ot-interface.md#danish-energy-sector-what-this-covers-and-what-it-does-not) shows which of them a CDC can cover at the boundary and which must be covered by OT operations.
+
 ## CDC checklist for Denmark
 
 - [ ] GOVERN: applicability determined per legal entity and sector, NIS 2-loven versus the sector acts, and recorded in the regulatory applicability register
 - [ ] Registered on virk.dk where required
 - [ ] Reporting procedure drilled against the right channel, virk.dk or Energistyrelsen, with the 24 h early-warning clock
 - [ ] Energy sector: preparedness level confirmed with Energistyrelsen and the level's requirements mapped to your targets
+- [ ] Energy sector: split between CDC and OT coverage recorded, per [the IT/OT interface](../it-ot-interface.md)
 - [ ] Sector authority contact list maintained; relationship established with SAMSIK before an incident
 - [ ] Datatilsynet contact and GDPR Art. 33 flow prepared. This runs in parallel with NIS2 reporting
 - [ ] SAMSIK vejledninger mapped to your control evidence across skal, bør and kan

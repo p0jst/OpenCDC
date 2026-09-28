@@ -32,6 +32,7 @@ introduction.
 | [Operating models](operating-models.md) | MSSP / tiered / capability-based / shared |
 | [Roles & competences](roles-and-competences.md) | ECSF-based roles & skills |
 | [Running the CDC](cdc-operations.md) | Tuning, detection-as-code, team, automation, tools |
+| [The IT/OT interface](it-ot-interface.md) | What the CDC owns at the OT boundary, handover to OT operations, Danish energy coverage |
 | [Detection-as-code deep dive](detection-as-code-deep-dive.md) | Advanced: engineering manual |
 | [CTI deep dive](cti-deep-dive.md) | Advanced: CTI programme |
 | [CSIRT community layer](csirt-community.md) | Community, certification, living docs |

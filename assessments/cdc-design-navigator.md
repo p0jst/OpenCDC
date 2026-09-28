@@ -72,10 +72,10 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 |---|----------|----------------|
 | R1 | Who is the incident manager for a P1 tonight, and does that person know it? | Named humans beat documented roles. ➜ IR plan template §2 |
 | R2 | Can we technically isolate any endpoint or server within 15 minutes, and legally/organisationally within the same 15? | Both halves must be true; test each. ➜ RS-4, charter §4 |
-| R3 | For our top 5 likely incidents, could a competent analyst execute the playbook alone at 03:00? | Playbooks are written for the worst night, not the best day. ➜ RS-2, [playbooks](../playbooks/README.md) |
+| R3 | For our top 5 likely incidents, could a competent analyst execute the playbook alone at 03:00? | Playbooks are written for the worst night, not the best day. ➜ RS-2, [scenario playbook template](../templates/scenario-playbook-template.md) |
 | R4 | Who decides, and how fast, whether an incident is NIS2-reportable, GDPR-notifiable, or both? Have we drilled the 24 h clock? | The early-warning clock is shorter than most escalation chains. ➜ RS-5, IR plan §4, national annex ⚠ deadline discovered during the incident |
 | R5 | If email and chat are compromised, how does the response team talk? | Adversaries read your incident channel if it's in the environment they own. ➜ IR plan §5 |
-| R6 | Can we preserve evidence to a standard that survives court or regulator scrutiny, with hashing, chain of custody and imaging? | Sloppy first hours forecloses legal options forever. ➜ RS-3, [platform playbooks](../playbooks/README.md) |
+| R6 | Can we preserve evidence to a standard that survives court or regulator scrutiny, with hashing, chain of custody and imaging? | Sloppy first hours forecloses legal options forever. ➜ RS-3, [platform playbook template](../templates/platform-playbook-template.md) |
 | R7 | At what point does a security incident become an organisational crisis, and who pulls that lever? | The threshold must pre-exist the incident. ➜ RS-6 |
 | R8 | When did management last sit in an exercise and make a real, if simulated, trade-off decision? | Executives who've practised decide in minutes, not hours. ➜ RS-7 |
 

@@ -2,7 +2,7 @@ site_name: Open CDC Framework
 site_description: >-
   Open source framework for building and maturing SOCs / Cyber Defence Centers
   in the EU. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model,
-  playbooks, all 27 national annexes.
+  templates, all 27 national annexes.
 site_url: https://opencdc.org/
 repo_url: https://github.com/p0jst/OpenCDC
 repo_name: p0jst/OpenCDC
@@ -43,7 +43,7 @@ theme:
   features:
     - navigation.tabs
     # navigation.sections deliberately left off: it forces every sub-list
-    # (27 national annexes, 9 templates, 7 playbooks...) permanently open in
+    # (27 national annexes, 11 templates...) permanently open in
     # the sidebar. Without it the sidebar is a collapsed accordion that only
     # opens the section you're actually in — far less to scan to find a page.
     - navigation.top
@@ -87,6 +87,15 @@ plugins:
   # into opencdc.org keep working.
   - redirects:
       redirect_maps:
+        ROADMAP.md: ABOUT.md
+        playbooks/README.md: templates/scenario-playbook-template.md
+        playbooks/PB-IDC-identity-compromise.md: templates/scenario-playbook-template.md
+        playbooks/PB-BEC-business-email-compromise.md: templates/scenario-playbook-template.md
+        playbooks/PB-RAN-ransomware.md: templates/scenario-playbook-template.md
+        playbooks/PB-W11-windows11-laptop.md: templates/platform-playbook-template.md
+        playbooks/PB-MAC-macos-laptop.md: templates/platform-playbook-template.md
+        playbooks/PB-WSV-windows-server.md: templates/platform-playbook-template.md
+        playbooks/PB-LNX-rhel-server.md: templates/platform-playbook-template.md
         docs/00-introduction.md: docs/introduction.md
         docs/01-govern.md: docs/govern.md
         docs/02-identify.md: docs/identify.md
@@ -144,6 +153,7 @@ nav:
       - Operating models: docs/operating-models.md
       - Roles & competences: docs/roles-and-competences.md
       - Running the CDC: docs/cdc-operations.md
+      - The IT/OT interface: docs/it-ot-interface.md
       - Deep dives:
           - Detection-as-code: docs/detection-as-code-deep-dive.md
           - CTI capability: docs/cti-deep-dive.md
@@ -197,21 +207,13 @@ nav:
           - ECSF job description: templates/job-description-template.md
           - MSSP requirements checklist: templates/mssp-requirements-checklist.md
           - Containment action catalogue: templates/containment-action-catalogue-template.md
+          - Scenario playbook: templates/scenario-playbook-template.md
+          - Platform playbook: templates/platform-playbook-template.md
           - Controls register: templates/controls-register-template.md
           - Annual operating calendar: templates/annual-calendar-template.md
-      - Playbooks:
-          - Overview: playbooks/README.md
-          - "Attack: identity compromise": playbooks/PB-IDC-identity-compromise.md
-          - "Attack: business email compromise": playbooks/PB-BEC-business-email-compromise.md
-          - "Attack: ransomware": playbooks/PB-RAN-ransomware.md
-          - Windows 11 laptop: playbooks/PB-W11-windows11-laptop.md
-          - macOS laptop: playbooks/PB-MAC-macos-laptop.md
-          - Windows Server: playbooks/PB-WSV-windows-server.md
-          - RHEL Linux server: playbooks/PB-LNX-rhel-server.md
   - Project:
       - About: ABOUT.md
       - Why trust this framework: docs/trust.md
-      - Roadmap: ROADMAP.md
       - Contributing: CONTRIBUTING.md
       - Changelog: CHANGELOG.md
       - References & credits: docs/references.md

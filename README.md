@@ -10,7 +10,7 @@
 
 ---
 
-> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. Governance, maturity and response apply to all of them, but the technical depth is uneven: the platform playbooks cover Windows, macOS and Linux, while cloud control planes and Microsoft 365 are only covered in general terms until the cloud profile on the [roadmap](ROADMAP.md) ships. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [About](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and the OT profile on the roadmap.
+> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. Governance, maturity and response apply to all of them, but the technical depth is uneven: cloud control planes and Microsoft 365 are only covered in general terms. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [About](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and [the IT/OT interface](docs/it-ot-interface.md) for what the CDC owns at the boundary.
 
 ## Why this framework exists
 
@@ -59,8 +59,7 @@ Cross-cutting documents, in reading order:
 
 Practical assets:
 
-- [`templates/`](templates/) — charter, IR plan, detection use case, KPI catalogue, ECSF job description, MSSP requirements checklist, containment action catalogue, controls register, annual operating calendar, skill self-assessment sheet in xlsx and csv.
-- [`playbooks/`](playbooks/) — attack-based playbooks for identity compromise, business email compromise and ransomware (drafts for field review), IR + digital forensics playbooks for Windows 11 laptops, macOS laptops, Windows Server including domain controllers, and RHEL-class Linux servers, plus Microsoft and CISA baseline references.
+- [`templates/`](templates/) — charter, IR plan, detection use case, KPI catalogue, ECSF job description, MSSP requirements checklist, containment action catalogue, scenario and platform playbook templates, controls register, annual operating calendar, skill self-assessment sheet in xlsx and csv.
 - [`assessments/`](assessments/) — the Design Navigator, with its guiding questions per function, and the maturity self-assessment.
 - [`tools/regulatory-profile.html`](tools/regulatory-profile.html) — interactive law selector: tick the laws that apply, covering EU instruments and all 27 member states, and the references show or hide to match. Host via GitHub Pages or open locally.
 - [`tools/skill-matrix.html`](tools/skill-matrix.html) — team skill matrix: team members fill in the self-assessment sheet, the manager uploads the returned files and gets a skills heatmap, gap analysis against role targets, and train/mentor/hire recommendations. Host via GitHub Pages or open locally.

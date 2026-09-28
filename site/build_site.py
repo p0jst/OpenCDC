@@ -14,8 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "_site_src"
 
-COPY_DIRS = ["docs", "assessments", "playbooks", "templates", "tools"]
-COPY_FILES = ["ABOUT.md", "CONTRIBUTING.md", "ROADMAP.md", "CHANGELOG.md", "LICENSE"]
+COPY_DIRS = ["docs", "assessments", "templates", "tools"]
+COPY_FILES = ["ABOUT.md", "CONTRIBUTING.md", "CHANGELOG.md", "LICENSE"]
 
 
 def main():

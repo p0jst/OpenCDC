@@ -143,7 +143,7 @@ SOC-CMM groups its aspects into five domains. The table maps each aspect to the 
 | Technology | Automation & orchestration | RS-4 | [Running the CDC](cdc-operations.md) |
 | Services | Security monitoring | DE-1, DE-3, DE-4 | [Detect](detect.md) |
 | Services | Security incident management | RS-1 to RS-7 | [Respond](respond.md) |
-| Services | Security analytics and forensics | RS-3, DE-3 | [Respond](respond.md), [Playbooks](../playbooks/README.md) |
+| Services | Security analytics and forensics | RS-3, DE-3 | [Respond](respond.md), [platform playbook template](../templates/platform-playbook-template.md) |
 | Services | Threat intelligence | ID-5 | [CTI deep dive](cti-deep-dive.md) |
 | Services | Threat hunting | DE-5 | [Detect](detect.md) |
 | Services | Vulnerability management | ID-4, PR-5 | [Identify](identify.md), [Protect](protect.md) |

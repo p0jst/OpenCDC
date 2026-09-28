@@ -46,7 +46,7 @@ require it.
 - **Templates:** charter, incident response plan, detection use case, metrics,
   job description, MSSP checklist, containment actions, controls register and
   annual calendar. [All templates](../templates/index.md)
-- **Playbooks:** three by attack and four by platform. [Playbooks](../playbooks/README.md)
+- **Playbooks:** you write your own, from a [scenario template](../templates/scenario-playbook-template.md) and a [platform template](../templates/platform-playbook-template.md).
 - **Browser tools:** regulatory profile selector, team skill matrix and maturity
   self-assessment. [Tools](../tools/README.md)
 - **A worked example** of a fictional organisation using all of the above.
