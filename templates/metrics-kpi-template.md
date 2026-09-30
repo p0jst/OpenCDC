@@ -25,7 +25,9 @@
 
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
-| MTTC | Median time detection → containment for P1 and P2 | Trend ↓ | Containment automation, authority gaps |
+| MTTC | Median and 90th percentile time detection → containment for P1 and P2, with the clock paused while waiting on parties outside the CDC and those waits reported separately | Trend ↓ | Containment automation, authority gaps, dependencies to escalate |
+| Response quality score | Reviewer score 1–10 per P1 and P2 case: thoroughness of analysis, scoping of related systems, root cause documented, no premature closure | Trend ↑, read together with MTTC | Coaching; whether speed is being bought with shortcuts |
+| Reopened cases | % cases closed, stopped or deferred at verification that are reopened as incidents within 90 days | Trend ↓ | Verification criteria and discipline in the exit decision |
 | Statutory reporting timeliness | % notifications within the legal deadline for NIS2 24h, GDPR 72h and DORA | 100% | Reporting drill frequency |
 | Playbook coverage | % of P1/P2 incidents handled with an existing playbook | > 80% | Playbook backlog |
 | Exercise cadence | Exercises held vs. planned, including management participation | 100% | Governance escalation |
@@ -43,6 +45,7 @@
 - **Alert volume**, as in "we handled 40,000 alerts", rewards noise.
 - **Blocked attacks count** from perimeter devices, an unfalsifiable vanity metric.
 - **Tickets closed per analyst** — incentivises shallow triage.
+- **MTTC or time to close on its own.** Speed without the quality score rewards closing early; a fast team that misses related systems will see the same incident again.
 - **ATT&CK coverage across the whole matrix, or counted from rule tags alone.** A percentage of all techniques says nothing about your threats, and a tagged rule that never fired in test is not coverage.
 - **Number of use cases or rules.** More rules is more to maintain, not more protection.
 

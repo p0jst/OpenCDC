@@ -18,6 +18,57 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 | RS-6 | Crisis management interface | Escalation path from security incident to organisational crisis; link to business continuity structures. |
 | RS-7 | Exercises | Tabletop and technical exercises at least annually, including management under the NIS2 training obligation, and statutory-reporting drills. |
 
+## How an incident moves
+
+<p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag ocdf">OCDF</span>Adapted from the Dynamic Approach to Incident Response, DAIR; the EU adjustments are this framework's.</p>
+
+Incidents do not run in a straight line from detection to lessons learned. Every contained host and every analysed artefact changes what the team knows, and the response has to follow. OCDF structures incident handling on the Dynamic Approach to Incident Response, DAIR, published by Joshua Wright through the SANS Institute under CC BY 4.0, with the adjustments below for European reporting duties.
+
+| Waypoint | Purpose | What it produces |
+|----------|---------|------------------|
+| Prepare | Plan, playbooks, decision authority, tools and exercises in place before the incident | RS-1, RS-2, RS-7 and the [containment action catalogue](../templates/containment-action-catalogue-template.md) |
+| Detect | Events of interest found through monitoring, hunting and reports | An alert or report to verify |
+| Verify and triage | Establish whether the event is an incident, and how much response it warrants | Continue, stop or defer; an initial severity; the reporting assessment started |
+| Response loop | Scope, contain, eradicate and recover, repeated until no new evidence of compromise appears | A scoped, contained and eradicated incident, and services restored |
+| Debrief | Close the incident and turn it into improvement | One consolidated record, the root cause, tracked actions and the final reports |
+
+Decision-makers take part throughout, not only at escalation. They tell the team which systems and data matter most, what disruption is acceptable and which obligations apply. Incident management, meaning the coordination, communication and decisions around the response, runs alongside the technical work. In a small CDC one person may do both; in a major incident they are different people, as described under roles below.
+
+### Verify and triage
+
+Verification is a gate: it keeps the organisation from spending a full response on something that is not an incident. It ends in one of three outcomes, recorded in the case:
+
+- **Continue.** The incident is real. Open the incident record, assign an incident manager, and present it to the decision-maker with a severity and a recommendation.
+- **Stop.** The event is benign or a false positive. Record what triggered it, what ruled out compromise, and which data and time window were examined, then add the source to the known false-positive list. The case closes under the closure taxonomy below.
+- **Defer.** There is not enough information. Record what is missing, who is getting it, and when the next decision is due.
+
+Two adjustments for European law:
+
+- **The legal clocks start at awareness, not at declaration.** NIS2 Art. 23 runs from when the entity becomes aware of a significant incident, and GDPR Art. 33 from awareness of a personal data breach. A short investigation to establish whether an incident has happened is legitimate, and the European Data Protection Board's guidance on breach notification allows for it. Keeping a case in an investigative state so that nothing is declared is not, and a regulator will ask when the organisation first had reasonable grounds. Time-box verification, record when each piece of evidence arrived, and start the reporting assessment in parallel with verification, not after it.
+- **Severity and significance are separate judgements.** Severity, per IR plan §1, sets how hard the CDC responds. Regulatory significance under NIS2 Art. 23(3), GDPR Art. 33 and the other regimes in the table below decides who must be told and by when. A P3 can be reportable and a P1 may not be. Keep both in the incident record, with different owners: the incident manager owns severity, legal or the DPO owns significance.
+
+### The response loop
+
+Scope, contain, eradicate and recover are repeated as often as the incident needs. Scope usually opens each pass; containment comes first, or runs in parallel, when damage is under way. Each pass should know more than the last. Start another pass when:
+
+- analysis finds a new indicator of compromise;
+- a known indicator turns up in systems, accounts or business units outside the current scope;
+- eradication fails, or a system is reinfected;
+- forensic work moves the start of the compromise earlier or reveals a new technique;
+- priorities or obligations change, for example when a regulator, the CSIRT, law enforcement or the insurer asks for preservation, a delay or more scoping.
+
+Record what triggered each pass. Several passes show thoroughness, not a failed response, and the record is how you show a regulator or auditor why the incident took the time it did.
+
+**Contain now or observe first.** Watching an adversary before containing can reveal the full scope, but capable attackers notice and accelerate. Contain at once when data is being destroyed or exfiltrated, when a safety-critical or essential service is at risk, or when personal data is exposed. Continuing to watch a known breach of personal data is hard to reconcile with the GDPR duty to limit its consequences, so a decision to observe needs legal and management sign-off recorded in the case. Observation is realistic mainly for commodity malware on low-value assets and in deception environments.
+
+**Leaving the loop is a decision.** The loop ends when scoping finds nothing new, monitoring shows no adversary activity, eradication is verified, restored systems run normally, and the decision-maker accepts the remaining risk. Record the exit in writing: who decided, on which technical and business indicators, which residual risks were accepted, and when. An unnamed consensus is hard to defend if the incident reopens.
+
+### Eradication needs a root cause
+
+Rebuilding from clean media without knowing how the adversary got in usually brings the adversary back. Before eradication is called complete, the team should be able to say how the adversary got in and whether that path is closed, which credentials were exposed and whether they are rotated, which other systems were reached, which persistence was left and whether it is removed, and which weakness made it possible and whether it is fixed. Group the contributing causes as people, process, technology and governance, so that the fixes reach beyond the host.
+
+Run the investigation in two tracks. A short track gives enough understanding to eradicate and restore quickly. A long track goes deeper in parallel, for the root cause and for legal and regulatory needs. In the EU the long track has a deadline: the NIS2 final report, with the root cause, is due one month after the incident notification, or a progress report if the incident is still being handled then. Plan the long track against that date from the first day.
+
 ## The first hour of a major incident
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Lessons from major incidents; agree them in the charter before you need them.</p>
@@ -61,6 +112,11 @@ practical traps, both hard to fix retrospectively:
   in-house lawyers at all, and the treatment of technical investigation reports differs again. Do
   not assume a report is protected because counsel commissioned it. Settle the position per
   jurisdiction *before* the first report is written.
+- **Employee data needs a lawful basis before the incident.** Forensics on mailboxes, endpoints and
+  logs processes employees' personal data. National employment law and collective agreements can
+  require notice or consultation before monitoring is introduced, for example through works
+  councils in Germany or the agreement on control measures in Denmark. Settle the basis and the
+  DPO's role in the monitoring and IR policies, so that evidence is not challenged afterwards.
 
 Firms specialising in incident response can coordinate carriers, responders and notifications while
 the CDC keeps working the incident. Identify one alongside the DFIR retainer, not during a P1.
@@ -111,6 +167,7 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 - **Incident manager/commander** — coordinates; distinct from technical lead in larger incidents.
 - **Technical responders** — often the same analysts as DETECT.
 - **Legal/DPO and communications** — mandatory members of the extended IR team.
+- **Decision-makers** — service owners, data owners and management who set priorities, accept disruption and sign the exit from the response loop. Name them and their deputies in the IR plan.
 - **Retainers** — consider an external DFIR retainer at Level 2+ if in-house forensics is not viable, and identify external counsel on the same basis.
 
 ## Maturity criteria
@@ -144,12 +201,15 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 | Legal privilege position and external counsel | Legal, external where required | [GATE] | Settled per jurisdiction before the first investigation report is written |
 | Estate-wide network containment: perimeter deny-all, remote access off | Network/IT operations + executive per charter §4 | [GATE] | Who may order it, who executes it out of hours, and how long it can stand |
 | Backup isolation and snapshot retention extension | Backup/storage owner | [HARD] | Reachable 24/7; defaults roll off in days |
+| Exit from the response loop and acceptance of residual risk | Decision-maker per IR plan §2 | [GATE] | Who may close a P1 or P2, on which criteria, and that the decision is written and named |
 
 ## Sources
 
 - NIST SP 800-61 Rev. 3, *Incident Response Recommendations and Considerations for Cybersecurity Risk Management*, 2025. https://doi.org/10.6028/NIST.SP.800-61r3
 - NIST CSF 2.0, CSWP 29: RESPOND function.
+- Joshua Wright, *Dynamic Incident Response: A Framework for Security Teams*, SANS Institute, 2026. © 2026 The Escal Institute of Advanced Technologies, Inc. d/b/a SANS Institute, licensed under CC BY 4.0. The DAIR model is adapted here, with changes for EU reporting duties. https://dynamicincidentresponse.com
 - FIRST, *Computer Security Incident Response Team Services Framework* v2.1. https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1
+- EDPB, *Guidelines 9/2022 on personal data breach notification under GDPR*, version 2.0, 2023. https://www.edpb.europa.eu
 - NIS2: Directive (EU) 2022/2555 Art. 23; Commission Implementing Regulation (EU) 2024/2690; GDPR Art. 33–34; DORA: Regulation (EU) 2022/2554 Art. 17–19; CER: Directive (EU) 2022/2557 Art. 15.
 - VERIS, the *Vocabulary for Event Recording and Incident Sharing*. https://verisframework.org
 - Microsoft incident response playbooks: baseline runbooks; adapt them to your environment. https://learn.microsoft.com/security/operations/incident-response-playbooks

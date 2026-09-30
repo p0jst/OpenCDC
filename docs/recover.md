@@ -12,9 +12,9 @@ Restore affected services in a trustworthy state, communicate honestly during re
 |----|-----------|-------------|
 | RC-1 | Recovery planning | Documented recovery plans for crown-jewel services with RTO/RPO targets agreed with the business; restoration ordering based on dependencies carried over from IDENTIFY. |
 | RC-2 | Trusted restoration | Verify integrity of backups and systems *before* reconnecting, assuming ransomware persistence; rebuild-from-known-good procedures; credential rotation as standard recovery step. |
-| RC-3 | Recovery execution & verification | Ability to execute restores at scale; post-restore validation that services function and are clean. |
+| RC-3 | Recovery execution & verification | Ability to execute restores at scale. Before a system returns to production, re-check that the root cause is fixed and persistence removed, test function and security controls, obtain the service owner's acceptance, and monitor the restored system with the incident's detections for a set period, typically 30 days. |
 | RC-4 | Recovery communication | Status communication to internal stakeholders, customers and authorities, meaning the final NIS2 and DORA reports, and the public where relevant, per CSF 2.0 RC.CO. |
-| RC-5 | Lessons learned & improvement loop | Blameless post-incident reviews with tracked actions; findings feed the improvement backlog per CSF 2.0 ID.IM, and update playbooks, detections and controls. |
+| RC-5 | Lessons learned & improvement loop | Closing an incident properly: temporary containment, accounts and monitoring removed or made permanent, and the case, chat and notes consolidated into one record. Then blameless post-incident reviews with tracked actions; findings feed the improvement backlog per CSF 2.0 ID.IM, and update playbooks, detections and controls. |
 | RC-6 | Business continuity integration | CDC recovery plans aligned with enterprise BCM/DR; joint exercises. |
 
 > **The recovery path is decided during response, not during recovery.** Snapshot and backup
@@ -71,6 +71,7 @@ The criteria that score RECOVER are kept in one place for all six functions: the
 | RTO/RPO targets accepted | Business service owners | [GATE] | Signed per crown jewel; revisited after exercises |
 | Restoration execution | Service/platform owners | [HARD] | Rebuild procedures rehearsed jointly |
 | Reconnection of restored systems | CDC integrity verification | [GATE] | Cleanliness criteria checklist; CDC sign-off before reconnect |
+| Return to production | Service owner | [GATE] | Acceptance test and signed acceptance per system, including known limitations accepted |
 | Business continuity alignment and joint exercises | BCM function | [HARD] | Shared scenario set; annual joint exercise |
 | Supplier recovery dependencies | Vendors / procurement | [SOFT] | Recovery commitments in contracts where feasible |
 

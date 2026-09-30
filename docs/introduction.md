@@ -21,7 +21,7 @@ This framework is written for **enterprise IT** security operations. OT/ICS envi
 
 ## Design principles
 
-1. **Standards-first.** The backbone is NIST CSF 2.0. Detection engineering references MITRE ATT&CK. Incident handling references NIST SP 800-61 and FIRST/ENISA good practice. This maximises interoperability with auditors, regulators, and peer organisations.
+1. **Standards-first.** The backbone is NIST CSF 2.0. Detection engineering references MITRE ATT&CK. Incident handling references NIST SP 800-61, the Dynamic Approach to Incident Response and FIRST/ENISA good practice. This maximises interoperability with auditors, regulators, and peer organisations.
 2. **CIA as the design lens.** Every capability in this framework states which legs of the CIA triad it protects, or that it is an enabler the others depend on, such as governance and exercises. For a technical control, if you cannot articulate what it does for Confidentiality, Integrity or Availability, question whether you need it.
 3. **EU-regulation aware.** Each function document contains an "EU regulatory hooks" section mapping capabilities to NIS2, DORA, GDPR and related obligations. The framework helps demonstrate compliance; it is not legal advice.
 4. **People > Process > Technology, in that order.** Most SOC failures are organisational, not technical. Governance and staffing come before tooling in every build sequence.

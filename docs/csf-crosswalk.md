@@ -49,8 +49,15 @@ framework does not claim. Every OCDF capability appears at least once below.
   OCDF self-assessment with targets per function is the same idea at function
   level.
 
+## Incident handling models
+
+OCDF structures incident handling on the DAIR waypoints, described in [RESPOND](respond.md). The book that sets out DAIR also maps it to CSF 2.0, placing verification and triage under DETECT and the debrief under RECOVER. OCDF follows the CSF text instead, where declaring an incident is DE.AE-08, triage and validation are RS.MA-02, prioritisation is RS.MA-03, root cause analysis is RS.AN-03, containment and eradication are RS.MI-01 and RS.MI-02, restoration and the declared end of recovery are RC.RP-01 to RC.RP-06, and improvement from incidents and the maintained response plan sit under ID.IM.
+
+For European organisations the CSF is voluntary. What binds is NIS2 Art. 20, 21 and 23 and, where they apply, DORA and CER; the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) maps those to the same capabilities.
+
 ## Sources
 
 - NIST, *The NIST Cybersecurity Framework (CSF) 2.0*, NIST CSWP 29, February 2024. https://doi.org/10.6028/NIST.CSWP.29
+- Joshua Wright, *Dynamic Incident Response: A Framework for Security Teams*, SANS Institute, 2026, chapter 20. Licensed CC BY 4.0. https://dynamicincidentresponse.com
 
 *Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*

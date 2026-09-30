@@ -30,7 +30,7 @@
 - [ ] External contacts in the IR plan: [DFIR retainer, counsel, insurer, supplier contacts]
 - [ ] […]
 
-## 1. Triage — the first hour
+## 1. Verify and triage — the first hour
 
 *Numbered steps, in order. For a major incident, run the estate-wide first-hour actions in [RESPOND](../docs/respond.md) alongside these.*
 
@@ -38,11 +38,19 @@
 2. […]
 3. […]
 
+**Verification outcome:** continue, stop or defer, per IR plan §3. The evidence that decides it for this scenario: […] *What confirms it, and what would rule it out. Start the reporting assessment in section 7 in parallel; do not wait for verification to finish.*
+
 **Decision point:** […] *The fork that decides the rest of the response, for example evidence-priority versus containment-priority, and who makes that call.*
 
-**Scope questions to answer:** […] *Which systems, accounts and data are affected, and how you find out.*
+## 2. Scope the incident
 
-## 2. Containment
+*The first activity of every pass through the response loop. Repeat it whenever a new indicator appears.*
+
+- **Indicators to search for across the estate:** […] *Accounts, hosts, hashes, domains, mail rules, tokens, typical for this scenario.*
+- **Where to search, and with what:** […]
+- **Scope questions to answer:** […] *Which systems, accounts and data are affected, and how you find out.*
+
+## 3. Containment
 
 | Step | Action | Catalogue ID | Who may decide | Notes |
 |------|--------|--------------|----------------|-------|
@@ -52,7 +60,7 @@
 
 *Say what to contain in the identity plane and in the cloud, not only on hosts.*
 
-## 3. Evidence acquisition
+## 4. Evidence acquisition
 
 *Order of volatility per RFC 3227. Hash everything you collect, record every action with time and operator, and use your chain-of-custody form.*
 
@@ -62,20 +70,25 @@
 | 2 | […] | […] | […] | […] |
 | 3 | […] | […] | […] | […] |
 
-## 4. Analysis pointers
+## 5. Analysis pointers
+
+*Two tracks: a short one that is enough to eradicate and restore, and a long one for the root cause, planned against the NIS2 final report date.*
 
 - **Initial access:** […] *Where to look for how the adversary got in.*
 - **Impact:** […] *How to establish what was accessed, changed or taken, and from which logs.*
 - **ATT&CK mapping:** […] *Techniques to confirm, and the detection gaps to feed back to DETECT.*
+- **Root cause questions before eradication:** Is the way in closed? Are exposed credentials rotated? Which other systems were reached? Is all persistence removed? Is the enabling weakness fixed?
 
-## 5. Eradication & recovery
+## 6. Eradication & recovery
 
 - **Order of recovery:** […] *Identity and management plane first where they were touched, then services in the order agreed in RC-1.*
 - **Eradication steps:** […]
-- **Conditions before reconnecting:** […] *Integrity before availability.*
-- **Closure criteria:** no adversary activity for [ ] days; initial access closed; lessons-learned filed.
+- **Conditions before reconnecting:** […] *Integrity before availability: root cause fixed, persistence removed, security controls running, and the service owner's acceptance recorded.*
+- **Enhanced monitoring after restore:** […] *The detections written during the incident, aimed at the restored systems, for [30] days.*
 
-## 6. Reporting hooks
+**Iterate or exit.** Go back to section 2 when a new indicator appears, when a known one turns up outside the scope, when eradication fails or a system is reinfected, or when an authority or the insurer asks for more. Record the trigger. Exit only by the written decision in IR plan §3: no adversary activity for [ ] days, initial access closed, residual risk accepted by [role], with name, date and time.
+
+## 7. Reporting hooks
 
 *Fill in from your IR plan §4 and your national annex. Keep the clock and the recipient on the same line.*
 
@@ -85,8 +98,9 @@
 | Personal data breach | GDPR Art. 33 / 34 | ≤ 72 h from awareness | [supervisory authority] | [DPO] |
 | […] | […] | […] | […] | […] |
 
-## 7. Lessons learned
+## 8. Debrief
 
+- Temporary containment actions, accounts and monitoring removed or made permanent: [list]
 - Review held: [date], actions tracked in: [link]
 - Changes to this playbook since the last incident or exercise: […]
 

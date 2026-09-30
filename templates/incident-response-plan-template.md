@@ -1,6 +1,6 @@
 # Incident Response Plan — Template
 
-> Related capability: RS-1. Structure informed by NIST SP 800-61r3 and FIRST good practice. Keep this document short, 10–15 pages at most; detail belongs in playbooks.
+> Related capability: RS-1. Structure informed by NIST SP 800-61r3, the Dynamic Approach to Incident Response (DAIR) and FIRST good practice. Keep this document short, 10–15 pages at most; detail belongs in playbooks.
 
 **Owner:** | **Approved by:** | **Version / date:** | **Exercised on:**
 
@@ -14,6 +14,8 @@
 | P4 — Low | Policy violation / no material impact | Isolated phishing click, no execution | Routine |
 
 > Classify severity against **CIA impact per affected asset class**, per [CIA as design lens](../docs/cia-triad.md), not against alert volume.
+>
+> Severity is not regulatory significance. Severity sets how hard the CDC responds; significance, assessed under §4, decides who must be told and by when. Record both in every incident, with different owners.
 
 ## 2. Roles
 
@@ -27,14 +29,34 @@
 | External counsel | | Privilege position per jurisdiction; regulatory and contractual exposure |
 | Cyber insurance contact | | Carrier notification within the policy window; which responder and counsel panels the policy permits |
 
-## 3. Process — the lifecycle
+### Decision authority
 
-1. **Detection & reporting** — sources: monitoring, users via [report channel], third parties, national CSIRT.
-2. **Triage & classification** — severity per §1; open incident record; start timeline log.
-3. **Containment** — per playbook; authority per CDC charter §4. Record every action with a timestamp, for evidential integrity. For a major incident, run the estate-wide first-hour actions in [RESPOND](../docs/respond.md) alongside the scenario playbook: do not power systems off, cut external connectivity and remote access, isolate backups, extend snapshot retention, and notify counsel and the insurer.
-4. **Eradication & investigation** — root cause; preserve evidence with hashing and the chain of custody form: [link].
-5. **Recovery** — integrity verification before reconnection; credential rotation; see recovery plans.
-6. **Post-incident** — blameless review within [10] working days for P1/P2; actions tracked in [system].
+> Who may take each decision, who stands in, and what record the decision leaves. Assign by impact, not by seniority, and exercise the matrix so that it matches what happens at night.
+
+| Decision | Authority | Deputy | Record it leaves |
+|----------|-----------|--------|------------------|
+| Declare an incident and set its severity | Incident Manager | | Incident record with time of declaration |
+| Assess regulatory significance and notify authorities | Legal / DPO | | Assessment with time of awareness; reports as submitted |
+| Containment beyond the pre-mandated scope | Per CDC charter §4 and the containment catalogue | | Action log entry |
+| Observe instead of contain when personal data or an essential service is at risk | Executive sponsor with Legal / DPO | | Signed decision in the case |
+| Engage external DFIR, counsel or the insurer's panel | | | Engagement record |
+| Public statement | Communications with Legal | Executive sponsor | Approved statement with version |
+| Exit the response loop and accept residual risk | Executive sponsor for P1 and P2; Incident Manager for P3 and P4 | | Written exit decision, see §3 |
+
+## 3. Process — how an incident moves
+
+> The steps are not a straight line. Step 3 is repeated as often as the incident needs, and the plan should say so, so that a second or third pass is expected rather than read as failure. See [RESPOND](../docs/respond.md) for the reasoning.
+
+1. **Detection & reporting** — sources: monitoring, users via [report channel], third parties, national CSIRT. Record the time of the first report.
+2. **Verify & triage** — within [time box, for example 1 h for a suspected P1 or P2]. Outcome: *continue*, *stop* or *defer*, with the reasoning in the record; a deferral names what is missing and when the next decision is due. On *continue*: open the incident record, start the timeline log, set severity per §1, and present the incident to the decision-maker in §2 with a recommendation. Start the regulatory assessment in §4 now, in parallel, and record the time of awareness.
+3. **Response loop** — scope, contain, eradicate and recover, repeated until no new evidence of compromise appears:
+    - *Scope:* search the estate for the known indicators; list the affected systems, accounts and data.
+    - *Contain:* per playbook; authority per CDC charter §4 and §2 above. Record every action with a timestamp, for evidential integrity. For a major incident, run the estate-wide first-hour actions in [RESPOND](../docs/respond.md) alongside the scenario playbook: do not power systems off, cut external connectivity and remote access, isolate backups, extend snapshot retention, and notify counsel and the insurer.
+    - *Eradicate:* a short investigation track to eradicate quickly, and a long track for the root cause, planned against the NIS2 final report date in §4. Preserve evidence with hashing and the chain of custody form: [link].
+    - *Recover:* integrity verification before reconnection; credential rotation; the service owner's acceptance; enhanced monitoring for [30] days; see recovery plans.
+    - *Start another pass when:* a new indicator is found, a known indicator appears outside the current scope, eradication fails, forensic work changes the timeline, or an authority, the insurer or law enforcement changes what is required. Record the trigger.
+4. **Exit** — the loop ends by a written decision of the authority in §2: the indicators met, the residual risks accepted, the name of the decision-maker, and the date and time.
+5. **Debrief** — remove, or make permanent through change management, the temporary containment actions, accounts and monitoring; consolidate the record; blameless review within [10] working days for P1/P2; root cause and actions tracked in [system]; final reports per §4.
 
 ## 4. Statutory notification decision tree
 
@@ -70,8 +92,9 @@
 ## 7. Exercise & review schedule
 
 - Tabletop incl. management: at least annually; the NIS2 Art. 20 training obligation supports this.
+- Exercise decisions, not only steps: at least once a year, run a scenario at a realistic pace, out of hours, in which the decision-makers in §2 must decide on incomplete information and the plan meets a situation it did not foresee.
 - Technical exercise / reporting drill: [cadence].
 - Plan review: annually and after each P1/P2 incident.
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0. Informed by NIST SP 800-61r3, GDPR, NIS2 and DORA. Verify legal specifics with counsel.*
+*Template from the Open CDC Framework, licensed CC BY 4.0. Informed by NIST SP 800-61r3, the Dynamic Approach to Incident Response by Joshua Wright, SANS Institute, CC BY 4.0, GDPR, NIS2 and DORA. Verify legal specifics with counsel.*
