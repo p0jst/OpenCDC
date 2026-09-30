@@ -20,9 +20,9 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 
 ## How an incident moves
 
-<p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag ocdf">OCDF</span>Adapted from the Dynamic Approach to Incident Response, DAIR; the EU adjustments are this framework's.</p>
+<p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag ocdf">OCDF</span>Adapted from Joshua Wright's Dynamic Approach to Incident Response, DAIR; the EU adjustments are this framework's.</p>
 
-Incidents do not run in a straight line from detection to lessons learned. Every contained host and every analysed artefact changes what the team knows, and the response has to follow. OCDF structures incident handling on the Dynamic Approach to Incident Response, DAIR, published by Joshua Wright through the SANS Institute under CC BY 4.0, with the adjustments below for European reporting duties.
+Incidents do not run in a straight line from detection to lessons learned. Every contained host and every analysed artefact changes what the team knows, and the response has to follow. OCDF structures incident handling on DAIR, with the adjustments below for European reporting duties.
 
 | Waypoint | Purpose | What it produces |
 |----------|---------|------------------|
@@ -207,7 +207,7 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 
 - NIST SP 800-61 Rev. 3, *Incident Response Recommendations and Considerations for Cybersecurity Risk Management*, 2025. https://doi.org/10.6028/NIST.SP.800-61r3
 - NIST CSF 2.0, CSWP 29: RESPOND function.
-- Joshua Wright, *Dynamic Incident Response: A Framework for Security Teams*, SANS Institute, 2026. © 2026 The Escal Institute of Advanced Technologies, Inc. d/b/a SANS Institute, licensed under CC BY 4.0. The DAIR model is adapted here, with changes for EU reporting duties. https://dynamicincidentresponse.com
+- Joshua Wright, *Dynamic Incident Response*, SANS Institute, 2026. https://dynamicincidentresponse.com
 - FIRST, *Computer Security Incident Response Team Services Framework* v2.1. https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1
 - EDPB, *Guidelines 9/2022 on personal data breach notification under GDPR*, version 2.0, 2023. https://www.edpb.europa.eu
 - NIS2: Directive (EU) 2022/2555 Art. 23; Commission Implementing Regulation (EU) 2024/2690; GDPR Art. 33–34; DORA: Regulation (EU) 2022/2554 Art. 17–19; CER: Directive (EU) 2022/2557 Art. 15.

@@ -51,7 +51,7 @@ This framework synthesises and builds upon the following publicly available work
 
 ## Incident response method
 
-- Joshua Wright, *Dynamic Incident Response: A Framework for Security Teams*, first edition, 2026. https://dynamicincidentresponse.com. "Dynamic Incident Response: A Framework for Security Teams by Joshua Wright, © 2026 The Escal Institute of Advanced Technologies, Inc. d/b/a SANS Institute, licensed under CC BY 4.0." OCDF adapts its DAIR model in RESPOND and in the IR plan and scenario playbook templates, with changes for EU reporting duties, legal privilege and data protection. OCDF is not endorsed by the author or by SANS, and SANS is a trademark of the SANS Institute.
+- Joshua Wright, *Dynamic Incident Response: A Framework for Security Teams*, © 2026 The Escal Institute of Advanced Technologies, Inc. d/b/a SANS Institute, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). https://dynamicincidentresponse.com. Its DAIR model is adapted, with changes for EU law, in RESPOND and the IR plan and scenario playbook templates.
 
 ## Incident response playbook baselines
 
