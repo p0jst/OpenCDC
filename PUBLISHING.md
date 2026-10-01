@@ -9,7 +9,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
   Deliberately no `eu` topic: it is generic, carries enormous unrelated volume, and nobody browsing it is looking for a SOC framework. The European framing is already carried by `nis2`, `dora` and `gdpr`, which are specific enough that anyone arriving through them is in the audience.
 - Enable: Pages with source "GitHub Actions", which publishes the website including tools/, plus Discussions and Issues.
   Discussions matter: `CONTRIBUTING.md` tells contributors to open one for field feedback on the maturity criteria.
-- Social preview: upload `assets/social-preview.png` under **Settings → General → Social preview**. There is no API for this, so it has to be done in the web UI; the same image is served at `https://opencdc.org/assets/social-preview.png` and is referenced by the site's Open Graph tags in `overrides/main.html`. Regenerate it if the stat counts change.
+- Social preview: upload `brand/github-social-preview.png` under **Settings → General → Social preview**. There is no API for this, so it has to be done in the web UI. The website's link previews use a separate card, `assets/social-preview.png`, referenced by the site's Open Graph tags in `overrides/main.html`. Regenerate either if the stat counts change.
 
 ## Release history
 - `v1.0.0` — 2026-09-02. First stable release.
