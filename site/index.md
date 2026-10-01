@@ -9,14 +9,16 @@ hide:
 
 <p class="ocdf-eyebrow"><span>v1.1.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
 
-# Build and mature your Cyber Defence Center
+# Build and mature your cyber defence
 
 <p class="ocdf-lead" markdown>
-**A free, practitioner-written framework for Security Operations Centers and
-Cyber Defence Centers in the European Union.** It sits between the standards and
-your organisation: NIST CSF 2.0 says what the security areas are, NIS2 says what
-you are obliged to do, and this framework says how to build and run the CDC that
-gets it done.
+**A free, practitioner-written framework for anyone responsible for detecting
+and responding to cyber attacks in the European Union**, whether you call it a
+SOC, a Cyber Defence Center, an IT-security team, or it is two people in IT. It
+sits between the standards and your organisation: NIST CSF 2.0 says what the
+security areas are, NIS2 says what you are obliged to do, and this framework
+says how to build and run the function that gets it done.
+[Is this for me?](#is-this-for-me)
 </p>
 
 <div class="ocdf-cta" markdown>
@@ -174,9 +176,40 @@ report. Every step is in the [worked example](docs/worked-example.md).
 
 [Explore the worked example →](docs/worked-example.md){ .md-button }
 
+## Is this for me?
+
+If you are responsible for detecting and responding to cyber attacks, yes. You
+do not need a department called SOC or CDC: in this framework *CDC* names the
+function, not the size of the team. Every capability is tagged with the smallest
+[tier](docs/tiers.md) that should implement it, so you can see what applies to
+you now and what can wait.
+
+- **1–3 people doing IT security, often alongside other IT duties.** Start with
+  [if you are the whole security function](docs/tiers.md#if-you-are-the-whole-security-function)
+  and the Essential tier, then the [first 90 days](docs/start-here.md), the
+  [IR plan template](templates/incident-response-plan-template.md) and the
+  [regulatory selector](tools/regulatory-profile.html). Leave the deep dives
+  for later.
+- **Building a dedicated security team**, in-house, with a provider, or both.
+  Follow the seven steps under [Start building](#start-building), with
+  [operating models](docs/operating-models.md) for the staffing and budget case.
+- **Maturing an existing SOC or CDC.** Begin with the
+  [maturity self-assessment](tools/maturity-assessment.html), reusing any
+  SOC-CMM, SIM3 or CIS assessment you already have, then
+  [running the CDC](docs/cdc-operations.md).
+
 ## Where are you coming from?
 
 <div class="grid cards ocdf-roles" markdown>
+
+-   :material-account-wrench-outline:{ .lg .middle } **IT security in a small team**
+
+    ---
+
+    One to three people, often with other IT duties too. The Essential tier,
+    what to buy rather than build, and the four things you must own yourself.
+
+    [Start small →](docs/tiers.md#if-you-are-the-whole-security-function)
 
 -   :material-briefcase-outline:{ .lg .middle } **CISO or executive**
 

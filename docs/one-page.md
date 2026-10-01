@@ -23,7 +23,7 @@ require it.
 
 | Term | What it means | Where it lives |
 |------|---------------|----------------|
-| **CDC** | Cyber Defence Center: the organisational capability that governs, prevents, detects, responds and recovers. Used interchangeably with SOC here. | [Introduction](introduction.md) |
+| **CDC** | Cyber Defence Center: the organisational capability that governs, prevents, detects, responds and recovers. Used interchangeably with SOC here. It names the function, not the department: a two-person IT-security team doing this work is a CDC in this framework's sense. | [Introduction](introduction.md) |
 | **Six functions** | Govern, Identify, Protect, Detect, Respond, Recover, taken from NIST CSF 2.0. Govern sits above the other five. | [Govern](govern.md) to [Recover](recover.md) |
 | **Capability** | Something the CDC must be able to do, with an ID such as `DE-2` (detection engineering). 43 in total. | [Capability index](capability-index.md) |
 | **Tier E · S · A** | Essential, Standard, Advanced. Which capabilities apply at your size. Higher tiers include the lower ones. | [Implementation tiers](tiers.md) |

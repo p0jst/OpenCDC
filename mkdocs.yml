@@ -1,7 +1,8 @@
 site_name: Open CDC Framework
 site_description: >-
-  Open source framework for building and maturing SOCs / Cyber Defence Centers
-  in the EU. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model,
+  Open source framework for building and maturing security operations in the
+  EU, from a two-person IT-security team to a full SOC or Cyber Defence
+  Center. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model,
   templates, all 27 national annexes.
 site_url: https://opencdc.org/
 repo_url: https://github.com/p0jst/OpenCDC

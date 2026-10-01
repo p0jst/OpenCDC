@@ -8,7 +8,8 @@ to the detail.
 
 A Cyber Defence Center is the part of the organisation that notices an attack in
 progress, stops it spreading, gets the business running again, and tells the
-authorities in time. It is a capability, made of people, authority, process and
+authorities in time. In a smaller organisation it may be called the IT-security
+team, or be part of one or two people's jobs; the name does not matter. It is a capability, made of people, authority, process and
 technology, not a product. Buying a SIEM or signing a monitoring contract does
 not create one on its own; giving someone the mandate, the staff and the access
 to act does.

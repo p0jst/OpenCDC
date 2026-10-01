@@ -4,13 +4,13 @@
 
 ## Purpose
 
-This framework describes **what a Cyber Defence Center (CDC) must be able to do**, **how to build those capabilities from zero**, and **how to measure maturity over time**. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
+This framework describes **what a Cyber Defence Center (CDC) must be able to do**, whether that capability is a 24/7 department or two people in IT who also handle security, **how to build those capabilities from zero**, and **how to measure maturity over time**. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
 
 ## Terminology
 
 The four terms below are the foundation; every other term the framework uses is explained in [OCDF on one page](one-page.md).
 
-- **CDC**, a Cyber Defence Center, is an organisational capability that governs, prevents, detects, responds to and recovers from cyber threats. We use CDC and SOC (Security Operations Center) interchangeably; "CDC" emphasises that the capability is broader than monitoring alone.
+- **CDC**, a Cyber Defence Center, is an organisational capability that governs, prevents, detects, responds to and recovers from cyber threats. We use CDC and SOC (Security Operations Center) interchangeably; "CDC" emphasises that the capability is broader than monitoring alone. The term names the function, not a department or a size: if your organisation calls it the IT-security team, or it is part of one person's job, the framework still applies. Where the text says "the CDC", read "whoever does this work for you". The organisational form only matters in [operating models](operating-models.md) and [roles & competences](roles-and-competences.md), and the [tiers](tiers.md) say how much applies at your size.
 - **NIST CSF 2.0** — the NIST Cybersecurity Framework version 2.0, published February 2024, organised into six functions: Govern, Identify, Protect, Detect, Respond, Recover.
 - **CIA triad** — Confidentiality, Integrity, Availability: the three classic security objectives that every control ultimately serves.
 - **Essential / important entities** — the two categories of organisations in scope of the EU NIS2 Directive.

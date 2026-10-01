@@ -4,6 +4,8 @@
 
 **An open source framework for building and maturing Security Operations Centers (SOC) and Cyber Defence Centers (CDC) across the European Union.**
 
+It is for anyone responsible for detecting and responding to cyber attacks, whatever the team is called: a SOC, a CDC, an IT-security team, or two people in IT who also run the servers. "CDC" in this framework names the function, not the size of the department. Not sure where you fit? See [Is this for me?](#is-this-for-me)
+
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![Version](https://img.shields.io/badge/version-v1.1.0-blue)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
@@ -75,12 +77,18 @@ Practical assets:
 - [Worked example](docs/worked-example.md): the framework applied to a fictional 2,500-person company, from charter to first board report.
 - [Why trust this framework](docs/trust.md): which statements are law, standard, guidance, this framework's design, or the author's experience.
 
-## Who is this for?
+## Is this for me?
 
-- **CISOs and CDC/SOC directors** planning a new capability or a maturity programme.
-- **SOC managers and team leads** looking for structure, templates, and metrics.
-- **Public sector and critical infrastructure teams** in scope of NIS2 or DORA.
-- **SMEs** that need a pragmatic, low-cost starting point.
+If you are responsible for detecting and responding to cyber attacks in an EU organisation, yes. Pick the entry point that matches where you are today:
+
+| You are… | Start with | Then |
+|----------|-----------|------|
+| **1–3 people doing IT security**, often alongside other IT duties | [If you are the whole security function](docs/tiers.md#if-you-are-the-whole-security-function) and the [Essential tier](docs/tiers.md) | The [first 90 days](docs/start-here.md), the [IR plan template](templates/incident-response-plan-template.md), and the [regulatory selector](tools/regulatory-profile.html) to see which laws apply. Skip the deep dives for now |
+| **Building a dedicated security team**, in-house, with a provider, or both | The seven steps under [How to use it](#how-to-use-it) | [Operating models](docs/operating-models.md) and [Roles & competences](docs/roles-and-competences.md) for the staffing and budget case |
+| **Maturing an existing SOC or CDC** | The [maturity self-assessment](tools/maturity-assessment.html), reusing any SOC-CMM, SIM3 or CIS assessment you already have | [Running the CDC](docs/cdc-operations.md), then the [detection-as-code](docs/detection-as-code-deep-dive.md) and [CTI](docs/cti-deep-dive.md) deep dives |
+| **CISO, board member or sponsor** | The 30-minute [executive guide](docs/executive-guide.md) | The [worked example](docs/worked-example.md) |
+
+You do not need a department called SOC or CDC to use any of it. Every capability is tagged with the smallest tier that should implement it, so a small team can see what applies now and what can wait.
 
 ## How to use it
 
