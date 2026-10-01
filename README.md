@@ -1,3 +1,5 @@
+![OpenCDC, Open CDC Framework](assets/logo/opencdc-banner-dark.svg)
+
 # Open CDC Framework
 
 **An open source framework for building and maturing Security Operations Centers (SOC) and Cyber Defence Centers (CDC) across the European Union.**

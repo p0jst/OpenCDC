@@ -26,8 +26,9 @@ theme:
   name: material
   custom_dir: overrides        # adds Open Graph / link-preview tags
   font: false            # system fonts only — no requests to Google Fonts
+  logo: assets/logo/opencdc-icon.svg
+  favicon: assets/logo/opencdc-favicon.png
   icon:
-    logo: material/shield-half-full
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
