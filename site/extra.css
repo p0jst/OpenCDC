@@ -169,17 +169,6 @@
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-/* Header logo: the owl icon is drawn for small sizes but needs more than
-   Material's 1.2rem to read; 2rem fills the 2.4rem header without growing it. */
-.md-header__button.md-logo {
-  margin: 0.2rem 0.2rem 0.2rem 0.4rem;
-  padding: 0;
-}
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 2rem;
-  width: auto;
-}
 
 /* Tab bar: quieter, with an accent underline on the active tab */
 .md-tabs {
