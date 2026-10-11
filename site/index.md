@@ -12,13 +12,12 @@ hide:
 # Build and mature your cyber defence
 
 <p class="ocdf-lead" markdown>
-**A free, practitioner-written framework for anyone responsible for detecting
-and responding to cyber attacks in the European Union**, whether you call it a
-SOC, a Cyber Defence Center, an IT-security team, or it is two people in IT. It
-sits between the standards and your organisation: NIST CSF 2.0 says what the
-security areas are, NIS2 says what you are obliged to do, and this framework
-says how to build and run the function that gets it done.
-[Is this for me?](#is-this-for-me)
+**A free framework for the people who detect and respond to cyber attacks in
+European organisations.** That might be a 24/7 Cyber Defence Center, or two
+people in IT who also look after security. The standards describe what good
+security covers, and NIS2 says what you are obliged to do. Neither tells you
+how to set up and run the team that does the work. That is what this framework
+is for. [Is this for me?](#is-this-for-me)
 </p>
 
 <div class="ocdf-cta" markdown>
@@ -41,38 +40,71 @@ says how to build and run the function that gets it done.
 
 </div>
 
-## What you get
+## Is this for me?
 
-Not just pages read once — working through OCDF produces a stack of concrete
-artefacts you take into your own documentation system and governance process:
+Probably, if part of your job is noticing attacks and dealing with them. The
+framework calls that work a *CDC*, whatever your team is called and however
+small it is. Every capability is marked with the smallest
+[tier](docs/tiers.md) it belongs to, so a team of two can see what matters now
+and what can wait.
 
-<div class="ocdf-outputs" markdown>
+<div class="grid cards ocdf-roles" markdown>
 
-<div markdown>
-<p class="ocdf-phase">Design</p>
+-   :material-account-wrench-outline:{ .lg .middle } **A small IT-security team**
 
-- **CDC charter** — mandate, scope and containment authority, signed before anything is bought. [Template](templates/cdc-charter-template.md)
-- **Target operating model** — in-house, MSSP, hybrid or shared, with the staffing arithmetic behind it. [Operating models](docs/operating-models.md)
-- **Regulatory applicability profile** — which of NIS2, GDPR, DORA, CRA and CER actually apply to you, and your national annex. [Regulatory profile selector](tools/regulatory-profile.html)
+    ---
 
-</div>
+    One to three people, and security is only part of the job. Start with what
+    to buy rather than build, and the four things nobody can do for you.
 
-<div markdown>
-<p class="ocdf-phase">Build</p>
+    [Start small →](docs/tiers.md#if-you-are-the-whole-security-function)
 
-- **Capability baseline** — where you stand today, function by function, with evidence behind every score. [Maturity self-assessment](tools/maturity-assessment.html)
-- **90-day action plan** — every gap with an owner and a due date. [Start here](docs/start-here.md)
-- **Detection portfolio** — use cases prioritised by your own threat profile, not a generic checklist. [Detection-as-code](docs/detection-as-code-deep-dive.md)
+-   :material-briefcase-outline:{ .lg .middle } **CISO or executive**
 
-</div>
+    ---
 
-<div markdown>
-<p class="ocdf-phase">Run</p>
+    Thirty minutes on what a CDC is for, what NIS2 expects of management, what
+    it costs, and what to ask the people running it.
 
-- **Annual operating calendar** — the recurring work that keeps a CDC from decaying after go-live. [Template](templates/annual-calendar-template.md)
-- **Evidence register** — what backs every maturity score, exportable as a spreadsheet for board reporting. [Maturity self-assessment](tools/maturity-assessment.html)
+    [Executive guide →](docs/executive-guide.md)
 
-</div>
+-   :material-hammer-wrench:{ .lg .middle } **Building a SOC or CDC**
+
+    ---
+
+    You have a mandate and a budget, or soon will. Seven steps take you from a
+    signed charter to a team with a working routine.
+
+    [Start building →](#start-building)
+
+-   :material-chart-timeline-variant:{ .lg .middle } **Running one already**
+
+    ---
+
+    Score what you have against the maturity criteria, reusing any SOC-CMM,
+    SIM3 or CIS assessment, and turn the gaps into a plan.
+
+    [Maturity self-assessment →](tools/maturity-assessment.html)
+
+-   :material-console:{ .lg .middle } **Analyst or engineer**
+
+    ---
+
+    The daily work: [triage](docs/alert-triage.md),
+    [detection-as-code](docs/detection-as-code-deep-dive.md),
+    [threat intelligence](docs/cti-deep-dive.md) and the
+    [playbook templates](templates/scenario-playbook-template.md).
+
+    [Running the CDC →](docs/cdc-operations.md)
+
+-   :material-scale-balance:{ .lg .middle } **Compliance or legal**
+
+    ---
+
+    Which of NIS2, GDPR, DORA, CRA and CER apply to you, what they ask of a
+    CDC, and the national rules in all 27 member states.
+
+    [EU regulatory landscape →](docs/eu-regulatory-landscape.md)
 
 </div>
 
@@ -103,161 +135,28 @@ artefacts you take into your own documentation system and governance process:
 <p class="m-loop"><span class="m-loop-label" aria-hidden="true">Lessons learned</span><span class="m-loop-text">↺ Lessons learned in RECOVER feed the next round of IDENTIFY</span></p>
 
 <p class="m-lenses" markdown>
-Seen through the [**CIA triad**](docs/cia-triad.md) and the
-[**regulatory layer**](docs/eu-regulatory-landscape.md) (NIS2, GDPR, DORA,
-CRA, CER and 27 national annexes) · sized by [**tier**](docs/tiers.md)
-(E · S · A) · scored by [**level**](docs/maturity-model.md) (1–4) and recorded
-in an [**evidence register**](tools/maturity-assessment.html) · built in the order
-people › process › technology.
+Each capability is also read through the [**CIA triad**](docs/cia-triad.md)
+and the [**regulatory layer**](docs/eu-regulatory-landscape.md): NIS2, GDPR,
+DORA, CRA, CER and the national rules of all 27 member states. People and
+process come before technology in every build sequence.
 </p>
 
 </div>
 
-Every function has the same parts: capabilities with IDs such as `DE-2`,
-scored maturity criteria, EU regulatory hooks, and a table of the other
-departments it depends on. Level 2 in every function is also the NIS2 floor:
-it covers each measure the law requires, as mapped in the
-[NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md). [OCDF on one page](docs/one-page.md) explains all
-the terms in five minutes.
-
-## See OCDF in action
-
-A fictional 2,500-person parcel company goes from fragmented security work to
-a structured, evidenced CDC: tier decision, operating model, signed charter,
-first 90 days with owners, a ten-detection portfolio and the first board
-report. Every step is in the [worked example](docs/worked-example.md).
-
-<div class="ocdf-case" markdown>
-
-<ul class="ocdf-case__facts">
-<li><b>2,500</b> employees</li>
-<li><b>14</b> sites, night operations</li>
-<li>NIS2 <b>important</b> entity</li>
-<li><b>Standard</b> tier</li>
-<li><b>Hybrid</b> operating model</li>
-</ul>
-
-<div class="ocdf-example" markdown>
-
-<div class="ocdf-example__before" markdown>
-<p class="ocdf-example__label">Before</p>
-
-- Fragmented responsibilities
-- No clear containment authority
-- Reactive detection
-- Undefined regulatory ownership
-</div>
-
-<div class="ocdf-example__arrow" aria-hidden="true"></div>
-
-<div class="ocdf-example__after" markdown>
-<p class="ocdf-example__label">After</p>
-
-- Defined mandate and charter
-- Chosen operating model
-- Capability baseline and 90-day plan
-- Maturity targets and evidence
-</div>
-
-</div>
-
-<div class="ocdf-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 1, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
-<p class="ocdf-levels__title">Maturity after 12 weeks <span><i class="now"></i>Level now <i class="target"></i>Target</span></p>
-<div><b>Govern</b><span><i class="n"></i><i></i><i class="t"></i><i></i></span></div>
-<div><b>Identify</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
-<div><b>Protect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
-<div><b>Detect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
-<div><b>Respond</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
-<div><b>Recover</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
-<p class="ocdf-levels__scale" aria-hidden="true"><span>L1</span><span>L2</span><span>L3</span><span>L4</span></p>
-</div>
-
-</div>
-
-[Explore the worked example →](docs/worked-example.md){ .md-button }
-
-## Is this for me?
-
-If you are responsible for detecting and responding to cyber attacks, yes. You
-do not need a department called SOC or CDC: in this framework *CDC* names the
-function, not the size of the team. Every capability is tagged with the smallest
-[tier](docs/tiers.md) that should implement it, so you can see what applies to
-you now and what can wait.
-
-- **1–3 people doing IT security, often alongside other IT duties.** Start with
-  [if you are the whole security function](docs/tiers.md#if-you-are-the-whole-security-function)
-  and the Essential tier, then the [first 90 days](docs/start-here.md), the
-  [IR plan template](templates/incident-response-plan-template.md) and the
-  [regulatory selector](tools/regulatory-profile.html). Leave the deep dives
-  for later.
-- **Building a dedicated security team**, in-house, with a provider, or both.
-  Follow the seven steps under [Start building](#start-building), with
-  [operating models](docs/operating-models.md) for the staffing and budget case.
-- **Maturing an existing SOC or CDC.** Begin with the
-  [maturity self-assessment](tools/maturity-assessment.html), reusing any
-  SOC-CMM, SIM3 or CIS assessment you already have, then
-  [running the CDC](docs/cdc-operations.md).
-
-## Where are you coming from?
-
-<div class="grid cards ocdf-roles" markdown>
-
--   :material-account-wrench-outline:{ .lg .middle } **IT security in a small team**
-
-    ---
-
-    One to three people, often with other IT duties too. The Essential tier,
-    what to buy rather than build, and the four things you must own yourself.
-
-    [Start small →](docs/tiers.md#if-you-are-the-whole-security-function)
-
--   :material-briefcase-outline:{ .lg .middle } **CISO or executive**
-
-    ---
-
-    The 30-minute version: why a CDC, what NIS2 asks of management, staffing
-    and cost drivers, what you can and cannot outsource, and the questions to
-    ask your SOC.
-
-    [Executive guide →](docs/executive-guide.md)
-
--   :material-shield-account-outline:{ .lg .middle } **SOC or CDC manager**
-
-    ---
-
-    Build and mature the function: the first 90 days in order, the operating
-    model decision, the templates, and a maturity assessment that turns into an
-    action plan.
-
-    [Start building →](#start-building)
-
--   :material-console:{ .lg .middle } **Analyst or engineer**
-
-    ---
-
-    The operational detail: [detection](docs/detect.md),
-    [detection-as-code](docs/detection-as-code-deep-dive.md), the
-    [CTI capability](docs/cti-deep-dive.md) and the
-    [playbook templates](templates/scenario-playbook-template.md).
-
-    [Running the CDC →](docs/cdc-operations.md)
-
--   :material-scale-balance:{ .lg .middle } **Compliance or legal**
-
-    ---
-
-    NIS2, GDPR, DORA, CRA and CER mapped to CDC capabilities, national annexes
-    for all 27 member states, and a selector that shows only the laws that
-    apply to you.
-
-    [EU regulatory landscape →](docs/eu-regulatory-landscape.md)
-
-</div>
+Every function page has the same parts: capabilities with IDs like `DE-2`,
+maturity criteria, the EU rules that apply, and the other departments it
+depends on. Reaching Level 2 in every function also covers what NIS2 requires,
+as the [NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) shows. If
+the terms are new, [OCDF on one page](docs/one-page.md) explains them in five
+minutes.
 
 ## Start building
 
-Seven steps, each with the page or tool that does it. See them carried out for a
-fictional 2,500-person organisation in the [worked example](docs/worked-example.md).
+Seven steps, from deciding how much of the framework you need to the routine
+that keeps the work going. Each one leaves you with a document you keep: a
+signed charter, a scored baseline, a plan with names and dates on it. They go
+into your own document system and governance process, and none of them depends
+on this website.
 
 <div class="ocdf-path" markdown>
 
@@ -280,7 +179,7 @@ fictional 2,500-person organisation in the [worked example](docs/worked-example.
 
 5.  **Assess where you are.** Score the maturity criteria and give every gap an
     owner and a due date. [Maturity self-assessment](tools/maturity-assessment.html)
-    <span class="ocdf-output">Output: scored baseline and an owned action plan</span>
+    <span class="ocdf-output">Output: scored baseline with evidence, and an action plan with owners</span>
 6.  **Work the first 90 days.** The order of work, week by week, with exit
     criteria. [Start here](docs/start-here.md)
     <span class="ocdf-output">Output: day-90 exit criteria met</span>
@@ -295,24 +194,83 @@ fictional 2,500-person organisation in the [worked example](docs/worked-example.
 
 </div>
 
-The [templates](templates/index.md) are plain documents to copy and adapt. The
-three [browser tools](tools/README.md) run entirely in your browser: nothing you
-enter is sent anywhere. The whole framework is on [GitHub](https://github.com/p0jst/OpenCDC)
-under CC BY 4.0, also as a
+## See it worked through
+
+Exempla Parcel is invented, but its starting point is common: 2,500
+employees, sorting that runs all night, four people in IT security and no SOC.
+The [worked example](docs/worked-example.md) takes it through the seven steps,
+from the tier decision to its first board report.
+
+<div class="ocdf-case" markdown>
+
+<ul class="ocdf-case__facts">
+<li><b>2,500</b> employees</li>
+<li><b>14</b> sites, night operations</li>
+<li>NIS2 <b>important</b> entity</li>
+<li><b>Standard</b> tier</li>
+<li><b>Hybrid</b> operating model</li>
+</ul>
+
+<div class="ocdf-example" markdown>
+
+<div class="ocdf-example__before" markdown>
+<p class="ocdf-example__label">Before</p>
+
+- Security spread across four people, with no shared plan
+- No agreement on who may contain what
+- Alerts looked at when someone had time
+- Nobody named for NIS2 reporting
+</div>
+
+<div class="ocdf-example__arrow" aria-hidden="true"></div>
+
+<div class="ocdf-example__after" markdown>
+<p class="ocdf-example__label">After</p>
+
+- A signed charter with containment authority
+- A daytime team, and a provider for nights
+- A scored baseline and a 90-day plan
+- Maturity targets agreed with the board
+</div>
+
+</div>
+
+<div class="ocdf-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 1, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
+<p class="ocdf-levels__title">Maturity after 12 weeks <span><i class="now"></i>Level now <i class="target"></i>Target</span></p>
+<div><b>Govern</b><span><i class="n"></i><i></i><i class="t"></i><i></i></span></div>
+<div><b>Identify</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
+<div><b>Protect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Detect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Respond</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
+<div><b>Recover</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
+<p class="ocdf-levels__scale" aria-hidden="true"><span>L1</span><span>L2</span><span>L3</span><span>L4</span></p>
+</div>
+
+</div>
+
+[Read the worked example →](docs/worked-example.md){ .md-button }
+
+The [templates](templates/index.md) are plain documents to copy and change.
+The three [browser tools](tools/README.md) run entirely in your browser, and
+nothing you type into them is sent anywhere. Everything is on
+[GitHub](https://github.com/p0jst/OpenCDC) under CC BY 4.0, or as a
 [zip download](https://github.com/p0jst/OpenCDC/archive/refs/heads/main.zip).
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.1.0**, released 23 September 2026 ([changelog](CHANGELOG.md)) ·
-maintained by Frederik B. Krogsgaard, former Senior Manager at the Norlys
-Cyber Defence Center. An independent, practitioner-led project. Each national annex states
-when it was last reviewed and how confident that review is; see
-[why you can, and cannot, rely on this framework](docs/trust.md).
+**Version 1.1.0**, released 23 September 2026. See the [changelog](CHANGELOG.md).
+Written and maintained by Frederik B. Krogsgaard, formerly Senior Manager at
+the Norlys Cyber Defence Center, as an independent personal project. Each
+national annex says when it was last reviewed and how confident that review
+is, and [why trust this framework](docs/trust.md) sets out what you can and
+cannot rely on.
 
-**Scope: enterprise IT**: endpoints, servers, identity, cloud and SaaS, with limited cloud-specific depth so far. Not
-designed for OT/ICS, telco core networks or classified environments ([why](ABOUT.md));
-running critical infrastructure, see
+**Scope: enterprise IT.** Endpoints, servers, identity, cloud and SaaS, with
+limited cloud-specific depth so far. It is not designed for OT/ICS, telco core
+networks or classified environments, and [About](ABOUT.md) explains why. If you
+run critical infrastructure, see
 [what still applies](ABOUT.md#if-you-run-critical-infrastructure) and
-[the IT/OT interface](docs/it-ot-interface.md). Orientation only, not legal advice.
+[the IT/OT interface](docs/it-ot-interface.md). Orientation only, not legal
+advice.
 
 </div>

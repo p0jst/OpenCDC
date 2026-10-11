@@ -1344,7 +1344,15 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .cap-filter output { color: var(--ocdf-ink-soft); margin-left: auto; }
 .md-typeset .grid.cards.ocdf-roles {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr));
+  /* Six roles: three across on a wide screen, two on a tablet, one on a phone,
+     so no card is ever left alone on a row. */
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 59.9375em) {
+  .md-typeset .grid.cards.ocdf-roles { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 29.9375em) {
+  .md-typeset .grid.cards.ocdf-roles { grid-template-columns: 1fr; }
 }
 
 /* ------------------------------------------ landing: hero assurances */
@@ -1521,3 +1529,43 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   font-size: 0.66rem;
   color: var(--ocdf-ink-soft);
 }
+
+/* Diagrams. Each is published as a light and a dark SVG, tagged with GitHub's
+   #gh-light-mode-only / #gh-dark-mode-only fragments; show the copy that
+   matches the site's own colour toggle, and let it use the full text width. */
+[data-md-color-scheme="default"] .md-typeset img[src$="#gh-dark-mode-only"],
+[data-md-color-scheme="slate"] .md-typeset img[src$="#gh-light-mode-only"] {
+  display: none;
+}
+.md-typeset img[src*="assets/diagrams/"] {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.2em 0;
+}
+.md-typeset details > summary {
+  cursor: pointer;
+  color: var(--ocdf-ink-soft);
+}
+
+/* Dependency markers. overrides/main.html wraps the literal [GATE], [HARD] and
+   [SOFT] in the documents in a span, so the Markdown stays plain and GitHub
+   still shows the bracketed text. Gate is the strongest: someone else decides. */
+.md-typeset .ocdf-dep {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  border-radius: 0.25em;
+  font-family: var(--md-code-font-family, "IBM Plex Mono", monospace);
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: 0.08em;
+  cursor: help;
+}
+.md-typeset .ocdf-dep--gate { background: var(--ocdf-accent); color: #fff; }
+.md-typeset .ocdf-dep--hard { background: var(--ocdf-eu); color: #fff; }
+.md-typeset .ocdf-dep--soft { border: 1px solid var(--ocdf-ink-soft); color: var(--ocdf-ink-soft); }
+[data-md-color-scheme="slate"] .md-typeset .ocdf-dep--gate { background: #e39aa4; color: #1a1014; }
+[data-md-color-scheme="slate"] .md-typeset .ocdf-dep--hard { background: #8fb3e3; color: #0d1720; }

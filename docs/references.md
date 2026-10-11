@@ -30,6 +30,8 @@ This framework synthesises and builds upon the following publicly available work
 - **CER**: Directive (EU) 2022/2557. https://eur-lex.europa.eu/eli/dir/2022/2557/oj
 - **Cybersecurity Act**: Regulation (EU) 2019/881. https://eur-lex.europa.eu/eli/reg/2019/881/oj
 - Commission Implementing Regulation (EU) 2024/2690, on NIS2 technical requirements for certain digital entities.
+- **AI Act**: Regulation (EU) 2024/1689. https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+- **Digital Omnibus on AI**: Regulation (EU) 2026/1744, amending the AI Act. https://eur-lex.europa.eu/eli/reg/2026/1744/oj
 
 ## ENISA
 
@@ -79,6 +81,8 @@ This framework synthesises and builds upon the following publicly available work
 - CIS, *CIS Critical Security Controls* and *CIS Benchmarks*. The Implementation Groups pattern inspired OCDF's tier overlay. https://www.cisecurity.org
 - Sigma, a generic signature format for SIEM detections; pySigma converters. https://github.com/SigmaHQ/sigma
 - MITRE ATT&CK Navigator, for coverage layers. https://mitre-attack.github.io/attack-navigator/
+- MITRE ATLAS, *Adversarial Threat Landscape for Artificial-Intelligence Systems*. https://atlas.mitre.org
+- OWASP GenAI Security Project, *Top 10 for LLM Applications*. https://genai.owasp.org
 - Red Canary, Atomic Red Team, an attack emulation library. https://github.com/redcanaryco/atomic-red-team
 - CISA, Known Exploited Vulnerabilities catalog. https://www.cisa.gov/known-exploited-vulnerabilities-catalog
 - MISP Project. https://www.misp-project.org

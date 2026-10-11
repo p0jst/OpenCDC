@@ -25,7 +25,8 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 3. One logical change per PR; keep the document structure intact for function docs: Objective, Capabilities, CIA mapping, Roles & staffing, Maturity, EU hooks, External dependencies, Sources.
 4. **Maturity criteria** are edited only in `assessments/maturity-self-assessment.md`, then mirrored in the tool's `CATALOG`. Any change to a criterion is a scoring change: note it in the changelog, and if it moves or adds criteria, raise `CRITERIA_SET` and extend the migration map in the tool.
 5. Run `python tools/check_consistency.py` before opening the pull request; the site build runs it too and fails on drift.
-6. A maintainer will review for accuracy, neutrality, and attribution before merging.
+6. **Diagrams** are generated, not drawn: edit `tools/build_diagrams.py` and run `python tools/build_diagrams.py`, which writes a light and a dark SVG per diagram to `assets/diagrams/`. Do not edit the SVG files by hand.
+7. A maintainer will review for accuracy, neutrality, and attribution before merging.
 
 ## Licensing of contributions
 

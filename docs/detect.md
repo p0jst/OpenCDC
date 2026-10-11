@@ -12,7 +12,7 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 |----|-----------|-------------|
 | DE-1 | Log collection & management | Prioritised onboarding of log sources, covering identity, endpoint, network, cloud, email and critical applications, into a central platform; retention policy; time synchronisation; log integrity protection. |
 | DE-2 | Detection engineering | A managed lifecycle for detection use cases: idea → develop → test → deploy → tune → retire. Each use case mapped to MITRE ATT&CK techniques and to the threat profile from IDENTIFY. |
-| DE-3 | Alert triage & analysis | Documented triage process, severity matrix, enrichment with asset criticality, identity context and threat intel, and escalation criteria. |
+| DE-3 | Alert triage & analysis | Documented triage process, severity matrix, enrichment with asset criticality, identity context and threat intel, and escalation criteria. The decisions behind it are in [Designing alert triage](alert-triage.md). |
 | DE-4 | Coverage assessment | Periodic measurement of detection coverage against ATT&CK and against crown-jewel assets; gap-driven engineering backlog. |
 | DE-5 | Threat hunting | Hypothesis-driven hunts based on threat intel; findings convert into new detections. |
 | DE-6 | Detection validation | Testing that detections actually fire: unit tests, purple teaming, adversary emulation. |

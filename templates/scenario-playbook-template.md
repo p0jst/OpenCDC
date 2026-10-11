@@ -38,7 +38,7 @@
 2. […]
 3. […]
 
-**Verification outcome:** continue, stop or defer, per IR plan §3. The evidence that decides it for this scenario: […] *What confirms it, and what would rule it out. Start the reporting assessment in section 7 in parallel; do not wait for verification to finish.*
+**Verification outcome:** continue, stop or defer, per IR plan §3, recorded with the [triage record](../docs/alert-triage.md#triage-record-template). The evidence that decides it for this scenario: […] *What confirms it, and what would rule it out. Start the reporting assessment in section 7 in parallel; do not wait for verification to finish.*
 
 **Decision point:** […] *The fork that decides the rest of the response, for example evidence-priority versus containment-priority, and who makes that call.*
 

@@ -33,6 +33,9 @@ Security requirements for **products with digital elements** placed on the EU ma
 ### CER — Directive (EU) 2022/2557
 Resilience of critical entities, the physical, all-hazards counterpart of NIS2. Relevant for critical infrastructure operators' crisis-management interface.
 
+### AI Act — Regulation (EU) 2024/1689
+Rules for AI systems placed on the market or used in the EU, amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744. AI literacy under Art. 4 and the prohibited practices under Art. 5 have applied since **2 February 2025**; the obligations for high-risk systems listed in Annex III apply from **2 December 2027**. CDC relevance: a CDC using AI tools is normally a deployer; emotion recognition in the workplace is prohibited; AI that monitors and evaluates the behaviour of people at work is listed as high-risk, and whether employee behaviour analytics for security falls under that listing is not settled. See [AI in the CDC](ai-in-the-cdc.md#what-the-law-says).
+
 ### Cybersecurity Act — Regulation (EU) 2019/881
 ENISA's permanent mandate and the EU cybersecurity certification framework, such as EUCC. Relevant for procurement and assurance.
 
@@ -60,6 +63,8 @@ ENISA's permanent mandate and the EU cybersecurity certification framework, such
 - DORA: Regulation (EU) 2022/2554: https://eur-lex.europa.eu/eli/reg/2022/2554/oj
 - CRA: Regulation (EU) 2024/2847: https://eur-lex.europa.eu/eli/reg/2024/2847/oj
 - CER: Directive (EU) 2022/2557: https://eur-lex.europa.eu/eli/dir/2022/2557/oj
+- AI Act: Regulation (EU) 2024/1689: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+- Digital Omnibus on AI: Regulation (EU) 2026/1744: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
 - **Cybersecurity Act**: Regulation (EU) 2019/881: https://eur-lex.europa.eu/eli/reg/2019/881/oj
 - ENISA: https://www.enisa.europa.eu
 

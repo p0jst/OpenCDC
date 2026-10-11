@@ -52,6 +52,8 @@ Cross-cutting documents, in reading order:
 | [Operating Models](docs/operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs, what can never be outsourced, and the staffing arithmetic and cost template for the budget round |
 | [Roles & Competences](docs/roles-and-competences.md) | CDC roles, skills matrix, career paths and hiring, built on the ENISA ECSF |
 | [Running the CDC](docs/cdc-operations.md) | The loops that keep a live CDC improving: tuning, detection-as-code, team development, automation guardrails, tool discipline |
+| [Designing Alert Triage](docs/alert-triage.md) | Who may decide what, the minimum triage record, one set of outcomes, what to automate, how quality is checked |
+| [AI in the CDC](docs/ai-in-the-cdc.md) | Where AI helps and where to avoid it, by team size; AI in the adversary's hands; AI systems as assets; the AI Act |
 | [Deep Dive: Detection-as-Code](docs/detection-as-code-deep-dive.md) | Repo layout, rule YAML anatomy, CI/CD pipeline, honest ATT&CK coverage scoring, Advanced tier |
 | [Deep Dive: CTI Capability](docs/cti-deep-dive.md) | Strategic/operational/tactical intelligence and the interfaces that feed the CDC, Advanced tier |
 | [CSIRT Community Layer](docs/csirt-community.md) | RFC 2350, TF-CSIRT/FIRST, SIM3 crosswalk for certification, living documentation |

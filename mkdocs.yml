@@ -154,6 +154,8 @@ nav:
       - Operating models: docs/operating-models.md
       - Roles & competences: docs/roles-and-competences.md
       - Running the CDC: docs/cdc-operations.md
+      - Designing alert triage: docs/alert-triage.md
+      - AI in the CDC: docs/ai-in-the-cdc.md
       - The IT/OT interface: docs/it-ot-interface.md
       - Deep dives:
           - Detection-as-code: docs/detection-as-code-deep-dive.md

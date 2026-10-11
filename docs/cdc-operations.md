@@ -11,7 +11,7 @@ Untuned detection rots: alert volume grows, true-positive rate falls, analysts n
 **The loop, on a weekly cadence:**
 
 1. **Measure per use case:** alerts/week, true-positive rate, time-to-triage. The use-case template's metrics block is the record.
-2. **Triage feedback channel:** every closed alert carries a disposition: TP, FP-tunable, FP-accepted or benign-true-positive. Analysts flag tuning candidates in one click; friction here kills the loop.
+2. **Triage feedback channel:** every closed alert carries a verdict from the [closure taxonomy](respond.md#case-closure-taxonomy), and every false positive a reason: rule defect, to be tuned, or benign activity, to be accepted or given a scoped exception. [Designing alert triage](alert-triage.md) sets out the outcomes and the record behind them. Analysts flag tuning candidates in one click; friction here kills the loop.
 3. **Weekly tuning review, 30–60 min:** detection engineer and senior analyst walk the worst offenders: top noise, zero-fire rules, missed-detection post-mortems.
 4. **Change with review:** every tuning change is a reviewed commit, as in detection-as-code, with rationale. "Who silenced this and why" must be answerable a year later.
 5. **Suppression governance:** suppressions/allowlists carry an owner and an expiry date; expired suppressions resurface automatically. Unowned permanent suppressions are how real intrusions get pre-silenced.
@@ -59,6 +59,8 @@ Automation is how a small team survives alert volume without burning out its ana
 6. Measure automation like a control: % alerts auto-enriched · % auto-closed with sampled QA error rate · analyst minutes saved per week · rollback count on automated actions.
 
 A playbook that cannot be executed manually should not be automated yet. Automation encodes a working process, it does not substitute for one.
+
+The guardrails above cover AI inside triage and investigation. [AI in the CDC](ai-in-the-cdc.md) covers the wider picture: which uses fit which team size, AI in the adversary's hands, AI systems as assets to protect, and the AI Act.
 
 ## 5. Tool portfolio discipline
 

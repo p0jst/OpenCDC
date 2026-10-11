@@ -47,6 +47,43 @@
       if (m) document.body.classList.add("ocdf-fn-" + m[1]);
     })();
   </script>
+  {#
+    Dependency markers. The documents write [GATE], [HARD] and [SOFT] as plain
+    text so they read the same on GitHub; on the website each becomes a small
+    coloured badge with its meaning on hover. Code blocks are left alone.
+  #}
+  <script>
+    (function () {
+      var meaning = {
+        GATE: "Gatekeeper: another party holds the decision",
+        HARD: "Hard block: needs another team's action",
+        SOFT: "Soft block: input improves quality, work can proceed"
+      };
+      var root = document.querySelector(".md-content .md-typeset");
+      if (!root) return;
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode: function (n) {
+          if (!/\[(GATE|HARD|SOFT)\]/.test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
+          return n.parentNode.closest("pre, code, a") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (n) {
+        var frag = document.createDocumentFragment();
+        n.nodeValue.split(/(\[(?:GATE|HARD|SOFT)\])/).forEach(function (part) {
+          var k = /^\[(GATE|HARD|SOFT)\]$/.exec(part);
+          if (!k) { if (part) frag.appendChild(document.createTextNode(part)); return; }
+          var span = document.createElement("span");
+          span.className = "ocdf-dep ocdf-dep--" + k[1].toLowerCase();
+          span.title = meaning[k[1]];
+          span.textContent = k[1];
+          frag.appendChild(span);
+        });
+        n.parentNode.replaceChild(frag, n);
+      });
+    })();
+  </script>
 {% endblock %}
 
 {% block footer %}

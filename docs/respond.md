@@ -24,13 +24,10 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 
 Incidents do not run in a straight line from detection to lessons learned. Every contained host and every analysed artefact changes what the team knows, and the response has to follow. OCDF structures incident handling on DAIR, with the adjustments below for European reporting duties.
 
-| Waypoint | Purpose | What it produces |
-|----------|---------|------------------|
-| Prepare | Plan, playbooks, decision authority, tools and exercises in place before the incident | RS-1, RS-2, RS-7 and the [containment action catalogue](../templates/containment-action-catalogue-template.md) |
-| Detect | Events of interest found through monitoring, hunting and reports | An alert or report to verify |
-| Verify and triage | Establish whether the event is an incident, and how much response it warrants | Continue, stop or defer; an initial severity; the reporting assessment started |
-| Response loop | Scope, contain, eradicate and recover, repeated until no new evidence of compromise appears | A scoped, contained and eradicated incident, and services restored |
-| Debrief | Close the incident and turn it into improvement | One consolidated record, the root cause, tracked actions and the final reports |
+[![How an incident moves: prepare, detect, a verify-and-triage gate that continues, stops or defers, the response loop of scope, contain, eradicate and recover, a written exit decision and a debrief whose lessons feed preparation](../assets/diagrams/respond-incident-flow-light.svg#gh-light-mode-only)](../assets/diagrams/respond-incident-flow-light.svg)
+[![How an incident moves: prepare, detect, a verify-and-triage gate that continues, stops or defers, the response loop of scope, contain, eradicate and recover, a written exit decision and a debrief whose lessons feed preparation](../assets/diagrams/respond-incident-flow-dark.svg#gh-dark-mode-only)](../assets/diagrams/respond-incident-flow-dark.svg)
+
+Preparation is RS-1, RS-2 and RS-7 and the [containment action catalogue](../templates/containment-action-catalogue-template.md). The other waypoints are described below.
 
 Decision-makers take part throughout, not only at escalation. They tell the team which systems and data matter most, what disruption is acceptable and which obligations apply. Incident management, meaning the coordination, communication and decisions around the response, runs alongside the technical work. In a small CDC one person may do both; in a major incident they are different people, as described under roles below.
 
@@ -41,6 +38,8 @@ Verification is a gate: it keeps the organisation from spending a full response 
 - **Continue.** The incident is real. Open the incident record, assign an incident manager, and present it to the decision-maker with a severity and a recommendation.
 - **Stop.** The event is benign or a false positive. Record what triggered it, what ruled out compromise, and which data and time window were examined, then add the source to the known false-positive list. The case closes under the closure taxonomy below.
 - **Defer.** There is not enough information. Record what is missing, who is getting it, and when the next decision is due.
+
+[Designing alert triage](alert-triage.md) sets out who may take each of these decisions, the minimum record behind them, and how the outcomes map to the closure taxonomy.
 
 Two adjustments for European law:
 
@@ -124,6 +123,9 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 ## EU statutory reporting timelines — build these into playbooks
 
 <p class="src" markdown><span class="src-tag law">Law</span>From the legal texts; national transpositions may add detail. Not legal advice.</p>
+
+[![EU reporting clocks after an incident: NIS2, GDPR, DORA and CER deadlines from awareness, from without undue delay through 4 hours, 24 hours and 72 hours to one month](../assets/diagrams/respond-reporting-clocks-light.svg#gh-light-mode-only)](../assets/diagrams/respond-reporting-clocks-light.svg)
+[![EU reporting clocks after an incident: NIS2, GDPR, DORA and CER deadlines from awareness, from without undue delay through 4 hours, 24 hours and 72 hours to one month](../assets/diagrams/respond-reporting-clocks-dark.svg#gh-dark-mode-only)](../assets/diagrams/respond-reporting-clocks-dark.svg)
 
 | Regime | Trigger | Deadline | Recipient |
 |--------|---------|----------|-----------|

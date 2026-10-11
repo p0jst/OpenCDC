@@ -70,7 +70,13 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span>A sequence of constraints, not a score. Work down it and stop where a question decides the answer.</p>
 
-The operating model is usually decided by one or two hard constraints, not by adding up preferences. Take the questions in order:
+The operating model is usually decided by one or two hard constraints, not by adding up preferences. Take the questions in order, and stop where one decides the answer:
+
+[![Decision path for the operating model: five questions in order, each leading to model A, B, C or a hybrid](../assets/diagrams/operating-model-decision-path-light.svg#gh-light-mode-only)](../assets/diagrams/operating-model-decision-path-light.svg)
+[![Decision path for the operating model: five questions in order, each leading to model A, B, C or a hybrid](../assets/diagrams/operating-model-decision-path-dark.svg#gh-dark-mode-only)](../assets/diagrams/operating-model-decision-path-dark.svg)
+
+<details markdown>
+<summary>The five questions in full</summary>
 
 1. **Is any log data legally or contractually barred from leaving the organisation or the country?**
    Yes → keep those sources in-house (**B** or **C**). A provider can still hold the watch over everything else, as a hybrid.
@@ -84,6 +90,8 @@ The operating model is usually decided by one or two hard constraints, not by ad
    Neither → **A**, with 1–3 internal people.
 5. **Does triage need deep business knowledge**, such as bespoke applications, fraud patterns or systems next to OT?
    Yes → whatever the model, keep triage of those alerts in-house.
+
+</details>
 
 Two things to settle whichever way the path goes:
 
@@ -100,6 +108,11 @@ A budget round needs numbers, and the numbers that matter most are specific to y
 
 A *seat* is one analyst at the console at any given moment. Covering one seat around the clock means covering every hour of the year; each person you employ works far fewer than that.
 
+[![Why one 24/7 seat takes about 5.6 people: one person's 1,924 contract hours minus leave, holidays, sickness and training leave 1,576 hours; 8,760 hours of cover divided by 1,576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-light.svg#gh-light-mode-only)](../assets/diagrams/operating-model-staffing-light.svg)
+[![Why one 24/7 seat takes about 5.6 people: one person's 1,924 contract hours minus leave, holidays, sickness and training leave 1,576 hours; 8,760 hours of cover divided by 1,576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-dark.svg#gh-dark-mode-only)](../assets/diagrams/operating-model-staffing-dark.svg)
+
+The calculation, to redo with your own numbers:
+
 | Step | Formula | Example, Danish full-time contract |
 |------|---------|------------------------------------|
 | Hours to cover per seat | 24 × 365 | 8,760 h |
@@ -113,7 +126,8 @@ A *seat* is one analyst at the console at any given moment. Covering one seat ar
 
 Replace every number in the example column with your own. With six weeks of leave, or a higher absence rate, the answer moves towards 6. It never gets close to the "four or five people on a rota" that 24/7 plans often assume.
 
-Then build the line from seats:
+<details markdown>
+<summary>The 24/7 line, seat by seat</summary>
 
 | Line | Hours per year | FTE, using 1,576 h |
 |------|----------------|--------------------|
@@ -122,6 +136,8 @@ Then build the line from seats:
 | Detection engineering, off the shift rota | — | 1–2 |
 | Team lead or manager | — | 1 |
 | **Total** | | **≈ 9–10** |
+
+</details>
 
 That is where the framework's 8–12 FTE for a 24/7 in-house line comes from. A second seat at night as well adds another 4 FTE. Two further constraints bite in practice: the EU Working Time Directive and national rules limit night work and require rest periods, which shapes the rota, and a rota with fewer than about six people leaves no slack when someone resigns.
 

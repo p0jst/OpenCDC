@@ -32,6 +32,8 @@ introduction.
 | [Operating models](operating-models.md) | MSSP / tiered / capability-based / shared |
 | [Roles & competences](roles-and-competences.md) | ECSF-based roles & skills |
 | [Running the CDC](cdc-operations.md) | Tuning, detection-as-code, team, automation, tools |
+| [Designing alert triage](alert-triage.md) | Decision rights, the minimum triage record, one set of outcomes, automation split, quality checks |
+| [AI in the CDC](ai-in-the-cdc.md) | AI uses by team size, AI in the adversary's hands, AI systems as assets, the AI Act |
 | [The IT/OT interface](it-ot-interface.md) | What the CDC owns at the OT boundary, handover to OT operations, Danish energy coverage |
 | [Detection-as-code deep dive](detection-as-code-deep-dive.md) | Advanced: engineering manual |
 | [CTI deep dive](cti-deep-dive.md) | Advanced: CTI programme |
