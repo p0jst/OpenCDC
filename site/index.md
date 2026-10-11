@@ -7,7 +7,7 @@ hide:
 
 <div class="ocdf-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>v1.1.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
+<p class="ocdf-eyebrow"><span>v1.2.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
 
 # Build and mature your cyber defence
 
@@ -258,7 +258,7 @@ nothing you type into them is sent anywhere. Everything is on
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.1.0**, released 23 September 2026. See the [changelog](CHANGELOG.md).
+**Version 1.2.0**, released 11 October 2026. See the [changelog](CHANGELOG.md).
 Written and maintained by Frederik B. Krogsgaard, formerly Senior Manager at
 the Norlys Cyber Defence Center, as an independent personal project. Each
 national annex says when it was last reviewed and how confident that review

@@ -7,7 +7,7 @@
 It is for anyone responsible for detecting and responding to cyber attacks, whatever the team is called: a SOC, a CDC, an IT-security team, or two people in IT who also run the servers. "CDC" in this framework names the function, not the size of the department. Not sure where you fit? See [Is this for me?](#is-this-for-me)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![Version](https://img.shields.io/badge/version-v1.1.0-blue)
+![Version](https://img.shields.io/badge/version-v1.2.0-blue)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 **📖 Read the framework as a website: <https://opencdc.org/>** for searchable docs, interactive tools and template downloads.

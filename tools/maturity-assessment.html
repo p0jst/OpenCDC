@@ -1206,7 +1206,7 @@ document.getElementById("export-plan").addEventListener("click", exportPlan);
  * count and nothing else.
  * ------------------------------------------------------------------ */
 const BENCH_EMAIL = "benchmark@opencdc.org";
-const FRAMEWORK_VERSION = "1.1.0";
+const FRAMEWORK_VERSION = "1.2.0";
 let bench = null, benchErr = "";
 let benchGroup = "";
 fetch("benchmark.json", {cache:"no-cache"}).then(r => r.ok ? r.json() : Promise.reject(r.status))

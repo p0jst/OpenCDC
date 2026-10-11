@@ -14,6 +14,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 ## Release history
 - `v1.0.0` — 2026-09-02. First stable release.
 - `v1.1.0` — 2026-09-23. Usability and scoring release; two DETECT criteria changed.
+- `v1.2.0` — 2026-10-11. Review release: criteria set 2 with the NIS2 legal floor at Level 2, 71 criteria; incident handling on DAIR; the IT/OT interface; alert triage and AI in the CDC; the first diagrams; plainer front page and README.
 
 ## Community benchmark
 
@@ -26,7 +27,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 3. Announce on community channels before broadcast channels.
 
 ## Cutting a release
-1. Update the version in six places: the README badge, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, on the landing page `site/index.md` both the eyebrow line and the "How current is this" box, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
+1. Update the version in six places: the README badge, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, on the landing page `site/index.md` both the eyebrow line and the version line in the footer box, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
 2. Push to `main`; confirm the Pages workflow deployed and the site is live.
 3. Create the release on GitHub, tag `vX.Y.Z` targeting `main`, and paste the notes. Keep the status-and-limitations section; it is what stops a reader treating the regulatory content as audited.
 
