@@ -1,7 +1,7 @@
 # National Annex — Austria
 
 <!-- countries:begin -->
-> **Status as of October 2026:** In force from 1 October 2026. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
@@ -17,7 +17,7 @@
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Netz- und Informationssystemsicherheitsgesetz 2026 (NISG 2026), BGBl. I Nr. 94/2025, in force on 1 October 2026. Initial registration is due by 1 January 2027. |
+| Implementing law | Netz- und Informationssystemsicherheitsgesetz 2026 (NISG 2026), BGBl. I Nr. 94/2025, in force since 1 October 2026. Initial registration is due by 1 January 2027. |
 | Competent authority | Bundesamt für Cybersicherheit, a new federal office under the Bundesministerium für Inneres |
 | National CSIRT / reporting | CERT.at / GovCERT Austria; significant incidents are reported through the NIS2 Services application in the Unternehmensserviceportal (USP) |
 | Official starting point | https://www.usp.gv.at |

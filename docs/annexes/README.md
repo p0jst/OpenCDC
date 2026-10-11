@@ -23,7 +23,7 @@ writes them into this table, the annexes and the regulatory selector.
 <!-- countries:begin -->
 | Country | Status | Confidence | Last reviewed | Second reviewer | Next review | Annex |
 |---------|--------|------------|---------------|-----------------|-------------|-------|
-| Austria | In force from 1 October 2026 | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-at.md) |
+| Austria | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-at.md) |
 | Belgium | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-be.md) |
 | Bulgaria | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-bg.md) |
 | Croatia | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-hr.md) |
