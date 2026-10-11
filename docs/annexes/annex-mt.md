@@ -1,31 +1,31 @@
 # National Annex — Malta
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
-| Confidence | [Maintainer reviewed](README.md#confidence-levels) |
+| Confidence | [Needs verification](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Measures for a High Common Level of Cybersecurity Regulations, subsidiary legislation transposing NIS2, 2024 |
-| Competent authority | CSA, the Critical Infrastructure Protection Directorate / Malta's designated competent authority |
-| National CSIRT / reporting | CSIRTMalta |
-| Official starting point | https://csirtmalta.gov.mt |
+| Implementing law | Measures for a High Common Level of Cybersecurity across the European Union (Malta) Order, S.L. 460.41, Legal Notice 71 of 2025, amended by Legal Notice 89 of 2026 |
+| Competent authority | Critical Infrastructure Protection Department, competent authority and single point of contact; the Malta Communications Authority for certain digital entities |
+| National CSIRT / reporting | The national CSIRT within the Critical Infrastructure Protection Department; confirm the reporting channel |
+| Official starting point | https://legislation.mt/eli/sl/460.41/eng |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-Small-jurisdiction advantage: single point of contact; confirm registration mechanics with CSIRTMalta.
+Small jurisdiction with a single point of contact, the Critical Infrastructure Protection Department, which also hosts the national CSIRT under S.L. 460.41. The CSIRTMalta website was unavailable at the last review, and secondary sources describe the reporting arrangements differently, so confirm the registration and reporting channel with the department before relying on it.
 
 ## Standard checklist for all countries
 

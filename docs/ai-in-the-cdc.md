@@ -30,30 +30,34 @@ Mid-sized teams often carry the most risk. They have the ambitions of large team
 
 ## Uses, by team size
 
-The scale used below:
+The chart rates each use for three team sizes:
 
-- **Must** — do this if you use AI at all.
 - **Should** — good value at this size; adopt when the conditions hold.
 - **Can** — worthwhile where the conditions hold, but not a priority.
-- **With caution** — possible, but only with the guardrails named in the conditions column.
+- **With caution** — possible, but only with the guardrails named in the conditions.
 - **Avoid** — the risk outweighs the gain at this size.
 
-| Use | One to three people | Dedicated CDC | Large CDC | Conditions |
-|-----|---------------------|---------------|-----------|------------|
-| Summarising an alert or a cluster of alerts | Should | Should | Should | The summary links to the underlying events; nobody closes on the summary alone |
-| Enrichment and context assembly | Should, via the tools you have | Should | Should | Deterministic lookups first; AI for what lookups cannot assemble |
-| Explaining an unfamiliar artefact, script or log line | Should | Should | Can | Checked against the source; no sensitive data to unapproved services |
-| Drafting search queries | Should | Should | Should | The query is read and understood before it is run |
-| Drafting and converting detection rules, such as to Sigma | Can | Should | Should | Peer review and a test that makes the rule fire, per [Detection-as-code](detection-as-code-deep-dive.md) |
-| Proposing a triage verdict | With caution | Should | Should | The [minimum triage record](alert-triage.md#decision-2-the-minimum-triage-record) is filled; a person decides; disagreement rate is logged |
-| Closing alerts without a human | Avoid | With caution | With caution | Named rules only, as a suppression with owner, review sample and expiry; never for anything that could be reportable |
-| Investigation support: logs, scripts, malware | With caution | Should | Should | Findings recorded with how they were verified; malware only to platforms approved for it |
-| Summarising threat intelligence and translating reports | Should | Should | Should | The summary keeps the source and its TLP marking |
-| Drafting management reports and post-incident reviews | Should | Should | Should | The author reads and owns the result |
-| Drafting statutory notifications under NIS2, GDPR or DORA | With caution | With caution | With caution | Draft only; legal or the DPO reviews; never submitted automatically |
-| Agents that investigate across systems on their own | Avoid | With caution | Can | Read-only rights, own identity, every action logged, a person reviews before anything changes |
-| Automated containment | Avoid | With caution | With caution | Only actions marked automatic in the [containment action catalogue](../templates/containment-action-catalogue-template.md): reversible, low blast radius, never on crown jewels |
-| Training and onboarding material | Can | Should | Should | Juniors also work cases without the model; see below |
+What every team must have, whatever it uses AI for, is in the next section.
+
+[![AI uses rated Should, Can, With caution or Avoid for teams of one to three people, dedicated CDCs and large CDCs. Small teams should avoid closing alerts without a human, agents that investigate on their own and automated containment; drafting statutory notifications is with caution at every size](../assets/diagrams/ai-use-ratings-light.svg#gh-light-mode-only)](../assets/diagrams/ai-use-ratings-light.svg)
+[![AI uses rated Should, Can, With caution or Avoid for teams of one to three people, dedicated CDCs and large CDCs. Small teams should avoid closing alerts without a human, agents that investigate on their own and automated containment; drafting statutory notifications is with caution at every size](../assets/diagrams/ai-use-ratings-dark.svg#gh-dark-mode-only)](../assets/diagrams/ai-use-ratings-dark.svg)
+
+| Use | Conditions |
+|-----|------------|
+| Summarising an alert or a cluster of alerts | The summary links to the underlying events; nobody closes on the summary alone |
+| Enrichment and context assembly | Deterministic lookups first; AI for what lookups cannot assemble. Small teams use what their existing tools offer |
+| Explaining an unfamiliar artefact, script or log line | Checked against the source; no sensitive data to unapproved services |
+| Drafting search queries | The query is read and understood before it is run |
+| Drafting and converting detection rules, such as to Sigma | Peer review and a test that makes the rule fire, per [Detection-as-code](detection-as-code-deep-dive.md) |
+| Proposing a triage verdict | The [minimum triage record](alert-triage.md#decision-2-the-minimum-triage-record) is filled; a person decides; disagreement rate is logged |
+| Closing alerts without a human | Named rules only, as a suppression with owner, review sample and expiry; never for anything that could be reportable |
+| Investigation support: logs, scripts, malware | Findings recorded with how they were verified; malware only to platforms approved for it |
+| Summarising threat intelligence and translating reports | The summary keeps the source and its TLP marking |
+| Drafting management reports and post-incident reviews | The author reads and owns the result |
+| Drafting statutory notifications under NIS2, GDPR or DORA | Draft only; legal or the DPO reviews; never submitted automatically |
+| Agents that investigate across systems on their own | Read-only rights, own identity, every action logged, a person reviews before anything changes |
+| Automated containment | Only actions marked automatic in the [containment action catalogue](../templates/containment-action-catalogue-template.md): reversible, low blast radius, never on crown jewels |
+| Training and onboarding material | Juniors also work cases without the model; see below |
 
 ## What every team must have
 

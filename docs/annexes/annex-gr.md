@@ -1,31 +1,31 @@
 # National Annex — Greece
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Law 5160/2024 transposing NIS2, in force November 2024 |
-| Competent authority | National Cybersecurity Authority / Εθνική Αρχή Κυβερνοασφάλειας, under the Ministry of Digital Governance |
-| National CSIRT / reporting | National CSIRT-GR |
-| Official starting point | https://mindigital.gr |
+| Implementing law | Law 5160/2024 transposing NIS2, in force since late November 2024 |
+| Competent authority | National Cybersecurity Authority (Εθνική Αρχή Κυβερνοασφάλειας), also the single point of contact |
+| National CSIRT / reporting | The national CSIRT, hosted by the National Cybersecurity Authority |
+| Official starting point | https://cyber.gov.gr |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-Ministerial decisions specify registration and reporting mechanics; check the Authority's portal for entity registration.
+Entities register on the Authority's NIS2 register platform, open since July 2025. Ministerial decisions specify the registration and reporting mechanics.
 
 ## Standard checklist for all countries
 

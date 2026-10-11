@@ -6,7 +6,7 @@
 
 ## 1. The alert tuning loop
 
-Untuned detection rots: alert volume grows, true-positive rate falls, analysts numb out, and the one real alert drowns. Tuning is a **workflow with governance**, not an occasional cleanup.
+Untuned detection rots: alert volume grows, true-positive rate falls, analysts numb out, and the one real alert drowns. Tuning is a workflow with governance, not an occasional cleanup.
 
 **The loop, on a weekly cadence:**
 
@@ -37,7 +37,7 @@ Full engineering manual covering repo layout, rule YAML anatomy, pipeline stages
 
 **Adoption path:** at S, rules in git with peer review and quarterly manual validation → at A, full CI/CD with automated tests and drift detection. Even the S step alone ends the "who changed this rule" archaeology.
 
-## 3. Developing the team — the third loop
+## 3. Developing the team
 
 Roles, skills matrices and career paths live in [Roles & competences](roles-and-competences.md); this section is the operating cadence that keeps them real:
 
@@ -47,7 +47,7 @@ Roles, skills matrices and career paths live in [Roles & competences](roles-and-
 - **Certification budget with direction:** map training spend to ECSF skill gaps from the twice-yearly matrix review, not to whichever course is loudest.
 - **Exit interviews feed GOVERN:** attrition causes are a CDC risk register item, not an HR footnote.
 
-## 4. Automation and AI-assisted triage — with guardrails
+## 4. Automation and AI-assisted triage
 
 Automation is how a small team survives alert volume without burning out its analysts; done wrong, it automates the noise. Order of operations matters:
 
@@ -72,7 +72,7 @@ Mature SOCs commonly accumulate 15–25 tools with overlapping functions and thi
 - Exit-aware from purchase: log formats exportable, detections portable through Sigma, per [Detection-as-code deep dive](detection-as-code-deep-dive.md), API-first, on the same portability logic as the MSSP checklist.
 - Count the metric: number of consoles an analyst must touch to close a median case. Target: falling.
 
-## KPIs for these loops — add to the metrics catalogue
+## KPIs for these loops
 
 Portfolio FP rate trend · % suppressions with owner+expiry · % rules with passing tests · median time from tuning-flag to change · analyst attrition on a rolling 12 m · % staff with current skills-matrix review · % alerts auto-enriched · auto-close QA error rate · consoles-per-median-case.
 

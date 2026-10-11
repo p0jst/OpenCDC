@@ -18,7 +18,7 @@
 - **Does not cover:** […] *Anything where isolation, reboot or live response is unsafe, such as OT assets.*
 - **Legal note:** […] *Personal data on the device, monitoring legal basis, when to involve the DPO or HR.*
 
-## 0. Prerequisites — build these before the incident
+## 0. Prerequisites to build before the incident
 
 - [ ] Remote isolation and live-response capability: [tool, and who holds access]
 - [ ] Disk encryption recovery keys retrievable: [where they are escrowed]
@@ -27,7 +27,7 @@
 - [ ] Chain-of-custody form and evidence labels: [location]
 - [ ] […]
 
-## 1. Triage — before touching the device
+## 1. Triage before touching the device
 
 1. […] *What you can pull remotely first: endpoint telemetry, identity logs, network logs.*
 2. […]
@@ -42,9 +42,9 @@
 | Power-off | *Normally avoid: state is lost.* | no | […] |
 | […] | […] | […] | […] |
 
-## 3. Evidence acquisition — order of volatility per RFC 3227
+## 3. Evidence acquisition in order of volatility
 
-*Hash everything with SHA-256, record time and operator for every action.*
+*Collect in order of volatility, per RFC 3227. Hash everything with SHA-256, and record time and operator for every action.*
 
 | # | Evidence | How to collect on this platform | Platform notes |
 |---|----------|---------------------------------|----------------|

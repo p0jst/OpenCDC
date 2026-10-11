@@ -1,31 +1,31 @@
 # National Annex — Luxembourg
 
 <!-- countries:begin -->
-> **Status as of July 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
-| Confidence | [Pending legislative change](README.md#confidence-levels) |
+| Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Bill n°8364 transposing NIS2, still in legislative process as of mid-2026; verify |
-| Competent authority | ILR (Institut Luxembourgeois de Régulation) for most sectors; CSSF for finance |
+| Implementing law | Law of 5 May 2026 on measures for a high common level of cybersecurity, Mémorial A No. 225 of 2026, in force 10 May 2026, replacing the 2019 NIS law |
+| Competent authority | ILR (Institut Luxembourgeois de Régulation) for most sectors; CSSF for the financial sector; HCPN for cyber-crisis management |
 | National CSIRT / reporting | CIRCL and GOVCERT.LU |
 | Official starting point | https://www.ilr.lu |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-ILR's SERIMA platform is the expected registration/reporting channel; MyGuide/CASES resources help SMEs prepare.
+Entities in scope had two months from entry into force, until 10 July 2026, to register with their competent authority; check that yours did. Incident reporting follows the NIS2 pattern of 24 hours, 72 hours and one month. ILR has used its SERIMA platform for registration and incident notification; confirm the current channel with your authority, and with the CSSF if you are a financial entity. The MyGuide and CASES resources help smaller organisations prepare.
 
 ## Standard checklist for all countries
 

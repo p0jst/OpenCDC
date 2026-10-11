@@ -1,23 +1,23 @@
 # National Annex — Belgium
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Loi/Wet of 26 April 2024 transposing NIS2, in force 18 October 2024, one of the first in the EU |
+| Implementing law | Loi/Wet of 26 April 2024 transposing NIS2, in force 18 October 2024, one of the first in the EU. Registration was due by 18 March 2025. Essential entities had a first conformity assessment due by 18 April 2026 and need CyberFundamentals or ISO 27001 certification by 18 April 2027. |
 | Competent authority | Centre for Cybersecurity Belgium (CCB) |
 | National CSIRT / reporting | CCB / cert.be |
 | Official starting point | https://ccb.belgium.be |

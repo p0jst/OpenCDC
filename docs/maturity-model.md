@@ -4,7 +4,7 @@
 
 ## Design
 
-The OCDF maturity model defines **four levels**, applied to each of the six CSF functions. The level names and philosophy are informed by the NIST CSF 2.0 **Tiers** of Partial, Risk Informed, Repeatable and Adaptive, and by the general structure of CMMI-style capability maturity models; teams already using Rob van Os's **SOC-CMM** will find the levels easy to cross-map.
+The OCDF maturity model defines four levels, applied to each of the six CSF functions. The level names and philosophy are informed by the NIST CSF 2.0 Tiers of Partial, Risk Informed, Repeatable and Adaptive, and by the general structure of CMMI-style capability maturity models; teams already using Rob van Os's SOC-CMM will find the levels easy to cross-map.
 
 We deliberately use four levels rather than five: in practice the difference between "defined" and "quantitatively managed" is where most models lose their audience.
 
@@ -29,9 +29,9 @@ Tier, set in [implementation tiers](tiers.md), selects *which* capabilities appl
 
 1. For each function, work through its criteria in the [self-assessment checklist](../assessments/maturity-self-assessment.md) or the [interactive tool](../tools/maturity-assessment.html).
 2. Score each criterion on the five-point status scale below rather than as a yes/no tick.
-3. A level is achieved only when **all** criteria of that level and the levels below are met. That is "staged" scoring, with no averaging up.
+3. A level is achieved only when *all* criteria of that level and the levels below are met. That is "staged" scoring, with no averaging up.
 4. Record evidence for each criterion: documents, screenshots, metric exports. In the author's experience, an assessment without recorded evidence tends to come out about a level higher than one that has to show its evidence. That is an observation, not a measured figure.
-5. Plot the six function scores as a radar/spider profile. **A balanced Level 2 beats a spiky profile with Level 4 detection and Level 1 governance.** The functions depend on each other: excellent detection is wasted without the authority to contain, the reporting path to meet the legal clock, or the backups to recover. A weak function caps what the strong ones can deliver.
+5. Plot the six function scores as a radar/spider profile. A balanced Level 2 beats a spiky profile with Level 4 detection and Level 1 governance. The functions depend on each other: excellent detection is wasted without the authority to contain, the reporting path to meet the legal clock, or the backups to recover. A weak function caps what the strong ones can deliver.
 
 ### Criterion status scale
 
@@ -76,7 +76,7 @@ Targets are risk decisions. Set them in GOVERN, with executive sign-off. Above t
 
 ### Coverage hours are a target, not a level
 
-How many hours a day someone watches the alerts is a risk decision, not a measure of maturity. An 8×5 team with tested on-call and strong engineering can be better run than a 24/7 line that only forwards tickets. The criteria therefore ask whether coverage hours **meet the target you set**, not whether they are 24/7.
+How many hours a day someone watches the alerts is a risk decision, not a measure of maturity. An 8×5 team with tested on-call and strong engineering can be better run than a 24/7 line that only forwards tickets. The criteria therefore ask whether coverage hours meet the target you set, not whether they are 24/7.
 
 Set the target in GOVERN alongside the maturity targets, and record it in the charter's service table:
 
@@ -91,8 +91,8 @@ National or sector law can set the floor for you: Danish energy-sector entities 
 
 ## Reassessment cadence
 
-- Full assessment: **annually**, or after major organisational change.
-- Progress review on open improvement actions: **quarterly**.
+- Full assessment: annually, or after major organisational change.
+- Progress review on open improvement actions: quarterly.
 - Track the score trend, not just the snapshot. The improvement *rate* is itself a Level 4 indicator.
 
 ## Relationship to other models

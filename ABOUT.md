@@ -2,7 +2,7 @@
 
 ## Why this framework exists
 
-I have worked numerous years with critical infrastructure in cyber security. I started where many readers of this framework are now: as one of a few analysts in a large organisation, spending most of the time on reactive firefighting with little room to address root causes. After spending two years as the lead for DFIR I took over as manager, and over the following eighteen months the team developed from that starting point into a process-driven Cyber Defence Center with 24/7/365 in-house monitoring, organised as a capability-based, tierless SOC rather than a tiered one. Analysts own their cases end-to-end. The trade-offs behind that choice are the ones described in [Choosing your operating model](docs/operating-models.md), Model C.
+I have worked in cyber security for critical infrastructure for many years. I started where many readers of this framework are now: as one of a few analysts in a large organisation, spending most of the time on reactive firefighting with little room to address root causes. After spending two years as the lead for DFIR I took over as manager, and over the following eighteen months the team developed from that starting point into a process-driven Cyber Defence Center with 24/7/365 in-house monitoring, organised as a capability-based, tierless SOC rather than a tiered one. Analysts own their cases end-to-end. The trade-offs behind that choice are the ones described in [Choosing your operating model](docs/operating-models.md), Model C.
 
 I have also served as both main and secondary sponsor in SIM3 assessments for national and international CSIRT teams pursuing TF-CSIRT certifications. Working on the sponsor side of maturity assessments across different teams shaped this framework's emphasis on living documentation, independent verification, and evidence over assertion; see [the CSIRT community layer](docs/csirt-community.md).
 
@@ -23,21 +23,21 @@ Each of these was avoidable with the kind of structured, practitioner-written gu
 
 This is a personal, community-driven project. It is not affiliated with, endorsed by, or the position of any current or former employer, nor of NIST, ENISA, MITRE, or any authority referenced in it.
 
-## What this project is — and is not
+## What this project is and is not
 
 In scope: building and maturing a CDC/SOC for organisations mainly across the EU, in enterprise IT environments: endpoints, servers, identity, cloud/SaaS and enterprise networks. This is not limited to the EU, but my experience and knowledge of building SOC/CDC outside of the EU is limited.
 
-Explicitly out of scope for now:
+Out of scope:
 
 - OT/ICS environments: industrial control systems, SCADA, building automation. OT monitoring, safety-first response and the Purdue-model realities differ fundamentally from IT, and applying IT playbooks to OT can be dangerous.
 - Telco core networks, covering signalling, RAN and lawful intercept environments. These are regulated separately in most member states and operationally distinct.
 - Defence/classified environments and other regimes with their own mandatory frameworks.
 
-If you work in those domains, the GOVERN and maturity-model thinking still transfers. The technical content, meaning the PROTECT, DETECT and RESPOND playbooks, stays IT-specific.
+If you work in those domains, the GOVERN and maturity-model thinking still transfers. The technical guidance in PROTECT, DETECT and RESPOND stays IT-specific.
 
 ## If you run critical infrastructure
 
-Most of my career was spent in critical infrastructure, so I know the uncomfortable part of the scope line above: for a utility, the crown jewels are usually OT, and a framework that stops at the IT boundary covers less of what keeps you awake. Until the OT profile ships, this is how I would use OCDF in a CI setting.
+Most of my career was spent in critical infrastructure, so I know the uncomfortable part of the scope line above: for a utility, the crown jewels are usually OT, and a framework that stops at the IT boundary covers less of what keeps you awake. OCDF stays scoped to IT, so this is how I would use it in a CI setting.
 
 What applies as written:
 
@@ -45,14 +45,9 @@ What applies as written:
 - **The IT side of the IT/OT boundary.** Most OT incidents still arrive through IT: identity, remote access, supplier connections, engineering workstations and the historian or DMZ layer. Identity-first log onboarding, remote-access containment (CON-12) and backup isolation (CON-13) protect OT by protecting the paths into it.
 - **The maturity model, operating models, roles and the regulatory layer.** NIS2, CER and the national annexes apply to the organisation, not to one network.
 
-What the CDC should own at the boundary, even without an OT profile:
+What the CDC should own at the boundary is set out in [the IT/OT interface](docs/it-ot-interface.md): a register of every IT/OT conduit, monitoring of the conduits themselves, a written agreement that the plant or grid operator decides OT containment, and a joint exercise each year. The principle behind it is that the CDC advises and the operator decides, because safety and availability outrank evidence in OT.
 
-- a current map of every IT/OT conduit, including supplier and vendor remote-access paths, with a named owner for each
-- monitoring of the conduits themselves: the IT/OT DMZ, jump hosts, engineering workstations and remote-access gateways
-- a written agreement with operations on who decides OT containment. The CDC advises; the plant or grid operator decides, because safety and availability outrank evidence in OT
-- a joint exercise at least once a year where an IT incident threatens to cross into OT
-
-What does **not** transfer: host-level response steps written for IT. Isolating, rebooting or live-imaging an OT asset can have physical consequences. Use sector guidance (for example IEC 62443 and the ISA/IEC and ENISA OT material) and your vendors' procedures for anything below the DMZ.
+What does *not* transfer: host-level response steps written for IT. Isolating, rebooting or live-imaging an OT asset can have physical consequences. For anything below the DMZ, use sector guidance such as IEC 62443 and ENISA's OT material, and your vendors' procedures.
 
 In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which scales its requirements over five preparedness levels and at levels 4 and 5 goes beyond the EU baseline, with real-time monitoring and response and physically separated networks for supply-critical systems; see the [Danish annex](docs/annexes/annex-dk.md). [The IT/OT interface](docs/it-ot-interface.md) turns this section into operating guidance: the conduit register, boundary detections, containment decision owners, reporting across the boundary, and a table of which BEK 260 requirements OCDF covers and which it does not.
 
@@ -60,7 +55,7 @@ In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i e
 
 The GitHub account [p0jst](https://github.com/p0jst) is mine. Today the framework has one maintainer, and I would rather say that plainly than let it be discovered. What that means in practice:
 
-- **Every page is dated.** The national annexes carry a status block with the date they were last verified, who verified them and when the next review is due. An annex without a second reviewer says so.
+- **Annexes are dated.** The national annexes carry a status block with the date they were last verified, who verified them and when the next review is due. An annex without a second reviewer says so.
 - **Releases are versioned.** The current version is on the front page and in the [changelog](CHANGELOG.md); cite the version when you cite the framework.
 - **Reviewers wanted.** A second reviewer per national annex, and practitioners willing to check the maturity criteria against their own CDC, would do more for the framework's credibility than anything I can write. See [Contributing](CONTRIBUTING.md).
 

@@ -1,23 +1,23 @@
 # National Annex — Germany
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG), amending the BSIG, in force 6 December 2025 |
+| Implementing law | NIS-2-Umsetzungs- und Cybersicherheitsstärkungsgesetz (NIS2UmsuCG), amending the BSIG, in force 6 December 2025 with no transition period |
 | Competent authority | BSI (Bundesamt für Sicherheit in der Informationstechnik) |
 | National CSIRT / reporting | CERT-Bund, part of BSI |
 | Official starting point | https://www.bsi.bund.de/nis-2 |
@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Registration deadline was 6 March 2026, with BSI signalling leniency to ~31 July 2026 for stragglers; verify. BSI offers a Betroffenheitsprüfung, an applicability check, and management training resources; besonders wichtige vs wichtige Einrichtungen mirror essential/important.
+Registration was due by 6 March 2026, and the BSI's tolerance period for late registrations ended on 31 July 2026. BSI offers a Betroffenheitsprüfung, an applicability check, and management training resources; besonders wichtige and wichtige Einrichtungen mirror essential and important entities.
 
 ## Standard checklist for all countries
 

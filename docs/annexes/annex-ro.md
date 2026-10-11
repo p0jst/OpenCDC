@@ -1,23 +1,23 @@
 # National Annex — Romania
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | OUG nr. 155/2024, the emergency ordinance transposing NIS2, in force end of December 2024 |
+| Implementing law | OUG nr. 155/2024, the emergency ordinance transposing NIS2, in force 31 December 2024 and approved with amendments by Law No. 124/2025, in force 10 July 2025. Registration with DNSC under Order 1/2025 was due by 22 September 2025. |
 | Competent authority | DNSC (Directoratul Național de Securitate Cibernetică) |
 | National CSIRT / reporting | DNSC national CSIRT |
 | Official starting point | https://www.dnsc.ro |
@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Registration via DNSC platform; implementing orders detail security measures and reporting formats.
+Registration started a fixed sequence under DNSC Order 2/2025: a risk-level assessment within 60 days of DNSC's registration decision, then a maturity self-assessment within 60 days, then a remediation plan within 30 days.
 
 ## Standard checklist for all countries
 

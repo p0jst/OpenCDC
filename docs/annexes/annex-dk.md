@@ -16,7 +16,7 @@
 
 ## The Danish implementation landscape
 
-Denmark implemented NIS2 and CER through a **family of laws** in force since 2025, rather than a single act:
+Denmark implemented NIS2 and CER through a family of laws in force since 2025, rather than a single act:
 
 | Law | Covers | In force | Selector tag |
 |-----|--------|----------|--------------|
@@ -26,26 +26,26 @@ Denmark implemented NIS2 and CER through a **family of laws** in force since 202
 | **CER-loven**, *lov om kritiske enheders modstandsdygtighed* | Physical resilience of critical entities across ~11 sectors | 1 July 2025 | `dk-cer` |
 | **Lov om finansiel virksomhed § 333 et seq.** | Financial sector, aligned with DORA | — | `dk-fin` |
 
-> Note on naming: "Lov om styrket beredskab" in Danish practice usually refers to the **energy-sector** act above; the NIS 2-loven and CER-loven are separate acts. If your organisation spans sectors, several regimes can apply simultaneously. The NIS 2-loven explicitly yields to the energy, tele and financial acts for entities they cover, per § 1, stk. 2.
+> Note on naming: "Lov om styrket beredskab" in Danish practice usually refers to the energy-sector act above; the NIS 2-loven and CER-loven are separate acts. If your organisation spans sectors, several regimes can apply simultaneously. The NIS 2-loven explicitly yields to the energy, tele and financial acts for entities they cover, per § 1, stk. 2.
 
 ## Key Danish specifics for your CDC
 
-1. **Registration duty:** entities covered by the NIS 2-loven must register on **virk.dk**. The initial deadline was 1 October 2025, and new entities register when they come into scope.
-2. **Incident reporting channel:** entities under the NIS 2-loven and the tele act report significant incidents via **virk.dk**; the national CSIRT function is performed by **Styrelsen for Samfundssikkerhed (SAMSIK)**. Energy-sector entities report to **Energistyrelsen** under BEK 260 §§ 77–79, and incidents that compromised network and information security also go to the CSIRT, through the reporting channel it designates; electricity, gas and hydrogen entities also alert Energinet. Timelines follow the NIS2 pattern in both channels: early warning ≤ 24 h, notification or status ≤ 72 h, final report ≤ 1 month.
+1. **Registration duty:** entities covered by the NIS 2-loven must register on virk.dk. The initial deadline was 1 October 2025, and new entities register when they come into scope.
+2. **Incident reporting channel:** entities under the NIS 2-loven and the tele act report significant incidents via virk.dk; the national CSIRT function is performed by Styrelsen for Samfundssikkerhed (SAMSIK). Energy-sector entities report to Energistyrelsen under BEK 260 §§ 77–79, and incidents that compromised network and information security also go to the CSIRT, through the reporting channel it designates; electricity, gas and hydrogen entities also alert Energinet. Timelines follow the NIS2 pattern in both channels: early warning ≤ 24 h, notification or status ≤ 72 h, final report ≤ 1 month.
 3. **Authorities to know:**
-   - **Styrelsen for Samfundssikkerhed (SAMSIK)** — overall coordination, cross-sector guidance, technical advisories and incident reception as the national CSIRT, at samsik.dk/nis2
-   - **Sector-responsible authorities** supervise their own sectors: Digitaliseringsstyrelsen for digital sectors, Energistyrelsen for energy, Finanstilsynet for finance, Trafikstyrelsen for transport
+    - **Styrelsen for Samfundssikkerhed (SAMSIK)** — overall coordination, cross-sector guidance, technical advisories and incident reception as the national CSIRT, at samsik.dk/nis2
+    - **Sector-responsible authorities** supervise their own sectors: Digitaliseringsstyrelsen for digital sectors, Energistyrelsen for energy, Finanstilsynet for finance, Trafikstyrelsen for transport
 4. **Guidance materials:** SAMSIK publishes cross-cutting NIS2 vejledninger structuring measures as *skal* meaning must, *bør* meaning should with deviations justified, and *kan* meaning may. That is a useful evidence structure for your maturity assessments; map OCDF capability evidence to the skal and bør items.
 5. **Energy-sector extras** under Lov om styrket beredskab i energisektoren and BEK 260. Energistyrelsen places each entity on one of five preparedness levels, from thresholds in the order's annex 1, and the requirements scale with the level. Checked against BEK 260:
-   - every entity segments its supply-critical systems behind a DMZ or equivalent; levels 4 and 5 separate those networks physically, § 62;
-   - levels 4 and 5 log and monitor to identify incidents in real time, respond in real time, keep logs for 13 months and hand them to their IT security service within 24 h, §§ 66–69;
-   - preparedness exercises yearly at levels 3 to 5 and every second year at level 2, with a yearly recovery exercise of supply-critical systems at levels 4 and 5, and the management body takes part where relevant, § 21;
-   - at levels 4 and 5 the preparedness and cyber coordinators must not be the management body that approves the risk assessments and preparedness plans;
-   - supervision yearly at levels 4 and 5, every third year at level 3 and every sixth at level 2, § 108.
+    - every entity segments its supply-critical systems behind a DMZ or equivalent; levels 4 and 5 separate those networks physically, § 62;
+    - levels 4 and 5 log and monitor to identify incidents in real time, respond in real time, keep logs for 13 months and hand them to their IT security service within 24 h, §§ 66–69;
+    - preparedness exercises yearly at levels 3 to 5 and every second year at level 2, with a yearly recovery exercise of supply-critical systems at levels 4 and 5, and the management body takes part where relevant, § 21;
+    - at levels 4 and 5 the preparedness and cyber coordinators must not be the management body that approves the risk assessments and preparedness plans;
+    - supervision yearly at levels 4 and 5, every third year at level 3 and every sixth at level 2, § 108.
 
-   Key personnel may also need security clearance under the separate *bekendtgørelse om sikkerhedsgodkendelser i energisektoren*. Confirm your level with Energistyrelsen, then set DETECT and GOVERN targets to match: Level 3–4 at levels 4 and 5, the ordinary targets below them.
+    Key personnel may also need security clearance under the separate *bekendtgørelse om sikkerhedsgodkendelser i energisektoren*. Confirm your level with Energistyrelsen, then set DETECT and GOVERN targets to match: Level 3–4 at levels 4 and 5, the ordinary targets below them.
 
-   These requirements apply to the whole entity, OT included, while OCDF is scoped to IT. [The IT/OT interface](../it-ot-interface.md#danish-energy-sector-what-this-covers-and-what-it-does-not) shows which of them a CDC can cover at the boundary and which must be covered by OT operations.
+    These requirements apply to the whole entity, OT included, while OCDF is scoped to IT. [The IT/OT interface](../it-ot-interface.md#danish-energy-sector-what-this-covers-and-what-it-does-not) shows which of them a CDC can cover at the boundary and which must be covered by OT operations.
 
 ## CDC checklist for Denmark
 

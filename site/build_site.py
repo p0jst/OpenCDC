@@ -30,7 +30,6 @@ def main():
             shutil.copy2(p, SRC / f)
     # website-only files
     shutil.copy2(ROOT / "site" / "index.md", SRC / "index.md")
-    shutil.copy2(ROOT / "site" / "templates-index.md", SRC / "templates" / "index.md")
     (SRC / "assets").mkdir()
     shutil.copy2(ROOT / "site" / "extra.css", SRC / "assets" / "extra.css")
     # Everything in assets/ — the self-hosted IBM Plex files and the social

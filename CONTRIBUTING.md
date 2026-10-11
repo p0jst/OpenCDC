@@ -20,7 +20,7 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 
 ## How to contribute
 
-1. Open an **issue** describing the change, using the templates.
+1. Open an issue describing the change, using the templates.
 2. For text changes: fork → branch, named `docs/<topic>` or `fix/<topic>` → pull request referencing the issue.
 3. One logical change per PR; keep the document structure intact for function docs: Objective, Capabilities, CIA mapping, Roles & staffing, Maturity, EU hooks, External dependencies, Sources.
 4. **Maturity criteria** are edited only in `assessments/maturity-self-assessment.md`, then mirrored in the tool's `CATALOG`. Any change to a criterion is a scoring change: note it in the changelog, and if it moves or adds criteria, raise `CRITERIA_SET` and extend the migration map in the tool.
@@ -30,7 +30,7 @@ Thank you for helping European teams defend better. Contributions of all sizes a
 
 ## Licensing of contributions
 
-By contributing, you agree that your contribution is licensed under **CC BY 4.0**, and you confirm you have the right to submit it.
+By contributing, you agree that your contribution is licensed under CC BY 4.0, and you confirm you have the right to submit it.
 
 ## Code of Conduct
 

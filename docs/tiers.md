@@ -4,7 +4,7 @@
 
 ## One framework, three ambition levels
 
-Not every organisation needs every capability. Instead of maintaining three editions, OCDF uses a **tier overlay**, a pattern borrowed from the CIS Controls' Implementation Groups: every capability is tagged with the lowest tier that should implement it. Higher tiers include everything below them.
+Not every organisation needs every capability. Instead of maintaining three editions, OCDF uses a *tier overlay*, a pattern borrowed from the CIS Controls' Implementation Groups: every capability is tagged with the lowest tier that should implement it. Higher tiers include everything below them.
 
 | Tier | Who | Rough profile |
 |------|-----|---------------|

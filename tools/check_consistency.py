@@ -14,6 +14,8 @@ any copy differs from its source:
      the annex index and the annexes must match (tools/build_countries.py --check).
   4. Capability IDs: every GV-1 style ID used in the documents exists in the
      capability index.
+  5. Nested lists: the website's Markdown needs four spaces to nest a list;
+     with two or three, the sub-items silently join the parent list.
 
 Run from the repository root:  python tools/check_consistency.py
 """
@@ -99,7 +101,25 @@ def check_capability_ids():
                 errors.append(f"unknown capability ID {cid} in {p.relative_to(ROOT)}")
 
 
+def check_list_indent():
+    files = [ROOT / f for f in ("README.md", "ABOUT.md", "CHANGELOG.md", "CONTRIBUTING.md")]
+    for d in ("docs", "assessments", "templates", "tools", "site"):
+        files += sorted((ROOT / d).rglob("*.md"))
+    for p in files:
+        if not p.exists():
+            continue
+        lines = p.read_text(encoding="utf-8").splitlines()
+        start = lines.index("---", 1) + 1 if lines[:1] == ["---"] and "---" in lines[1:] else 0
+        fence = False
+        for n, line in enumerate(lines[start:], start + 1):
+            if line.lstrip().startswith("```"):
+                fence = not fence
+            elif not fence and re.match(r" {1,3}([-*+]|\d+\.) ", line):
+                errors.append(f"nested list indented less than four spaces: {p.relative_to(ROOT)} line {n}")
+
+
 def main():
+    check_list_indent()
     check_criteria()
     check_skills()
     check_countries()

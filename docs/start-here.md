@@ -1,12 +1,12 @@
 # Start Here: Prioritisation Guide
 
-> If you read only one document after the README, read this. It answers the question the rest of the framework can't answer for you page by page: **in which order?**
+> If you read only one document after the README, read this. It answers the question the rest of the framework can't answer for you page by page: *in which order?*
 
-## The priority logic — why this order
+## Why this order
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's recommended order, aligned with the CIS Controls ordering.</p>
 
-The ordering below deliberately mirrors the logic of the CIS Critical Security Controls: the controls are numbered roughly in order of foundational value, beginning with Control 1 for enterprise asset inventory and Control 2 for software inventory, and ending with Control 18, penetration testing. That ordering answers to a question every new security leader faces from the business: "shouldn't we get a pentest first?" No. A penetration test against an organisation with no asset inventory, no MFA baseline and no tested backups mostly documents what you already know is missing. Inventory comes first, blast-radius controls next, and testing when there is something meaningful to test. Use the CIS ordering when explaining prioritisation to the business; it is independent, widely recognised and matches this guide.
+The ordering below deliberately mirrors the logic of the CIS Critical Security Controls: the controls are numbered roughly in order of foundational value, beginning with Control 1 for enterprise asset inventory and Control 2 for software inventory, and ending with Control 18, penetration testing. That ordering answers a question every new security leader faces from the business: "shouldn't we get a pentest first?" No. A penetration test against an organisation with no asset inventory, no MFA baseline and no tested backups mostly documents what you already know is missing. Inventory comes first, blast-radius controls next, and testing when there is something meaningful to test. Use the CIS ordering when explaining prioritisation to the business; it is independent, widely recognised and matches this guide.
 
 1. **Mandate before machinery** — authority and scope gaps poison everything built on top.
 2. **You can't detect what you can't see** — visibility precedes detection.
@@ -14,9 +14,15 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 4. **Reporting readiness is a legal clock** — the NIS2 24 h early warning must work before your first significant incident, not after.
 5. **Only then: depth** — hunting, validation, automation, Level 4 ambitions.
 
-## First 90 days — any tier, any operating model
+## The first 90 days
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
+
+[![The first 90 days week by week: charter, applicability register and operating model first, then crown jewels, blast-radius controls, priority log sources and the incident plan with a reporting drill, ending with a baseline maturity assessment in week 12](../assets/diagrams/start-here-first-90-days-light.svg#gh-light-mode-only)](../assets/diagrams/start-here-first-90-days-light.svg)
+[![The first 90 days week by week: charter, applicability register and operating model first, then crown jewels, blast-radius controls, priority log sources and the incident plan with a reporting drill, ending with a baseline maturity assessment in week 12](../assets/diagrams/start-here-first-90-days-dark.svg#gh-dark-mode-only)](../assets/diagrams/start-here-first-90-days-dark.svg)
+
+<details markdown>
+<summary>The 90 days as a table, with the page or tool for each step</summary>
 
 | Week | Do | Framework |
 |------|----|-----------|
@@ -29,7 +35,9 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 | 8–12 | IR plan v1 + ransomware & breach playbooks; statutory reporting contacts and one **reporting drill against the 24 h clock** | [RESPOND](respond.md), [playbook template](../templates/scenario-playbook-template.md), your [national annex](annexes/README.md) |
 | 12 | Baseline maturity self-assessment; publish the gap backlog | [Maturity self-assessment](../assessments/maturity-self-assessment.md) |
 
-**Dependency warning:** most of the 90-day rows above contain a [GATE] or [HARD] dependency on another department: charter sign-off [GATE], log onboarding [HARD on system owners], MFA rollout [HARD on IAM], and the reporting drill [GATE on legal and DPO participation]. See each function document's "External dependencies" table and the marker convention in [Introduction](introduction.md). Secure named counterparts for every [HARD] on this plan before week 1; it is the most common silent killer of new CDC timelines.
+</details>
+
+**Dependency warning:** most of the 90-day steps depend on another department. Charter sign-off and the reporting drill are [GATE] dependencies, on management and on legal and the DPO. Log onboarding and the MFA rollout are [HARD] dependencies, on the system owners and the IAM team. See each function document's "External dependencies" table and the marker convention in [Introduction](introduction.md). Secure named counterparts for every [HARD] on this plan before week 1; it is the most common silent killer of new CDC timelines.
 
 **Exit criteria for day 90:** signed charter · applicability register · operating model decided · crown jewels agreed in writing · MFA coverage measured · one clean restore proven · identity+endpoint telemetry flowing · reporting drill executed.
 
@@ -41,7 +49,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 - Govern: quarterly executive reporting running; supplier security clauses in new contracts
 - Reassess maturity at month 12. For a NIS2 entity, Level 2 in every function is the legal floor and the first target; above it, set year-2 targets per function, such as RESPOND at 3 for an important entity or Level 3 across all functions for an essential one
 
-## Anti-priorities — deliberately NOT first-year work
+## What not to do in the first year
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span></p>
 

@@ -250,7 +250,7 @@ from the tier decision to its first board report.
 
 [Read the worked example →](docs/worked-example.md){ .md-button }
 
-The [templates](templates/index.md) are plain documents to copy and change.
+The [templates](templates/README.md) are plain documents to copy and change.
 The three [browser tools](tools/README.md) run entirely in your browser, and
 nothing you type into them is sent anywhere. Everything is on
 [GitHub](https://github.com/p0jst/OpenCDC) under CC BY 4.0, or as a

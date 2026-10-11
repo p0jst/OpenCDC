@@ -1,31 +1,31 @@
 # National Annex — Latvia
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Nacionālās kiberdrošības likums (National Cybersecurity Law), in force 1 September 2024 |
+| Implementing law | Nacionālās kiberdrošības likums (National Cybersecurity Law), in force 1 September 2024. Entities had to notify the National Cybersecurity Centre by 1 April 2025. |
 | Competent authority | National Cybersecurity Centre under the Ministry of Defence |
 | National CSIRT / reporting | CERT.LV |
-| Official starting point | https://www.ncsc.gov.lv |
+| Official starting point | https://mod.gov.lv/en/cybersecurity/register-national-cyber-security-centre |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-Registration and annual self-assessment duties; Latvia appeared in the May 2025 reasoned opinions over completeness of secondary measures, so verify the current implementing regulations.
+Annual self-assessment reports go to the National Cybersecurity Centre. Latvia appeared in the May 2025 reasoned opinions over completeness of secondary measures, so verify the current implementing regulations.
 
 ## Standard checklist for all countries
 

@@ -1,24 +1,24 @@
 # National Annex — Ireland
 
 <!-- countries:begin -->
-> **Status as of September 2026:** Pending, awaiting verification. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** Pending, bill not yet published. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Pending legislative change](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | September 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | March 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | National Cyber Security Bill, still completing passage as of mid-2026. Verify; adoption is reported imminent and possibly complete. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2. |
-| Competent authority | NCSC Ireland as lead competent authority, plus sector regulators |
+| Implementing law | National Cyber Security Bill. The General Scheme was published in 2024, but the bill itself had not been published as of early October 2026; it is a priority on the government's autumn 2026 legislative programme. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2. |
+| Competent authority | Expected: NCSC Ireland as lead competent authority, plus sector regulators |
 | National CSIRT / reporting | CSIRT-IE at NCSC |
 | Official starting point | https://www.ncsc.gov.ie |
 <!-- countries:end -->

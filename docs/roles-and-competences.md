@@ -4,7 +4,7 @@
 
 ## Why ECSF as the backbone
 
-This framework's role definitions, job descriptions and career paths are anchored in the **European Cybersecurity Skills Framework (ECSF)**, ENISA's set of **12 cybersecurity professional role profiles**, each defined with a mission, tasks, deliverables, key skills, key knowledge, and e-CF competences linked to EQF learning levels. Using ECSF gives a European CDC three concrete advantages:
+This framework's role definitions, job descriptions and career paths are anchored in the European Cybersecurity Skills Framework (ECSF), ENISA's set of 12 cybersecurity professional role profiles, each defined with a mission, tasks, deliverables, key skills, key knowledge, and e-CF competences linked to EQF learning levels. Using ECSF gives a European CDC three concrete advantages:
 
 1. **A common language** with HR, recruiters, training providers and certification bodies across the EU, where many certifications and university programmes are already mapped to ECSF profiles.
 2. **Ready-made building blocks** for job descriptions; see the [ECSF job description template](../templates/job-description-template.md).
@@ -18,7 +18,7 @@ Chief Information Security Officer (CISO) · Cyber Incident Responder · Cyber L
 
 ## Mapping CDC roles to ECSF profiles
 
-A CDC job title rarely equals exactly one ECSF profile. Most operational roles are a **primary profile plus secondary elements**. That is by design; the ECSF User Manual explicitly supports composing profiles.
+A CDC job title rarely equals exactly one ECSF profile. Most operational roles are a primary profile plus secondary elements. That is by design; the ECSF User Manual explicitly supports composing profiles.
 
 | CDC role in this framework | Primary ECSF profile | Secondary elements | Framework capabilities |
 |---------------------------|----------------------|--------------------|------------------------|
@@ -39,7 +39,7 @@ A CDC job title rarely equals exactly one ECSF profile. Most operational roles a
 
 **Minimum viable CDC at Essential tier:** 3–4 people covering Incident Responder, Implementer, and a manager carrying Risk Manager and Compliance elements, with DFIR and Penetration Tester bought as retainers. The ECSF composition model is what makes such multi-hat roles describable and trainable rather than accidental.
 
-## Skills matrix — per person, per profile
+## Skills matrix per person
 
 For each team member, record against their primary ECSF profile:
 
@@ -50,19 +50,21 @@ For each team member, record against their primary ECSF profile:
 | e-CF competences | listed per profile, such as C.4 Problem Management for Incident Responder | e-1..e-5 |
 | Platform-specific skills | your stack: SIEM query language, EDR, cloud | same scale |
 
-Review twice yearly; gaps drive the training budget and the exercise programme. **Career paths follow profile adjacency:** Tier 1 → Tier 2, deepening Incident Responder → Detection Engineer as Implementer, or Threat Hunter as CTI Specialist → Architect or Manager. Published paths are your cheapest retention tool in the EU talent market.
+Review twice yearly; gaps drive the training budget and the exercise programme.
 
-## Team skill mapping — from self-assessment to team picture
+Career paths follow profile adjacency: Tier 1 → Tier 2, deepening Incident Responder → Detection Engineer as Implementer, or Threat Hunter as CTI Specialist → Architect or Manager. Published paths are your cheapest retention tool in the EU talent market.
 
-The skills matrix above is a per-person exercise. To turn it into a **team picture** showing where the gaps are, who can mentor whom, and what to look for in your next hire, the framework ships a ready-made loop:
+## Team skill mapping
 
-1. **Distribute** the self-assessment sheet to every team member: [`templates/skill-self-assessment.xlsx`](../templates/skill-self-assessment.xlsx), or the [CSV version](../templates/skill-self-assessment.csv) for plain-text environments. It covers **50 skills in 8 domains**, being the six CSF functions plus *Platform & Automation* and *Professional Skills*, rated on the framework scale of 0 none · 1 basic · 2 proficient · 3 can mentor, plus a "want to grow?" flag per skill. Filling it in takes about 15 minutes. Skill IDs have two digits, such as `GV-01`; they are grouped by function but are not the capability IDs such as `GV-1` used elsewhere in the framework.
-2. **Collect** the returned files and upload them into [`tools/skill-matrix.html`](../tools/skill-matrix.html), the interactive Team Skill Matrix, Tool 02. Uploads are cumulative: each file adds or **updates** one person, so re-running the exercise simply overlays the new answers on the old ones. All data stays in the manager's browser; nothing is sent anywhere.
+The skills matrix above is a per-person exercise. To turn it into a team picture showing where the gaps are, who can mentor whom, and what to look for in your next hire, the framework ships a ready-made loop:
+
+1. **Distribute** the self-assessment sheet to every team member: [`templates/skill-self-assessment.xlsx`](../templates/skill-self-assessment.xlsx), or the [CSV version](../templates/skill-self-assessment.csv) for plain-text environments. It covers 47 skills in 8 domains, being the six CSF functions plus *Platform & Automation* and *Professional Skills*, rated on the framework scale of 0 none · 1 basic · 2 proficient · 3 can mentor, plus a "want to grow?" flag per skill. Filling it in takes about 15 minutes. Skill IDs have two digits, such as `GV-01`; they are grouped by function but are not the capability IDs such as `GV-1` used elsewhere in the framework.
+2. **Collect** the returned files and upload them into [`tools/skill-matrix.html`](../tools/skill-matrix.html), the interactive Team Skill Matrix, Tool 02. Uploads are cumulative: each file adds or updates one person, so re-running the exercise simply overlays the new answers on the old ones. All data stays in the manager's browser; nothing is sent anywhere.
 3. **Read** the four views the tool produces:
-   - **Team heatmap** — who can do what, per-skill coverage, *bus factor 1* flags where only one person is proficient, and *nobody proficient* flags on skills the team's roles need;
-   - **Gap analysis** — each person against the **target level for their role**. Defaults are derived from the role table above; adjust them to your organisation in the tool;
-   - **Actions** — a train / mentor / hire triage: motivated learners below target, in-house mentor pairings of a level-3 person with a colleague who has a gap, and skills nobody holds that should shape the next job description or MSSP contract;
-   - **Role targets** — the editable expectation matrix itself.
+    - **Team heatmap** — who can do what, per-skill coverage, *bus factor 1* flags where only one person is proficient, and *nobody proficient* flags on skills the team's roles need;
+    - **Gap analysis** — each person against the target level for their role. Defaults are derived from the role table above; adjust them to your organisation in the tool;
+    - **Actions** — a train / mentor / hire triage: motivated learners below target, in-house mentor pairings of a level-3 person with a colleague who has a gap, and skills nobody holds that should shape the next job description or MSSP contract;
+    - **Role targets** — the editable expectation matrix itself.
 
 **Cadence:** run the exercise at the twice-yearly review, after every significant team change, and before drafting a hiring plan or training budget. Export a JSON snapshot from the tool per round to track progression over time.
 

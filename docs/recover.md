@@ -32,8 +32,8 @@ Restore affected services in a trustworthy state, communicate honestly during re
 |-----------|---|---|---|-----------|
 | RC-1 Recovery planning | ○ | ○ | ● | RTO/RPO are Availability commitments. |
 | RC-2 Trusted restoration | ○ | ● | ● | Restoring a backdoored system restores the breach: **Integrity verification before Availability restoration** is the core principle of this function. |
-| RC-4 Communication | ● | ○ | ○ | Recovery comms must not leak sensitive investigation details, which is the Confidentiality of incident data. |
 | RC-3 Verified execution | ○ | ● | ● | Recovery is declared complete only when integrity checks pass, then service returns. |
+| RC-4 Communication | ● | ○ | ○ | Recovery comms must not leak sensitive investigation details, which is the Confidentiality of incident data. |
 | RC-5 Lessons learned | ○ | ○ | ○ | An enabler: it serves whichever objective the incident breached. |
 | RC-6 BCM integration | ○ | ○ | ● | Business continuity is the organisation's Availability plan; the CDC plugs into it. |
 
@@ -41,7 +41,7 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## Roles & staffing
 
-<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in [Operating models](operating-models.md).</p>
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
 - **Service/platform owners** execute restoration; the CDC verifies cleanliness.
 - **Incident manager** remains accountable until closure criteria are met.
@@ -58,7 +58,7 @@ The criteria that score RECOVER are kept in one place for all six functions: the
 <p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
 
 - **NIS2 Art. 21(2)(c)** — business continuity, backup management, disaster recovery, and crisis management are explicitly required measures.
-- **NIS2 Art. 23** — the **final report**, due within 1 month, must include root cause, mitigation, and cross-border impact where applicable.
+- **NIS2 Art. 23** — the final report, due within 1 month, must include root cause, mitigation, and cross-border impact where applicable.
 - **DORA Art. 11–12** — response and recovery plans, backup policies and restoration procedures for financial entities, with testing obligations.
 - **GDPR Art. 32(1)(c)** — "the ability to restore the availability and access to personal data in a timely manner" is a named legal requirement.
 

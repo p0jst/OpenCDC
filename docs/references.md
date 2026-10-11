@@ -68,7 +68,7 @@ This framework synthesises and builds upon the following publicly available work
 - Microsoft public documentation on BitLocker and Windows artefact behaviour. https://learn.microsoft.com
 - Red Hat public documentation on auditd, LVM and systemd. https://docs.redhat.com
 
-## Danish legislation & authorities — retsinformation.dk and samsik.dk
+## Danish legislation and authorities
 
 - Lov nr. 434 af 6. maj 2025, *Lov om foranstaltninger til sikring af et højt cybersikkerhedsniveau*, the NIS 2-loven. https://www.retsinformation.dk/eli/lta/2025/434
 - *Lov om styrket beredskab i energisektoren*, 2025, the energy-sector NIS2 and CER regime.

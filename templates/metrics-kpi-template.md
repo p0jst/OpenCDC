@@ -1,13 +1,13 @@
 # CDC Metrics & KPI Catalogue — Template
 
-> Related capabilities: GV-7, DE-4, RS-*, RC-5. Pick **few metrics you will act on** over many you will only report. Every metric below lists the decision it should drive. If you wouldn't change anything based on it, don't collect it.
+> Related capabilities: GV-7, DE-4, RS-*, RC-5. Pick few metrics you will act on over many you will only report. Every metric below lists the decision it should drive. If you wouldn't change anything based on it, don't collect it.
 
 ## Governance & coverage — GOVERN and IDENTIFY
 
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
 | Asset inventory accuracy | % sampled assets correctly recorded | > 90% | Invest in discovery/CMDB reconciliation |
-| Log source coverage | % of priority-1 and priority-2 sources onboarded per the docs/04 priority list | 100% P1, > 90% P2 | Onboarding backlog priority |
+| Log source coverage | % of priority-1 and priority-2 sources onboarded, per the priority list in [DETECT](../docs/detect.md) | 100% P1, > 90% P2 | Onboarding backlog priority |
 | Maturity score trend | OCDF level per function, assessed annually | +1 level on 2 weakest functions/yr | Budget allocation |
 | Training completion | % staff / % management completing role-based training | > 95% | NIS2 Art. 20 evidence; awareness focus |
 
@@ -40,7 +40,7 @@
 | RTO attainment | Measured recovery time vs. agreed RTO in tests/incidents | 100% within RTO | DR investment |
 | Lessons-learned closure | % post-incident actions closed within due date | > 90% | Improvement-loop health, a Level 4 indicator |
 
-## Anti-patterns — do not use these as KPIs
+## Metrics not to use as KPIs
 
 - **Alert volume**, as in "we handled 40,000 alerts", rewards noise.
 - **Blocked attacks count** from perimeter devices, an unfalsifiable vanity metric.

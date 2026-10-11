@@ -13,7 +13,7 @@
 | P3 — Medium | Probable incident, limited impact | Malware detected and blocked, persistence suspected | Same business day |
 | P4 — Low | Policy violation / no material impact | Isolated phishing click, no execution | Routine |
 
-> Classify severity against **CIA impact per affected asset class**, per [CIA as design lens](../docs/cia-triad.md), not against alert volume.
+> Classify severity against CIA impact per affected asset class, per [CIA as design lens](../docs/cia-triad.md), not against alert volume.
 >
 > Severity is not regulatory significance. Severity sets how hard the CDC responds; significance, assessed under §4, decides who must be told and by when. Record both in every incident, with different owners.
 
@@ -43,7 +43,7 @@
 | Public statement | Communications with Legal | Executive sponsor | Approved statement with version |
 | Exit the response loop and accept residual risk | Executive sponsor for P1 and P2; Incident Manager for P3 and P4 | | Written exit decision, see §3 |
 
-## 3. Process — how an incident moves
+## 3. How an incident moves
 
 > The steps are not a straight line. Step 3 is repeated as often as the incident needs, and the plan should say so, so that a second or third pass is expected rather than read as failure. See [RESPOND](../docs/respond.md) for the reasoning.
 
@@ -78,7 +78,7 @@
 
 ## 6. Playbook index
 
-> `PB-01`…`PB-06` below are placeholder IDs for **your own** playbooks, so rename them to your scheme. Write each from the [scenario playbook template](scenario-playbook-template.md), and the host-level forensics from the [platform playbook template](platform-playbook-template.md).
+> `PB-01`…`PB-06` below are placeholder IDs for *your own* playbooks, so rename them to your scheme. Write each from the [scenario playbook template](scenario-playbook-template.md), and the host-level forensics from the [platform playbook template](platform-playbook-template.md).
 
 | Scenario | Playbook | Last exercised |
 |----------|----------|----------------|

@@ -25,6 +25,7 @@ THEMES = {
         "ink": "#1d2733", "soft": "#5d6975", "line": "#d9d3c4", "card": "#ffffff",
         "eu": "#123a6d", "eu_soft": "#e8eef7", "on_eu": "#ffffff",
         "accent": "#8a1f2d", "accent_soft": "#f6e7e9",
+        "warn": "#6b4e16", "warn_soft": "#f5ead3",
         "fn": {"GOVERN": "#123a6d", "IDENTIFY": "#0e6e73", "PROTECT": "#2a6a4f",
                "DETECT": "#6b4e16", "RESPOND": "#8a1f2d", "RECOVER": "#5b3a8f"},
     },
@@ -32,6 +33,7 @@ THEMES = {
         "ink": "#e6edf3", "soft": "#9aa7b4", "line": "#3a4a5b", "card": "#1a242f",
         "eu": "#8fb3e3", "eu_soft": "#26354a", "on_eu": "#0d1720",
         "accent": "#e39aa4", "accent_soft": "#3a2329",
+        "warn": "#e2c07e", "warn_soft": "#3a3020",
         "fn": {"GOVERN": "#6f9bd6", "IDENTIFY": "#6cc7cc", "PROTECT": "#8fd1b3",
                "DETECT": "#e2c07e", "RESPOND": "#e39aa4", "RECOVER": "#b9a1e0"},
     },
@@ -405,12 +407,181 @@ def reporting_clocks(t):
     return s
 
 
+# ------------------------------------------------------------ first 90 days
+PLAN_90 = [
+    ("Charter drafted, containment authority", 1, 2, "GOVERN", "GATE"),
+    ("Regulatory applicability register", 1, 4, "GOVERN", None),
+    ("Operating model decided", 2, 6, "GOVERN", None),
+    ("Crown jewels agreed with the business", 3, 8, "IDENTIFY", None),
+    ("MFA, tested backup, admin paths", 4, 10, "PROTECT", "HARD"),
+    ("Identity, endpoint, email logs onboarded", 6, 12, "DETECT", "HARD"),
+    ("IR plan, playbooks, reporting drill", 8, 12, "RESPOND", "GATE"),
+    ("Baseline maturity assessment", 12, 12, "GOVERN", None),
+]
+
+
+def first_90_days(t):
+    x0, wk, lab_w, top, rh = 290, 37, 270, 64, 40
+    h = top + len(PLAN_90) * rh + 96
+    s = Svg(760, h, "The first 90 days",
+            "Week by week: charter drafted in weeks 1 to 2; regulatory applicability register in weeks 1 to 4; "
+            "operating model decided in weeks 2 to 6; crown jewels agreed in weeks 3 to 8; MFA, a tested backup "
+            "and admin-path segmentation in weeks 4 to 10; identity, endpoint and email logs onboarded in weeks "
+            "6 to 12; incident response plan, playbooks and a reporting drill in weeks 8 to 12; baseline maturity "
+            "assessment in week 12. Charter sign-off and the reporting drill depend on decisions by others; MFA "
+            "and log onboarding depend on work by other teams.", t)
+    s.text(20, 28, "Week", 13, t["soft"], 600)
+    for w in range(1, 13):
+        cx = x0 + (w - 0.5) * wk
+        s.text(cx, 28, str(w), 13, t["soft"], 600, "middle")
+        s.add(f'<line x1="{x0 + w * wk}" y1="{top - 18}" x2="{x0 + w * wk}" y2="{top + len(PLAN_90) * rh}" '
+              f'stroke="{t["line"]}" stroke-dasharray="2 4"/>')
+    s.add(f'<line x1="{x0}" y1="{top - 18}" x2="{x0}" y2="{top + len(PLAN_90) * rh}" stroke="{t["line"]}"/>')
+    for i, (label, a, b, fn, dep) in enumerate(PLAN_90):
+        y = top + i * rh
+        s.text(20, y + 21, label, 13, t["ink"])
+        bx, bw = x0 + (a - 1) * wk + 2, (b - a + 1) * wk - 4
+        s.rect(bx, y + 5, bw, rh - 12, t["fn"][fn], rx=4)
+        if dep:
+            col = t["accent"] if dep == "GATE" else t["eu"]
+            s.rect(bx + bw - 48, y + 10, 42, rh - 22, t["card"], rx=3)
+            s.text(bx + bw - 27, y + 23, dep, 10, col, 700, "middle")
+    yl = top + len(PLAN_90) * rh
+    s.add(f'<path d="M{x0 + 12 * wk},{yl + 6} l7,9 l-7,9 l-7,-9 z" fill="{t["accent"]}"/>')
+    s.text(x0 + 12 * wk - 14, yl + 20, "Day 90: exit criteria", 13, t["accent"], 600, "end")
+    ly = yl + 50
+    x = 20
+    for fn in ("GOVERN", "IDENTIFY", "PROTECT", "DETECT", "RESPOND"):
+        s.rect(x, ly - 11, 14, 14, t["fn"][fn], rx=3)
+        s.text(x + 20, ly, fn.capitalize(), 12, t["soft"])
+        x += 32 + 7.5 * len(fn)
+    s.text(20, ly + 24, "GATE: another party must decide.  HARD: another team must do the work.", 12, t["soft"])
+    return s
+
+
+# ---------------------------------------------------------------- IT/OT zones
+OTX = [
+    ("OTX-01", ("Cut supplier", "remote access"), 0),
+    ("OTX-02", ("Disable IT accounts", "with DMZ access"), 0),
+    ("OTX-03", ("Block a single", "conduit"), 1),
+    ("OTX-04", ("Isolate an engineering", "workstation"), 2),
+    ("OTX-05", ("Separate IT", "from OT"), 3),
+    ("OTX-06", ("Isolate, reboot or", "image an OT asset"), 4),
+]
+
+
+def it_ot_zones(t):
+    s = Svg(760, 520, "The IT/OT boundary: who watches and who decides",
+            "Three zones. In IT, the CDC decides and acts within its mandate. In the boundary zone, meaning the "
+            "IT/OT DMZ and firewalls, jump hosts and remote access, engineering workstations, historians and data "
+            "diodes, file transfer and update servers, shared identity and backups of OT configurations, the CDC "
+            "monitors and ownership is agreed jointly. In OT, the operator decides and the CDC advises. Containment "
+            "decisions move from the CDC to the operator: supplier remote access and IT accounts with DMZ access "
+            "are the CDC's call; blocking a conduit needs OT approval; isolating an engineering workstation is "
+            "OT's call, advised by the CDC; separating IT from OT is for OT management; any action on an OT asset "
+            "follows the vendor procedure. One reporting owner per incident, and the clock starts at awareness on "
+            "either side.", t)
+    zones = [(20, 200, "IT", "The CDC decides and acts", ["Endpoints and servers", "Identity and cloud", "Mail and web"], "card"),
+             (240, 280, "Boundary zone", "The CDC monitors; owners agreed", ["IT/OT DMZ and firewalls", "Jump hosts, remote access", "Engineering workstations", "Historians, data diodes", "File transfer, update servers", "Shared identity and trusts", "Backups of OT configurations"], "soft"),
+             (540, 200, "OT", "The operator decides", ["Control systems", "Safety systems", "Field devices"], "card")]
+    for x, w, title, sub, items, kind in zones:
+        if kind == "soft":
+            s.rect(x, 20, w, 250, t["eu_soft"], t["eu"], sw=1.5)
+        else:
+            s.rect(x, 20, w, 250, t["card"], t["line"])
+        s.text(x + 16, 48, title, 16, t["eu"] if kind == "soft" else t["ink"], 700)
+        s.text(x + 16, 68, sub, 13, t["soft"])
+        for i, it in enumerate(items):
+            yy = 100 + i * 23
+            s.add(f'<circle cx="{x + 21}" cy="{yy - 4}" r="3" fill="{t["eu"] if kind == "soft" else t["soft"]}"/>')
+            s.text(x + 32, yy, it, 13, t["ink"])
+    s.path("M222,240 L238,240", stroke=t["accent"], sw=2)
+    s.text(130, 255, "most attacks come this way", 12, t["accent"], 600, "middle")
+    s.path("M522,240 L538,240", stroke=t["accent"], sw=2)
+
+    s.text(20, 306, "Who decides containment at the boundary", 15, t["ink"], 700)
+    stops = ["CDC", "CDC, OT approves", "OT, CDC advises", "OT management", "OT, vendor procedure"]
+    colw = 144
+    for i, st in enumerate(stops):
+        x = 20 + i * colw
+        col = t["eu"] if i < 2 else t["accent"]
+        s.rect(x + 2, 318, colw - 4, 4, col, rx=2)
+        s.text(x + 4, 340, st, 12, col, 700)
+    placed = {}
+    for cid, (l1, l2), pos in OTX:
+        n = placed.get(pos, 0); placed[pos] = n + 1
+        x, y = 20 + pos * colw + 2, 352 + n * 60
+        col = t["eu"] if pos < 2 else t["accent"]
+        s.rect(x, y, colw - 4, 54, t["card"], col, sw=1.2)
+        s.text(x + 10, y + 17, cid, 12, col, 700)
+        s.text(x + 10, y + 33, l1, 12, t["ink"])
+        s.text(x + 10, y + 48, l2, 12, t["ink"])
+    s.rect(20, 476, 720, 34, t["accent_soft"], t["accent"], sw=1)
+    s.text(380, 498, "Reporting: one owner per incident. The clock starts at awareness on either side.", 13,
+           t["ink"], 600, "middle")
+    return s
+
+
+# ------------------------------------------------------------- AI use ratings
+AI_USES = [
+    ("Summarising alerts", ("Should", "Should", "Should")),
+    ("Enrichment and context", ("Should", "Should", "Should")),
+    ("Explaining artefacts and log lines", ("Should", "Should", "Can")),
+    ("Drafting search queries", ("Should", "Should", "Should")),
+    ("Drafting and converting detection rules", ("Can", "Should", "Should")),
+    ("Proposing a triage verdict", ("Caution", "Should", "Should")),
+    ("Closing alerts without a human", ("Avoid", "Caution", "Caution")),
+    ("Investigation support", ("Caution", "Should", "Should")),
+    ("Summarising threat intelligence", ("Should", "Should", "Should")),
+    ("Drafting reports and reviews", ("Should", "Should", "Should")),
+    ("Drafting statutory notifications", ("Caution", "Caution", "Caution")),
+    ("Agents investigating on their own", ("Avoid", "Caution", "Can")),
+    ("Automated containment", ("Avoid", "Caution", "Caution")),
+    ("Training and onboarding material", ("Can", "Should", "Should")),
+]
+
+
+def ai_alt_text():
+    cols = ("teams of one to three", "dedicated CDCs", "large CDCs")
+    parts = []
+    for name, r in AI_USES:
+        parts.append(f"{name}: " + ", ".join(f"{v.lower().replace('caution', 'with caution')} for {c}" for v, c in zip(r, cols)))
+    return "AI uses rated by team size. " + "; ".join(parts) + "."
+
+
+def ai_ratings(t):
+    styles = {"Should": (t["eu"], None, t["on_eu"]), "Can": (t["eu_soft"], t["eu"], t["eu"]),
+              "Caution": (t["warn_soft"], t["warn"], t["warn"]), "Avoid": (t["accent_soft"], t["accent"], t["accent"])}
+    labels = {"Should": "Should", "Can": "Can", "Caution": "With caution", "Avoid": "Avoid"}
+    x0, cw, top, rh = 330, 136, 58, 32
+    h = top + len(AI_USES) * rh + 54
+    s = Svg(760, h, "AI uses by team size", ai_alt_text(), t)
+    for j, head in enumerate(("1–3 people", "Dedicated CDC", "Large CDC")):
+        s.text(x0 + j * cw + cw / 2, 40, head, 14, t["ink"], 700, "middle")
+    for i, (name, r) in enumerate(AI_USES):
+        y = top + i * rh
+        if i % 2 == 0:
+            s.rect(14, y, 732, rh, t["eu_soft"] if False else t["card"], rx=4)
+        s.text(24, y + 21, name, 13, t["ink"])
+        for j, v in enumerate(r):
+            fill, stroke, col = styles[v]
+            cx = x0 + j * cw + 8
+            s.rect(cx, y + 4, cw - 16, rh - 8, fill, stroke, rx=12, sw=1.2)
+            s.text(cx + (cw - 16) / 2, y + 21, labels[v], 12, col, 700, "middle")
+    ly = top + len(AI_USES) * rh + 30
+    s.text(24, ly, "Every use comes with conditions, listed in the table below the chart.", 12, t["soft"])
+    return s
+
+
 DIAGRAMS = {
     "respond-incident-flow": incident_flow,
     "tiers-capability-map": tier_map,
     "operating-model-decision-path": decision_path,
     "operating-model-staffing": staffing,
     "respond-reporting-clocks": reporting_clocks,
+    "start-here-first-90-days": first_90_days,
+    "it-ot-zones": it_ot_zones,
+    "ai-use-ratings": ai_ratings,
 }
 
 

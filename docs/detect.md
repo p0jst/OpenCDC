@@ -18,7 +18,7 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 | DE-6 | Detection validation | Testing that detections actually fire: unit tests, purple teaming, adversary emulation. |
 | DE-7 | Anomaly & integrity monitoring | File/configuration integrity monitoring, identity anomaly detection, and monitoring of the CDC's own infrastructure. |
 
-## Log source onboarding priority — greenfield guidance
+## Log source onboarding priority
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>The author's ordering by detection value.</p>
 
@@ -57,9 +57,9 @@ The traditional split, where infrastructure maintains the server and OS and the 
 | DE-1 Log management | ○ | ● | ○ | Log **integrity** is itself a control objective, since tampered logs destroy investigations and their evidential value. |
 | DE-2/DE-4 Use cases & coverage | ● | ● | ● | Exfiltration detections serve C; tampering/ransomware detections serve I/A. Balance the portfolio against your threat profile. |
 | DE-3 Triage | ● | ● | ● | Severity matrix should explicitly weigh CIA impact per asset class. |
-| DE-7 Integrity monitoring | ○ | ● | ○ | Direct Integrity control. |
 | DE-5 Hunting | ● | ● | ○ | Hunting finds the quiet, persistent intrusions detections miss, which are mostly espionage and preparation for tampering. |
 | DE-6 Validation | ○ | ● | ○ | Proves the detection portfolio does what it claims: the Integrity of the CDC's own output. |
+| DE-7 Integrity monitoring | ○ | ● | ○ | Direct Integrity control. |
 
 *● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
@@ -70,7 +70,7 @@ The traditional split, where infrastructure maintains the server and OS and the 
 - **Tier 1/2 analysts**, or a tierless model at higher maturity, for triage and investigation.
 - **Detection engineers** — use case lifecycle; in small teams combined with analyst role.
 - **Threat hunter** — Level 3+ capability.
-- Minimum viable team for business-hours monitoring with on-call: **3–4 FTE**. One seat staffed around the clock takes roughly **5.5–6 FTE** once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at **8–12 FTE**, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
+- Minimum viable team for business-hours monitoring with on-call: 3–4 FTE. One seat staffed around the clock takes roughly 5.5–6 FTE once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at 8–12 FTE, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
 
 ## Maturity criteria
 
@@ -82,7 +82,7 @@ The criteria that score DETECT are kept in one place for all six functions: the 
 
 <p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
 
-- **NIS2 Art. 21(2)(b)** — incident handling implies detection capability; **Art. 23** reporting deadlines, with early warning within 24h, are only achievable with functioning detection.
+- **NIS2 Art. 21(2)(b)** — incident handling implies detection capability; Art. 23 reporting deadlines, with early warning within 24h, are only achievable with functioning detection.
 - **GDPR Art. 33** — 72-hour breach notification to the supervisory authority starts at *awareness*; detection speed directly determines compliance feasibility.
 - **DORA Art. 10** — financial entities must have mechanisms to promptly detect anomalous activities.
 - **GDPR & employee monitoring** — security monitoring of user activity must respect data protection: define purpose limitation, retention, and access controls for security logs; involve the DPO. Log data about employees is personal data.

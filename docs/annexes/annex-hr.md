@@ -1,17 +1,17 @@
 # National Annex — Croatia
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
@@ -19,13 +19,13 @@
 |-------|-------|
 | Implementing law | Zakon o kibernetičkoj sigurnosti (Cybersecurity Act), NN 14/2024, in force 15 February 2024; first member state to transpose |
 | Competent authority | Sigurnosno-obavještajna agencija (SOA), the central state authority for cybersecurity |
-| National CSIRT / reporting | Croatian national CERT at CARNET / ZSIS CERT |
+| National CSIRT / reporting | The CSIRT at SOA or the national CERT at CARNET, depending on the entity; CARNET runs the national reporting platform |
 | Official starting point | https://www.soa.hr |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-Self-assessment and registration processes are run by SOA; sector regulations followed the act.
+Competent authorities categorise entities and notify them of the result. The duty to report significant incidents starts 30 days after that notice, so the reporting runbook has to be ready by then.
 
 ## Standard checklist for all countries
 

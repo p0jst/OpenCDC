@@ -29,16 +29,16 @@ Establish the mandate, accountability, and decision-making structures that let t
 | GV-1 Charter | ● | ● | ● | Governance protects all three objectives by ensuring someone is accountable for each. |
 | GV-2 Risk mgmt | ● | ● | ● | Risk appetite statements should be expressed per CIA objective, such as "no tolerance for integrity loss in payment data". |
 | GV-3 Policies | ● | ● | ○ | Data classification and access policies primarily serve Confidentiality and Integrity. |
-| GV-6 Supply chain | ● | ● | ● | Suppliers can compromise any objective; availability of outsourced services is a distinct risk. |
 | GV-4 Roles & accountability | ○ | ○ | ○ | An enabler: it serves all three only through the owners it names. Its test is whether each crown jewel's C, I and A has a named owner. |
 | GV-5 Budget & resourcing | ○ | ○ | ● | Under-resourcing shows first as lost coverage hours and slow restores, which are Availability failures. |
+| GV-6 Supply chain | ● | ● | ● | Suppliers can compromise any objective; availability of outsourced services is a distinct risk. |
 | GV-7 Oversight & reporting | ○ | ○ | ○ | An enabler: reporting protects nothing itself, but it is how management sees which objective is drifting from its appetite. |
 
 *● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
-<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in [Operating models](operating-models.md).</p>
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
 - **Executive sponsor**, a board member or C-level, owns cyber risk acceptance.
 - **CISO / Head of Security** — owns the policy framework.

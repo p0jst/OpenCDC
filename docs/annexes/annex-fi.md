@@ -1,31 +1,31 @@
 # National Annex — Finland
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Kyberturvallisuuslaki (Cybersecurity Act 124/2025), in force 8 April 2025 |
-| Competent authority | Traficom (Finnish Transport and Communications Agency) + sector authorities |
+| Implementing law | Kyberturvallisuuslaki (Cybersecurity Act 124/2025), in force 8 April 2025. Registration was due by 8 May 2025 and the risk-management operating model by 8 July 2025. |
+| Competent authority | Sector supervisory authorities, including Traficom, the Energy Authority, Tukes, Valvira and Fimea; Traficom's NCSC-FI coordinates them and is the single point of contact |
 | National CSIRT / reporting | NCSC-FI / Kyberturvallisuuskeskus, part of Traficom |
 | Official starting point | https://www.kyberturvallisuuskeskus.fi |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-Reporting through NCSC-FI; Finland's Katakri/other national criteria can serve as control evidence.
+Reporting goes through NCSC-FI. Finland's Katakri and other national criteria can serve as control evidence.
 
 ## Standard checklist for all countries
 

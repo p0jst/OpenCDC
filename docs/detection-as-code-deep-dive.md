@@ -104,7 +104,7 @@ Merge to main is the only road to production. Stages:
 
 Adoption reality: build stages 1–3 first, a week of work with immediate payoff, then 5–6, then automate 7. Do not gate initial adoption on the full pipeline.
 
-## 4. ATT&CK mapping methodology — mapping honestly
+## 4. Mapping to ATT&CK honestly
 
 ATT&CK mapping is easy to do badly. Rules that make it useful:
 
@@ -112,10 +112,10 @@ ATT&CK mapping is easy to do badly. Rules that make it useful:
 2. Map the behaviour the logic actually catches, not the scenario that inspired it. A rule catching `certutil` downloads maps to T1105, Ingress Tool Transfer, even if you wrote it "because ransomware".
 3. One detection may map to several techniques; several detections per technique is normal and good, since depth beats breadth on high-value techniques.
 4. Score coverage per technique on an honesty scale, not a checkbox:
-   - 0: no relevant telemetry collected
-   - 1: telemetry exists and could be hunted, no detection
-   - 2: detection deployed, not validated in the last 12 months
-   - 3: detection deployed and validated, having fired in test
+    - 0: no relevant telemetry collected
+    - 1: telemetry exists and could be hunted, no detection
+    - 2: detection deployed, not validated in the last 12 months
+    - 3: detection deployed and validated, having fired in test
 5. Scope the matrix before scoring: filter ATT&CK to your threat profile's techniques, per [CTI deep dive](cti-deep-dive.md) §5, and your platforms. "37% of all of ATT&CK" is meaningless; "level ≥2 on 80% of the techniques our top three threat actors use" is a management-grade statement.
 6. Generate, don't hand-paint: the pipeline should emit an ATT&CK Navigator layer JSON from the rule tags plus validation results, so the coverage picture is always current. Publish it to the team monthly; bring the threat-profile-scoped view to GOVERN quarterly.
 

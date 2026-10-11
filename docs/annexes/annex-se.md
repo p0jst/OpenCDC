@@ -1,31 +1,31 @@
 # National Annex — Sweden
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Cybersäkerhetslagen, the new Cybersecurity Act transposing NIS2, adopted 2025, in force January 2026; verify the exact date |
-| Competent authority | MSB (Myndigheten för samhällsskydd och beredskap) coordinating + sector supervisory authorities |
-| National CSIRT / reporting | CERT-SE at MSB |
-| Official starting point | https://www.msb.se |
+| Implementing law | Cybersäkerhetslag (2025:1506), the Cybersecurity Act transposing NIS2, in force 15 January 2026 |
+| Competent authority | Myndigheten för civilt försvar, MCF, named MSB until 2026, issues the regulations; sector supervisory authorities supervise |
+| National CSIRT / reporting | CERT-SE, part of the National Cyber Security Centre at FRA since 1 July 2026 |
+| Official starting point | https://www.ncsc.se |
 <!-- countries:end -->
 
 ## Country notes for your CDC
 
-Registration with MSB; sector authorities supervise. MSB föreskrifter, its regulations, detail the measures. Map them to your control evidence.
+MCF's regulations, published as MCFFS, detail registration and the security measures, and sector authorities supervise. Since 1 July 2026 the national CSIRT function, CERT-SE, sits in the National Cyber Security Centre at FRA, which also receives incident reports; confirm the current reporting channel with it. Map the MCF regulations to your control evidence.
 
 ## Standard checklist for all countries
 

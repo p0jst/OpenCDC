@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This framework describes **what a Cyber Defence Center (CDC) must be able to do**, whether that capability is a 24/7 department or two people in IT who also handle security, **how to build those capabilities from zero**, and **how to measure maturity over time**. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
+This framework describes what a Cyber Defence Center (CDC) must be able to do, whether that capability is a 24/7 department or two people in IT who also handle security, how to build those capabilities from zero, and how to measure maturity over time. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
 
 ## Terminology
 
@@ -17,7 +17,7 @@ The four terms below are the foundation; every other term the framework uses is 
 
 ## Scope boundary: IT, not OT/telco
 
-This framework is written for **enterprise IT** security operations. OT/ICS environments, where availability and physical safety dominate and active scanning or host isolation can be hazardous, and telco core networks, separately regulated in most member states, require different technical approaches. Do not apply the PROTECT/DETECT/RESPOND content to those domains unadapted. The governance and maturity concepts transfer; the technical guidance does not. See [About](../ABOUT.md) and [the IT/OT interface](it-ot-interface.md).
+This framework is written for enterprise IT security operations. OT/ICS environments, where availability and physical safety dominate and active scanning or host isolation can be hazardous, and telco core networks, separately regulated in most member states, require different technical approaches. Do not apply the PROTECT/DETECT/RESPOND content to those domains unadapted. The governance and maturity concepts transfer; the technical guidance does not. See [About](../ABOUT.md) and [the IT/OT interface](it-ot-interface.md).
 
 ## Design principles
 
@@ -48,7 +48,7 @@ second column: you cannot detect what you cannot see, and you cannot measure
 coverage before detections exist. The week-by-week order is in
 [Start here](start-here.md).
 
-## Dependency markers: [GATE] / [HARD] / [SOFT]
+## Dependency markers
 
 A CDC delivers very little alone, and most stalled CDC programmes stall on another department, not on security work. To make that visible, every function document ends with an "External dependencies" table, and dependencies are classified consistently:
 

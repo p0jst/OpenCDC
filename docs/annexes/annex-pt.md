@@ -1,23 +1,23 @@
 # National Annex — Portugal
 
 <!-- countries:begin -->
-> **Status as of July 2026:** Adopted. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Regime jurídico da cibersegurança, the decree-law transposing NIS2, adopted 2025; verify its number and date of entry into force |
+| Implementing law | Decreto-Lei n.º 125/2025 of 4 December, the regime jurídico da cibersegurança transposing NIS2, in force 3 April 2026 |
 | Competent authority | CNCS (Centro Nacional de Cibersegurança) |
 | National CSIRT / reporting | CERT.PT at CNCS |
 | Official starting point | https://www.cncs.gov.pt |
@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-The Quadro Nacional de Referência para a Cibersegurança (QNRCS) is Portugal's NIST-CSF-aligned reference, with direct mapping to this framework.
+Some risk-management, reporting and supervision provisions apply only 24 months after CNCS publishes its supplementary regulations; check CNCS for the current timetable. The Quadro Nacional de Referência para a Cibersegurança (QNRCS) is Portugal's NIST-CSF-aligned reference, with direct mapping to this framework.
 
 ## Standard checklist for all countries
 

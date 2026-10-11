@@ -39,7 +39,7 @@ exact content before anything is sent:
 | The month and the framework version | |
 
 Nothing is sent by the tool itself. You email the contribution, or download the
-file and send it, to **benchmark@opencdc.org**.
+file and send it, to benchmark@opencdc.org.
 
 ## How contributions are handled
 

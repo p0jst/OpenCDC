@@ -12,9 +12,9 @@ minimum.
 NIS2 requires the same measures of *essential* and *important* entities. The
 categories differ in supervision, ex ante or ex post, and in the maximum fines,
 not in what an entity must do. OCDF therefore puts the minimum form of every
-measure into the **Essential tier** and the **Level 2 criteria**:
+measure into the Essential tier and the Level 2 criteria:
 
-- Reaching **Level 2 in every function** covers each measure below at least in
+- Reaching Level 2 in every function covers each measure below at least in
   basic form, in this framework's reading, apart from the two gaps named under
   the table.
 - A capability that carries the legal floor is never "above tier" for an entity

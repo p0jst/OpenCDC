@@ -1,4 +1,4 @@
-# Publishing notes — maintainer checklist
+# Publishing notes and maintainer checklist
 
 Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capability model; SOC leads in the subtitle and metadata for discoverability.
 
@@ -18,7 +18,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 
 ## Community benchmark
 
-- Create the mailbox **benchmark@opencdc.org** on the opencdc.org domain before announcing the benchmark. The tool and the benchmark page already point to it; the address is set in one place, `BENCH_EMAIL` in `tools/maturity-assessment.html`.
+- Create the mailbox benchmark@opencdc.org on the opencdc.org domain before announcing the benchmark. The tool and the benchmark page already point to it; the address is set in one place, `BENCH_EMAIL` in `tools/maturity-assessment.html`.
 - How to handle contributions: [benchmark contributions guide](benchmark/README.md).
 
 ## Outstanding before the next release

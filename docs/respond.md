@@ -120,7 +120,7 @@ practical traps, both hard to fix retrospectively:
 Firms specialising in incident response can coordinate carriers, responders and notifications while
 the CDC keeps working the incident. Identify one alongside the DFIR retainer, not during a P1.
 
-## EU statutory reporting timelines — build these into playbooks
+## EU statutory reporting timelines
 
 <p class="src" markdown><span class="src-tag law">Law</span>From the legal texts; national transpositions may add detail. Not legal advice.</p>
 
@@ -138,7 +138,7 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 
 **What counts as significant.** Under NIS2 Art. 23(3) an incident is significant if it has caused or can cause severe operational disruption or financial loss to the entity, or considerable material or non-material damage to others. Commission Implementing Regulation (EU) 2024/2690 sets concrete thresholds for digital infrastructure and digital service providers, and many member states publish guidance for other sectors. Write the definition that applies to you into the IR plan's severity classification, so the on-call analyst does not have to interpret the directive at 03:00.
 
-> Member-state transpositions of NIS2 may add national specifics, such as a different recipient for one sector, so maintain a country annex for each jurisdiction you operate in. In Denmark, for example, energy-sector entities report to Energistyrelsen, and to the CSIRT when network security was compromised, instead of through virk.dk. Community contributions of national annexes are welcome; see CONTRIBUTING.
+> Member-state transpositions of NIS2 may add national specifics, such as a different recipient for one sector or a shorter clock, so maintain a country annex for each jurisdiction you operate in. In Denmark, for example, energy-sector entities report to Energistyrelsen, and to the CSIRT when network security was compromised, instead of through virk.dk. Cyprus requires the early warning within 6 hours and the final report within 15 days of restoration; see the [Cyprus annex](annexes/annex-cy.md). Community contributions of national annexes are welcome; see CONTRIBUTING.
 
 ## Case closure taxonomy
 
@@ -152,10 +152,10 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
+| RS-1 IR plan | ● | ● | ● | The plan's severity classes should weigh impact per objective, so the response matches what is at stake. |
 | RS-2 Playbooks | ● | ● | ● | Ransomware playbooks defend A/I; breach playbooks defend C. |
 | RS-3 Forensics | ○ | ● | ○ | Evidence integrity through hashing and chain of custody is an Integrity discipline. |
 | RS-4 Containment | ● | ● | ● | Containment trades short-term Availability for protection of C and I, so the decision authority for that trade-off must be pre-agreed at GOVERN level. |
-| RS-1 IR plan | ● | ● | ● | The plan's severity classes should weigh impact per objective, so the response matches what is at stake. |
 | RS-5 Reporting & communication | ● | ○ | ○ | Reporting channels carry sensitive incident detail; the GDPR duties it serves are about Confidentiality breaches. |
 | RS-6 Crisis interface | ○ | ○ | ● | Escalates when an incident threatens the continuity of the business, an Availability decision. |
 | RS-7 Exercises | ○ | ○ | ○ | An enabler: exercise the scenario that threatens your dominant objective, usually ransomware for A and I, breach for C. |
@@ -164,7 +164,7 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 ## Roles & staffing
 
-<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in [Operating models](operating-models.md).</p>
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
 - **Incident manager/commander** — coordinates; distinct from technical lead in larger incidents.
 - **Technical responders** — often the same analysts as DETECT.
@@ -182,7 +182,7 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 
 <p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
 
-- **NIS2 Art. 21(2)(b)** incident handling; **Art. 23** reporting; see the table above.
+- **NIS2 Art. 21(2)(b)** incident handling; Art. 23 reporting; see the table above.
 - **GDPR Art. 33/34** — breach notification; document *all* breaches internally, even those not notified, per Art. 33(5).
 - **DORA Art. 17–19** — ICT incident management, classification and reporting for financial entities.
 - **ENISA / national CSIRT good practice** — align severity taxonomies with your national CSIRT's scheme where one exists to ease reporting.

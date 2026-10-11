@@ -4,7 +4,7 @@
 
 **An open source framework for building and maturing Security Operations Centers (SOC) and Cyber Defence Centers (CDC) across the European Union.**
 
-It is for anyone responsible for detecting and responding to cyber attacks, whatever the team is called: a SOC, a CDC, an IT-security team, or two people in IT who also run the servers. "CDC" in this framework names the function, not the size of the department. Not sure where you fit? See [Is this for me?](#is-this-for-me)
+It is for the people who notice cyber attacks and deal with them, whether that is a 24/7 Cyber Defence Center or two people in IT who also run the servers. The framework calls that work a *CDC*, whatever the team is called and however small it is. [Is this for me?](#is-this-for-me)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![Version](https://img.shields.io/badge/version-v1.2.0-blue)
@@ -14,22 +14,46 @@ It is for anyone responsible for detecting and responding to cyber attacks, what
 
 ---
 
-> **Scope:** this framework targets **enterprise IT environments**: endpoints, servers, identity, cloud and SaaS. Governance, maturity and response apply to all of them, but the technical depth is uneven: cloud control planes and Microsoft 365 are only covered in general terms. It is **not** designed for OT/ICS, telco core networks, or classified environments; see [About](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and [the IT/OT interface](docs/it-ot-interface.md) for what the CDC owns at the boundary.
+> **Scope:** this framework targets enterprise IT environments: endpoints, servers, identity, cloud and SaaS. Governance, maturity and response apply to all of them, but the technical depth is uneven: cloud control planes and Microsoft 365 are only covered in general terms. It is *not* designed for OT/ICS, telco core networks, or classified environments; see [About](ABOUT.md) for the reasoning, [what still applies if you run critical infrastructure](ABOUT.md#if-you-run-critical-infrastructure), and [the IT/OT interface](docs/it-ot-interface.md) for what the CDC owns at the boundary.
 
 ## Why this framework exists
 
-European organisations face a unique combination of pressures: a rapidly evolving threat landscape, a dense regulatory environment of NIS2, DORA, GDPR and CRA, and a persistent shortage of skilled security personnel. Many teams are asked to "build a SOC" with little guidance on where to start, or to "mature" an existing capability without a shared yardstick for what maturity means.
+Teams are asked to "build a SOC" with little to go on, or to "mature" one without any shared idea of what maturity means. NIST CSF 2.0 describes what good security covers, and NIS2, DORA and GDPR say what European organisations are obliged to do. None of them says how to set up the team that does the work, who decides what, or how to tell whether it works.
 
-The Open CDC Framework provides a **free, vendor-neutral, community-maintained blueprint** for:
+OCDF tries to fill that gap. It is free, names no vendors, and is written for European law, with notes for all 27 member states. It follows the six CSF functions, says for each capability what it protects in terms of confidentiality, integrity and availability, and scores how well you run it on four maturity levels.
 
-1. **Building** a Cyber Defence Center from the ground up.
-2. **Maturing** an existing SOC/CDC against a structured maturity model.
-3. **Aligning** operations with the NIST Cybersecurity Framework (CSF) 2.0 and EU regulatory obligations.
-4. **Anchoring** every capability in the CIA triad: Confidentiality, Integrity and Availability.
+## Is this for me?
+
+Probably, if part of your job is noticing attacks and dealing with them. You do not need a department called SOC or CDC. Every capability is marked with the smallest [tier](docs/tiers.md) it belongs to, so a team of two can see what matters now and what can wait.
+
+| You are | Start here |
+|---------|-----------|
+| **A small IT-security team**, one to three people with other IT duties too | [If you are the whole security function](docs/tiers.md#if-you-are-the-whole-security-function), then the [first 90 days](docs/start-here.md) and the [regulatory selector](tools/regulatory-profile.html). Leave the deep dives for later |
+| **A CISO, board member or sponsor** | The 30-minute [executive guide](docs/executive-guide.md), then the [worked example](docs/worked-example.md) |
+| **Building a SOC or CDC**, in-house, with a provider, or both | The seven steps under [How to use it](#how-to-use-it), with [operating models](docs/operating-models.md) for the staffing and budget case |
+| **Running one already** | The [maturity self-assessment](tools/maturity-assessment.html), reusing any SOC-CMM, SIM3 or CIS assessment you have, then [running the CDC](docs/cdc-operations.md) |
+| **An analyst or engineer** | [Designing alert triage](docs/alert-triage.md), [detection-as-code](docs/detection-as-code-deep-dive.md), the [CTI deep dive](docs/cti-deep-dive.md) and the [playbook templates](templates/scenario-playbook-template.md) |
+| **In compliance or legal** | The [EU regulatory landscape](docs/eu-regulatory-landscape.md), the [NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) and your [national annex](docs/annexes/README.md) |
+
+New to the terms? [OCDF on one page](docs/one-page.md) explains them in five minutes. [Why trust this framework](docs/trust.md) says which statements are law, which are standards, and which are the author's own judgement.
+
+## How to use it
+
+The same seven steps as *Start building* on the [website](https://opencdc.org/#start-building), which is the one path through the framework:
+
+1. **Choose your tier** in [implementation tiers](docs/tiers.md). Output: target tier. If you are in NIS2 scope, read [the legal floor](docs/tiers.md#the-legal-floor) first.
+2. **Run the design workshops** in the [design navigator](assessments/cdc-design-navigator.md), one per function. Output: design gaps logged as backlog items.
+3. **Adopt the charter** from the [charter template](templates/cdc-charter-template.md). Output: signed charter with containment authority.
+4. **Decide the operating model** in [operating models](docs/operating-models.md). Output: target operating model and staffing numbers.
+5. **Assess where you are** with the [maturity self-assessment tool](tools/maturity-assessment.html) or the printable [checklist](assessments/maturity-self-assessment.md). Output: scored baseline with evidence, and an action plan with owners.
+6. **Work the first 90 days** in [start here](docs/start-here.md), with your [national annex](docs/annexes/README.md) and the [regulatory selector](tools/regulatory-profile.html). Output: day-90 exit criteria met.
+7. **Set the operating rhythm** with the [annual calendar](templates/annual-calendar-template.md) and the [detection use case template](templates/detection-use-case-template.md). Output: annual calendar and a growing detection portfolio.
+
+Then reassess annually, or after major organisational change, and review open actions quarterly.
 
 ## Framework structure
 
-The framework is organised around the **six functions of NIST CSF 2.0**, each mapped to the CIA triad and to EU regulatory requirements:
+The framework is organised around the six functions of NIST CSF 2.0, each mapped to the CIA triad and to EU regulatory requirements:
 
 | Function | Question it answers | Doc |
 |----------|--------------------|-----|
@@ -65,46 +89,12 @@ Cross-cutting documents, in reading order:
 
 Practical assets:
 
-- [`templates/`](templates/) — charter, IR plan, detection use case, KPI catalogue, ECSF job description, MSSP requirements checklist, containment action catalogue, scenario and platform playbook templates, controls register, annual operating calendar, skill self-assessment sheet in xlsx and csv.
-- [`assessments/`](assessments/) — the Design Navigator, with its guiding questions per function, and the maturity self-assessment.
-- [`tools/regulatory-profile.html`](tools/regulatory-profile.html) — interactive law selector: tick the laws that apply, covering EU instruments and all 27 member states, and the references show or hide to match. Host via GitHub Pages or open locally.
-- [`tools/skill-matrix.html`](tools/skill-matrix.html) — team skill matrix: team members fill in the self-assessment sheet, the manager uploads the returned files and gets a skills heatmap, gap analysis against role targets, and train/mentor/hire recommendations. Host via GitHub Pages or open locally.
-- [`tools/maturity-assessment.html`](tools/maturity-assessment.html) — interactive maturity self-assessment: score every criterion on a five-point status scale, get automatic staged scoring, a score-vs-target chart, a resume link that restores your progress on any device, and an exportable snapshot to track the trend over time. Host via GitHub Pages or open locally.
-- [`docs/annexes/`](docs/annexes/) — national annexes for all 27 EU member states, status verified July 2026. Each annex shows when it was last verified, by whom, and when the next review is due.
-
-## New readers
-
-- [OCDF on one page](docs/one-page.md): every term in the framework, in five minutes.
-- [Executive guide](docs/executive-guide.md): the 30-minute version for a CISO, board member or sponsor.
-- [Worked example](docs/worked-example.md): the framework applied to a fictional 2,500-person company, from charter to first board report.
-- [Why trust this framework](docs/trust.md): which statements are law, standard, guidance, this framework's design, or the author's experience.
-
-## Is this for me?
-
-If you are responsible for detecting and responding to cyber attacks in an EU organisation, yes. Pick the entry point that matches where you are today:
-
-| You are… | Start with | Then |
-|----------|-----------|------|
-| **1–3 people doing IT security**, often alongside other IT duties | [If you are the whole security function](docs/tiers.md#if-you-are-the-whole-security-function) and the [Essential tier](docs/tiers.md) | The [first 90 days](docs/start-here.md), the [IR plan template](templates/incident-response-plan-template.md), and the [regulatory selector](tools/regulatory-profile.html) to see which laws apply. Skip the deep dives for now |
-| **Building a dedicated security team**, in-house, with a provider, or both | The seven steps under [How to use it](#how-to-use-it) | [Operating models](docs/operating-models.md) and [Roles & competences](docs/roles-and-competences.md) for the staffing and budget case |
-| **Maturing an existing SOC or CDC** | The [maturity self-assessment](tools/maturity-assessment.html), reusing any SOC-CMM, SIM3 or CIS assessment you already have | [Running the CDC](docs/cdc-operations.md), then the [detection-as-code](docs/detection-as-code-deep-dive.md) and [CTI](docs/cti-deep-dive.md) deep dives |
-| **CISO, board member or sponsor** | The 30-minute [executive guide](docs/executive-guide.md) | The [worked example](docs/worked-example.md) |
-
-You do not need a department called SOC or CDC to use any of it. Every capability is tagged with the smallest tier that should implement it, so a small team can see what applies now and what can wait.
-
-## How to use it
-
-The same seven steps as *Start building* on the [website](https://opencdc.org/#start-building), the one path through the framework:
-
-1. **Choose your tier** in [implementation tiers](docs/tiers.md). Output: target tier. If you are in NIS2 scope, read [the legal floor](docs/tiers.md#the-legal-floor) first.
-2. **Run the design workshops** in the [design navigator](assessments/cdc-design-navigator.md), one per function. Output: design gaps logged as backlog items.
-3. **Adopt the charter** from the [charter template](templates/cdc-charter-template.md). Output: signed charter with containment authority.
-4. **Decide the operating model** in [operating models](docs/operating-models.md). Output: target operating model and staffing numbers.
-5. **Assess where you are** with the [maturity self-assessment tool](tools/maturity-assessment.html) or the printable [checklist](assessments/maturity-self-assessment.md). Output: scored baseline and an owned action plan.
-6. **Work the first 90 days** in [start here](docs/start-here.md), with your [national annex](docs/annexes/README.md) and the [regulatory selector](tools/regulatory-profile.html). Output: day-90 exit criteria met.
-7. **Set the operating rhythm** with the [annual calendar](templates/annual-calendar-template.md) and the [detection use case template](templates/detection-use-case-template.md). Output: annual calendar and a growing detection portfolio.
-
-Then reassess annually, or after major organisational change, and review open actions quarterly.
+- [`templates/`](templates/): the charter, IR plan, detection use case, KPI catalogue, ECSF job description, MSSP requirements checklist, containment action catalogue, scenario and platform playbook templates, controls register, annual operating calendar, and the skill self-assessment sheet as xlsx and csv.
+- [`assessments/`](assessments/): the design navigator with its guiding questions per function, and the maturity self-assessment.
+- [`tools/regulatory-profile.html`](tools/regulatory-profile.html): an interactive law selector. Tick the laws that apply, covering EU instruments and all 27 member states, and the references show or hide to match. Host via GitHub Pages or open locally.
+- [`tools/skill-matrix.html`](tools/skill-matrix.html): the team skill matrix. Team members fill in the self-assessment sheet, the manager uploads the returned files and gets a skills heatmap, gap analysis against role targets, and train/mentor/hire recommendations. Host via GitHub Pages or open locally.
+- [`tools/maturity-assessment.html`](tools/maturity-assessment.html): the interactive maturity self-assessment. Score every criterion on a five-point status scale, get automatic staged scoring, a score-vs-target chart, a resume link that restores your progress on any device, and an exportable snapshot to track the trend over time. Host via GitHub Pages or open locally.
+- [`docs/annexes/`](docs/annexes/): national annexes for all 27 EU member states. Each annex shows when it was last reviewed, by whom, how confident that review is, and when the next one is due.
 
 ## About the author & project
 
@@ -118,4 +108,4 @@ This is a community project. Contributions, translations and national-regulation
 
 Documentation is licensed under [Creative Commons Attribution 4.0 International](LICENSE), CC BY 4.0.
 
-This framework builds on publicly available works by NIST, ENISA, MITRE, FIRST and others. It is **not** endorsed by or affiliated with any of these organisations. All sources are credited in [references & credits](docs/references.md).
+This framework builds on publicly available works by NIST, ENISA, MITRE, FIRST and others. It is *not* endorsed by or affiliated with any of these organisations. All sources are credited in [references & credits](docs/references.md).

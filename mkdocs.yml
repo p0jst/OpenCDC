@@ -9,8 +9,8 @@ repo_url: https://github.com/p0jst/OpenCDC
 repo_name: p0jst/OpenCDC
 # Unused while content.action.edit is off; kept so the repo link resolves and
 # so re-enabling the edit action is a one-line change. Note that if it is ever
-# re-enabled, index.md and templates/index.md are staged from site/ and need
-# their edit_uri repointed (see git history for site/hooks.py).
+# re-enabled, index.md is staged from site/ and needs its edit_uri repointed
+# (see git history for site/hooks.py).
 edit_uri: edit/main/
 
 # Content is staged by `python site/build_site.py` (run it before mkdocs build)
@@ -202,7 +202,7 @@ nav:
           - Overview: tools/README.md
           - Community benchmark: docs/benchmark.md
       - Templates:
-          - Overview & downloads: templates/index.md
+          - Overview & downloads: templates/README.md
           - CDC charter: templates/cdc-charter-template.md
           - Incident response plan: templates/incident-response-plan-template.md
           - Detection use case: templates/detection-use-case-template.md

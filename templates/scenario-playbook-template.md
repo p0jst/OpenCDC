@@ -20,7 +20,7 @@
 - **Default severity:** [P1–P4], per IR plan §1
 - **Legal note:** […] *For example: assume data was exfiltrated until shown otherwise; involve the DPO when employee data is examined.*
 
-## 0. Prerequisites — build these before the incident
+## 0. Prerequisites to build before the incident
 
 *List what must already exist for the steps below to work. Every unchecked box is a gap to put in the backlog.*
 
@@ -30,7 +30,7 @@
 - [ ] External contacts in the IR plan: [DFIR retainer, counsel, insurer, supplier contacts]
 - [ ] […]
 
-## 1. Verify and triage — the first hour
+## 1. Verify and triage in the first hour
 
 *Numbered steps, in order. For a major incident, run the estate-wide first-hour actions in [RESPOND](../docs/respond.md) alongside these.*
 

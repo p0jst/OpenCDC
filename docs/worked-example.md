@@ -15,9 +15,9 @@ quarter's results.
 |---|---|
 | **Business** | Parcel sorting and delivery, 14 sites in Denmark, sorting runs through the night |
 | **People** | 2,500 employees, of which 4 in IT security today and no SOC |
-| **Estate** | 2,000 laptops and desktops, 300 servers (on-premises virtualisation plus Azure), Microsoft 365 and Entra ID, 1,200 handheld scanners under mobile device management |
+| **Estate** | 2,000 laptops and desktops, 300 servers on-premises and in Azure, Microsoft 365 and Entra ID, 1,200 handheld scanners under mobile device management |
 | **Out of scope** | The sorting-line control systems (OT), run by Operations; the CDC monitors the IT/OT boundary only |
-| **Regulation** | NIS2 *important* entity (postal and courier services); GDPR; Danish NIS 2-loven, registered on virk.dk |
+| **Regulation** | NIS2 *important* entity as a postal and courier service; GDPR; Danish NIS 2-loven, registered on virk.dk |
 | **Budget** | Approved for a CDC of 6 people plus a managed service for nights and weekends |
 
 ## The decisions
@@ -167,8 +167,8 @@ recommends.
 
 | Measure | This quarter | Trend | Comment |
 |---------|--------------|-------|---------|
-| Functions at or above target | 0 of 6 | New baseline | Plan above closes Identify and Recover gaps in Q1 |
-| Median time to detect, serious incidents | 6 h (2 incidents) | New baseline | Both were phishing leading to mailbox access |
+| Functions at or above target | 0 of 6 | New baseline | The plan above brings Govern, Identify and Recover to Level 2 in Q1 |
+| Median time to detect, serious incidents | 6 h, 2 incidents | New baseline | Both were phishing leading to mailbox access |
 | Median time to contain, serious incidents | 40 min | New baseline | Account disabled and sessions revoked by the on-call responder |
 | Statutory notifications on time | 2 of 2 | — | NIS2 early warning after 9 hours. GDPR: one mailbox held customer data and was notified to Datatilsynet after 50 hours; the other was assessed and documented as not notifiable, per Art. 33(5) |
 | Critical services with a restore test in 12 months | 1 of 4 | — | Route planning, tracking and payroll scheduled |

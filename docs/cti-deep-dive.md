@@ -4,7 +4,7 @@
 
 > Threat intelligence fails in one of two ways: it becomes a feed of indicators nobody contextualises, or a stream of elegant reports nobody operationalises. This document describes a CTI function whose explicit job is to make the rest of the CDC better: detection engineering, hunting, vulnerability management, incident response and governance. Audience: S/A-tier teams standing up or professionalising CTI. E-tier teams should consume their national CSIRT and sector ISAC, and skip to §6.
 
-## 1. The three levels — and who each one serves
+## 1. The three levels and who each one serves
 
 Definitions vary across the industry; fix yours in writing. This framework uses:
 
@@ -41,14 +41,14 @@ Rate each source annually: did it contribute to a PIR answer, a detection, or a 
 - TLP 2.0 on everything shared; sharing back to the community is part of the job, per [CSIRT community layer](csirt-community.md) §2.
 - Track RFIs, requests for information, as tickets with deadlines. The RFI queue is how the rest of the CDC pulls intel, and its response time is a CTI KPI.
 
-## 5. The threat profile and actor cards — the strategic backbone
+## 5. The threat profile and actor cards
 
 The threat profile, capability ID-5, is CTI's anchor product. Structure:
 
 1. Organisational exposure: sectors, geography, crown jewels, technologies, suppliers, public profile.
 2. Relevant threat categories with reasoning: financially-motivated ransomware, high and sector-wide; sector espionage, moderate with reasoning; hacktivism, situational; insider, baseline.
 3. Named actors and groups per category, each with an actor card: motivation · targeting logic · initial access TTPs · post-compromise TTPs · relevant ATT&CK technique list · known tooling · recent activity · what we can and cannot detect today, honestly, from the coverage layer in [Detection-as-code deep dive](detection-as-code-deep-dive.md) §4.
-4. Top-N technique list: the union of the actor cards' techniques, ranked by frequency × your exposure. This list IS the scope for ATT&CK coverage scoring and the detection backlog's priority order.
+4. Top-N technique list: the union of the actor cards' techniques, ranked by frequency × your exposure. This list is the scope for ATT&CK coverage scoring and the detection backlog's priority order.
 5. Review: quarterly light refresh, annual full revision; changes are communicated as a delta briefing on what changed and what we're doing about it, not a re-read.
 
 ## 6. The interfaces: how CTI feeds the rest of the CDC
@@ -60,7 +60,7 @@ This is where most CTI programmes fail. Build these as standing, ticketed workfl
 | → Detection engineering | "Detection opportunity" tickets: technique, adversary procedure, log source, suggested logic sketch; engineering triages into the use-case backlog, per [Detection-as-code deep dive](detection-as-code-deep-dive.md). CTI reviews the coverage layer and flags profile techniques stuck at level 0–1. | Weekly |
 | → Threat hunting | Hunt hypotheses, or "threat hints": actor X uses procedure Y; we have telemetry Z; hypothesis and suggested data window. Hunting returns findings, which become detections and intel. | Per hunt cycle |
 | → Vulnerability management | Exploitation-aware prioritisation: profile actors' exploited CVEs plus known-exploited catalogues override raw CVSS ordering; emergency-patch trigger on active exploitation of internet-facing tech. | Continuous |
-| → Incident response | Enrichment on demand via RFI, actor context during incidents, and post-incident: every closed P1/P2 gets a CTI debrief on what we learned about the adversary and what does it change? | Per incident |
+| → Incident response | Enrichment on demand via RFI, actor context during incidents, and post-incident: every closed P1/P2 gets a CTI debrief on what was learned about the adversary, and what it changes. | Per incident |
 | → Tactical triage | Curated indicators pushed to platforms with context, confidence and expiry; stale indicators are pruned automatically, because indicator sets that only grow become noise generators. | Daily/automated |
 | → GOVERN | Quarterly threat briefing tied to the risk register and the coverage-vs-profile view; annual input to budget framed as top risks versus current capability. | Quarterly |
 

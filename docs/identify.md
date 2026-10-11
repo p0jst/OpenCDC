@@ -36,7 +36,7 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## Roles & staffing
 
-<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in [Operating models](operating-models.md).</p>
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
 - **Asset and configuration owners** in IT operations.
 - **CTI analyst** — may be part-time or shared at Level 1–2.

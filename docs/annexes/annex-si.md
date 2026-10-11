@@ -1,26 +1,26 @@
 # National Annex — Slovenia
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force, secondary acts unverified. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force, secondary acts unverified. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Needs verification](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | ZInfV-1 (Zakon o informacijski varnosti, new Information Security Act transposing NIS2), adopted 2025 |
-| Competent authority | Urad RS za informacijsko varnost (URSIV) |
+| Implementing law | ZInfV-1 (Zakon o informacijski varnosti), the new Information Security Act transposing NIS2, Uradni list RS No. 40/2025 of 4 June 2025, in force 19 June 2025 |
+| Competent authority | Urad Vlade Republike Slovenije za informacijsko varnost (URSIV), the Government Information Security Office |
 | National CSIRT / reporting | SI-CERT |
-| Official starting point | https://www.gov.si/drzavni-organi/organi-v-sestavi/urad-za-informacijsko-varnost/ |
+| Official starting point | https://www.gov.si/drzavni-organi/vladne-sluzbe/urad-vlade-za-informacijsko-varnost/ |
 <!-- countries:end -->
 
 ## Country notes for your CDC

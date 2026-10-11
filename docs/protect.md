@@ -20,7 +20,7 @@ Reduce the likelihood and blast radius of incidents through preventive controls.
 | PR-8 | Secure development & change | Secure SDLC requirements, change management, and pre-production security testing where software is developed in-house. |
 | PR-9 | Email & web protections | DMARC in enforcing mode with SPF and DKIM on all sending domains, mail gateway with attachment controls, protective DNS filtering for all endpoints including remote, and managed browser baseline. The dominant initial-access vector deserves its own preventive row, not just a detection log source. |
 
-### Application control and allowlisting — part of PR-4
+### Application control and allowlisting under PR-4
 
 Software inventory under ID-1 and CIS Controls 1–2 has an enforcement half that is often skipped: only authorized software, libraries and scripts may execute, following the logic of CIS safeguards 2.5–2.7. Application control is among the highest-impact preventive controls available. Most commodity malware and many ransomware chains simply fail on a host that refuses to run unapproved binaries and scripts. A pragmatic adoption path:
 
@@ -39,20 +39,20 @@ Ownership follows the SIEM pattern in [Detect](detect.md): platform teams operat
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
 | PR-1 IAM | ● | ● | ○ | Access control is the primary confidentiality/integrity control. |
+| PR-2 Awareness | ● | ● | ○ | Phishing and social engineering target credentials and payments first, which are Confidentiality and Integrity. |
 | PR-3 Data security | ● | ● | ○ | Encryption serves C; signing/hashing serves I. |
 | PR-4 Hardening & app control | ○ | ● | ● | Configuration/execution integrity reduces exploitability; app control directly caps ransomware blast radius, serving A. |
-| PR-6 Segmentation | ● | ○ | ● | Contains lateral movement for C and limits outage blast radius for A. |
-| PR-9 Email/web protections | ● | ● | ○ | Cuts phishing and BEC for C, and malware delivery for I, at the front door; DMARC also protects your domain's authenticity toward others. |
-| PR-7 Backups/redundancy | ○ | ● | ● | The core Availability control; immutable backups also protect Integrity against ransomware encryption/tampering. |
-| PR-2 Awareness | ● | ● | ○ | Phishing and social engineering target credentials and payments first, which are Confidentiality and Integrity. |
 | PR-5 Patching | ● | ● | ● | Unpatched exploitable software threatens all three; prioritise by the objective the exposed asset carries. |
+| PR-6 Segmentation | ● | ○ | ● | Contains lateral movement for C and limits outage blast radius for A. |
+| PR-7 Backups/redundancy | ○ | ● | ● | The core Availability control; immutable backups also protect Integrity against ransomware encryption/tampering. |
 | PR-8 Secure development & change | ○ | ● | ○ | Change control and code review protect the Integrity of what runs in production. |
+| PR-9 Email/web protections | ● | ● | ○ | Cuts phishing and BEC for C, and malware delivery for I, at the front door; DMARC also protects your domain's authenticity toward others. |
 
 *● primary, ○ secondary or indirect. Rows where all three are ○ are enablers: they protect nothing themselves, but the others depend on them.*
 
 ## Roles & staffing
 
-<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in [Operating models](operating-models.md).</p>
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
 - **IT/platform teams** operate most controls; the CDC defines requirements and verifies via posture monitoring.
 - **Security engineers** in the CDC own EDR, hardening verification, and control telemetry.

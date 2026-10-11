@@ -21,7 +21,7 @@ Practical rules learned the hard way across the community: send a *named, consis
 
 ## 3. SIM3 and certification-grade maturity
 
-**SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, currently in version **v2 interim** of 1 January 2023, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
+**SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, currently in version v2 interim of 1 January 2023, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
 
 OCDF and SIM3 are complementary: OCDF says *what to build*, SIM3 audits *whether it's institutionalised*. Crosswalk for teams pursuing certification, or just wanting SIM3's discipline:
 
@@ -30,12 +30,12 @@ OCDF and SIM3 are complementary: OCDF says *what to build*, SIM3 audits *whether
 | O-1 Mandate · O-3 Authority · O-4 Responsibility | GV-1 charter §1, §4 and mission |
 | O-2 Constituency | Charter §2 scope |
 | O-5/O-7 Service & service-level description | Charter §3 services + SLA table |
-| O-8 Incident classification | IR plan §1 severity + closure taxonomy in §4 below |
+| O-8 Incident classification | IR plan §1 severity + the [closure taxonomy](respond.md#case-closure-taxonomy) |
 | O-9 Integration in CSIRT systems · H-7 External networking | This document §2 |
 | O-11 Security policy | GV-3 |
 | H-1 Code of conduct | Adopt a community code of practice; record acceptance |
-| H-2 Personnel resilience | 13-cdc-operations §3 on shift protection and minimum staffing |
-| H-3..H-6 Skillsets & training | 12-roles-and-competences, ECSF matrix and training plans |
+| H-2 Personnel resilience | [Running the CDC](cdc-operations.md) §3 on shift protection, and minimum staffing in [Operating models](operating-models.md) |
+| H-3..H-6 Skillsets & training | [Roles & competences](roles-and-competences.md): ECSF matrix and training plans |
 | T-1/T-2 Resource & information source lists | ID-1 inventory · ID-5 intel sources register |
 | T-4 Incident tracking · T-5..T-7 resilient comms | RS-1/IR plan §5 out-of-band channel |
 | T-8..T-10 Prevention/detection/resolution toolsets | PROTECT/DETECT capability evidence |
@@ -48,15 +48,15 @@ OCDF and SIM3 are complementary: OCDF says *what to build*, SIM3 audits *whether
 
 ## 4. Living documentation: the controls pattern
 
-The difference between documentation that passes an audit and documentation that rots is a simple mechanism: **every key document or section gets a verification control**, meaning an owner, a review frequency and an **approver from outside the CDC**, such as compliance or internal audit, who confirms the review happened. Templates: [controls register](../templates/controls-register-template.md).
+The difference between documentation that passes an audit and documentation that rots is a simple mechanism: every key document or section gets a verification control, meaning an owner, a review frequency and an approver from outside the CDC, such as compliance or internal audit, who confirms the review happened. Templates: [controls register](../templates/controls-register-template.md).
 
 Three review layers work well together:
 
-1. **Self-assessment** — yearly, using this framework's maturity assessment and ENISA's SIM3-based CSIRT maturity self-assessment tooling; gaps feed the roadmap.
+1. **Self-assessment** — yearly, using this framework's maturity assessment and ENISA's SIM3-based CSIRT maturity self-assessment tooling; gaps feed the improvement backlog.
 2. **Recurring controls** — quarterly/semi-annual verification of the high-churn artefacts: containment mandate, contact details, severity scheme, reporting process.
 3. **Independent audit** — internal audit or external assessor, yearly, from a separate reporting line.
 
-Closure taxonomy worth standardising, since it feeds honest metrics and SIM3 O-8: every case closes as **true positive with impact**, where a CIA attribute was breached, making it a reportable incident; **true positive without impact**, malicious but stopped; **indeterminate**; or **false positive**, feeding the tuning loop. Consider VERIS as the classification vocabulary for incident types; it makes your statistics comparable across years and, anonymised, with peers.
+Standardise how cases close on the [closure taxonomy](respond.md#case-closure-taxonomy) in RESPOND. It feeds honest metrics, the tuning loop and SIM3 O-8, and its VERIS vocabulary for incident types keeps statistics comparable across years and with peers.
 
 ## 5. The annual operating calendar
 
@@ -65,7 +65,7 @@ Recurring obligations die in backlogs unless scheduled. Maintain an annual wheel
 ## Sources
 
 - IETF RFC 2350, *Expectations for Computer Security Incident Response*; RFC 2142, *Mailbox Names for Common Services, Roles and Functions*. https://www.rfc-editor.org
-- Open CSIRT Foundation, *SIM3 v2 interim: Security Incident Management Maturity Model*, 1 January 2023. https://opencsirt.org/wp-content/uploads/2023/11/SIM3_v2_interim_standard.pdf. A full v2, extending the model to SOCs, ISACs and PSIRTs, is expected during 2026: https://opencsirt.org/csirt-maturity/sim3-and-references/
+- Open CSIRT Foundation, *SIM3 v2 interim: Security Incident Management Maturity Model*, 1 January 2023. https://opencsirt.org/wp-content/uploads/2023/11/SIM3_v2_interim_standard.pdf. The Open CSIRT Foundation has announced a full v2 that extends the model to SOCs, ISACs and PSIRTs; check its status at https://opencsirt.org/csirt-maturity/sim3-and-references/
 - TF-CSIRT / Trusted Introducer, for listing, accreditation and certification. https://www.trusted-introducer.org
 - FIRST, for membership, the *CSIRT Services Framework* and *TLP 2.0*. https://www.first.org
 - ENISA, for CSIRT maturity resources and self-assessment. https://www.enisa.europa.eu

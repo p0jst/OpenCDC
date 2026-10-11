@@ -16,7 +16,10 @@ A CDC that stops at the IT edge without saying so leaves management believing th
 
 ## Who owns what
 
-The principle: **the CDC watches and advises across the boundary; the OT operator decides below it.** In OT, safety and availability outrank evidence, and the people accountable for the physical process must hold that decision.
+The principle: the CDC watches and advises across the boundary; the OT operator decides below it. In OT, safety and availability outrank evidence, and the people accountable for the physical process must hold that decision.
+
+[![The IT/OT boundary: in IT the CDC decides and acts, in the boundary zone the CDC monitors and ownership is agreed, in OT the operator decides; containment decisions move from the CDC for supplier access and IT accounts to OT for anything that touches an OT asset; one reporting owner per incident](../assets/diagrams/it-ot-zones-light.svg#gh-light-mode-only)](../assets/diagrams/it-ot-zones-light.svg)
+[![The IT/OT boundary: in IT the CDC decides and acts, in the boundary zone the CDC monitors and ownership is agreed, in OT the operator decides; containment decisions move from the CDC for supplier access and IT accounts to OT for anything that touches an OT asset; one reporting owner per incident](../assets/diagrams/it-ot-zones-dark.svg#gh-dark-mode-only)](../assets/diagrams/it-ot-zones-dark.svg)
 
 | Area | CDC | OT operations | Agreed jointly |
 |------|-----|---------------|----------------|

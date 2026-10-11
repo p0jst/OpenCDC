@@ -8,7 +8,7 @@ a local file.
 
 **[▸ Open the Regulatory Profile Selector](regulatory-profile.html)**
 
-Users **tick the laws that apply to them**: NIS2, GDPR, DORA, CRA, CER, and their
+Users tick the laws that apply to them: NIS2, GDPR, DORA, CRA, CER, and their
 member state. Where a country's national acts are mapped individually, they appear
 underneath its checkbox once it is ticked, such as Denmark's NIS 2-loven and Lov om
 styrket beredskab i energisektoren, so every visitor sees only their own country's
@@ -17,7 +17,7 @@ profile, and "Print / save PDF" exports a tailored document.
 
 ### Hosting
 - Works locally: just open the file in a browser.
-- For teams: enable **GitHub Pages** on this repo. The tool is then available
+- For teams: enable GitHub Pages on this repo. The tool is then available
   at `https://<org>.github.io/<repo>/tools/regulatory-profile.html`,
   and for this project at <https://opencdc.org/tools/regulatory-profile.html>.
 
@@ -96,7 +96,7 @@ the manager drops the returned files onto the page and gets:
 - **snapshot export and import** as JSON, to archive review rounds.
 
 Uploads are cumulative and keyed by the person's name: re-uploading a sheet for
-the same person **overwrites their previous answers**, so the picture always
+the same person overwrites their previous answers, so the picture always
 reflects the latest round. All data stays in the manager's browser
 localStorage; nothing leaves the page. Skill data is personal data under
 GDPR: collect it transparently, use it for development only, keep access limited.
@@ -116,7 +116,7 @@ both the sheet and the tool if you change skill IDs.
 
 ### Hosting
 - Works locally: just open the file in a browser, no internet needed.
-- For teams: enable **GitHub Pages**. The tool is then available at
+- For teams: enable GitHub Pages. The tool is then available at
   `https://<org>.github.io/<repo>/tools/skill-matrix.html`,
   for this project <https://opencdc.org/tools/skill-matrix.html>, and the download
   links to the templates resolve automatically.
@@ -153,7 +153,7 @@ screen.
   breakdown in the Result table.
 - **Owner and due date per criterion.** Every gap can carry who owns it and by
   when; the Open actions list shows them, counts the gaps still without an owner,
-  and **exports the action plan as a spreadsheet file** (semicolon-separated
+  and exports the action plan as a spreadsheet file (semicolon-separated
   with a byte-order mark, so it opens in columns in Excel, including Danish and
   other comma-decimal locales).
 - **Community benchmark.** Tell the tool your size band, NIS2 category, region,
@@ -190,7 +190,7 @@ sent anywhere.
 
 ### Hosting
 - Works locally: just open the file in a browser, no internet needed.
-- For teams: enable **GitHub Pages**. The tool is then available at
+- For teams: enable GitHub Pages. The tool is then available at
   `https://<org>.github.io/<repo>/tools/maturity-assessment.html`,
   and for this project at <https://opencdc.org/tools/maturity-assessment.html>.
 

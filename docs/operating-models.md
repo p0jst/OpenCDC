@@ -27,7 +27,7 @@ Whichever shape, write the provider's containment mandate into the [containment 
 **Fits:** SMEs and important entities without security hiring power; organisations needing 24/7 *now*.
 
 ### Model B — In-house tiered SOC, Tier 1 → 2 → 3
-The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires **8–12 FTE** for the shift line with daytime capacity on top, and that still means one analyst alone at night; see [staffing and cost](#staffing-and-cost-the-arithmetic).
+The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires 8–12 FTE for the shift line with daytime capacity on top, and that still means one analyst alone at night; see [staffing and cost](#staffing-and-cost-the-arithmetic).
 
 | Pros | Cons |
 |------|------|
@@ -51,13 +51,13 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 
 **Fits:** engineering-strong organisations, cloud-native environments, teams of ~5–8 senior FTE that accept on-call rather than shift coverage.
 
-## Hybrid patterns — the most common EU reality
+## Hybrid patterns, the most common EU reality
 
 - **A+C:** MSSP runs the 24/7 night/weekend watch; the internal capability-based team owns detection engineering, business-context triage in daytime, and all response decisions. Often the best cost/quality point.
 - **A+B:** MSSP as Tier 1, internal Tier 2/3. Works only if the escalation interface is drilled and the MSSP's output quality is measured.
 - **Follow-the-sun, on Model C:** for multinationals with 3+ regions, giving coverage without night shifts, at coordination cost.
 - **Existing 24/7 operations as first line:** if the organisation already runs a 24/7 NOC/operations desk, train it to receive security alerts out of hours and wake the CDC's on-duty officer against defined criteria. Cheap night coverage without a security night shift, but invest in crisp escalation criteria and drill them, or the desk becomes a bottleneck.
-- **Shared / community CDC, Model D:** one CDC serving several constituent organisations such as shared service centres, sector cooperatives and municipal partnerships, a common European pattern. It combines Model B/C internally with an MSSP-like *external* interface per constituent, so it needs both the in-house discipline of B/C **and** the contractual clarity of Model A: per-constituent containment mandates from the containment action catalogue template, per-constituent reporting and SLAs, strict data separation between constituents, and an RFC 2350-style public service description. Statutory reporting duties remain with each constituent entity.
+- **Shared / community CDC, Model D:** one CDC serving several constituent organisations such as shared service centres, sector cooperatives and municipal partnerships, a common European pattern. It combines Model B/C internally with an MSSP-like *external* interface per constituent, so it needs both the in-house discipline of B/C *and* the contractual clarity of Model A: per-constituent containment mandates from the containment action catalogue template, per-constituent reporting and SLAs, strict data separation between constituents, and an RFC 2350-style public service description. Statutory reporting duties remain with each constituent entity.
 
 ## What can NEVER be outsourced, in any model
 
@@ -148,7 +148,7 @@ That is where the framework's 8–12 FTE for a 24/7 in-house line comes from. A 
 - a welfare check-in and a clear rule for when to wake the on-call lead, so the analyst is never deciding alone whether something is serious enough
 - or an A+C hybrid, where a provider with several analysts on shift holds the night and your team holds the day
 
-The same method explains the **3–4 people for business hours with on-call** quoted in DETECT:
+The same method explains the 3–4 people for business hours with on-call quoted in DETECT:
 
 | Line | Hours per year | FTE, using 1,576 h |
 |------|----------------|--------------------|
@@ -195,7 +195,7 @@ Fill in all four columns even when the answer looks obvious. The comparison is w
 
 ## Maturity note
 
-The maturity model applies to **outcomes, not employment contracts**: with an MSSP you still score DETECT on *measured* coverage, validation and MTTD, which means your contract must give you visibility into detection logic and metrics. If it doesn't, your maturity ceiling is Level 2 by construction.
+The maturity model applies to outcomes, not employment contracts: with an MSSP you still score DETECT on *measured* coverage, validation and MTTD, which means your contract must give you visibility into detection logic and metrics. If it doesn't, your maturity ceiling is Level 2 by construction.
 
 ## Sources
 - MITRE, *11 Strategies of a World-Class Cybersecurity Operations Center*, 2nd ed., on sourcing and tiering.

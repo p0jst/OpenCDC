@@ -7,7 +7,7 @@ other page reads faster.
 
 ## How the pieces fit
 
-1. **Pick a tier** (Essential, Standard or Advanced). It decides *which*
+1. **Pick a tier**: Essential, Standard or Advanced. It decides *which*
    capabilities apply to an organisation of your size and exposure.
 2. **Build the capabilities** in the six functions, in the order the
    [first 90 days](start-here.md) sets out, people and process before tools.
@@ -15,8 +15,8 @@ other page reads faster.
    criterion, with evidence.
 4. **Give every gap an owner and a date**, and reassess once a year.
 
-Around all of it sit two lenses: the **CIA triad**, which says what each
-capability protects, and the **regulatory layer**, which says which laws
+Around all of it sit two lenses: the CIA triad, which says what each
+capability protects, and the regulatory layer, which says which laws
 require it.
 
 ## The terms
@@ -31,7 +31,7 @@ require it.
 | **Criterion status** | Each maturity criterion is scored on five states, from *not considered* to *implemented & evidenced*. Only the top two count, or only the top one with evidence-based scoring. | [Scoring method](maturity-model.md#criterion-status-scale) |
 | **Evidence** | The document, export or test result that proves a criterion. Without it, a self-assessment is an opinion. | [Self-assessment tool](../tools/maturity-assessment.html) |
 | **Operating model** | Who runs the watch: a provider (A), an in-house tiered SOC (B), an in-house capability-based team (C), a hybrid, or a shared CDC (D). | [Operating models](operating-models.md) |
-| **[GATE] [HARD] [SOFT]** | How much a capability depends on another department: a decision it must take, work it must do, or input that improves the result. | [Introduction](introduction.md#dependency-markers-gate-hard-soft) |
+| **[GATE] [HARD] [SOFT]** | How much a capability depends on another department: a decision it must take, work it must do, or input that improves the result. | [Introduction](introduction.md#dependency-markers) |
 | **CIA mapping** | Whether a capability mainly protects confidentiality, integrity or availability. | [CIA triad](cia-triad.md) |
 | **Regulatory hooks** | The NIS2, GDPR, DORA and related articles each function helps you meet. | Each function document; [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md); [EU landscape](eu-regulatory-landscape.md) |
 | **National annex** | NIS2 status, authorities and reporting channels for one member state. | [Annexes](annexes/README.md) |
@@ -45,7 +45,7 @@ require it.
   intelligence.
 - **Templates:** charter, incident response plan, detection use case, metrics,
   job description, MSSP checklist, containment actions, controls register and
-  annual calendar. [All templates](../templates/index.md)
+  annual calendar. [All templates](../templates/README.md)
 - **Playbooks:** you write your own, from a [scenario template](../templates/scenario-playbook-template.md) and a [platform template](../templates/platform-playbook-template.md).
 - **Browser tools:** regulatory profile selector, team skill matrix and maturity
   self-assessment. [Tools](../tools/README.md)

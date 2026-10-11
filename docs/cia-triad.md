@@ -4,7 +4,7 @@
 
 ## Why the triad still matters
 
-Confidentiality, Integrity and Availability are the three canonical objectives of information security, codified among others in the ISO/IEC 27000 definitions and NIST FIPS 199. Frameworks come and go; the triad is the constant test: **every control, detection, and process in your CDC should be traceable to at least one triad objective.** If it isn't, it's probably theatre.
+Confidentiality, Integrity and Availability are the three canonical objectives of information security, codified among others in the ISO/IEC 27000 definitions and NIST FIPS 199. Frameworks come and go; the triad is the constant test: every control, detection, and process in your CDC should be traceable to at least one triad objective. If it isn't, it's probably theatre.
 
 ## Definitions
 
@@ -30,7 +30,7 @@ Rate each crown-jewel service C/I/A impact as Low, Moderate or High, following t
 Review your use case inventory by triad objective. A common failure mode is a portfolio dominated by confidentiality-oriented detections while the actual dominant threat, ransomware, is an availability and integrity threat. Your portfolio balance should mirror your threat profile.
 
 ### 4. The containment trade-off — RESPOND
-Containment almost always sacrifices **Availability** to protect **Confidentiality and Integrity**, by isolating a production server or disabling accounts. Pre-agreeing who may make that trade, per service tier, is one of the highest-value governance artefacts a CDC can own.
+Containment almost always sacrifices availability to protect confidentiality and integrity, by isolating a production server or disabling accounts. Pre-agreeing who may make that trade, per service tier, is one of the highest-value governance artefacts a CDC can own.
 
 ### 5. Integrity before Availability — RECOVER
 The cardinal rule of recovery: verify integrity of systems and backups before restoring availability. A fast restore of a compromised image is not recovery; it is re-infection with better uptime.
@@ -42,7 +42,7 @@ The cardinal rule of recovery: verify integrity of systems and backups before re
 
 ## Extended models
 
-The triad is a floor, not a ceiling. Where useful, extend with the ISO 27000 concepts of **authenticity, non-repudiation and accountability**, or the Parkerian Hexad. NIS2 itself frames security as protecting the "availability, authenticity, integrity or confidentiality" of data and services, in its Art. 6(2) definition of *security of network and information systems*. Note the addition of **authenticity**.
+The triad is a floor, not a ceiling. Where useful, extend with the ISO 27000 concepts of authenticity, non-repudiation and accountability, or the Parkerian Hexad. NIS2 itself frames security as protecting the "availability, authenticity, integrity or confidentiality" of data and services, in its Art. 6(2) definition of *security of network and information systems*. Note the addition of authenticity.
 
 ## Sources
 

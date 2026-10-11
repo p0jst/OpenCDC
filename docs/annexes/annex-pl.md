@@ -1,23 +1,23 @@
 # National Annex — Poland
 
 <!-- countries:begin -->
-> **Status as of September 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
-| Confidence | [Needs verification](README.md#confidence-levels) |
+| Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | September 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | March 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa (KSC amendment), signed on 19 February 2026 and in force since early April 2026. Applications to the register of essential and important entities are due by early October 2026, and the obligations apply from April 2027; verify the exact dates in Dziennik Ustaw. |
+| Implementing law | Act amending the Act on the National Cybersecurity System (nowelizacja ustawy o krajowym systemie cyberbezpieczeństwa, KSC), signed on 19 February 2026 and in force since 3 April 2026. Applications to the register of essential and important entities were due by 3 October 2026, the obligations apply from 3 April 2027, and the first audit is due by 3 April 2028. |
 | Competent authority | Ministry of Digital Affairs + sector authorities |
 | National CSIRT / reporting | CSIRT NASK, CSIRT GOV and CSIRT MON, a three-CSIRT model |
 | Official starting point | https://www.gov.pl/web/cyfryzacja |
@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Poland's draft adds national extras such as high-risk vendor assessments. Multinationals should track the final text closely.
+The amended act adds national extras beyond the directive, including a procedure for designating high-risk ICT vendors. Plan the first audit, due by April 2028, from the start of the April 2027 obligations.
 
 ## Standard checklist for all countries
 

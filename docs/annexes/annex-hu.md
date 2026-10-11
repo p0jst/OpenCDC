@@ -1,23 +1,23 @@
 # National Annex — Hungary
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Act LXIX of 2024 on Hungary's cybersecurity, in force 1 January 2025 |
+| Implementing law | Act LXIX of 2024 on Hungary's cybersecurity, in force 1 January 2025 and amended with effect from 31 May 2025 |
 | Competent authority | SZTFH (Regulated Activities Supervisory Authority) |
 | National CSIRT / reporting | NBSZ NKI (National Cyber Security Center) |
 | Official starting point | https://nki.gov.hu |
@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Hungarian extra: mandatory contracted cybersecurity auditor and a first audit deadline of 30 June 2026, a national obligation beyond the directive. Plan audit evidence accordingly.
+Hungarian extra: a contracted cybersecurity auditor registered with SZTFH is mandatory, and the first audit was due by 30 June 2026. This is a national obligation beyond the directive, so plan audit evidence accordingly.
 
 ## Standard checklist for all countries
 

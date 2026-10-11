@@ -1,10 +1,11 @@
 # Templates
 
-Ready-to-copy building blocks. The markdown templates are meant to be **copied
-into your own documentation system** and filled in. Open one, copy the raw
-markdown from the :material-github: repository, or use the edit button to view
-the source, and adapt it. The skill self-assessment is a file your team members
-fill in and return.
+Building blocks to copy into your own documentation system and fill in. Each
+markdown template is a plain file: open it, copy the text, and adapt it. The
+source files are in the
+[templates folder on GitHub](https://github.com/p0jst/OpenCDC/tree/main/templates).
+The skill self-assessment is a spreadsheet your team members fill in and
+return.
 
 | Template | Use it for | Format |
 |----------|-----------|--------|

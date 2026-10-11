@@ -1,23 +1,23 @@
 # National Annex — Lithuania
 
 <!-- countries:begin -->
-> **Status as of July 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of October 2026:** In force. Community-maintained orientation. This is **not legal advice**; verify against the official gazette and authority guidance before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
 | Confidence | [Maintainer reviewed](README.md#confidence-levels) |
 | Checked line by line against the legal text | No |
 | Reviewed by a lawyer | No |
-| Last reviewed | July 2026 |
+| Last reviewed | October 2026 |
 | Reviewed by | Frederik B. Krogsgaard, maintainer |
 | Second reviewer | **Wanted**, see [CONTRIBUTING](../../CONTRIBUTING.md) |
-| Next review due | January 2027 |
+| Next review due | April 2027 |
 
 ## NIS2 implementation
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Amended Kibernetinio saugumo įstatymas (Cybersecurity Law), applying from 18 October 2024; among the first transpositions |
+| Implementing law | Amended Kibernetinio saugumo įstatymas (Cybersecurity Law), applying from 18 October 2024, with implementing rules in force 12 November 2024; among the first transpositions |
 | Competent authority | NKSC (National Cyber Security Centre under MoND) |
 | National CSIRT / reporting | CERT-LT at NKSC |
 | Official starting point | https://www.nksc.lt |
