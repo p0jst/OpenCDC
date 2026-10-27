@@ -1,4 +1,4 @@
-# CDC Metrics & KPI Catalogue — Template
+# Metrics & KPI catalogue template
 
 > Related capabilities: GV-7, DE-4, RS-*, RC-5. Pick few metrics you will act on over many you will only report. Every metric below lists the decision it should drive. If you wouldn't change anything based on it, don't collect it.
 
@@ -42,12 +42,13 @@
 
 ## Metrics not to use as KPIs
 
-- **Alert volume**, as in "we handled 40,000 alerts", rewards noise.
-- **Blocked attacks count** from perimeter devices, an unfalsifiable vanity metric.
-- **Tickets closed per analyst** — incentivises shallow triage.
-- **MTTC or time to close on its own.** Speed without the quality score rewards closing early; a fast team that misses related systems will see the same incident again.
-- **ATT&CK coverage across the whole matrix, or counted from rule tags alone.** A percentage of all techniques says nothing about your threats, and a tagged rule that never fired in test is not coverage.
-- **Number of use cases or rules.** More rules is more to maintain, not more protection.
+- **Alert volume** — "we handled 40,000 alerts" rewards noise.
+- **Blocked attacks from perimeter devices** — an unfalsifiable vanity metric.
+- **Tickets closed per analyst** — rewards shallow triage.
+- **MTTC or time to close on its own** — speed without the quality score rewards closing early; a fast team that misses related systems will see the same incident again.
+- **ATT&CK coverage across the whole matrix, or counted from rule tags alone** — a percentage of all techniques says nothing about your threats, and a tagged rule that never fired in test is not coverage.
+- **Number of use cases or rules** — more rules is more to maintain, not more protection.
+- **Incident count on its own** — it measures activity, not whether the right threats were caught early. It has been the most-cited SOC metric for ten years running in the SANS SOC Survey, 70% in 2026.
 
 ## Reporting cadence
 

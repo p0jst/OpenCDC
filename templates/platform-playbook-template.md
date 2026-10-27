@@ -1,4 +1,4 @@
-# Platform Response & Forensics Playbook — Template
+# Platform response & forensics playbook template
 
 > Related capabilities: RS-3, RS-4, DE-3. One playbook per platform you have to investigate, for example your standard laptop image, your server operating systems, your domain controllers and your cloud tenant. Scenario playbooks point here when the work moves to a specific host. Copy this file once per platform, fill in every `[…]`, and delete the guidance lines in italics when you are done. Test every collection step on your own standard build before an incident, not during one.
 

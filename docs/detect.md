@@ -14,7 +14,7 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 | DE-2 | Detection engineering | A managed lifecycle for detection use cases: idea → develop → test → deploy → tune → retire. Each use case mapped to MITRE ATT&CK techniques and to the threat profile from IDENTIFY. |
 | DE-3 | Alert triage & analysis | Documented triage process, severity matrix, enrichment with asset criticality, identity context and threat intel, and escalation criteria. The decisions behind it are in [Designing alert triage](alert-triage.md). |
 | DE-4 | Coverage assessment | Periodic measurement of detection coverage against ATT&CK and against crown-jewel assets; gap-driven engineering backlog. |
-| DE-5 | Threat hunting | Hypothesis-driven hunts based on threat intel; findings convert into new detections. |
+| DE-5 | Threat hunting | Hypothesis-driven hunts based on threat intel, following a written method such as TaHiTI rather than an improvised one. Every hunt ends with a recorded outcome: a finding, a new detection, or a data gap sent to the DE-1 backlog. Without that record a hunting programme cannot show what it is worth. |
 | DE-6 | Detection validation | Testing that detections actually fire: unit tests, purple teaming, adversary emulation. |
 | DE-7 | Anomaly & integrity monitoring | File/configuration integrity monitoring, identity anomaly detection, and monitoring of the CDC's own infrastructure. |
 
@@ -28,6 +28,8 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 4. **Cloud control plane**, meaning IaaS and SaaS audit logs. Often forgotten, increasingly critical.
 5. **Network**, covering firewall, DNS, VPN, netflow and NDR where deployed, for breadth and containment context. Network Detection and Response earns its place precisely where EDR cannot go: unmanaged and unmanageable devices such as IoT, printers, medical and lab equipment, legacy appliances and BYOD; east-west visibility for lateral movement between segments, and as an integrity check on endpoint coverage, since a host talking on the network with no EDR heartbeat is itself a finding. Its limits belong in the same breath: pervasive encryption reduces payload inspection to metadata/behavioural analysis, it sees flows rather than process context, and it is a complement to endpoint and identity telemetry, not a substitute. Decision guide: the more unmanaged devices and flat legacy segments you have, the earlier NDR climbs this priority list; in a fully managed, well-segmented, cloud-heavy estate it stays at 5.
 6. **Critical applications & databases** — crown-jewel specific.
+
+**Edge devices note:** firewalls, VPN gateways and remote-access appliances appear above as sources of context, but they are also among the most targeted systems in the estate, and most cannot run EDR. Collect their own system and admin logs, not only the traffic they pass. Alert on configuration changes, new admin accounts and logins to management interfaces, and treat outbound connections that the appliance itself starts as a finding unless they go to a known update or logging destination. Where the vendor offers an integrity check, schedule it. What to do around patching is under edge devices in [Protect](protect.md#edge-devices-under-pr-5).
 
 **Remote and hybrid work note:** architectures retrofitted from on-prem assumptions go blind the moment a laptop leaves the VPN. Prioritise location-independent telemetry, since EDR and identity-provider logs follow the user everywhere, and verify that endpoint telemetry reaches you off-network before declaring source 1–2 coverage complete. The same applies per cloud/SaaS tenant: coverage is per environment, not per organisation.
 
@@ -67,10 +69,11 @@ The traditional split, where infrastructure maintains the server and OS and the 
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Staffing figures are practitioner estimates; the arithmetic is under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **Tier 1/2 analysts**, or a tierless model at higher maturity, for triage and investigation.
-- **Detection engineers** — use case lifecycle; in small teams combined with analyst role.
-- **Threat hunter** — Level 3+ capability.
-- Minimum viable team for business-hours monitoring with on-call: 3–4 FTE. One seat staffed around the clock takes roughly 5.5–6 FTE once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at 8–12 FTE, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
+- **Analysts** — triage and investigation, in tiers or tierless as the operating model decides.
+- **Detection engineers** — own the use case lifecycle; in small teams combined with the analyst role.
+- **Threat hunter** — a Level 3 capability and above.
+
+Minimum viable team for business-hours monitoring with on-call: 3–4 FTE. One seat staffed around the clock takes roughly 5.5–6 FTE once leave, sickness and training are counted, so a 24/7 in-house line with daytime capacity on top lands at 8–12 FTE, and even then nights are usually a single analyst. The arithmetic, and what to do about the lone night analyst, is in [staffing and cost](operating-models.md#staffing-and-cost-the-arithmetic). Below that, consider hybrid or MSSP models, which is a governance decision; see GOVERN GV-5.
 
 ## Maturity criteria
 
@@ -106,5 +109,6 @@ The criteria that score DETECT are kept in one place for all six functions: the 
 - MITRE, *11 Strategies of a World-Class Cybersecurity Operations Center*, Knerler, Parker & Zimmerman, 2nd ed. https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center
 - NIST SP 800-92, *Guide to Computer Security Log Management*.
 - NIS2: Directive (EU) 2022/2555 Art. 21, 23; GDPR Art. 33; DORA Art. 10.
+- SANS Institute, Josh Lemon, *SANS 2026 Threat Hunting Survey: The Evolution of Threat Hunting*, September 2026. https://www.sans.org/white-papers/sans-2026-threat-hunting-survey-evolution-threat-hunting
 
 *Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*

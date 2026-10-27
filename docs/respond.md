@@ -166,7 +166,7 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **Incident manager/commander** — coordinates; distinct from technical lead in larger incidents.
+- **Incident manager** — coordinates the response; in larger incidents a separate role from the technical lead.
 - **Technical responders** — often the same analysts as DETECT.
 - **Legal/DPO and communications** — mandatory members of the extended IR team.
 - **Decision-makers** — service owners, data owners and management who set priorities, accept disruption and sign the exit from the response loop. Name them and their deputies in the IR plan.
@@ -182,7 +182,7 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 
 <p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
 
-- **NIS2 Art. 21(2)(b)** incident handling; Art. 23 reporting; see the table above.
+- **NIS2 Art. 21(2)(b) and Art. 23** — incident handling and reporting; see the table above.
 - **GDPR Art. 33/34** — breach notification; document *all* breaches internally, even those not notified, per Art. 33(5).
 - **DORA Art. 17–19** — ICT incident management, classification and reporting for financial entities.
 - **ENISA / national CSIRT good practice** — align severity taxonomies with your national CSIRT's scheme where one exists to ease reporting.

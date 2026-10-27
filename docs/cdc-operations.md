@@ -1,4 +1,4 @@
-# Running the CDC: Tuning, Detection-as-Code, and Team Development
+# Running the CDC: tuning, detection-as-code and team development
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Operating practice from running a CDC.</p>
 

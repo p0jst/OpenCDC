@@ -1,4 +1,4 @@
-# CIS Controls Crosswalk: Concrete Actions per Control
+# CIS Controls crosswalk: concrete actions per control
 
 <p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>CIS Controls v8.1 as published; the actions per control are this framework's.</p>
 

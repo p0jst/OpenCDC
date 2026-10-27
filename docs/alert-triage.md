@@ -1,4 +1,4 @@
-# Designing Alert Triage
+# Designing alert triage
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>This framework's design decisions for DE-3, from operating practice.</p>
 

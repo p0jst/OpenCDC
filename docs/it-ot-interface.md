@@ -1,4 +1,4 @@
-# The IT/OT Interface
+# The IT/OT interface
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span><span class="src-tag law">Law</span>The split of responsibilities and the boundary controls are this framework's and come from running a CDC for critical infrastructure; the Danish energy rules are paraphrased from BEK 260. Not legal advice.</p>
 

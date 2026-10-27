@@ -1,4 +1,4 @@
-# Scenario Playbook — Template
+# Scenario playbook template
 
 > Related capabilities: RS-2, RS-4, RS-5. One playbook per incident type your threat profile makes likely, at least ransomware, business email compromise, identity compromise and personal data breach. Copy this file once per scenario, fill in every `[…]`, and delete the guidance lines in italics when you are done. Write it for the worst night: an analyst who has never run this scenario must be able to follow it alone at 03:00.
 

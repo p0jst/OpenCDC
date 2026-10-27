@@ -1,4 +1,4 @@
-# The CSIRT Community Layer: Networking, Certification, and Living Documentation
+# The CSIRT community layer: networking, certification and living documentation
 
 <p class="src" markdown><span class="src-tag guidance">Guidance</span>RFC 2350, FIRST, TF-CSIRT and SIM3 as published; the crosswalk to this framework is paraphrased.</p>
 
@@ -21,7 +21,7 @@ Practical rules learned the hard way across the community: send a *named, consis
 
 ## 3. SIM3 and certification-grade maturity
 
-**SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, currently in version v2 interim of 1 January 2023, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
+**SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, currently in version v2 interim of 1 January 2023, with a full version 2 announced for 2026, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
 
 OCDF and SIM3 are complementary: OCDF says *what to build*, SIM3 audits *whether it's institutionalised*. Crosswalk for teams pursuing certification, or just wanting SIM3's discipline:
 

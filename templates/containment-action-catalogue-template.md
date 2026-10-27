@@ -1,4 +1,4 @@
-# Containment Action Catalogue — Template
+# Containment action catalogue template
 
 > The charter, at §4, states *what* the CDC may do; this catalogue makes it operational: one row per concrete containment action, with its enforcement point, automation status, and whether the mandate is pre-agreed or needs per-case approval. Review at least semi-annually and tie it to a control. Stale mandates are discovered at 03:00.
 >

@@ -1,4 +1,4 @@
-# Choosing Your Operating Model
+# Choosing your operating model
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>The models and decision path are this framework's; staffing figures and trade-offs come from experience.</p>
 
@@ -64,7 +64,7 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 1. **Risk acceptance and management accountability** — NIS2 Art. 20 liability sits with your management, full stop.
 2. **Containment authority over crown jewels** — you can delegate actions to a provider, as MDR contracts do, but the authority stays yours: the charter §4 and the containment catalogue decide what the provider may do alone, and anything on the crown jewels comes back to a named person of yours.
 3. **Statutory reporting** — the 24 h early warning is filed by *you*; an MSSP SLA of "notify within 4 h" already spent a sixth of your clock.
-4. **The regulatory applicability register and this framework's GOVERN function.**
+4. **Regulatory applicability and GOVERN** — deciding which law applies to you, and owning this framework's GOVERN function.
 
 ## Decision path
 

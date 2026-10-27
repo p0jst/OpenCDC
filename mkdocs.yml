@@ -129,13 +129,15 @@ copyright: >-
 nav:
   - Home: index.md
   - Start:
+      # In the order of the seven steps on the home page, so the footer's
+      # previous/next links walk a reader through them.
       - OCDF on one page: docs/one-page.md
       - Executive guide: docs/executive-guide.md
-      - "Start here: the first 90 days": docs/start-here.md
       - Implementation tiers: docs/tiers.md
-      - Worked example: docs/worked-example.md
       - Design navigator for workshops: assessments/cdc-design-navigator.md
+      - "Start here: the first 90 days": docs/start-here.md
       - Maturity self-assessment: assessments/maturity-self-assessment.md
+      - Worked example: docs/worked-example.md
   - Framework:
       - Introduction & design principles: docs/introduction.md
       - All documents in reading order: docs/README.md

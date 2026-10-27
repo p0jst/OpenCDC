@@ -13,7 +13,7 @@ Understand what you are defending and what threatens it. Every downstream capabi
 | ID-1 | Asset inventory | Continuously maintained inventory of hardware, software, cloud resources, data flows, and their owners. Includes shadow-IT discovery. |
 | ID-2 | Data classification | Data mapped and classified as public, internal, confidential or special-category personal data, with owners assigned. |
 | ID-3 | Crown-jewel analysis | Identification of business-critical services and the assets they depend on; drives detection and recovery priority. |
-| ID-4 | Vulnerability identification | Regular authenticated scanning, cloud posture assessment, and external attack-surface monitoring. |
+| ID-4 | Vulnerability identification | Regular authenticated scanning, cloud posture assessment, and external attack-surface monitoring, with internet-facing edge devices listed by name, owner and version. Findings are checked against known-exploited catalogues such as CISA KEV, because known exploitation on an exposed asset predicts real risk better than a CVSS score. Do not depend on the NVD for scores: since April 2026 NIST fully enriches only known-exploited CVEs and software the US government uses or classes as critical, so most new CVEs carry only the score in the CVE record itself, if any. Use that score, vendor advisories and known-exploited catalogues. |
 | ID-5 | Threat landscape & intelligence | A documented threat profile: which actors, sectors and MITRE ATT&CK techniques are relevant to *your* organisation. Consume national CSIRT and ENISA advisories. A-tier deep dive on building a full CTI capability: [Deep dive: CTI capability](cti-deep-dive.md). |
 | ID-6 | Risk assessment | Periodic risk assessments combining assets, threats, and vulnerabilities; results feed GOVERN. |
 | ID-7 | Improvement identification | Lessons from assessments, audits, exercises and incidents are captured as improvement actions, per CSF 2.0 ID.IM. |
@@ -38,7 +38,7 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **Asset and configuration owners** in IT operations.
+- **Asset and configuration owners** — usually in IT operations.
 - **CTI analyst** — may be part-time or shared at Level 1–2.
 - **Vulnerability analyst** — often combined with detection engineering in small teams.
 - **Data Protection Officer** — for data mapping and GDPR records of processing under Art. 30, which double as excellent data-classification input.
@@ -57,8 +57,8 @@ The criteria that score IDENTIFY are kept in one place for all six functions: th
 - **NIS2 Art. 21(2)(d)** — supply chain security requires knowing your suppliers and dependencies, which is an asset and dependency inventory.
 - **GDPR Art. 30** — records of processing activities: reuse as data-flow inventory.
 - **DORA Art. 8** — identification of ICT-supported business functions and information assets.
-- **CRA, the Cyber Resilience Act, Regulation (EU) 2024/2847** is relevant when you produce or procure "products with digital elements"; feeds procurement requirements.
-- **ENISA Threat Landscape**, published annually, is a recommended baseline input for the threat profile.
+- **CRA, the Cyber Resilience Act** — relevant when you produce or procure "products with digital elements"; feeds procurement requirements.
+- **ENISA Threat Landscape** — published annually; a recommended baseline input for the threat profile. The 2026 edition, published in September 2026, covers incidents in 2025.
 
 ## External dependencies
 
@@ -78,5 +78,7 @@ The criteria that score IDENTIFY are kept in one place for all six functions: th
 - MITRE ATT&CK®. https://attack.mitre.org. © The MITRE Corporation, used under the ATT&CK terms of use.
 - ENISA, *ENISA Threat Landscape* report series. https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape
 - NIS2: Directive (EU) 2022/2555; DORA: Regulation (EU) 2022/2554; CRA: Regulation (EU) 2024/2847.
+- ENISA, *ENISA Threat Landscape 2026*, September 2026, covering 2025. https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026
+- NIST, *NIST Updates NVD Operations to Address Record CVE Growth*, 15 April 2026. https://www.nist.gov/itl/nvd
 
 *Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*

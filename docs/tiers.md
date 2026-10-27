@@ -1,4 +1,4 @@
-# Implementation Tiers: Essential, Standard, Advanced
+# Implementation tiers: Essential, Standard, Advanced
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's tiers, a pattern borrowed from the CIS Controls implementation groups.</p>
 
@@ -71,9 +71,9 @@ full coverage is neither.
 
 ## How to use tiers
 
-1. **Pick your tier** honestly, on size, complexity and threat exposure. Your regulatory category sets the floor, not the tier. When in doubt between two, take the lower and reach maturity Level 2–3 there first. A solid E beats a hollow S.
-2. **Filter the framework:** in the self-assessment and navigator, skip capabilities above your tier and mark them "above tier" rather than "missing", so the score reflects your ambition, not an enterprise ideal. Capabilities marked in the NIS2 column of the capability index are the exception for entities in NIS2 scope; see [the legal floor](#the-legal-floor).
-3. **National and sector law on top:** your national law may mandate S- or A-tier items regardless of size. Denmark's energy-sector act, for instance, requires real-time monitoring and response at its preparedness levels 4 and 5. The annex and selector tool trump the tier map.
-4. **Review the tier choice** at every annual reassessment; tiers are meant to be outgrown.
+1. **Pick your tier honestly.** Choose on size, complexity and threat exposure. Your regulatory category sets the floor, not the tier. When in doubt between two, take the lower and reach maturity Level 2–3 there first. A solid E beats a hollow S.
+2. **Filter the framework.** In the self-assessment and navigator, skip capabilities above your tier and mark them "above tier" rather than "missing", so the score reflects your ambition, not an enterprise ideal. Capabilities marked in the NIS2 column of the capability index are the exception for entities in NIS2 scope; see [the legal floor](#the-legal-floor).
+3. **Add national and sector law on top.** Your national law may mandate S- or A-tier items regardless of size. Denmark's energy-sector act, for instance, requires real-time monitoring and response at its preparedness levels 4 and 5. The annex and selector tool trump the tier map.
+4. **Review the tier choice every year.** Do it at the annual reassessment; tiers are meant to be outgrown.
 
 *Open CDC Framework, licensed CC BY 4.0. Tier-overlay pattern inspired by CIS Critical Security Controls Implementation Groups, © Center for Internet Security, credited in [references](references.md).*

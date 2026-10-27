@@ -1,4 +1,4 @@
-# Detection Use Case — Template
+# Detection use case template
 
 > Related capability: DE-2. One file per use case; keep under version control, as detection-as-code.
 

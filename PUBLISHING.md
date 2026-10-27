@@ -15,6 +15,7 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 - `v1.0.0` — 2026-09-02. First stable release.
 - `v1.1.0` — 2026-09-23. Usability and scoring release; two DETECT criteria changed.
 - `v1.2.0` — 2026-10-11. Review release: criteria set 2 with the NIS2 legal floor at Level 2, 71 criteria; incident handling on DAIR; the IT/OT interface; alert triage and AI in the CDC; the first diagrams; plainer front page and README.
+- `v1.3.0` — 2026-10-27. Minor release: security fix for the maturity tool's file import and a pinned website build; vulnerability handling built for exploitation speed, with edge devices under PR-5 and a reworded IDENTIFY L3 criterion; end-to-end check of links, annexes and tools; one path through the framework; references updated and SANS 2026 research applied.
 
 ## Community benchmark
 

@@ -1,4 +1,4 @@
-# The CIA Triad as a Design Lens
+# The CIA triad as a design lens
 
 <p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>The triad is a long-standing security model, reflected in GDPR Art. 32; its use as a design lens is this framework's.</p>
 

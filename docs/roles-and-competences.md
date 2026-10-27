@@ -1,4 +1,4 @@
-# Roles & Competences, built on the ENISA ECSF
+# Roles & competences, built on the ENISA ECSF
 
 <p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Roles built on the ENISA European Cybersecurity Skills Framework; the CDC mapping and career paths are this framework's.</p>
 
@@ -6,11 +6,11 @@
 
 This framework's role definitions, job descriptions and career paths are anchored in the European Cybersecurity Skills Framework (ECSF), ENISA's set of 12 cybersecurity professional role profiles, each defined with a mission, tasks, deliverables, key skills, key knowledge, and e-CF competences linked to EQF learning levels. Using ECSF gives a European CDC three concrete advantages:
 
-1. **A common language** with HR, recruiters, training providers and certification bodies across the EU, where many certifications and university programmes are already mapped to ECSF profiles.
-2. **Ready-made building blocks** for job descriptions; see the [ECSF job description template](../templates/job-description-template.md).
-3. **Regulatory alignment:** ENISA positions the ECSF as the reference for NIS2-aligned workforce planning; using it makes your staffing evidence legible to authorities.
+1. **A common language.** It is shared with HR, recruiters, training providers and certification bodies across the EU, where many certifications and university programmes are already mapped to ECSF profiles.
+2. **Ready-made building blocks.** Use them for job descriptions; see the [ECSF job description template](../templates/job-description-template.md).
+3. **Regulatory alignment.** ENISA positions the ECSF as the reference for NIS2-aligned workforce planning; using it makes your staffing evidence legible to authorities.
 
-> **Note:** ENISA is revising the ECSF, adding proficiency levels and alignment with newer EU regulation. Check the ENISA ECSF page for the current version before publishing job descriptions; this document follows the structure of the 2022 release.
+> **Note:** ENISA is revising the ECSF, adding proficiency levels and alignment with newer EU regulation. Check the ENISA ECSF page for the current version before publishing job descriptions; this document follows the structure of the 2022 release. ENISA's 2025 report *Cybersecurity roles and skills for NIS2 essential and important entities* maps each NIS2 obligation to ECSF profiles, and is a good check on which roles a NIS2 entity must be able to fill, in house or bought.
 
 ## The 12 ECSF profiles
 
@@ -82,8 +82,9 @@ Hiring hook: a skill flagged *nobody proficient*, or *bus factor 1* on a critica
 ## Sources
 
 - ENISA, *European Cybersecurity Skills Framework (ECSF): Role Profiles*, September 2022. https://www.enisa.europa.eu/publications/european-cybersecurity-skills-framework-role-profiles
-- ENISA, *ECSF User Manual*, September 2022. https://www.enisa.europa.eu/publications/european-cybersecurity-skills-framework-ecsf-user-manual
+- ENISA, *ECSF User Manual*, September 2022. https://www.enisa.europa.eu/publications/european-cybersecurity-skills-framework-ecsf
 - ENISA ECSF topic page with the current version, xlsx and json downloads, and translations: https://www.enisa.europa.eu/topics/skills-and-competences/skills-development/european-cybersecurity-skills-framework-ecsf
 - European e-Competence Framework (e-CF, EN 16234-1) and European Qualifications Framework (EQF), the competence and level systems ECSF builds on.
+- ENISA, *Cybersecurity roles and skills for NIS2 essential and important entities: mapping NIS2 obligations to ECSF*, June 2025. https://www.enisa.europa.eu/publications/cybersecurity-roles-and-skills-for-nis2-essential-and-important-entities
 
 *Open CDC Framework, licensed CC BY 4.0. ECSF © ENISA, referenced with attribution; ENISA does not endorse this project.*

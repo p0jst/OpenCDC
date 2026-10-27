@@ -1,4 +1,4 @@
-# CDC Design Navigator — Guiding Questions
+# CDC design navigator: guiding questions
 
 > **How to use this:** work through each function's questions in a workshop of 2–4 hours per function, with the right people in the room. Every question lists *why it matters* and *where the framework helps*. If you can answer a question crisply and evidence it, move on. If the room goes quiet, you've found a design gap; log it as a backlog item. Answering all questions honestly gets a new CDC ~90% of the way to a sound design; the last 10% is your organisation's specifics.
 

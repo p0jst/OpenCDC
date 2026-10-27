@@ -60,7 +60,7 @@ not affiliated with any employer, NIST, ENISA, MITRE or any authority. See
 - Treat **Law** labels as a starting point for your lawyer, not a conclusion.
 - Treat **OCDF** and **Practitioner** content as a well-argued proposal. Where
   your context differs, your judgement wins, and the framework says so.
-- Cite the version shown on the front page, such as "Open CDC Framework v1.2.0".
+- Cite the version shown on the front page, such as "Open CDC Framework v1.3.0".
   Criteria can change between versions; the [changelog](../CHANGELOG.md) lists every change to scoring.
 - Report errors. Corrections, and second reviewers for the national annexes,
   are the most useful contributions. See [contributing](../CONTRIBUTING.md).

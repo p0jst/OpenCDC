@@ -1,4 +1,4 @@
-# Deep Dive: Detection-as-Code and ATT&CK Mapping, Advanced tier
+# Deep dive: detection-as-code and ATT&CK mapping
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Engineering practice; ATT&CK and Sigma references are to the published projects.</p>
 
@@ -92,6 +92,9 @@ Suppressions live in their own files, never inline hacks:
 
 ## 3. The CI/CD pipeline
 
+[![The detection-as-code pipeline: lint and schema, unit tests, conversion and staging deploy on every merge, with the first three failing the build on error, then production deploy, nightly drift detection and scheduled emulation validation](../assets/diagrams/dac-pipeline-light.svg#gh-light-mode-only)](../assets/diagrams/dac-pipeline-light.svg)
+[![The detection-as-code pipeline: lint and schema, unit tests, conversion and staging deploy on every merge, with the first three failing the build on error, then production deploy, nightly drift detection and scheduled emulation validation](../assets/diagrams/dac-pipeline-dark.svg#gh-dark-mode-only)](../assets/diagrams/dac-pipeline-dark.svg)
+
 Merge to main is the only road to production. Stages:
 
 1. Lint & schema validation: YAML parses; mandatory fields present; UUID unique; tags reference valid ATT&CK IDs, validated against the ATT&CK STIX data rather than a hand-maintained list.
@@ -102,7 +105,7 @@ Merge to main is the only road to production. Stages:
 6. Drift detection: a nightly job diffs platform state against the repo; console edits are flagged and reverted or back-ported the same week.
 7. Emulation validation, scheduled rather than per-commit: periodically execute mapped attack emulations such as Atomic Red Team tests matching each rule's technique tags, in a lab or canary scope and confirm the alert fires end-to-end, through the alert pipeline, not just the query.
 
-Adoption reality: build stages 1–3 first, a week of work with immediate payoff, then 5–6, then automate 7. Do not gate initial adoption on the full pipeline.
+Adoption reality: most of the cost of a detection is keeping it working as log formats, platforms and adversaries change, not writing it. Build stages 1–3 first, a week of work with immediate payoff, then 5–6, then automate 7. Do not gate initial adoption on the full pipeline.
 
 ## 4. Mapping to ATT&CK honestly
 
@@ -117,7 +120,8 @@ ATT&CK mapping is easy to do badly. Rules that make it useful:
     - 2: detection deployed, not validated in the last 12 months
     - 3: detection deployed and validated, having fired in test
 5. Scope the matrix before scoring: filter ATT&CK to your threat profile's techniques, per [CTI deep dive](cti-deep-dive.md) §5, and your platforms. "37% of all of ATT&CK" is meaningless; "level ≥2 on 80% of the techniques our top three threat actors use" is a management-grade statement.
-6. Generate, don't hand-paint: the pipeline should emit an ATT&CK Navigator layer JSON from the rule tags plus validation results, so the coverage picture is always current. Publish it to the team monthly; bring the threat-profile-scoped view to GOVERN quarterly.
+6. Pin the ATT&CK version. Record which release the mappings use and review them at each release. ATT&CK v19, April 2026, split Defense Evasion into two tactics, Stealth and Defense Impairment, so coverage reported against an older release no longer lines up with current threat reports.
+7. Generate, don't hand-paint: the pipeline should emit an ATT&CK Navigator layer JSON from the rule tags plus validation results, so the coverage picture is always current. Publish it to the team monthly; bring the threat-profile-scoped view to GOVERN quarterly.
 
 Common traps: counting a noisy, permanently-suppressed rule as coverage; mapping identity attacks only under Credential Access and forgetting Initial Access; scoring on rule existence while the required log source was decommissioned last quarter. Tie rule metadata to log-source dependency and check it in drift detection.
 
@@ -131,5 +135,7 @@ Common traps: counting a noisy, permanently-suppressed rule as coverage; mapping
 - MITRE ATT&CK® and ATT&CK Navigator. https://attack.mitre.org · https://mitre-attack.github.io/attack-navigator/
 - Red Canary, Atomic Red Team, an attack emulation library. https://github.com/redcanaryco/atomic-red-team
 - MITRE, *11 Strategies of a World-Class Cybersecurity Operations Center*, 2nd ed.
+- MITRE ATT&CK, *Updates: April 2026*, the v19 release. https://attack.mitre.org/resources/updates/updates-april-2026/
+- SANS Institute, Erik Van Buggenhout and Stamatis Chatzimangou, *Rethinking Detection Engineering: A Practical, Threat-Informed Path Forward for Modern Security Teams*, February 2026. https://www.sans.org/white-papers/rethinking-detection-engineering-practical-threat-informed-path-forward-modern-security-teams
 
 *Open CDC Framework, licensed CC BY 4.0. ATT&CK® is a registered trademark of The MITRE Corporation.*

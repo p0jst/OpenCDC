@@ -7,7 +7,7 @@
 It is for the people who notice cyber attacks and deal with them, whether that is a 24/7 Cyber Defence Center or two people in IT who also run the servers. The framework calls that work a *CDC*, whatever the team is called and however small it is. [Is this for me?](#is-this-for-me)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![Version](https://img.shields.io/badge/version-v1.2.0-blue)
+![Version](https://img.shields.io/badge/version-v1.3.0-blue)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 **📖 Read the framework as a website: <https://opencdc.org/>** for searchable docs, interactive tools and template downloads.
@@ -45,8 +45,8 @@ The same seven steps as *Start building* on the [website](https://opencdc.org/#s
 2. **Run the design workshops** in the [design navigator](assessments/cdc-design-navigator.md), one per function. Output: design gaps logged as backlog items.
 3. **Adopt the charter** from the [charter template](templates/cdc-charter-template.md). Output: signed charter with containment authority.
 4. **Decide the operating model** in [operating models](docs/operating-models.md). Output: target operating model and staffing numbers.
-5. **Assess where you are** with the [maturity self-assessment tool](tools/maturity-assessment.html) or the printable [checklist](assessments/maturity-self-assessment.md). Output: scored baseline with evidence, and an action plan with owners.
-6. **Work the first 90 days** in [start here](docs/start-here.md), with your [national annex](docs/annexes/README.md) and the [regulatory selector](tools/regulatory-profile.html). Output: day-90 exit criteria met.
+5. **Work the first 90 days** in [start here](docs/start-here.md); steps 2 to 4 are its first weeks. Use it with your [national annex](docs/annexes/README.md) and the [regulatory selector](tools/regulatory-profile.html). Output: day-90 exit criteria met.
+6. **Assess where you are** at day 90 with the [maturity self-assessment tool](tools/maturity-assessment.html) or the printable [checklist](assessments/maturity-self-assessment.md). Output: scored baseline with evidence, and an action plan with owners.
 7. **Set the operating rhythm** with the [annual calendar](templates/annual-calendar-template.md) and the [detection use case template](templates/detection-use-case-template.md). Output: annual calendar and a growing detection portfolio.
 
 Then reassess annually, or after major organisational change, and review open actions quarterly.
@@ -57,7 +57,7 @@ The framework is organised around the six functions of NIST CSF 2.0, each mapped
 
 | Function | Question it answers | Doc |
 |----------|--------------------|-----|
-| Introduction & Design Principles | How do I use this framework? | [Introduction](docs/introduction.md) |
+| Introduction & design principles | How do I use this framework? | [Introduction](docs/introduction.md) |
 | **GOVERN** | Who owns cyber risk, and how are decisions made? | [Govern](docs/govern.md) |
 | **IDENTIFY** | What are we defending, and what threatens it? | [Identify](docs/identify.md) |
 | **PROTECT** | How do we reduce the likelihood and impact of incidents? | [Protect](docs/protect.md) |
@@ -69,23 +69,23 @@ Cross-cutting documents, in reading order:
 
 | Document | What it gives you |
 |----------|-------------------|
-| [CIA Triad as a Design Lens](docs/cia-triad.md) | How Confidentiality, Integrity and Availability drive every CDC decision |
-| [Maturity Model](docs/maturity-model.md) | Four maturity levels with concrete criteria per function, and how to reuse an existing SOC-CMM, SIM3 or CIS assessment |
-| [Start Here: Prioritisation](docs/start-here.md) | The first 90 days and first year, in order, with exit criteria and anti-priorities |
-| [Implementation Tiers](docs/tiers.md) | Essential / Standard / Advanced overlay: which capabilities apply at your size |
-| [Operating Models](docs/operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs, what can never be outsourced, and the staffing arithmetic and cost template for the budget round |
-| [Roles & Competences](docs/roles-and-competences.md) | CDC roles, skills matrix, career paths and hiring, built on the ENISA ECSF |
+| [CIA triad as a design lens](docs/cia-triad.md) | How Confidentiality, Integrity and Availability drive every CDC decision |
+| [Maturity model](docs/maturity-model.md) | Four maturity levels with concrete criteria per function, and how to reuse an existing SOC-CMM, SIM3 or CIS assessment |
+| [Implementation tiers](docs/tiers.md) | Essential / Standard / Advanced overlay: which capabilities apply at your size |
+| [Start here: the first 90 days](docs/start-here.md) | The first 90 days and first year, in order, with exit criteria and anti-priorities |
+| [Operating models](docs/operating-models.md) | MSSP vs tiered vs capability-based, plus shared and community CDCs: trade-offs, what can never be outsourced, and the staffing arithmetic and cost template for the budget round |
+| [Roles & competences](docs/roles-and-competences.md) | CDC roles, skills matrix, career paths and hiring, built on the ENISA ECSF |
 | [Running the CDC](docs/cdc-operations.md) | The loops that keep a live CDC improving: tuning, detection-as-code, team development, automation guardrails, tool discipline |
-| [Designing Alert Triage](docs/alert-triage.md) | Who may decide what, the minimum triage record, one set of outcomes, what to automate, how quality is checked |
+| [Designing alert triage](docs/alert-triage.md) | Who may decide what, the minimum triage record, one set of outcomes, what to automate, how quality is checked |
 | [AI in the CDC](docs/ai-in-the-cdc.md) | Where AI helps and where to avoid it, by team size; AI in the adversary's hands; AI systems as assets; the AI Act |
-| [Deep Dive: Detection-as-Code](docs/detection-as-code-deep-dive.md) | Repo layout, rule YAML anatomy, CI/CD pipeline, honest ATT&CK coverage scoring, Advanced tier |
-| [Deep Dive: CTI Capability](docs/cti-deep-dive.md) | Strategic/operational/tactical intelligence and the interfaces that feed the CDC, Advanced tier |
-| [CSIRT Community Layer](docs/csirt-community.md) | RFC 2350, TF-CSIRT/FIRST, SIM3 crosswalk for certification, living documentation |
-| [EU Regulatory Landscape](docs/eu-regulatory-landscape.md) | NIS2, GDPR, DORA, CRA, CER and ENISA mapped to CDC capabilities |
-| [NIS2 Article 21 Crosswalk](docs/nis2-article-21-crosswalk.md) | Every NIS2 Art. 20, 21 and 23 obligation mapped to capabilities and to the Level 2 criteria that form the legal floor |
-| [NIST CSF 2.0 Crosswalk](docs/csf-crosswalk.md) | The 22 CSF 2.0 categories mapped to OCDF capabilities |
-| [CIS Controls Crosswalk](docs/cis-controls-crosswalk.md) | All 18 CIS Controls with concrete actions per control |
-| [References & Credits](docs/references.md) | Every source used by this framework |
+| [Deep dive: detection-as-code](docs/detection-as-code-deep-dive.md) | Repo layout, rule YAML anatomy, CI/CD pipeline, honest ATT&CK coverage scoring; for Standard and Advanced tiers |
+| [Deep dive: CTI capability](docs/cti-deep-dive.md) | Strategic/operational/tactical intelligence and the interfaces that feed the CDC; for Standard and Advanced tiers |
+| [CSIRT community layer](docs/csirt-community.md) | RFC 2350, TF-CSIRT/FIRST, SIM3 crosswalk for certification, living documentation |
+| [EU regulatory landscape](docs/eu-regulatory-landscape.md) | NIS2, GDPR, DORA, CRA, CER and ENISA mapped to CDC capabilities |
+| [NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) | Every NIS2 Art. 20, 21 and 23 obligation mapped to capabilities and to the Level 2 criteria that form the legal floor |
+| [NIST CSF 2.0 crosswalk](docs/csf-crosswalk.md) | The 22 CSF 2.0 categories mapped to OCDF capabilities |
+| [CIS Controls crosswalk](docs/cis-controls-crosswalk.md) | All 18 CIS Controls with concrete actions per control |
+| [References & credits](docs/references.md) | Every source used by this framework |
 
 Practical assets:
 

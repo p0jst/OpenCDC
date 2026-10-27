@@ -1,4 +1,4 @@
-# Incident Response Plan — Template
+# Incident response plan template
 
 > Related capability: RS-1. Structure informed by NIST SP 800-61r3, the Dynamic Approach to Incident Response (DAIR) and FIRST good practice. Keep this document short, 10–15 pages at most; detail belongs in playbooks.
 

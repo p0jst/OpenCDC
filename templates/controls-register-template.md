@@ -1,4 +1,4 @@
-# CDC Controls Register — Template
+# Controls register template
 
 > Keeps the documentation alive: every key artefact gets an owner, a frequency, and an approver from OUTSIDE the CDC's reporting line. Evidence of each executed review is stored with the control. See [CSIRT community layer](../docs/csirt-community.md) §4.
 

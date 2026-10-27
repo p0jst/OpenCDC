@@ -1,4 +1,4 @@
-# Maturity Model
+# Maturity model
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's model, informed by the NIST CSF tiers and CMMI. Not a certification standard.</p>
 
@@ -10,12 +10,20 @@ We deliberately use four levels rather than five: in practice the difference bet
 
 ## The levels
 
+[![The four maturity levels as a staircase: Initial, Managed, Established and Optimising, with Level 2 marked as the NIS2 floor and staged scoring explained below](../assets/diagrams/maturity-levels-light.svg#gh-light-mode-only)](../assets/diagrams/maturity-levels-light.svg)
+[![The four maturity levels as a staircase: Initial, Managed, Established and Optimising, with Level 2 marked as the NIS2 floor and staged scoring explained below](../assets/diagrams/maturity-levels-dark.svg#gh-dark-mode-only)](../assets/diagrams/maturity-levels-dark.svg)
+
+<details markdown>
+<summary>The levels as a table, with what each one means in practice</summary>
+
 | Level | Name | One-line test |
 |-------|------|---------------|
 | **1** | Initial | "It happens when someone remembers." Activities are reactive, undocumented, person-dependent. |
-| **2** | Managed | "It's written down and someone owns it." Core processes documented, approved, and executed; coverage partial. |
-| **3** | Established | "It's measured and consistent." Processes are integrated, coverage is broad, metrics exist, and output of one function feeds another. |
+| **2** | Managed | "It is written down and someone owns it." Core processes documented, approved, and executed; coverage partial. |
+| **3** | Established | "It is measured and consistent." Processes are integrated, coverage is broad, metrics exist, and output of one function feeds another. |
 | **4** | Optimising | "It improves itself." Data-driven, validated, trended; lessons systematically change the system. |
+
+</details>
 
 The scored criteria for every function live in one place, the [maturity self-assessment](../assessments/maturity-self-assessment.md); the [interactive tool](../tools/maturity-assessment.html) carries the same text. The function documents link there rather than keeping their own copy.
 

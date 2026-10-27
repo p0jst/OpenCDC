@@ -27,16 +27,16 @@ introduction.
 | The six NIST CSF 2.0 functions | [GOVERN](govern.md), [IDENTIFY](identify.md), [PROTECT](protect.md), [DETECT](detect.md), [RESPOND](respond.md), [RECOVER](recover.md) |
 | [CIA as design lens](cia-triad.md) | How confidentiality, integrity and availability shape the controls |
 | [Maturity model](maturity-model.md) | Maturity levels & scoring |
-| [Start here](start-here.md) | Prioritisation: 90 days / year 1 |
 | [Implementation tiers](tiers.md) | Essential / Standard / Advanced overlay |
+| [Start here](start-here.md) | The first 90 days and year 1, in order |
 | [Operating models](operating-models.md) | MSSP / tiered / capability-based / shared |
 | [Roles & competences](roles-and-competences.md) | ECSF-based roles & skills |
 | [Running the CDC](cdc-operations.md) | Tuning, detection-as-code, team, automation, tools |
 | [Designing alert triage](alert-triage.md) | Decision rights, the minimum triage record, one set of outcomes, automation split, quality checks |
 | [AI in the CDC](ai-in-the-cdc.md) | AI uses by team size, AI in the adversary's hands, AI systems as assets, the AI Act |
 | [The IT/OT interface](it-ot-interface.md) | What the CDC owns at the OT boundary, handover to OT operations, Danish energy coverage |
-| [Detection-as-code deep dive](detection-as-code-deep-dive.md) | Advanced: engineering manual |
-| [CTI deep dive](cti-deep-dive.md) | Advanced: CTI programme |
+| [Detection-as-code deep dive](detection-as-code-deep-dive.md) | Engineering manual, for Standard and Advanced tiers |
+| [CTI deep dive](cti-deep-dive.md) | CTI programme, for Standard and Advanced tiers |
 | [CSIRT community layer](csirt-community.md) | Community, certification, living docs |
 | [EU regulatory landscape](eu-regulatory-landscape.md) | EU law layer, plus [annexes](annexes/README.md) |
 | [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) | NIS2 obligations → capabilities and the Level 2 floor |

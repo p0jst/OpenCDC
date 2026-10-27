@@ -1,4 +1,4 @@
-# References & Credits
+# References & credits
 
 This framework synthesises and builds upon the following publicly available works. **OCDF is an independent community project and is not endorsed by, affiliated with, or approved by any of the organisations below.**
 
@@ -9,14 +9,14 @@ This framework synthesises and builds upon the following publicly available work
 ## NIST Special Publications & standards
 
 - NIST SP 800-61 Rev. 3, *Incident Response Recommendations and Considerations for Cybersecurity Risk Management*, 2025. https://doi.org/10.6028/NIST.SP.800-61r3
-- NIST SP 800-53 Rev. 5, *Security and Privacy Controls for Information Systems and Organizations*. https://doi.org/10.6028/NIST.SP.800-53r5
+- NIST SP 800-53 Rev. 5, *Security and Privacy Controls for Information Systems and Organizations*, current release 5.2.0 of August 2025. https://doi.org/10.6028/NIST.SP.800-53r5
 - NIST SP 800-92, *Guide to Computer Security Log Management*.
 - NIST SP 800-34 Rev. 1, *Contingency Planning Guide for Federal Information Systems*.
 - NIST FIPS 199, *Standards for Security Categorization of Federal Information and Information Systems*. https://doi.org/10.6028/NIST.FIPS.199
 
 ## MITRE
 
-- **MITRE ATT&CK®**. https://attack.mitre.org. © The MITRE Corporation. ATT&CK is used under MITRE's Terms of Use permitting use with attribution. ATT&CK® is a registered trademark of The MITRE Corporation.
+- **MITRE ATT&CK®**, v19 current since April 2026. https://attack.mitre.org. © The MITRE Corporation. ATT&CK is used under MITRE's Terms of Use permitting use with attribution. ATT&CK® is a registered trademark of The MITRE Corporation.
 - K. Knerler, I. Parker, C. Zimmerman, *11 Strategies of a World-Class Cybersecurity Operations Center*, 2nd edition, MITRE. https://www.mitre.org/news-insights/publication/11-strategies-world-class-cybersecurity-operations-center
 
 ## EU legislation from EUR-Lex
@@ -30,6 +30,7 @@ This framework synthesises and builds upon the following publicly available work
 - **CER**: Directive (EU) 2022/2557. https://eur-lex.europa.eu/eli/dir/2022/2557/oj
 - **Cybersecurity Act**: Regulation (EU) 2019/881. https://eur-lex.europa.eu/eli/reg/2019/881/oj
 - Commission Implementing Regulation (EU) 2024/2690, on NIS2 technical requirements for certain digital entities.
+- Proposed, not adopted: NIS2 targeted amendments COM(2026) 13 and the revised Cybersecurity Act COM(2026) 11, January 2026, and the Digital Omnibus, COM(2025) 837, November 2025, with a single entry point for incident reporting and a proposed change to GDPR breach notification.
 - **AI Act**: Regulation (EU) 2024/1689. https://eur-lex.europa.eu/eli/reg/2024/1689/oj
 - **Digital Omnibus on AI**: Regulation (EU) 2026/1744, amending the AI Act. https://eur-lex.europa.eu/eli/reg/2026/1744/oj
 
@@ -37,13 +38,15 @@ This framework synthesises and builds upon the following publicly available work
 
 - ENISA, *European Cybersecurity Skills Framework (ECSF): Role Profiles* and *User Manual*, September 2022, with a revision in progress. https://www.enisa.europa.eu/topics/skills-and-competences/skills-development/european-cybersecurity-skills-framework-ecsf
 
-- ENISA, *ENISA Threat Landscape*, an annual report series. https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape
+- ENISA, *ENISA Threat Landscape*, an annual report series; the 2026 edition covers 2025. https://www.enisa.europa.eu/topics/cyber-threats/threat-landscape
+- ENISA, *Cybersecurity roles and skills for NIS2 essential and important entities: mapping NIS2 obligations to ECSF*, June 2025. https://www.enisa.europa.eu/publications/cybersecurity-roles-and-skills-for-nis2-essential-and-important-entities
+- ENISA, *NIS2 Technical Implementation Guidance* on Implementing Regulation (EU) 2024/2690, June 2025, with evidence examples and a mapping table. https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance
 - ENISA, *CSIRT Maturity Framework* and CSIRT capability materials. https://www.enisa.europa.eu
 
 ## Maturity models & incident response communities
 
 - Rob van Os, **SOC-CMM**, the *Capability Maturity Model for Security Operations Centers*. https://www.soc-cmm.com. Free to use, and referenced here as a complementary deep-dive model.
-- Open CSIRT Foundation, **SIM3 v2 interim**, the *Security Incident Management Maturity Model*, 1 January 2023. https://opencsirt.org/csirt-maturity/sim3-and-references/
+- Open CSIRT Foundation, **SIM3 v2 interim**, the *Security Incident Management Maturity Model*, 1 January 2023; a full version 2 is announced for 2026. https://opencsirt.org/csirt-maturity/sim3-and-references/
 - **FIRST**, *CSIRT Services Framework* v2.1. https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1
 - **FIRST**, *Traffic Light Protocol (TLP) 2.0*. https://www.first.org/tlp/
 - TF-CSIRT / **Trusted Introducer**, for European CSIRT listing, accreditation and certification. https://www.trusted-introducer.org
@@ -54,6 +57,17 @@ This framework synthesises and builds upon the following publicly available work
 ## Incident response method
 
 - Joshua Wright, *Dynamic Incident Response: A Framework for Security Teams*, © 2026 The Escal Institute of Advanced Technologies, Inc. d/b/a SANS Institute, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). https://dynamicincidentresponse.com. Its DAIR model is adapted, with changes for EU law, in RESPOND and the IR plan and scenario playbook templates.
+
+## SANS research used in this version
+
+SANS survey and white-paper findings are used as context and data points, not as normative sources.
+
+- SANS Institute, Christopher Crowley, *SANS 2026 SOC Report: A Decade of Evolution in Cyber Defense*, June 2026. https://www.sans.org/research/security-operations-report
+- SANS Institute, Rebekah Brown and Andreas Sfakianakis, *SANS 2026 Cyber Threat Intelligence Survey*, 2026. https://www.sans.org/research/cyber-threat-intelligence-report
+- SANS Institute, Josh Lemon, *SANS 2026 Threat Hunting Survey: The Evolution of Threat Hunting*, September 2026. https://www.sans.org/white-papers/sans-2026-threat-hunting-survey-evolution-threat-hunting
+- SANS Institute, Rich Greene, *SANS 2026 State of Identity Threat Detection and Response*, March 2026. https://www.sans.org/research/identity-threat-detection-response-report
+- SANS Institute, *VulnOps Field Guide*, August 2026, and *VulnOps: A CISO's Guide to Starting Implementation*. https://www.sans.org/white-papers/vulnops-field-guide · https://www.sans.org/blog/vulnops-cisos-guide-to-starting-implementation
+- SANS Institute, Erik Van Buggenhout and Stamatis Chatzimangou, *Rethinking Detection Engineering: A Practical, Threat-Informed Path Forward for Modern Security Teams*, February 2026. https://www.sans.org/white-papers/rethinking-detection-engineering-practical-threat-informed-path-forward-modern-security-teams
 
 ## Incident response playbook baselines
 
@@ -85,6 +99,7 @@ This framework synthesises and builds upon the following publicly available work
 - OWASP GenAI Security Project, *Top 10 for LLM Applications*. https://genai.owasp.org
 - Red Canary, Atomic Red Team, an attack emulation library. https://github.com/redcanaryco/atomic-red-team
 - CISA, Known Exploited Vulnerabilities catalog. https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+- NIST, *NIST Updates NVD Operations to Address Record CVE Growth*, 15 April 2026. https://www.nist.gov/itl/nvd
 - MISP Project. https://www.misp-project.org
 - ISO/IEC 27000-series, *Information security management systems*, covering vocabulary, ISMS requirements and controls. https://www.iso.org. ISO standards are paywalled; this framework references concepts only.
 - **IBM Plex Sans / IBM Plex Mono** — the typefaces used by this website and its interactive tools. © 2019 IBM Corp., licensed under the SIL Open Font License 1.1. Self-hosted from `assets/fonts/` so that no visitor request reaches a third-party font CDN; licence text in `assets/fonts/LICENSE-IBM-Plex.txt`. https://github.com/IBM/plex
@@ -92,7 +107,7 @@ This framework synthesises and builds upon the following publicly available work
 
 ## How to cite this framework
 
-> Open CDC Framework (OCDF), version 1.2.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
+> Open CDC Framework (OCDF), version 1.3.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
 
 ## Corrections
 

@@ -1,6 +1,6 @@
-# Start Here: Prioritisation Guide
+# Start here: the first 90 days
 
-> If you read only one document after the README, read this. It answers the question the rest of the framework can't answer for you page by page: *in which order?*
+> The rest of the framework describes what to build, page by page. This page answers the question it cannot: *in which order?* Its first weeks are the design work: the workshops, the charter and the operating model. The 90 days end with your baseline maturity assessment.
 
 ## Why this order
 

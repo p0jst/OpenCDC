@@ -1,0 +1,4 @@
+# Website build dependencies, pinned so a new upstream release cannot change
+# the published site without a reviewed commit. Dependabot proposes updates.
+mkdocs-material==9.8.0
+mkdocs-redirects==1.2.3

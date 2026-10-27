@@ -1,4 +1,4 @@
-# ECSF Job Description Template
+# ECSF job description template
 
 > Fill from the ENISA ECSF Role Profiles document: pick the primary profile, copy/adapt its mission and tasks, add your specifics. Delete guidance quotes before publishing. Mapping guidance: [Roles & competences](../docs/roles-and-competences.md).
 

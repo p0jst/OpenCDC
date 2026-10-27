@@ -1569,3 +1569,12 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .ocdf-dep--soft { border: 1px solid var(--ocdf-ink-soft); color: var(--ocdf-ink-soft); }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-dep--gate { background: #e39aa4; color: #1a1014; }
 [data-md-color-scheme="slate"] .md-typeset .ocdf-dep--hard { background: #8fb3e3; color: #0d1720; }
+
+/* Phones: the capability and mapping tables are three to five columns of
+   prose. Tighter cells let most of them fit the screen instead of scrolling
+   sideways; the ID column stays on one line. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td { padding: 0.55em 0.6em; }
+  .md-typeset table:not([class]) td:first-child { white-space: nowrap; }
+}

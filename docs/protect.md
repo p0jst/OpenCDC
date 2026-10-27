@@ -14,7 +14,7 @@ Reduce the likelihood and blast radius of incidents through preventive controls.
 | PR-2 | Awareness & training | Role-based security training; phishing simulations; specific training for developers and admins; management training under the NIS2 Art. 20 obligation. |
 | PR-3 | Data security | Encryption at rest and in transit, key management, data loss prevention proportionate to classification. |
 | PR-4 | Platform hardening & secure configuration | Hardening baselines such as CIS Benchmarks, configuration monitoring, EDR and endpoint protection deployment, and **application control**, covered below. |
-| PR-5 | Vulnerability remediation & patching | Risk-based patching SLAs; emergency patch process for actively exploited vulnerabilities. |
+| PR-5 | Vulnerability remediation & patching | Prioritise by known exploitation and exposure before CVSS: a known-exploited vulnerability on an asset reachable from the internet goes first. Risk-based patching SLAs cover the rest, with an emergency patch process for actively exploited vulnerabilities. Edge devices need more than a deadline, covered below. |
 | PR-6 | Network security & segmentation | Zoning/segmentation, restricted admin paths, secure remote access, egress control. |
 | PR-7 | Resilient technology infrastructure | Backups that are tested, with an offline or immutable copy; redundancy for critical services; capacity management per CSF 2.0 PR.IR. |
 | PR-8 | Secure development & change | Secure SDLC requirements, change management, and pre-production security testing where software is developed in-house. |
@@ -31,6 +31,27 @@ Software inventory under ID-1 and CIS Controls 1–2 has an enforcement half tha
 5. Feed DETECT: application-control audit and block events are a first-class log source: every block is prevention, and every audit-mode "would have blocked" is a free detection.
 
 Ownership follows the SIEM pattern in [Detect](detect.md): platform teams operate the mechanism; the CDC sets the policy intent, monitors the events and owns exceptions. Each exception gets an owner and an expiry, the same discipline as detection suppressions.
+
+### Edge devices under PR-5
+
+VPN gateways, firewalls, remote-access portals and other internet-facing appliances are where exploitation now often arrives on the day a vulnerability is disclosed, or before it. A patching SLA measures the time from disclosure to fix. For these devices that window may not exist. ENISA's 2026 threat landscape found a vulnerability exploited in 60% of the unauthorised-access incidents where the way in was known, although the way in was known for only a small share. Plan on the basis that an edge device can be exploited while fully patched:
+
+1. Keep an edge inventory under ID-1 and ID-4: every internet-facing appliance and exposed application, with owner, version and where its vendor publishes advisories.
+2. Agree in advance what to do when there is no patch yet: disable the affected feature, restrict access to known source addresses, or take the device offline. Who may order it sits with emergency change approval under external dependencies below.
+3. Keep management interfaces off the internet, and give appliance admin accounts phishing-resistant MFA under PR-1.
+4. Check for compromise after patching. A patch closes the hole; it does not remove an intruder who used it first. Review the device's logs, configuration and outbound connections against the vendor's or national CSIRT's indicators, back to the disclosure date or earlier where exploitation is known to predate it.
+5. Monitor the device as a target, not only as a log source. The edge devices note in [Detect](detect.md) says how.
+
+Patching still matters: many exploited vulnerabilities are first exploited weeks, months or years after disclosure, and the SLA is what closes them. The point is that for the edge, the SLA alone is not the control.
+
+### When findings outrun the patch cycle
+
+AI-assisted discovery is producing new vulnerabilities faster than a cycle of scan, ticket and monthly patch can absorb; NIST reports CVE submissions up 263% from 2020 to 2025. SANS calls the response VulnOps: vulnerability handling run as a continuous decision loop with named owners rather than as a ticket queue. What OCDF takes from it:
+
+1. **Agree three paths in advance.** Each fix goes one way: patched automatically, tested then deployed, or decided by hand. A named person owns every decision on the third path and every exception.
+2. **Count real closure.** A finding moved to an exception or a risk acceptance is not closed. Report the exception queue next to the closure rate, so accepted risk cannot grow unseen.
+3. **Let AI recommend, not deploy.** It can triage and propose; a person approves what changes.
+4. **Start with one loop.** One platform or product family first, such as browsers or one server build; prove it works, then extend.
 
 ## CIA mapping
 
@@ -54,9 +75,9 @@ Ownership follows the SIEM pattern in [Detect](detect.md): platform teams operat
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **IT/platform teams** operate most controls; the CDC defines requirements and verifies via posture monitoring.
-- **Security engineers** in the CDC own EDR, hardening verification, and control telemetry.
-- **Awareness lead** — often shared with HR/communications.
+- **IT and platform teams** — operate most controls; the CDC defines requirements and verifies them through posture monitoring.
+- **Security engineers** — in the CDC; own EDR, hardening verification and control telemetry.
+- **Awareness lead** — often shared with HR or communications.
 
 ## Maturity criteria
 
@@ -93,5 +114,9 @@ The criteria that score PROTECT are kept in one place for all six functions: the
 - NIST SP 800-53 Rev. 5, *Security and Privacy Controls*. https://doi.org/10.6028/NIST.SP.800-53r5
 - CIS, *CIS Critical Security Controls*, especially Controls 1–2 including the software allowlisting safeguards 2.5–2.7, and *CIS Benchmarks*. https://www.cisecurity.org
 - NIS2: Directive (EU) 2022/2555, Art. 21; Implementing Regulation (EU) 2024/2690; GDPR Art. 32; DORA Art. 9.
+- SANS Institute, *VulnOps Field Guide*, August 2026, and *VulnOps: A CISO's Guide to Starting Implementation*. https://www.sans.org/white-papers/vulnops-field-guide · https://www.sans.org/blog/vulnops-cisos-guide-to-starting-implementation
+- NIST, *NIST Updates NVD Operations to Address Record CVE Growth*, 15 April 2026. https://www.nist.gov/itl/nvd
+- ENISA, *ENISA Threat Landscape 2026*, September 2026, covering 2025. https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026
+- ENISA, *NIS2 Technical Implementation Guidance* on Implementing Regulation (EU) 2024/2690, June 2025, with evidence examples and a mapping table. https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance
 
 *Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*

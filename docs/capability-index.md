@@ -1,4 +1,4 @@
-# Capability Index
+# Capability index
 
 <p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
 

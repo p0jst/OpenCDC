@@ -573,6 +573,84 @@ def ai_ratings(t):
     return s
 
 
+# ------------------------------------------------------------ maturity levels
+LEVELS = [
+    (1, "Initial", ("It happens when", "someone remembers.")),
+    (2, "Managed", ("It is written down", "and someone owns it.")),
+    (3, "Established", ("It is measured", "and consistent.")),
+    (4, "Optimising", ("It improves", "itself.")),
+]
+
+
+def maturity_levels(t):
+    s = Svg(760, 350, "The four maturity levels",
+            "A staircase of four levels. Level 1, Initial: it happens when someone remembers. Level 2, Managed: "
+            "it is written down and someone owns it; Level 2 is also the NIS2 floor. Level 3, Established: it is "
+            "measured and consistent. Level 4, Optimising: it improves itself. Scoring is staged: a level counts "
+            "only when all its criteria, and those of the levels below, are met.", t)
+    bottom, w, gap, x0 = 300, 176, 9, 20
+    for i, (n, name, quote) in enumerate(LEVELS):
+        x, top = x0 + i * (w + gap), 190 - i * 50
+        if n == 2:
+            s.rect(x, top, w, bottom - top, t["accent_soft"], t["accent"], sw=2)
+            s.text(x + w / 2, top - 12, "NIS2 floor", 13, t["accent"], 700, "middle")
+        else:
+            s.rect(x, top, w, bottom - top, t["eu_soft"], t["eu"])
+        s.text(x + 14, top + 26, f"Level {n}", 15, t["ink"], 700)
+        s.text(x + 14, top + 46, name, 13, t["soft"], 600)
+        s.text(x + 14, top + 72, quote[0], 13, t["ink"], 400, italic=True)
+        s.text(x + 14, top + 90, quote[1], 13, t["ink"], 400, italic=True)
+    s.path(f"M{x0},{bottom + 14} L{x0 + 4 * w + 3 * gap},{bottom + 14}", marker="arr")
+    s.text(x0, bottom + 40, "Staged scoring: a level counts only when all its criteria, and those of the "
+           "levels below, are met.", 12, t["soft"])
+    return s
+
+
+# ---------------------------------------------------- detection-as-code pipeline
+def dac_pipeline(t):
+    s = Svg(760, 300, "The detection-as-code pipeline",
+            "Every merge to main runs four stages: lint and schema validation, unit tests, conversion to the "
+            "platform's query language, and a staging deploy with a volume smoke test. Errors in the first "
+            "three stages fail the build. Production deploy follows through the platform API, then a nightly "
+            "drift check compares the platform with the repository, and emulation validation runs on a "
+            "schedule to confirm alerts fire end to end. Adopt stages 1 to 3 first, then 5 and 6, then 7.", t)
+    w, h, gap, x0 = 172, 62, 17, 10
+    row1 = [("1. Lint and schema", "fields, UUID, ATT&CK IDs"), ("2. Unit tests", "should fire, should not"),
+            ("3. Conversion", "Sigma to platform query"), ("4. Staging deploy", "volume smoke test")]
+    y1 = 56
+    s.text(x0, 30, "Every merge to main", 13, t["soft"], 600)
+    s.rect(x0 - 4, y1 - 8, 3 * w + 2 * gap + 8, h + 34, t["accent_soft"], rx=8)
+    s.text(x0 + 6, y1 + h + 20, "An error here fails the build", 12, t["accent"], 600)
+    for i, (a, b) in enumerate(row1):
+        x = x0 + i * (w + gap)
+        s.box(x, y1, w, h, a, b)
+        if i:
+            s.path(f"M{x - gap + 1},{y1 + h / 2} L{x - 2},{y1 + h / 2}")
+    y2 = 192
+    s.text(x0 + w / 2 + 12, y2 - 30, "After the merge", 13, t["soft"], 600)
+    row2 = [("5. Production deploy", "via API, ids recorded", "card"),
+            ("6. Drift detection", "nightly diff with repo", "card"),
+            ("7. Emulation", "scheduled, end to end", "sched")]
+    for i, (a, b, k) in enumerate(row2):
+        x = x0 + i * (w + gap)
+        if k == "sched":
+            s.rect(x, y2, w, h, t["card"], t["eu"], dash="5 4")
+            s.text(x + w / 2, y2 + h / 2 - 3, a, 14, t["ink"], 600, "middle")
+            s.text(x + w / 2, y2 + h / 2 + 15, b, 12, t["soft"], 400, "middle")
+        else:
+            s.box(x, y2, w, h, a, b, kind=k)
+        if i:
+            s.path(f"M{x - gap + 1},{y2 + h / 2} L{x - 2},{y2 + h / 2}", dash="4 4" if k == "sched" else None)
+    sx = x0 + 3 * (w + gap) + w / 2
+    s.path(f"M{sx},{y1 + h} L{sx},{y2 - 24} L{x0 + w / 2},{y2 - 24} L{x0 + w / 2},{y2 - 2}")
+    xn = x0 + 3 * (w + gap)
+    s.text(xn, y2 + 20, "Adopt in this order:", 12, t["soft"], 600)
+    s.text(xn, y2 + 38, "stages 1 to 3 first,", 12, t["soft"])
+    s.text(xn, y2 + 56, "then 5 and 6, then 7.", 12, t["soft"])
+    s.text(x0, y2 + h + 32, "Dashed: runs on a schedule, not on every merge.", 12, t["soft"])
+    return s
+
+
 DIAGRAMS = {
     "respond-incident-flow": incident_flow,
     "tiers-capability-map": tier_map,
@@ -582,6 +660,8 @@ DIAGRAMS = {
     "start-here-first-90-days": first_90_days,
     "it-ot-zones": it_ot_zones,
     "ai-use-ratings": ai_ratings,
+    "maturity-levels": maturity_levels,
+    "dac-pipeline": dac_pipeline,
 }
 
 

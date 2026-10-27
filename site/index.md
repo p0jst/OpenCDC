@@ -7,7 +7,7 @@ hide:
 
 <div class="ocdf-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>v1.2.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
+<p class="ocdf-eyebrow"><span>v1.3.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
 
 # Build and mature your cyber defence
 
@@ -177,12 +177,13 @@ on this website.
 
 <p class="ocdf-phase">Build</p>
 
-5.  **Assess where you are.** Score the maturity criteria and give every gap an
-    owner and a due date. [Maturity self-assessment](tools/maturity-assessment.html)
-    <span class="ocdf-output">Output: scored baseline with evidence, and an action plan with owners</span>
-6.  **Work the first 90 days.** The order of work, week by week, with exit
-    criteria. [Start here](docs/start-here.md)
+5.  **Work the first 90 days.** Steps 2 to 4 are its first weeks; then come
+    crown jewels, blast-radius controls, priority log sources and an incident
+    plan with a reporting drill. [Start here](docs/start-here.md)
     <span class="ocdf-output">Output: day-90 exit criteria met</span>
+6.  **Assess where you are.** At day 90, score the maturity criteria and give
+    every gap an owner and a due date. [Maturity self-assessment](tools/maturity-assessment.html)
+    <span class="ocdf-output">Output: scored baseline with evidence, and an action plan with owners</span>
 
 <p class="ocdf-phase">Run</p>
 
@@ -258,7 +259,7 @@ nothing you type into them is sent anywhere. Everything is on
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.2.0**, released 11 October 2026. See the [changelog](CHANGELOG.md).
+**Version 1.3.0**, released 27 October 2026. See the [changelog](CHANGELOG.md).
 Written and maintained by Frederik B. Krogsgaard, formerly Senior Manager at
 the Norlys Cyber Defence Center, as an independent personal project. Each
 national annex says when it was last reviewed and how confident that review

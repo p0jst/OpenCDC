@@ -1,4 +1,4 @@
-# Deep Dive: Building a CTI Capability That Feeds the CDC, Advanced tier
+# Deep dive: a CTI capability that feeds the CDC
 
 <p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag practitioner">Practitioner</span>Built on published intelligence practice, applied from experience.</p>
 
@@ -36,9 +36,9 @@ Rate each source annually: did it contribute to a PIR answer, a detection, or a 
 ## 4. Production and dissemination discipline
 
 - Separate facts from assessment; use estimative language such as "we assess with moderate confidence…", and state what would change your mind.
-- Every product ends with "so what": recommended actions per consumer: detect X, hunt Y, patch Z, brief the board on W.
+- Every product ends with "so what": recommended actions per consumer: detect X, hunt Y, patch Z, brief the board on W. In the SANS 2026 CTI Survey, 91% of CISOs called CTI valuable but only 26% said it significantly shapes their decisions; the gap is translation, and the so-what is where it closes.
 - Right-size the format: an actor card is one page; a tactical alert is five lines with indicators attached; the strategic assessment is the only long document you ship.
-- TLP 2.0 on everything shared; sharing back to the community is part of the job, per [CSIRT community layer](csirt-community.md) §2.
+- TLP 2.0 on everything shared; sharing back to the community is part of the job, per [CSIRT community layer](csirt-community.md) §2. Have the sharing rules reviewed once by legal and the DPO, and record the result in GOVERN: shared indicators can contain personal data. The same survey found 55% of organisations sharing without legally reviewed rules.
 - Track RFIs, requests for information, as tickets with deadlines. The RFI queue is how the rest of the CDC pulls intel, and its response time is a CTI KPI.
 
 ## 5. The threat profile and actor cards
@@ -80,5 +80,6 @@ One person can run PIR-driven operational and tactical CTI part-time at S-tier i
 - MITRE ATT&CK® Groups/Software knowledge base. https://attack.mitre.org
 - FIRST, *Traffic Light Protocol 2.0*; CISA Known Exploited Vulnerabilities catalog. https://www.first.org/tlp/ · https://www.cisa.gov/known-exploited-vulnerabilities-catalog
 - MISP Project, an open source threat sharing platform. https://www.misp-project.org
+- SANS Institute, Rebekah Brown and Andreas Sfakianakis, *SANS 2026 Cyber Threat Intelligence Survey*, 2026. https://www.sans.org/research/cyber-threat-intelligence-report
 
 *Open CDC Framework, licensed CC BY 4.0.*

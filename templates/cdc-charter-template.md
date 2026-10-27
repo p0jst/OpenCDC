@@ -1,4 +1,4 @@
-# CDC/SOC Charter — Template
+# CDC charter template
 
 > Related capability: GV-1. Delete guidance in blockquotes before publishing.
 

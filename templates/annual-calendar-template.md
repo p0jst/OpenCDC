@@ -1,4 +1,4 @@
-# CDC Annual Operating Calendar — Template
+# Annual operating calendar template
 
 > Recurring work dies in backlogs; schedule it. Distribute heavy items across quarters; tie each to a control in the controls register. Adjust months to your audit/budget cycle.
 

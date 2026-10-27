@@ -40,10 +40,10 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **Executive sponsor**, a board member or C-level, owns cyber risk acceptance.
-- **CISO / Head of Security** — owns the policy framework.
-- **CDC Director / SOC Manager** — owns the charter execution and reports maturity.
-- **GRC / Legal / DPO** — owns regulatory interpretation for GDPR Art. 33 breach notification and NIS2 reporting.
+- **Executive sponsor** — a board member or C-level executive who owns cyber risk acceptance.
+- **CISO or Head of Security** — owns the policy framework.
+- **CDC Director or SOC Manager** — owns execution of the charter and reports maturity.
+- **GRC, Legal and DPO** — own regulatory interpretation for GDPR Art. 33 breach notification and NIS2 reporting.
 
 ## Maturity criteria
 
@@ -55,9 +55,9 @@ The criteria that score GOVERN are kept in one place for all six functions: the 
 
 <p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the article itself and your national law; not legal advice.</p>
 
-- **NIS2 Directive (EU) 2022/2555, Art. 20** — management bodies must *approve* cybersecurity risk-management measures, *oversee* their implementation, and *follow training*; managers can be held liable.
+- **NIS2 Art. 20** — management bodies must *approve* cybersecurity risk-management measures, *oversee* their implementation, and *follow training*; managers can be held liable.
 - **NIS2 Art. 21(1)** — requires an "all-hazards" risk-based approach proportionate to the entity's exposure.
-- **DORA (EU) 2022/2554, Art. 5** — for financial entities, the management body bears final responsibility for ICT risk management.
+- **DORA Art. 5** — for financial entities, the management body bears final responsibility for ICT risk management.
 - **GDPR Art. 24 & 32** — controller accountability and "appropriate technical and organisational measures".
 - **ENISA NCSS & sectoral guidance** — national cybersecurity strategy alignment for public bodies.
 

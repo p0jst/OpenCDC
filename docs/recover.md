@@ -43,9 +43,9 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **Service/platform owners** execute restoration; the CDC verifies cleanliness.
-- **Incident manager** remains accountable until closure criteria are met.
-- **BCM coordinator** — interface to continuity management.
+- **Service and platform owners** — execute restoration; the CDC verifies the systems are clean.
+- **Incident manager** — remains accountable until the closure criteria are met.
+- **BCM coordinator** — the interface to continuity management.
 
 ## Maturity criteria
 
