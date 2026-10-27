@@ -8,7 +8,7 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 
 ---
 
-## GOVERN — "Who owns this, and with what authority?"
+## GOVERN: "Who owns this, and with what authority?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|
@@ -24,7 +24,7 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 | G10 | Who may accept a cyber risk, and where is that acceptance recorded? | Unrecorded acceptances resurface as "nobody told me". ➜ GV-2 |
 | G11 | How many security tools do we run, how many consoles does one case take, and when did we last retire one? | Tool sprawl taxes every case and buries data in silos. ➜ [Running the CDC](../docs/cdc-operations.md) §5 |
 
-## IDENTIFY — "What are we defending, against whom?"
+## IDENTIFY: "What are we defending, against whom?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|
@@ -37,7 +37,7 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 | I7 | How fast do we learn of a critical vulnerability in something we run, and who owns the clock? | Exploitation windows are now hours-to-days. ➜ ID-4, PR-5 |
 | I8 | When we find a weakness in an audit, pentest or incident, where does it go, and does it ever come back out as a fix? | An improvement backlog nobody drains is a risk register in denial. ➜ ID-7 |
 
-## PROTECT — "What reduces the blast radius before anything happens?"
+## PROTECT: "What reduces the blast radius before anything happens?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|
@@ -51,7 +51,7 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 | P8 | Which protection controls does the CDC merely *assume* work, and which have we tested fire-for-effect? | Assumed controls are the ones attackers find disabled. ➜ Level 4 criteria, DE-6 |
 | P9 | Can an unapproved binary or script execute on our critical servers today? | Application control is the cheapest ransomware circuit-breaker; servers first, audit mode first. ➜ PR-4 app control section |
 
-## DETECT — "Would we notice, and how fast?"
+## DETECT: "Would we notice, and how fast?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|
@@ -66,7 +66,7 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 | D9 | What is our measured MTTD on real incidents, and is it trending the right way? | You cannot improve what you don't measure. ➜ [metrics template](../templates/metrics-kpi-template.md) |
 | D10 | Who owns the SIEM's hardware, OS and application respectively, and if it's cloud-hosted, who decided which data may be shipped there? | An unowned platform decays; unclassified telemetry export is an uncontrolled data transfer. ➜ [DETECT](../docs/detect.md), "Owning the SIEM platform" |
 
-## RESPOND — "When it happens, does the machine run?"
+## RESPOND: "When it happens, does the machine run?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|
@@ -79,7 +79,7 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 | R7 | At what point does a security incident become an organisational crisis, and who pulls that lever? | The threshold must pre-exist the incident. ➜ RS-6 |
 | R8 | When did management last sit in an exercise and make a real, if simulated, trade-off decision? | Executives who've practised decide in minutes, not hours. ➜ RS-7 |
 
-## RECOVER — "Can we come back clean, and do we learn?"
+## RECOVER: "Can we come back clean, and do we learn?"
 
 | # | Question | Why it matters |
 |---|----------|----------------|

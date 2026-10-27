@@ -44,6 +44,12 @@ The same record applies when a machine does the triage. An automated or AI-assis
 
 Triage has three outcomes, defined in [Respond](respond.md#verify-and-triage): continue, stop or defer. Every case then closes under the [closure taxonomy](respond.md#case-closure-taxonomy). Use these two lists and no others, so that tuning, metrics and statistics count the same things.
 
+[![Triage outcomes: continue leads to a true positive with or without impact, stop to a false positive from a rule defect or benign activity, and defer to indeterminate, each with its next step](../assets/diagrams/triage-outcomes-light.svg#gh-light-mode-only)](../assets/diagrams/triage-outcomes-light.svg)
+[![Triage outcomes: continue leads to a true positive with or without impact, stop to a false positive from a rule defect or benign activity, and defer to indeterminate, each with its next step](../assets/diagrams/triage-outcomes-dark.svg#gh-dark-mode-only)](../assets/diagrams/triage-outcomes-dark.svg)
+
+<details markdown>
+<summary>The outcomes as a table</summary>
+
 | Triage outcome | Closes as | Next step |
 |----------------|-----------|-----------|
 | Continue | True positive with impact | Response loop; reporting duties assessed |
@@ -51,6 +57,8 @@ Triage has three outcomes, defined in [Respond](respond.md#verify-and-triage): c
 | Stop | False positive, reason *rule defect* | Close and flag for tuning |
 | Stop | False positive, reason *benign activity* | The rule matched what it was written for, but the activity is legitimate; close, and if it recurs, an exception with owner and expiry |
 | Defer | Indeterminate, if the time-box runs out | Record which data was missing; recurring gaps go to the log-source and detection backlog |
+
+</details>
 
 The reason field on false positives is what makes the tuning loop work. A rule defect is fixed in the rule. Benign activity is handled by a scoped exception, or accepted as noise the team has chosen to live with. Mixing the two hides which rules are broken.
 

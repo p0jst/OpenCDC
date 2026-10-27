@@ -1578,3 +1578,27 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   .md-typeset table:not([class]) td { padding: 0.55em 0.6em; }
   .md-typeset table:not([class]) td:first-child { white-space: nowrap; }
 }
+
+/* Phones: diagrams are drawn 760 wide, and scaled to a 360-pixel screen
+   their 12-15 unit text drops below 7 px. Keep them at a readable width and
+   let the reader swipe sideways; a tap still opens the full SVG. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset p:has(> a > img[src*="assets/diagrams/"]) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-right: -0.8rem;
+    padding-bottom: 0.4rem;
+  }
+  .md-typeset img[src*="assets/diagrams/"] {
+    width: 600px;
+    max-width: none;
+  }
+  .md-typeset p:has(> a > img[src*="assets/diagrams/"])::after {
+    content: "Swipe sideways, or tap to open full size";
+    display: block;
+    position: sticky;
+    left: 0;
+    font-size: 0.62rem;
+    color: var(--ocdf-ink-soft);
+  }
+}

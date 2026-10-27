@@ -651,6 +651,128 @@ def dac_pipeline(t):
     return s
 
 
+# ------------------------------------------------------------- tuning loop
+def tuning_loop(t):
+    s = Svg(760, 430, "The alert tuning loop",
+            "A weekly loop of five steps: measure each use case; every closed alert carries a verdict and every "
+            "false positive a reason; a weekly tuning review of the worst offenders; every change made as a "
+            "reviewed commit; then the test is fired again to prove detection still works, and measuring starts "
+            "over. Two standing rules sit beside the loop: suppressions carry an owner and an expiry date, and "
+            "rules that never fire and fail validation are fixed or retired.", t)
+    steps = [(250, 30, "Measure", "alerts, true positives, time"),
+             (480, 125, "Verdict on every alert", "and a reason on every FP"),
+             (410, 270, "Weekly tuning review", "worst offenders, 30–60 min"),
+             (90, 270, "Change as a reviewed commit", "with the reason written down"),
+             (20, 125, "Fire the test again", "tuning must not blind the rule")]
+    w, h = 260, 62
+    for x, y, a, b in steps:
+        s.box(x, y, w, h, a, b, kind="soft")
+    arrows = ["M510,61 L600,61 L600,123", "M610,187 L610,268", "M410,301 L352,301",
+              "M150,270 L150,189", "M150,125 L150,61 L248,61"]
+    for d in arrows:
+        s.path(d, stroke=t["eu"], marker="arr-eu", sw=1.8)
+    s.text(380, 175, "Weekly", 16, t["eu"], 700, "middle")
+    s.text(380, 196, "every closed alert feeds it", 13, t["soft"], 400, "middle")
+    s.rect(20, 360, 350, 52, t["card"], t["line"])
+    s.text(34, 382, "Suppressions carry an owner and an expiry;", 13, t["ink"], 600)
+    s.text(34, 400, "expired ones come back for review", 13, t["soft"])
+    s.rect(390, 360, 350, 52, t["card"], t["line"])
+    s.text(404, 382, "A rule that never fires and fails validation", 13, t["ink"], 600)
+    s.text(404, 400, "is fixed or retired, not kept just in case", 13, t["soft"])
+    return s
+
+
+# ---------------------------------------------------------- triage outcomes
+def triage_outcomes(t):
+    s = Svg(760, 445, "Triage outcomes and how cases close",
+            "Triage has three outcomes. Continue leads to a true positive with impact, which enters the response "
+            "loop with reporting duties assessed, or a true positive without impact, closed after a scoping check. "
+            "Stop leads to a false positive, either a rule defect, which is tuned, or benign activity, which is "
+            "closed and given an exception with owner and expiry if it recurs. Defer leads to indeterminate when "
+            "the time-box runs out; the missing data goes to the backlog.", t)
+    s.box(20, 178, 130, 64, "Triage", "the minimum record", kind="eu")
+    groups = [("Continue", t["eu"], [("True positive, impact", "Response loop; assess reporting"),
+                                     ("True positive, no impact", "Scoping check, then close")]),
+              ("Stop", t["accent"], [("False positive: rule defect", "Flag for tuning; fix the rule"),
+                                     ("False positive: benign", "Close; exception if it recurs")]),
+              ("Defer", t["warn"], [("Indeterminate", "Missing data to the backlog")])]
+    y = 20
+    for name, col, rows in groups:
+        gh = len(rows) * 70 - 10
+        s.rect(200, y, 110, gh, t["card"], col, sw=2)
+        s.text(255, y + gh / 2 + 5, name, 15, col, 700, "middle")
+        s.path(f"M150,210 L176,210 L176,{y + gh / 2} L198,{y + gh / 2}")
+        for i, (a, b) in enumerate(rows):
+            ry = y + i * 70
+            s.rect(340, ry, 400, 60, t["card"], t["line"])
+            s.text(356, ry + 25, a, 14, t["ink"], 600)
+            s.text(356, ry + 45, b, 13, t["soft"])
+            s.path(f"M310,{y + gh / 2} L324,{y + gh / 2} L324,{ry + 30} L338,{ry + 30}")
+        y += gh + 30
+    s.text(20, 436, "Every false positive carries its reason: a defect is fixed in the rule, benign activity is not.",
+           12, t["soft"])
+    return s
+
+
+# ---------------------------------------------------------- CTI interfaces
+def cti_interfaces(t):
+    s = Svg(760, 400, "How CTI feeds the rest of the CDC",
+            "Threat intelligence sits in the middle and feeds six consumers through standing, ticketed workflows: "
+            "detection engineering gets detection opportunities, threat hunting gets hypotheses, vulnerability "
+            "management gets exploitation-aware priorities, incident response gets actor context on request, "
+            "tactical triage gets curated indicators with expiry, and GOVERN gets a quarterly threat briefing. "
+            "Every consumer reports back what was used and what was noise.", t)
+    s.box(280, 160, 200, 80, "Threat intelligence", "PIRs and the threat profile", kind="eu")
+    left = [(20, "Detection engineering", "detection opportunities"),
+            (150, "Threat hunting", "hunt hypotheses"),
+            (280, "Vulnerability management", "known exploitation first")]
+    right = [(20, "Incident response", "actor context on request"),
+             (150, "Tactical triage", "indicators with expiry"),
+             (280, "GOVERN", "quarterly threat briefing")]
+    for y, a, b in left:
+        s.box(20, y, 220, 62, a, b)
+        s.path(f"M278,200 L258,200 L258,{y + 31} L242,{y + 31}", stroke=t["eu"], marker="arr-eu")
+    for y, a, b in right:
+        s.box(520, y, 220, 62, a, b)
+        s.path(f"M482,200 L502,200 L502,{y + 31} L518,{y + 31}", stroke=t["eu"], marker="arr-eu")
+    s.text(380, 262, "Standing, ticketed workflows", 13, t["soft"], 600, "middle")
+    s.text(380, 376, "Every consumer reports back what it used and what was noise; without that, CTI cannot improve.",
+           12, t["soft"], 400, "middle")
+    return s
+
+
+# ------------------------------------------------------- log source priority
+LOG_SOURCES = [("Identity", "directory, IdP, privileged actions"),
+               ("Endpoint", "EDR: process and lateral movement"),
+               ("Email and web", "the dominant ways in"),
+               ("Cloud control plane", "IaaS and SaaS audit logs"),
+               ("Network", "firewall, DNS, VPN, flows, NDR"),
+               ("Critical applications", "crown-jewel specific")]
+
+
+def log_priority(t):
+    s = Svg(760, 350, "Log source onboarding priority",
+            "Onboard log sources in this order: identity, endpoint, email and web, cloud control plane, network, "
+            "then critical applications. The first three are the DETECT Level 2 minimum. Network moves up the list "
+            "the more unmanaged devices and flat legacy segments you have.", t)
+    top, rh = 30, 50
+    for i, (name, sub) in enumerate(LOG_SOURCES):
+        y = top + i * rh
+        w = 360 - i * 26
+        fill = t["eu"] if i < 3 else t["eu_soft"]
+        ink = t["on_eu"] if i < 3 else t["ink"]
+        s.rect(150, y, w, rh - 10, fill, None if i < 3 else t["eu"], rx=5)
+        s.text(166, y + 26, f"{i + 1}. {name}", 14, ink, 700)
+        s.text(150 + w + 12, y + 25, sub, 13, t["soft"])
+    s.add(f'<path d="M136,{top} L128,{top} L128,{top + 3 * rh - 10} L136,{top + 3 * rh - 10}" fill="none" '
+          f'stroke="{t["accent"]}" stroke-width="2"/>')
+    s.text(118, top + 58, "Level 2", 13, t["accent"], 700, "end")
+    s.text(118, top + 76, "minimum", 13, t["accent"], 700, "end")
+    y = top + 6 * rh + 12
+    s.text(150, y, "Network climbs the list the more unmanaged devices and flat segments you have.", 12, t["soft"])
+    return s
+
+
 DIAGRAMS = {
     "respond-incident-flow": incident_flow,
     "tiers-capability-map": tier_map,
@@ -662,6 +784,10 @@ DIAGRAMS = {
     "ai-use-ratings": ai_ratings,
     "maturity-levels": maturity_levels,
     "dac-pipeline": dac_pipeline,
+    "tuning-loop": tuning_loop,
+    "triage-outcomes": triage_outcomes,
+    "cti-interfaces": cti_interfaces,
+    "detect-log-priority": log_priority,
 }
 
 

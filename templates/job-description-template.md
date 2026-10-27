@@ -2,7 +2,7 @@
 
 > Fill from the ENISA ECSF Role Profiles document: pick the primary profile, copy/adapt its mission and tasks, add your specifics. Delete guidance quotes before publishing. Mapping guidance: [Roles & competences](../docs/roles-and-competences.md).
 
-## [Job title] — [team/CDC name]
+## [Job title], [team or CDC name]
 
 | Field | Value |
 |-------|-------|

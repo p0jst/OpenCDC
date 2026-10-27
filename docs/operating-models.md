@@ -6,7 +6,7 @@
 
 ## The three archetypes
 
-### Model A — provider-operated, "telemetry out, alerts or actions in"
+### Model A: provider-operated, "telemetry out, alerts or actions in"
 Your telemetry, covering identity, endpoint, network and cloud, is forwarded to a provider who runs 24/7/365 triage. You retain a small internal function, often 1–3 FTE, for governance, escalation reception, and response coordination. Providers come in three shapes, and the difference matters more than the label:
 
 - **MSSP, monitoring only:** the provider watches your SIEM or its own, and alerts you on qualified incidents. Every containment action is yours.
@@ -26,7 +26,7 @@ Whichever shape, write the provider's containment mandate into the [containment 
 
 **Fits:** SMEs and important entities without security hiring power; organisations needing 24/7 *now*.
 
-### Model B — In-house tiered SOC, Tier 1 → 2 → 3
+### Model B: in-house tiered SOC, Tier 1 → 2 → 3
 The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires 8–12 FTE for the shift line with daytime capacity on top, and that still means one analyst alone at night; see [staffing and cost](#staffing-and-cost-the-arithmetic).
 
 | Pros | Cons |
@@ -39,7 +39,7 @@ The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier
 
 **Fits:** large/essential entities, high-confidentiality sectors, organisations at Level 3+ ambitions with hiring power.
 
-### Model C — In-house capability-based, "tierless"
+### Model C: in-house capability-based, "tierless"
 No tiers: analysts own alerts end-to-end, from detect through investigate to contain, organised by *capability*, meaning detection engineering, hunting and response, rather than seniority layers. Automation replaces the Tier 1 filter: enrichment, deduplication and routine closure scripted from the start, with a dedicated SOAR platform only once alert volume justifies one. Often run 8×5 plus on-call, or follow-the-sun in multinationals.
 
 | Pros | Cons |
@@ -111,7 +111,8 @@ A *seat* is one analyst at the console at any given moment. Covering one seat ar
 [![Why one 24/7 seat takes about 5.6 people: one person's 1,924 contract hours minus leave, holidays, sickness and training leave 1,576 hours; 8,760 hours of cover divided by 1,576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-light.svg#gh-light-mode-only)](../assets/diagrams/operating-model-staffing-light.svg)
 [![Why one 24/7 seat takes about 5.6 people: one person's 1,924 contract hours minus leave, holidays, sickness and training leave 1,576 hours; 8,760 hours of cover divided by 1,576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-dark.svg#gh-dark-mode-only)](../assets/diagrams/operating-model-staffing-dark.svg)
 
-The calculation, to redo with your own numbers:
+<details markdown>
+<summary>The calculation, to redo with your own numbers</summary>
 
 | Step | Formula | Example, Danish full-time contract |
 |------|---------|------------------------------------|
@@ -123,6 +124,8 @@ The calculation, to redo with your own numbers:
 | minus training and exercises | your training plan | 5 days: −37 h |
 | **Available hours per FTE** | | **≈ 1,576 h** |
 | **FTE per 24/7 seat** | 8,760 ÷ available hours | **≈ 5.6** |
+
+</details>
 
 Replace every number in the example column with your own. With six weeks of leave, or a higher absence rate, the answer moves towards 6. It never gets close to the "four or five people on a rota" that 24/7 plans often assume.
 
@@ -148,7 +151,10 @@ That is where the framework's 8–12 FTE for a 24/7 in-house line comes from. A 
 - a welfare check-in and a clear rule for when to wake the on-call lead, so the analyst is never deciding alone whether something is serious enough
 - or an A+C hybrid, where a provider with several analysts on shift holds the night and your team holds the day
 
-The same method explains the 3–4 people for business hours with on-call quoted in DETECT:
+The same method explains the 3–4 people for business hours with on-call quoted in DETECT.
+
+<details markdown>
+<summary>Business hours with on-call, seat by seat</summary>
 
 | Line | Hours per year | FTE, using 1,576 h |
 |------|----------------|--------------------|
@@ -156,6 +162,8 @@ The same method explains the 3–4 people for business hours with on-call quoted
 | Detection engineering and improvement work | — | 1 |
 | Lead, often combined with an analyst role | — | 0.5–1 |
 | **Total** | | **≈ 3–4** |
+
+</details>
 
 With fewer than four people on the on-call rota, each person is on call more than one week in four, which is hard to sustain for long; that, not the daytime seat, is usually what sets the minimum.
 
@@ -179,6 +187,9 @@ Build the cost from lines you can each defend separately. A single "SOC budget" 
 
 Operating models are three-year decisions, so compare them over three years, not one. Year one carries the build cost; for an in-house line it can take 12–24 months to reach full strength, and you pay for an MSSP or overtime in the meantime.
 
+<details markdown>
+<summary>A blank three-year comparison to fill in</summary>
+
 | Cost line | Model A: MSSP | Model B: tiered in-house | Model C: capability-based | A+C hybrid |
 |-----------|---------------|--------------------------|---------------------------|------------|
 | People | | | | |
@@ -190,6 +201,8 @@ Operating models are three-year decisions, so compare them over three years, not
 | One-off build and onboarding | | | | |
 | Exit or transition cost at year 3 | | | | |
 | **Total, years 1–3** | | | | |
+
+</details>
 
 Fill in all four columns even when the answer looks obvious. The comparison is what convinces a board, and it records why the choice was made when it is reviewed in three years.
 

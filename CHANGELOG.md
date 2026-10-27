@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+- **Four new diagrams.** The alert tuning loop in *Running the CDC*, the triage outcomes in *Designing alert triage*, how CTI feeds the rest of the CDC in the CTI deep dive, and the log-source onboarding order in DETECT, with the Level 2 minimum marked. The triage and CTI tables are folded under their diagrams.
+- **Diagrams on phones.** Diagrams keep a readable width on a phone and scroll sideways, with a hint below each; a tap still opens the full drawing.
+- **Shorter long pages.** RESPOND and *Choosing your operating model* fold their reference tables: the statutory reporting table, the staffing calculation, the business-hours line and the blank three-year comparison. Nothing is removed.
+- **Headings without dashes.** The remaining headings that used a dash for a subtitle, in the CIA triad, the operating models, the design navigator, the regulatory landscape and two templates, now use a colon. Links to them are unchanged.
+- **Corrected:** RESPOND's *Counsel and insurance* announced two traps and listed three.
+- **README rewritten for GitHub readers.** Shorter, and organised around what someone arriving at the repository needs: what OCDF is, where to start by role, the seven steps, what each folder holds, the three browser tools, scope and limits, how to build the site locally, and how to cite it. The long document tables are replaced by a link to the reading-order index.
+- **New: [SECURITY.md](SECURITY.md)**, saying how to report a security problem privately instead of in a public issue.
+- **Website platform plan.** PUBLISHING.md sets out how the site moves from Material for MkDocs, supported until May 2027, to its successor Zensical.
+
 ## v1.3.0 — 2026-10-27
 
 A minor release. It rewords one maturity criterion, so read **Scoring changes** below before comparing an IDENTIFY score with one made under v1.2.0. It also fixes a script-injection flaw in the maturity tool's file import, pins the website build, builds vulnerability handling around exploitation speed, straightens the path through the framework, updates the references and adds what recent SANS research changes, and records the end-to-end check of links, annexes and tools.

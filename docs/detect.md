@@ -22,6 +22,9 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>The author's ordering by detection value.</p>
 
+[![Log sources in onboarding order: identity, endpoint, email and web, cloud control plane, network and critical applications, with the first three marked as the DETECT Level 2 minimum](../assets/diagrams/detect-log-priority-light.svg#gh-light-mode-only)](../assets/diagrams/detect-log-priority-light.svg)
+[![Log sources in onboarding order: identity, endpoint, email and web, cloud control plane, network and critical applications, with the first three marked as the DETECT Level 2 minimum](../assets/diagrams/detect-log-priority-dark.svg#gh-dark-mode-only)](../assets/diagrams/detect-log-priority-dark.svg)
+
 1. **Identity** — directory and IdP authentication, privileged actions; the highest detection value per gigabyte.
 2. **Endpoint**, meaning EDR telemetry, for process, persistence and lateral-movement visibility.
 3. **Email & web gateway** — dominant initial access vectors.

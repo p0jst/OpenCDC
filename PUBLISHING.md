@@ -27,8 +27,18 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 2. **Re-verify the flagged annexes** — the index still marks nine as pending or needing verification, FR, IE, LU, ES, PL and NL among them. National transposition of NIS2 is still moving, so this is recurring work rather than a one-off.
 3. Announce on community channels before broadcast channels.
 
+## Website platform: Material for MkDocs end of life
+
+Material for MkDocs is in maintenance: its own build notice says critical fixes and security updates continue until 5 May 2027, and names Zensical, from the same team, as the successor. MkDocs 2.0 is announced as incompatible with every current theme and plugin. The site is protected from it for now, because `mkdocs-material` requires `mkdocs<2` and both build packages are pinned in `requirements-site.txt`.
+
+Plan, to finish before May 2027:
+
+1. **Test build on a branch, early 2027.** Install Zensical, build from the existing `mkdocs.yml`, and compare with the current site: page count, `tools/check_consistency.py`, a link check, and screenshots of the home page, one function page and one tool page at desktop and phone width.
+2. **Check the three things this site depends on.** The redirects for old addresses, now from `mkdocs-redirects`; the template override in `overrides/main.html` for link previews; and `site/extra.css`, which relies on Material's HTML structure. If Zensical does not yet handle redirects, `site/build_site.py` can write the redirect pages itself.
+3. **Switch the workflow** once the test build matches, and record it in the changelog. Keep `mkdocs.yml` rather than converting to Zensical's own format until that format is stable.
+
 ## Cutting a release
-1. Update the version in six places: the README badge, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, on the landing page `site/index.md` both the eyebrow line and the version line in the footer box, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
+1. Update the version in seven places: the README badge and its citation line, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, on the landing page `site/index.md` both the eyebrow line and the version line in the footer box, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
 2. Push to `main`; confirm the Pages workflow deployed and the site is live.
 3. Create the release on GitHub, tag `vX.Y.Z` targeting `main`, and paste the notes. Keep the status-and-limitations section; it is what stops a reader treating the regulatory content as audited.
 
