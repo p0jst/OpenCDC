@@ -7,17 +7,15 @@ hide:
 
 <div class="ocdf-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>v1.3.0</span> · <span>Open source, CC BY 4.0</span> · <span>Built for the EU</span></p>
+<p class="ocdf-eyebrow"><span>Written for NIS2, DORA and GDPR</span> · <span>All 27 EU member states</span></p>
 
 # Build and mature your cyber defence
 
 <p class="ocdf-lead" markdown>
-**A free framework for the people who detect and respond to cyber attacks in
-European organisations.** That might be a 24/7 Cyber Defence Center, or two
-people in IT who also look after security. The standards describe what good
-security covers, and NIS2 says what you are obliged to do. Neither tells you
-how to set up and run the team that does the work. That is what this framework
-is for. [Is this for me?](#is-this-for-me)
+A free framework for the people who detect and respond to cyber attacks, from
+a 24/7 Cyber Defence Center to two people in IT. Standards say what security
+covers and NIS2 says what you must do. Neither says how to set up and run the
+team that does the work. OCDF does.
 </p>
 
 <div class="ocdf-cta" markdown>
@@ -26,27 +24,18 @@ is for. [Is this for me?](#is-this-for-me)
 </div>
 
 <ul class="ocdf-assure">
-<li>No account</li>
-<li>Tools run in your browser</li>
-<li>Plain documents you own</li>
+<li>Free to use and adapt, also commercially</li>
+<li>No account; tools run in your browser</li>
+<li>Vendor-neutral</li>
 </ul>
-
-<div class="ocdf-stats" markdown>
-<div markdown><b>6</b><span>CSF functions</span></div>
-<div markdown><b>4</b><span>Maturity levels</span></div>
-<div markdown><b>27</b><span>National annexes</span></div>
-<div markdown><b>3</b><span>Browser tools</span></div>
-</div>
 
 </div>
 
 ## Is this for me?
 
-Probably, if part of your job is noticing attacks and dealing with them. The
-framework calls that work a *CDC*, whatever your team is called and however
-small it is. Every capability is marked with the smallest
-[tier](docs/tiers.md) it belongs to, so a team of two can see what matters now
-and what can wait.
+Yes, if part of your job is noticing attacks and dealing with them, whatever
+your team is called. Every capability is marked with the smallest
+[tier](docs/tiers.md) it belongs to, so a team of two sees what matters now.
 
 <div class="grid cards ocdf-roles" markdown>
 
@@ -54,8 +43,8 @@ and what can wait.
 
     ---
 
-    One to three people, and security is only part of the job. Start with what
-    to buy rather than build, and the four things nobody can do for you.
+    One to three people with other duties. What to buy rather than build, and
+    the four things nobody can do for you.
 
     [Start small →](docs/tiers.md#if-you-are-the-whole-security-function)
 
@@ -63,8 +52,8 @@ and what can wait.
 
     ---
 
-    Thirty minutes on what a CDC is for, what NIS2 expects of management, what
-    it costs, and what to ask the people running it.
+    Thirty minutes on what a CDC is for, what NIS2 expects of management, and
+    what it costs.
 
     [Executive guide →](docs/executive-guide.md)
 
@@ -72,8 +61,7 @@ and what can wait.
 
     ---
 
-    You have a mandate and a budget, or soon will. Seven steps take you from a
-    signed charter to a team with a working routine.
+    Seven steps from a signed charter to a team with a working routine.
 
     [Start building →](#start-building)
 
@@ -81,8 +69,8 @@ and what can wait.
 
     ---
 
-    Score what you have against the maturity criteria, reusing any SOC-CMM,
-    SIM3 or CIS assessment, and turn the gaps into a plan.
+    Score what you have, reusing any SOC-CMM, SIM3 or CIS assessment, and turn
+    the gaps into a plan.
 
     [Maturity self-assessment →](tools/maturity-assessment.html)
 
@@ -101,8 +89,8 @@ and what can wait.
 
     ---
 
-    Which of NIS2, GDPR, DORA, CRA and CER apply to you, what they ask of a
-    CDC, and the national rules in all 27 member states.
+    Which EU laws apply to you, what they ask of a CDC, and the national rules
+    in all 27 member states.
 
     [EU regulatory landscape →](docs/eu-regulatory-landscape.md)
 
@@ -136,37 +124,27 @@ and what can wait.
 
 <p class="m-lenses" markdown>
 Each capability is also read through the [**CIA triad**](docs/cia-triad.md)
-and the [**regulatory layer**](docs/eu-regulatory-landscape.md): NIS2, GDPR,
-DORA, CRA, CER and the national rules of all 27 member states. People and
-process come before technology in every build sequence.
+and the [**regulatory layer**](docs/eu-regulatory-landscape.md). Level 2 in
+every function covers what NIS2 requires, as the
+[NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) shows.
 </p>
 
 </div>
 
-Every function page has the same parts: capabilities with IDs like `DE-2`,
-maturity criteria, the EU rules that apply, and the other departments it
-depends on. Reaching Level 2 in every function also covers what NIS2 requires,
-as the [NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) shows. If
-the terms are new, [OCDF on one page](docs/one-page.md) explains them in five
-minutes.
-
 ## Start building
 
-Seven steps, from deciding how much of the framework you need to the routine
-that keeps the work going. Each one leaves you with a document you keep: a
-signed charter, a scored baseline, a plan with names and dates on it. They go
-into your own document system and governance process, and none of them depends
-on this website.
+Each step leaves you with a document you keep: a signed charter, a scored
+baseline, a plan with names and dates.
 
 <div class="ocdf-path" markdown>
 
 <p class="ocdf-phase">Design</p>
 
-1.  **Choose your tier.** Essential, Standard or Advanced decides how much of the
+1.  **Choose your tier.** Essential, Standard or Advanced: how much of the
     framework applies to you. [Implementation tiers](docs/tiers.md)
     <span class="ocdf-output">Output: target tier</span>
-2.  **Run the design workshops.** Six workshops, one per function, surface your
-    gaps and the decisions nobody has taken yet. [Design navigator](assessments/cdc-design-navigator.md)
+2.  **Run the design workshops.** One per function, to surface gaps and
+    decisions nobody has taken. [Design navigator](assessments/cdc-design-navigator.md)
     <span class="ocdf-output">Output: design gaps logged as backlog items</span>
 3.  **Adopt the charter.** Mandate, scope and containment authority, signed
     before anything is bought. [CDC charter](templates/cdc-charter-template.md)
@@ -188,7 +166,7 @@ on this website.
 <p class="ocdf-phase">Run</p>
 
 7.  **Set the operating rhythm.** The recurring work that keeps a CDC from
-    decaying, and a detection portfolio that grows from your threat profile.
+    decaying, and detections that grow from your threat profile.
     [Annual calendar](templates/annual-calendar-template.md) ·
     [Detection use case](templates/detection-use-case-template.md)
     <span class="ocdf-output">Output: annual calendar and a growing detection portfolio</span>
@@ -197,10 +175,9 @@ on this website.
 
 ## See it worked through
 
-Exempla Parcel is invented, but its starting point is common: 2,500
-employees, sorting that runs all night, four people in IT security and no SOC.
-The [worked example](docs/worked-example.md) takes it through the seven steps,
-from the tier decision to its first board report.
+An invented company with a common starting point: four people in IT security,
+no SOC, and operations that run all night. The worked example takes it
+through the seven steps to its first board report.
 
 <div class="ocdf-case" markdown>
 
@@ -251,27 +228,16 @@ from the tier decision to its first board report.
 
 [Read the worked example →](docs/worked-example.md){ .md-button }
 
-The [templates](templates/README.md) are plain documents to copy and change.
-The three [browser tools](tools/README.md) run entirely in your browser, and
-nothing you type into them is sent anywhere. Everything is on
-[GitHub](https://github.com/p0jst/OpenCDC) under CC BY 4.0, or as a
-[zip download](https://github.com/p0jst/OpenCDC/archive/refs/heads/main.zip).
-
 <div class="ocdf-meta" markdown>
 
-**Version 1.3.0**, released 27 October 2026. See the [changelog](CHANGELOG.md).
-Written and maintained by Frederik B. Krogsgaard, formerly Senior Manager at
-the Norlys Cyber Defence Center, as an independent personal project. Each
-national annex says when it was last reviewed and how confident that review
-is, and [why trust this framework](docs/trust.md) sets out what you can and
-cannot rely on.
+**Version 1.3.0**, released 27 October 2026 · [Changelog](CHANGELOG.md) ·
+[Source on GitHub](https://github.com/p0jst/OpenCDC).
+Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber
+Defence Center, as an independent project.
+[Why trust this framework](docs/trust.md) says what you can and cannot rely on.
 
-**Scope: enterprise IT.** Endpoints, servers, identity, cloud and SaaS, with
-limited cloud-specific depth so far. It is not designed for OT/ICS, telco core
-networks or classified environments, and [About](ABOUT.md) explains why. If you
-run critical infrastructure, see
-[what still applies](ABOUT.md#if-you-run-critical-infrastructure) and
-[the IT/OT interface](docs/it-ot-interface.md). Orientation only, not legal
-advice.
+**Scope: enterprise IT.** Not designed for OT/ICS, telco core networks or
+classified environments; see [About](ABOUT.md) and
+[the IT/OT interface](docs/it-ot-interface.md).
 
 </div>

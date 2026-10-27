@@ -38,7 +38,7 @@ Plan, to finish before May 2027:
 3. **Switch the workflow** once the test build matches, and record it in the changelog. Keep `mkdocs.yml` rather than converting to Zensical's own format until that format is stable.
 
 ## Cutting a release
-1. Update the version in seven places: the README badge and its citation line, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, on the landing page `site/index.md` both the eyebrow line and the version line in the footer box, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
+1. Update the version in six places: the README badge and its citation line, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, the version line in the footer box of the landing page `site/index.md`, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
 2. Push to `main`; confirm the Pages workflow deployed and the site is live.
 3. Create the release on GitHub, tag `vX.Y.Z` targeting `main`, and paste the notes. Keep the status-and-limitations section; it is what stops a reader treating the regulatory content as audited.
 

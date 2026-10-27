@@ -123,7 +123,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/p0jst/OpenCDC
 copyright: >-
-  Open CDC Framework · CC BY 4.0 · Not legal advice — verify regulatory
+  Open CDC Framework · CC BY 4.0 · Not legal advice: verify regulatory
   references against EUR-Lex and national law.
 
 nav:
