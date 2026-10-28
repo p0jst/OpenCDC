@@ -140,36 +140,19 @@ baseline, a plan with names and dates.
 
 <p class="ocdf-phase">Design</p>
 
-1.  **Choose your tier.** Essential, Standard or Advanced: how much of the
-    framework applies to you. [Implementation tiers](docs/tiers.md)
-    <span class="ocdf-output">Output: target tier</span>
-2.  **Run the design workshops.** One per function, to surface gaps and
-    decisions nobody has taken. [Design navigator](assessments/cdc-design-navigator.md)
-    <span class="ocdf-output">Output: design gaps logged as backlog items</span>
-3.  **Adopt the charter.** Mandate, scope and containment authority, signed
-    before anything is bought. [CDC charter](templates/cdc-charter-template.md)
-    <span class="ocdf-output">Output: signed charter</span>
-4.  **Decide the operating model.** In-house, provider or hybrid, with the
-    staffing arithmetic and a cost template. [Operating models](docs/operating-models.md)
-    <span class="ocdf-output">Output: target operating model and staffing numbers</span>
+1.  [**Choose your tier**](docs/tiers.md): how much of the framework applies to you.
+2.  [**Run the design workshops**](assessments/cdc-design-navigator.md): one per function, to find the gaps.
+3.  [**Adopt the charter**](templates/cdc-charter-template.md): mandate and containment authority, signed first.
+4.  [**Decide the operating model**](docs/operating-models.md): in-house, provider or hybrid, with the staffing numbers.
 
 <p class="ocdf-phase">Build</p>
 
-5.  **Work the first 90 days.** Steps 2 to 4 are its first weeks; then come
-    crown jewels, blast-radius controls, priority log sources and an incident
-    plan with a reporting drill. [Start here](docs/start-here.md)
-    <span class="ocdf-output">Output: day-90 exit criteria met</span>
-6.  **Assess where you are.** At day 90, score the maturity criteria and give
-    every gap an owner and a due date. [Maturity self-assessment](tools/maturity-assessment.html)
-    <span class="ocdf-output">Output: scored baseline with evidence, and an action plan with owners</span>
+5.  [**Work the first 90 days**](docs/start-here.md): steps 2 to 4 are its first weeks.
+6.  [**Assess where you are**](tools/maturity-assessment.html): at day 90, with an owner and a date on every gap.
 
 <p class="ocdf-phase">Run</p>
 
-7.  **Set the operating rhythm.** The recurring work that keeps a CDC from
-    decaying, and detections that grow from your threat profile.
-    [Annual calendar](templates/annual-calendar-template.md) ·
-    [Detection use case](templates/detection-use-case-template.md)
-    <span class="ocdf-output">Output: annual calendar and a growing detection portfolio</span>
+7.  [**Set the operating rhythm**](templates/annual-calendar-template.md): the recurring work that keeps a CDC from decaying.
 
 </div>
 
