@@ -773,6 +773,52 @@ def log_priority(t):
     return s
 
 
+# ------------------------------------------------------- README: at a glance
+def at_a_glance(t):
+    s = Svg(760, 420, "OCDF at a glance",
+            "Every capability is described three ways: what, in six functions; how much, by tier Essential, "
+            "Standard or Advanced; and how well, on maturity levels 1 to 4. GOVERN spans the other five functions, "
+            "IDENTIFY, PROTECT, DETECT, RESPOND and RECOVER, and lessons from RECOVER feed IDENTIFY. Underneath "
+            "sits the regulatory layer: NIS2, DORA, GDPR, CRA, CER and the AI Act, with annexes for all 27 EU "
+            "member states.", t)
+    dims = [("WHAT", "6 functions", "cover all six"), ("HOW MUCH", "3 tiers: E · S · A", "you choose"),
+            ("HOW WELL", "4 maturity levels", "scored with evidence")]
+    for i, (k, v, sub) in enumerate(dims):
+        x = 20 + i * 247
+        s.rect(x, 20, 226, 74, t["card"], t["line"])
+        s.text(x + 113, 42, k, 11, t["accent"], 700, "middle")
+        s.text(x + 113, 64, v, 16, t["ink"], 700, "middle")
+        s.text(x + 113, 83, sub, 12, t["soft"], 400, "middle")
+    s.rect(20, 118, 720, 44, t["fn"]["GOVERN"], rx=6)
+    s.text(380, 145, "GOVERN  ·  mandate, risk, roles, budget, oversight", 14, t["on_eu"], 700, "middle")
+    fns = [("IDENTIFY", "what we defend"), ("PROTECT", "reduce the blast radius"), ("DETECT", "find it fast"),
+           ("RESPOND", "contain and report"), ("RECOVER", "restore and learn")]
+    w, gap = 130, 17.5
+    for i, (name, sub) in enumerate(fns):
+        x = 20 + i * (w + gap)
+        col = t["fn"][name]
+        s.rect(x, 186, w, 70, t["card"], col, sw=2)
+        s.rect(x, 186, w, 6, col, rx=2)
+        s.text(x + w / 2, 218, name, 13, col, 700, "middle")
+        s.text(x + w / 2, 238, sub, 11, t["soft"], 400, "middle")
+        s.add(f'<line x1="{x + w / 2}" y1="162" x2="{x + w / 2}" y2="186" stroke="{t["line"]}" stroke-width="1.5"/>')
+        if i:
+            s.path(f"M{x - gap + 2},221 L{x - 3},221")
+    s.path(f"M{20 + 4 * (w + gap) + w / 2},256 L{20 + 4 * (w + gap) + w / 2},282 L{20 + w / 2},282 L{20 + w / 2},259",
+           dash="4 4")
+    s.text(380, 298, "lessons learned feed the next round", 12, t["soft"], 400, "middle")
+    s.rect(20, 322, 720, 78, t["eu_soft"], t["eu"])
+    s.text(380, 346, "REGULATORY LAYER", 11, t["eu"], 700, "middle")
+    laws = ["NIS2", "DORA", "GDPR", "CRA", "CER", "AI Act", "27 national annexes"]
+    widths = [56, 58, 58, 48, 48, 66, 170]
+    x = 380 - (sum(widths) + 8 * (len(widths) - 1)) / 2
+    for law, lw in zip(laws, widths):
+        s.add(f'<rect x="{x}" y="358" width="{lw}" height="28" rx="14" fill="{t["eu"]}"/>')
+        s.text(x + lw / 2, 377, law, 13, t["on_eu"], 700, "middle")
+        x += lw + 8
+    return s
+
+
 DIAGRAMS = {
     "respond-incident-flow": incident_flow,
     "tiers-capability-map": tier_map,
@@ -788,6 +834,7 @@ DIAGRAMS = {
     "triage-outcomes": triage_outcomes,
     "cti-interfaces": cti_interfaces,
     "detect-log-priority": log_priority,
+    "readme-at-a-glance": at_a_glance,
 }
 
 
