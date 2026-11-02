@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.4.0 — 2026-11-02
+
+A presentation release: no maturity criterion changes, so assessments made under v1.3.0 compare directly. It adds five diagrams, makes diagrams usable on phones, shortens the landing page and the longest pages, rebuilds the README and adds a security policy.
+
+- **Four new diagrams.** The alert tuning loop in *Running the CDC*, the triage outcomes in *Designing alert triage*, how CTI feeds the rest of the CDC in the CTI deep dive, and the log-source onboarding order in DETECT, with the Level 2 minimum marked. The triage and CTI tables are folded under their diagrams.
+- **Diagrams on phones.** Diagrams keep a readable width on a phone and scroll sideways, with a hint below each; a tap still opens the full drawing.
+- **Shorter long pages.** RESPOND and *Choosing your operating model* fold their reference tables: the statutory reporting table, the staffing calculation, the business-hours line and the blank three-year comparison. Nothing is removed.
+- **Headings without dashes.** The remaining headings that used a dash for a subtitle, in the CIA triad, the operating models, the design navigator, the regulatory landscape and two templates, now use a colon. Links to them are unchanged.
+- **Corrected:** RESPOND's *Counsel and insurance* announced two traps and listed three.
+- **A sharper landing page.** The line above the title now says what makes OCDF European: written for NIS2, DORA and GDPR, for all 27 member states. The version number moves to the footer, where it already stood, and "CC BY 4.0" is explained as free to use and adapt, also commercially. The row of counts is gone, since the picture below shows the same things. Repeated text is cut: the CDC definition, the links to *OCDF on one page*, and the paragraph on templates and tools. The seven steps are one line each, the step title linking to its page, where the output is described. The page is about a third shorter.
+- **README rebuilt as the repository's front page.** A centred header with the one-line pitch, what makes OCDF European, and links to the website, the start points and the tools. An *at a glance* diagram, in light and dark, shows the three dimensions, the six functions and the regulatory layer. The seven steps are a table of what each leaves you with, and the three browser tools are shown as screenshots that open the live tool. Repository layout and the local build fold away. Tool links now go to the website, since GitHub shows an HTML file as source code.
+- **New: [SECURITY.md](SECURITY.md)**, saying how to report a security problem privately instead of in a public issue.
+- **Website platform plan.** PUBLISHING.md sets out how the site moves from Material for MkDocs, supported until May 2027, to its successor Zensical.
+
 ## v1.3.0 — 2026-10-27
 
 A minor release. It rewords one maturity criterion, so read **Scoring changes** below before comparing an IDENTIFY score with one made under v1.2.0. It also fixes a script-injection flaw in the maturity tool's file import, pins the website build, builds vulnerability handling around exploitation speed, straightens the path through the framework, updates the references and adds what recent SANS research changes, and records the end-to-end check of links, annexes and tools.

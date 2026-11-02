@@ -98,8 +98,8 @@ so they are decisions to *execute*, not decisions to *have*.
 
 ### Counsel and insurance
 
-Involve legal counsel when an incident looks *material*, not when it looks *notifiable*. Two
-practical traps, both hard to fix retrospectively:
+Involve legal counsel when an incident looks *material*, not when it looks *notifiable*. Three
+practical traps, all hard to fix retrospectively:
 
 - **Insurance conditions bind early.** Cyber policies commonly require notification within a short
   window and mandate pre-approved DFIR, negotiation and legal panels. Bringing in your own responder
@@ -127,6 +127,9 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 [![EU reporting clocks after an incident: NIS2, GDPR, DORA and CER deadlines from awareness, from without undue delay through 4 hours, 24 hours and 72 hours to one month](../assets/diagrams/respond-reporting-clocks-light.svg#gh-light-mode-only)](../assets/diagrams/respond-reporting-clocks-light.svg)
 [![EU reporting clocks after an incident: NIS2, GDPR, DORA and CER deadlines from awareness, from without undue delay through 4 hours, 24 hours and 72 hours to one month](../assets/diagrams/respond-reporting-clocks-dark.svg#gh-dark-mode-only)](../assets/diagrams/respond-reporting-clocks-dark.svg)
 
+<details markdown>
+<summary>The reporting duties as a table, with triggers and recipients</summary>
+
 | Regime | Trigger | Deadline | Recipient |
 |--------|---------|----------|-----------|
 | **NIS2 Art. 23** | Significant incident | **Early warning ≤ 24 h**; incident notification ≤ 72 h; final report ≤ 1 month | National CSIRT / competent authority |
@@ -135,6 +138,8 @@ the CDC keeps working the incident. Identify one alongside the DFIR retainer, no
 | **NIS2 Art. 23(1)–(2)** | Significant incident likely to affect the recipients of your services; significant cyber threat | Without undue delay | The affected recipients of your services, with the measures they can take |
 | **DORA Art. 19** | Major ICT-related incident at financial entities | Initial ≤ 4 h from classification / ≤ 24 h from awareness; intermediate ≤ 72 h; final ≤ 1 month | Competent financial authority |
 | **CER Art. 15** | Incident that significantly disrupts, or could significantly disrupt, an essential service of a designated critical entity | Initial notification ≤ 24 h from awareness; detailed report ≤ 1 month | Competent authority under the national CER law |
+
+</details>
 
 **What counts as significant.** Under NIS2 Art. 23(3) an incident is significant if it has caused or can cause severe operational disruption or financial loss to the entity, or considerable material or non-material damage to others. Commission Implementing Regulation (EU) 2024/2690 sets concrete thresholds for digital infrastructure and digital service providers, and many member states publish guidance for other sectors. Write the definition that applies to you into the IR plan's severity classification, so the on-call analyst does not have to interpret the directive at 03:00.
 

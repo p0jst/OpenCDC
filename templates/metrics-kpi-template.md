@@ -2,7 +2,7 @@
 
 > Related capabilities: GV-7, DE-4, RS-*, RC-5. Pick few metrics you will act on over many you will only report. Every metric below lists the decision it should drive. If you wouldn't change anything based on it, don't collect it.
 
-## Governance & coverage — GOVERN and IDENTIFY
+## Governance & coverage: GOVERN and IDENTIFY
 
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
@@ -11,7 +11,7 @@
 | Maturity score trend | OCDF level per function, assessed annually | +1 level on 2 weakest functions/yr | Budget allocation |
 | Training completion | % staff / % management completing role-based training | > 95% | NIS2 Art. 20 evidence; awareness focus |
 
-## Detection — DETECT
+## Detection: DETECT
 
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
@@ -21,7 +21,7 @@
 | False-positive rate | FP / total alerts per use case | Per-UC threshold | Tuning / retirement |
 | Triage SLA adherence | % alerts acknowledged within severity SLA | > 95% | Staffing model |
 
-## Response — RESPOND
+## Response: RESPOND
 
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
@@ -32,7 +32,7 @@
 | Playbook coverage | % of P1/P2 incidents handled with an existing playbook | > 80% | Playbook backlog |
 | Exercise cadence | Exercises held vs. planned, including management participation | 100% | Governance escalation |
 
-## Recovery & learning — RECOVER
+## Recovery & learning: RECOVER
 
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|

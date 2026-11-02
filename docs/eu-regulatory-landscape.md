@@ -6,7 +6,7 @@
 
 ## The core instruments
 
-### NIS2 — Directive (EU) 2022/2555
+### NIS2: Directive (EU) 2022/2555
 The horizontal cybersecurity law for the EU. Transposition deadline was 17 October 2024; several member states transposed late, so check national status.
 
 - **Scope, per Art. 2 and Annexes I–II:** *essential* and *important* entities across 18 sectors, covering energy, transport, health, digital infrastructure, ICT service management, public administration, manufacturing of critical products and more, generally medium-sized and above, with exceptions.
@@ -17,7 +17,7 @@ The horizontal cybersecurity law for the EU. Transposition deadline was 17 Octob
 - **Framework mapping:** every OCDF function document has an "EU regulatory hooks" section referencing the relevant NIS2 articles.
 - **Changes proposed, not yet law:** on 20 January 2026 the Commission proposed targeted NIS2 amendments, COM(2026) 13, on scope, a new small mid-cap category, ransomware reporting and cross-border supervision. Separately, the Digital Omnibus of November 2025, COM(2025) 837, proposes a single entry point at ENISA for incident reports under NIS2, GDPR, DORA, eIDAS and CER. It would also change GDPR breach notification to the authority: only breaches likely to be high risk, within 96 hours instead of 72. As of October 2026 both proposals are still being negotiated. Today's rules apply in full until amendments are adopted and, for NIS2, transposed, so keep the 72-hour GDPR clock and build reporting on today's national channels, not on a single entry point that does not yet exist.
 
-### GDPR — Regulation (EU) 2016/679
+### GDPR: Regulation (EU) 2016/679
 Applies to virtually every CDC because security operations process personal data, logs above all, and security incidents often involve personal data breaches.
 
 - Art. 32 covers security of processing, the legal anchor for "appropriate measures", explicitly including the ability to ensure confidentiality, integrity, availability and resilience. The triad is in the law.
@@ -25,19 +25,19 @@ Applies to virtually every CDC because security operations process personal data
 - Art. 30 covers records of processing, reusable as data inventory input.
 - **The CDC as data processor problem:** security monitoring processes employee personal data. Define legal basis, purpose limitation, retention and access for security telemetry, and involve your DPO when onboarding intrusive log sources such as endpoint telemetry and email content inspection.
 
-### DORA — Regulation (EU) 2022/2554
+### DORA: Regulation (EU) 2022/2554
 Digital operational resilience for the financial sector, applicable since 17 January 2025. Directly applicable regulation, with no transposition. ICT risk management in Art. 5–16, incident classification and reporting in Art. 17–23, resilience testing including threat-led penetration testing or TLPT in Art. 24–27, and ICT third-party risk in Art. 28–44.
 
-### CRA — Cyber Resilience Act, Regulation (EU) 2024/2847
+### CRA: Cyber Resilience Act, Regulation (EU) 2024/2847
 Security requirements for products with digital elements placed on the EU market; main obligations apply from 11 December 2027, and the manufacturers' duty to report actively exploited vulnerabilities and severe incidents has applied since 11 September 2026. CDC relevance: procurement leverage, and manufacturer reporting duties if your organisation ships digital products.
 
-### CER — Directive (EU) 2022/2557
+### CER: Directive (EU) 2022/2557
 Resilience of critical entities, the physical, all-hazards counterpart of NIS2. Relevant for critical infrastructure operators' crisis-management interface.
 
-### AI Act — Regulation (EU) 2024/1689
+### AI Act: Regulation (EU) 2024/1689
 Rules for AI systems placed on the market or used in the EU, amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744. AI literacy under Art. 4 and the prohibited practices under Art. 5 have applied since 2 February 2025; the obligations for high-risk systems listed in Annex III apply from 2 December 2027. CDC relevance: a CDC using AI tools is normally a deployer; emotion recognition in the workplace is prohibited; AI that monitors and evaluates the behaviour of people at work is listed as high-risk, and whether employee behaviour analytics for security falls under that listing is not settled. See [AI in the CDC](ai-in-the-cdc.md#what-the-law-says).
 
-### Cybersecurity Act — Regulation (EU) 2019/881
+### Cybersecurity Act: Regulation (EU) 2019/881
 ENISA's permanent mandate and the EU cybersecurity certification framework, such as EUCC. Relevant for procurement and assurance. A revision, COM(2026) 11, was proposed in January 2026 and is under negotiation.
 
 ## Key institutions for a CDC to know

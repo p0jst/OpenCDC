@@ -8,6 +8,9 @@
 
 Untuned detection rots: alert volume grows, true-positive rate falls, analysts numb out, and the one real alert drowns. Tuning is a workflow with governance, not an occasional cleanup.
 
+[![The weekly alert tuning loop: measure each use case, a verdict on every alert and a reason on every false positive, a weekly tuning review, every change as a reviewed commit, then fire the test again; suppressions carry an owner and an expiry, and rules that never fire are fixed or retired](../assets/diagrams/tuning-loop-light.svg#gh-light-mode-only)](../assets/diagrams/tuning-loop-light.svg)
+[![The weekly alert tuning loop: measure each use case, a verdict on every alert and a reason on every false positive, a weekly tuning review, every change as a reviewed commit, then fire the test again; suppressions carry an owner and an expiry, and rules that never fire are fixed or retired](../assets/diagrams/tuning-loop-dark.svg#gh-dark-mode-only)](../assets/diagrams/tuning-loop-dark.svg)
+
 **The loop, on a weekly cadence:**
 
 1. **Measure per use case:** alerts/week, true-positive rate, time-to-triage. The use-case template's metrics block is the record.

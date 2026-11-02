@@ -55,6 +55,12 @@ The threat profile, capability ID-5, is CTI's anchor product. Structure:
 
 This is where most CTI programmes fail. Build these as standing, ticketed workflows, not hallway conversations:
 
+[![Threat intelligence feeds six consumers through ticketed workflows: detection engineering, threat hunting, vulnerability management, incident response, tactical triage and GOVERN, and every consumer reports back](../assets/diagrams/cti-interfaces-light.svg#gh-light-mode-only)](../assets/diagrams/cti-interfaces-light.svg)
+[![Threat intelligence feeds six consumers through ticketed workflows: detection engineering, threat hunting, vulnerability management, incident response, tactical triage and GOVERN, and every consumer reports back](../assets/diagrams/cti-interfaces-dark.svg#gh-dark-mode-only)](../assets/diagrams/cti-interfaces-dark.svg)
+
+<details markdown>
+<summary>Each interface with its mechanism and cadence</summary>
+
 | Interface | Mechanism | Cadence |
 |-----------|-----------|---------|
 | → Detection engineering | "Detection opportunity" tickets: technique, adversary procedure, log source, suggested logic sketch; engineering triages into the use-case backlog, per [Detection-as-code deep dive](detection-as-code-deep-dive.md). CTI reviews the coverage layer and flags profile techniques stuck at level 0–1. | Weekly |
@@ -63,6 +69,8 @@ This is where most CTI programmes fail. Build these as standing, ticketed workfl
 | → Incident response | Enrichment on demand via RFI, actor context during incidents, and post-incident: every closed P1/P2 gets a CTI debrief on what was learned about the adversary, and what it changes. | Per incident |
 | → Tactical triage | Curated indicators pushed to platforms with context, confidence and expiry; stale indicators are pruned automatically, because indicator sets that only grow become noise generators. | Daily/automated |
 | → GOVERN | Quarterly threat briefing tied to the risk register and the coverage-vs-profile view; annual input to budget framed as top risks versus current capability. | Quarterly |
+
+</details>
 
 The feedback loop is mandatory: every consumer reports back what was used and what was noise. CTI that never hears "that indicator set was garbage" cannot improve.
 

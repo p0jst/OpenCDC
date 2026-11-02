@@ -16,23 +16,23 @@ Confidentiality, Integrity and Availability are the three canonical objectives o
 
 ## Using the triad in practice
 
-### 1. Risk appetite per objective — GOVERN
+### 1. Risk appetite per objective: GOVERN
 Express risk appetite separately per objective and per service, such as: *"Customer PII: zero tolerance for confidentiality loss. Payment ledger: zero tolerance for integrity loss. Public website: up to 4 h availability loss acceptable."* This makes trade-off decisions during incidents fast and defensible.
 
-### 2. Impact classification per asset — IDENTIFY
+### 2. Impact classification per asset: IDENTIFY
 Rate each crown-jewel service C/I/A impact as Low, Moderate or High, following the FIPS 199 approach. This drives:
 
 - log source priority, at DETECT,
 - containment authority, at RESPOND,
 - restoration order and RTO/RPO, at RECOVER.
 
-### 3. Balancing the detection portfolio — DETECT
+### 3. Balancing the detection portfolio: DETECT
 Review your use case inventory by triad objective. A common failure mode is a portfolio dominated by confidentiality-oriented detections while the actual dominant threat, ransomware, is an availability and integrity threat. Your portfolio balance should mirror your threat profile.
 
-### 4. The containment trade-off — RESPOND
+### 4. The containment trade-off: RESPOND
 Containment almost always sacrifices availability to protect confidentiality and integrity, by isolating a production server or disabling accounts. Pre-agreeing who may make that trade, per service tier, is one of the highest-value governance artefacts a CDC can own.
 
-### 5. Integrity before Availability — RECOVER
+### 5. Integrity before Availability: RECOVER
 The cardinal rule of recovery: verify integrity of systems and backups before restoring availability. A fast restore of a compromised image is not recovery; it is re-infection with better uptime.
 
 ### 6. The CDC applies the triad to itself
