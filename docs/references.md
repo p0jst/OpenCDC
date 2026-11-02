@@ -107,7 +107,7 @@ SANS survey and white-paper findings are used as context and data points, not as
 
 ## How to cite this framework
 
-> Open CDC Framework (OCDF), version 1.4.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
+> Open CDC Framework (OCDF), version 1.4.1, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
 
 ## Corrections
 

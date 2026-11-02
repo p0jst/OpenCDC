@@ -196,15 +196,15 @@
 <aside aria-label="Law selection">
   <h2>EU-wide instruments</h2>
   <label class="law"><input type="checkbox" data-toggle="nis2" checked>
-    <span><b>NIS2 <span class="stamp">NIS2</span></b><small>Directive (EU) 2022/2555 — essential &amp; important entities</small></span></label>
+    <span><b>NIS2 <span class="stamp">NIS2</span></b><small>Directive (EU) 2022/2555: essential &amp; important entities</small></span></label>
   <label class="law"><input type="checkbox" data-toggle="gdpr" checked>
-    <span><b>GDPR <span class="stamp">GDPR</span></b><small>Regulation (EU) 2016/679 — applies to virtually all CDCs</small></span></label>
+    <span><b>GDPR <span class="stamp">GDPR</span></b><small>Regulation (EU) 2016/679: applies to virtually all CDCs</small></span></label>
   <label class="law"><input type="checkbox" data-toggle="dora">
-    <span><b>DORA <span class="stamp">DORA</span></b><small>Regulation (EU) 2022/2554 — financial entities</small></span></label>
+    <span><b>DORA <span class="stamp">DORA</span></b><small>Regulation (EU) 2022/2554: financial entities</small></span></label>
   <label class="law"><input type="checkbox" data-toggle="cra">
-    <span><b>Cyber Resilience Act <span class="stamp">CRA</span></b><small>Regulation (EU) 2024/2847 — products with digital elements</small></span></label>
+    <span><b>Cyber Resilience Act <span class="stamp">CRA</span></b><small>Regulation (EU) 2024/2847: products with digital elements</small></span></label>
   <label class="law"><input type="checkbox" data-toggle="cer">
-    <span><b>CER <span class="stamp">CER</span></b><small>Directive (EU) 2022/2557 — critical entities, physical resilience</small></span></label>
+    <span><b>CER <span class="stamp">CER</span></b><small>Directive (EU) 2022/2557: critical entities, physical resilience</small></span></label>
 
   <h2>Member states</h2>
   <p style="font-size:.75rem;color:var(--muted);margin:0 0 6px">Tick your country. Where national acts are mapped individually, they appear underneath so you can pick the ones that apply.</p>
@@ -346,7 +346,7 @@ const COUNTRIES = {
     "laws": [
      "cy-nat"
     ],
-    "regime": "Cyprus — national clocks",
+    "regime": "Cyprus: national clocks",
     "stamp": "CY",
     "trigger": "Significant incident, essential and important entities",
     "deadline": "Early warning ≤ 6 h; notification ≤ 72 h; progress report every 15 days while open; final report ≤ 15 days after restoration",
@@ -375,13 +375,13 @@ const COUNTRIES = {
     "id": "dk-nis2",
     "name": "NIS 2-loven",
     "stamp": "DK·NIS2",
-    "desc": "Lov nr. 434/2025 — horizontal Danish NIS2 act"
+    "desc": "Lov nr. 434/2025: horizontal Danish NIS2 act"
    },
    {
     "id": "dk-energi",
     "name": "Lov om styrket beredskab i energisektoren",
     "stamp": "DK·ENERGI",
-    "desc": "Lov nr. 258/2025 — energy sector, NIS2 + CER combined, five preparedness levels"
+    "desc": "Lov nr. 258/2025: energy sector, NIS2 and CER combined, five preparedness levels"
    },
    {
     "id": "dk-tele",
@@ -399,7 +399,7 @@ const COUNTRIES = {
     "id": "dk-fin",
     "name": "Lov om finansiel virksomhed § 333 ff.",
     "stamp": "DK·FIN",
-    "desc": "Financial sector, aligned with DORA — tick DORA above as well"
+    "desc": "Financial sector, aligned with DORA; tick DORA above as well"
    }
   ],
   "reporting": [
@@ -408,17 +408,17 @@ const COUNTRIES = {
      "dk-nis2",
      "dk-tele"
     ],
-    "regime": "Denmark — national channel",
+    "regime": "Denmark: national channel",
     "stamp": "DK",
     "trigger": "Significant incident, entities under NIS 2-loven or the tele act",
     "deadline": "NIS2 pattern: 24 h / 72 h / 1 month",
-    "recipient": "Via <b>virk.dk</b> — CSIRT function: SAMSIK"
+    "recipient": "Via <b>virk.dk</b>; CSIRT function: SAMSIK"
    },
    {
     "laws": [
      "dk-energi"
     ],
-    "regime": "Denmark — energy sector",
+    "regime": "Denmark: energy sector",
     "stamp": "DK·ENERGI",
     "trigger": "Significant incident, energy-sector entities",
     "deadline": "24 h / 72 h status / 1 month incident report",
