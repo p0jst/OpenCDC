@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## v1.4.0 — 2026-11-02
+
+A presentation release: no maturity criterion changes, so assessments made under v1.3.0 compare directly. It adds five diagrams, makes diagrams usable on phones, shortens the landing page and the longest pages, rebuilds the README and adds a security policy.
 
 - **Four new diagrams.** The alert tuning loop in *Running the CDC*, the triage outcomes in *Designing alert triage*, how CTI feeds the rest of the CDC in the CTI deep dive, and the log-source onboarding order in DETECT, with the Level 2 minimum marked. The triage and CTI tables are folded under their diagrams.
 - **Diagrams on phones.** Diagrams keep a readable width on a phone and scroll sideways, with a hint below each; a tap still opens the full drawing.

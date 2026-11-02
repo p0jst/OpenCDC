@@ -213,7 +213,7 @@ through the seven steps to its first board report.
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.3.0**, released 27 October 2026 · [Changelog](CHANGELOG.md) ·
+**Version 1.4.0**, released 2 November 2026 · [Changelog](CHANGELOG.md) ·
 [Source on GitHub](https://github.com/p0jst/OpenCDC).
 Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber
 Defence Center, as an independent project.
