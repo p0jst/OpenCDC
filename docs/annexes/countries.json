@@ -79,7 +79,7 @@
         "laws": [
           "cy-nat"
         ],
-        "regime": "Cyprus — national clocks",
+        "regime": "Cyprus: national clocks",
         "stamp": "CY",
         "trigger": "Significant incident, essential and important entities",
         "deadline": "Early warning ≤ 6 h; notification ≤ 72 h; progress report every 15 days while open; final report ≤ 15 days after restoration",
@@ -122,13 +122,13 @@
         "id": "dk-nis2",
         "name": "NIS 2-loven",
         "stamp": "DK·NIS2",
-        "desc": "Lov nr. 434/2025 — horizontal Danish NIS2 act"
+        "desc": "Lov nr. 434/2025: horizontal Danish NIS2 act"
       },
       {
         "id": "dk-energi",
         "name": "Lov om styrket beredskab i energisektoren",
         "stamp": "DK·ENERGI",
-        "desc": "Lov nr. 258/2025 — energy sector, NIS2 + CER combined, five preparedness levels"
+        "desc": "Lov nr. 258/2025: energy sector, NIS2 and CER combined, five preparedness levels"
       },
       {
         "id": "dk-tele",
@@ -146,7 +146,7 @@
         "id": "dk-fin",
         "name": "Lov om finansiel virksomhed § 333 ff.",
         "stamp": "DK·FIN",
-        "desc": "Financial sector, aligned with DORA — tick DORA above as well"
+        "desc": "Financial sector, aligned with DORA; tick DORA above as well"
       }
     ],
     "reporting": [
@@ -155,17 +155,17 @@
           "dk-nis2",
           "dk-tele"
         ],
-        "regime": "Denmark — national channel",
+        "regime": "Denmark: national channel",
         "stamp": "DK",
         "trigger": "Significant incident, entities under NIS 2-loven or the tele act",
         "deadline": "NIS2 pattern: 24 h / 72 h / 1 month",
-        "recipient": "Via <b>virk.dk</b> — CSIRT function: SAMSIK"
+        "recipient": "Via <b>virk.dk</b>; CSIRT function: SAMSIK"
       },
       {
         "laws": [
           "dk-energi"
         ],
-        "regime": "Denmark — energy sector",
+        "regime": "Denmark: energy sector",
         "stamp": "DK·ENERGI",
         "trigger": "Significant incident, energy-sector entities",
         "deadline": "24 h / 72 h status / 1 month incident report",
@@ -527,4 +527,4 @@
     "checked_against_legal_text": "No",
     "lawyer_reviewed": "No"
   }
-}
+}

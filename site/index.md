@@ -12,10 +12,10 @@ hide:
 # Build and mature your cyber defence
 
 <p class="ocdf-lead" markdown>
-A free framework for the people who detect and respond to cyber attacks, from
-a 24/7 Cyber Defence Center to two people in IT. Standards say what security
-covers and NIS2 says what you must do. Neither says how to set up and run the
-team that does the work. OCDF does.
+Standards say what security must cover, and NIS2 says who is accountable.
+Neither shows how to build and run the team that detects and responds to
+attacks. This framework shows how, whether you are two people in IT or a large
+enterprise with a 24/7 SOC.
 </p>
 
 <div class="ocdf-cta" markdown>
@@ -213,7 +213,7 @@ through the seven steps to its first board report.
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.4.0**, released 2 November 2026 · [Changelog](CHANGELOG.md) ·
+**Version 1.4.1**, released 2 November 2026 · [Changelog](CHANGELOG.md) ·
 [Source on GitHub](https://github.com/p0jst/OpenCDC).
 Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber
 Defence Center, as an independent project.

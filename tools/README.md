@@ -4,7 +4,7 @@ Three single-file, dependency-free pages that run entirely in the browser, with 
 account, no server and no data leaving the machine. Each works both online and as
 a local file.
 
-## regulatory-profile.html — Tool 01, interactive law selector
+## regulatory-profile.html: Tool 01, interactive law selector
 
 **[▸ Open the Regulatory Profile Selector](regulatory-profile.html)**
 
@@ -56,10 +56,10 @@ Besides the base fields `name`, `status`, `confidence`, `law`, `authority`, `csi
   "name": "Finland", "status": "In force", "law": "…", "authority": "…", "csirt": "…", "link": "…",
   "note": "Optional extra sentence for the country card.",
   "acts": [
-    {"id": "fi-kyber", "name": "Kyberturvallisuuslaki", "stamp": "FI·KYBER", "desc": "Act 124/2025 — horizontal NIS2 act"}
+    {"id": "fi-kyber", "name": "Kyberturvallisuuslaki", "stamp": "FI·KYBER", "desc": "Act 124/2025: horizontal NIS2 act"}
   ],
   "reporting": [
-    {"laws": ["fi-kyber"], "regime": "Finland — national channel", "stamp": "FI",
+    {"laws": ["fi-kyber"], "regime": "Finland: national channel", "stamp": "FI",
      "trigger": "…", "deadline": "…", "recipient": "…"}
   ],
   "hooks": {
@@ -77,7 +77,7 @@ Besides the base fields `name`, `status`, `confidence`, `law`, `authority`, `csi
 - Describe each act in the hand-written part of the country's annex, with its tag
   in the table, as `annex-dk.md` does.
 
-## skill-matrix.html — Tool 02, team skill matrix
+## skill-matrix.html: Tool 02, team skill matrix
 
 **[▸ Open the Team Skill Matrix](skill-matrix.html)**
 
@@ -121,7 +121,7 @@ both the sheet and the tool if you change skill IDs.
   for this project <https://opencdc.org/tools/skill-matrix.html>, and the download
   links to the templates resolve automatically.
 
-## maturity-assessment.html — Tool 03, interactive maturity self-assessment
+## maturity-assessment.html: Tool 03, interactive maturity self-assessment
 
 **[▸ Open the Maturity Self-Assessment](maturity-assessment.html)**
 
@@ -139,9 +139,9 @@ your targets, each of which jumps straight to the criterion. On a phone the
 results sit below the criteria, with a summary bar pinned to the bottom of the
 screen.
 
-- **Five-point status per criterion** — not considered / planned / partially in
-  place / implemented / implemented & evidenced, so work in flight is visible
-  without distorting the score. A toggle switches between counting
+- **Five-point status per criterion.** The states run from not considered through
+  planned, partially in place and implemented to implemented & evidenced, so
+  work in flight is visible without distorting the score. A toggle switches between counting
   "implemented" and the stricter evidence-based reading that counts only
   "implemented & evidenced". See the status scale in
   [`docs/maturity-model.md`](../docs/maturity-model.md).
@@ -166,10 +166,10 @@ screen.
 - **Target profiles** from [`docs/maturity-model.md`](../docs/maturity-model.md)'s
   target-setting table, covering SME, NIS2 important and essential, and critical infrastructure,
   pre-fill a target per function, individually adjustable.
-- **Score chart** — current level vs. target, per function, plus a Result table
+- **Score chart.** Current level vs. target, per function, plus a Result table
   and an Open actions list showing exactly which unmet criteria stand between
   you and your targets.
-- **Resume link** — the full assessment, meaning answers, evidence notes, targets and
+- **Resume link.** The full assessment, meaning answers, evidence notes, targets and
   the header fields, is encoded into the page's URL fragment, so the address bar
   always holds a unique link that restores exactly the current state. Copy it,
   mail it to yourself or paste it into a ticket, and continue later on any

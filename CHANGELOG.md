@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.4.1 — 2026-11-02
+
+A patch release: wording and presentation fixes only, no maturity criterion changes, so assessments made under v1.4.0 compare directly.
+
+- **A clearer opening.** The paragraph under the landing page title now names the gap the framework fills: standards say what security must cover and NIS2 says who is accountable, but neither shows how to build and run the team that detects and responds to attacks. The range reads from two people in IT to a large enterprise with a 24/7 SOC. The site description used by search engines says the same.
+- **Centred section headings.** The four section headings on the landing page, and the line under each, are centred to match the title above them.
+- **Current link preview.** The card shown when opencdc.org is shared still said "4 IR playbooks" and carried the old pitch. It now shows the title, the regulations, the range of teams and the same counts as the GitHub card.
+- **Dashes out of tool text.** The regulatory selector's law descriptions and the national data behind it, such as the Danish and Cypriot reporting channels, use a colon or semicolon instead of a dash, and so do the headings and feature list in the tools README.
+- **Corrected:** PUBLISHING.md listed nine annexes as flagged for re-verification; five are, FR, IE and ES pending, MT and SI needing verification.
+
 ## v1.4.0 — 2026-11-02
 
 A presentation release: no maturity criterion changes, so assessments made under v1.3.0 compare directly. It adds five diagrams, makes diagrams usable on phones, shortens the landing page and the longest pages, rebuilds the README and adds a security policy.
