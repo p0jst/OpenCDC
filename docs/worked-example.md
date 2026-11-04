@@ -1,4 +1,4 @@
-# Worked example: a CDC for a 2,500-person company
+# Worked example: a CDC for a 2500-person company
 
 !!! warning "Fictional"
     Exempla Parcel A/S does not exist. The organisation, people and numbers below
@@ -9,13 +9,37 @@ The rest of the framework says what to do. This page shows what it looks like
 when one organisation does it: the decisions, the documents, and the first
 quarter's results.
 
+<div class="ocdf-example" markdown>
+
+<div class="ocdf-example__before" markdown>
+<p class="ocdf-example__label">Before</p>
+
+- Security spread across four people, with no shared plan
+- No agreement on who may contain what
+- Alerts looked at when someone had time
+- Nobody named for NIS2 reporting
+</div>
+
+<div class="ocdf-example__arrow" aria-hidden="true"></div>
+
+<div class="ocdf-example__after" markdown>
+<p class="ocdf-example__label">After 90 days</p>
+
+- A signed charter with containment authority
+- A daytime team, and a provider for nights
+- A scored baseline and a 90-day plan
+- Maturity targets agreed with the board
+</div>
+
+</div>
+
 ## The organisation
 
 | | |
 |---|---|
 | **Business** | Parcel sorting and delivery, 14 sites in Denmark, sorting runs through the night |
-| **People** | 2,500 employees, of which 4 in IT security today and no SOC |
-| **Estate** | 2,000 laptops and desktops, 300 servers on-premises and in Azure, Microsoft 365 and Entra ID, 1,200 handheld scanners under mobile device management |
+| **People** | 2500 employees, of which 4 in IT security today and no SOC |
+| **Estate** | 2000 laptops and desktops, 300 servers on-premises and in Azure, Microsoft 365 and Entra ID, 1200 handheld scanners under mobile device management |
 | **Out of scope** | The sorting-line control systems (OT), run by Operations; the CDC monitors the IT/OT boundary only |
 | **Regulation** | NIS2 *important* entity as a postal and courier service; GDPR; Danish NIS 2-loven, registered on virk.dk |
 | **Budget** | Approved for a CDC of 6 people plus a managed service for nights and weekends |

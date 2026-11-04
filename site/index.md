@@ -165,7 +165,7 @@ through the seven steps to its first board report.
 <div class="ocdf-case" markdown>
 
 <ul class="ocdf-case__facts">
-<li><b>2,500</b> employees</li>
+<li><b>2500</b> employees</li>
 <li><b>14</b> sites, night operations</li>
 <li>NIS2 <b>important</b> entity</li>
 <li><b>Standard</b> tier</li>
@@ -213,7 +213,7 @@ through the seven steps to its first board report.
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.4.1**, released 2 November 2026 · [Changelog](CHANGELOG.md) ·
+**Version 1.4.2**, released 4 November 2026 · [Changelog](CHANGELOG.md) ·
 [Source on GitHub](https://github.com/p0jst/OpenCDC).
 Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber
 Defence Center, as an independent project.

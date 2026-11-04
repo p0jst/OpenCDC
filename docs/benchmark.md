@@ -30,7 +30,7 @@ exact content before anything is sent:
 
 | Included | Not included |
 |----------|--------------|
-| Number of employees, as a band: 1–49, 50–249, 250–999, 1,000–4,999, 5,000 or more | Your organisation's name |
+| Number of employees, as a band: 1–49, 50–249, 250–999, 1000–4,999, 5000 or more | Your organisation's name |
 | NIS2 category: essential, important, not in scope, or not sure | Country (only a broad region) |
 | Region: Nordics, Western, Central and Eastern, or Southern Europe, or outside the EU | Evidence notes, owners, due dates |
 | Sector, from a short list | Targets and target profile |
@@ -76,7 +76,7 @@ Until OCDF's own groups fill up, two published sources give useful context:
   that applies here. Its size bands are the size of the SOC team, not of the
   organisation, and most respondents are outside Europe.
   [SOC-CMM benchmark](https://www.soc-cmm.com/soc-benchmark)
-- **ENISA NIS Investments 2025**, a survey of 1,080 organisations in NIS
+- **ENISA NIS Investments 2025**, a survey of 1080 organisations in NIS
   sectors across all 27 member states, 17% of them SMEs. It reports practices
   and spending rather than maturity levels. Among its findings: security staff
   make up 10.6% of IT staff, the lowest share it has recorded; the median

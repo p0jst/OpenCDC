@@ -5,7 +5,7 @@
 **Build and run the team that detects and responds to cyber attacks.**<br>
 Written for NIS2, DORA and GDPR · All 27 EU member states · Free to use and adapt
 
-[![Version](https://img.shields.io/badge/version-v1.4.1-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.4.2-blue)](CHANGELOG.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Website](https://img.shields.io/badge/website-opencdc.org-123a6d)](https://opencdc.org/)
 
@@ -37,7 +37,7 @@ Level 2 in every function covers what NIS2 requires, criterion by criterion. Eve
 | An analyst or engineer | [Alert triage](docs/alert-triage.md), [detection-as-code](docs/detection-as-code-deep-dive.md) and the [CTI deep dive](docs/cti-deep-dive.md) |
 | In compliance or legal | The [EU regulatory landscape](docs/eu-regulatory-landscape.md) and your [national annex](docs/annexes/README.md) |
 
-New to the terms? [OCDF on one page](docs/one-page.md) explains them in five minutes. Want to see it applied first? The [worked example](docs/worked-example.md) takes an invented 2,500-person company from no SOC to its first board report.
+New to the terms? [OCDF on one page](docs/one-page.md) explains them in five minutes. Want to see it applied first? The [worked example](docs/worked-example.md) takes an invented 2500-person company from no SOC to its first board report.
 
 ## The seven steps
 
@@ -113,7 +113,7 @@ mkdocs serve
 
 Corrections, national-law mappings and field feedback are welcome; see [Contributing](CONTRIBUTING.md). Report security problems in the site or the tools privately, as described in [Security](SECURITY.md).
 
-To cite: *Open CDC Framework (OCDF), version 1.4.1, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.*
+To cite: *Open CDC Framework (OCDF), version 1.4.2, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.*
 
 ## About
 

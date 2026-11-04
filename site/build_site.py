@@ -8,6 +8,7 @@ every internal link keeps working, and adds the website-only landing page and CS
 Run from the repository root:  python site/build_site.py
 Then:                          mkdocs build
 """
+import re
 import shutil
 from pathlib import Path
 
@@ -16,6 +17,24 @@ SRC = ROOT / "_site_src"
 
 COPY_DIRS = ["docs", "assessments", "templates", "tools"]
 COPY_FILES = ["ABOUT.md", "CONTRIBUTING.md", "CHANGELOG.md", "LICENSE"]
+
+# The self-assessment checklist is one file with two readers. In the repository
+# it is a form to copy and fill in offline; on the website the interactive tool
+# does that, so the page only lists the criteria. Blocks marked offline-only
+# are dropped on the website, blocks marked web-only are shown only there, and
+# the tick boxes, status and evidence placeholders and score lines are removed.
+CHECKLIST = "assessments/maturity-self-assessment.md"
+
+
+def web_checklist(text):
+    text = re.sub(r"<!-- offline-only:begin -->.*?<!-- offline-only:end -->\n?", "", text, flags=re.S)
+    text = re.sub(r"<!-- web-only:begin\n(.*?)\nweb-only:end -->", r"\1", text, flags=re.S)
+    text = re.sub(r"^- \[ \] (.*?) — status: `…` — evidence: …$", r"- \1", text, flags=re.M)
+    text = re.sub(r"^\*\*Function score:.*\n\n?", "", text, flags=re.M)
+    leftover = [m for m in ("- [ ]", "status: `", "☐", "offline-only", "web-only") if m in text]
+    if leftover:
+        raise SystemExit(f"{CHECKLIST}: website version still contains {leftover}")
+    return text
 
 
 def main():
@@ -28,6 +47,8 @@ def main():
         p = ROOT / f
         if p.exists():
             shutil.copy2(p, SRC / f)
+    checklist = SRC / CHECKLIST
+    checklist.write_text(web_checklist(checklist.read_text(encoding="utf-8")), encoding="utf-8")
     # website-only files
     shutil.copy2(ROOT / "site" / "index.md", SRC / "index.md")
     (SRC / "assets").mkdir()

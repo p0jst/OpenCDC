@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.4.2 — 2026-11-04
+
+A patch release: navigation and presentation fixes only, no maturity criterion changes, so assessments made under v1.4.1 compare directly.
+
+- **The worked example comes first.** In the Start section it now follows *OCDF on one page*, so a reader sees where the steps lead before taking them, and the previous and next links follow that order. The page opens with the same before and after as the landing page: four people with no shared plan, then a signed charter, a team and a scored baseline after 90 days.
+- **The self-assessment page is a list of criteria, not a form.** On the website it showed 71 tick boxes, status and evidence placeholders, score lines and an empty result table, none of which could be filled in. The page now lists the criteria under two buttons, one for the interactive tool and one for the checklist to fill in offline, and links to the baseline in the worked example. The checklist file in the repository is unchanged as a form to copy, and remains the single source the tool is checked against.
+- **The tool starts at GOVERN for a new assessment.** It reopened the tab last viewed in the same browser, so a link from the self-assessment page could land in RESPOND. The last tab is now remembered only when the browser holds saved answers.
+- **Four-digit numbers without a comma.** 2500 employees, 1576 hours, 1000–4999 and so on, in the landing page, the worked example, the operating models and their staffing diagram, the benchmark and the tool. Numbers of five digits or more keep the comma.
+
 ## v1.4.1 — 2026-11-02
 
 A patch release: wording and presentation fixes only, no maturity criterion changes, so assessments made under v1.4.0 compare directly.
