@@ -1,16 +1,30 @@
 # CDC maturity self-assessment checklist
 
-> **Fill this out interactively:** the [interactive tool](../tools/maturity-assessment.html) gives you a status control and evidence field per criterion, automatic staged scoring, a score chart against your target profile, a resume link you can save and reopen to carry on later with no account and no cookie, and a JSON snapshot you can export and keep in version control. This document is the single source of the criteria: the function documents link here instead of keeping their own copy, and the tool carries the same text, checked automatically. Use it to read offline, print, or copy into your own system.
+<!-- web-only:begin
+<div class="ocdf-cta ocdf-cta--left" markdown>
+[Open the interactive self-assessment](../tools/maturity-assessment.html){ .md-button .md-button--primary }
+[Get the checklist to fill in offline](https://github.com/p0jst/OpenCDC/blob/main/assessments/maturity-self-assessment.md){ .md-button }
+</div>
 
-> Scoring rules: see the [maturity model](../docs/maturity-model.md). A level is achieved only when *all* its criteria and all lower-level criteria are met. A criterion counts as met when its status is `implemented` or `evidenced`; for the stricter, evidence-based reading, count only `evidenced`. Copy this file, date it, and keep assessments in version control to track the trend.
+This page lists every criterion the self-assessment scores. To score them, use
+the interactive tool: it saves your answers in your browser, scores each
+function as you go and gives you a link to carry on later. To see what a result
+looks like, read the [maturity baseline in the worked example](../docs/worked-example.md#the-maturity-baseline-and-action-plan).
+web-only:end -->
+
+<!-- offline-only:begin -->
+> **Two ways to use this checklist.** Score it in the [interactive tool](../tools/maturity-assessment.html), which saves your answers in your browser, scores automatically and exports a JSON snapshot. Or copy this file, date it, record a status and evidence for each criterion, and keep it in version control to track the trend. This file is the single source of the criteria: the function documents link here, and the tool carries the same text, checked automatically.
+<!-- offline-only:end -->
+
+> **Scoring rules.** See the [maturity model](../docs/maturity-model.md). A level is achieved only when *all* its criteria and all lower-level criteria are met. A criterion counts as met when its status is `implemented` or `evidenced`; for the stricter, evidence-based reading, closer to how an auditor would score it, count only `evidenced`.
 
 > **NIS2 floor.** Criteria marked *NIS2* deliver the minimum form of a measure required by NIS2 Art. 20, 21 or 23. For an entity in NIS2 scope they are never above tier; see the [NIS2 Article 21 crosswalk](../docs/nis2-article-21-crosswalk.md). Level 1 has no criteria: it is where every function starts.
 
 ## Status scale
 
-Record a status for every criterion, not just a tick. The three lower states
-make work in flight visible without moving the score. The model is staged and
-does not average up.
+Every criterion takes one of five statuses. The three lower states make work in
+flight visible without moving the score. The model is staged and does not
+average up.
 
 | Status | Meaning | Counts towards the level? |
 |--------|---------|---------------------------|
@@ -20,11 +34,12 @@ does not average up.
 | `implemented` | In place and operating across the intended scope. | **Yes** |
 | `evidenced` | Implemented, with evidence recorded and, where the criterion says so, signed off or reviewed within the stated period. | **Yes** |
 
-Tick the box when the status is `implemented` or `evidenced`. For an
-evidence-based reading, closer to how an auditor would score it, count only
-`evidenced`. Scores without recorded evidence tend to come out higher.
+<!-- offline-only:begin -->
+Tick the box when the status is `implemented` or `evidenced`. Scores without
+recorded evidence tend to come out higher.
 
 **Assessment date:** | **Assessors:** | **Evidence repository:**
+<!-- offline-only:end -->
 
 ---
 
@@ -187,6 +202,7 @@ evidence-based reading, closer to how an auditor would score it, count only
 
 **Function score: ☐ L1 ☐ L2 ☐ L3 ☐ L4**
 
+<!-- offline-only:begin -->
 ---
 
 ## Result
@@ -201,3 +217,4 @@ evidence-based reading, closer to how an auditor would score it, count only
 | RECOVER | | | |
 
 **Next assessment due:** …
+<!-- offline-only:end -->

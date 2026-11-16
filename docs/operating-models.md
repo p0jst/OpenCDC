@@ -108,22 +108,22 @@ A budget round needs numbers, and the numbers that matter most are specific to y
 
 A *seat* is one analyst at the console at any given moment. Covering one seat around the clock means covering every hour of the year; each person you employ works far fewer than that.
 
-[![Why one 24/7 seat takes about 5.6 people: one person's 1,924 contract hours minus leave, holidays, sickness and training leave 1,576 hours; 8,760 hours of cover divided by 1,576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-light.svg#gh-light-mode-only)](../assets/diagrams/operating-model-staffing-light.svg)
-[![Why one 24/7 seat takes about 5.6 people: one person's 1,924 contract hours minus leave, holidays, sickness and training leave 1,576 hours; 8,760 hours of cover divided by 1,576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-dark.svg#gh-dark-mode-only)](../assets/diagrams/operating-model-staffing-dark.svg)
+[![Why one 24/7 seat takes about 5.6 people: one person's 1924 contract hours minus leave, holidays, sickness and training leave 1576 hours; 8760 hours of cover divided by 1576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-light.svg#gh-light-mode-only)](../assets/diagrams/operating-model-staffing-light.svg)
+[![Why one 24/7 seat takes about 5.6 people: one person's 1924 contract hours minus leave, holidays, sickness and training leave 1576 hours; 8760 hours of cover divided by 1576 is 5.6 people; a full 24/7 line comes to about 9 to 10 people](../assets/diagrams/operating-model-staffing-dark.svg#gh-dark-mode-only)](../assets/diagrams/operating-model-staffing-dark.svg)
 
 <details markdown>
 <summary>The calculation, to redo with your own numbers</summary>
 
 | Step | Formula | Example, Danish full-time contract |
 |------|---------|------------------------------------|
-| Hours to cover per seat | 24 × 365 | 8,760 h |
-| Contract hours per FTE | weekly hours × 52 | 37 × 52 = 1,924 h |
+| Hours to cover per seat | 24 × 365 | 8760 h |
+| Contract hours per FTE | weekly hours × 52 | 37 × 52 = 1924 h |
 | minus annual leave | your leave entitlement | 5 weeks: −185 h |
 | minus public holidays on weekdays | your calendar | ~9 days: −67 h |
 | minus sickness | your absence rate | ~8 days: −59 h |
 | minus training and exercises | your training plan | 5 days: −37 h |
-| **Available hours per FTE** | | **≈ 1,576 h** |
-| **FTE per 24/7 seat** | 8,760 ÷ available hours | **≈ 5.6** |
+| **Available hours per FTE** | | **≈ 1576 h** |
+| **FTE per 24/7 seat** | 8760 ÷ available hours | **≈ 5.6** |
 
 </details>
 
@@ -132,10 +132,10 @@ Replace every number in the example column with your own. With six weeks of leav
 <details markdown>
 <summary>The 24/7 line, seat by seat</summary>
 
-| Line | Hours per year | FTE, using 1,576 h |
+| Line | Hours per year | FTE, using 1576 h |
 |------|----------------|--------------------|
-| One seat, 24/7 | 8,760 | 5.6 |
-| A second seat, weekdays 07–17 | 250 days × 10 h = 2,500 | 1.6 |
+| One seat, 24/7 | 8760 | 5.6 |
+| A second seat, weekdays 07–17 | 250 days × 10 h = 2500 | 1.6 |
 | Detection engineering, off the shift rota | — | 1–2 |
 | Team lead or manager | — | 1 |
 | **Total** | | **≈ 9–10** |
@@ -156,9 +156,9 @@ The same method explains the 3–4 people for business hours with on-call quoted
 <details markdown>
 <summary>Business hours with on-call, seat by seat</summary>
 
-| Line | Hours per year | FTE, using 1,576 h |
+| Line | Hours per year | FTE, using 1576 h |
 |------|----------------|--------------------|
-| One seat, weekdays 07–17 | 250 days × 10 h = 2,500 | 1.6 |
+| One seat, weekdays 07–17 | 250 days × 10 h = 2500 | 1.6 |
 | Detection engineering and improvement work | — | 1 |
 | Lead, often combined with an analyst role | — | 0.5–1 |
 | **Total** | | **≈ 3–4** |

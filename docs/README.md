@@ -41,6 +41,7 @@ introduction.
 | [EU regulatory landscape](eu-regulatory-landscape.md) | EU law layer, plus [annexes](annexes/README.md) |
 | [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) | NIS2 obligations → capabilities and the Level 2 floor |
 | [NIST CSF 2.0 crosswalk](csf-crosswalk.md) | CSF 2.0 categories → capabilities |
+| [ISO/IEC 27001 crosswalk](iso-27001-crosswalk.md) | Capabilities → ISO/IEC 27001:2022 clauses and Annex A controls |
 | [CIS Controls crosswalk](cis-controls-crosswalk.md) | CIS Controls with concrete actions |
 | [References](references.md) | Sources & credits |
 

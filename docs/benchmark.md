@@ -30,7 +30,7 @@ exact content before anything is sent:
 
 | Included | Not included |
 |----------|--------------|
-| Number of employees, as a band: 1–49, 50–249, 250–999, 1,000–4,999, 5,000 or more | Your organisation's name |
+| Number of employees, as a band: 1–49, 50–249, 250–999, 1000–4,999, 5000 or more | Your organisation's name |
 | NIS2 category: essential, important, not in scope, or not sure | Country (only a broad region) |
 | Region: Nordics, Western, Central and Eastern, or Southern Europe, or outside the EU | Evidence notes, owners, due dates |
 | Sector, from a short list | Targets and target profile |
@@ -53,10 +53,15 @@ file and send it, to benchmark@opencdc.org.
 - **Contributions are not anonymous to the maintainer.** They arrive by email,
   so the maintainer sees who sent them. They are anonymous in what is published:
   no figure names or describes a single organisation.
-- **Your email address** stays only in the benchmark mailbox, which is
-  access-controlled. It is never stored with the contribution data or published.
+- **Your email address** stays in the mailbox it arrives in. The address
+  benchmark@opencdc.org forwards to the maintainer's personal mailbox; nobody
+  else has access. It is never stored with the contribution data or published.
   The mailbox is what lets you ask, from the same address, for your contribution
   to be removed; the email goes with it.
+- **A contribution is sensitive before it is aggregated.** It shows which
+  criteria an organisation has not met, and email is not encrypted end to end.
+  Send it from an address you are content to link to it, and leave it out if
+  your organisation would not send that list to an outside party.
 - **The aggregate is published** as [`tools/benchmark.json`](https://github.com/p0jst/OpenCDC/blob/main/tools/benchmark.json)
   under CC BY 4.0, and recomputed as contributions arrive. The script that
   produces it, [`benchmark/aggregate.py`](https://github.com/p0jst/OpenCDC/blob/main/benchmark/aggregate.py),
@@ -76,7 +81,7 @@ Until OCDF's own groups fill up, two published sources give useful context:
   that applies here. Its size bands are the size of the SOC team, not of the
   organisation, and most respondents are outside Europe.
   [SOC-CMM benchmark](https://www.soc-cmm.com/soc-benchmark)
-- **ENISA NIS Investments 2025**, a survey of 1,080 organisations in NIS
+- **ENISA NIS Investments 2025**, a survey of 1080 organisations in NIS
   sectors across all 27 member states, 17% of them SMEs. It reports practices
   and spending rather than maturity levels. Among its findings: security staff
   make up 10.6% of IT staff, the lowest share it has recorded; the median

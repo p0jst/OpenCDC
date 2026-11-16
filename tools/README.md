@@ -156,8 +156,9 @@ screen.
   and exports the action plan as a spreadsheet file (semicolon-separated
   with a byte-order mark, so it opens in columns in Excel, including Danish and
   other comma-decimal locales).
-- **Community benchmark.** Tell the tool your size band, NIS2 category, region,
-  sector and operating model, and it compares your level per function with the
+- **Community benchmark, still collecting.** No figures are published yet. Once
+  a group reaches ten contributions, the tool takes your size band, NIS2 category, region,
+  sector and operating model, compares your level per function with the
   median of similar organisations, and shows for each criterion the share that
   have it in place. Figures come from user contributions, published only as aggregates, and appear only for
   groups of ten or more. You can contribute your own result from the same panel:
@@ -171,10 +172,12 @@ screen.
   you and your targets.
 - **Resume link.** The full assessment, meaning answers, evidence notes, targets and
   the header fields, is encoded into the page's URL fragment, so the address bar
-  always holds a unique link that restores exactly the current state. Copy it,
-  mail it to yourself or paste it into a ticket, and continue later on any
-  device or browser, with no account, no cookie and no server. The fragment is never
-  sent in an HTTP request, so the data stays with whoever holds the link. Because the
+  always holds a unique link that restores exactly the current state. Copy it
+  and continue later on any device or browser, with no account, no cookie and no server.
+  The fragment is never sent in an HTTP request, so the data stays with whoever holds the link.
+  That also makes the link confidential: it contains the whole assessment, and anyone who
+  gets it can read where the defences are weak. Mail, chat and ticket systems keep copies, so
+  handle the link as you would the assessment report itself. Because the
   link *is* the data, it changes with every answer: to carry on another day on the same
   computer, open the tool's plain address; save a link to move device or keep a copy.
   If you open a link that differs from what the browser has saved, the tool asks

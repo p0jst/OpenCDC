@@ -26,7 +26,7 @@
 | Metric | Definition | Example target | Decision it drives |
 |--------|-----------|------------------|--------------------|
 | MTTC | Median and 90th percentile time detection → containment for P1 and P2, with the clock paused while waiting on parties outside the CDC and those waits reported separately | Trend ↓ | Containment automation, authority gaps, dependencies to escalate |
-| Response quality score | Reviewer score 1–10 per P1 and P2 case: thoroughness of analysis, scoping of related systems, root cause documented, no premature closure | Trend ↑, read together with MTTC | Coaching; whether speed is being bought with shortcuts |
+| Response quality score | Reviewer score 1–10 per P1 and P2 case: thoroughness of analysis, scoping of related systems, root cause documented, no premature closure. Scored against the decision log, on what was known at each decision, not on how the case ended | Trend ↑, read together with MTTC | Coaching; whether speed is being bought with shortcuts |
 | Reopened cases | % cases closed, stopped or deferred at verification that are reopened as incidents within 90 days | Trend ↓ | Verification criteria and discipline in the exit decision |
 | Statutory reporting timeliness | % notifications within the legal deadline for NIS2 24h, GDPR 72h and DORA | 100% | Reporting drill frequency |
 | Playbook coverage | % of P1/P2 incidents handled with an existing playbook | > 80% | Playbook backlog |

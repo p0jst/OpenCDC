@@ -300,9 +300,9 @@ def decision_path(t):
 # ------------------------------------------------------------------ staffing
 def staffing(t):
     s = Svg(760, 480, "Why one 24/7 seat takes about 5.6 people",
-            "Example with a Danish full-time contract. One person has 1,924 contract hours a year; after 185 hours "
-            "of leave, 67 of public holidays, 59 of sickness and 37 of training, 1,576 hours remain. Covering one "
-            "seat around the clock takes 8,760 hours, which is 5.6 people at 1,576 hours each. A 24/7 line with a "
+            "Example with a Danish full-time contract. One person has 1924 contract hours a year; after 185 hours "
+            "of leave, 67 of public holidays, 59 of sickness and 37 of training, 1576 hours remain. Covering one "
+            "seat around the clock takes 8760 hours, which is 5.6 people at 1576 hours each. A 24/7 line with a "
             "second daytime seat, detection engineering and a lead comes to about 9 to 10 people.", t)
     x0, wtot = 20, 720
     s.text(x0, 28, "One full-time person, one year", 16, t["ink"], 600)
@@ -313,16 +313,16 @@ def staffing(t):
         w = v * k
         s.rect(x, y, w, 40, t["eu"] if i == 0 else t["accent_soft"], None if i == 0 else t["card"], rx=2, sw=1)
         if i == 0:
-            s.text(x + 14, y + 26, "Available 1,576 h", 15, t["on_eu"], 600)
+            s.text(x + 14, y + 26, "Available 1576 h", 15, t["on_eu"], 600)
             end = x + w
         x += w
-    s.text(x0 + wtot, y - 8, "1,924 contract hours", 13, t["soft"], 400, "end")
+    s.text(x0 + wtot, y - 8, "1924 contract hours", 13, t["soft"], 400, "end")
     s.add(f'<path d="M{end + 2},{y + 46} l0,6 L{x0 + wtot},{y + 52} l0,-6" fill="none" stroke="{t["soft"]}"/>')
     s.text(x0 + wtot, y + 70, "Leave 185 · Holidays 67 · Sickness 59 · Training 37", 13, t["soft"], 400, "end")
 
     y2 = 192
     s.text(x0, y2, "One seat, around the clock", 16, t["ink"], 600)
-    s.text(x0, y2 + 20, "24 × 365 = 8,760 hours, in blocks of 1,576 hours", 13, t["soft"])
+    s.text(x0, y2 + 20, "24 × 365 = 8760 hours, in blocks of 1576 hours", 13, t["soft"])
     k2 = wtot / 8760
     for i in range(6):
         w = min(1576, 8760 - i * 1576) * k2

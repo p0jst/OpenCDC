@@ -1,0 +1,4 @@
+# Top-level website build dependencies. Edit here, then regenerate the lock:
+#   uv pip compile --universal --generate-hashes --python-version 3.12 requirements-site.in -o requirements-site.txt
+mkdocs-material==9.8.0
+mkdocs-redirects==1.2.3

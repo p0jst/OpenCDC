@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OCDF — Maturity Self-Assessment</title>
 <style>
@@ -438,12 +439,13 @@
     <div class="rrow">
       <input type="text" id="share-url" readonly aria-label="Link that restores this assessment" onfocus="this.select()">
       <button class="btn primary" id="copy-url">Copy</button>
-      <button class="btn" id="mail-url" title="Mail the link to yourself">Mail</button>
+      <button class="btn" id="mail-url" title="Mail the link to yourself. The mail will contain the whole assessment">Mail</button>
     </div>
-    <p class="rnote">No account, no server: your answers live in this link and in this browser. Whoever holds the
-       link holds the assessment.</p>
+    <p class="rnote">No account, no server: your answers live in this link and in this browser. Treat the link as
+       confidential. It holds the whole assessment, evidence notes included, and anyone who gets it can read where
+       your defences are weak. Mail, chat and ticket systems keep copies.</p>
     <p class="resume-warn">This link has grown long because of the evidence notes. Some mail programs break links
-       longer than about 2,000 characters, so use <b>Export .json</b> for long-term archiving.</p>
+       longer than about 2000 characters, so use <b>Export .json</b> for long-term archiving.</p>
   </section>
 
   <section class="pblock targets">
@@ -492,7 +494,7 @@
     <div class="bprofile">
       <label>Employees <select data-b="size"><option value="">—</option>
         <option value="1-49">1–49</option><option value="50-249">50–249</option><option value="250-999">250–999</option>
-        <option value="1000-4999">1,000–4,999</option><option value="5000+">5,000 or more</option></select></label>
+        <option value="1000-4999">1000–4999</option><option value="5000+">5000 or more</option></select></label>
       <label>NIS2 <select data-b="nis2"><option value="">—</option><option value="essential">Essential entity</option>
         <option value="important">Important entity</option><option value="not-in-scope">Not in scope</option><option value="unsure">Not sure</option></select></label>
       <label>Region <select data-b="region"><option value="">—</option><option>Nordics</option><option>Western Europe</option>
@@ -1226,7 +1228,7 @@ document.getElementById("export-plan").addEventListener("click", exportPlan);
  * count and nothing else.
  * ------------------------------------------------------------------ */
 const BENCH_EMAIL = "benchmark@opencdc.org";
-const FRAMEWORK_VERSION = "1.4.1";
+const FRAMEWORK_VERSION = "1.5.0";
 let bench = null, benchErr = "";
 let benchGroup = "";
 fetch("benchmark.json", {cache:"no-cache"}).then(r => r.ok ? r.json() : Promise.reject(r.status))
@@ -1315,7 +1317,7 @@ document.getElementById("contrib-prep").addEventListener("click", () => {
   if(answered < 20) problems.push("score more of the criteria first; only " + answered + " of " + critList().length + " have a status");
   ["contrib-mail", "contrib-dl", "contrib-copy"].forEach(id => document.getElementById(id).disabled = problems.length > 0);
   note.textContent = problems.length ? "Before you send: " + problems.join("; ") + "."
-    : "Email opens your mail program with this text ready to send to " + BENCH_EMAIL + ". Your email address is only used to receive it and is never published.";
+    : "Email opens your mail program with this text ready to send to " + BENCH_EMAIL + ". Your email address is only used to receive it and is never published. Email is not encrypted end to end, and the text shows which criteria you have not met, so send it from an address you are content to link to it.";
 });
 document.getElementById("contrib-mail").addEventListener("click", () => {
   location.href = "mailto:" + BENCH_EMAIL + "?subject=" + encodeURIComponent("OCDF benchmark contribution") +
@@ -1397,6 +1399,10 @@ window.addEventListener("hashchange", () => {
 });
 
 loadState();
+/* The remembered tab is for picking up an assessment where it was left. With
+   no answers yet there is nothing to pick up, so a new assessment starts at
+   GOVERN, the first function, wherever the last visit ended. */
+if(!hasAnswers(state)) activeFid = FUNCS[0].id;
 lastSavedKey = contentKey(state);
 renderAll();
 setView(activeView);

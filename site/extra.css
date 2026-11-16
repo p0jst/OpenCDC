@@ -333,6 +333,20 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   color: var(--md-default-fg-color);
   font-weight: 600;
 }
+/* Tool buttons at the top of a reference page, such as the self-assessment
+   criteria: same buttons as the hero, left-aligned in the text column. */
+.md-typeset .ocdf-cta--left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.4rem 0 1.2rem;
+}
+.md-typeset .ocdf-cta--left .md-button {
+  margin: 0;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
 .ocdf-hero .ocdf-cta {
   margin-top: 1.6rem;
 }

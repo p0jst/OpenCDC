@@ -99,6 +99,7 @@ SANS survey and white-paper findings are used as context and data points, not as
 - OWASP GenAI Security Project, *Top 10 for LLM Applications*. https://genai.owasp.org
 - Red Canary, Atomic Red Team, an attack emulation library. https://github.com/redcanaryco/atomic-red-team
 - CISA, Known Exploited Vulnerabilities catalog. https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+- ENISA, European Vulnerability Database, EUVD, established under NIS2 Art. 12. https://euvd.enisa.europa.eu
 - NIST, *NIST Updates NVD Operations to Address Record CVE Growth*, 15 April 2026. https://www.nist.gov/itl/nvd
 - MISP Project. https://www.misp-project.org
 - ISO/IEC 27000-series, *Information security management systems*, covering vocabulary, ISMS requirements and controls. https://www.iso.org. ISO standards are paywalled; this framework references concepts only.
@@ -107,7 +108,7 @@ SANS survey and white-paper findings are used as context and data points, not as
 
 ## How to cite this framework
 
-> Open CDC Framework (OCDF), version 1.4.1, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
+> Open CDC Framework (OCDF), version 1.5.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
 
 ## Corrections
 

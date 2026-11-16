@@ -18,7 +18,7 @@ Each of these was avoidable with the kind of structured, practitioner-written gu
 ## Who I am
 
 - Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber Defence Center, where I spent six years building and running monitoring for critical infrastructure
-- Certifications: SANS LDR553 Cyber Incident Management, LDR551 GSOM Building and Leading Security Operations Centers, FOR500 Windows Forensics, Application of the MITRE ATT&CK Framework, Investigation Theory, Effective Information Security Writing, Kusto Query Language for Security Analysts, and others.
+- Training and certifications: SANS LDR553 Cyber Incident Management, LDR551 GSOM Building and Leading Security Operations Centers, FOR500 Windows Forensics, Application of the MITRE ATT&CK Framework, Investigation Theory, Effective Information Security Writing, Kusto Query Language for Security Analysts, and others.
 - Feel free to reach out at https://www.linkedin.com/in/frederikbogeskov/
 
 This is a personal, community-driven project. It is not affiliated with, endorsed by, or the position of any current or former employer, nor of NIST, ENISA, MITRE, or any authority referenced in it.
