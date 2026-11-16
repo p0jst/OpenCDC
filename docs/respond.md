@@ -62,11 +62,50 @@ Record what triggered each pass. Several passes show thoroughness, not a failed 
 
 **Leaving the loop is a decision.** The loop ends when scoping finds nothing new, monitoring shows no adversary activity, eradication is verified, restored systems run normally, and the decision-maker accepts the remaining risk. Record the exit in writing: who decided, on which technical and business indicators, which residual risks were accepted, and when. An unnamed consensus is hard to defend if the incident reopens.
 
+### Keep a decision log
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span></p>
+
+Most of an incident is decided on incomplete information: whether to isolate, whether to wake the executive, whether a case is reportable, whether to observe or contain. The timeline records what happened. The decision log records why, while the reasons are still fresh. Each entry holds five things:
+
+- **Time.**
+- **What we knew,** and what we did not yet know.
+- **The options considered.**
+- **What we chose, and why.**
+- **Who decided,** under which authority from the charter or the IR plan.
+
+The incident manager owns the log; in a major incident a scribe keeps it, so that the people deciding are not also writing. One line per decision is enough, written when the decision is taken, not reconstructed afterwards. The decisions this document already asks you to record, such as the triage outcome, a decision to observe, the trigger for another pass and the exit, are entries in it.
+
+The log does three jobs. It shows a regulator when the organisation had reasonable grounds and what it did with them. It lets the next shift pick up the reasoning, not only the actions. And it is what the post-incident review is held against; see [reviewing decisions, not outcomes](recover.md#reviewing-decisions-not-outcomes) in Recover.
+
 ### Eradication needs a root cause
 
 Rebuilding from clean media without knowing how the adversary got in usually brings the adversary back. Before eradication is called complete, the team should be able to say how the adversary got in and whether that path is closed, which credentials were exposed and whether they are rotated, which other systems were reached, which persistence was left and whether it is removed, and which weakness made it possible and whether it is fixed. Group the contributing causes as people, process, technology and governance, so that the fixes reach beyond the host.
 
 Run the investigation in two tracks. A short track gives enough understanding to eradicate and restore quickly. A long track goes deeper in parallel, for the root cause and for legal and regulatory needs. In the EU the long track has a deadline: the NIS2 final report, with the root cause, is due one month after the incident notification, or a progress report if the incident is still being handled then. Plan the long track against that date from the first day.
+
+### Containing a compromised identity
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Operating practice for identity-led intrusions.</p>
+
+A password reset does not contain an adversary who holds a session. Phishing that relays the logon, token theft and malicious application consent all leave access that survives a new password. For a compromised account, take these steps together; the first is CON-07 and CON-08 in the [containment action catalogue](../templates/containment-action-catalogue-template.md):
+
+- **Disable the account and revoke its sessions and refresh tokens.** Revocation is not always immediate. An access token already issued can stay valid until it expires, often up to an hour, unless the application supports immediate revocation. Know in advance which of your applications do.
+- **Remove what the adversary added.** MFA methods and registered devices, inbox and forwarding rules, application consents, credentials on applications and service accounts, delegated mailbox access.
+- **Then reset the password and re-register MFA,** with the user verified through another channel.
+- **Scope from the sign-in and audit logs.** Every application the session reached, what was read or sent, and which other accounts were phished from this mailbox.
+
+For an administrator account, assume the adversary changed the configuration: review access policies, federation and trust settings, and new privileged role assignments. If an on-premises directory was compromised, account resets do not restore trust in it. Treat that as a rebuild-or-recover decision under [Recover](recover.md), including rotating the directory's own ticket-signing secrets.
+
+### Cloud and SaaS incidents
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span></p>
+
+An incident in a cloud or SaaS service runs on the provider's terms. Three things differ from an incident in your own data centre:
+
+- **The evidence is the provider's logs,** with the detail and retention your subscription gives you. Export them at the start. Some audit logs are kept for days, and some exist only at a higher licence level; find that out during preparation.
+- **Containment goes through the control plane.** Revoke keys and tokens, disable identities, restrict network rules, and snapshot a workload before isolating it. A deleted instance takes its evidence with it, for the same reason a powered-off host does.
+- **Shared responsibility decides who can act.** In SaaS you can usually act only on identities, configuration and sharing. Anything deeper needs the provider, so keep its security contact and escalation path in the IR plan next to the DFIR retainer.
 
 ## The first hour of a major incident
 
@@ -120,6 +159,21 @@ practical traps, all hard to fix retrospectively:
 Firms specialising in incident response can coordinate carriers, responders and notifications while
 the CDC keeps working the incident. Identify one alongside the DFIR retainer, not during a P1.
 
+### Ransomware: decisions to take before the incident
+
+<p class="src" markdown><span class="src-tag practitioner">Practitioner</span><span class="src-tag law">Law</span>The decisions come from practice; the legal points are pointers for counsel. Not legal advice.</p>
+
+A ransomware incident brings decisions that are hard to take well at night. Take them in advance, write them into the decision authority table of the [IR plan](../templates/incident-response-plan-template.md), and exercise them with management.
+
+- **Who decides on payment.** The management body. Not the CDC, and not the incident manager. Record the organisation's position in advance, and the conditions under which it would be reconsidered.
+- **Whether a payment would be lawful.** Paying a ransom is not prohibited as such in most member states. Making funds available to a person or group under EU sanctions is, including under the cyber sanctions regime in Council Regulation (EU) 2019/796, and national law can add to that. Who is behind an attack is uncertain in the first days. Counsel checks this before any payment or negotiation, every time.
+- **What a payment does not buy.** A decryptor can be slow or incomplete, there is no assurance that stolen data is deleted, and the reporting duties under NIS2, GDPR and DORA apply whether or not a ransom is paid. Recovery from backups is planned and run either way.
+- **Who talks to the adversary.** Nobody from the organisation unprepared. If contact is made, it goes through a specialist engaged with counsel and, where there is a policy, from the insurer's panel. The CDC supplies facts: what was taken, and whether the backups are intact.
+- **When the police are told.** Reporting a crime to the police is separate from reporting an incident to the CSIRT, and one does not replace the other. Decide in advance who reports and when. Law enforcement sometimes holds decryption keys or knowledge of the group, and may ask for evidence to be preserved.
+- **What happens if data is published.** Extortion over stolen data, with or without encryption, needs its own position: who watches for publication, how affected people and customers are told, and how GDPR Art. 34 is assessed.
+
+The Commission's proposed NIS2 amendments, COM(2026) 13, would add EU-wide collection of data on ransomware incidents. That is not law yet; see the [EU regulatory landscape](eu-regulatory-landscape.md).
+
 ## EU statutory reporting timelines
 
 <p class="src" markdown><span class="src-tag law">Law</span>From the legal texts; national transpositions may add detail. Not legal advice.</p>
@@ -171,7 +225,7 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span>Typical roles from practice. Staffing figures and their arithmetic are under staffing and cost in [Operating models](operating-models.md).</p>
 
-- **Incident manager** — coordinates the response; in larger incidents a separate role from the technical lead.
+- **Incident manager** — coordinates the response and owns the decision log; in larger incidents a separate role from the technical lead.
 - **Technical responders** — often the same analysts as DETECT.
 - **Legal/DPO and communications** — mandatory members of the extended IR team.
 - **Decision-makers** — service owners, data owners and management who set priorities, accept disruption and sign the exit from the response loop. Name them and their deputies in the IR plan.
@@ -206,6 +260,7 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 | Forensics beyond in-house capability | External DFIR retainer | [HARD] | Retainer signed, response time, onboarding pack ready |
 | Cyber insurance notification and approved vendors | Insurer via risk/finance | [GATE] | Whether a policy exists, who notifies, within what window, which responder and counsel panels it permits; engaging outside the panel can reduce cover |
 | Legal privilege position and external counsel | Legal, external where required | [GATE] | Settled per jurisdiction before the first investigation report is written |
+| Ransom payment, sanctions check and any contact with the adversary | Management body, with external counsel | [GATE] | The organisation's position on payment, who checks sanctions, and who may speak to the adversary |
 | Estate-wide network containment: perimeter deny-all, remote access off | Network/IT operations + executive per charter §4 | [GATE] | Who may order it, who executes it out of hours, and how long it can stand |
 | Backup isolation and snapshot retention extension | Backup/storage owner | [HARD] | Reachable 24/7; defaults roll off in days |
 | Exit from the response loop and acceptance of residual risk | Decision-maker per IR plan §2 | [GATE] | Who may close a P1 or P2, on which criteria, and that the decision is written and named |
@@ -219,6 +274,9 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 - EDPB, *Guidelines 9/2022 on personal data breach notification under GDPR*, version 2.0, 2023. https://www.edpb.europa.eu
 - NIS2: Directive (EU) 2022/2555 Art. 23; Commission Implementing Regulation (EU) 2024/2690; GDPR Art. 33–34; DORA: Regulation (EU) 2022/2554 Art. 17–19; CER: Directive (EU) 2022/2557 Art. 15.
 - VERIS, the *Vocabulary for Event Recording and Incident Sharing*. https://verisframework.org
+- ISO/IEC 27035-1:2023, *Information security incident management, Part 1: Principles and process*, for teams whose ISMS follows ISO/IEC 27001.
+- Council Regulation (EU) 2019/796 concerning restrictive measures against cyber-attacks threatening the Union or its Member States. https://eur-lex.europa.eu/eli/reg/2019/796/oj
+- Europol and partners, *No More Ransom*: free decryption tools and reporting links. https://www.nomoreransom.org
 - Microsoft incident response playbooks: baseline runbooks; adapt them to your environment. https://learn.microsoft.com/security/operations/incident-response-playbooks
 - CISA, *Federal Government Cybersecurity Incident and Vulnerability Response Playbooks*, 2021. https://www.cisa.gov
 

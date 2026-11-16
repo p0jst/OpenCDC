@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.5.0 — 2026-11-16
+
+A minor release from a practitioner review of the framework and the website. No maturity criterion is added, moved or reworded, so assessments made under v1.4 compare directly.
+
+- **Judge the decision, not the outcome.** RESPOND gains *Keep a decision log*: time, what was known, the options, the choice and the reason, and who decided under which authority, written when the decision is taken. RECOVER gains *Reviewing decisions, not outcomes*: post-incident reviews are held against the log, so a reasonable call that ends in a costly false positive is not treated as an error, and the improvements go to the system around the decision. The IR plan template gets a decision log table and holds its debrief and exercises against it; the charter states that management backs decisions taken within authority on the information available; the response quality score, triage peer review, the scenario playbook debrief and the executive guide follow the same rule.
+- **Identity and session attacks.** DETECT gains a note on phishing that relays the logon, token theft and malicious application consent, and what to watch after the sign-in. RESPOND gains *Containing a compromised identity*, on why a password reset is not containment, and *Cloud and SaaS incidents*.
+- **Ransomware decisions.** RESPOND gains *Ransomware: decisions to take before the incident*: who decides on payment, the sanctions check under Council Regulation (EU) 2019/796, who may speak to the adversary, when the police are told, and published data. The IR plan template's decision authority table and RESPOND's external dependencies carry the same decisions.
+- **New: [ISO/IEC 27001 crosswalk](docs/iso-27001-crosswalk.md).** All 43 capabilities mapped to the clauses and Annex A controls of the 2022 edition, with the places where the standard leaves the operating detail open. ISO/IEC 27035 is referenced from RESPOND.
+- **Log retention and silent sources.** DETECT gains *How long to keep logs*, a starting position per group of sources with the GDPR limit, and a note on alerting when a priority source stops sending.
+- **European vulnerability sources.** ID-4, the CTI deep dive and the references name ENISA's European Vulnerability Database next to CISA KEV.
+- **The NIS2 claim on the front page matches the crosswalk.** The landing page and README said Level 2 "covers what NIS2 requires". They now say the Level 2 criteria hold the minimum form of each measure, and point to the two gaps the crosswalk names.
+- **Annexes.** France: the Assemblée nationale completed its examination of the transposition bill on 10 November 2026, with the solemn vote scheduled for 17 November and a joint committee to follow; the annex no longer says no date is set. **Corrected:** the Commission referred France, Ireland and Spain to the Court of Justice on 8 July 2026, not 9 July.
+- **The assessment link is marked confidential.** The maturity tool and the tools README now say that the resume link contains the whole assessment and should be handled like the report, and no longer suggest pasting it into a ticket. The benchmark page says where contributions arrive and that a contribution is sensitive before it is aggregated.
+- **The benchmark is described as collecting.** The maturity model and the tools README no longer describe the comparison as if it had figures.
+- **Website hardening.** A Content Security Policy on the site and, more strictly, on the three tools, which may now load and connect only to their own origin. A `security.txt` under `/.well-known/`. The publishing workflow pins its actions to commits, and the build dependencies are locked with hashes in `requirements-site.txt`, generated from the new `requirements-site.in`.
+- **About.** The list of courses is headed training and certifications.
+
 ## v1.4.2 — 2026-11-04
 
 A patch release: navigation and presentation fixes only, no maturity criterion changes, so assessments made under v1.4.1 compare directly.

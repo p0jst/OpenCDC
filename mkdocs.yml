@@ -22,6 +22,8 @@ site_dir: _site_build
 exclude_docs: |
   !/templates/
   !/templates/**
+  !/.well-known/
+  !/.well-known/**
 
 theme:
   name: material
@@ -129,15 +131,16 @@ copyright: >-
 nav:
   - Home: index.md
   - Start:
-      # In the order of the seven steps on the home page, so the footer's
-      # previous/next links walk a reader through them.
+      # The worked example comes second, so a reader sees where the steps
+      # lead before taking them; then the steps in the home page's order, so
+      # the footer's previous/next links walk a reader through them.
       - OCDF on one page: docs/one-page.md
+      - Worked example: docs/worked-example.md
       - Executive guide: docs/executive-guide.md
       - Implementation tiers: docs/tiers.md
       - Design navigator for workshops: assessments/cdc-design-navigator.md
       - "Start here: the first 90 days": docs/start-here.md
       - Maturity self-assessment: assessments/maturity-self-assessment.md
-      - Worked example: docs/worked-example.md
   - Framework:
       - Introduction & design principles: docs/introduction.md
       - All documents in reading order: docs/README.md
@@ -167,6 +170,7 @@ nav:
       - EU regulatory landscape: docs/eu-regulatory-landscape.md
       - NIS2 Article 21 crosswalk: docs/nis2-article-21-crosswalk.md
       - NIST CSF 2.0 crosswalk: docs/csf-crosswalk.md
+      - ISO/IEC 27001 crosswalk: docs/iso-27001-crosswalk.md
       - CIS Controls crosswalk: docs/cis-controls-crosswalk.md
       - National annexes:
           - Overview: docs/annexes/README.md

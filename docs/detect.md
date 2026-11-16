@@ -36,6 +36,24 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 
 **Remote and hybrid work note:** architectures retrofitted from on-prem assumptions go blind the moment a laptop leaves the VPN. Prioritise location-independent telemetry, since EDR and identity-provider logs follow the user everywhere, and verify that endpoint telemetry reaches you off-network before declaring source 1–2 coverage complete. The same applies per cloud/SaaS tenant: coverage is per environment, not per organisation.
 
+**Identity and session attacks note:** MFA does not end credential phishing. An adversary-in-the-middle phishing page relays the logon and takes the session token, so the attacker arrives already authenticated and no failed-logon alert fires. The same holds for a token stolen from an infected endpoint, for device-code phishing, and for a user who consents to a malicious OAuth application. Detection therefore has to watch what happens after the sign-in as well as the sign-in itself: a session that reappears from a new device or network, a new MFA method or device registration, a new inbox rule or forwarding address, consent to an application with mail or file permissions, new credentials on an application or service account, and changes to access policies or federation settings. Most of these events sit in the audit logs of the identity provider and the SaaS platform, sources 1 and 4 above. Check that your licence level delivers them, and for how long. What to do when one fires is under [containing a compromised identity](respond.md#containing-a-compromised-identity) in Respond.
+
+**Silent sources note:** a log source that has stopped sending looks exactly like a quiet day. Give each priority source an expected volume and a longest acceptable gap, and alert the platform owner when the gap is exceeded. Check it at onboarding and after every change to the source or the pipeline. Adversaries also switch logging off, so a source that goes quiet on a crown-jewel system is a detection as well as a health event.
+
+## How long to keep logs
+
+<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag law">Law</span>The periods are this framework's starting position, not a legal requirement. Check national and sector rules; not legal advice.</p>
+
+Three things set retention: how far back an investigation has to reach, what the law requires or limits, and cost. NIS2 gives no number for security logs and leaves it to the risk assessment. National or sector rules sometimes do give one, so read your [national annex](annexes/README.md) and sector rules first. Where nothing is set for you, start here and adjust:
+
+| Sources | Searchable at once | Kept in total | Why |
+|---------|--------------------|---------------|-----|
+| Identity, privileged actions, cloud control plane, edge and remote-access devices | 90 days | 12 months | Intrusions are often found months after the first logon, and scoping needs that first logon. A compromise check after an edge-device patch has to reach back to the disclosure date or earlier |
+| Endpoint telemetry, email and web gateway | 30 to 90 days | 6 to 12 months | High volume. Where cost forces a choice, keep process starts, logons and mail flow longer than the rest |
+| Network flow, DNS and firewall traffic | 30 days | 3 to 6 months | Very high volume, and its value falls quickly once the endpoint and identity record exists |
+
+Two limits apply. Security logs are personal data, and GDPR Art. 5(1)(e) requires a stated purpose and a period no longer than that purpose needs, so agree the periods with the DPO and write them into the logging policy and the charter. And the period you have is the one the platform is configured and licensed for, not the one in the policy: many SIEM and SaaS audit logs default to 30 or 90 days. Check each priority source against the table before an incident shows the gap.
+
 ## Owning the SIEM platform, in-house or cloud
 
 <p class="src" markdown><span class="src-tag practitioner">Practitioner</span></p>

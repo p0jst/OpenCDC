@@ -114,9 +114,10 @@ National or sector law can set the floor for you: Danish energy-sector entities 
 
 ## Comparing with other organisations
 
-The [self-assessment tool](../tools/maturity-assessment.html) can compare your
+The [self-assessment tool](../tools/maturity-assessment.html) is built to compare your
 scores with other organisations of the same size, NIS2 category or region, using
-contributions from its users, published only as aggregates. The comparison is context, not a target:
+contributions from its users, published only as aggregates. It is still collecting
+contributions and shows no figures yet. When it does, the comparison is context, not a target:
 set targets from your own risks, as above. How it works, what a contribution
 contains, and what other published surveys have found in the meantime:
 [community benchmark](benchmark.md).

@@ -32,7 +32,7 @@ writes them into this table, the annexes and the regulatory selector.
 | Denmark | In force | Maintainer reviewed | Sep 2026 | Wanted | Mar 2027 | [Open](annex-dk.md) |
 | Estonia | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-ee.md) |
 | Finland | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-fi.md) |
-| France | Pending, in the legislative process | Pending legislative change | Oct 2026 | Wanted | Apr 2027 | [Open](annex-fr.md) |
+| France | Pending, in the legislative process | Pending legislative change | Nov 2026 | Wanted | Apr 2027 | [Open](annex-fr.md) |
 | Germany | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-de.md) |
 | Greece | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-gr.md) |
 | Hungary | In force | Maintainer reviewed | Oct 2026 | Wanted | Apr 2027 | [Open](annex-hu.md) |

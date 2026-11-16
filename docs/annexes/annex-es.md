@@ -17,7 +17,7 @@
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, approved in first reading by the Council of Ministers on 14 January 2025 but never sent to the Cortes. The Cortes were dissolved on 5 October 2026 ahead of the general election on 29 November 2026, so the next government has to restart the process. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2. |
+| Implementing law | Anteproyecto de Ley de Coordinación y Gobernanza de la Ciberseguridad, approved in first reading by the Council of Ministers on 14 January 2025 but never sent to the Cortes. The Cortes were dissolved on 5 October 2026 ahead of the general election on 29 November 2026, so the next government has to restart the process. The European Commission referred the country to the Court of Justice of the EU on 8 July 2026 for failing to transpose NIS2. |
 | Competent authority | Expected: National Cybersecurity Centre coordination; CCN for the public sector, INCIBE for private entities and citizens, sector authorities |
 | National CSIRT / reporting | CCN-CERT, INCIBE-CERT, ESPDEF-CERT |
 | Official starting point | https://www.incibe.es |

@@ -124,9 +124,10 @@ your team is called. Every capability is marked with the smallest
 
 <p class="m-lenses" markdown>
 Each capability is also read through the [**CIA triad**](docs/cia-triad.md)
-and the [**regulatory layer**](docs/eu-regulatory-landscape.md). Level 2 in
-every function covers what NIS2 requires, as the
-[NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) shows.
+and the [**regulatory layer**](docs/eu-regulatory-landscape.md). The Level 2
+criteria hold the minimum form of each NIS2 measure. The
+[NIS2 Article 21 crosswalk](docs/nis2-article-21-crosswalk.md) shows which
+criterion serves which article, and the two gaps to close yourself.
 </p>
 
 </div>
@@ -213,7 +214,7 @@ through the seven steps to its first board report.
 
 <div class="ocdf-meta" markdown>
 
-**Version 1.4.2**, released 4 November 2026 · [Changelog](CHANGELOG.md) ·
+**Version 1.5.0**, released 16 November 2026 · [Changelog](CHANGELOG.md) ·
 [Source on GitHub](https://github.com/p0jst/OpenCDC).
 Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber
 Defence Center, as an independent project.

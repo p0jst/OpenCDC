@@ -26,7 +26,7 @@ CTI without requirements is a newsfeed. Start every cycle from Priority Intellig
 |--------------|----------|-------------|
 | National & EU | National CSIRT advisories, ENISA Threat Landscape, CERT-EU | All |
 | Sector | Sector CSIRT and ISAC sharing, often the highest-value source; see [CSIRT community layer](csirt-community.md) | Operational/Tactical |
-| Open source | Vendor research blogs, ATT&CK group/software entries, exploitation trackers such as CISA KEV | Operational/Tactical |
+| Open source | Vendor research blogs, ATT&CK group/software entries, exploitation trackers such as CISA KEV and ENISA's EUVD | Operational/Tactical |
 | Sharing platforms | MISP-class platforms with community feeds, TLP-governed | Tactical |
 | Internal, and underrated | Your own incidents, hunt findings, honeypot/canary hits, phishing reports | All; the only intel guaranteed relevant |
 | Commercial, optional | Finished intel/actor tracking subscriptions | Strategic/Operational |

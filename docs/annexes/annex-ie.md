@@ -17,7 +17,7 @@
 
 | Field | Value |
 |-------|-------|
-| Implementing law | National Cyber Security Bill. The General Scheme was published in 2024, but the bill itself had not been published as of early October 2026; it is a priority on the government's autumn 2026 legislative programme. The European Commission referred the country to the Court of Justice of the EU on 9 July 2026 for failing to transpose NIS2. |
+| Implementing law | National Cyber Security Bill. The General Scheme was published in 2024, but the bill itself had not been published as of early October 2026; it is a priority on the government's autumn 2026 legislative programme. The European Commission referred the country to the Court of Justice of the EU on 8 July 2026 for failing to transpose NIS2. |
 | Competent authority | Expected: NCSC Ireland as lead competent authority, plus sector regulators |
 | National CSIRT / reporting | CSIRT-IE at NCSC |
 | Official starting point | https://www.ncsc.gov.ie |

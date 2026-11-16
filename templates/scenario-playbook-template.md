@@ -101,7 +101,7 @@
 ## 8. Debrief
 
 - Temporary containment actions, accounts and monitoring removed or made permanent: [list]
-- Review held: [date], actions tracked in: [link]
+- Review held: [date], against the decision log: [link]; actions tracked in: [link]
 - Changes to this playbook since the last incident or exercise: […]
 
 ## Baselines to draw on

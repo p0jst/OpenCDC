@@ -5,7 +5,7 @@
 **Build and run the team that detects and responds to cyber attacks.**<br>
 Written for NIS2, DORA and GDPR · All 27 EU member states · Free to use and adapt
 
-[![Version](https://img.shields.io/badge/version-v1.4.2-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.5.0-blue)](CHANGELOG.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Website](https://img.shields.io/badge/website-opencdc.org-123a6d)](https://opencdc.org/)
 
@@ -24,7 +24,7 @@ Standards say what good security covers, and NIS2 says what you must do. Neither
 </picture>
 </p>
 
-Level 2 in every function covers what NIS2 requires, criterion by criterion. Everything is vendor-neutral, and every statement is marked as law, standard or the author's judgement.
+The Level 2 criteria hold the minimum form of each NIS2 measure, criterion by criterion. That is a floor to build on, not a compliance verdict. Everything is vendor-neutral, and every statement is marked as law, standard or the author's judgement.
 
 ## Where to start
 
@@ -113,7 +113,7 @@ mkdocs serve
 
 Corrections, national-law mappings and field feedback are welcome; see [Contributing](CONTRIBUTING.md). Report security problems in the site or the tools privately, as described in [Security](SECURITY.md).
 
-To cite: *Open CDC Framework (OCDF), version 1.4.2, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.*
+To cite: *Open CDC Framework (OCDF), version 1.5.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.*
 
 ## About
 

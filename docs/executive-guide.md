@@ -144,6 +144,8 @@ Few numbers, each tied to a decision. Report quarterly:
 | Open actions from incidents and assessments, and how many are overdue | Whether lessons are acted on |
 
 Avoid alert counts and "attacks blocked": they measure noise, not protection.
+
+When an incident review reaches the board, ask how the decisions were judged. A review that grades decisions by their outcome teaches the team to wait for certainty, and waiting is what an attacker needs. Ask for the review to be held against the incident's decision log: what was known at each point, and whether the choice was reasonable on that. See [reviewing decisions, not outcomes](recover.md#reviewing-decisions-not-outcomes).
 The full catalogue is in the [metrics template](../templates/metrics-kpi-template.md).
 
 ## 9. Ten questions to ask your SOC

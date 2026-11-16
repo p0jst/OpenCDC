@@ -53,10 +53,15 @@ file and send it, to benchmark@opencdc.org.
 - **Contributions are not anonymous to the maintainer.** They arrive by email,
   so the maintainer sees who sent them. They are anonymous in what is published:
   no figure names or describes a single organisation.
-- **Your email address** stays only in the benchmark mailbox, which is
-  access-controlled. It is never stored with the contribution data or published.
+- **Your email address** stays in the mailbox it arrives in. The address
+  benchmark@opencdc.org forwards to the maintainer's personal mailbox; nobody
+  else has access. It is never stored with the contribution data or published.
   The mailbox is what lets you ask, from the same address, for your contribution
   to be removed; the email goes with it.
+- **A contribution is sensitive before it is aggregated.** It shows which
+  criteria an organisation has not met, and email is not encrypted end to end.
+  Send it from an address you are content to link to it, and leave it out if
+  your organisation would not send that list to an outside party.
 - **The aggregate is published** as [`tools/benchmark.json`](https://github.com/p0jst/OpenCDC/blob/main/tools/benchmark.json)
   under CC BY 4.0, and recomputed as contributions arrive. The script that
   produces it, [`benchmark/aggregate.py`](https://github.com/p0jst/OpenCDC/blob/main/benchmark/aggregate.py),

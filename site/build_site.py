@@ -63,6 +63,11 @@ def main():
     cname = ROOT / "site" / "CNAME"
     if cname.exists():
         shutil.copy2(cname, SRC / "CNAME")
+    # security.txt, RFC 9116. MkDocs skips dot-directories unless mkdocs.yml
+    # re-includes them, which exclude_docs does for /.well-known/.
+    wk = ROOT / "site" / ".well-known"
+    if wk.exists():
+        shutil.copytree(wk, SRC / ".well-known")
     n = sum(1 for _ in SRC.rglob("*") if _.is_file())
     print(f"staged {n} files into {SRC.relative_to(ROOT)}/")
 

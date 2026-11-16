@@ -43,6 +43,8 @@ Actions requiring approval from [ROLE]:
 - [ ] External statutory notifications, with approval by legal and the DPO, and execution by the CDC
 - [ ] Engagement of external DFIR retainer
 
+A decision taken within this authority, on the information available at the time and recorded in the incident's decision log, is supported by management whatever the outcome. Post-incident reviews judge the decision against what was known when it was made, not against how the incident ended.
+
 ## 5. Reporting line & governance
 - CDC Director reports to: …
 - Executive reporting: [cadence] to [body], covering maturity, incidents, risk and KPIs.

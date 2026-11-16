@@ -78,7 +78,7 @@ This split is the order of work in [Running the CDC](cdc-operations.md) §4: aut
 
 Speed is easy to measure and easy to buy with shortcuts. Decide how quality is checked as well:
 
-- **Peer review on a sample.** A fixed share of closed false positives, for example five per analyst per month, reviewed by a colleague against the triage record. In a one-person function, ask the provider or a peer organisation to review a sample each quarter.
+- **Peer review on a sample.** A fixed share of closed false positives, for example five per analyst per month, reviewed by a colleague against the triage record. In a one-person function, ask the provider or a peer organisation to review a sample each quarter. Judge each closure against what the triage record shows was known when it was made. A reasonable closure that later proves wrong is a tuning or data question, not an analyst error.
 - **Reopened cases.** The rate of cases stopped or deferred at triage that come back as incidents, already in the [metrics catalogue](../templates/metrics-kpi-template.md).
 - **Time-box adherence.** Deferred cases that passed their next decision date without a decision. Each one is a potential problem with the legal clocks, which start at awareness.
 - **Record completeness.** Share of closed alerts with all eight questions answered or explicitly marked not applicable.
