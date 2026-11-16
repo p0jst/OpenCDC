@@ -174,6 +174,13 @@
 .md-tabs {
   background-color: var(--ocdf-eu-dark);
 }
+/* Centred, to line up with the centred landing page rather than the left
+   edge of the text column, which reads as off-centre on wide screens. */
+.md-tabs__list {
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+}
 .md-tabs__link {
   font-size: 0.72rem;
   letter-spacing: 0.02em;
@@ -281,7 +288,9 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .ocdf-hero {
   position: relative;
   text-align: center;
-  margin: -1.55rem calc(-50vw + 50%) 2.6rem;
+  /* -2.5rem cancels the theme's space above the content (1.5rem margin,
+     0.6rem padding and a 0.4rem spacer), so the band meets the tab bar. */
+  margin: -2.5rem calc(-50vw + 50%) 2.6rem;
   padding: 3.4rem calc(50vw - 50%) 2.8rem;
   background: var(--ocdf-hero-wash);
   border-bottom: 1px solid var(--ocdf-rule);
@@ -805,6 +814,13 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .ocdf-hero ~ h2,
 .md-typeset .ocdf-hero ~ h2 + p {
   text-align: center;
+}
+/* A full-width rule under a centred heading, just below the hero's own edge,
+   boxed the first heading in. The landing page's sections are set apart by
+   space instead. */
+.md-typeset .ocdf-hero ~ h2 {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 .md-typeset .ocdf-hero ~ h2 + p {
   max-width: 40rem;
