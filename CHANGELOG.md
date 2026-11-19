@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.6.0 — 2026-11-19
+
+A new name and a clearer way in. No maturity criterion is added, moved or reworded, so assessments made under v1.5 compare directly.
+
+- **Renamed to OpenCDC.** The project was the Open CDC Framework, OCDF. It now goes by OpenCDC everywhere, matching the domain and the repository, and the word "framework" is no longer used for it. Other organisations' names, such as the NIST Cybersecurity Framework and ENISA's European Cybersecurity Skills Framework, are unchanged. The OCDF source label is now OpenCDC, the Framework tab is now Reference, and the website's link-preview card carries the new name. Cite it as "OpenCDC, version 1.6.0". Browser storage keys, downloaded file names, benchmark fields and the site's own style names now say opencdc as well. Assessments saved in a browser before v1.6.0 are not carried over; import a file exported earlier, or score again.
+- **Release rules.** PUBLISHING.md now says when a major, minor or patch release is warranted, and that minor releases come at most once a month.
+
+A clearer way in. Readers could not tell whether a page explained OpenCDC or asked them to do something, and the footer's next link left the seven steps at the charter and ran on into the template catalogue.
+
+- **New: [Find your route](docs/find-your-route.md).** Five questions to answer first, on why now, team size, what exists, coverage hours and the twelve-month ambition, and three trade-offs to decide on purpose. They lead to one of three routes: a small IT team, a SOC or CDC being started, or one already running, each with its steps in order and what to skip for now.
+- **New: [The build path](docs/build-path.md).** The seven steps on one page, each with what you decide, what you leave with, the effort, the page to use and when it is done.
+- **Build and Learn in the menu.** Start is split in two: Build holds the route, the build path and the step pages; Learn holds OpenCDC on one page, the worked example, the executive guide and the introduction. The front page's main button is now Find your route, and the role cards for small teams, new SOCs and running SOCs point to their route.
+- **Each step page says which step it is.** The seven pages that do the steps carry a line under the title and a next-step link at the end, added when the site is built so the downloadable templates stay clean. Clicking on from the charter now leads to step 4, not to the incident response plan template.
+- **"Start here" is renamed "The first 90 days",** to stop it reading as the place to begin.
+- **Level 2 and the law.** Four pages said that Level 2 in every function *is* the legal floor. They now say it is the first target, because it holds the minimum form of each NIS2 measure, matching the crosswalk and the v1.5.0 front page.
+- **Annexes.** France: the Assemblée nationale adopted the transposition bill on 17 November 2026; a joint committee of both chambers comes next, and the law is not yet in force.
+- **Security.** The skill matrix now checks imported snapshots and saved data before using them, as the maturity assessment already did; a damaged or crafted file could leave the tool unable to load. The site no longer publishes the repository's build scripts.
+- **One next link per step.** The seven step pages no longer show the theme's previous and next links, which followed the menu and pointed elsewhere than the step box. OpenCDC on one page ends with a way into Find your route.
+- **Smaller fixes.** The benchmark's size band reads 1000–4999, as in the tool. CONTRIBUTING no longer promises translations. The security policy is published on the website, so links to it work there too.
+- **Earlier entries** below say *framework* and *OCDF*; they mean OpenCDC, and are left as they were written.
+
 ## v1.5.0 — 2026-11-16
 
 A minor release from a practitioner review of the framework and the website. No maturity criterion is added, moved or reworded, so assessments made under v1.4 compare directly.

@@ -1,10 +1,10 @@
 # Roles & competences, built on the ENISA ECSF
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Roles built on the ENISA European Cybersecurity Skills Framework; the CDC mapping and career paths are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Roles built on the ENISA European Cybersecurity Skills Framework; the CDC mapping and career paths are OpenCDC's.</p>
 
 ## Why ECSF as the backbone
 
-This framework's role definitions, job descriptions and career paths are anchored in the European Cybersecurity Skills Framework (ECSF), ENISA's set of 12 cybersecurity professional role profiles, each defined with a mission, tasks, deliverables, key skills, key knowledge, and e-CF competences linked to EQF learning levels. Using ECSF gives a European CDC three concrete advantages:
+OpenCDC's role definitions, job descriptions and career paths are anchored in the European Cybersecurity Skills Framework (ECSF), ENISA's set of 12 cybersecurity professional role profiles, each defined with a mission, tasks, deliverables, key skills, key knowledge, and e-CF competences linked to EQF learning levels. Using ECSF gives a European CDC three concrete advantages:
 
 1. **A common language.** It is shared with HR, recruiters, training providers and certification bodies across the EU, where many certifications and university programmes are already mapped to ECSF profiles.
 2. **Ready-made building blocks.** Use them for job descriptions; see the [ECSF job description template](../templates/job-description-template.md).
@@ -20,7 +20,7 @@ Chief Information Security Officer (CISO) · Cyber Incident Responder · Cyber L
 
 A CDC job title rarely equals exactly one ECSF profile. Most operational roles are a primary profile plus secondary elements. That is by design; the ECSF User Manual explicitly supports composing profiles.
 
-| CDC role in this framework | Primary ECSF profile | Secondary elements | Framework capabilities |
+| CDC role in OpenCDC | Primary ECSF profile | Secondary elements | OpenCDC capabilities |
 |---------------------------|----------------------|--------------------|------------------------|
 | SOC Analyst, Tier 1/2 | **Cyber Incident Responder** | Cyber Threat Intelligence Specialist | DE-3, RS-1..4 |
 | Detection Engineer | **Cybersecurity Implementer** | Cyber Incident Responder, Researcher | DE-1, DE-2, DE-6 |
@@ -56,9 +56,9 @@ Career paths follow profile adjacency: Tier 1 → Tier 2, deepening Incident Res
 
 ## Team skill mapping
 
-The skills matrix above is a per-person exercise. To turn it into a team picture showing where the gaps are, who can mentor whom, and what to look for in your next hire, the framework ships a ready-made loop:
+The skills matrix above is a per-person exercise. To turn it into a team picture showing where the gaps are, who can mentor whom, and what to look for in your next hire, OpenCDC ships a ready-made loop:
 
-1. **Distribute** the self-assessment sheet to every team member: [`templates/skill-self-assessment.xlsx`](../templates/skill-self-assessment.xlsx), or the [CSV version](../templates/skill-self-assessment.csv) for plain-text environments. It covers 47 skills in 8 domains, being the six CSF functions plus *Platform & Automation* and *Professional Skills*, rated on the framework scale of 0 none · 1 basic · 2 proficient · 3 can mentor, plus a "want to grow?" flag per skill. Filling it in takes about 15 minutes. Skill IDs have two digits, such as `GV-01`; they are grouped by function but are not the capability IDs such as `GV-1` used elsewhere in the framework.
+1. **Distribute** the self-assessment sheet to every team member: [`templates/skill-self-assessment.xlsx`](../templates/skill-self-assessment.xlsx), or the [CSV version](../templates/skill-self-assessment.csv) for plain-text environments. It covers 47 skills in 8 domains, being the six CSF functions plus *Platform & Automation* and *Professional Skills*, rated on OpenCDC scale of 0 none · 1 basic · 2 proficient · 3 can mentor, plus a "want to grow?" flag per skill. Filling it in takes about 15 minutes. Skill IDs have two digits, such as `GV-01`; they are grouped by function but are not the capability IDs such as `GV-1` used elsewhere in OpenCDC.
 2. **Collect** the returned files and upload them into [`tools/skill-matrix.html`](../tools/skill-matrix.html), the interactive Team Skill Matrix, Tool 02. Uploads are cumulative: each file adds or updates one person, so re-running the exercise simply overlays the new answers on the old ones. All data stays in the manager's browser; nothing is sent anywhere.
 3. **Read** the four views the tool produces:
     - **Team heatmap** — who can do what, per-skill coverage, *bus factor 1* flags where only one person is proficient, and *nobody proficient* flags on skills the team's roles need;
@@ -87,4 +87,4 @@ Hiring hook: a skill flagged *nobody proficient*, or *bus factor 1* on a critica
 - European e-Competence Framework (e-CF, EN 16234-1) and European Qualifications Framework (EQF), the competence and level systems ECSF builds on.
 - ENISA, *Cybersecurity roles and skills for NIS2 essential and important entities: mapping NIS2 obligations to ECSF*, June 2025. https://www.enisa.europa.eu/publications/cybersecurity-roles-and-skills-for-nis2-essential-and-important-entities
 
-*Open CDC Framework, licensed CC BY 4.0. ECSF © ENISA, referenced with attribution; ENISA does not endorse this project.*
+*OpenCDC, licensed CC BY 4.0. ECSF © ENISA, referenced with attribution; ENISA does not endorse this project.*

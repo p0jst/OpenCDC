@@ -2,17 +2,17 @@
 
 !!! warning "Fictional"
     Exempla Parcel A/S does not exist. The organisation, people and numbers below
-    are invented to show the framework applied end to end. Use the structure; replace
+    are invented to show OpenCDC applied end to end. Use the structure; replace
     every figure with your own.
 
-The rest of the framework says what to do. This page shows what it looks like
+The rest of OpenCDC says what to do. This page shows what it looks like
 when one organisation does it: the decisions, the documents, and the first
 quarter's results.
 
-<div class="ocdf-example" markdown>
+<div class="opencdc-example" markdown>
 
-<div class="ocdf-example__before" markdown>
-<p class="ocdf-example__label">Before</p>
+<div class="opencdc-example__before" markdown>
+<p class="opencdc-example__label">Before</p>
 
 - Security spread across four people, with no shared plan
 - No agreement on who may contain what
@@ -20,10 +20,10 @@ quarter's results.
 - Nobody named for NIS2 reporting
 </div>
 
-<div class="ocdf-example__arrow" aria-hidden="true"></div>
+<div class="opencdc-example__arrow" aria-hidden="true"></div>
 
-<div class="ocdf-example__after" markdown>
-<p class="ocdf-example__label">After 90 days</p>
+<div class="opencdc-example__after" markdown>
+<p class="opencdc-example__label">After 90 days</p>
 
 - A signed charter with containment authority
 - A daytime team, and a provider for nights
@@ -116,7 +116,7 @@ Needs approval first:
 
 ## The first 90 days
 
-Following [Start here](start-here.md), with named owners.
+Following [the first 90 days](start-here.md), with named owners.
 
 | Weeks | What happened | Owner |
 |-------|---------------|-------|
@@ -172,7 +172,7 @@ due dates filled in.
 | Respond | 2 | 3 |
 | Recover | 1 | 2 |
 
-Govern, Identify and Recover sit below Level 2, which for a NIS2 entity is the legal floor: each has a measure the law requires that is not yet in place even in basic form. Those actions go first. An excerpt of the action plan, seven of the open actions:
+Govern, Identify and Recover sit below Level 2, where the minimum form of each NIS2 measure sits: each has a measure the law requires that is not yet in place even in basic form. Those actions go first. An excerpt of the action plan, seven of the open actions:
 
 | Criterion missing | Status | Evidence so far | Owner | Due |
 |-------------------|--------|-----------------|-------|-----|
@@ -211,4 +211,4 @@ recommends.
 - The two incidents were detected after six hours, not minutes. Fast containment
   saved them; detection speed is where the next quarter's engineering goes.
 
-*Open CDC Framework, licensed CC BY 4.0. All organisations, people and figures on this page are fictional.*
+*OpenCDC, licensed CC BY 4.0. All organisations, people and figures on this page are fictional.*

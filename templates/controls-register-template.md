@@ -2,7 +2,7 @@
 
 > Keeps the documentation alive: every key artefact gets an owner, a frequency, and an approver from OUTSIDE the CDC's reporting line. Evidence of each executed review is stored with the control. See [CSIRT community layer](../docs/csirt-community.md) §4.
 
-| Control ID | What is verified | Framework ref | SIM3 ref, optional | Frequency | CDC owner | Independent approver | Last done | Evidence |
+| Control ID | What is verified | OpenCDC ref | SIM3 ref, optional | Frequency | CDC owner | Independent approver | Last done | Evidence |
 |-----------|------------------|---------------|---------------------|-----------|-------------|----------------------|-----------|----------|
 | C-01 | Charter: mandate, scope, authority current and signed | GV-1 | O-1/O-3 | Semi-annual | | | | |
 | C-02 | Containment action catalogue accurate & tested | RS-4, catalogue template | O-3 | Semi-annual | | | | |
@@ -16,4 +16,4 @@
 | C-10 | Detection validation coverage, % rules fired in test | DE-6 | — | Quarterly | | | | |
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0. SIM3 © Open CSIRT Foundation; parameter references are for cross-audit convenience.*
+*Template from OpenCDC, licensed CC BY 4.0. SIM3 © Open CSIRT Foundation; parameter references are for cross-audit convenience.*

@@ -40,4 +40,4 @@ Registration and reporting through the NKSC's Cyber Security Information System 
 
 Tick "Lithuania" in `tools/regulatory-profile.html` to include this country's references under the `lt-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

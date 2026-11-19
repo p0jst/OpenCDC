@@ -1,7 +1,7 @@
 # CDC maturity self-assessment checklist
 
 <!-- web-only:begin
-<div class="ocdf-cta ocdf-cta--left" markdown>
+<div class="opencdc-cta opencdc-cta--left" markdown>
 [Open the interactive self-assessment](../tools/maturity-assessment.html){ .md-button .md-button--primary }
 [Get the checklist to fill in offline](https://github.com/p0jst/OpenCDC/blob/main/assessments/maturity-self-assessment.md){ .md-button }
 </div>

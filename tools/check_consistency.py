@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check that the framework's duplicated data has not drifted apart.
+"""Check that OpenCDC's duplicated data has not drifted apart.
 
 Some content necessarily exists in more than one file, because the browser tools
 must work as single files without a server. This script fails the site build if

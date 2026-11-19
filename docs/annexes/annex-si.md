@@ -40,4 +40,4 @@ URSIV supervises; SI-CERT receives incident notifications.
 
 Tick "Slovenia" in `tools/regulatory-profile.html` to include this country's references under the `si-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

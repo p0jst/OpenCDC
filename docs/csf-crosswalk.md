@@ -1,18 +1,17 @@
 # NIST CSF 2.0 Crosswalk
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Categories from NIST CSF 2.0; the mapping to capabilities is this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Categories from NIST CSF 2.0; the mapping to capabilities is OpenCDC's.</p>
 
-OCDF takes its six functions from NIST CSF 2.0, but breaks each function into its
+OpenCDC takes its six functions from NIST CSF 2.0, but breaks each function into its
 own capabilities, `GV-1` to `RC-6`, rather than reusing the CSF's 22 categories.
-The IDs look alike and mean different things: OCDF's `PR-1` is a capability,
+The IDs look alike and mean different things: OpenCDC's `PR-1` is a capability,
 CSF's `PR.AA` is a category. This page maps one onto the other, so an assessment
 in either language can be read in the other.
 
-The mapping is at category level. CSF subcategories are finer than OCDF
-capabilities, and a subcategory-level mapping would suggest a precision the
-framework does not claim. Every OCDF capability appears at least once below.
+The mapping is at category level. CSF subcategories are finer than OpenCDC
+capabilities, and a subcategory-level mapping would suggest a precision OpenCDC does not claim. Every OpenCDC capability appears at least once below.
 
-| CSF 2.0 category | What it covers | OCDF capabilities |
+| CSF 2.0 category | What it covers | OpenCDC capabilities |
 |------------------|----------------|-------------------|
 | **GV.OC** Organizational Context | Mission, stakeholders, legal and regulatory requirements, critical services | GV-1, GV-2, ID-3 |
 | **GV.RM** Risk Management Strategy | Risk appetite, tolerance and the strategy that applies them | GV-2 |
@@ -40,18 +39,18 @@ framework does not claim. Every OCDF capability appears at least once below.
 ## Using it
 
 - **Arriving with a CSF assessment?** Its category results are a starting
-  hypothesis for the OCDF criteria under the mapped capabilities. Carry the
+  hypothesis for the OpenCDC criteria under the mapped capabilities. Carry the
   evidence across and score the criteria directly, as for SOC-CMM in the
   [maturity model](maturity-model.md#reusing-an-existing-soc-cmm-or-sim3-assessment).
-- **Reporting to someone who speaks CSF?** Report the OCDF function levels, which
+- **Reporting to someone who speaks CSF?** Report the OpenCDC function levels, which
   are the CSF functions, and use this table when they ask where a category sits.
 - **Profiles.** CSF 2.0 builds current and target *profiles* from categories; an
-  OCDF self-assessment with targets per function is the same idea at function
+  OpenCDC self-assessment with targets per function is the same idea at function
   level.
 
 ## Incident handling models
 
-OCDF structures incident handling on the DAIR waypoints, described in [RESPOND](respond.md). DAIR's own mapping to CSF 2.0 places verification and triage under DETECT and the debrief under RECOVER. OCDF follows the CSF text instead, where declaring an incident is DE.AE-08, triage and validation are RS.MA-02, prioritisation is RS.MA-03, root cause analysis is RS.AN-03, containment and eradication are RS.MI-01 and RS.MI-02, restoration and the declared end of recovery are RC.RP-01 to RC.RP-06, and improvement from incidents and the maintained response plan sit under ID.IM.
+OpenCDC structures incident handling on the DAIR waypoints, described in [RESPOND](respond.md). DAIR's own mapping to CSF 2.0 places verification and triage under DETECT and the debrief under RECOVER. OpenCDC follows the CSF text instead, where declaring an incident is DE.AE-08, triage and validation are RS.MA-02, prioritisation is RS.MA-03, root cause analysis is RS.AN-03, containment and eradication are RS.MI-01 and RS.MI-02, restoration and the declared end of recovery are RC.RP-01 to RC.RP-06, and improvement from incidents and the maintained response plan sit under ID.IM.
 
 For European organisations the CSF is voluntary. What binds is NIS2 Art. 20, 21 and 23 and, where they apply, DORA and CER; the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) maps those to the same capabilities.
 
@@ -60,4 +59,4 @@ For European organisations the CSF is voluntary. What binds is NIS2 Art. 20, 21 
 - NIST, *The NIST Cybersecurity Framework (CSF) 2.0*, NIST CSWP 29, February 2024. https://doi.org/10.6028/NIST.CSWP.29
 - Joshua Wright, *Dynamic Incident Response*, SANS Institute, 2026, chapter 20. https://dynamicincidentresponse.com
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

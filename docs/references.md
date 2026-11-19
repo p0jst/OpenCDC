@@ -1,6 +1,6 @@
 # References & credits
 
-This framework synthesises and builds upon the following publicly available works. **OCDF is an independent community project and is not endorsed by, affiliated with, or approved by any of the organisations below.**
+OpenCDC synthesises and builds upon the following publicly available works. **OpenCDC is an independent community project and is not endorsed by, affiliated with, or approved by any of the organisations below.**
 
 ## Primary framework backbone
 
@@ -92,7 +92,7 @@ SANS survey and white-paper findings are used as context and data points, not as
 
 ## Other
 
-- CIS, *CIS Critical Security Controls* and *CIS Benchmarks*. The Implementation Groups pattern inspired OCDF's tier overlay. https://www.cisecurity.org
+- CIS, *CIS Critical Security Controls* and *CIS Benchmarks*. The Implementation Groups pattern inspired OpenCDC's tier overlay. https://www.cisecurity.org
 - Sigma, a generic signature format for SIEM detections; pySigma converters. https://github.com/SigmaHQ/sigma
 - MITRE ATT&CK Navigator, for coverage layers. https://mitre-attack.github.io/attack-navigator/
 - MITRE ATLAS, *Adversarial Threat Landscape for Artificial-Intelligence Systems*. https://atlas.mitre.org
@@ -102,13 +102,13 @@ SANS survey and white-paper findings are used as context and data points, not as
 - ENISA, European Vulnerability Database, EUVD, established under NIS2 Art. 12. https://euvd.enisa.europa.eu
 - NIST, *NIST Updates NVD Operations to Address Record CVE Growth*, 15 April 2026. https://www.nist.gov/itl/nvd
 - MISP Project. https://www.misp-project.org
-- ISO/IEC 27000-series, *Information security management systems*, covering vocabulary, ISMS requirements and controls. https://www.iso.org. ISO standards are paywalled; this framework references concepts only.
+- ISO/IEC 27000-series, *Information security management systems*, covering vocabulary, ISMS requirements and controls. https://www.iso.org. ISO standards are paywalled; OpenCDC references concepts only.
 - **IBM Plex Sans / IBM Plex Mono** — the typefaces used by this website and its interactive tools. © 2019 IBM Corp., licensed under the SIL Open Font License 1.1. Self-hosted from `assets/fonts/` so that no visitor request reaches a third-party font CDN; licence text in `assets/fonts/LICENSE-IBM-Plex.txt`. https://github.com/IBM/plex
 - Donn B. Parker, *Fighting Computer Crime: A New Framework for Protecting Information*, Wiley, 1998, source of the Parkerian Hexad.
 
-## How to cite this framework
+## How to cite OpenCDC
 
-> Open CDC Framework (OCDF), version 1.5.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
+> OpenCDC, version 1.6.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.
 
 ## Corrections
 

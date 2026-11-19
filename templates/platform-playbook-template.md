@@ -74,4 +74,4 @@
 
 - […]
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

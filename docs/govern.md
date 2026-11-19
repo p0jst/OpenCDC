@@ -8,7 +8,7 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## Core capabilities
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Function from NIST CSF 2.0; the capability breakdown and IDs are OpenCDC's.</p>
 
 | ID | Capability | Description |
 |----|-----------|-------------|
@@ -22,7 +22,7 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## CIA mapping
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -47,7 +47,7 @@ Establish the mandate, accountability, and decision-making structures that let t
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's criteria. Not a certification standard.</p>
 
 The criteria that score GOVERN are kept in one place for all six functions: the [maturity self-assessment, GOVERN](../assessments/maturity-self-assessment.md#govern), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 20 and Art. 21(2)(a), (d) and (f), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
@@ -80,4 +80,4 @@ The criteria that score GOVERN are kept in one place for all six functions: the 
 - DORA: Regulation (EU) 2022/2554. https://eur-lex.europa.eu/eli/reg/2022/2554/oj
 - GDPR: Regulation (EU) 2016/679. https://eur-lex.europa.eu/eli/reg/2016/679/oj
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

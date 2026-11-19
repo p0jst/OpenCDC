@@ -42,4 +42,4 @@ This role develops toward [Tier 2 / Detection Engineer / Threat Hunter / …] al
 [Salary range where required or wise · shift compensation · training days · retainer of external DFIR meaning no lone-wolf pressure · etc.]
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0. Built on the ENISA European Cybersecurity Skills Framework (ECSF). © ENISA, referenced with attribution.*
+*Template from OpenCDC, licensed CC BY 4.0. Built on the ENISA European Cybersecurity Skills Framework (ECSF). © ENISA, referenced with attribution.*

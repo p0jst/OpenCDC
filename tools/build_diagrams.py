@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the framework's diagrams as SVG files, one light and one dark copy each.
+"""Generate OpenCDC's diagrams as SVG files, one light and one dark copy each.
 
 The diagrams are code so that they stay editable, reviewable in a diff and
 consistent in style. Each one is written twice, for light and dark mode, and the
@@ -775,7 +775,7 @@ def log_priority(t):
 
 # ------------------------------------------------------- README: at a glance
 def at_a_glance(t):
-    s = Svg(760, 420, "OCDF at a glance",
+    s = Svg(760, 420, "OpenCDC at a glance",
             "Every capability is described three ways: what, in six functions; how much, by tier Essential, "
             "Standard or Advanced; and how well, on maturity levels 1 to 4. GOVERN spans the other five functions, "
             "IDENTIFY, PROTECT, DETECT, RESPOND and RECOVER, and lessons from RECOVER feed IDENTIFY. Underneath "

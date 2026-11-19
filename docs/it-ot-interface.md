@@ -1,8 +1,8 @@
 # The IT/OT interface
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span><span class="src-tag law">Law</span>The split of responsibilities and the boundary controls are this framework's and come from running a CDC for critical infrastructure; the Danish energy rules are paraphrased from BEK 260. Not legal advice.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span><span class="src-tag practitioner">Practitioner</span><span class="src-tag law">Law</span>The split of responsibilities and the boundary controls are OpenCDC's and come from running a CDC for critical infrastructure; the Danish energy rules are paraphrased from BEK 260. Not legal advice.</p>
 
-> **This is not an OT profile.** OCDF stays scoped to enterprise IT. This document defines what a CDC owns at the boundary to operational technology, and how it hands over to the people who run the plant, the grid or the network. It exists because the law does not split IT from OT, and because most attacks on OT arrive through IT. Everything below the IT/OT DMZ remains outside OCDF; use IEC 62443, NIST SP 800-82 and your vendors' procedures there.
+> **This is not an OT profile.** OpenCDC stays scoped to enterprise IT. This document defines what a CDC owns at the boundary to operational technology, and how it hands over to the people who run the plant, the grid or the network. It exists because the law does not split IT from OT, and because most attacks on OT arrive through IT. Everything below the IT/OT DMZ remains outside OpenCDC; use IEC 62443, NIST SP 800-82 and your vendors' procedures there.
 
 ## Why the boundary is the CDC's problem
 
@@ -10,7 +10,7 @@ Three facts put the boundary inside the CDC's scope, even when OT itself is not.
 
 - **The law regulates the entity, not a network.** NIS2 Art. 21 asks for measures that protect the network and information systems the entity uses to provide its services. For a utility, those are largely OT. In Denmark, the energy-sector act and BEK 260 make no IT/OT distinction at all; see [Danish energy sector](#danish-energy-sector-what-this-covers-and-what-it-does-not) below.
 - **The reporting clock does not care where the incident started.** The 24 h early warning runs from the moment the entity becomes aware. If the operator in the control room notices first, the clock is already running, and the CDC is usually the function that owns the report.
-- **Attacks cross the boundary from the IT side.** Identity, remote access, supplier connections, engineering workstations and the historian layer are the usual paths. Protecting those paths is ordinary CDC work, done with the capabilities OCDF already describes.
+- **Attacks cross the boundary from the IT side.** Identity, remote access, supplier connections, engineering workstations and the historian layer are the usual paths. Protecting those paths is ordinary CDC work, done with the capabilities OpenCDC already describes.
 
 A CDC that stops at the IT edge without saying so leaves management believing the regulated scope is covered. Write the boundary into the charter instead, per [GV-1](govern.md) and navigator question G2.
 
@@ -85,7 +85,7 @@ Start with a small set that fits the boundary's low noise. Traffic across a well
 - an engineering workstation running tools it does not normally run, or reaching the internet
 - a supplier account used by more than one person, or active after the supplier's work order closed
 
-Map them in [detection-as-code](detection-as-code-deep-dive.md) like any other rule. For techniques beyond the boundary, MITRE ATT&CK for ICS is the appropriate matrix; OCDF's ATT&CK coverage work covers the enterprise matrix only.
+Map them in [detection-as-code](detection-as-code-deep-dive.md) like any other rule. For techniques beyond the boundary, MITRE ATT&CK for ICS is the appropriate matrix; OpenCDC's ATT&CK coverage work covers the enterprise matrix only.
 
 ## Escalation and joint incident handling
 
@@ -131,7 +131,7 @@ Run at least one joint exercise a year in which an IT incident threatens to cros
 
 Lov om styrket beredskab i energisektoren and BEK 260 apply to the whole entity. This document lets a CDC show which of the cyber requirements it meets at the boundary, and which must be met by OT operations or a specialist provider. The table covers the requirements summarised in the [Danish annex](annexes/annex-dk.md); it is not a complete reading of the order.
 
-| Requirement | Reference | Covered by OCDF with this document | Remains outside OCDF |
+| Requirement | Reference | Covered by OpenCDC with this document | Remains outside OpenCDC |
 |-------------|-----------|------------------------------------|----------------------|
 | Segmentation of supply-critical systems behind a DMZ or equivalent; physical separation at levels 4 and 5 | BEK 260 § 62 | Monitoring of the DMZ and conduits; the conduit register as evidence of what crosses | Segmentation design and the separation inside OT |
 | Real-time logging, monitoring and response at levels 4 and 5, with 13 months' retention and handover within 24 h | BEK 260 §§ 66–69 | IT and the boundary zone: log sources, detections, retention, response | Monitoring of the OT networks themselves |
@@ -152,7 +152,7 @@ If your CDC is the IT security service that receives logs under §§ 66–69, co
 - [ ] Containment catalogue extended with the boundary actions and their decision owners
 - [ ] One reporting owner per incident, and awareness time defined across the boundary
 - [ ] Joint IT/OT exercise held in the last 12 months, with OT decision-makers present
-- [ ] Energy sector: preparedness level known, and the split between OCDF and OT coverage recorded against BEK 260
+- [ ] Energy sector: preparedness level known, and the split between OpenCDC and OT coverage recorded against BEK 260
 
 ## Sources
 
@@ -164,4 +164,4 @@ If your CDC is the IT security service that receives logs under §§ 66–69, co
 - NIST SP 800-82 Rev. 3, *Guide to Operational Technology Security*: https://csrc.nist.gov/pubs/sp/800/82/r3/final
 - MITRE ATT&CK for ICS: https://attack.mitre.org/matrices/ics/
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

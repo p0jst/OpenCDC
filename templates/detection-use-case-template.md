@@ -43,4 +43,4 @@
 - **Review cadence:** every [6] months or on relevant threat-intel change
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0. ATT&CK® is a registered trademark of The MITRE Corporation.*
+*Template from OpenCDC, licensed CC BY 4.0. ATT&CK® is a registered trademark of The MITRE Corporation.*

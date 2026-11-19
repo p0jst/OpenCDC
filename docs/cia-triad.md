@@ -1,6 +1,6 @@
 # The CIA triad as a design lens
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>The triad is a long-standing security model, reflected in GDPR Art. 32; its use as a design lens is this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>The triad is a long-standing security model, reflected in GDPR Art. 32; its use as a design lens is OpenCDC's.</p>
 
 ## Why the triad still matters
 
@@ -51,4 +51,4 @@ The triad is a floor, not a ceiling. Where useful, extend with the ISO 27000 con
 - NIS2: Directive (EU) 2022/2555, Art. 6 definitions.
 - Donn B. Parker, *Fighting Computer Crime*, 1998, source of the Parkerian Hexad concept.
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

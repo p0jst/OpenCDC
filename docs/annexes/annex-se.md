@@ -40,4 +40,4 @@ MCF's regulations, published as MCFFS, detail registration and the security meas
 
 Tick "Sweden" in `tools/regulatory-profile.html` to include this country's references under the `se-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

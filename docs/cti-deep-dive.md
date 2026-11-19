@@ -6,7 +6,7 @@
 
 ## 1. The three levels and who each one serves
 
-Definitions vary across the industry; fix yours in writing. This framework uses:
+Definitions vary across the industry; fix yours in writing. OpenCDC uses:
 
 | Level | Time horizon | Core question | Primary consumers | Typical products |
 |-------|--------------|---------------|-------------------|------------------|
@@ -90,4 +90,4 @@ One person can run PIR-driven operational and tactical CTI part-time at S-tier i
 - MISP Project, an open source threat sharing platform. https://www.misp-project.org
 - SANS Institute, Rebekah Brown and Andreas Sfakianakis, *SANS 2026 Cyber Threat Intelligence Survey*, 2026. https://www.sans.org/research/cyber-threat-intelligence-report
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

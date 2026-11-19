@@ -1,31 +1,31 @@
 # Introduction & design principles
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's scope and design principles, built on NIST CSF 2.0.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's scope and design principles, built on NIST CSF 2.0.</p>
 
 ## Purpose
 
-This framework describes what a Cyber Defence Center (CDC) must be able to do, whether that capability is a 24/7 department or two people in IT who also handle security, how to build those capabilities from zero, and how to measure maturity over time. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
+OpenCDC describes what a Cyber Defence Center (CDC) must be able to do, whether that capability is a 24/7 department or two people in IT who also handle security, how to build those capabilities from zero, and how to measure maturity over time. It deliberately avoids naming commercial products: every capability can be met with open source, commercial, or hybrid tooling.
 
 ## Terminology
 
-The four terms below are the foundation; every other term the framework uses is explained in [OCDF on one page](one-page.md).
+The four terms below are the foundation; every other term OpenCDC uses is explained in [OpenCDC on one page](one-page.md).
 
-- **CDC** — a Cyber Defence Center: the organisational capability that governs, prevents, detects, responds to and recovers from cyber threats. We use CDC and SOC (Security Operations Center) interchangeably; "CDC" emphasises that the capability is broader than monitoring alone. The term names the function, not a department or a size: if your organisation calls it the IT-security team, or it is part of one person's job, the framework still applies. Where the text says "the CDC", read "whoever does this work for you". The organisational form only matters in [operating models](operating-models.md) and [roles & competences](roles-and-competences.md), and the [tiers](tiers.md) say how much applies at your size.
+- **CDC** — a Cyber Defence Center: the organisational capability that governs, prevents, detects, responds to and recovers from cyber threats. We use CDC and SOC (Security Operations Center) interchangeably; "CDC" emphasises that the capability is broader than monitoring alone. The term names the function, not a department or a size: if your organisation calls it the IT-security team, or it is part of one person's job, OpenCDC still applies. Where the text says "the CDC", read "whoever does this work for you". The organisational form only matters in [operating models](operating-models.md) and [roles & competences](roles-and-competences.md), and the [tiers](tiers.md) say how much applies at your size.
 - **NIST CSF 2.0** — the NIST Cybersecurity Framework version 2.0, published February 2024, organised into six functions: Govern, Identify, Protect, Detect, Respond, Recover.
 - **CIA triad** — Confidentiality, Integrity, Availability: the three classic security objectives that every control ultimately serves.
 - **Essential and important entities** — the two categories of organisations in scope of the EU NIS2 Directive.
 
 ## Scope boundary: IT, not OT/telco
 
-This framework is written for enterprise IT security operations. OT/ICS environments, where availability and physical safety dominate and active scanning or host isolation can be hazardous, and telco core networks, separately regulated in most member states, require different technical approaches. Do not apply the PROTECT/DETECT/RESPOND content to those domains unadapted. The governance and maturity concepts transfer; the technical guidance does not. See [About](../ABOUT.md) and [the IT/OT interface](it-ot-interface.md).
+OpenCDC is written for enterprise IT security operations. OT/ICS environments, where availability and physical safety dominate and active scanning or host isolation can be hazardous, and telco core networks, separately regulated in most member states, require different technical approaches. Do not apply the PROTECT/DETECT/RESPOND content to those domains unadapted. The governance and maturity concepts transfer; the technical guidance does not. See [About](../ABOUT.md) and [the IT/OT interface](it-ot-interface.md).
 
 ## Design principles
 
 1. **Standards-first.** The backbone is NIST CSF 2.0. Detection engineering references MITRE ATT&CK. Incident handling references NIST SP 800-61, the Dynamic Approach to Incident Response and FIRST/ENISA good practice. This maximises interoperability with auditors, regulators, and peer organisations.
-2. **CIA as the design lens.** Every capability in this framework states which legs of the CIA triad it protects, or that it is an enabler the others depend on, such as governance and exercises. For a technical control, if you cannot articulate what it does for Confidentiality, Integrity or Availability, question whether you need it.
-3. **EU-regulation aware.** Each function document contains an "EU regulatory hooks" section mapping capabilities to NIS2, DORA, GDPR and related obligations. The framework helps demonstrate compliance; it is not legal advice.
+2. **CIA as the design lens.** Every capability in OpenCDC states which legs of the CIA triad it protects, or that it is an enabler the others depend on, such as governance and exercises. For a technical control, if you cannot articulate what it does for Confidentiality, Integrity or Availability, question whether you need it.
+3. **EU-regulation aware.** Each function document contains an "EU regulatory hooks" section mapping capabilities to NIS2, DORA, GDPR and related obligations. OpenCDC helps demonstrate compliance; it is not legal advice.
 4. **People > Process > Technology, in that order.** Most SOC failures are organisational, not technical. Governance and staffing come before tooling in every build sequence.
-5. **Maturity is incremental.** The framework defines four maturity levels; see the [maturity model](maturity-model.md). Level 2 is achievable by a small team in months, not years.
+5. **Maturity is incremental.** OpenCDC defines four maturity levels; see the [maturity model](maturity-model.md). Level 2 is achievable by a small team in months, not years.
 6. **Vendor-neutral and open.** No product names in normative text. Community contributions of tooling examples belong in non-normative appendices.
 
 ## The greenfield build sequence
@@ -33,7 +33,7 @@ This framework is written for enterprise IT security operations. OT/ICS environm
 If you are building a CDC from the ground up, every function starts in the first
 90 days, in its minimum form, and then matures in the order of its dependencies:
 
-| Stream | First 90 days, the minimum | Then, to maturity | Framework docs |
+| Stream | First 90 days, the minimum | Then, to maturity | OpenCDC pages |
 |--------|---------------------------|-------------------|----------------|
 | Mandate | Signed charter with containment authority; regulatory applicability register | Risk integration, multi-year budget, executive reporting | Govern |
 | Visibility | Crown jewels agreed; priority log sources identified | Asset inventory accuracy, threat profile, risk assessment | Identify |
@@ -46,7 +46,7 @@ The reporting duty applies from the day an entity is in scope, so response and
 reporting cannot wait for detection to mature. The dependencies still shape the
 second column: you cannot detect what you cannot see, and you cannot measure
 coverage before detections exist. The week-by-week order is in
-[Start here](start-here.md).
+[The first 90 days](start-here.md).
 
 ## Dependency markers
 
@@ -58,7 +58,7 @@ A CDC delivers very little alone, and most stalled CDC programmes stall on anoth
 | [HARD] | Hard block. The capability cannot be delivered without another team's action or delivery: access, implementation, data, operation. | Name the owning team in the charter interfaces, agree an SLA, and define the escalation path through GOVERN when the SLA slips. |
 | [SOFT] | Soft block. External input improves quality or speed, but the CDC can proceed with a degraded result and retrofit. | Proceed, log the debt as an ID-7 improvement item, and revisit. |
 
-Two rules of use: first, every [HARD] on the critical path of the 90-day plan in [Start here](start-here.md) needs a named counterpart and an executive sponsor aware of it before week 1, because chasing access rights is the most common silent killer of new CDC timelines. Second, [GATE] entries belong in the charter, under authority §4 and interfaces §8, so the gatekeepers themselves have signed up to being gates.
+Two rules of use: first, every [HARD] on the critical path of the [90-day plan](start-here.md) needs a named counterpart and an executive sponsor aware of it before week 1, because chasing access rights is the most common silent killer of new CDC timelines. Second, [GATE] entries belong in the charter, under authority §4 and interfaces §8, so the gatekeepers themselves have signed up to being gates.
 
 ## How each function document is structured
 
@@ -73,10 +73,10 @@ Every function document, from Govern to Recover, follows the same layout:
 7. **External dependencies** — who outside the CDC this function depends on, marked [GATE]/[HARD]/[SOFT].
 8. **Sources** — credited references for that document.
 
-Sections that make claims carry a source label, **Law**, **Standard**, **Guidance**, **OCDF** or **Practitioner**, so you can see whether a statement comes from legislation, a published standard, recognised guidance, this framework's own design, or the author's experience. See [why trust this framework](trust.md).
+Sections that make claims carry a source label, **Law**, **Standard**, **Guidance**, **OpenCDC** or **Practitioner**, so you can see whether a statement comes from legislation, a published standard, recognised guidance, OpenCDC's own design, or the author's experience. See [why trust OpenCDC](trust.md).
 
 ## Attribution note
 
-This framework references and builds on the NIST Cybersecurity Framework 2.0, NIST Special Publications, ENISA publications, MITRE ATT&CK®, and FIRST resources. Full credits: [References & credits](references.md).
+OpenCDC references and builds on the NIST Cybersecurity Framework 2.0, NIST Special Publications, ENISA publications, MITRE ATT&CK®, and FIRST resources. Full credits: [References & credits](references.md).
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

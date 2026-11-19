@@ -67,8 +67,8 @@ def level(funcs, order, statuses, fid, strict):
 
 
 def validate(c, n_criteria):
-    if c.get("ocdf_benchmark") != 1:
-        return "not an OCDF benchmark contribution"
+    if c.get("opencdc_benchmark") != 1:
+        return "not an OpenCDC benchmark contribution"
     if c.get("criteria_set", 1) != CRITERIA_SET:
         return f"made against criteria set {c.get('criteria_set', 1)}; only set {CRITERIA_SET} is aggregated, so ask the contributor to re-score"
     s = c.get("statuses", "")

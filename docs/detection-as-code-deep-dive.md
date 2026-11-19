@@ -56,8 +56,8 @@ tags:
   - attack.persistence                       # ATT&CK tactic
   - attack.t1098.007                         # technique/sub-technique: Account
                                              # Manipulation: Additional Local or Domain Groups
-  - cia.integrity                            # OCDF: primary CIA objective
-  - tier.essential                           # OCDF tier tag (E/S/A)
+  - cia.integrity                            # OpenCDC: primary CIA objective
+  - tier.essential                           # OpenCDC tier tag (E/S/A)
 logsource:
   product: windows
   service: security
@@ -138,4 +138,4 @@ Common traps: counting a noisy, permanently-suppressed rule as coverage; mapping
 - MITRE ATT&CK, *Updates: April 2026*, the v19 release. https://attack.mitre.org/resources/updates/updates-april-2026/
 - SANS Institute, Erik Van Buggenhout and Stamatis Chatzimangou, *Rethinking Detection Engineering: A Practical, Threat-Informed Path Forward for Modern Security Teams*, February 2026. https://www.sans.org/white-papers/rethinking-detection-engineering-practical-threat-informed-path-forward-modern-security-teams
 
-*Open CDC Framework, licensed CC BY 4.0. ATT&CK® is a registered trademark of The MITRE Corporation.*
+*OpenCDC, licensed CC BY 4.0. ATT&CK® is a registered trademark of The MITRE Corporation.*

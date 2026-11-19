@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Registration via ACN portal; ACN determinations phase in minimum security requirements, with the baseline due by Oct 2026, built on the FNCS, Italy's national adaptation of the NIST CSF, so this framework maps naturally.
+Registration via ACN portal; ACN determinations phase in minimum security requirements, with the baseline due by Oct 2026, built on the FNCS, Italy's national adaptation of the NIST CSF, so OpenCDC maps naturally.
 
 ## Standard checklist for all countries
 
@@ -40,4 +40,4 @@ Registration via ACN portal; ACN determinations phase in minimum security requir
 
 Tick "Italy" in `tools/regulatory-profile.html` to include this country's references under the `it-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

@@ -6,7 +6,7 @@ Reduce the likelihood and blast radius of incidents through preventive controls.
 
 ## Core capabilities
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Function from NIST CSF 2.0; the capability breakdown and IDs are OpenCDC's.</p>
 
 | ID | Capability | Description |
 |----|-----------|-------------|
@@ -46,7 +46,7 @@ Patching still matters: many exploited vulnerabilities are first exploited weeks
 
 ### When findings outrun the patch cycle
 
-AI-assisted discovery is producing new vulnerabilities faster than a cycle of scan, ticket and monthly patch can absorb; NIST reports CVE submissions up 263% from 2020 to 2025. SANS calls the response VulnOps: vulnerability handling run as a continuous decision loop with named owners rather than as a ticket queue. What OCDF takes from it:
+AI-assisted discovery is producing new vulnerabilities faster than a cycle of scan, ticket and monthly patch can absorb; NIST reports CVE submissions up 263% from 2020 to 2025. SANS calls the response VulnOps: vulnerability handling run as a continuous decision loop with named owners rather than as a ticket queue. What OpenCDC takes from it:
 
 1. **Agree three paths in advance.** Each fix goes one way: patched automatically, tested then deployed, or decided by hand. A named person owns every decision on the third path and every exception.
 2. **Count real closure.** A finding moved to an exception or a risk acceptance is not closed. Report the exception queue next to the closure rate, so accepted risk cannot grow unseen.
@@ -55,7 +55,7 @@ AI-assisted discovery is producing new vulnerabilities faster than a cycle of sc
 
 ## CIA mapping
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -81,7 +81,7 @@ AI-assisted discovery is producing new vulnerabilities faster than a cycle of sc
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's criteria. Not a certification standard.</p>
 
 The criteria that score PROTECT are kept in one place for all six functions: the [maturity self-assessment, PROTECT](../assessments/maturity-self-assessment.md#protect), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(c), (e), (g), (h) and (j), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
@@ -119,4 +119,4 @@ The criteria that score PROTECT are kept in one place for all six functions: the
 - ENISA, *ENISA Threat Landscape 2026*, September 2026, covering 2025. https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026
 - ENISA, *NIS2 Technical Implementation Guidance* on Implementing Regulation (EU) 2024/2690, June 2025, with evidence examples and a mapping table. https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

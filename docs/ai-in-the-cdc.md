@@ -1,6 +1,6 @@
 # AI in the CDC
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>This framework's guidance on AI in security operations; the regulatory section is paraphrased law and marked as such.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span><span class="src-tag practitioner">Practitioner</span>OpenCDC's guidance on AI in security operations; the regulatory section is paraphrased law and marked as such.</p>
 
 > AI touches a CDC in three ways: as a tool the team uses, as a tool the adversary uses, and as a set of systems the organisation runs and must protect. Most guidance covers only the first. This document covers all three, and says what changes with team size, because a two-person IT-security team and a 24/7 CDC should not adopt AI the same way.
 
@@ -100,7 +100,7 @@ For a team of one to three, AI is mostly something that arrives inside tools alr
 
 The tools available to defenders are available to attackers. For a CDC this mostly changes priorities, not processes.
 
-| What changes | What it means for the CDC | Where in the framework |
+| What changes | What it means for the CDC | Where in OpenCDC |
 |--------------|---------------------------|------------------------|
 | Phishing and pretexting are better written and better targeted. ENISA's 2025 threat landscape reports AI-supported phishing as more than 80 percent of observed social engineering | Detection based on poor language loses value. Weight sender, infrastructure and behaviour signals over content, and stop teaching users to look for spelling errors | PR-2, PR-9, DE-2 |
 | Voice and video can be faked convincingly | Payment changes, helpdesk resets and access requests need verification through a separate, known channel, never the one the request arrived on | PR-1, GV-3 |
@@ -109,7 +109,7 @@ The tools available to defenders are available to attackers. For a CDC this most
 
 ## AI systems as assets to protect
 
-AI systems the organisation runs are in scope for the CDC like any other system. This is enterprise IT and inside the framework's scope.
+AI systems the organisation runs are in scope for the CDC like any other system. This is enterprise IT and inside OpenCDC's scope.
 
 - **Inventory them under ID-1.** AI services in use, approved and unapproved, the agents and integrations built on them, and the API keys and tokens they hold. Unapproved use is a visibility gap, not only a policy breach.
 - **Classify what they hold.** Prompt and response logs often contain the most sensitive data the organisation has. Apply data classification under ID-2 and retention rules accordingly.
@@ -120,7 +120,7 @@ AI systems the organisation runs are in scope for the CDC like any other system.
 
 ## What the law says
 
-<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the text itself and your national law; not legal advice. Points marked as interpretation are this framework's reading.</p>
+<p class="src" markdown><span class="src-tag law">Law</span>Paraphrased from the legal texts. Check the text itself and your national law; not legal advice. Points marked as interpretation are OpenCDC's reading.</p>
 
 **AI Act, Regulation (EU) 2024/1689**, as amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744. A CDC that uses AI tools is normally a *deployer* under the Act; it becomes a *provider* only if it builds an AI system and puts it into service under its own name.
 
@@ -155,4 +155,4 @@ The maturity criteria do not score AI use, and AI is not a way to skip a level. 
 - SANS Institute, Christopher Crowley, *SANS 2026 SOC Report: A Decade of Evolution in Cyber Defense*, June 2026. https://www.sans.org/research/security-operations-report
 - SANS Institute, Rich Greene, *SANS 2026 State of Identity Threat Detection and Response*, March 2026. https://www.sans.org/research/identity-threat-detection-response-report
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

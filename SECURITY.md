@@ -1,6 +1,6 @@
 # Security
 
-OCDF is documentation, a static website and three browser tools. The tools run entirely in the browser and send nothing anywhere, but they do read files and links that users give them, so a flaw in them can matter.
+OpenCDC is documentation, a static website and three browser tools. The tools run entirely in the browser and send nothing anywhere, but they do read files and links that users give them, so a flaw in them can matter.
 
 ## Reporting a problem
 
@@ -10,4 +10,4 @@ Include what you found, how to reproduce it, and which version or page it affect
 
 ## Not a security problem
 
-Errors in the framework's content, such as a wrong legal reference or an outdated annex, are corrections, not vulnerabilities. Open a normal issue for those; see [Contributing](CONTRIBUTING.md).
+Errors in OpenCDC's content, such as a wrong legal reference or an outdated annex, are corrections, not vulnerabilities. Open a normal issue for those; see [Contributing](CONTRIBUTING.md).

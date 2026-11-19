@@ -1,12 +1,12 @@
 # About this project
 
-## Why this framework exists
+## Why OpenCDC exists
 
-I have worked in cyber security for critical infrastructure for many years. I started where many readers of this framework are now: as one of a few analysts in a large organisation, spending most of the time on reactive firefighting with little room to address root causes. After spending two years as the lead for DFIR I took over as manager, and over the following eighteen months the team developed from that starting point into a process-driven Cyber Defence Center with 24/7/365 in-house monitoring, organised as a capability-based, tierless SOC rather than a tiered one. Analysts own their cases end-to-end. The trade-offs behind that choice are the ones described in [Choosing your operating model](docs/operating-models.md), Model C.
+I have worked in cyber security for critical infrastructure for many years. I started where many readers of OpenCDC are now: as one of a few analysts in a large organisation, spending most of the time on reactive firefighting with little room to address root causes. After spending two years as the lead for DFIR I took over as manager, and over the following eighteen months the team developed from that starting point into a process-driven Cyber Defence Center with 24/7/365 in-house monitoring, organised as a capability-based, tierless SOC rather than a tiered one. Analysts own their cases end-to-end. The trade-offs behind that choice are the ones described in [Choosing your operating model](docs/operating-models.md), Model C.
 
-I have also served as both main and secondary sponsor in SIM3 assessments for national and international CSIRT teams pursuing TF-CSIRT certifications. Working on the sponsor side of maturity assessments across different teams shaped this framework's emphasis on living documentation, independent verification, and evidence over assertion; see [the CSIRT community layer](docs/csirt-community.md).
+I have also served as both main and secondary sponsor in SIM3 assessments for national and international CSIRT teams pursuing TF-CSIRT certifications. Working on the sponsor side of maturity assessments across different teams shaped OpenCDC's emphasis on living documentation, independent verification, and evidence over assertion; see [the CSIRT community layer](docs/csirt-community.md).
 
-Along the way I encountered most of the problems this framework now addresses. Among them:
+Along the way I encountered most of the problems OpenCDC now addresses. Among them:
 
 - as three analysts we treated firefighting as the normal state; the underlying problem was not workload but that no one had the mandate to pause triage long enough to fix root causes
 - we acquired technology before we had the mandate, and spent a year establishing authority we should have had in writing from the start
@@ -37,7 +37,7 @@ If you work in those domains, the GOVERN and maturity-model thinking still trans
 
 ## If you run critical infrastructure
 
-Most of my career was spent in critical infrastructure, so I know the uncomfortable part of the scope line above: for a utility, the crown jewels are usually OT, and a framework that stops at the IT boundary covers less of what keeps you awake. OCDF stays scoped to IT, so this is how I would use it in a CI setting.
+Most of my career was spent in critical infrastructure, so I know the uncomfortable part of the scope line above: for a utility, the crown jewels are usually OT, and guidance that stops at the IT boundary covers less of what keeps you awake. OpenCDC stays scoped to IT, so this is how I would use it in a CI setting.
 
 What applies as written:
 
@@ -49,20 +49,20 @@ What the CDC should own at the boundary is set out in [the IT/OT interface](docs
 
 What does *not* transfer: host-level response steps written for IT. Isolating, rebooting or live-imaging an OT asset can have physical consequences. For anything below the DMZ, use sector guidance such as IEC 62443 and ENISA's OT material, and your vendors' procedures.
 
-In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which scales its requirements over five preparedness levels and at levels 4 and 5 goes beyond the EU baseline, with real-time monitoring and response and physically separated networks for supply-critical systems; see the [Danish annex](docs/annexes/annex-dk.md). [The IT/OT interface](docs/it-ot-interface.md) turns this section into operating guidance: the conduit register, boundary detections, containment decision owners, reporting across the boundary, and a table of which BEK 260 requirements OCDF covers and which it does not.
+In Denmark, energy-sector entities also fall under *Lov om styrket beredskab i energisektoren*, which scales its requirements over five preparedness levels and at levels 4 and 5 goes beyond the EU baseline, with real-time monitoring and response and physically separated networks for supply-critical systems; see the [Danish annex](docs/annexes/annex-dk.md). [The IT/OT interface](docs/it-ot-interface.md) turns this section into operating guidance: the conduit register, boundary detections, containment decision owners, reporting across the boundary, and a table of which BEK 260 requirements OpenCDC covers and which it does not.
 
 ## Maintainers and adoption
 
-The GitHub account [p0jst](https://github.com/p0jst) is mine. Today the framework has one maintainer, and I would rather say that plainly than let it be discovered. What that means in practice:
+The GitHub account [p0jst](https://github.com/p0jst) is mine. Today OpenCDC has one maintainer, and I would rather say that plainly than let it be discovered. What that means in practice:
 
 - **Annexes are dated.** The national annexes carry a status block with the date they were last verified, who verified them and when the next review is due. An annex without a second reviewer says so.
-- **Releases are versioned.** The current version is on the front page and in the [changelog](CHANGELOG.md); cite the version when you cite the framework.
-- **Reviewers wanted.** A second reviewer per national annex, and practitioners willing to check the maturity criteria against their own CDC, would do more for the framework's credibility than anything I can write. See [Contributing](CONTRIBUTING.md).
+- **Releases are versioned.** The current version is on the front page and in the [changelog](CHANGELOG.md); cite the version when you cite OpenCDC.
+- **Reviewers wanted.** A second reviewer per national annex, and practitioners willing to check the maturity criteria against their own CDC, would do more for OpenCDC's credibility than anything I can write. See [Contributing](CONTRIBUTING.md).
 
-**Using OCDF?** If your team uses the framework and is willing to be listed, open an issue or a discussion. No organisation is listed here until it has asked to be.
+**Using OpenCDC?** If your team uses OpenCDC and is willing to be listed, open an issue or a discussion. No organisation is listed here until it has asked to be.
 
 ## How you can help
 
-Corrections, national annex updates, translations, and above all your own pitfalls; see [Contributing](CONTRIBUTING.md). If this framework spares your team one of the mistakes above, it has done its job.
+Corrections, national annex updates, translations, and above all your own pitfalls; see [Contributing](CONTRIBUTING.md). If OpenCDC spares your team one of the mistakes above, it has done its job.
 
 Frederik B. Krogsgaard, 2026

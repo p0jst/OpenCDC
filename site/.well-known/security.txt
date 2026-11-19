@@ -1,4 +1,4 @@
-# Security contact for opencdc.org and the Open CDC Framework tools.
+# Security contact for opencdc.org and OpenCDC tools.
 # Policy: SECURITY.md in the repository.
 Contact: https://github.com/p0jst/OpenCDC/security/advisories/new
 Expires: 2027-11-16T00:00:00.000Z

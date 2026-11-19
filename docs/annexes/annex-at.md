@@ -40,4 +40,4 @@ Austria received a Commission reasoned opinion in May 2025 before adoption; watc
 
 Tick "Austria" in `tools/regulatory-profile.html` to include this country's references under the `at-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

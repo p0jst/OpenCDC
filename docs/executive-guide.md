@@ -57,7 +57,7 @@ becoming aware of it. Your country's rules are in its
 
 ## 4. What "good" looks like
 
-<p class="src"><span class="src-tag ocdf">OCDF</span>This framework's targets. Set your own in GOVERN.</p>
+<p class="src"><span class="src-tag opencdc">OpenCDC</span>OpenCDC's targets. Set your own in GOVERN.</p>
 
 Maturity is measured per function on four levels. Typical targets:
 
@@ -120,16 +120,16 @@ See [operating models](operating-models.md).
 
 ## 7. A 12, 24 and 36-month roadmap
 
-<p class="src"><span class="src-tag ocdf">OCDF</span>The framework's recommended sequence.</p>
+<p class="src"><span class="src-tag opencdc">OpenCDC</span>OpenCDC's recommended sequence.</p>
 
 | By | Outcome |
 |----|---------|
 | **Month 3** | Signed charter with containment authority; operating model decided; critical systems agreed; identity and endpoint monitoring live; one reporting drill done against the 24-hour clock. |
-| **Month 12** | Level 2 in every function, which for a NIS2 entity is the legal floor. Detection built around your real threats; tuning routine running; incident plan exercised with management; restores tested for critical systems. |
+| **Month 12** | Level 2 in every function, the first target for a NIS2 entity because it holds the minimum form of each measure the law requires. Detection built around your real threats; tuning routine running; incident plan exercised with management; restores tested for critical systems. |
 | **Month 24** | Level 3 in the functions your targets require. Coverage and response times measured; hunting on a schedule; lessons from incidents tracked to closure. |
 | **Month 36** | Targets met and evidenced. Operating model reviewed, insourcing or changing provider as the data suggests; detections validated by testing. |
 
-The first 90 days are laid out week by week in [Start here](start-here.md).
+The first 90 days are laid out week by week in [The first 90 days](start-here.md).
 
 ## 8. What the board should see
 
@@ -161,4 +161,4 @@ The full catalogue is in the [metrics template](../templates/metrics-kpi-templat
 9. What single person's resignation would hurt us most?
 10. What is our maturity by function, what is the evidence, and what will it take to reach target?
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

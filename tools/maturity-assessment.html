@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OCDF — Maturity Self-Assessment</title>
+<title>OpenCDC — Maturity Self-Assessment</title>
 <style>
   /* IBM Plex, self-hosted — no third-party font requests. OFL-1.1;
      see assets/fonts/LICENSE-IBM-Plex.txt. Variable weight axis 100-700.
@@ -97,7 +97,7 @@
     --s0:#c9c4b8; --s1:#9aa7b4; --s2:#c98a1e; --s3:#123a6d; --s4:#1f6f43;
   }
   /* site nav — the tools are standalone pages outside the MkDocs theme,
-     so they carry their own way back to the framework */
+     so they carry their own way back to OpenCDC */
   .sitenav{background:var(--eu-dark);color:#cfdcef;font-size:.78rem;
     padding:8px 24px;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
   .sitenav a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
@@ -374,8 +374,7 @@
 
 <nav class="sitenav">
   <a class="home" href="../"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
-     aria-hidden="true"><path d="M12 2 4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 4-2.5 7.7-6 8.8V4.2z"/></svg>Open
-     CDC Framework</a>
+     aria-hidden="true"><path d="M12 2 4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 4-2.5 7.7-6 8.8V4.2z"/></svg>OpenCDC</a>
   <span class="sep">/</span><a href="./">Tools</a>
   <span class="sep">/</span><span class="here">Maturity self-assessment</span>
 </nav>
@@ -383,7 +382,7 @@
 <header>
   <div class="head-inner">
     <div>
-      <div class="doc-id">Open CDC Framework · Tool 03</div>
+      <div class="doc-id">OpenCDC · Tool 03</div>
       <h1>Maturity Self-Assessment</h1>
       <dl class="print-meta" id="print-meta"></dl>
       <p>Pick a function, then click a status for each criterion; the score and open actions update as
@@ -510,8 +509,7 @@
     <div id="bench-out" class="bout"></div>
     <details class="contrib" id="contrib">
       <summary>Contribute your result</summary>
-      <p>Help build the benchmark. The contribution contains <b>only</b> the five answers above, the month, the
-         framework version and the status of each of the 71 criteria. It does <b>not</b> contain your organisation's
+      <p>Help build the benchmark. The contribution contains <b>only</b> the five answers above, the month, OpenCDC version and the status of each of the 71 criteria. It does <b>not</b> contain your organisation's
          name, evidence notes, owners, due dates, targets or the assessors' names. You see exactly what is sent, and
          nothing leaves your browser until you send it yourself.</p>
       <button class="btn primary" id="contrib-prep">Prepare contribution</button>
@@ -546,7 +544,7 @@
   <button class="btn" id="mbar-go">Results ↓</button></div>
 
 <footer>
-  Open CDC Framework · CC BY 4.0 · Criteria mirror <code>assessments/maturity-self-assessment.md</code>. Orientation
+  OpenCDC · CC BY 4.0 · Criteria mirror <code>assessments/maturity-self-assessment.md</code>. Orientation
   only. Scores without recorded evidence tend to come out higher than evidenced ones.
 </footer>
 <script>
@@ -565,7 +563,7 @@ const CRITERIA_V1_ORDER = ["GOVERN|2|0", "GOVERN|2|1", "GOVERN|2|2", "GOVERN|3|0
    a criterion they never assessed. */
 const CRITERIA_V1_RECHECK = {"GOVERN|3|2":"it now asks for supplier risk reviewed at least annually","GOVERN|4|0":"it now also asks for the management body's approval of the measures","IDENTIFY|2|3":"crown jewels must now be agreed in writing with the business","RECOVER|2|1":"it now asks for a crown-jewel service restored end to end and timed against its RTO"};
 const CRITERIA_V1_MAP = {"GOVERN|2|0": "GOVERN|2|0", "GOVERN|2|1": "GOVERN|2|1", "GOVERN|2|2": "GOVERN|2|2", "GOVERN|3|0": "GOVERN|3|0", "GOVERN|3|1": "GOVERN|3|1", "GOVERN|3|2": "GOVERN|3|2", "GOVERN|3|3": "GOVERN|3|3", "GOVERN|4|0": "GOVERN|2|3", "GOVERN|4|1": "GOVERN|4|1", "IDENTIFY|2|0": "IDENTIFY|2|0", "IDENTIFY|2|1": "IDENTIFY|2|1", "IDENTIFY|2|2": "IDENTIFY|2|2", "IDENTIFY|2|3": "IDENTIFY|2|3", "IDENTIFY|3|0": "IDENTIFY|3|0", "IDENTIFY|3|1": "IDENTIFY|3|1", "IDENTIFY|3|2": "IDENTIFY|3|2", "IDENTIFY|3|3": "IDENTIFY|2|4", "IDENTIFY|4|0": "IDENTIFY|4|0", "IDENTIFY|4|1": "IDENTIFY|4|1", "PROTECT|2|0": "PROTECT|2|0", "PROTECT|2|1": "PROTECT|2|1", "PROTECT|2|2": "PROTECT|2|2", "PROTECT|2|3": "PROTECT|2|3", "PROTECT|3|0": "PROTECT|3|0", "PROTECT|3|1": "PROTECT|3|1", "PROTECT|3|2": "PROTECT|2|4", "PROTECT|3|3": "PROTECT|3|3", "PROTECT|4|0": "PROTECT|4|0", "PROTECT|4|1": "PROTECT|4|1", "DETECT|2|0": "DETECT|2|0", "DETECT|2|1": "DETECT|2|1", "DETECT|2|2": "DETECT|2|2", "DETECT|2|3": "DETECT|2|3", "DETECT|3|0": "DETECT|3|0", "DETECT|3|1": "DETECT|3|1", "DETECT|3|2": "DETECT|3|2", "DETECT|3|3": "DETECT|3|3", "DETECT|3|4": "DETECT|3|4", "DETECT|4|0": "DETECT|4|0", "DETECT|4|1": "DETECT|4|1", "DETECT|4|2": "DETECT|4|2", "RESPOND|2|0": "RESPOND|2|0", "RESPOND|2|1": "RESPOND|2|1", "RESPOND|2|2": "RESPOND|2|2", "RESPOND|2|3": "RESPOND|2|3", "RESPOND|3|0": "RESPOND|3|0", "RESPOND|3|1": "RESPOND|3|1", "RESPOND|3|2": "RESPOND|2|4", "RESPOND|3|3": "RESPOND|3|3", "RESPOND|4|0": "RESPOND|4|0", "RESPOND|4|1": "RESPOND|4|1", "RECOVER|2|0": "RECOVER|2|0", "RECOVER|2|1": "RECOVER|2|1", "RECOVER|2|2": "RECOVER|2|2", "RECOVER|3|0": "RECOVER|3|0", "RECOVER|3|1": "RECOVER|3|1", "RECOVER|3|2": "RECOVER|3|2", "RECOVER|3|3": "RECOVER|3|3", "RECOVER|4|0": "RECOVER|4|0", "RECOVER|4|1": "RECOVER|4|1"};
-const LS_KEY = "ocdf-maturity-assessment-v1";
+const LS_KEY = "opencdc-maturity-assessment-v1";
 const FUNCS = CATALOG.functions;
 const LEVEL_NAMES = {1:"Initial",2:"Managed",3:"Established",4:"Optimising"};
 /* Five-point status scale.  0–2 record work in flight; only 3 and 4 count
@@ -889,7 +887,7 @@ function nextLevelProgress(f, score){
  * panel on the right is sticky and re-renders on every change, so the
  * effect of each answer is visible without scrolling.
  * ------------------------------------------------------------------ */
-const UI_KEY = "ocdf-maturity-ui-v1";
+const UI_KEY = "opencdc-maturity-ui-v1";
 let activeFid = FUNCS[0].id;
 let activeView = "chart";
 try{ const u = JSON.parse(localStorage.getItem(UI_KEY) || "{}");
@@ -933,7 +931,7 @@ function renderPrintMeta(){
         ? "custom: " + FUNCS.map(f => FUNC_ABBR[f.id] + " " + (state.targets[f.id] || "–")).join(" · ")
         : "none, score only")],
     ["Scoring", state.strict ? "evidence-based: only implemented & evidenced counts" : "implemented or implemented & evidenced counts"],
-    ["Criteria set", CRITERIA_SET + ", OCDF " + FRAMEWORK_VERSION],
+    ["Criteria set", CRITERIA_SET + ", OpenCDC " + OPENCDC_VERSION],
     ["Printed", new Date().toISOString().slice(0, 10)]
   ];
   document.getElementById("print-meta").innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
@@ -1216,7 +1214,7 @@ function exportPlan(){
   const csv = "\ufeff" + rows.map(r => r.map(cell).join(";")).join("\r\n");
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
-  a.download = "ocdf-action-plan-" + (state.meta.date || new Date().toISOString().slice(0,10)) + ".csv";
+  a.download = "opencdc-action-plan-" + (state.meta.date || new Date().toISOString().slice(0,10)) + ".csv";
   a.click(); URL.revokeObjectURL(a.href);
 }
 document.getElementById("export-plan").addEventListener("click", exportPlan);
@@ -1228,7 +1226,7 @@ document.getElementById("export-plan").addEventListener("click", exportPlan);
  * count and nothing else.
  * ------------------------------------------------------------------ */
 const BENCH_EMAIL = "benchmark@opencdc.org";
-const FRAMEWORK_VERSION = "1.5.0";
+const OPENCDC_VERSION = "1.6.0";
 let bench = null, benchErr = "";
 let benchGroup = "";
 fetch("benchmark.json", {cache:"no-cache"}).then(r => r.ok ? r.json() : Promise.reject(r.status))
@@ -1295,9 +1293,9 @@ document.querySelectorAll("#bench select[data-b]").forEach(s => s.addEventListen
 function contribution(){
   const keys = critList();
   return {
-    ocdf_benchmark: 1,
+    opencdc_benchmark: 1,
     criteria_set: CRITERIA_SET,
-    framework: FRAMEWORK_VERSION,
+    opencdc_version: OPENCDC_VERSION,
     month: new Date().toISOString().slice(0, 7),
     size: state.bench.size || "", nis2: state.bench.nis2 || "", region: state.bench.region || "",
     sector: state.bench.sector || "", model: state.bench.model || "",
@@ -1320,13 +1318,13 @@ document.getElementById("contrib-prep").addEventListener("click", () => {
     : "Email opens your mail program with this text ready to send to " + BENCH_EMAIL + ". Your email address is only used to receive it and is never published. Email is not encrypted end to end, and the text shows which criteria you have not met, so send it from an address you are content to link to it.";
 });
 document.getElementById("contrib-mail").addEventListener("click", () => {
-  location.href = "mailto:" + BENCH_EMAIL + "?subject=" + encodeURIComponent("OCDF benchmark contribution") +
+  location.href = "mailto:" + BENCH_EMAIL + "?subject=" + encodeURIComponent("OpenCDC benchmark contribution") +
     "&body=" + encodeURIComponent(JSON.stringify(contribution()));
 });
 document.getElementById("contrib-dl").addEventListener("click", () => {
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([JSON.stringify(contribution(), null, 1)], {type:"application/json"}));
-  a.download = "ocdf-benchmark-contribution.json"; a.click(); URL.revokeObjectURL(a.href);
+  a.download = "opencdc-benchmark-contribution.json"; a.click(); URL.revokeObjectURL(a.href);
 });
 document.getElementById("contrib-copy").addEventListener("click", async () => {
   try{ await navigator.clipboard.writeText(JSON.stringify(contribution())); document.getElementById("contrib-note").textContent = "Copied. Paste it into an email to " + BENCH_EMAIL + "."; }catch(e){}
@@ -1348,7 +1346,7 @@ document.getElementById("export-json").addEventListener("click", () => {
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   const d = state.meta.date || new Date().toISOString().slice(0,10);
-  a.download = "ocdf-maturity-assessment-" + d + ".json";
+  a.download = "opencdc-maturity-assessment-" + d + ".json";
   a.click(); URL.revokeObjectURL(a.href);
 });
 const jsonInput = document.getElementById("json-input");

@@ -1,15 +1,15 @@
 # Documentation index
 
-New here? Start with [OCDF on one page](one-page.md) for the terms, the
+New here? Start with [OpenCDC on one page](one-page.md) for the terms, the
 [executive guide](executive-guide.md) if you are sponsoring or funding a CDC, or
-the [worked example](worked-example.md) to see the framework applied to one
-organisation. [Why trust this framework](trust.md) explains what is law, what is
+the [worked example](worked-example.md) to see OpenCDC applied to one
+organisation. [Why trust OpenCDC](trust.md) explains what is law, what is
 standard and what is the author's judgement.
 
-To *build* a CDC, follow the seven steps under **Start building** on the
-[home page](https://opencdc.org/#start-building); they are the one path through the
-framework, and each step links to the page it needs. The reading order below is
-for reading the framework through, not for the order of work.
+To *build* a CDC, start with [Find your route](find-your-route.md), then follow
+[the build path](build-path.md): seven steps, each linking to the page that does
+the work. The reading order below is for reading OpenCDC through, not for
+the order of work.
 
 Reading order: start with the
 [introduction](introduction.md), then [start here](start-here.md) to
@@ -28,7 +28,9 @@ introduction.
 | [CIA as design lens](cia-triad.md) | How confidentiality, integrity and availability shape the controls |
 | [Maturity model](maturity-model.md) | Maturity levels & scoring |
 | [Implementation tiers](tiers.md) | Essential / Standard / Advanced overlay |
-| [Start here](start-here.md) | The first 90 days and year 1, in order |
+| [Find your route](find-your-route.md) | Five questions that set where you start and what you skip |
+| [The build path](build-path.md) | The seven steps, each with what you decide and what you leave with |
+| [The first 90 days](start-here.md) | The first 90 days and year 1, in order |
 | [Operating models](operating-models.md) | MSSP / tiered / capability-based / shared |
 | [Roles & competences](roles-and-competences.md) | ECSF-based roles & skills |
 | [Running the CDC](cdc-operations.md) | Tuning, detection-as-code, team, automation, tools |

@@ -1,10 +1,10 @@
 # Implementation tiers: Essential, Standard, Advanced
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's tiers, a pattern borrowed from the CIS Controls implementation groups.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's tiers, a pattern borrowed from the CIS Controls implementation groups.</p>
 
-## One framework, three ambition levels
+## One set of capabilities, three ambition levels
 
-Not every organisation needs every capability. Instead of maintaining three editions, OCDF uses a *tier overlay*, a pattern borrowed from the CIS Controls' Implementation Groups: every capability is tagged with the lowest tier that should implement it. Higher tiers include everything below them.
+Not every organisation needs every capability. Instead of maintaining three editions, OpenCDC uses a *tier overlay*, a pattern borrowed from the CIS Controls' Implementation Groups: every capability is tagged with the lowest tier that should implement it. Higher tiers include everything below them.
 
 | Tier | Who | Rough profile |
 |------|-----|---------------|
@@ -18,12 +18,12 @@ Pick the tier on size, complexity and threat exposure, not on NIS2 category. NIS
 
 ## The legal floor
 
-**Neither your tier nor your maturity target relieves you of a legal requirement.** Each measure NIS2 Art. 20 and 21 require has its minimum form in the Essential tier and in the Level 2 criteria, so an organisation in NIS2 scope that reaches Level 2 in every function has, in this framework's reading, covered the measures at least in basic form. Two parts that sit mostly outside a CDC, human-resources security and vulnerability disclosure, are covered only thinly; the crosswalk names them so you can give them an owner. The mapping is in the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). A capability marked in the NIS2 column of the [capability index](capability-index.md) is never "above tier" for an entity in scope, whatever its tier; score it and do at least its Level 2 form.
+**Neither your tier nor your maturity target relieves you of a legal requirement.** Each measure NIS2 Art. 20 and 21 require has its minimum form in the Essential tier and in the Level 2 criteria, so an organisation in NIS2 scope that reaches Level 2 in every function has, in OpenCDC's reading, covered the measures at least in basic form. Two parts that sit mostly outside a CDC, human-resources security and vulnerability disclosure, are covered only thinly; the crosswalk names them so you can give them an owner. The mapping is in the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). A capability marked in the NIS2 column of the [capability index](capability-index.md) is never "above tier" for an entity in scope, whatever its tier; score it and do at least its Level 2 form.
 
 ## If you are the whole security function
 
 Plenty of readers arrive here as the only person with security in their job
-title. The framework still applies, but the sequencing changes, because
+title. OpenCDC still applies, but the sequencing changes, because
 Essential tier assumes roughly 3 to 4 people and the staffing notes in
 [DETECT](detect.md) and [Roles & competences](roles-and-competences.md)
 assume more.
@@ -72,8 +72,8 @@ full coverage is neither.
 ## How to use tiers
 
 1. **Pick your tier honestly.** Choose on size, complexity and threat exposure. Your regulatory category sets the floor, not the tier. When in doubt between two, take the lower and reach maturity Level 2–3 there first. A solid E beats a hollow S.
-2. **Filter the framework.** In the self-assessment and navigator, skip capabilities above your tier and mark them "above tier" rather than "missing", so the score reflects your ambition, not an enterprise ideal. Capabilities marked in the NIS2 column of the capability index are the exception for entities in NIS2 scope; see [the legal floor](#the-legal-floor).
+2. **Filter OpenCDC.** In the self-assessment and navigator, skip capabilities above your tier and mark them "above tier" rather than "missing", so the score reflects your ambition, not an enterprise ideal. Capabilities marked in the NIS2 column of the capability index are the exception for entities in NIS2 scope; see [the legal floor](#the-legal-floor).
 3. **Add national and sector law on top.** Your national law may mandate S- or A-tier items regardless of size. Denmark's energy-sector act, for instance, requires real-time monitoring and response at its preparedness levels 4 and 5. The annex and selector tool trump the tier map.
 4. **Review the tier choice every year.** Do it at the annual reassessment; tiers are meant to be outgrown.
 
-*Open CDC Framework, licensed CC BY 4.0. Tier-overlay pattern inspired by CIS Critical Security Controls Implementation Groups, © Center for Internet Security, credited in [references](references.md).*
+*OpenCDC, licensed CC BY 4.0. Tier-overlay pattern inspired by CIS Critical Security Controls Implementation Groups, © Center for Internet Security, credited in [references](references.md).*

@@ -1,6 +1,6 @@
 # Community benchmark
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>Self-assessed data from organisations that choose to contribute. Context, not a standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>Self-assessed data from organisations that choose to contribute. Context, not a standard.</p>
 
 The [maturity self-assessment](../tools/maturity-assessment.html) can show how
 your scores compare with other organisations like yours: the median level per
@@ -30,13 +30,13 @@ exact content before anything is sent:
 
 | Included | Not included |
 |----------|--------------|
-| Number of employees, as a band: 1–49, 50–249, 250–999, 1000–4,999, 5000 or more | Your organisation's name |
+| Number of employees, as a band: 1–49, 50–249, 250–999, 1000–4999, 5000 or more | Your organisation's name |
 | NIS2 category: essential, important, not in scope, or not sure | Country (only a broad region) |
 | Region: Nordics, Western, Central and Eastern, or Southern Europe, or outside the EU | Evidence notes, owners, due dates |
 | Sector, from a short list | Targets and target profile |
 | Operating model | Assessors' names, assessment date (only the month) |
 | The status of each of the 71 criteria, and whether evidence-based scoring was on | Anything else from your assessment link |
-| The month and the framework version | |
+| The month and OpenCDC version | |
 
 Nothing is sent by the tool itself. You email the contribution, or download the
 file and send it, to benchmark@opencdc.org.
@@ -69,9 +69,9 @@ file and send it, to benchmark@opencdc.org.
 
 ## What others have measured
 
-<p class="src" markdown><span class="src-tag guidance">Guidance</span>Other models and surveys, summarised. Their scales and questions differ from OCDF's; do not compare the numbers directly.</p>
+<p class="src" markdown><span class="src-tag guidance">Guidance</span>Other models and surveys, summarised. Their scales and questions differ from OpenCDC's; do not compare the numbers directly.</p>
 
-Until OCDF's own groups fill up, two published sources give useful context:
+Until OpenCDC's own groups fill up, two published sources give useful context:
 
 - **SOC-CMM maturity report**, published yearly under CC BY-SA 4.0. The 2026
   edition is based on about 200 usable responses combined with anonymised
@@ -90,4 +90,4 @@ Until OCDF's own groups fill up, two published sources give useful context:
   three months to patch critical vulnerabilities.
   [NIS Investments 2025](https://www.enisa.europa.eu/publications/nis-investments-2025)
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

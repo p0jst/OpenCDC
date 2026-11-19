@@ -33,14 +33,14 @@
 {% endblock %}
 
 {#
-  Quick previous/next bar. The framework is read in order, and the footer cards
+  Quick previous/next bar. OpenCDC is read in order, and the footer cards
   only help once you have reached the bottom. This slides in after the first
   screenful — at the top of a document nobody is looking to leave it yet — and
   hides again when the footer cards come into view, so the two never show at
   once.
 #}
 {#
-  Tags <body> with the current CSF function, e.g. class="ocdf-fn-govern" on
+  Tags <body> with the current CSF function, e.g. class="opencdc-fn-govern" on
   /docs/govern/. site/extra.css reads it to colour that page's heading,
   section dividers and capability table to the function's own accent — the
   one thing that tells GOVERN and DETECT apart at a glance, since otherwise
@@ -53,7 +53,7 @@
   <script>
     (function () {
       var m = location.pathname.match(/\/docs\/(govern|identify|protect|detect|respond|recover)\/?(?:#.*)?$/);
-      if (m) document.body.classList.add("ocdf-fn-" + m[1]);
+      if (m) document.body.classList.add("opencdc-fn-" + m[1]);
     })();
   </script>
   {#
@@ -84,7 +84,7 @@
           var k = /^\[(GATE|HARD|SOFT)\]$/.exec(part);
           if (!k) { if (part) frag.appendChild(document.createTextNode(part)); return; }
           var span = document.createElement("span");
-          span.className = "ocdf-dep ocdf-dep--" + k[1].toLowerCase();
+          span.className = "opencdc-dep opencdc-dep--" + k[1].toLowerCase();
           span.title = meaning[k[1]];
           span.textContent = k[1];
           frag.appendChild(span);
@@ -97,23 +97,37 @@
 
 {% block footer %}
   {{ super() }}
-  {% if page and (page.previous_page or page.next_page) %}
-    <nav class="ocdf-quicknav" aria-label="Document navigation" hidden>
-      <div class="ocdf-quicknav__inner">
-        {% if page.previous_page %}
-          <a class="ocdf-quicknav__link ocdf-quicknav__link--prev" href="{{ page.previous_page.url | url }}">
+  {#- Pages that hide the footer links, such as the build-path steps, get no
+      quick bar either: it would repeat the links that were hidden. -#}
+  {% set footer_hidden = page and page.meta and page.meta.hide and "footer" in page.meta.hide %}
+  {#- "Previous" into another menu tab reads as a step back that never happened,
+      such as "Previous: Step 6" on the first Learn page, so it is dropped. -#}
+  {% set prev_crosses = false %}
+  {% if page and page.previous_page %}
+    {% set here = page.ancestors[-1].title if page.ancestors else "" %}
+    {% set there = page.previous_page.ancestors[-1].title if page.previous_page.ancestors else "" %}
+    {% set prev_crosses = here != there %}
+  {% endif %}
+  {% if prev_crosses %}
+    <script>document.querySelectorAll(".md-footer__link--prev").forEach(function (a) { a.hidden = true; });</script>
+  {% endif %}
+  {% if page and (page.previous_page or page.next_page) and not footer_hidden %}
+    <nav class="opencdc-quicknav" aria-label="Document navigation" hidden>
+      <div class="opencdc-quicknav__inner">
+        {% if page.previous_page and not prev_crosses %}
+          <a class="opencdc-quicknav__link opencdc-quicknav__link--prev" href="{{ page.previous_page.url | url }}">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
-            <span class="ocdf-quicknav__text">
-              <span class="ocdf-quicknav__dir">Previous</span>
-              <span class="ocdf-quicknav__title">{{ page.previous_page.title }}</span>
+            <span class="opencdc-quicknav__text">
+              <span class="opencdc-quicknav__dir">Previous</span>
+              <span class="opencdc-quicknav__title">{{ page.previous_page.title }}</span>
             </span>
           </a>
         {% else %}<span></span>{% endif %}
         {% if page.next_page %}
-          <a class="ocdf-quicknav__link ocdf-quicknav__link--next" href="{{ page.next_page.url | url }}">
-            <span class="ocdf-quicknav__text">
-              <span class="ocdf-quicknav__dir">Next</span>
-              <span class="ocdf-quicknav__title">{{ page.next_page.title }}</span>
+          <a class="opencdc-quicknav__link opencdc-quicknav__link--next" href="{{ page.next_page.url | url }}">
+            <span class="opencdc-quicknav__text">
+              <span class="opencdc-quicknav__dir">Next</span>
+              <span class="opencdc-quicknav__title">{{ page.next_page.title }}</span>
             </span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
           </a>
@@ -122,7 +136,7 @@
     </nav>
     <script>
       (function () {
-        var bar = document.querySelector(".ocdf-quicknav");
+        var bar = document.querySelector(".opencdc-quicknav");
         var footer = document.querySelector(".md-footer__inner");
         if (!bar) return;
         var footerVisible = false;

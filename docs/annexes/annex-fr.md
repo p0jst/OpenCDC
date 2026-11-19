@@ -17,7 +17,7 @@
 
 | Field | Value |
 |-------|-------|
-| Implementing law | Projet de loi relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments. Adopted by the Senate on 12 March 2025. The Assemblée nationale withdrew it from the agenda in October 2026, then completed its examination on 10 November 2026, with the solemn vote scheduled for 17 November 2026. Under the accelerated procedure a joint committee of both chambers must then agree a common text before the law can be promulgated, so it is not yet in force. The European Commission referred the country to the Court of Justice of the EU on 8 July 2026 for failing to transpose NIS2. |
+| Implementing law | Projet de loi relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments. Adopted by the Senate on 12 March 2025. The Assemblée nationale adopted it at first reading on 17 November 2026, by 464 votes to 64, after amending the Senate's text. Under the accelerated procedure a joint committee of both chambers must now agree a common text before the law can be promulgated, so it is not yet in force. The European Commission referred the country to the Court of Justice of the EU on 8 July 2026 for failing to transpose NIS2. |
 | Competent authority | ANSSI (Agence nationale de la sécurité des systèmes d'information) |
 | National CSIRT / reporting | CERT-FR |
 | Official starting point | https://cyber.gouv.fr |
@@ -40,4 +40,4 @@ ANSSI runs the MonEspaceNIS2 service to prepare entities pre-law; SecNumCloud an
 
 Tick "France" in `tools/regulatory-profile.html` to include this country's references under the `fr-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

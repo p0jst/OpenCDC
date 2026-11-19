@@ -1,10 +1,10 @@
-# Start here: the first 90 days
+# The first 90 days
 
-> The rest of the framework describes what to build, page by page. This page answers the question it cannot: *in which order?* Its first weeks are the design work: the workshops, the charter and the operating model. The 90 days end with your baseline maturity assessment.
+> The rest of OpenCDC describes what to build, page by page. This page answers the question it cannot: *in which order?* Its first weeks are the design work: the workshops, the charter and the operating model. The 90 days end with your baseline maturity assessment.
 
 ## Why this order
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's recommended order, aligned with the CIS Controls ordering.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's recommended order, aligned with the CIS Controls ordering.</p>
 
 The ordering below deliberately mirrors the logic of the CIS Critical Security Controls: the controls are numbered roughly in order of foundational value, beginning with Control 1 for enterprise asset inventory and Control 2 for software inventory, and ending with Control 18, penetration testing. That ordering answers a question every new security leader faces from the business: "shouldn't we get a pentest first?" No. A penetration test against an organisation with no asset inventory, no MFA baseline and no tested backups mostly documents what you already know is missing. Inventory comes first, blast-radius controls next, and testing when there is something meaningful to test. Use the CIS ordering when explaining prioritisation to the business; it is independent, widely recognised and matches this guide.
 
@@ -16,7 +16,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 
 ## The first 90 days
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span></p>
 
 [![The first 90 days week by week: charter, applicability register and operating model first, then crown jewels, blast-radius controls, priority log sources and the incident plan with a reporting drill, ending with a baseline maturity assessment in week 12](../assets/diagrams/start-here-first-90-days-light.svg#gh-light-mode-only)](../assets/diagrams/start-here-first-90-days-light.svg)
 [![The first 90 days week by week: charter, applicability register and operating model first, then crown jewels, blast-radius controls, priority log sources and the incident plan with a reporting drill, ending with a baseline maturity assessment in week 12](../assets/diagrams/start-here-first-90-days-dark.svg#gh-dark-mode-only)](../assets/diagrams/start-here-first-90-days-dark.svg)
@@ -24,7 +24,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 <details markdown>
 <summary>The 90 days as a table, with the page or tool for each step</summary>
 
-| Week | Do | Framework |
+| Week | Do | Page or tool |
 |------|----|-----------|
 | 1–2 | Run the GOVERN navigator workshop; draft the charter including containment authority in §4 | [Navigator](../assessments/cdc-design-navigator.md) G1–G11, [charter template](../templates/cdc-charter-template.md) |
 | 1–4 | Regulatory applicability register: which laws, which entities, which countries; register with authorities where overdue | This document, your [national annex](annexes/README.md), and the [regulatory selector](../tools/regulatory-profile.html) |
@@ -47,7 +47,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 - Response: containment technically tested; tabletop with management; DFIR retainer if not in-house
 - Recover: RTO/RPO agreed for crown jewels; rebuild-from-known-good procedure drafted
 - Govern: quarterly executive reporting running; supplier security clauses in new contracts
-- Reassess maturity at month 12. For a NIS2 entity, Level 2 in every function is the legal floor and the first target; above it, set year-2 targets per function, such as RESPOND at 3 for an important entity or Level 3 across all functions for an essential one
+- Reassess maturity at month 12. For a NIS2 entity, Level 2 in every function is the first target, because it holds the minimum form of each measure the law requires. It is not a compliance verdict, and the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) names two gaps to close yourself. Above Level 2, set year-2 targets per function, such as RESPOND at 3 for an important entity or Level 3 across all functions for an essential one
 
 ## What not to do in the first year
 
@@ -55,4 +55,4 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 
 Penetration tests and red teaming before the foundations exist, since CIS puts penetration testing at Control 18 for a reason · threat hunting programme · SOAR platform selection · deception tech · Level 4 detection-as-code pipelines · custom threat intel platform. All valuable, and all wasted if attempted before the 90-day foundations exist. The most expensive failure mode in new CDCs is buying Level 4 technology for a Level 1 organisation.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

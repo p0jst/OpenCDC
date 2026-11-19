@@ -1,15 +1,15 @@
 # ISO/IEC 27001 crosswalk
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Clause and control numbers from ISO/IEC 27001:2022; the mapping to capabilities is this framework's. Control names are shortened, not quoted.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Clause and control numbers from ISO/IEC 27001:2022; the mapping to capabilities is OpenCDC's. Control names are shortened, not quoted.</p>
 
 Many European organisations in NIS2 scope already run an information security
-management system on ISO/IEC 27001. This page shows where each OCDF capability
+management system on ISO/IEC 27001. This page shows where each OpenCDC capability
 sits in that standard, so the CDC's work can be recorded as evidence in the ISMS
 instead of beside it, and an auditor's question about a control can be answered
 with a capability and its maturity criteria.
 
 The two do different jobs. ISO/IEC 27001 says which controls an organisation
-must consider and manage. OCDF describes how to build and run the team that
+must consider and manage. OpenCDC describes how to build and run the team that
 operates the detection and response part of them. A certificate says the
 management system works; it says little about whether an alert at night reaches
 someone who can act on it.
@@ -19,7 +19,7 @@ someone who can act on it.
 Numbers without a prefix are clauses of the standard; numbers starting with A
 are controls in Annex A of the 2022 edition.
 
-| OCDF capability | ISO/IEC 27001:2022 |
+| OpenCDC capability | ISO/IEC 27001:2022 |
 |-----------------|--------------------|
 | GV-1 CDC charter & mandate | 5.1 leadership, 5.3 roles and authorities, A.5.2 security roles |
 | GV-2 Risk management integration | 6.1 risks and opportunities, 8.2 and 8.3 risk assessment and treatment |
@@ -68,10 +68,10 @@ are controls in Annex A of the 2022 edition.
 ## What the standard leaves to you
 
 ISO/IEC 27001 names monitoring, incident management and threat intelligence as
-controls and stops there. These are the places where OCDF adds the operating
+controls and stops there. These are the places where OpenCDC adds the operating
 detail an ISMS usually lacks:
 
-- **A.8.16 monitoring** is one control. In OCDF it is five capabilities, DE-2 and DE-4 to DE-7, because writing detections, measuring coverage, hunting and validating are different jobs with different owners.
+- **A.8.16 monitoring** is one control. In OpenCDC it is five capabilities, DE-2 and DE-4 to DE-7, because writing detections, measuring coverage, hunting and validating are different jobs with different owners.
 - **A.5.24 to A.5.28 incident management** describe a process. Who may isolate a production system at night, and who decides when the response ends, are in GV-1 and RS-4 and in the [charter](../templates/cdc-charter-template.md).
 - **Statutory reporting** appears only as contact with authorities and legal requirements. The clocks are in [Respond](respond.md#eu-statutory-reporting-timelines).
 - **Coverage hours and staffing** are not controls at all. They are in [operating models](operating-models.md).
@@ -81,10 +81,10 @@ detail an ISMS usually lacks:
 - **Running an ISMS?** Put the capability ID in the Statement of Applicability next to the control it serves, and use the maturity criteria as the measure of effectiveness that clause 9.1 asks for.
 - **Preparing for an audit?** The evidence recorded in the [maturity self-assessment](../assessments/maturity-self-assessment.md) is evidence for the mapped controls. Record it once.
 - **Certified, and in NIS2 scope?** A certificate supports the Art. 21 measures but does not show them. Use the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) for the legal mapping; ENISA's technical implementation guidance carries its own table from the NIS2 measures to ISO/IEC 27001.
-- **For incident management in depth,** the companion standard is ISO/IEC 27035. OCDF's incident flow in [Respond](respond.md#how-an-incident-moves) fits inside its phases.
+- **For incident management in depth,** the companion standard is ISO/IEC 27035. OpenCDC's incident flow in [Respond](respond.md#how-an-incident-moves) fits inside its phases.
 
-The mapping is at control level and is this framework's reading. A control can
-be met in ways OCDF does not describe, and a capability at Level 2 does not by
+The mapping is at control level and is OpenCDC's reading. A control can
+be met in ways OpenCDC does not describe, and a capability at Level 2 does not by
 itself satisfy an auditor for the mapped control.
 
 ## Sources
@@ -94,4 +94,4 @@ itself satisfy an auditor for the mapped control.
 - ISO/IEC 27035-1:2023, *Information security incident management, Part 1: Principles and process*.
 - ENISA, *NIS2 Technical Implementation Guidance*, June 2025, with a mapping table to ISO/IEC 27001. https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

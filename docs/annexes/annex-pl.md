@@ -40,4 +40,4 @@ The amended act adds national extras beyond the directive, including a procedure
 
 Tick "Poland" in `tools/regulatory-profile.html` to include this country's references under the `pl-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*
