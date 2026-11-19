@@ -1,4 +1,4 @@
-/* Open CDC Framework site theme — matches the identity of the interactive tools
+/* OpenCDC site theme — matches the identity of the interactive tools
    (EU blue #123a6d · paper #fbfaf7 · accent red #8a1f2d).
 
    Design intent: restrained and document-like. Warm paper ground, one blue,
@@ -96,70 +96,70 @@
   --md-text-font: "IBM Plex Sans";
   --md-code-font: "IBM Plex Mono";
 
-  --ocdf-eu: #123a6d;
-  --ocdf-eu-mid: #2a5490;
-  --ocdf-eu-dark: #0d2c54;
-  --ocdf-eu-soft: #e8eef7;
-  --ocdf-accent: #8a1f2d;
-  --ocdf-paper: #fbfaf7;
-  --ocdf-line: #e3ded1;
-  --ocdf-ink-soft: #5d6975;
+  --opencdc-eu: #123a6d;
+  --opencdc-eu-mid: #2a5490;
+  --opencdc-eu-dark: #0d2c54;
+  --opencdc-eu-soft: #e8eef7;
+  --opencdc-accent: #8a1f2d;
+  --opencdc-paper: #fbfaf7;
+  --opencdc-line: #e3ded1;
+  --opencdc-ink-soft: #5d6975;
 
   /* One colour per CSF function, reusing the same family already trained
      into the eye by the source-of-authority tags (law/standard/guidance/
-     ocdf) rather than introducing a second palette. This is the site's only
+     opencdc) rather than introducing a second palette. This is the site's only
      device for telling the six function pages apart at a glance — no icons,
      no numbers, nothing added to the heading text itself. */
-  --ocdf-fn-govern: #123a6d;
-  --ocdf-fn-identify: #0e6e73;
-  --ocdf-fn-protect: #2a6a4f;
-  --ocdf-fn-detect: #6b4e16;
-  --ocdf-fn-respond: #8a1f2d;
-  --ocdf-fn-recover: #5b3a8f;
+  --opencdc-fn-govern: #123a6d;
+  --opencdc-fn-identify: #0e6e73;
+  --opencdc-fn-protect: #2a6a4f;
+  --opencdc-fn-detect: #6b4e16;
+  --opencdc-fn-respond: #8a1f2d;
+  --opencdc-fn-recover: #5b3a8f;
 }
 [data-md-color-scheme="slate"] {
-  --ocdf-fn-govern: #6f9bd6;
-  --ocdf-fn-identify: #6cc7cc;
-  --ocdf-fn-protect: #8fd1b3;
-  --ocdf-fn-detect: #e2c07e;
-  --ocdf-fn-respond: #e39aa4;
-  --ocdf-fn-recover: #b9a1e0;
+  --opencdc-fn-govern: #6f9bd6;
+  --opencdc-fn-identify: #6cc7cc;
+  --opencdc-fn-protect: #8fd1b3;
+  --opencdc-fn-detect: #e2c07e;
+  --opencdc-fn-respond: #e39aa4;
+  --opencdc-fn-recover: #b9a1e0;
 }
 
 /* ---------------------------------------------------------------- palette */
 
 [data-md-color-scheme="default"],
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: var(--ocdf-eu);
-  --md-primary-fg-color--light: var(--ocdf-eu-mid);
-  --md-primary-fg-color--dark: var(--ocdf-eu-dark);
-  --md-accent-fg-color: var(--ocdf-accent);
-  --md-typeset-a-color: var(--ocdf-eu);
+  --md-primary-fg-color: var(--opencdc-eu);
+  --md-primary-fg-color--light: var(--opencdc-eu-mid);
+  --md-primary-fg-color--dark: var(--opencdc-eu-dark);
+  --md-accent-fg-color: var(--opencdc-accent);
+  --md-typeset-a-color: var(--opencdc-eu);
 }
 
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: var(--ocdf-paper);
+  --md-default-bg-color: var(--opencdc-paper);
   --md-typeset-table-color: rgba(27, 39, 51, 0.12);
-  --ocdf-card-bg: #ffffff;
-  --ocdf-hero-wash: linear-gradient(180deg, #f2f5fa 0%, var(--ocdf-paper) 100%);
-  --ocdf-rule: var(--ocdf-line);
+  --opencdc-card-bg: #ffffff;
+  --opencdc-hero-wash: linear-gradient(180deg, #f2f5fa 0%, var(--opencdc-paper) 100%);
+  --opencdc-rule: var(--opencdc-line);
 }
 
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color: #8fb3e3;
   --md-default-bg-color: #131c26;
-  --ocdf-eu-soft: #26354a;
-  --ocdf-card-bg: #1a242f;
-  --ocdf-hero-wash: linear-gradient(180deg, #18242f 0%, #131c26 100%);
-  --ocdf-rule: #2b3947;
-  --ocdf-ink-soft: #9aa7b4;
+  --opencdc-eu-soft: #26354a;
+  --opencdc-card-bg: #1a242f;
+  --opencdc-hero-wash: linear-gradient(180deg, #18242f 0%, #131c26 100%);
+  --opencdc-rule: #2b3947;
+  --opencdc-ink-soft: #9aa7b4;
 }
 
 /* --------------------------------------------------------------- chrome */
 
 /* Header: the tools' signature red keel line */
 .md-header {
-  border-bottom: 3px solid var(--ocdf-accent);
+  border-bottom: 3px solid var(--opencdc-accent);
   box-shadow: none;
 }
 .md-header--shadow {
@@ -172,7 +172,7 @@
 
 /* Tab bar: quieter, with an accent underline on the active tab */
 .md-tabs {
-  background-color: var(--ocdf-eu-dark);
+  background-color: var(--opencdc-eu-dark);
 }
 /* Centred, to line up with the centred landing page rather than the left
    edge of the text column, which reads as off-centre on wide screens. */
@@ -186,7 +186,7 @@
   letter-spacing: 0.02em;
 }
 .md-tabs__item--active .md-tabs__link {
-  box-shadow: inset 0 -2px 0 0 var(--ocdf-accent);
+  box-shadow: inset 0 -2px 0 0 var(--opencdc-accent);
 }
 
 /* ----------------------------------------------------------- typography */
@@ -205,7 +205,7 @@
   letter-spacing: -0.008em;
   margin-top: 2.2em;
   padding-bottom: 0.25em;
-  border-bottom: 1px solid var(--ocdf-rule);
+  border-bottom: 1px solid var(--opencdc-rule);
 }
 .md-typeset h3 {
   font-weight: 640;
@@ -247,8 +247,8 @@
 
 /* Blockquotes read as margin notes rather than boxes */
 .md-typeset blockquote {
-  border-left: 2px solid var(--ocdf-eu);
-  color: var(--ocdf-ink-soft);
+  border-left: 2px solid var(--opencdc-eu);
+  color: var(--opencdc-ink-soft);
 }
 
 
@@ -263,103 +263,103 @@
    rather than the same page with the word swapped out. Nothing is added
    to the page: no icon, no badge, no repeated label — just colour, on
    elements already there. */
-body[class*="ocdf-fn-"] .md-typeset h1 {
+body[class*="opencdc-fn-"] .md-typeset h1 {
   padding-left: 0.6rem;
-  border-left: 4px solid var(--ocdf-fn-current);
+  border-left: 4px solid var(--opencdc-fn-current);
 }
-body[class*="ocdf-fn-"] .md-typeset h2 {
-  border-bottom-color: color-mix(in srgb, var(--ocdf-fn-current) 40%, var(--ocdf-rule));
+body[class*="opencdc-fn-"] .md-typeset h2 {
+  border-bottom-color: color-mix(in srgb, var(--opencdc-fn-current) 40%, var(--opencdc-rule));
 }
-body[class*="ocdf-fn-"] .md-typeset table:not([class]) th {
-  background: color-mix(in srgb, var(--ocdf-fn-current) 14%, var(--ocdf-card-bg));
+body[class*="opencdc-fn-"] .md-typeset table:not([class]) th {
+  background: color-mix(in srgb, var(--opencdc-fn-current) 14%, var(--opencdc-card-bg));
 }
-body[class*="ocdf-fn-"] .md-typeset blockquote {
-  border-left-color: var(--ocdf-fn-current);
+body[class*="opencdc-fn-"] .md-typeset blockquote {
+  border-left-color: var(--opencdc-fn-current);
 }
-body.ocdf-fn-govern   { --ocdf-fn-current: var(--ocdf-fn-govern); }
-body.ocdf-fn-identify { --ocdf-fn-current: var(--ocdf-fn-identify); }
-body.ocdf-fn-protect  { --ocdf-fn-current: var(--ocdf-fn-protect); }
-body.ocdf-fn-detect   { --ocdf-fn-current: var(--ocdf-fn-detect); }
-body.ocdf-fn-respond  { --ocdf-fn-current: var(--ocdf-fn-respond); }
-body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
+body.opencdc-fn-govern   { --opencdc-fn-current: var(--opencdc-fn-govern); }
+body.opencdc-fn-identify { --opencdc-fn-current: var(--opencdc-fn-identify); }
+body.opencdc-fn-protect  { --opencdc-fn-current: var(--opencdc-fn-protect); }
+body.opencdc-fn-detect   { --opencdc-fn-current: var(--opencdc-fn-detect); }
+body.opencdc-fn-respond  { --opencdc-fn-current: var(--opencdc-fn-respond); }
+body.opencdc-fn-recover  { --opencdc-fn-current: var(--opencdc-fn-recover); }
 
 /* --------------------------------------------------------------- hero */
 
-.ocdf-hero {
+.opencdc-hero {
   position: relative;
   text-align: center;
   /* -2.5rem cancels the theme's space above the content (1.5rem margin,
      0.6rem padding and a 0.4rem spacer), so the band meets the tab bar. */
   margin: -2.5rem calc(-50vw + 50%) 2.6rem;
   padding: 3.4rem calc(50vw - 50%) 2.8rem;
-  background: var(--ocdf-hero-wash);
-  border-bottom: 1px solid var(--ocdf-rule);
+  background: var(--opencdc-hero-wash);
+  border-bottom: 1px solid var(--opencdc-rule);
 }
 /* faint blueprint grid, barely there */
-.ocdf-hero::before {
+.opencdc-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(var(--ocdf-eu) 1px, transparent 1px),
-    linear-gradient(90deg, var(--ocdf-eu) 1px, transparent 1px);
+    linear-gradient(var(--opencdc-eu) 1px, transparent 1px),
+    linear-gradient(90deg, var(--opencdc-eu) 1px, transparent 1px);
   background-size: 44px 44px;
   opacity: 0.05;
   mask-image: radial-gradient(ellipse 70% 80% at 50% 40%, #000 0%, transparent 75%);
 }
-.ocdf-hero > * {
+.opencdc-hero > * {
   position: relative;
 }
-.ocdf-hero .ocdf-eyebrow {
+.opencdc-hero .opencdc-eyebrow {
   display: inline-block;
   font-family: var(--md-code-font-family, ui-monospace, Consolas, monospace);
   font-size: 0.6rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--ocdf-accent);
+  color: var(--opencdc-accent);
   margin: 0 0 0.9rem;
 }
 /* keep each segment whole when the line wraps on narrow screens */
-.ocdf-hero .ocdf-eyebrow span {
+.opencdc-hero .opencdc-eyebrow span {
   white-space: nowrap;
 }
-.md-typeset .ocdf-hero h1 {
+.md-typeset .opencdc-hero h1 {
   max-width: 20ch;
   margin: 0 auto 0.55em;
   font-size: 2.05rem;
   line-height: 1.15;
   letter-spacing: -0.025em;
 }
-.ocdf-hero .ocdf-lead {
+.opencdc-hero .opencdc-lead {
   max-width: 60ch;
   margin: 0 auto;
   font-size: 0.86rem;
   line-height: 1.65;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.ocdf-hero .ocdf-lead strong {
+.opencdc-hero .opencdc-lead strong {
   color: var(--md-default-fg-color);
   font-weight: 600;
 }
 /* Tool buttons at the top of a reference page, such as the self-assessment
    criteria: same buttons as the hero, left-aligned in the text column. */
-.md-typeset .ocdf-cta--left {
+.md-typeset .opencdc-cta--left {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 0.4rem 0 1.2rem;
 }
-.md-typeset .ocdf-cta--left .md-button {
+.md-typeset .opencdc-cta--left .md-button {
   margin: 0;
   border-radius: 5px;
   font-size: 0.72rem;
   font-weight: 600;
 }
-.ocdf-hero .ocdf-cta {
+.opencdc-hero .opencdc-cta {
   margin-top: 1.6rem;
 }
-.md-typeset .ocdf-hero .md-button {
+.md-typeset .opencdc-hero .md-button {
   margin: 0.25rem 0.2rem;
   border-radius: 5px;
   border-width: 1px;
@@ -368,66 +368,66 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   padding: 0.42em 1.1em;
   transition: transform 0.12s ease, background-color 0.12s ease, color 0.12s ease;
 }
-.md-typeset .ocdf-hero .md-button:hover {
+.md-typeset .opencdc-hero .md-button:hover {
   transform: translateY(-1px);
 }
-.md-typeset .ocdf-hero .md-button--primary {
-  border-color: var(--ocdf-eu);
+.md-typeset .opencdc-hero .md-button--primary {
+  border-color: var(--opencdc-eu);
 }
 /* dark mode: the EU blue is too dark to sit on ink — lift the secondary
    buttons, the eyebrow and the headline so they keep their contrast */
-[data-md-color-scheme="slate"] .ocdf-hero .ocdf-eyebrow {
+[data-md-color-scheme="slate"] .opencdc-hero .opencdc-eyebrow {
   color: #d98a94;
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-hero h1 {
+[data-md-color-scheme="slate"] .md-typeset .opencdc-hero h1 {
   color: #eaeff5;
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-hero .md-button {
+[data-md-color-scheme="slate"] .md-typeset .opencdc-hero .md-button {
   color: #cfe0f5;
   border-color: #3f5b7d;
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-hero .md-button:hover {
-  background: var(--ocdf-accent);
-  border-color: var(--ocdf-accent);
+[data-md-color-scheme="slate"] .md-typeset .opencdc-hero .md-button:hover {
+  background: var(--opencdc-accent);
+  border-color: var(--opencdc-accent);
   color: #fff;
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-hero .md-button--primary {
-  background: var(--ocdf-eu-mid);
-  border-color: var(--ocdf-eu-mid);
+[data-md-color-scheme="slate"] .md-typeset .opencdc-hero .md-button--primary {
+  background: var(--opencdc-eu-mid);
+  border-color: var(--opencdc-eu-mid);
   color: #fff;
 }
 
 /* stat strip under the hero */
-.ocdf-stats {
+.opencdc-stats {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.4rem 2.6rem;
   margin: 2rem auto 0;
   padding-top: 1.4rem;
-  border-top: 1px solid var(--ocdf-rule);
+  border-top: 1px solid var(--opencdc-rule);
   max-width: 48rem;
 }
-.ocdf-stats div {
+.opencdc-stats div {
   min-width: 6.5rem;
 }
-.ocdf-stats b {
+.opencdc-stats b {
   display: block;
   font-size: 1.35rem;
   font-weight: 650;
   line-height: 1.1;
-  color: var(--ocdf-eu);
+  color: var(--opencdc-eu);
   font-variant-numeric: tabular-nums;
 }
-[data-md-color-scheme="slate"] .ocdf-stats b {
+[data-md-color-scheme="slate"] .opencdc-stats b {
   color: #7ea6d8;
 }
-.ocdf-stats span {
+.opencdc-stats span {
   display: block;
   font-size: 0.62rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   margin-top: 0.15rem;
 }
 
@@ -435,9 +435,9 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid > .card {
-  background: var(--ocdf-card-bg);
-  border: 1px solid var(--ocdf-rule);
-  border-top: 3px solid var(--ocdf-eu);
+  background: var(--opencdc-card-bg);
+  border: 1px solid var(--opencdc-rule);
+  border-top: 3px solid var(--opencdc-eu);
   border-radius: 0 0 6px 6px;
   padding: 1.1rem 1.15rem 1.2rem;
   box-shadow: none;
@@ -447,7 +447,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .grid.cards > ul > li:hover {
   transform: translateY(-2px);
-  border-top-color: var(--ocdf-accent);
+  border-top-color: var(--opencdc-accent);
   box-shadow: 0 4px 14px rgba(18, 58, 109, 0.08);
 }
 [data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
@@ -455,7 +455,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset .grid.cards > ul > li > hr {
   margin: 0.6em 0 0.8em;
-  border-color: var(--ocdf-rule);
+  border-color: var(--opencdc-rule);
 }
 .md-typeset .grid.cards > ul > li > p:first-child {
   font-size: 0.86rem;
@@ -472,9 +472,9 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   padding: 0.32rem;
   margin-right: 0.35rem;
   border-radius: 5px;
-  background: var(--ocdf-eu-soft);
-  fill: var(--ocdf-eu);
-  color: var(--ocdf-eu);
+  background: var(--opencdc-eu-soft);
+  fill: var(--opencdc-eu);
+  color: var(--opencdc-eu);
   vertical-align: -0.72rem;
 }
 [data-md-color-scheme="slate"] .md-typeset .grid.cards .twemoji.lg {
@@ -482,26 +482,26 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   color: #8fb3e3;
 }
 .md-typeset .grid.cards > ul > li p:not(:first-child) {
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
 .md-typeset .grid.cards > ul > li a {
   font-weight: 500;
 }
 
 /* "Where to begin" — three numbered steps, lighter than the feature cards */
-.md-typeset .grid.cards.ocdf-steps > ul > li {
+.md-typeset .grid.cards.opencdc-steps > ul > li {
   border-top-width: 2px;
   background: transparent;
 }
-.md-typeset .grid.cards.ocdf-steps > ul > li:hover {
-  background: var(--ocdf-card-bg);
+.md-typeset .grid.cards.opencdc-steps > ul > li:hover {
+  background: var(--opencdc-card-bg);
 }
-.md-typeset .grid.cards.ocdf-steps > ul > li > p:first-child {
+.md-typeset .grid.cards.opencdc-steps > ul > li > p:first-child {
   font-size: 0.8rem;
   letter-spacing: 0.01em;
-  color: var(--ocdf-eu);
+  color: var(--opencdc-eu);
 }
-[data-md-color-scheme="slate"] .md-typeset .grid.cards.ocdf-steps > ul > li > p:first-child {
+[data-md-color-scheme="slate"] .md-typeset .grid.cards.opencdc-steps > ul > li > p:first-child {
   color: #8fb3e3;
 }
 
@@ -514,7 +514,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   border-radius: 0 5px 5px 0;
   box-shadow: none;
   font-size: 0.73rem;
-  background: var(--ocdf-card-bg);
+  background: var(--opencdc-card-bg);
 }
 .md-typeset .admonition-title,
 .md-typeset summary {
@@ -526,18 +526,18 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 .md-typeset table:not([class]) {
   font-size: 0.68rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 5px;
   box-shadow: none;
 }
 .md-typeset table:not([class]) th {
-  background: var(--ocdf-eu-soft);
+  background: var(--opencdc-eu-soft);
   color: var(--md-default-fg-color);
   font-weight: 640;
   letter-spacing: 0.01em;
 }
 .md-typeset table:not([class]) tr:hover {
-  background: color-mix(in srgb, var(--ocdf-eu-soft) 45%, transparent);
+  background: color-mix(in srgb, var(--opencdc-eu-soft) 45%, transparent);
 }
 
 /* ------------------------------------------------- continue reading nav */
@@ -550,12 +550,18 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   background-color: transparent;
   color: var(--md-default-fg-color);
 }
+/* The footer rules below set display, which would otherwise beat the
+   hidden attribute used on pages that drop these links. */
+.md-footer__inner[hidden],
+.md-footer__link[hidden] {
+  display: none;
+}
 .md-footer__inner {
   display: flex;
   gap: 0.9rem;
   padding: 1.5rem 0.8rem 2rem;
   margin: 0 auto;
-  border-top: 1px solid var(--ocdf-rule);
+  border-top: 1px solid var(--opencdc-rule);
   opacity: 1;
 }
 .md-footer__link {
@@ -565,16 +571,16 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   gap: 0.7rem;
   margin: 0;
   padding: 0.8rem 1rem;
-  background: var(--ocdf-card-bg);
-  border: 1px solid var(--ocdf-rule);
-  border-top: 3px solid var(--ocdf-eu);
+  background: var(--opencdc-card-bg);
+  border: 1px solid var(--opencdc-rule);
+  border-top: 3px solid var(--opencdc-eu);
   border-radius: 0 0 6px 6px;
   opacity: 1;
   transition: transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
 }
 .md-footer__link:hover {
   transform: translateY(-2px);
-  border-top-color: var(--ocdf-accent);
+  border-top-color: var(--opencdc-accent);
   box-shadow: 0 4px 14px rgba(18, 58, 109, 0.08);
 }
 [data-md-color-scheme="slate"] .md-footer__link {
@@ -589,7 +595,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ocdf-accent);
+  color: var(--opencdc-accent);
   opacity: 1;
 }
 [data-md-color-scheme="slate"] .md-footer__direction {
@@ -607,7 +613,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   flex: none;
   margin: 0;
   padding: 0;
-  color: var(--ocdf-eu);
+  color: var(--opencdc-eu);
 }
 [data-md-color-scheme="slate"] .md-footer__button {
   color: #8fb3e3;
@@ -651,24 +657,24 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 /* A slim previous/next bar that slides in once you are past the first screen
    and hides again when the footer cards appear, so the two never compete.
    Markup and the show/hide logic live in overrides/main.html. */
-.ocdf-quicknav {
+.opencdc-quicknav {
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 3;
-  background: var(--ocdf-card-bg);
-  border-top: 1px solid var(--ocdf-rule);
+  background: var(--opencdc-card-bg);
+  border-top: 1px solid var(--opencdc-rule);
   box-shadow: 0 -2px 10px rgba(18, 58, 109, 0.06);
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
-.ocdf-quicknav[hidden] {
+.opencdc-quicknav[hidden] {
   display: block !important;      /* animate out rather than vanish */
   transform: translateY(100%);
   opacity: 0;
   pointer-events: none;
 }
-.ocdf-quicknav__inner {
+.opencdc-quicknav__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -677,7 +683,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   margin: 0 auto;
   padding: 0.32rem 0.9rem;
 }
-.ocdf-quicknav__link {
+.opencdc-quicknav__link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -688,39 +694,39 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   text-decoration: none;
   transition: color 0.12s ease, background-color 0.12s ease;
 }
-.ocdf-quicknav__link:hover {
-  color: var(--ocdf-eu);
-  background: var(--ocdf-eu-soft);
+.opencdc-quicknav__link:hover {
+  color: var(--opencdc-eu);
+  background: var(--opencdc-eu-soft);
 }
-[data-md-color-scheme="slate"] .ocdf-quicknav__link:hover {
+[data-md-color-scheme="slate"] .opencdc-quicknav__link:hover {
   color: #8fb3e3;
 }
-.ocdf-quicknav__link svg {
+.opencdc-quicknav__link svg {
   flex: none;
   width: 1rem;
   height: 1rem;
-  fill: var(--ocdf-eu);
+  fill: var(--opencdc-eu);
 }
-[data-md-color-scheme="slate"] .ocdf-quicknav__link svg {
+[data-md-color-scheme="slate"] .opencdc-quicknav__link svg {
   fill: #8fb3e3;
 }
-.ocdf-quicknav__text {
+.opencdc-quicknav__text {
   min-width: 0;
 }
-.ocdf-quicknav__link--next .ocdf-quicknav__text {
+.opencdc-quicknav__link--next .opencdc-quicknav__text {
   text-align: right;
 }
-.ocdf-quicknav__dir {
+.opencdc-quicknav__dir {
   display: block;
   font-family: var(--md-code-font-family);
   font-size: 0.5rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   line-height: 1.4;
 }
-.ocdf-quicknav__title {
+.opencdc-quicknav__title {
   display: block;
   font-size: 0.68rem;
   font-weight: 620;
@@ -731,39 +737,39 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   max-width: 22ch;
 }
 @media screen and (max-width: 44.9375em) {
-  .ocdf-quicknav__title { max-width: 11ch; }
-  .ocdf-quicknav__inner { padding: 0.3rem 0.6rem; }
+  .opencdc-quicknav__title { max-width: 11ch; }
+  .opencdc-quicknav__inner { padding: 0.3rem 0.6rem; }
 }
 /* The mobile drawer and the search overlay own the screen while open.
    The bar renders inside .md-container, so the toggles are an ancestor's
    sibling rather than its own. */
-#__drawer:checked ~ .md-container .ocdf-quicknav,
-#__search:checked ~ .md-container .ocdf-quicknav {
+#__drawer:checked ~ .md-container .opencdc-quicknav,
+#__search:checked ~ .md-container .opencdc-quicknav {
   transform: translateY(100%);
   opacity: 0;
   pointer-events: none;
 }
 @media print {
-  .ocdf-quicknav { display: none !important; }
+  .opencdc-quicknav { display: none !important; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ocdf-quicknav { transition: none; }
+  .opencdc-quicknav { transition: none; }
 }
 
 /* -------------------------------------------------------------- footer */
 
 .md-footer-meta {
-  background-color: var(--ocdf-eu-dark);
+  background-color: var(--opencdc-eu-dark);
 }
 
 /* --------------------------------------------------------- responsive */
 
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-hero h1 { font-size: 1.5rem; }
+  .md-typeset .opencdc-hero h1 { font-size: 1.5rem; }
   /* the blueprint grid is texture at desktop width and noise at phone width */
-  .ocdf-hero::before { display: none; }
-  .ocdf-hero { padding: 2.2rem 0.8rem 1.8rem; }
-  .ocdf-stats { gap: 1rem 1.6rem; }
+  .opencdc-hero::before { display: none; }
+  .opencdc-hero { padding: 2.2rem 0.8rem 1.8rem; }
+  .opencdc-stats { gap: 1rem 1.6rem; }
 }
 
 /* ------------------------------------------------- landing: what you get */
@@ -771,24 +777,24 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 /* Concrete artefacts, not another reading list. Eight outputs grouped by
    the phase that produces them, Design, Build and Run, in three columns of
    short bold-led lines rather than a card each. */
-.md-typeset .ocdf-outputs {
+.md-typeset .opencdc-outputs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0 2rem;
   margin: 1rem 0 1.4rem;
 }
-.md-typeset .ocdf-outputs ul {
+.md-typeset .opencdc-outputs ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.md-typeset .ocdf-outputs ul > li {
+.md-typeset .opencdc-outputs ul > li {
   position: relative;
   margin: 0;
   padding: 0.65rem 0 0.65rem 1.1rem;
-  border-bottom: 1px solid var(--ocdf-rule);
+  border-bottom: 1px solid var(--opencdc-rule);
 }
-.md-typeset .ocdf-outputs ul > li::before {
+.md-typeset .opencdc-outputs ul > li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -796,14 +802,14 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
-  background: var(--ocdf-eu);
+  background: var(--opencdc-eu);
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-outputs ul > li::before {
+[data-md-color-scheme="slate"] .md-typeset .opencdc-outputs ul > li::before {
   background: #8fb3e3;
 }
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-outputs { grid-template-columns: 1fr; }
-  .md-typeset .ocdf-outputs > div + div .ocdf-phase { margin-top: 1.2rem; }
+  .md-typeset .opencdc-outputs { grid-template-columns: 1fr; }
+  .md-typeset .opencdc-outputs > div + div .opencdc-phase { margin-top: 1.2rem; }
 }
 
 /* ------------------------------------------ landing: section heads */
@@ -811,18 +817,18 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 /* The hero is centred, so the section heads and their one-line leads under
    it are centred too. Lists, cards and steps below them stay left-aligned. */
 
-.md-typeset .ocdf-hero ~ h2,
-.md-typeset .ocdf-hero ~ h2 + p {
+.md-typeset .opencdc-hero ~ h2,
+.md-typeset .opencdc-hero ~ h2 + p {
   text-align: center;
 }
 /* A full-width rule under a centred heading, just below the hero's own edge,
    boxed the first heading in. The landing page's sections are set apart by
    space instead. */
-.md-typeset .ocdf-hero ~ h2 {
+.md-typeset .opencdc-hero ~ h2 {
   border-bottom: 0;
   padding-bottom: 0;
 }
-.md-typeset .ocdf-hero ~ h2 + p {
+.md-typeset .opencdc-hero ~ h2 + p {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
@@ -834,240 +840,240 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
    is chosen (tier), how well is measured (level). The chevrons on the seams
    carry the order. */
 
-.md-typeset .ocdf-dimensions-intro {
+.md-typeset .opencdc-dimensions-intro {
   margin: 0.9rem 0 0.7rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   font-size: 0.76rem;
 }
-.md-typeset .ocdf-dimensions {
+.md-typeset .opencdc-dimensions {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 0 1.1rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 8px;
   overflow: hidden;
-  background: var(--ocdf-card-bg);
+  background: var(--opencdc-card-bg);
 }
-.md-typeset .ocdf-dimensions > div {
+.md-typeset .opencdc-dimensions > div {
   padding: 0.75rem 0.5rem;
   text-align: center;
-  border-left: 1px solid var(--ocdf-rule);
+  border-left: 1px solid var(--opencdc-rule);
 }
-.md-typeset .ocdf-dimensions > div:first-child {
+.md-typeset .opencdc-dimensions > div:first-child {
   border-left: none;
 }
-.md-typeset .ocdf-dimensions b {
+.md-typeset .opencdc-dimensions b {
   display: block;
   font-family: var(--md-code-font-family);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ocdf-accent);
+  color: var(--opencdc-accent);
   margin-bottom: 0.3rem;
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-dimensions b {
+[data-md-color-scheme="slate"] .md-typeset .opencdc-dimensions b {
   color: #d98a94;
 }
-.md-typeset .ocdf-dimensions span {
+.md-typeset .opencdc-dimensions span {
   display: block;
   font-size: 0.78rem;
   font-weight: 620;
   color: var(--md-default-fg-color);
 }
-.md-typeset .ocdf-dimensions i {
+.md-typeset .opencdc-dimensions i {
   display: block;
   margin-top: 0.25rem;
   font-style: normal;
   font-size: 0.66rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-dimensions > div { position: relative; }
-.md-typeset .ocdf-dimensions > div:not(:last-child)::before,
-.md-typeset .ocdf-dimensions > div:not(:last-child)::after {
+.md-typeset .opencdc-dimensions > div { position: relative; }
+.md-typeset .opencdc-dimensions > div:not(:last-child)::before,
+.md-typeset .opencdc-dimensions > div:not(:last-child)::after {
   content: "";
   position: absolute;
   z-index: 1;
   top: 50%;
 }
-.md-typeset .ocdf-dimensions > div:not(:last-child)::before {
+.md-typeset .opencdc-dimensions > div:not(:last-child)::before {
   right: -0.6rem;
   width: 1.2rem;
   height: 1.2rem;
   margin-top: -0.6rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 50%;
-  background: var(--ocdf-card-bg);
+  background: var(--opencdc-card-bg);
 }
-.md-typeset .ocdf-dimensions > div:not(:last-child)::after {
+.md-typeset .opencdc-dimensions > div:not(:last-child)::after {
   right: calc(-0.2rem + 1px);
   width: 0.34rem;
   height: 0.34rem;
   margin-top: -0.17rem;
-  border-top: 1.5px solid var(--ocdf-ink-soft);
-  border-right: 1.5px solid var(--ocdf-ink-soft);
+  border-top: 1.5px solid var(--opencdc-ink-soft);
+  border-right: 1.5px solid var(--opencdc-ink-soft);
   transform: rotate(45deg);
 }
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-dimensions > div:not(:last-child)::before {
+  .md-typeset .opencdc-dimensions > div:not(:last-child)::before {
     top: auto; right: auto; left: 50%; bottom: -0.6rem; margin: 0 0 0 -0.6rem;
   }
-  .md-typeset .ocdf-dimensions > div:not(:last-child)::after {
+  .md-typeset .opencdc-dimensions > div:not(:last-child)::after {
     top: auto; right: auto; left: 50%; bottom: -0.02rem; margin: 0 0 0 -0.17rem;
     transform: rotate(135deg);
   }
 }
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-dimensions { grid-template-columns: 1fr; }
-  .md-typeset .ocdf-dimensions > div { border-left: none; }
-  .md-typeset .ocdf-dimensions > div + div { border-top: 1px solid var(--ocdf-rule); }
+  .md-typeset .opencdc-dimensions { grid-template-columns: 1fr; }
+  .md-typeset .opencdc-dimensions > div { border-left: none; }
+  .md-typeset .opencdc-dimensions > div + div { border-top: 1px solid var(--opencdc-rule); }
 }
 
 /* ---------------------------------------------- landing: worked example */
 
 /* Before/after rather than another card: the point is contrast between two
    states, so the layout itself should show a change, not just describe one. */
-.md-typeset .ocdf-example {
+.md-typeset .opencdc-example {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: stretch;
   gap: 1rem;
   margin: 1rem 0 1.2rem;
 }
-.md-typeset .ocdf-example__before,
-.md-typeset .ocdf-example__after {
+.md-typeset .opencdc-example__before,
+.md-typeset .opencdc-example__after {
   padding: 1rem 1.1rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 6px;
 }
-.md-typeset .ocdf-example__before {
-  background: color-mix(in srgb, var(--ocdf-ink-soft) 6%, var(--ocdf-card-bg));
+.md-typeset .opencdc-example__before {
+  background: color-mix(in srgb, var(--opencdc-ink-soft) 6%, var(--opencdc-card-bg));
 }
-.md-typeset .ocdf-example__after {
-  background: var(--ocdf-eu-soft);
-  border-color: color-mix(in srgb, var(--ocdf-eu) 30%, var(--ocdf-rule));
+.md-typeset .opencdc-example__after {
+  background: var(--opencdc-eu-soft);
+  border-color: color-mix(in srgb, var(--opencdc-eu) 30%, var(--opencdc-rule));
 }
-.md-typeset .ocdf-example__label {
+.md-typeset .opencdc-example__label {
   margin: 0 0 0.5rem;
   font-family: var(--md-code-font-family);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-example__after .ocdf-example__label {
-  color: var(--ocdf-eu);
+.md-typeset .opencdc-example__after .opencdc-example__label {
+  color: var(--opencdc-eu);
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-example__after .ocdf-example__label {
+[data-md-color-scheme="slate"] .md-typeset .opencdc-example__after .opencdc-example__label {
   color: #8fb3e3;
 }
-.md-typeset .ocdf-example__before ul,
-.md-typeset .ocdf-example__after ul {
+.md-typeset .opencdc-example__before ul,
+.md-typeset .opencdc-example__after ul {
   margin: 0;
   padding-left: 1.1em;
 }
-.md-typeset .ocdf-example__before li,
-.md-typeset .ocdf-example__after li {
+.md-typeset .opencdc-example__before li,
+.md-typeset .opencdc-example__after li {
   margin: 0.2em 0;
 }
-.md-typeset .ocdf-example__arrow {
+.md-typeset .opencdc-example__arrow {
   align-self: center;
   justify-self: center;
   width: 0.6rem;
   height: 0.6rem;
-  border-top: 2px solid color-mix(in srgb, var(--ocdf-ink-soft) 65%, transparent);
-  border-right: 2px solid color-mix(in srgb, var(--ocdf-ink-soft) 65%, transparent);
+  border-top: 2px solid color-mix(in srgb, var(--opencdc-ink-soft) 65%, transparent);
+  border-right: 2px solid color-mix(in srgb, var(--opencdc-ink-soft) 65%, transparent);
   transform: rotate(45deg);
 }
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-example {
+  .md-typeset .opencdc-example {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  .md-typeset .ocdf-example__arrow {
+  .md-typeset .opencdc-example__arrow {
     transform: rotate(135deg);
     justify-self: center;
   }
 }
 
-/* ------------------------------------------------ landing: framework map */
+/* ------------------------------------------------ landing: function map */
 
 /* The map is one picture: GOVERN oversees the five functions (the connector
    under it drops into each card), the five run left to right, and RECOVER
    loops back into IDENTIFY. Colours are the function colours used on the
    function pages; every line that shows flow is the same neutral ink, so
    no connector competes with RESPOND red. */
-.md-typeset .ocdf-map {
+.md-typeset .opencdc-map {
   --map-gap: 1.1rem;
   --map-tie: 1.1rem;
-  --map-line: color-mix(in srgb, var(--ocdf-ink-soft) 65%, transparent);
+  --map-line: color-mix(in srgb, var(--opencdc-ink-soft) 65%, transparent);
   margin: 1rem 0 1.2rem;
   padding: 1.2rem 1.2rem 1rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 8px;
-  background: var(--ocdf-card-bg);
+  background: var(--opencdc-card-bg);
   font-size: 0.72rem;
   line-height: 1.35;
 }
-.md-typeset .ocdf-map p { margin: 0; }
+.md-typeset .opencdc-map p { margin: 0; }
 
 /* cards: GOVERN and the five functions share one style */
-.md-typeset .ocdf-map .m-govern a,
-.md-typeset .ocdf-map .m-flow a {
+.md-typeset .opencdc-map .m-govern a,
+.md-typeset .opencdc-map .m-flow a {
   display: block;
   height: 100%;
   color: inherit;
   text-decoration: none;
-  background: color-mix(in srgb, var(--ocdf-fn-current) 9%, var(--ocdf-card-bg));
-  border: 1px solid color-mix(in srgb, var(--ocdf-fn-current) 28%, var(--ocdf-rule));
-  border-top: 3px solid var(--ocdf-fn-current);
+  background: color-mix(in srgb, var(--opencdc-fn-current) 9%, var(--opencdc-card-bg));
+  border: 1px solid color-mix(in srgb, var(--opencdc-fn-current) 28%, var(--opencdc-rule));
+  border-top: 3px solid var(--opencdc-fn-current);
   border-radius: 6px;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
-.md-typeset .ocdf-map .m-govern a:hover,
-.md-typeset .ocdf-map .m-flow a:hover {
+.md-typeset .opencdc-map .m-govern a:hover,
+.md-typeset .opencdc-map .m-flow a:hover {
   transform: translateY(-2px);
-  background: color-mix(in srgb, var(--ocdf-fn-current) 15%, var(--ocdf-card-bg));
-  border-color: color-mix(in srgb, var(--ocdf-fn-current) 55%, var(--ocdf-rule));
-  border-top-color: var(--ocdf-fn-current);
-  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--ocdf-fn-current) 70%, transparent);
+  background: color-mix(in srgb, var(--opencdc-fn-current) 15%, var(--opencdc-card-bg));
+  border-color: color-mix(in srgb, var(--opencdc-fn-current) 55%, var(--opencdc-rule));
+  border-top-color: var(--opencdc-fn-current);
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--opencdc-fn-current) 70%, transparent);
 }
-.md-typeset .ocdf-map .m-govern a:focus-visible,
-.md-typeset .ocdf-map .m-flow a:focus-visible {
-  outline: 2px solid var(--ocdf-fn-current);
+.md-typeset .opencdc-map .m-govern a:focus-visible,
+.md-typeset .opencdc-map .m-flow a:focus-visible {
+  outline: 2px solid var(--opencdc-fn-current);
   outline-offset: 2px;
 }
-.md-typeset .ocdf-map .m-govern a::before,
-.md-typeset .ocdf-map .m-flow a::before {
+.md-typeset .opencdc-map .m-govern a::before,
+.md-typeset .opencdc-map .m-flow a::before {
   content: "";
-  background: var(--ocdf-fn-current);
+  background: var(--opencdc-fn-current);
   -webkit-mask: var(--map-icon) center / contain no-repeat;
   mask: var(--map-icon) center / contain no-repeat;
 }
-.md-typeset .ocdf-map strong {
-  color: var(--ocdf-fn-current);
+.md-typeset .opencdc-map strong {
+  color: var(--opencdc-fn-current);
   letter-spacing: 0.06em;
 }
 
 /* GOVERN: one wide card, icon beside the text */
-.md-typeset .ocdf-map .m-govern {
-  --ocdf-fn-current: var(--ocdf-fn-govern);
+.md-typeset .opencdc-map .m-govern {
+  --opencdc-fn-current: var(--opencdc-fn-govern);
   --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 20h18M4 9h16M12 3l8 6H4zM6 9v8M10 9v8M14 9v8M18 9v8'/%3E%3C/svg%3E");
 }
-.md-typeset .ocdf-map .m-govern a {
+.md-typeset .opencdc-map .m-govern a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.6rem 0.9rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   font-size: 0.78rem;
 }
 /* wide screens: one line, "GOVERN · mandate, ..." */
-.md-typeset .ocdf-map .m-govern a br { display: none; }
-.md-typeset .ocdf-map .m-govern a span { margin-left: 0.35em; }
-.md-typeset .ocdf-map .m-govern a span::before { content: "· "; }
-.md-typeset .ocdf-map .m-govern a::before {
+.md-typeset .opencdc-map .m-govern a br { display: none; }
+.md-typeset .opencdc-map .m-govern a span { margin-left: 0.35em; }
+.md-typeset .opencdc-map .m-govern a span::before { content: "· "; }
+.md-typeset .opencdc-map .m-govern a::before {
   flex: none;
   margin-right: 0.5rem;
   width: 1.25rem;
@@ -1075,42 +1081,42 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 
 /* the five functions */
-.md-typeset .ocdf-map .m-flow {
+.md-typeset .opencdc-map .m-flow {
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--map-gap);
   margin: var(--map-tie) 0 0.3rem;
 }
-.md-typeset .ocdf-map .m-flow > div { position: relative; }
+.md-typeset .opencdc-map .m-flow > div { position: relative; }
 /* Markdown wraps each link in a <p>; let it fill the grid cell so all five boxes match the tallest. */
-.md-typeset .ocdf-map .m-flow > div > p { height: 100%; }
-.md-typeset .ocdf-map .m-flow a {
+.md-typeset .opencdc-map .m-flow > div > p { height: 100%; }
+.md-typeset .opencdc-map .m-flow a {
   padding: 0.8rem 0.65rem 0.75rem;
   text-align: center;
 }
-.md-typeset .ocdf-map .m-flow a::before {
+.md-typeset .opencdc-map .m-flow a::before {
   display: block;
   width: 1.55rem;
   height: 1.55rem;
   margin: 0 auto 0.45rem;
 }
-.md-typeset .ocdf-map .m-flow a strong { font-size: 0.74rem; }
-.md-typeset .ocdf-map .m-flow a span {
+.md-typeset .opencdc-map .m-flow a strong { font-size: 0.74rem; }
+.md-typeset .opencdc-map .m-flow a span {
   display: block;
   margin-top: 0.15rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   text-wrap: balance;
 }
 /* Same six colours as the function pages, in function order, each with its icon. */
-.md-typeset .ocdf-map .m-flow > div:nth-child(1) { --ocdf-fn-current: var(--ocdf-fn-identify); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 1.5v3.5M12 19v3.5M1.5 12H5M19 12h3.5'/%3E%3C/svg%3E"); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(2) { --ocdf-fn-current: var(--ocdf-fn-protect); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z'/%3E%3Cpath d='M8.8 12.2l2.2 2.2 4.4-4.6'/%3E%3C/svg%3E"); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(3) { --ocdf-fn-current: var(--ocdf-fn-detect); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 12S5.3 5.5 12 5.5 22.5 12 22.5 12 18.7 18.5 12 18.5 1.5 12 1.5 12z'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3C/svg%3E"); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(4) { --ocdf-fn-current: var(--ocdf-fn-respond); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13.5 2L4.5 13.5h6.5L10 22l9.5-11.5H13z'/%3E%3C/svg%3E"); }
-.md-typeset .ocdf-map .m-flow > div:nth-child(5) { --ocdf-fn-current: var(--ocdf-fn-recover); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 12a8 8 0 1 1-2.35-5.65'/%3E%3Cpath d='M20 3.5v5h-5'/%3E%3C/svg%3E"); }
+.md-typeset .opencdc-map .m-flow > div:nth-child(1) { --opencdc-fn-current: var(--opencdc-fn-identify); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M12 1.5v3.5M12 19v3.5M1.5 12H5M19 12h3.5'/%3E%3C/svg%3E"); }
+.md-typeset .opencdc-map .m-flow > div:nth-child(2) { --opencdc-fn-current: var(--opencdc-fn-protect); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z'/%3E%3Cpath d='M8.8 12.2l2.2 2.2 4.4-4.6'/%3E%3C/svg%3E"); }
+.md-typeset .opencdc-map .m-flow > div:nth-child(3) { --opencdc-fn-current: var(--opencdc-fn-detect); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 12S5.3 5.5 12 5.5 22.5 12 22.5 12 18.7 18.5 12 18.5 1.5 12 1.5 12z'/%3E%3Ccircle cx='12' cy='12' r='3.2'/%3E%3C/svg%3E"); }
+.md-typeset .opencdc-map .m-flow > div:nth-child(4) { --opencdc-fn-current: var(--opencdc-fn-respond); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13.5 2L4.5 13.5h6.5L10 22l9.5-11.5H13z'/%3E%3C/svg%3E"); }
+.md-typeset .opencdc-map .m-flow > div:nth-child(5) { --opencdc-fn-current: var(--opencdc-fn-recover); --map-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 12a8 8 0 1 1-2.35-5.65'/%3E%3Cpath d='M20 3.5v5h-5'/%3E%3C/svg%3E"); }
 
 /* chevrons between the functions, drawn rather than typed */
-.md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
+.md-typeset .opencdc-map .m-flow > div:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1124,24 +1130,24 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* The loop sits under the grid; each leg is centred under its column,
    half a column in from the edge (five columns, four gaps). */
-.md-typeset .ocdf-map .m-loop {
+.md-typeset .opencdc-map .m-loop {
   text-align: center;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   font-size: 0.68rem;
   margin: 0.3rem 0 0.9rem;
 }
-.md-typeset .ocdf-map .m-loop-label { display: none; }
+.md-typeset .opencdc-map .m-loop-label { display: none; }
 
 @media screen and (min-width: 45em) {
   /* GOVERN connector: a stem from the card, a rail across, a drop into each function */
-  .md-typeset .ocdf-map .m-flow::before {
+  .md-typeset .opencdc-map .m-flow::before {
     content: "";
     position: absolute;
     top: calc(var(--map-tie) * -1);
     left: calc((100% - 4 * var(--map-gap)) / 10);
     right: calc((100% - 4 * var(--map-gap)) / 10);
     height: var(--map-tie);
-    --tie: color-mix(in srgb, var(--ocdf-fn-govern) 45%, var(--ocdf-rule));
+    --tie: color-mix(in srgb, var(--opencdc-fn-govern) 45%, var(--opencdc-rule));
     background:
       linear-gradient(var(--tie), var(--tie)) 50% 0 / 2px 50% no-repeat,
       linear-gradient(var(--tie), var(--tie)) 0 50% / 100% 2px no-repeat,
@@ -1152,13 +1158,13 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
       linear-gradient(var(--tie), var(--tie)) 100% 100% / 2px 50% no-repeat;
   }
 
-  .md-typeset .ocdf-map .m-loop {
+  .md-typeset .opencdc-map .m-loop {
     --loop-inset: calc((100% - 4 * var(--map-gap)) / 10);
     position: relative;
     height: 1.55rem;
     margin: 0 0 0.9rem;
   }
-  .md-typeset .ocdf-map .m-loop::before {
+  .md-typeset .opencdc-map .m-loop::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1169,7 +1175,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
     border-top: 0;
     border-radius: 0 0 10px 10px;
   }
-  .md-typeset .ocdf-map .m-loop::after {
+  .md-typeset .opencdc-map .m-loop::after {
     content: "";
     position: absolute;
     top: 0.05rem;
@@ -1180,20 +1186,20 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
     border-left: 2px solid var(--map-line);
     transform: rotate(45deg);
   }
-  .md-typeset .ocdf-map .m-loop-label {
+  .md-typeset .opencdc-map .m-loop-label {
     display: block;
     position: absolute;
     top: calc(1.05rem - 1px);
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0 0.55rem;
-    background: var(--ocdf-card-bg);
+    background: var(--opencdc-card-bg);
     font-size: 0.6rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     white-space: nowrap;
   }
-  .md-typeset .ocdf-map .m-loop-text {
+  .md-typeset .opencdc-map .m-loop-text {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1206,28 +1212,28 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 @media screen and (max-width: 44.9375em) {
   /* On a phone GOVERN is built like the function cards below it:
      icon on top, the name, then the description on its own line. */
-  .md-typeset .ocdf-map .m-govern a {
+  .md-typeset .opencdc-map .m-govern a {
     display: block;
     padding: 0.8rem 0.65rem 0.75rem;
     text-align: center;
     font-size: 0.72rem;
   }
-  .md-typeset .ocdf-map .m-govern a::before {
+  .md-typeset .opencdc-map .m-govern a::before {
     display: block;
     width: 1.55rem;
     height: 1.55rem;
     margin: 0 auto 0.45rem;
   }
-  .md-typeset .ocdf-map .m-govern strong { font-size: 0.74rem; }
-  .md-typeset .ocdf-map .m-govern a br { display: inline; }
-  .md-typeset .ocdf-map .m-govern a span {
+  .md-typeset .opencdc-map .m-govern strong { font-size: 0.74rem; }
+  .md-typeset .opencdc-map .m-govern a br { display: inline; }
+  .md-typeset .opencdc-map .m-govern a span {
     display: block;
     margin: 0.15rem 0 0;
     text-wrap: balance;
   }
-  .md-typeset .ocdf-map .m-govern a span::before { content: none; }
-  .md-typeset .ocdf-map .m-flow { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 1.2rem; }
-  .md-typeset .ocdf-map .m-flow > div:not(:last-child)::after {
+  .md-typeset .opencdc-map .m-govern a span::before { content: none; }
+  .md-typeset .opencdc-map .m-flow { grid-template-columns: 1fr; gap: 1.2rem; margin-top: 1.2rem; }
+  .md-typeset .opencdc-map .m-flow > div:not(:last-child)::after {
     top: auto;
     right: auto;
     left: 50%;
@@ -1237,65 +1243,65 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .md-typeset .ocdf-map a { transition: none; }
-  .md-typeset .ocdf-map a:hover { transform: none; }
+  .md-typeset .opencdc-map a { transition: none; }
+  .md-typeset .opencdc-map a:hover { transform: none; }
 }
 
 /* The five supporting ideas (CIA lens, regulatory layer, tier, level,
    evidence) used to be five separate bordered boxes under the diagram.
    They're the same links now, run as one quiet line of text — the diagram
    above is the picture; this is a caption, not a second grid of tiles. */
-.md-typeset .ocdf-map .m-lenses {
+.md-typeset .opencdc-map .m-lenses {
   margin: 0;
   padding-top: 0.7rem;
-  border-top: 1px solid var(--ocdf-rule);
+  border-top: 1px solid var(--opencdc-rule);
   text-align: center;
   font-size: 0.7rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-map .m-lenses a {
+.md-typeset .opencdc-map .m-lenses a {
   display: inline;
   padding: 0;
-  color: var(--ocdf-eu);
+  color: var(--opencdc-eu);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
 }
-.md-typeset .ocdf-map .m-lenses a:hover { transform: none; box-shadow: none; }
-.md-typeset .ocdf-map .m-lenses strong { color: inherit; letter-spacing: 0; }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-map .m-lenses a { color: #8fb3e3; }
+.md-typeset .opencdc-map .m-lenses a:hover { transform: none; box-shadow: none; }
+.md-typeset .opencdc-map .m-lenses strong { color: inherit; letter-spacing: 0; }
+[data-md-color-scheme="slate"] .md-typeset .opencdc-map .m-lenses a { color: #8fb3e3; }
 
 /* role cards: the last paragraph is the call to action — pin it to the
    card's bottom edge instead of trailing the body text, so the links line
    up across a row of cards even when the copy above them runs to different
    lengths. */
-.md-typeset .grid.cards.ocdf-roles > ul > li > p:last-child {
+.md-typeset .grid.cards.opencdc-roles > ul > li > p:last-child {
   margin-top: auto;
   margin-bottom: 0;
   padding-top: 0.6em;
 }
-.md-typeset .grid.cards.ocdf-roles > ul > li > p:last-child a {
+.md-typeset .grid.cards.opencdc-roles > ul > li > p:last-child a {
   font-weight: 650;
 }
 
 /* start-building path: a numbered list, not seven stacked cards. A number
    and a divider carry the rhythm; nothing here needs its own box. */
-.md-typeset .ocdf-path { counter-reset: step; }
-.md-typeset .ocdf-path > ol {
+.md-typeset .opencdc-path { counter-reset: step; }
+.md-typeset .opencdc-path > ol {
   list-style: none;
   margin: 0.3rem 0 0.9rem;
   padding: 0;
 }
-.md-typeset .ocdf-path > ol > li {
+.md-typeset .opencdc-path > ol > li {
   counter-increment: step;
   position: relative;
   margin: 0;
   padding: 0.7rem 0 0.7rem 2.6rem;
-  border-bottom: 1px solid var(--ocdf-rule);
+  border-bottom: 1px solid var(--opencdc-rule);
 }
-.md-typeset .ocdf-path > ol > li:last-child {
+.md-typeset .opencdc-path > ol > li:last-child {
   border-bottom: none;
 }
-.md-typeset .ocdf-path > ol > li::before {
+.md-typeset .opencdc-path > ol > li::before {
   content: counter(step);
   position: absolute;
   left: 0;
@@ -1303,33 +1309,33 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
-  background: var(--ocdf-eu);
+  background: var(--opencdc-eu);
   color: #fff;
   font-weight: 650;
   font-size: 0.72rem;
   line-height: 1.4rem;
   text-align: center;
 }
-.md-typeset .ocdf-path > ol > li p { margin: 0; }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-path > ol > li::before { background: var(--ocdf-eu-mid); }
+.md-typeset .opencdc-path > ol > li p { margin: 0; }
+[data-md-color-scheme="slate"] .md-typeset .opencdc-path > ol > li::before { background: var(--opencdc-eu-mid); }
 
 /* landing-page footnote: version/authorship + scope. Was two stacked
    colored admonitions; two short muted paragraphs read the same facts
    without announcing themselves as alerts. */
-.md-typeset .ocdf-meta {
+.md-typeset .opencdc-meta {
   margin-top: 1.6rem;
   padding-top: 0.9rem;
-  border-top: 1px solid var(--ocdf-rule);
+  border-top: 1px solid var(--opencdc-rule);
   font-size: 0.72rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-meta p {
+.md-typeset .opencdc-meta p {
   margin: 0 0 0.5rem;
 }
-.md-typeset .ocdf-meta p:last-child {
+.md-typeset .opencdc-meta p:last-child {
   margin-bottom: 0;
 }
-.md-typeset .ocdf-meta strong {
+.md-typeset .opencdc-meta strong {
   color: var(--md-default-fg-color);
 }
 
@@ -1337,7 +1343,7 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 .md-typeset .src {
   font-size: 0.66rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   margin: -0.4rem 0 0.8rem;
 }
 .md-typeset .src-tag {
@@ -1356,12 +1362,12 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .src-tag.law { color: #8a1f2d; }
 .md-typeset .src-tag.standard { color: #123a6d; }
 .md-typeset .src-tag.guidance { color: #2a6a4f; }
-.md-typeset .src-tag.ocdf { color: #6b4e16; }
+.md-typeset .src-tag.opencdc { color: #6b4e16; }
 .md-typeset .src-tag.practitioner { color: #555f6b; }
 [data-md-color-scheme="slate"] .md-typeset .src-tag.law { color: #e39aa4; }
 [data-md-color-scheme="slate"] .md-typeset .src-tag.standard { color: #8fb3e3; }
 [data-md-color-scheme="slate"] .md-typeset .src-tag.guidance { color: #8fd1b3; }
-[data-md-color-scheme="slate"] .md-typeset .src-tag.ocdf { color: #e2c07e; }
+[data-md-color-scheme="slate"] .md-typeset .src-tag.opencdc { color: #e2c07e; }
 [data-md-color-scheme="slate"] .md-typeset .src-tag.practitioner { color: #b4bec9; }
 
 /* capability index filter bar */
@@ -1372,8 +1378,8 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   align-items: center;
   margin: 0.8rem 0;
   padding: 0.6rem 0.8rem;
-  background: var(--ocdf-card-bg);
-  border: 1px solid var(--ocdf-rule);
+  background: var(--opencdc-card-bg);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 6px;
   font-size: 0.7rem;
 }
@@ -1382,29 +1388,29 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 .md-typeset .cap-filter input {
   font: inherit;
   padding: 0.2rem 0.4rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 4px;
   background: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
 }
-.md-typeset .cap-filter output { color: var(--ocdf-ink-soft); margin-left: auto; }
-.md-typeset .grid.cards.ocdf-roles {
+.md-typeset .cap-filter output { color: var(--opencdc-ink-soft); margin-left: auto; }
+.md-typeset .grid.cards.opencdc-roles {
   /* Six roles: three across on a wide screen, two on a tablet, one on a phone,
      so no card is ever left alone on a row. */
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 59.9375em) {
-  .md-typeset .grid.cards.ocdf-roles { grid-template-columns: repeat(2, 1fr); }
+  .md-typeset .grid.cards.opencdc-roles { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 29.9375em) {
-  .md-typeset .grid.cards.ocdf-roles { grid-template-columns: 1fr; }
+  .md-typeset .grid.cards.opencdc-roles { grid-template-columns: 1fr; }
 }
 
 /* ------------------------------------------ landing: hero assurances */
 
 /* What a security reader wants to know before clicking: no account, no data
    leaving the browser, nothing to be locked into. */
-.md-typeset .ocdf-hero .ocdf-assure {
+.md-typeset .opencdc-hero .opencdc-assure {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1413,21 +1419,21 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   padding: 0;
   list-style: none;
   font-size: 0.66rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-hero .ocdf-assure li {
+.md-typeset .opencdc-hero .opencdc-assure li {
   display: flex;
   align-items: center;
   gap: 0.35rem;
   margin: 0;
 }
-.md-typeset .ocdf-hero .ocdf-assure li::before {
+.md-typeset .opencdc-hero .opencdc-assure li::before {
   content: "";
   width: 0.5rem;
   height: 0.28rem;
   margin-top: -0.12rem;
-  border-left: 1.5px solid var(--ocdf-fn-protect);
-  border-bottom: 1.5px solid var(--ocdf-fn-protect);
+  border-left: 1.5px solid var(--opencdc-fn-protect);
+  border-bottom: 1.5px solid var(--opencdc-fn-protect);
   transform: rotate(-45deg);
 }
 
@@ -1435,15 +1441,15 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 
 /* The worked example is the proof of the method, so it gets one card:
    the organisation in facts, before and after, and the maturity it reached. */
-.md-typeset .ocdf-case {
+.md-typeset .opencdc-case {
   margin: 1rem 0 1.2rem;
   padding: 1.1rem 1.2rem 1rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 8px;
-  background: var(--ocdf-card-bg);
+  background: var(--opencdc-card-bg);
 }
-.md-typeset .ocdf-case .ocdf-example { margin: 0.9rem 0 0; }
-.md-typeset .ocdf-case ul.ocdf-case__facts {
+.md-typeset .opencdc-case .opencdc-example { margin: 0.9rem 0 0; }
+.md-typeset .opencdc-case ul.opencdc-case__facts {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -1451,26 +1457,26 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   padding: 0;
   list-style: none;
 }
-.md-typeset .ocdf-case ul.ocdf-case__facts > li {
+.md-typeset .opencdc-case ul.opencdc-case__facts > li {
   margin: 0;
   padding: 0.2rem 0.7rem;
-  border: 1px solid var(--ocdf-rule);
+  border: 1px solid var(--opencdc-rule);
   border-radius: 999px;
   font-size: 0.66rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-case ul.ocdf-case__facts b {
+.md-typeset .opencdc-case ul.opencdc-case__facts b {
   color: var(--md-default-fg-color);
   font-weight: 620;
 }
 
-.md-typeset .ocdf-levels {
+.md-typeset .opencdc-levels {
   margin-top: 1.1rem;
   padding-top: 0.9rem;
-  border-top: 1px solid var(--ocdf-rule);
+  border-top: 1px solid var(--opencdc-rule);
   font-size: 0.68rem;
 }
-.md-typeset .ocdf-levels__title {
+.md-typeset .opencdc-levels__title {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1478,78 +1484,78 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   margin: 0 0 0.6rem;
   font-weight: 620;
 }
-.md-typeset .ocdf-levels__title span {
+.md-typeset .opencdc-levels__title span {
   display: flex;
   align-items: center;
   gap: 0.35rem;
   font-weight: 400;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-levels__title i {
+.md-typeset .opencdc-levels__title i {
   display: inline-block;
   width: 0.7rem;
   height: 0.45rem;
   border-radius: 2px;
 }
-.md-typeset .ocdf-levels__title i.now { background: var(--ocdf-ink-soft); }
-.md-typeset .ocdf-levels__title i.target {
+.md-typeset .opencdc-levels__title i.now { background: var(--opencdc-ink-soft); }
+.md-typeset .opencdc-levels__title i.target {
   margin-left: 0.5rem;
-  box-shadow: inset 0 0 0 1.5px var(--ocdf-ink-soft);
+  box-shadow: inset 0 0 0 1.5px var(--opencdc-ink-soft);
 }
-.md-typeset .ocdf-levels > div,
-.md-typeset .ocdf-levels__scale {
+.md-typeset .opencdc-levels > div,
+.md-typeset .opencdc-levels__scale {
   display: grid;
   grid-template-columns: 5rem 1fr;
   align-items: center;
   gap: 0.7rem;
   margin: 0.28rem 0;
 }
-.md-typeset .ocdf-levels > div > b {
-  color: var(--ocdf-fn-current);
+.md-typeset .opencdc-levels > div > b {
+  color: var(--opencdc-fn-current);
   font-weight: 620;
 }
-.md-typeset .ocdf-levels > div > span {
+.md-typeset .opencdc-levels > div > span {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3px;
 }
-.md-typeset .ocdf-levels > div i {
+.md-typeset .opencdc-levels > div i {
   display: block;
   height: 0.55rem;
   border-radius: 2px;
-  background: color-mix(in srgb, var(--ocdf-ink-soft) 14%, var(--ocdf-card-bg));
+  background: color-mix(in srgb, var(--opencdc-ink-soft) 14%, var(--opencdc-card-bg));
 }
-.md-typeset .ocdf-levels > div i.n { background: var(--ocdf-fn-current); }
-.md-typeset .ocdf-levels > div i.t {
-  background: color-mix(in srgb, var(--ocdf-fn-current) 14%, var(--ocdf-card-bg));
-  box-shadow: inset 0 0 0 1.5px var(--ocdf-fn-current);
+.md-typeset .opencdc-levels > div i.n { background: var(--opencdc-fn-current); }
+.md-typeset .opencdc-levels > div i.t {
+  background: color-mix(in srgb, var(--opencdc-fn-current) 14%, var(--opencdc-card-bg));
+  box-shadow: inset 0 0 0 1.5px var(--opencdc-fn-current);
 }
-.md-typeset .ocdf-levels > div:nth-of-type(1) { --ocdf-fn-current: var(--ocdf-fn-govern); }
-.md-typeset .ocdf-levels > div:nth-of-type(2) { --ocdf-fn-current: var(--ocdf-fn-identify); }
-.md-typeset .ocdf-levels > div:nth-of-type(3) { --ocdf-fn-current: var(--ocdf-fn-protect); }
-.md-typeset .ocdf-levels > div:nth-of-type(4) { --ocdf-fn-current: var(--ocdf-fn-detect); }
-.md-typeset .ocdf-levels > div:nth-of-type(5) { --ocdf-fn-current: var(--ocdf-fn-respond); }
-.md-typeset .ocdf-levels > div:nth-of-type(6) { --ocdf-fn-current: var(--ocdf-fn-recover); }
-.md-typeset .ocdf-levels__scale { margin-top: 0.15rem; }
-.md-typeset .ocdf-levels__scale::before { content: ""; }
-.md-typeset .ocdf-levels__scale {
+.md-typeset .opencdc-levels > div:nth-of-type(1) { --opencdc-fn-current: var(--opencdc-fn-govern); }
+.md-typeset .opencdc-levels > div:nth-of-type(2) { --opencdc-fn-current: var(--opencdc-fn-identify); }
+.md-typeset .opencdc-levels > div:nth-of-type(3) { --opencdc-fn-current: var(--opencdc-fn-protect); }
+.md-typeset .opencdc-levels > div:nth-of-type(4) { --opencdc-fn-current: var(--opencdc-fn-detect); }
+.md-typeset .opencdc-levels > div:nth-of-type(5) { --opencdc-fn-current: var(--opencdc-fn-respond); }
+.md-typeset .opencdc-levels > div:nth-of-type(6) { --opencdc-fn-current: var(--opencdc-fn-recover); }
+.md-typeset .opencdc-levels__scale { margin-top: 0.15rem; }
+.md-typeset .opencdc-levels__scale::before { content: ""; }
+.md-typeset .opencdc-levels__scale {
   grid-template-columns: 5rem repeat(4, 1fr);
   column-gap: 0.7rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
   font-size: 0.6rem;
   text-align: center;
 }
 @media screen and (max-width: 44.9375em) {
-  .md-typeset .ocdf-levels > div,
-  .md-typeset .ocdf-levels__scale { grid-template-columns: 4.2rem 1fr; }
-  .md-typeset .ocdf-levels__scale { grid-template-columns: 4.2rem repeat(4, 1fr); }
+  .md-typeset .opencdc-levels > div,
+  .md-typeset .opencdc-levels__scale { grid-template-columns: 4.2rem 1fr; }
+  .md-typeset .opencdc-levels__scale { grid-template-columns: 4.2rem repeat(4, 1fr); }
 }
 
 /* ---------------------------------- landing: Design, Build, Run labels */
 
 /* The same three phase labels head the outputs and the seven steps, so the
    reader sees which step produces which artefact. */
-.md-typeset .ocdf-phase {
+.md-typeset .opencdc-phase {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -1559,20 +1565,20 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ocdf-eu);
+  color: var(--opencdc-eu);
 }
-.md-typeset .ocdf-phase::after {
+.md-typeset .opencdc-phase::after {
   content: "";
   flex: 1;
   height: 1px;
-  background: color-mix(in srgb, var(--ocdf-eu) 35%, var(--ocdf-rule));
+  background: color-mix(in srgb, var(--opencdc-eu) 35%, var(--opencdc-rule));
 }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-phase { color: #8fb3e3; }
-.md-typeset .ocdf-path .ocdf-output {
+[data-md-color-scheme="slate"] .md-typeset .opencdc-phase { color: #8fb3e3; }
+.md-typeset .opencdc-path .opencdc-output {
   display: block;
   margin-top: 0.2rem;
   font-size: 0.66rem;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
 
 /* Diagrams. Each is published as a light and a dark SVG, tagged with GitHub's
@@ -1590,13 +1596,13 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
 }
 .md-typeset details > summary {
   cursor: pointer;
-  color: var(--ocdf-ink-soft);
+  color: var(--opencdc-ink-soft);
 }
 
 /* Dependency markers. overrides/main.html wraps the literal [GATE], [HARD] and
    [SOFT] in the documents in a span, so the Markdown stays plain and GitHub
    still shows the bracketed text. Gate is the strongest: someone else decides. */
-.md-typeset .ocdf-dep {
+.md-typeset .opencdc-dep {
   display: inline-block;
   padding: 0.05em 0.5em;
   border-radius: 0.25em;
@@ -1609,11 +1615,11 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
   vertical-align: 0.08em;
   cursor: help;
 }
-.md-typeset .ocdf-dep--gate { background: var(--ocdf-accent); color: #fff; }
-.md-typeset .ocdf-dep--hard { background: var(--ocdf-eu); color: #fff; }
-.md-typeset .ocdf-dep--soft { border: 1px solid var(--ocdf-ink-soft); color: var(--ocdf-ink-soft); }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-dep--gate { background: #e39aa4; color: #1a1014; }
-[data-md-color-scheme="slate"] .md-typeset .ocdf-dep--hard { background: #8fb3e3; color: #0d1720; }
+.md-typeset .opencdc-dep--gate { background: var(--opencdc-accent); color: #fff; }
+.md-typeset .opencdc-dep--hard { background: var(--opencdc-eu); color: #fff; }
+.md-typeset .opencdc-dep--soft { border: 1px solid var(--opencdc-ink-soft); color: var(--opencdc-ink-soft); }
+[data-md-color-scheme="slate"] .md-typeset .opencdc-dep--gate { background: #e39aa4; color: #1a1014; }
+[data-md-color-scheme="slate"] .md-typeset .opencdc-dep--hard { background: #8fb3e3; color: #0d1720; }
 
 /* Phones: the capability and mapping tables are three to five columns of
    prose. Tighter cells let most of them fit the screen instead of scrolling
@@ -1644,6 +1650,51 @@ body.ocdf-fn-recover  { --ocdf-fn-current: var(--ocdf-fn-recover); }
     position: sticky;
     left: 0;
     font-size: 0.62rem;
-    color: var(--ocdf-ink-soft);
+    color: var(--opencdc-ink-soft);
   }
 }
+
+/* ------------------------------------------------ build path: wayfinding */
+
+/* Under the title of each build-path page: which step this is. */
+.md-typeset .opencdc-step {
+  display: inline-block;
+  margin: -0.4rem 0 1rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.2rem;
+  background: var(--opencdc-eu-soft);
+  font-family: var(--md-code-font-family);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--opencdc-eu);
+}
+[data-md-color-scheme="slate"] .md-typeset .opencdc-step { color: #8fb3e3; }
+.md-typeset .opencdc-step a { text-transform: none; letter-spacing: 0; }
+
+/* At the end of each build-path page: where to go next. It sits above the
+   footer's previous/next links, which follow the menu, not the steps. */
+.md-typeset .opencdc-step-next {
+  margin: 2.4rem 0 0.6rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--opencdc-rule);
+  border-left: 3px solid var(--opencdc-eu-mid);
+  border-radius: 0.2rem;
+  background: var(--opencdc-card-bg);
+}
+.md-typeset .opencdc-step-next p { margin: 0; }
+.md-typeset .opencdc-step-next span {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.68rem;
+  color: var(--opencdc-ink-soft);
+}
+
+/* Find your route: the three route cards, one per row so each reads as a
+   route, not a column in a comparison. Steps are numbered, not lettered. */
+.md-typeset .grid.opencdc-routes { grid-template-columns: 1fr; }
+.md-typeset .opencdc-routes > ul > li > p:first-child strong { font-size: 0.9rem; }
+.md-typeset .opencdc-routes ol { margin-top: 0.4rem; }
+.md-typeset .opencdc-routes ol,
+.md-typeset .opencdc-routes ol li { list-style-type: decimal; }
+.md-typeset .opencdc-routes ol li { margin-bottom: 0.25rem; }

@@ -40,4 +40,4 @@ Existing ENS (Esquema Nacional de Seguridad, RD 311/2022) already imposes NIST-l
 
 Tick "Spain" in `tools/regulatory-profile.html` to include this country's references under the `es-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

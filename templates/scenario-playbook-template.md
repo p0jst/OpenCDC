@@ -114,4 +114,4 @@ Public collections that are useful starting points for filling in the steps abov
 
 When importing from any of them: replace product assumptions with your stack, align severities with IR plan §1, insert your containment mandates, add your statutory reporting hooks, and exercise the result once before you need it.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

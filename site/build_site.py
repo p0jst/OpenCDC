@@ -8,6 +8,7 @@ every internal link keeps working, and adds the website-only landing page and CS
 Run from the repository root:  python site/build_site.py
 Then:                          mkdocs build
 """
+import os
 import re
 import shutil
 from pathlib import Path
@@ -16,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "_site_src"
 
 COPY_DIRS = ["docs", "assessments", "templates", "tools"]
-COPY_FILES = ["ABOUT.md", "CONTRIBUTING.md", "CHANGELOG.md", "LICENSE"]
+COPY_FILES = ["ABOUT.md", "CONTRIBUTING.md", "CHANGELOG.md", "SECURITY.md", "LICENSE"]
 
 # The self-assessment checklist is one file with two readers. In the repository
 # it is a form to copy and fill in offline; on the website the interactive tool
@@ -37,18 +38,76 @@ def web_checklist(text):
     return text
 
 
+# The build path: seven pages that each do one step. On the website each gets a
+# line under its title saying which step it is, and a block at the end that
+# sends the reader to the next step, so the footer's previous/next links (which
+# follow the menu) are not the only way on. Added here rather than in the files,
+# because the templates are also downloaded and filled in, and a navigation
+# note does not belong in someone's charter.
+BUILD_PATH = "docs/build-path.md"
+STEPS = [
+    ("docs/tiers.md", "Choose your tier"),
+    ("assessments/cdc-design-navigator.md", "Run the design workshops"),
+    ("templates/cdc-charter-template.md", "Adopt the charter"),
+    ("docs/operating-models.md", "Decide the operating model"),
+    ("docs/start-here.md", "Work the first 90 days"),
+    ("assessments/maturity-self-assessment.md", "Assess where you are"),
+    ("templates/annual-calendar-template.md", "Set the operating rhythm"),
+]
+
+
+def rel(src, dst):
+    return os.path.relpath(dst, os.path.dirname(src)).replace(os.sep, "/")
+
+
+def add_step_banners():
+    total = len(STEPS)
+    for i, (page, title) in enumerate(STEPS, start=1):
+        path = SRC / page
+        text = path.read_text(encoding="utf-8")
+        anchor = f"step-{i}-" + re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+        path_link = rel(page, BUILD_PATH)
+        top = (f'<p class="opencdc-step" markdown>Build path · step {i} of {total} · '
+               f'[See all steps]({path_link}#{anchor})</p>\n')
+        if i < total:
+            nxt_page, nxt_title = STEPS[i]
+            end = (f'<div class="opencdc-step-next" markdown>\n'
+                   f'<span>Done with step {i}?</span> '
+                   f'[Next: step {i + 1}, {nxt_title} →]({rel(page, nxt_page)})'
+                   f' · [Back to the build path]({path_link})\n</div>\n')
+        else:
+            end = (f'<div class="opencdc-step-next" markdown>\n'
+                   f'<span>That was the last step.</span> '
+                   f'[What comes after the build path →]({path_link}#after-the-build-path)\n</div>\n')
+        lines = text.split("\n")
+        h1 = next(n for n, l in enumerate(lines) if l.startswith("# "))
+        lines.insert(h1 + 1, "\n" + top)
+        text = "\n".join(lines)
+        foot = re.search(r"\n(---\n+)?\*(Template from the )?OpenCDC, licensed CC BY 4\.0[^\n]*\*\s*$", text)
+        if foot:
+            text = text[:foot.start()] + "\n\n" + end + text[foot.start():]
+        else:
+            text = text.rstrip() + "\n\n" + end
+        # The theme's previous/next links follow the menu, not the build path,
+        # so on a step page they would point somewhere else than the step box.
+        assert not text.startswith("---"), f"{page}: unexpected front matter"
+        text = "---\nhide:\n  - footer\n---\n\n" + text
+        path.write_text(text, encoding="utf-8")
+
+
 def main():
     if SRC.exists():
         shutil.rmtree(SRC)
     SRC.mkdir()
     for d in COPY_DIRS:
-        shutil.copytree(ROOT / d, SRC / d, ignore=shutil.ignore_patterns(".DS_Store"))
+        shutil.copytree(ROOT / d, SRC / d, ignore=shutil.ignore_patterns(".DS_Store", "*.py", "__pycache__"))
     for f in COPY_FILES:
         p = ROOT / f
         if p.exists():
             shutil.copy2(p, SRC / f)
     checklist = SRC / CHECKLIST
     checklist.write_text(web_checklist(checklist.read_text(encoding="utf-8")), encoding="utf-8")
+    add_step_banners()
     # website-only files
     shutil.copy2(ROOT / "site" / "index.md", SRC / "index.md")
     (SRC / "assets").mkdir()

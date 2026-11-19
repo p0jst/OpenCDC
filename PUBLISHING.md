@@ -1,12 +1,12 @@
 # Publishing notes and maintainer checklist
 
-Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capability model; SOC leads in the subtitle and metadata for discoverability.
+Approved project name: OpenCDC, written with that casing. It had another name until v1.6.0; the word "framework" is no longer used for the project itself, only in other organisations' names such as the NIST Cybersecurity Framework. SOC leads in the subtitle and metadata for discoverability.
 
 ## GitHub repository settings
 - Repository name: `OpenCDC`
-- Description: "Open CDC Framework (OCDF): an open source framework for building and maturing security operations in the EU, from a two-person IT-security team to a full SOC / Cyber Defence Center. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model, templates, all 27 national annexes."
+- Description: "OpenCDC: open source guidance and tools for building and maturing security operations in the EU, from a two-person IT-security team to a full SOC / Cyber Defence Center. NIST CSF 2.0, CIA triad, NIS2/GDPR/DORA, maturity model, templates, all 27 national annexes."
 - Topics: `soc` `security-operations-center` `cyber-defence-center` `csirt` `incident-response` `nist-csf` `nis2` `dora` `gdpr` `detection-engineering` `threat-intelligence` `maturity-model` `blue-team`
-  Deliberately no `eu` topic: it is generic, carries enormous unrelated volume, and nobody browsing it is looking for a SOC framework. The European framing is already carried by `nis2`, `dora` and `gdpr`, which are specific enough that anyone arriving through them is in the audience.
+  Deliberately no `eu` topic: it is generic, carries enormous unrelated volume, and nobody browsing it is looking for SOC guidance. The European framing is already carried by `nis2`, `dora` and `gdpr`, which are specific enough that anyone arriving through them is in the audience.
 - Enable: Pages with source "GitHub Actions", which publishes the website including tools/, plus Discussions and Issues.
   Discussions matter: `CONTRIBUTING.md` tells contributors to open one for field feedback on the maturity criteria.
 - Social preview: upload `brand/github-social-preview.png` under **Settings → General → Social preview**. There is no API for this, so it has to be done in the web UI. The website's link previews use a separate card, `assets/social-preview.png`, referenced by the site's Open Graph tags in `overrides/main.html`. Regenerate either if the stat counts change.
@@ -15,8 +15,9 @@ Approved project name: Open CDC Framework (OCDF). "Framework" refers to the capa
 - `v1.0.0` — 2026-09-02. First stable release.
 - `v1.1.0` — 2026-09-23. Usability and scoring release; two DETECT criteria changed.
 - `v1.2.0` — 2026-10-11. Review release: criteria set 2 with the NIS2 legal floor at Level 2, 71 criteria; incident handling on DAIR; the IT/OT interface; alert triage and AI in the CDC; the first diagrams; plainer front page and README.
+- `v1.6.0` — 2026-11-19. Minor release: renamed from the Open CDC Framework to OpenCDC, and a clearer way in, with Find your route, the build path, Build and Learn in the menu, and step banners on the seven step pages. No criterion changes.
 - `v1.5.0` — 2026-11-16. Minor release from a practitioner review: identity and session attacks, ransomware decisions, an ISO/IEC 27001 crosswalk, log retention, a decision log with post-incident reviews held against it, the NIS2 claim aligned with the crosswalk, and a hardened website build. No criterion changes.
-- `v1.3.0` — 2026-10-27. Minor release: security fix for the maturity tool's file import and a pinned website build; vulnerability handling built for exploitation speed, with edge devices under PR-5 and a reworded IDENTIFY L3 criterion; end-to-end check of links, annexes and tools; one path through the framework; references updated and SANS 2026 research applied.
+- `v1.3.0` — 2026-10-27. Minor release: security fix for the maturity tool's file import and a pinned website build; vulnerability handling built for exploitation speed, with edge devices under PR-5 and a reworded IDENTIFY L3 criterion; end-to-end check of links, annexes and tools; one path through OpenCDC; references updated and SANS 2026 research applied.
 - `v1.4.2` — 2026-11-04. Patch release: the worked example earlier in the Start path with a before and after, the self-assessment page as a list of criteria with the tool one click away, the tool starting at GOVERN for a new assessment, and four-digit numbers without a comma.
 - `v1.4.1` — 2026-11-02. Patch release: a clearer opening on the landing page, centred section headings there, a current link preview card and dashes removed from tool text.
 - `v1.4.0` — 2026-11-02. Presentation release: five diagrams, diagrams on phones, a sharper landing page, folded reference tables, the README rebuilt as the repository front page, SECURITY.md, and the plan for Material for MkDocs end of life. No criteria changes.
@@ -41,8 +42,17 @@ Plan, to finish before May 2027:
 2. **Check the three things this site depends on.** The redirects for old addresses, now from `mkdocs-redirects`; the template override in `overrides/main.html` for link previews; and `site/extra.css`, which relies on Material's HTML structure. If Zensical does not yet handle redirects, `site/build_site.py` can write the redirect pages itself.
 3. **Switch the workflow** once the test build matches, and record it in the changelog. Keep `mkdocs.yml` rather than converting to Zensical's own format until that format is stable.
 
+## When to release
+
+Releases had been coming faster than readers could follow: seven tagged releases between 2 September and 16 November 2026. From v1.6.0 these rules apply, and the maintainer holds himself to them:
+
+- **Major, X.0.0,** only when assessments made under the previous version can no longer be compared, which means a new criteria set. Rare by design.
+- **Minor, 1.X.0,** at most once a month. New pages, new tools, restructured navigation and new guidance collect on the release branch until then.
+- **Patch, 1.6.X,** only for faults: a wrong fact or legal reference, a broken link or tool, a build failure. Not for new content, however small, and not for wording that is merely better.
+- **When in doubt, wait.** A change that can sit on the branch for three more weeks should.
+
 ## Cutting a release
-1. Update the version in six places: the README badge and its citation line, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, the version line in the footer box of the landing page `site/index.md`, and `FRAMEWORK_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
+1. Update the version in six places: the README badge and its citation line, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, the version line in the footer box of the landing page `site/index.md`, and `OPENCDC_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.
 2. Push to `main`; confirm the Pages workflow deployed and the site is live.
 3. Create the release on GitHub, tag `vX.Y.Z` targeting `main`, and paste the notes. Keep the status-and-limitations section; it is what stops a reader treating the regulatory content as audited.
 

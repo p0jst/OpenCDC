@@ -8,7 +8,7 @@
 |--------|-----------|------------------|--------------------|
 | Asset inventory accuracy | % sampled assets correctly recorded | > 90% | Invest in discovery/CMDB reconciliation |
 | Log source coverage | % of priority-1 and priority-2 sources onboarded, per the priority list in [DETECT](../docs/detect.md) | 100% P1, > 90% P2 | Onboarding backlog priority |
-| Maturity score trend | OCDF level per function, assessed annually | +1 level on 2 weakest functions/yr | Budget allocation |
+| Maturity score trend | OpenCDC level per function, assessed annually | +1 level on 2 weakest functions/yr | Budget allocation |
 | Training completion | % staff / % management completing role-based training | > 95% | NIS2 Art. 20 evidence; awareness focus |
 
 ## Detection: DETECT
@@ -57,4 +57,4 @@
 - Executive and board report: quarterly, covering maturity trend, top risks and statutory compliance posture.
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0.*
+*Template from OpenCDC, licensed CC BY 4.0.*

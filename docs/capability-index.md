@@ -1,9 +1,9 @@
 # Capability index
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span></p>
 
-Every capability in the framework, with the document that defines it and the
-lowest [implementation tier](tiers.md) that should adopt it. The framework
+Every capability in OpenCDC, with the document that defines it and the
+lowest [implementation tier](tiers.md) that should adopt it. OpenCDC
 addresses capabilities by ID throughout, so this is the page to come back to
 whenever a reference like `PR-7` or `DE-4` appears and you want the detail.
 
@@ -111,4 +111,4 @@ filter by function or by your tier to see just what applies to you.
 - [NIST CSF 2.0 crosswalk](csf-crosswalk.md) to map these capabilities onto the CSF 2.0 categories.
 - [CIS Controls crosswalk](cis-controls-crosswalk.md) to map these capabilities onto CIS Controls v8.1.
 
-*Open CDC Framework, licensed CC BY 4.0. Generated from the capability tables in the six function documents (Govern through Recover).*
+*OpenCDC, licensed CC BY 4.0. Generated from the capability tables in the six function documents (Govern through Recover).*

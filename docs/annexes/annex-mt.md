@@ -40,4 +40,4 @@ Small jurisdiction with a single point of contact, the Critical Infrastructure P
 
 Tick "Malta" in `tools/regulatory-profile.html` to include this country's references under the `mt-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

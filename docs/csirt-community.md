@@ -1,6 +1,6 @@
 # The CSIRT community layer: networking, certification and living documentation
 
-<p class="src" markdown><span class="src-tag guidance">Guidance</span>RFC 2350, FIRST, TF-CSIRT and SIM3 as published; the crosswalk to this framework is paraphrased.</p>
+<p class="src" markdown><span class="src-tag guidance">Guidance</span>RFC 2350, FIRST, TF-CSIRT and SIM3 as published; the crosswalk to OpenCDC is paraphrased.</p>
 
 > A CDC that operates alone learns slowly. Europe has a mature CSIRT community infrastructure of trust networks, certification schemes and maturity audits that most new CDCs discover years too late. This document covers joining it, and the documentation discipline that community certification forces upon you, which is worth adopting even if you never certify.
 
@@ -23,9 +23,9 @@ Practical rules learned the hard way across the community: send a *named, consis
 
 **SIM3**, the Open CSIRT Foundation's Security Incident Management Maturity Model, currently in version v2 interim of 1 January 2023, with a full version 2 announced for 2026, measures 40+ parameters across four quadrants, **O**rganisation, **H**uman, **T**ools and **P**rocesses, on a 0–4 scale. It underpins TF-CSIRT certification and ENISA's CSIRT maturity work, and it audits *documentation and anchoring* rather than technology: can you show the mandate, is the process written, is it reviewed, is review verified by someone independent?
 
-OCDF and SIM3 are complementary: OCDF says *what to build*, SIM3 audits *whether it's institutionalised*. Crosswalk for teams pursuing certification, or just wanting SIM3's discipline:
+OpenCDC and SIM3 are complementary: OpenCDC says *what to build*, SIM3 audits *whether it's institutionalised*. Crosswalk for teams pursuing certification, or just wanting SIM3's discipline:
 
-| SIM3 area, with examples | OCDF equivalent |
+| SIM3 area, with examples | OpenCDC equivalent |
 |----------------------|-----------------|
 | O-1 Mandate · O-3 Authority · O-4 Responsibility | GV-1 charter §1, §4 and mission |
 | O-2 Constituency | Charter §2 scope |
@@ -52,7 +52,7 @@ The difference between documentation that passes an audit and documentation that
 
 Three review layers work well together:
 
-1. **Self-assessment** — yearly, using this framework's maturity assessment and ENISA's SIM3-based CSIRT maturity self-assessment tooling; gaps feed the improvement backlog.
+1. **Self-assessment** — yearly, using OpenCDC's maturity assessment and ENISA's SIM3-based CSIRT maturity self-assessment tooling; gaps feed the improvement backlog.
 2. **Recurring controls** — quarterly/semi-annual verification of the high-churn artefacts: containment mandate, contact details, severity scheme, reporting process.
 3. **Independent audit** — internal audit or external assessor, yearly, from a separate reporting line.
 
@@ -71,4 +71,4 @@ Recurring obligations die in backlogs unless scheduled. Maintain an annual wheel
 - ENISA, for CSIRT maturity resources and self-assessment. https://www.enisa.europa.eu
 - VERIS, the *Vocabulary for Event Recording and Incident Sharing*. https://verisframework.org
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

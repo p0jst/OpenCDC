@@ -6,7 +6,7 @@ public explanation is in [the community benchmark](../docs/benchmark.md).
 ## Receiving contributions
 
 Contributions arrive by email at benchmark@opencdc.org, as a JSON object in
-the message body or as an attached `ocdf-benchmark-contribution.json`.
+the message body or as an attached `opencdc-benchmark-contribution.json`.
 
 1. Save each one as a separate `.json` file in `benchmark/submissions/`.
    That folder is git-ignored: **never commit raw contributions**.
@@ -34,7 +34,7 @@ the message body or as an attached `ocdf-benchmark-contribution.json`.
 
 ## When the criteria change
 
-Each contribution records the framework version and the criteria set,
+Each contribution records OpenCDC version and the criteria set,
 `criteria_set`. The script aggregates only the current set, `CRITERIA_SET` in
 `aggregate.py`, and rejects the rest with a message. Criteria set 2 arrived
 with the NIS2 legal floor, after v1.1.0; a set-1 contribution cannot be mapped

@@ -14,7 +14,7 @@ The horizontal cybersecurity law for the EU. Transposition deadline was 17 Octob
     - Art. 20 covers management accountability and training.
     - Art. 21 sets minimum risk-management measures; the list in points (a)–(j) reads like a CDC capability checklist: risk analysis, incident handling, continuity/backup/DR, supply chain, secure development/acquisition, effectiveness assessment, hygiene & training, cryptography, HR/access control, MFA.
     - Art. 23 governs incident reporting: early warning ≤ 24 h, notification ≤ 72 h, final report ≤ 1 month, to the national CSIRT or competent authority.
-- **Framework mapping:** every OCDF function document has an "EU regulatory hooks" section referencing the relevant NIS2 articles.
+- **Mapping:** every OpenCDC function document has an "EU regulatory hooks" section referencing the relevant NIS2 articles.
 - **Changes proposed, not yet law:** on 20 January 2026 the Commission proposed targeted NIS2 amendments, COM(2026) 13, on scope, a new small mid-cap category, ransomware reporting and cross-border supervision. Separately, the Digital Omnibus of November 2025, COM(2025) 837, proposes a single entry point at ENISA for incident reports under NIS2, GDPR, DORA, eIDAS and CER. It would also change GDPR breach notification to the authority: only breaches likely to be high risk, within 96 hours instead of 72. As of October 2026 both proposals are still being negotiated. Today's rules apply in full until amendments are adopted and, for NIS2, transposed, so keep the 72-hour GDPR clock and build reporting on today's national channels, not on a single entry point that does not yet exist.
 
 ### GDPR: Regulation (EU) 2016/679
@@ -71,4 +71,4 @@ ENISA's permanent mandate and the EU cybersecurity certification framework, such
 - European Commission, NIS2 targeted amendments COM(2026) 13 and revised Cybersecurity Act COM(2026) 11, 20 January 2026. https://digital-strategy.ec.europa.eu/en/policies/cybersecurity-act
 - ENISA, *NIS2 Technical Implementation Guidance* on Implementing Regulation (EU) 2024/2690, June 2025, with evidence examples and a mapping table. https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

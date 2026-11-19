@@ -40,4 +40,4 @@ Hungarian extra: a contracted cybersecurity auditor registered with SZTFH is man
 
 Tick "Hungary" in `tools/regulatory-profile.html` to include this country's references under the `hu-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

@@ -40,4 +40,4 @@ Cyprus is stricter than the directive on reporting. The early warning is due wit
 
 Tick "Cyprus" in `tools/regulatory-profile.html` to include this country's references under the `cy-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

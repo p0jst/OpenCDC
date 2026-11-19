@@ -40,4 +40,4 @@ Registration was due by 6 March 2026, and the BSI's tolerance period for late re
 
 Tick "Germany" in `tools/regulatory-profile.html` to include this country's references under the `de-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

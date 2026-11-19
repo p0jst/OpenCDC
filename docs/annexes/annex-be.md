@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Registration and reporting via the Safeonweb@Work portal. Belgium's CyFun® framework, mapped to NIST CSF, is an accepted route to demonstrate compliance, and highly compatible with this framework's structure.
+Registration and reporting via the Safeonweb@Work portal. Belgium's CyFun® framework, mapped to NIST CSF, is an accepted route to demonstrate compliance, and highly compatible with OpenCDC's structure.
 
 ## Standard checklist for all countries
 
@@ -40,4 +40,4 @@ Registration and reporting via the Safeonweb@Work portal. Belgium's CyFun® fram
 
 Tick "Belgium" in `tools/regulatory-profile.html` to include this country's references under the `be-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

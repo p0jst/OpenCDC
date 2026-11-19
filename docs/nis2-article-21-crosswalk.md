@@ -1,21 +1,21 @@
 # NIS2 Article 21 Crosswalk
 
-<p class="src" markdown><span class="src-tag law">Law</span><span class="src-tag ocdf">OCDF</span>Obligations paraphrased from Directive (EU) 2022/2555; the mapping to capabilities and criteria is this framework's. Not legal advice.</p>
+<p class="src" markdown><span class="src-tag law">Law</span><span class="src-tag opencdc">OpenCDC</span>Obligations paraphrased from Directive (EU) 2022/2555; the mapping to capabilities and criteria is OpenCDC's. Not legal advice.</p>
 
 This page answers the question an auditor or a supervisory authority asks first:
 *where in your CDC is each NIS2 measure?* It maps Articles 20, 21 and 23 to the
-OCDF capabilities that deliver them and to the Level 2 criteria that make up the
+OpenCDC capabilities that deliver them and to the Level 2 criteria that make up the
 minimum.
 
 ## The rule behind the mapping
 
 NIS2 requires the same measures of *essential* and *important* entities. The
 categories differ in supervision, ex ante or ex post, and in the maximum fines,
-not in what an entity must do. OCDF therefore puts the minimum form of every
+not in what an entity must do. OpenCDC therefore puts the minimum form of every
 measure into the Essential tier and the Level 2 criteria:
 
 - Reaching Level 2 in every function covers each measure below at least in
-  basic form, in this framework's reading, apart from the two gaps named under
+  basic form, in OpenCDC's reading, apart from the two gaps named under
   the table.
 - A capability that carries the legal floor is never "above tier" for an entity
   in NIS2 scope, whatever tier it picked. See [the legal floor](tiers.md#the-legal-floor).
@@ -29,7 +29,7 @@ list; check your [national annex](annexes/README.md).
 
 ## Articles 20 and 21
 
-| Obligation | What it asks, paraphrased | OCDF capabilities | Level 2 criteria that meet the minimum |
+| Obligation | What it asks, paraphrased | OpenCDC capabilities | Level 2 criteria that meet the minimum |
 |------------|---------------------------|-------------------|----------------------------------------|
 | **Art. 20(1)** Governance | The management body approves the cybersecurity risk-management measures, oversees their implementation and can be held liable | GV-1, GV-7 | GOVERN: management body has approved the measures and completed training |
 | **Art. 20(2)** Training | Members of the management body follow training; employees are encouraged to receive similar training regularly | GV-7, PR-2 | GOVERN: management training within 12 months · PROTECT: awareness training for all staff |
@@ -46,14 +46,14 @@ list; check your [national annex](annexes/README.md).
 | **21(2)(j)** | Multi-factor or continuous authentication, secured voice, video and text communications, and secured emergency communications where appropriate | PR-1, RS-1 | PROTECT: MFA for remote and administrative access · RESPOND: the IR plan's out-of-band communications |
 
 **Gaps to close yourself.** Two parts of the list are only partly inside a CDC's
-remit and OCDF covers them thinly: *human resources security* in (i), such as
+remit and OpenCDC covers them thinly: *human resources security* in (i), such as
 joiner, mover and leaver processes and screening, and *vulnerability disclosure*
 in (e), meaning a way for outsiders to report a vulnerability to you. Assign both
 an owner in GV-4.
 
 ## Article 23: reporting
 
-| Obligation | Deadline | OCDF | Level 2 criteria |
+| Obligation | Deadline | OpenCDC | Level 2 criteria |
 |------------|----------|------|------------------|
 | Early warning of a significant incident | ≤ 24 h from becoming aware | RS-5 | RESPOND: statutory contacts and templates prepared; reporting drill within 12 months |
 | Incident notification | ≤ 72 h from becoming aware | RS-5 | as above |
@@ -83,4 +83,4 @@ Record in the IR plan which definition applies to you.
 - NIS2: Directive (EU) 2022/2555, Art. 20, 21, 23 and 34. https://eur-lex.europa.eu/eli/dir/2022/2555/oj
 - Commission Implementing Regulation (EU) 2024/2690. https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

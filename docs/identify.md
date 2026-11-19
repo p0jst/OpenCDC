@@ -6,7 +6,7 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## Core capabilities
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Function from NIST CSF 2.0; the capability breakdown and IDs are OpenCDC's.</p>
 
 | ID | Capability | Description |
 |----|-----------|-------------|
@@ -20,7 +20,7 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## CIA mapping
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -45,7 +45,7 @@ Understand what you are defending and what threatens it. Every downstream capabi
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's criteria. Not a certification standard.</p>
 
 The criteria that score IDENTIFY are kept in one place for all six functions: the [maturity self-assessment, IDENTIFY](../assessments/maturity-self-assessment.md#identify), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(a), (e) and (i), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
@@ -81,4 +81,4 @@ The criteria that score IDENTIFY are kept in one place for all six functions: th
 - ENISA, *ENISA Threat Landscape 2026*, September 2026, covering 2025. https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026
 - NIST, *NIST Updates NVD Operations to Address Record CVE Growth*, 15 April 2026. https://www.nist.gov/itl/nvd
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

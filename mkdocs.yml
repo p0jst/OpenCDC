@@ -1,6 +1,6 @@
-site_name: Open CDC Framework
+site_name: OpenCDC
 site_description: >-
-  A free framework for building and running the team that detects and
+  Free guidance and tools for building and running the team that detects and
   responds to cyber attacks, from two people in IT to a large enterprise with
   a 24/7 SOC. Written for NIS2, DORA and GDPR, with annexes for all 27 EU
   member states.
@@ -125,24 +125,29 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/p0jst/OpenCDC
 copyright: >-
-  Open CDC Framework · CC BY 4.0 · Not legal advice: verify regulatory
+  OpenCDC · CC BY 4.0 · Not legal advice: verify regulatory
   references against EUR-Lex and national law.
 
 nav:
   - Home: index.md
-  - Start:
-      # The worked example comes second, so a reader sees where the steps
-      # lead before taking them; then the steps in the home page's order, so
-      # the footer's previous/next links walk a reader through them.
-      - OCDF on one page: docs/one-page.md
+  # Build is for doing: each page asks for a decision and leaves the reader
+  # with a document. Learn is for reading. Keeping them apart answers the
+  # question "am I reading about it, or am I doing it?". Build pages that live
+  # in other sections (charter, operating models, calendar) are reached from
+  # the build path and carry a step banner added by site/build_site.py.
+  - Build:
+      - Find your route: docs/find-your-route.md
+      - The build path: docs/build-path.md
+      - "Step 1: Implementation tiers": docs/tiers.md
+      - "Step 2: Design workshops": assessments/cdc-design-navigator.md
+      - "Step 5: The first 90 days": docs/start-here.md
+      - "Step 6: Maturity self-assessment": assessments/maturity-self-assessment.md
+  - Learn:
+      - OpenCDC on one page: docs/one-page.md
       - Worked example: docs/worked-example.md
       - Executive guide: docs/executive-guide.md
-      - Implementation tiers: docs/tiers.md
-      - Design navigator for workshops: assessments/cdc-design-navigator.md
-      - "Start here: the first 90 days": docs/start-here.md
-      - Maturity self-assessment: assessments/maturity-self-assessment.md
-  - Framework:
       - Introduction & design principles: docs/introduction.md
+  - Reference:
       - All documents in reading order: docs/README.md
       - The six functions:
           - Govern: docs/govern.md
@@ -222,7 +227,7 @@ nav:
           - Annual operating calendar: templates/annual-calendar-template.md
   - Project:
       - About: ABOUT.md
-      - Why trust this framework: docs/trust.md
+      - Why trust OpenCDC: docs/trust.md
       - Contributing: CONTRIBUTING.md
       - Changelog: CHANGELOG.md
       - References & credits: docs/references.md

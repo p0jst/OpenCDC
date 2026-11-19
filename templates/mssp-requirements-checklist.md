@@ -40,4 +40,4 @@
 Track quarterly: notification SLA adherence · validated-detection coverage vs our profile · FP rate trend · escalation drill results · improvement actions closed.
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0.*
+*Template from OpenCDC, licensed CC BY 4.0.*

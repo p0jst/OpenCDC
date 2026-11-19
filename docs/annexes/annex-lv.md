@@ -40,4 +40,4 @@ Annual self-assessment reports go to the National Cybersecurity Centre. Latvia a
 
 Tick "Latvia" in `tools/regulatory-profile.html` to include this country's references under the `lv-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

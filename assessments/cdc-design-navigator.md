@@ -1,8 +1,8 @@
 # CDC design navigator: guiding questions
 
-> **How to use this:** work through each function's questions in a workshop of 2–4 hours per function, with the right people in the room. Every question lists *why it matters* and *where the framework helps*. If you can answer a question crisply and evidence it, move on. If the room goes quiet, you've found a design gap; log it as a backlog item. Answering all questions honestly gets a new CDC ~90% of the way to a sound design; the last 10% is your organisation's specifics.
+> **How to use this:** work through each function's questions in a workshop of 2–4 hours per function, with the right people in the room. Every question lists *why it matters* and *where OpenCDC helps*. If you can answer a question crisply and evidence it, move on. If the room goes quiet, you've found a design gap; log it as a backlog item. Answering all questions honestly gets a new CDC ~90% of the way to a sound design; the last 10% is your organisation's specifics.
 
-**Legend:** ➜ = where to go in the framework · ⚠ = common failure this question prevents
+**Legend:** ➜ = where to go in OpenCDC · ⚠ = common failure this question prevents
 
 Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them up in the [capability index](../docs/capability-index.md), which gives the capability name, its document and the tier it belongs to.
 
@@ -100,4 +100,4 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 3. Prioritise: fix GOVERN gaps first, since they block everything, then the cheapest blast-radius items P1, P3 and P4, then coverage at D1 and D2.
 4. Set level targets per function, using the [maturity model](../docs/maturity-model.md), and reassess annually, or after major organisational change.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

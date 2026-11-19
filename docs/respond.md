@@ -6,7 +6,7 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 
 ## Core capabilities
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Function from NIST CSF 2.0; the capability breakdown and IDs are OpenCDC's.</p>
 
 | ID | Capability | Description |
 |----|-----------|-------------|
@@ -20,9 +20,9 @@ Contain, eradicate, and communicate during incidents, including meeting EU statu
 
 ## How an incident moves
 
-<p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag ocdf">OCDF</span>Adapted from Joshua Wright's Dynamic Approach to Incident Response, DAIR; the EU adjustments are this framework's.</p>
+<p class="src" markdown><span class="src-tag guidance">Guidance</span><span class="src-tag opencdc">OpenCDC</span>Adapted from Joshua Wright's Dynamic Approach to Incident Response, DAIR; the EU adjustments are OpenCDC's.</p>
 
-Incidents do not run in a straight line from detection to lessons learned. Every contained host and every analysed artefact changes what the team knows, and the response has to follow. OCDF structures incident handling on DAIR, with the adjustments below for European reporting duties.
+Incidents do not run in a straight line from detection to lessons learned. Every contained host and every analysed artefact changes what the team knows, and the response has to follow. OpenCDC structures incident handling on DAIR, with the adjustments below for European reporting duties.
 
 [![How an incident moves: prepare, detect, a verify-and-triage gate that continues, stops or defers, the response loop of scope, contain, eradicate and recover, a written exit decision and a debrief whose lessons feed preparation](../assets/diagrams/respond-incident-flow-light.svg#gh-light-mode-only)](../assets/diagrams/respond-incident-flow-light.svg)
 [![How an incident moves: prepare, detect, a verify-and-triage gate that continues, stops or defers, the response loop of scope, contain, eradicate and recover, a written exit decision and a debrief whose lessons feed preparation](../assets/diagrams/respond-incident-flow-dark.svg#gh-dark-mode-only)](../assets/diagrams/respond-incident-flow-dark.svg)
@@ -201,13 +201,13 @@ The Commission's proposed NIS2 amendments, COM(2026) 13, would add EU-wide colle
 
 ## Case closure taxonomy
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span></p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span></p>
 
 Standardise how every case closes. It is the foundation of honest metrics, tuning feedback and comparable statistics: **true positive with impact**, where a CIA attribute was breached, making it an incident whose reporting duties must be assessed; **true positive without impact**, where there was malicious intent but no harm done; **indeterminate**; or **false positive**, which feeds the tuning loop in [Running the CDC](cdc-operations.md). For incident-type classification, the open VERIS vocabulary of malware, hacking, social, misuse, error, physical and environmental keeps year-over-year and peer statistics comparable.
 
 ## CIA mapping
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -233,7 +233,7 @@ Standardise how every case closes. It is the foundation of honest metrics, tunin
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's criteria. Not a certification standard.</p>
 
 The criteria that score RESPOND are kept in one place for all six functions: the [maturity self-assessment, RESPOND](../assessments/maturity-self-assessment.md#respond), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(b) and (c), and Art. 23, marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
@@ -280,4 +280,4 @@ The criteria that score RESPOND are kept in one place for all six functions: the
 - Microsoft incident response playbooks: baseline runbooks; adapt them to your environment. https://learn.microsoft.com/security/operations/incident-response-playbooks
 - CISA, *Federal Government Cybersecurity Incident and Vulnerability Response Playbooks*, 2021. https://www.cisa.gov
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

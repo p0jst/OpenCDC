@@ -74,4 +74,4 @@ A decision taken within this authority, on the information available at the time
 This charter is reviewed [annually] and after any major incident or organisational change.
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0.*
+*Template from OpenCDC, licensed CC BY 4.0.*

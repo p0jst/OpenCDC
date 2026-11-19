@@ -40,4 +40,4 @@ Entities in scope had two months from entry into force, until 10 July 2026, to r
 
 Tick "Luxembourg" in `tools/regulatory-profile.html` to include this country's references under the `lu-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

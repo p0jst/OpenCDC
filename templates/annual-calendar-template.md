@@ -12,4 +12,4 @@
 | **Weekly** | Tuning review per [Running the CDC](../docs/cdc-operations.md) §1 · detection status update to the team · triage SLA dashboard check |
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0.*
+*Template from OpenCDC, licensed CC BY 4.0.*

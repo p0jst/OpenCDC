@@ -23,7 +23,7 @@ profile, and "Print / save PDF" exports a tailored document.
 
 ### Law tagging convention for contributors
 
-Two layers keep the framework filterable:
+Two layers keep OpenCDC filterable:
 
 1. **HTML tool:** any element carries `data-law="nis2 gdpr dk-energi"`, and
    it is visible if ANY of its tagged laws is selected.
@@ -106,7 +106,7 @@ GDPR: collect it transparently, use it for development only, keep access limited
 The tool reads `.xlsx` natively, using zip plus XML via the browser's built-in
 `DecompressionStream`, no libraries, and `.csv`. Parsing is positional-free:
 it locates the header row containing `Skill ID`, then matches rows by skill ID
-from `GV-01` to `PF-05` (two-digit skill IDs, a separate scheme from the framework's capability IDs such as `GV-1`), takes the first digit 0–3 found in the level column, and
+from `GV-01` to `PF-05` (two-digit skill IDs, a separate scheme from OpenCDC's capability IDs such as `GV-1`), takes the first digit 0–3 found in the level column, and
 reads `Name` / `Role` / `Date` from labelled rows above the table. Keep the
 skill IDs and the `Skill ID` header intact when translating or re-styling the
 sheet. Everything else is free: column order, extra columns, formatting.

@@ -25,7 +25,7 @@
 
 ## Country notes for your CDC
 
-Some risk-management, reporting and supervision provisions apply only 24 months after CNCS publishes its supplementary regulations; check CNCS for the current timetable. The Quadro Nacional de Referência para a Cibersegurança (QNRCS) is Portugal's NIST-CSF-aligned reference, with direct mapping to this framework.
+Some risk-management, reporting and supervision provisions apply only 24 months after CNCS publishes its supplementary regulations; check CNCS for the current timetable. The Quadro Nacional de Referência para a Cibersegurança (QNRCS) is Portugal's NIST-CSF-aligned reference, with direct mapping to OpenCDC.
 
 ## Standard checklist for all countries
 
@@ -40,4 +40,4 @@ Some risk-management, reporting and supervision provisions apply only 24 months 
 
 Tick "Portugal" in `tools/regulatory-profile.html` to include this country's references under the `pt-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

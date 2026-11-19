@@ -40,4 +40,4 @@ NCSC-NL published the Cbw/NIS2 Control Framework and a self-assessment, the 'NIS
 
 Tick "Netherlands" in `tools/regulatory-profile.html` to include this country's references under the `nl-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

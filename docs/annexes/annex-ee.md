@@ -40,4 +40,4 @@ Obligations phase in: registration with RIA from 1 April 2026, governance duties
 
 Tick "Estonia" in `tools/regulatory-profile.html` to include this country's references under the `ee-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OCDF — Team Skill Matrix</title>
+<title>OpenCDC — Team Skill Matrix</title>
 <style>
   /* IBM Plex, self-hosted — no third-party font requests. OFL-1.1;
      see assets/fonts/LICENSE-IBM-Plex.txt. Variable weight axis 100-700.
@@ -98,7 +98,7 @@
     --gap1:#ecc8cd; --gap2:#8a1f2d; --meet:#f1f0ea; --exceed:#cfe3d6;
   }
   /* site nav — the tools are standalone pages outside the MkDocs theme,
-     so they carry their own way back to the framework */
+     so they carry their own way back to OpenCDC */
   .sitenav{background:var(--eu-dark);color:#cfdcef;font-size:.78rem;
     padding:8px 28px;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
   .sitenav a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
@@ -236,15 +236,14 @@
 
 <nav class="sitenav">
   <a class="home" href="../"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
-     aria-hidden="true"><path d="M12 2 4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 4-2.5 7.7-6 8.8V4.2z"/></svg>Open
-     CDC Framework</a>
+     aria-hidden="true"><path d="M12 2 4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 4-2.5 7.7-6 8.8V4.2z"/></svg>OpenCDC</a>
   <span class="sep">/</span><a href="./">Tools</a>
   <span class="sep">/</span><span class="here">Team skill matrix</span>
 </nav>
 
 
 <header>
-  <div class="doc-id">Open CDC Framework · Tool 02</div>
+  <div class="doc-id">OpenCDC · Tool 02</div>
   <h1>Team Skill Matrix</h1>
   <p>Map your team's skills, spot the gaps, and decide what to <b>train</b>, <b>mentor</b> or <b>hire</b>.
      Each team member fills in the self-assessment sheet; you upload the returned files here.
@@ -325,7 +324,7 @@
     (from <code>docs/roles-and-competences.md</code>). <b>Click a cell to cycle its target</b>
     0 → 1 → 2 → 3 → 0 and adapt them to your organisation; changes are saved in your browser.</p>
     <div class="toolbar">
-      <button class="btn danger" id="reset-targets">Reset to framework defaults</button>
+      <button class="btn danger" id="reset-targets">Reset to default targets</button>
     </div>
     <div class="scrollbox"><table class="matrix" id="targetmap"></table></div>
   </section>
@@ -346,7 +345,7 @@
 </main>
 
 <footer>
-  Open CDC Framework · CC BY 4.0 · Skill catalogue and role targets build on <a href="../docs/roles-and-competences/">Roles &amp; competences</a>, aligned with the ENISA ECSF.
+  OpenCDC · CC BY 4.0 · Skill catalogue and role targets build on <a href="../docs/roles-and-competences/">Roles &amp; competences</a>, aligned with the ENISA ECSF.
   Skill data is personal data under GDPR, so collect it transparently, use it for development, keep access limited.
 </footer>
 
@@ -356,16 +355,48 @@ const CATALOG = {"version":"v1","scale":[{"level":0,"label":"None","desc":"No pr
 <script>
 "use strict";
 /* ---------- state ---------- */
-const LS_KEY = "ocdf-skill-matrix-v2";
+const LS_KEY = "opencdc-skill-matrix-v2";
 const SKILLS = CATALOG.skills, DOMAINS = CATALOG.domains, ROLES = CATALOG.roles;
 const SKILL_BY_ID = Object.fromEntries(SKILLS.map(s => [s.id, s]));
-let state = { people: {}, targets: null };   // targets: null = framework defaults
+let state = { people: {}, targets: null };   // targets: null = default targets
 
 function loadState(){
   try{
     const raw = localStorage.getItem(LS_KEY);
-    if(raw){ const s = JSON.parse(raw); if(s && s.people) state = s; }
+    if(raw){ const s = JSON.parse(raw); if(s && s.people) state = clean(s); }
   }catch(e){}
+}
+/* Snapshots and saved state are untrusted: keep only the shapes the renderer
+   expects, so a damaged or crafted file can neither inject markup nor leave
+   the tool unable to load. */
+function clean(s){
+  const str = v => (typeof v === "string" || typeof v === "number") ? String(v).slice(0, 200) : "";
+  const lvl = v => { const n = Number(v); return Number.isInteger(n) && n >= 0 && n <= 3 ? n : null; };
+  const people = {};
+  for(const p of Object.values(s && typeof s.people === "object" && s.people ? s.people : {})){
+    if(!p || typeof p !== "object") continue;
+    const name = str(p.name).trim();
+    if(!name) continue;
+    const levels = {}, interest = {};
+    for(const sk of SKILLS){
+      const n = lvl((p.levels || {})[sk.id]); if(n !== null) levels[sk.id] = n;
+      if((p.interest || {})[sk.id] === true) interest[sk.id] = true;
+    }
+    people[name.toLowerCase()] = { name, role: str(p.role), date: str(p.date), levels, interest,
+      uploadedAt: str(p.uploadedAt), source: str(p.source) };
+  }
+  let targets = null;
+  if(s && s.targets && typeof s.targets === "object"){
+    targets = JSON.parse(JSON.stringify(CATALOG.targets));
+    for(const r of ROLES){
+      const src = s.targets[r];
+      if(!src || typeof src !== "object") continue;
+      const row = {};
+      for(const sk of SKILLS){ const n = lvl(src[sk.id]); if(n) row[sk.id] = n; }
+      targets[r] = row;
+    }
+  }
+  return { people, targets };
 }
 function saveState(){
   try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); }catch(e){}
@@ -413,7 +444,7 @@ function parseRows(rows, filename){
       break;
     }
   }
-  if(headerIdx < 0) return { error: "no 'Skill ID' header row found. Is this the OCDF self-assessment sheet?" };
+  if(headerIdx < 0) return { error: "no 'Skill ID' header row found. Is this the OpenCDC self-assessment sheet?" };
   const levels = {}, interest = {};
   let rated = 0;
   for(let i = headerIdx + 1; i < rows.length; i++){
@@ -891,9 +922,9 @@ jsonInput.addEventListener("change", async () => {
   if(!f) return;
   try{
     const s = JSON.parse(await f.text());
-    if(!s.people) throw new Error("not a skill-matrix snapshot");
-    state = s; saveState(); render();
-    log(`✓ imported snapshot with ${Object.keys(s.people).length} people`, "log-ok");
+    if(!s || !s.people) throw new Error("not a skill-matrix snapshot");
+    state = clean(s); saveState(); render();
+    log(`✓ imported snapshot with ${Object.keys(state.people).length} people`, "log-ok");
   }catch(e){ log(`✗ ${f.name}: ${e.message}`, "log-err"); }
 });
 
@@ -906,7 +937,7 @@ document.getElementById("export-json").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "ocdf-skill-matrix-" + new Date().toISOString().slice(0,10) + ".json";
+  a.download = "opencdc-skill-matrix-" + new Date().toISOString().slice(0,10) + ".json";
   a.click(); URL.revokeObjectURL(a.href);
 });
 document.getElementById("import-json2").addEventListener("click", importSnapshot);
@@ -916,7 +947,7 @@ document.getElementById("clear-all").addEventListener("click", () => {
   saveState(); document.getElementById("upload-log").innerHTML = ""; render();
 });
 document.getElementById("reset-targets").addEventListener("click", () => {
-  if(!confirm("Replace your edited role targets with the framework defaults?")) return;
+  if(!confirm("Replace your edited role targets with OpenCDC defaults?")) return;
   state.targets = null; saveState(); render();
 });
 

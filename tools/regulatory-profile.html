@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OCDF — Regulatory Profile Selector</title>
+<title>OpenCDC — Regulatory Profile Selector</title>
 <style>
   /* IBM Plex, self-hosted — no third-party font requests. OFL-1.1;
      see assets/fonts/LICENSE-IBM-Plex.txt. Variable weight axis 100-700.
@@ -96,7 +96,7 @@
     --ok:#1f6f43; --chipbg:#f1efe8;
   }
   /* site nav — the tools are standalone pages outside the MkDocs theme,
-     so they carry their own way back to the framework */
+     so they carry their own way back to OpenCDC */
   .sitenav{background:var(--eu-dark);color:#cfdcef;font-size:.78rem;
     padding:8px 28px;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
   .sitenav a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:7px}
@@ -177,15 +177,14 @@
 
 <nav class="sitenav">
   <a class="home" href="../"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
-     aria-hidden="true"><path d="M12 2 4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 4-2.5 7.7-6 8.8V4.2z"/></svg>Open
-     CDC Framework</a>
+     aria-hidden="true"><path d="M12 2 4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 2.2 6 2.2v4.7c0 4-2.5 7.7-6 8.8V4.2z"/></svg>OpenCDC</a>
   <span class="sep">/</span><a href="./">Tools</a>
   <span class="sep">/</span><span class="here">Regulatory profile selector</span>
 </nav>
 
 
 <header>
-  <div class="doc-id">Open CDC Framework · Tool 01</div>
+  <div class="doc-id">OpenCDC · Tool 01</div>
   <h1>Regulatory Profile Selector</h1>
   <p class="noprint">Tick the laws that apply to your organisation. Every regulatory reference in this document shows or hides
      to match your profile. Use <em>Print / save PDF</em> to export your tailored version.
@@ -236,7 +235,7 @@
   </table>
   <div class="hidden-note" data-hiddennote>Some reporting rows are hidden by your profile.</div>
 
-  <h2>2 · Regulatory hooks per framework function</h2>
+  <h2>2 · Regulatory hooks per function</h2>
 
   <h3>GOVERN</h3>
   <ul data-fn="govern">
@@ -296,7 +295,7 @@
 </main>
 
 <footer>
-  Open CDC Framework · CC BY 4.0 · <a href="../docs/references/">References</a> · Orientation only, not legal advice; verify against EUR-Lex and national law.
+  OpenCDC · CC BY 4.0 · <a href="../docs/references/">References</a> · Orientation only, not legal advice; verify against EUR-Lex and national law.
 </footer>
 
 <script>
@@ -499,7 +498,7 @@ const COUNTRIES = {
  "fr": {
   "n": "France",
   "status": "Pending, in the legislative process",
-  "law": "Projet de loi relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments. Adopted by the Senate on 12 March 2025. The Assemblée nationale withdrew it from the agenda in October 2026, then completed its examination on 10 November 2026, with the solemn vote scheduled for 17 November 2026. Under the accelerated procedure a joint committee of both chambers must then agree a common text before the law can be promulgated, so it is not yet in force. The European Commission referred the country to the Court of Justice of the EU on 8 July 2026 for failing to transpose NIS2.",
+  "law": "Projet de loi relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité, transposing NIS2, CER and DORA adjustments. Adopted by the Senate on 12 March 2025. The Assemblée nationale adopted it at first reading on 17 November 2026, by 464 votes to 64, after amending the Senate's text. Under the accelerated procedure a joint committee of both chambers must now agree a common text before the law can be promulgated, so it is not yet in force. The European Commission referred the country to the Court of Justice of the EU on 8 July 2026 for failing to transpose NIS2.",
   "auth": "ANSSI (Agence nationale de la sécurité des systèmes d'information)",
   "csirt": "CERT-FR",
   "link": "https://cyber.gouv.fr"

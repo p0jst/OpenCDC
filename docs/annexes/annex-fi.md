@@ -40,4 +40,4 @@ Reporting goes through NCSC-FI. Finland's Katakri and other national criteria ca
 
 Tick "Finland" in `tools/regulatory-profile.html` to include this country's references under the `fi-nat` tag.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

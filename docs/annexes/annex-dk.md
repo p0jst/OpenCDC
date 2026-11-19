@@ -1,7 +1,7 @@
 # National Annex — Denmark
 
 <!-- countries:begin -->
-> **Status as of September 2026:** In force. Community-maintained orientation, the reference annex for the framework. This is **not legal advice**; verify against retsinformation.dk and samsik.dk before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
+> **Status as of September 2026:** In force. Community-maintained orientation, the reference annex for OpenCDC. This is **not legal advice**; verify against retsinformation.dk and samsik.dk before relying on it. Corrections welcome, see [contributing](../../CONTRIBUTING.md).
 
 | Review | Status |
 |--------|--------|
@@ -35,7 +35,7 @@ Denmark implemented NIS2 and CER through a family of laws in force since 2025, r
 3. **Authorities to know:**
     - **Styrelsen for Samfundssikkerhed (SAMSIK)** — overall coordination, cross-sector guidance, technical advisories and incident reception as the national CSIRT, at samsik.dk/nis2
     - **Sector-responsible authorities** supervise their own sectors: Digitaliseringsstyrelsen for digital sectors, Energistyrelsen for energy, Finanstilsynet for finance, Trafikstyrelsen for transport
-4. **Guidance materials:** SAMSIK publishes cross-cutting NIS2 vejledninger structuring measures as *skal* meaning must, *bør* meaning should with deviations justified, and *kan* meaning may. That is a useful evidence structure for your maturity assessments; map OCDF capability evidence to the skal and bør items.
+4. **Guidance materials:** SAMSIK publishes cross-cutting NIS2 vejledninger structuring measures as *skal* meaning must, *bør* meaning should with deviations justified, and *kan* meaning may. That is a useful evidence structure for your maturity assessments; map OpenCDC capability evidence to the skal and bør items.
 5. **Energy-sector extras** under Lov om styrket beredskab i energisektoren and BEK 260. Energistyrelsen places each entity on one of five preparedness levels, from thresholds in the order's annex 1, and the requirements scale with the level. Checked against BEK 260:
     - every entity segments its supply-critical systems behind a DMZ or equivalent; levels 4 and 5 separate those networks physically, § 62;
     - levels 4 and 5 log and monitor to identify incidents in real time, respond in real time, keep logs for 13 months and hand them to their IT security service within 24 h, §§ 66–69;
@@ -45,7 +45,7 @@ Denmark implemented NIS2 and CER through a family of laws in force since 2025, r
 
     Key personnel may also need security clearance under the separate *bekendtgørelse om sikkerhedsgodkendelser i energisektoren*. Confirm your level with Energistyrelsen, then set DETECT and GOVERN targets to match: Level 3–4 at levels 4 and 5, the ordinary targets below them.
 
-    These requirements apply to the whole entity, OT included, while OCDF is scoped to IT. [The IT/OT interface](../it-ot-interface.md#danish-energy-sector-what-this-covers-and-what-it-does-not) shows which of them a CDC can cover at the boundary and which must be covered by OT operations.
+    These requirements apply to the whole entity, OT included, while OpenCDC is scoped to IT. [The IT/OT interface](../it-ot-interface.md#danish-energy-sector-what-this-covers-and-what-it-does-not) shows which of them a CDC can cover at the boundary and which must be covered by OT operations.
 
 ## CDC checklist for Denmark
 
@@ -68,4 +68,4 @@ Denmark implemented NIS2 and CER through a family of laws in force since 2025, r
 - Digitaliseringsstyrelsen NIS2 news on the 1 July 2025 entry into force: https://digst.dk
 - NIS2-tjek self-assessment: https://nis2tjek.sikkerdigital.dk
 
-*Open CDC Framework, licensed CC BY 4.0. Contributions correcting or extending this annex are welcome.*
+*OpenCDC, licensed CC BY 4.0. Contributions correcting or extending this annex are welcome.*

@@ -1,6 +1,6 @@
 # Choosing your operating model
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>The models and decision path are this framework's; staffing figures and trade-offs come from experience.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span><span class="src-tag practitioner">Practitioner</span>The models and decision path are OpenCDC's; staffing figures and trade-offs come from experience.</p>
 
 > **This is a decision document.** Before designing anything in DETECT or RESPOND, the organisation must decide how many hours a day it needs someone watching, a risk decision set in GOVERN per [coverage hours are a target, not a level](maturity-model.md#coverage-hours-are-a-target-not-a-level), and who does the watching in and out of hours. There are three core archetypes plus a shared/community variant, each with real trade-offs. Related: GOVERN GV-5, navigator question G6, charter template §3/§6.
 
@@ -64,11 +64,11 @@ No tiers: analysts own alerts end-to-end, from detect through investigate to con
 1. **Risk acceptance and management accountability** — NIS2 Art. 20 liability sits with your management, full stop.
 2. **Containment authority over crown jewels** — you can delegate actions to a provider, as MDR contracts do, but the authority stays yours: the charter §4 and the containment catalogue decide what the provider may do alone, and anything on the crown jewels comes back to a named person of yours.
 3. **Statutory reporting** — the 24 h early warning is filed by *you*; an MSSP SLA of "notify within 4 h" already spent a sixth of your clock.
-4. **Regulatory applicability and GOVERN** — deciding which law applies to you, and owning this framework's GOVERN function.
+4. **Regulatory applicability and GOVERN** — deciding which law applies to you, and owning OpenCDC's GOVERN function.
 
 ## Decision path
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>A sequence of constraints, not a score. Work down it and stop where a question decides the answer.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>A sequence of constraints, not a score. Work down it and stop where a question decides the answer.</p>
 
 The operating model is usually decided by one or two hard constraints, not by adding up preferences. Take the questions in order, and stop where one decides the answer:
 
@@ -142,7 +142,7 @@ Replace every number in the example column with your own. With six weeks of leav
 
 </details>
 
-That is where the framework's 8–12 FTE for a 24/7 in-house line comes from. A second seat at night as well adds another 4 FTE. Two further constraints bite in practice: the EU Working Time Directive and national rules limit night work and require rest periods, which shapes the rota, and a rota with fewer than about six people leaves no slack when someone resigns.
+That is where OpenCDC's 8–12 FTE for a 24/7 in-house line comes from. A second seat at night as well adds another 4 FTE. Two further constraints bite in practice: the EU Working Time Directive and national rules limit night work and require rest periods, which shapes the rota, and a rota with fewer than about six people leaves no slack when someone resigns.
 
 **The lone night analyst.** With one 24/7 seat, nights and weekends are a single person. Decide deliberately how that is made safe:
 
@@ -215,4 +215,4 @@ The maturity model applies to outcomes, not employment contracts: with an MSSP y
 - NIST CSF 2.0, GV.SC on cybersecurity supply chain risk management.
 - NIS2: Directive (EU) 2022/2555 Art. 20–21, 23.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

@@ -1,10 +1,10 @@
 # Maturity model
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's model, informed by the NIST CSF tiers and CMMI. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's model, informed by the NIST CSF tiers and CMMI. Not a certification standard.</p>
 
 ## Design
 
-The OCDF maturity model defines four levels, applied to each of the six CSF functions. The level names and philosophy are informed by the NIST CSF 2.0 Tiers of Partial, Risk Informed, Repeatable and Adaptive, and by the general structure of CMMI-style capability maturity models; teams already using Rob van Os's SOC-CMM will find the levels easy to cross-map.
+The OpenCDC maturity model defines four levels, applied to each of the six CSF functions. The level names and philosophy are informed by the NIST CSF 2.0 Tiers of Partial, Risk Informed, Repeatable and Adaptive, and by the general structure of CMMI-style capability maturity models; teams already using Rob van Os's SOC-CMM will find the levels easy to cross-map.
 
 We deliberately use four levels rather than five: in practice the difference between "defined" and "quantitatively managed" is where most models lose their audience.
 
@@ -107,8 +107,8 @@ National or sector law can set the floor for you: Danish energy-sector entities 
 
 | Model | Relationship |
 |-------|--------------|
-| **NIST CSF 2.0 Tiers** | OCDF levels are function-scoped rather than organisation-scoped, but philosophically aligned, Tier 1↔L1 through Tier 4↔L4. |
-| **SOC-CMM** | Much finer-grained, with 5 domains, ~25 aspects and continuous scoring. Recommended as a deep-dive follow-up once OCDF assessment identifies weak functions. To reuse an existing SOC-CMM assessment, see the mapping below. SOC-CMM © Rob van Os, available free at soc-cmm.com. |
+| **NIST CSF 2.0 Tiers** | OpenCDC levels are function-scoped rather than organisation-scoped, but philosophically aligned, Tier 1↔L1 through Tier 4↔L4. |
+| **SOC-CMM** | Much finer-grained, with 5 domains, ~25 aspects and continuous scoring. Recommended as a deep-dive follow-up once OpenCDC assessment identifies weak functions. To reuse an existing SOC-CMM assessment, see the mapping below. SOC-CMM © Rob van Os, available free at soc-cmm.com. |
 | **CMMI** | Conceptual ancestor of all staged maturity models; not security-specific. |
 | **ENISA CSIRT Maturity Framework** | Focused on national/sectoral CSIRTs; relevant if your CDC provides CSIRT services externally. Based on the Open CSIRT Foundation's SIM3. |
 
@@ -124,13 +124,13 @@ contains, and what other published surveys have found in the meantime:
 
 ## Reusing an existing SOC-CMM or SIM3 assessment
 
-Many teams arrive at OCDF with an assessment they have already paid for, in time or money. It should not be thrown away. The mappings below let you carry its evidence across and use its results as a starting hypothesis for the OCDF scores.
+Many teams arrive at OpenCDC with an assessment they have already paid for, in time or money. It should not be thrown away. The mappings below let you carry its evidence across and use its results as a starting hypothesis for the OpenCDC scores.
 
-### SOC-CMM → OCDF
+### SOC-CMM → OpenCDC
 
-SOC-CMM groups its aspects into five domains. The table maps each aspect to the OCDF capabilities and documents where the same ground is covered.
+SOC-CMM groups its aspects into five domains. The table maps each aspect to the OpenCDC capabilities and documents where the same ground is covered.
 
-| SOC-CMM domain | SOC-CMM aspect | OCDF capabilities | Where in OCDF |
+| SOC-CMM domain | SOC-CMM aspect | OpenCDC capabilities | Where in OpenCDC |
 |----------------|----------------|-------------------|---------------|
 | Business | Business drivers | GV-2, ID-3 | [Govern](govern.md), [Identify](identify.md) |
 | Business | Customers | GV-1, GV-7 | [Govern](govern.md) |
@@ -158,12 +158,12 @@ SOC-CMM groups its aspects into five domains. The table maps each aspect to the 
 | Services | Vulnerability management | ID-4, PR-5 | [Identify](identify.md), [Protect](protect.md) |
 | Services | Log management | DE-1 | [Detect](detect.md) |
 
-*Aspect names are paraphrased from SOC-CMM 2.x and may differ from the current release; consult soc-cmm.com for the authoritative list. OCDF's RECOVER function has no close SOC-CMM equivalent, so score it directly.*
+*Aspect names are paraphrased from SOC-CMM 2.x and may differ from the current release; consult soc-cmm.com for the authoritative list. OpenCDC's RECOVER function has no close SOC-CMM equivalent, so score it directly.*
 
-**Translating scores, as a rough guide only.** SOC-CMM scores maturity continuously from 0 to 5; OCDF uses four staged levels. As a starting hypothesis, an aspect scoring below 1.5 suggests OCDF Level 1, 1.5 to 2.5 suggests Level 2, 2.5 to 3.5 suggests Level 3, and above 3.5 suggests Level 4. This translation is not calibrated against real paired assessments. Two cautions apply:
+**Translating scores, as a rough guide only.** SOC-CMM scores maturity continuously from 0 to 5; OpenCDC uses four staged levels. As a starting hypothesis, an aspect scoring below 1.5 suggests OpenCDC Level 1, 1.5 to 2.5 suggests Level 2, 2.5 to 3.5 suggests Level 3, and above 3.5 suggests Level 4. This translation is not calibrated against real paired assessments. Two cautions apply:
 
-- **Take the lowest, not the average.** OCDF scoring is staged. If a function maps to several SOC-CMM aspects, the weakest one is the best predictor of the OCDF level.
-- **Carry the evidence, then re-score.** The value of an earlier assessment is its evidence: documents, interviews, metric exports. Attach that evidence to the OCDF criteria and score the criteria directly. Do not report a translated number as an OCDF score.
+- **Take the lowest, not the average.** OpenCDC scoring is staged. If a function maps to several SOC-CMM aspects, the weakest one is the best predictor of the OpenCDC level.
+- **Carry the evidence, then re-score.** The value of an earlier assessment is its evidence: documents, interviews, metric exports. Attach that evidence to the OpenCDC criteria and score the criteria directly. Do not report a translated number as an OpenCDC score.
 
 ### SIM3 and CIS Controls
 
@@ -178,4 +178,4 @@ SOC-CMM groups its aspects into five domains. The table maps each aspect to the 
 - Open CSIRT Foundation, *SIM3 v2 interim: Security Incident Management Maturity Model*, 2023. https://opencsirt.org/csirt-maturity/sim3-and-references/
 - CMMI Institute, *Capability Maturity Model Integration*.
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

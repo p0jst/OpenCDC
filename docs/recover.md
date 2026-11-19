@@ -6,7 +6,7 @@ Restore affected services in a trustworthy state, communicate honestly during re
 
 ## Core capabilities
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Function from NIST CSF 2.0; the capability breakdown and IDs are OpenCDC's.</p>
 
 | ID | Capability | Description |
 |----|-----------|-------------|
@@ -45,7 +45,7 @@ Blameless does not mean without accountability. A decision that ignored informat
 
 ## CIA mapping
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -68,7 +68,7 @@ Blameless does not mean without accountability. A decision that ignored informat
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's criteria. Not a certification standard.</p>
 
 The criteria that score RECOVER are kept in one place for all six functions: the [maturity self-assessment, RECOVER](../assessments/maturity-self-assessment.md#recover), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(c), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
@@ -100,4 +100,4 @@ The criteria that score RECOVER are kept in one place for all six functions: the
 - NIST SP 800-34 Rev. 1, *Contingency Planning Guide for Federal Information Systems*.
 - NIS2: Directive (EU) 2022/2555 Art. 21(2)(c), 23; DORA: Regulation (EU) 2022/2554 Art. 11–12; GDPR Art. 32.
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

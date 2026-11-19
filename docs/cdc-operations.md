@@ -69,7 +69,7 @@ The guardrails above cover AI inside triage and investigation. [AI in the CDC](a
 
 Mature SOCs commonly accumulate 15–25 tools with overlapping functions and thin integrations; every extra console adds swivel-chair time, licence cost, patching surface and one more place logs die in a silo. Counter it structurally:
 
-- Procure against capabilities, not features: every tool must map to a capability ID in this framework and name the tool it replaces or the gap it closes. "Also does X" is not a requirement match.
+- Procure against capabilities, not features: every tool must map to a capability ID in OpenCDC and name the tool it replaces or the gap it closes. "Also does X" is not a requirement match.
 - One place to work: alerts from every tool land in the central platform, the SIEM or case-management system, with two-way status sync. A tool whose alerts can only be seen in its own console is a silo by construction, and its detections never enter coverage measurement, per [Detection-as-code deep dive](detection-as-code-deep-dive.md) §4.
 - Annual portfolio review, set in the annual calendar: per tool, capability served, unique telemetry or action it provides, integration status, utilisation, cost. Kill or consolidate anything failing two of five. Overlap is a decision to make consciously, not a default to drift into.
 - Exit-aware from purchase: log formats exportable, detections portable through Sigma, per [Detection-as-code deep dive](detection-as-code-deep-dive.md), API-first, on the same portability logic as the MSSP checklist.
@@ -84,4 +84,4 @@ Portfolio FP rate trend · % suppressions with owner+expiry · % rules with pass
 - MITRE, *11 Strategies of a World-Class Cybersecurity Operations Center*, 2nd ed., on staffing, retention and engineering.
 - NIST CSF 2.0 ID.IM on improvement; the loops above are its operationalisation.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+*OpenCDC, licensed CC BY 4.0.*

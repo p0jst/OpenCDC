@@ -1,8 +1,8 @@
-# OCDF on one page
+# OpenCDC on one page
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>A summary of this framework's terms.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>A summary of OpenCDC's terms.</p>
 
-The framework uses a handful of ideas many times over. Learn these and every
+OpenCDC uses a handful of ideas many times over. Learn these and every
 other page reads faster.
 
 ## How the pieces fit
@@ -23,7 +23,7 @@ require it.
 
 | Term | What it means | Where it lives |
 |------|---------------|----------------|
-| **CDC** | Cyber Defence Center: the organisational capability that governs, prevents, detects, responds and recovers. Used interchangeably with SOC here. It names the function, not the department: a two-person IT-security team doing this work is a CDC in this framework's sense. | [Introduction](introduction.md) |
+| **CDC** | Cyber Defence Center: the organisational capability that governs, prevents, detects, responds and recovers. Used interchangeably with SOC here. It names the function, not the department: a two-person IT-security team doing this work is a CDC in OpenCDC's sense. | [Introduction](introduction.md) |
 | **Six functions** | Govern, Identify, Protect, Detect, Respond, Recover, taken from NIST CSF 2.0. Govern sits above the other five. | [Govern](govern.md) to [Recover](recover.md) |
 | **Capability** | Something the CDC must be able to do, with an ID such as `DE-2` (detection engineering). 43 in total. | [Capability index](capability-index.md) |
 | **Tier E · S · A** | Essential, Standard, Advanced. Which capabilities apply at your size. Higher tiers include the lower ones. | [Implementation tiers](tiers.md) |
@@ -36,7 +36,7 @@ require it.
 | **Regulatory hooks** | The NIS2, GDPR, DORA and related articles each function helps you meet. | Each function document; [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md); [EU landscape](eu-regulatory-landscape.md) |
 | **National annex** | NIS2 status, authorities and reporting channels for one member state. | [Annexes](annexes/README.md) |
 | **ECSF roles** | The European Cybersecurity Skills Framework profiles the CDC's roles are built on. | [Roles & competences](roles-and-competences.md) |
-| **Source labels** | Law · Standard · Guidance · OCDF · Practitioner: where a statement's authority comes from. | [Why trust this framework](trust.md) |
+| **Source labels** | Law · Standard · Guidance · OpenCDC · Practitioner: where a statement's authority comes from. | [Why trust OpenCDC](trust.md) |
 
 ## What you get
 
@@ -52,7 +52,7 @@ require it.
 - **A worked example** of a fictional organisation using all of the above.
   [Worked example](worked-example.md)
 
-## Three rules the whole framework follows
+## Three rules OpenCDC follows throughout
 
 1. **Mandate before machinery.** Authority, scope and budget come before tools.
 2. **Evidence over assertion.** A capability that cannot be shown to work does
@@ -60,6 +60,12 @@ require it.
 3. **Balanced beats spiky.** Level 2 in every function is worth more than Level 4
    detection on top of Level 1 governance, because the functions depend on each
    other: detection is wasted without the authority to contain and the backups to
-   recover. For a NIS2 entity, Level 2 everywhere is also the legal floor.
+   recover. For a NIS2 entity, Level 2 everywhere is also the first target, because it holds the minimum form of each measure the law requires.
 
-*Open CDC Framework, licensed CC BY 4.0.*
+## What next
+
+Ready to start? [Find your route](find-your-route.md) asks five questions and
+points you to the steps that fit your team. If you would rather see OpenCDC
+applied first, read the [worked example](worked-example.md).
+
+*OpenCDC, licensed CC BY 4.0.*

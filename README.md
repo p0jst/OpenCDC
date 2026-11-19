@@ -1,11 +1,11 @@
 <div align="center">
 
-# Open CDC Framework
+# OpenCDC
 
 **Build and run the team that detects and responds to cyber attacks.**<br>
 Written for NIS2, DORA and GDPR · All 27 EU member states · Free to use and adapt
 
-[![Version](https://img.shields.io/badge/version-v1.5.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-v1.6.0-blue)](CHANGELOG.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Website](https://img.shields.io/badge/website-opencdc.org-123a6d)](https://opencdc.org/)
 
@@ -15,12 +15,12 @@ Written for NIS2, DORA and GDPR · All 27 EU member states · Free to use and ad
 
 ---
 
-Standards say what good security covers, and NIS2 says what you must do. Neither says how to set up the team that does the work, who decides what, or how to tell whether it works. OCDF does, for a 24/7 Cyber Defence Center and for two people in IT who also look after security.
+Standards say what good security covers, and NIS2 says what you must do. Neither says how to set up the team that does the work, who decides what, or how to tell whether it works. OpenCDC does, for a 24/7 Cyber Defence Center and for two people in IT who also look after security.
 
 <p align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/diagrams/readme-at-a-glance-dark.svg">
-  <img alt="OCDF at a glance: every capability is described by what, in six functions from GOVERN to RECOVER; how much, by tier Essential, Standard or Advanced; and how well, on four maturity levels. A regulatory layer covers NIS2, DORA, GDPR, CRA, CER, the AI Act and 27 national annexes." src="assets/diagrams/readme-at-a-glance-light.svg" width="760">
+  <img alt="OpenCDC at a glance: every capability is described by what, in six functions from GOVERN to RECOVER; how much, by tier Essential, Standard or Advanced; and how well, on four maturity levels. A regulatory layer covers NIS2, DORA, GDPR, CRA, CER, the AI Act and 27 national annexes." src="assets/diagrams/readme-at-a-glance-light.svg" width="760">
 </picture>
 </p>
 
@@ -37,7 +37,7 @@ The Level 2 criteria hold the minimum form of each NIS2 measure, criterion by cr
 | An analyst or engineer | [Alert triage](docs/alert-triage.md), [detection-as-code](docs/detection-as-code-deep-dive.md) and the [CTI deep dive](docs/cti-deep-dive.md) |
 | In compliance or legal | The [EU regulatory landscape](docs/eu-regulatory-landscape.md) and your [national annex](docs/annexes/README.md) |
 
-New to the terms? [OCDF on one page](docs/one-page.md) explains them in five minutes. Want to see it applied first? The [worked example](docs/worked-example.md) takes an invented 2500-person company from no SOC to its first board report.
+New to the terms? [OpenCDC on one page](docs/one-page.md) explains them in five minutes. Want to see it applied first? The [worked example](docs/worked-example.md) takes an invented 2500-person company from no SOC to its first board report.
 
 ## The seven steps
 
@@ -45,7 +45,7 @@ Each step leaves you with a document you keep.
 
 | | Step | You come away with |
 |---|------|--------------------|
-| **Design** | 1. [Choose your tier](docs/tiers.md) | How much of the framework applies to you |
+| **Design** | 1. [Choose your tier](docs/tiers.md) | How much of OpenCDC applies to you |
 | | 2. [Run the design workshops](assessments/cdc-design-navigator.md) | Gaps and open decisions, logged |
 | | 3. [Adopt the charter](templates/cdc-charter-template.md) | A signed mandate with containment authority |
 | | 4. [Decide the operating model](docs/operating-models.md) | In-house, provider or hybrid, with staffing numbers |
@@ -81,14 +81,14 @@ Load the team's self-assessment sheets and see the gaps, the one-person skills, 
 
 - **Scope: enterprise IT.** Endpoints, servers, identity, cloud and SaaS; not OT/ICS, telco core networks or classified environments; see [About](ABOUT.md) and [the IT/OT interface](docs/it-ot-interface.md).
 - **Not legal advice.** The regulatory content has not had independent legal review, and some national annexes still carry verification flags.
-- **Sources marked.** [Why trust this framework](docs/trust.md) says which statements are law, which are standards and which are judgement, and every source is credited in [references](docs/references.md).
+- **Sources marked.** [Why trust OpenCDC](docs/trust.md) says which statements are law, which are standards and which are judgement, and every source is credited in [references](docs/references.md).
 
 <details>
 <summary><b>What is in this repository</b></summary>
 
 | Folder | Contents |
 |--------|----------|
-| [`docs/`](docs/README.md) | The framework: functions, lenses, operations, deep dives and the regulatory layer, with an [index in reading order](docs/README.md) |
+| [`docs/`](docs/README.md) | OpenCDC: functions, lenses, operations, deep dives and the regulatory layer, with an [index in reading order](docs/README.md) |
 | [`docs/annexes/`](docs/annexes/README.md) | One annex per member state, each with its review date and confidence, edited in `countries.json` |
 | [`assessments/`](assessments/) | The design navigator and the maturity checklist, the single source of the criteria |
 | [`templates/`](templates/README.md) | Charter, IR plan, playbooks, use case, KPIs, job description, MSSP checklist, containment catalogue, controls register, annual calendar and the skill sheet |
@@ -113,10 +113,10 @@ mkdocs serve
 
 Corrections, national-law mappings and field feedback are welcome; see [Contributing](CONTRIBUTING.md). Report security problems in the site or the tools privately, as described in [Security](SECURITY.md).
 
-To cite: *Open CDC Framework (OCDF), version 1.5.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.*
+To cite: *OpenCDC, version 1.6.0, 2026. Licensed CC BY 4.0. Available at: https://github.com/p0jst/OpenCDC.*
 
 ## About
 
 Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber Defence Center, after a decade in the field and four years building and running a 24/7 CDC. The story and how the project is maintained: [About](ABOUT.md).
 
-Licensed under [CC BY 4.0](LICENSE): free to use, share and adapt, also commercially, with credit. OCDF builds on public work by NIST, ENISA, MITRE, FIRST and others and is not endorsed by any of them.
+Licensed under [CC BY 4.0](LICENSE): free to use, share and adapt, also commercially, with credit. OpenCDC builds on public work by NIST, ENISA, MITRE, FIRST and others and is not endorsed by any of them.

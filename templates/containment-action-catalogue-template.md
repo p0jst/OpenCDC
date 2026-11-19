@@ -28,4 +28,4 @@
 **Operating-model note:** in MSSP/hybrid models, add a column "who may execute" with the options MSSP autonomously, MSSP on approval, or internal only. Mirror the MSSP checklist's response-boundary matrix.
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0.*
+*Template from OpenCDC, licensed CC BY 4.0.*

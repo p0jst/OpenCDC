@@ -5,25 +5,25 @@ hide:
   - toc
 ---
 
-<div class="ocdf-hero" markdown>
+<div class="opencdc-hero" markdown>
 
-<p class="ocdf-eyebrow"><span>Written for NIS2, DORA and GDPR</span> · <span>All 27 EU member states</span></p>
+<p class="opencdc-eyebrow"><span>Written for NIS2, DORA and GDPR</span> · <span>All 27 EU member states</span></p>
 
 # Build and mature your cyber defence
 
-<p class="ocdf-lead" markdown>
+<p class="opencdc-lead" markdown>
 Standards say what security must cover, and NIS2 says who is accountable.
 Neither shows how to build and run the team that detects and responds to
-attacks. This framework shows how, whether you are two people in IT or a large
+attacks. OpenCDC shows how, whether you are two people in IT or a large
 enterprise with a 24/7 SOC.
 </p>
 
-<div class="ocdf-cta" markdown>
-[Start building](#start-building){ .md-button .md-button--primary }
-[Understand OCDF in 5 minutes](docs/one-page.md){ .md-button }
+<div class="opencdc-cta" markdown>
+[Find your route](docs/find-your-route.md){ .md-button .md-button--primary }
+[Understand OpenCDC in 5 minutes](docs/one-page.md){ .md-button }
 </div>
 
-<ul class="ocdf-assure">
+<ul class="opencdc-assure">
 <li>Free to use and adapt, also commercially</li>
 <li>No account; tools run in your browser</li>
 <li>Vendor-neutral</li>
@@ -37,7 +37,7 @@ Yes, if part of your job is noticing attacks and dealing with them, whatever
 your team is called. Every capability is marked with the smallest
 [tier](docs/tiers.md) it belongs to, so a team of two sees what matters now.
 
-<div class="grid cards ocdf-roles" markdown>
+<div class="grid cards opencdc-roles" markdown>
 
 -   :material-account-wrench-outline:{ .lg .middle } **A small IT-security team**
 
@@ -46,7 +46,7 @@ your team is called. Every capability is marked with the smallest
     One to three people with other duties. What to buy rather than build, and
     the four things nobody can do for you.
 
-    [Start small →](docs/tiers.md#if-you-are-the-whole-security-function)
+    [Route A →](docs/find-your-route.md#route-a)
 
 -   :material-briefcase-outline:{ .lg .middle } **CISO or executive**
 
@@ -63,7 +63,7 @@ your team is called. Every capability is marked with the smallest
 
     Seven steps from a signed charter to a team with a working routine.
 
-    [Start building →](#start-building)
+    [Route B →](docs/find-your-route.md#route-b)
 
 -   :material-chart-timeline-variant:{ .lg .middle } **Running one already**
 
@@ -72,7 +72,7 @@ your team is called. Every capability is marked with the smallest
     Score what you have, reusing any SOC-CMM, SIM3 or CIS assessment, and turn
     the gaps into a plan.
 
-    [Maturity self-assessment →](tools/maturity-assessment.html)
+    [Route C →](docs/find-your-route.md#route-c)
 
 -   :material-console:{ .lg .middle } **Analyst or engineer**
 
@@ -96,17 +96,17 @@ your team is called. Every capability is marked with the smallest
 
 </div>
 
-## The framework in one picture
+## OpenCDC in one picture
 
-<p class="ocdf-dimensions-intro">Every capability in OCDF is described in three ways:</p>
+<p class="opencdc-dimensions-intro">Every capability in OpenCDC is described in three ways:</p>
 
-<div class="ocdf-dimensions" markdown>
+<div class="opencdc-dimensions" markdown>
 <div markdown><b>What</b><span>6 functions</span><i>Cover all six</i></div>
 <div markdown><b>How much</b><span>E · S · A tier</span><i>You choose</i></div>
 <div markdown><b>How well</b><span>L1–L4 maturity</span><i>Scored against set criteria</i></div>
 </div>
 
-<div class="ocdf-map" markdown>
+<div class="opencdc-map" markdown>
 
 <div class="m-govern" markdown>
 [**GOVERN**<br><span>mandate, risk, roles, budget, oversight</span>](docs/govern.md)
@@ -132,28 +132,29 @@ criterion serves which article, and the two gaps to close yourself.
 
 </div>
 
-## Start building
+## The build path
 
 Each step leaves you with a document you keep: a signed charter, a scored
-baseline, a plan with names and dates.
+baseline, a plan with names and dates. Not every step applies to every team;
+[find your route](docs/find-your-route.md) first. It takes five questions.
 
-<div class="ocdf-path" markdown>
+<div class="opencdc-path" markdown>
 
-<p class="ocdf-phase">Design</p>
+<p class="opencdc-phase">Design</p>
 
-1.  [**Choose your tier**](docs/tiers.md): how much of the framework applies to you.
-2.  [**Run the design workshops**](assessments/cdc-design-navigator.md): one per function, to find the gaps.
-3.  [**Adopt the charter**](templates/cdc-charter-template.md): mandate and containment authority, signed first.
-4.  [**Decide the operating model**](docs/operating-models.md): in-house, provider or hybrid, with the staffing numbers.
+1.  [**Choose your tier**](docs/build-path.md#step-1-choose-your-tier): how much of OpenCDC applies to you.
+2.  [**Run the design workshops**](docs/build-path.md#step-2-run-the-design-workshops): one per function, to find the gaps.
+3.  [**Adopt the charter**](docs/build-path.md#step-3-adopt-the-charter): mandate and containment authority, signed first.
+4.  [**Decide the operating model**](docs/build-path.md#step-4-decide-the-operating-model): in-house, provider or hybrid, with the staffing numbers.
 
-<p class="ocdf-phase">Build</p>
+<p class="opencdc-phase">Build</p>
 
-5.  [**Work the first 90 days**](docs/start-here.md): steps 2 to 4 are its first weeks.
-6.  [**Assess where you are**](tools/maturity-assessment.html): at day 90, with an owner and a date on every gap.
+5.  [**Work the first 90 days**](docs/build-path.md#step-5-work-the-first-90-days): steps 2 to 4 are its first weeks.
+6.  [**Assess where you are**](docs/build-path.md#step-6-assess-where-you-are): at day 90, with an owner and a date on every gap.
 
-<p class="ocdf-phase">Run</p>
+<p class="opencdc-phase">Run</p>
 
-7.  [**Set the operating rhythm**](templates/annual-calendar-template.md): the recurring work that keeps a CDC from decaying.
+7.  [**Set the operating rhythm**](docs/build-path.md#step-7-set-the-operating-rhythm): the recurring work that keeps a CDC from decaying.
 
 </div>
 
@@ -163,9 +164,9 @@ An invented company with a common starting point: four people in IT security,
 no SOC, and operations that run all night. The worked example takes it
 through the seven steps to its first board report.
 
-<div class="ocdf-case" markdown>
+<div class="opencdc-case" markdown>
 
-<ul class="ocdf-case__facts">
+<ul class="opencdc-case__facts">
 <li><b>2500</b> employees</li>
 <li><b>14</b> sites, night operations</li>
 <li>NIS2 <b>important</b> entity</li>
@@ -173,10 +174,10 @@ through the seven steps to its first board report.
 <li><b>Hybrid</b> operating model</li>
 </ul>
 
-<div class="ocdf-example" markdown>
+<div class="opencdc-example" markdown>
 
-<div class="ocdf-example__before" markdown>
-<p class="ocdf-example__label">Before</p>
+<div class="opencdc-example__before" markdown>
+<p class="opencdc-example__label">Before</p>
 
 - Security spread across four people, with no shared plan
 - No agreement on who may contain what
@@ -184,10 +185,10 @@ through the seven steps to its first board report.
 - Nobody named for NIS2 reporting
 </div>
 
-<div class="ocdf-example__arrow" aria-hidden="true"></div>
+<div class="opencdc-example__arrow" aria-hidden="true"></div>
 
-<div class="ocdf-example__after" markdown>
-<p class="ocdf-example__label">After</p>
+<div class="opencdc-example__after" markdown>
+<p class="opencdc-example__label">After</p>
 
 - A signed charter with containment authority
 - A daytime team, and a provider for nights
@@ -197,28 +198,28 @@ through the seven steps to its first board report.
 
 </div>
 
-<div class="ocdf-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 1, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
-<p class="ocdf-levels__title">Maturity after 12 weeks <span><i class="now"></i>Level now <i class="target"></i>Target</span></p>
+<div class="opencdc-levels" role="img" aria-label="Maturity after 12 weeks. Govern level 1, target 3. Identify level 1, target 2. Protect level 2, target 3. Detect level 2, target 3. Respond level 2, target 3. Recover level 1, target 2." markdown>
+<p class="opencdc-levels__title">Maturity after 12 weeks <span><i class="now"></i>Level now <i class="target"></i>Target</span></p>
 <div><b>Govern</b><span><i class="n"></i><i></i><i class="t"></i><i></i></span></div>
 <div><b>Identify</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
 <div><b>Protect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
 <div><b>Detect</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
 <div><b>Respond</b><span><i class="n"></i><i class="n"></i><i class="t"></i><i></i></span></div>
 <div><b>Recover</b><span><i class="n"></i><i class="t"></i><i></i><i></i></span></div>
-<p class="ocdf-levels__scale" aria-hidden="true"><span>L1</span><span>L2</span><span>L3</span><span>L4</span></p>
+<p class="opencdc-levels__scale" aria-hidden="true"><span>L1</span><span>L2</span><span>L3</span><span>L4</span></p>
 </div>
 
 </div>
 
 [Read the worked example →](docs/worked-example.md){ .md-button }
 
-<div class="ocdf-meta" markdown>
+<div class="opencdc-meta" markdown>
 
-**Version 1.5.0**, released 16 November 2026 · [Changelog](CHANGELOG.md) ·
+**Version 1.6.0**, released 19 November 2026 · [Changelog](CHANGELOG.md) ·
 [Source on GitHub](https://github.com/p0jst/OpenCDC).
 Written by Frederik B. Krogsgaard, formerly Senior Manager at the Norlys Cyber
 Defence Center, as an independent project.
-[Why trust this framework](docs/trust.md) says what you can and cannot rely on.
+[Why trust OpenCDC](docs/trust.md) says what you can and cannot rely on.
 
 **Scope: enterprise IT.** Not designed for OT/ICS, telco core networks or
 classified environments; see [About](ABOUT.md) and

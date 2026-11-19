@@ -1,6 +1,6 @@
 # Designing alert triage
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag practitioner">Practitioner</span>This framework's design decisions for DE-3, from operating practice.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span><span class="src-tag practitioner">Practitioner</span>OpenCDC's design decisions for DE-3, from operating practice.</p>
 
 > Triage is where detection meets response. DE-3 in [Detect](detect.md) asks for a documented triage process, and the verify-and-triage gate in [Respond](respond.md#verify-and-triage) says what triage must decide. This document covers the decisions a CDC has to make for that step to work the same way every time, whoever or whatever does the triage: a person on shift, a provider under Model A, or an automated pipeline.
 
@@ -126,4 +126,4 @@ Handed over to / tuning flag raised:
 - MITRE ATT&CK®. https://attack.mitre.org
 - The eight questions follow a widely used analyst checklist of who, what, where, when and impact, adapted here; no single original source is known.
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*

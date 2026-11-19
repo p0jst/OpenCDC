@@ -107,4 +107,4 @@
 - Plan review: annually and after each P1/P2 incident.
 
 ---
-*Template from the Open CDC Framework, licensed CC BY 4.0. Informed by NIST SP 800-61r3, DAIR, GDPR, NIS2 and DORA. Verify legal specifics with counsel.*
+*Template from OpenCDC, licensed CC BY 4.0. Informed by NIST SP 800-61r3, DAIR, GDPR, NIS2 and DORA. Verify legal specifics with counsel.*

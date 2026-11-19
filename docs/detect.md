@@ -6,7 +6,7 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 
 ## Core capabilities
 
-<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag ocdf">OCDF</span>Function from NIST CSF 2.0; the capability breakdown and IDs are this framework's.</p>
+<p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>Function from NIST CSF 2.0; the capability breakdown and IDs are OpenCDC's.</p>
 
 | ID | Capability | Description |
 |----|-----------|-------------|
@@ -42,7 +42,7 @@ Find adversary and anomalous activity fast enough to limit damage. Detection is 
 
 ## How long to keep logs
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span><span class="src-tag law">Law</span>The periods are this framework's starting position, not a legal requirement. Check national and sector rules; not legal advice.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span><span class="src-tag law">Law</span>The periods are OpenCDC's starting position, not a legal requirement. Check national and sector rules; not legal advice.</p>
 
 Three things set retention: how far back an investigation has to reach, what the law requires or limits, and cost. NIS2 gives no number for security logs and leaves it to the risk assessment. National or sector rules sometimes do give one, so read your [national annex](annexes/README.md) and sector rules first. Where nothing is set for you, start here and adjust:
 
@@ -73,7 +73,7 @@ The traditional split, where infrastructure maintains the server and OS and the 
 
 ## CIA mapping
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's mapping of each capability to confidentiality, integrity and availability.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's mapping of each capability to confidentiality, integrity and availability.</p>
 
 | Capability | C | I | A | Rationale |
 |-----------|---|---|---|-----------|
@@ -98,7 +98,7 @@ Minimum viable team for business-hours monitoring with on-call: 3–4 FTE. One s
 
 ## Maturity criteria
 
-<p class="src" markdown><span class="src-tag ocdf">OCDF</span>This framework's criteria. Not a certification standard.</p>
+<p class="src" markdown><span class="src-tag opencdc">OpenCDC</span>OpenCDC's criteria. Not a certification standard.</p>
 
 The criteria that score DETECT are kept in one place for all six functions: the [maturity self-assessment, DETECT](../assessments/maturity-self-assessment.md#detect), with the same text in the [interactive tool](../tools/maturity-assessment.html). Its Level 2 criteria include the minimum form of NIS2 Art. 21(2)(b), marked there; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md). How levels are scored is in the [maturity model](maturity-model.md).
 
@@ -132,4 +132,4 @@ The criteria that score DETECT are kept in one place for all six functions: the 
 - NIS2: Directive (EU) 2022/2555 Art. 21, 23; GDPR Art. 33; DORA Art. 10.
 - SANS Institute, Josh Lemon, *SANS 2026 Threat Hunting Survey: The Evolution of Threat Hunting*, September 2026. https://www.sans.org/white-papers/sans-2026-threat-hunting-survey-evolution-threat-hunting
 
-*Open CDC Framework, licensed CC BY 4.0. Credits: [References & credits](references.md).*
+*OpenCDC, licensed CC BY 4.0. Credits: [References & credits](references.md).*
