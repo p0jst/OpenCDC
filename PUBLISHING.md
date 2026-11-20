@@ -15,12 +15,12 @@ Approved project name: OpenCDC, written with that casing. It had another name un
 - `v1.0.0` — 2026-09-02. First stable release.
 - `v1.1.0` — 2026-09-23. Usability and scoring release; two DETECT criteria changed.
 - `v1.2.0` — 2026-10-11. Review release: criteria set 2 with the NIS2 legal floor at Level 2, 71 criteria; incident handling on DAIR; the IT/OT interface; alert triage and AI in the CDC; the first diagrams; plainer front page and README.
-- `v1.6.0` — 2026-11-19. Minor release: renamed from the Open CDC Framework to OpenCDC, and a clearer way in, with Find your route, the build path, Build and Learn in the menu, and step banners on the seven step pages. No criterion changes.
-- `v1.5.0` — 2026-11-16. Minor release from a practitioner review: identity and session attacks, ransomware decisions, an ISO/IEC 27001 crosswalk, log retention, a decision log with post-incident reviews held against it, the NIS2 claim aligned with the crosswalk, and a hardened website build. No criterion changes.
 - `v1.3.0` — 2026-10-27. Minor release: security fix for the maturity tool's file import and a pinned website build; vulnerability handling built for exploitation speed, with edge devices under PR-5 and a reworded IDENTIFY L3 criterion; end-to-end check of links, annexes and tools; one path through OpenCDC; references updated and SANS 2026 research applied.
-- `v1.4.2` — 2026-11-04. Patch release: the worked example earlier in the Start path with a before and after, the self-assessment page as a list of criteria with the tool one click away, the tool starting at GOVERN for a new assessment, and four-digit numbers without a comma.
-- `v1.4.1` — 2026-11-02. Patch release: a clearer opening on the landing page, centred section headings there, a current link preview card and dashes removed from tool text.
 - `v1.4.0` — 2026-11-02. Presentation release: five diagrams, diagrams on phones, a sharper landing page, folded reference tables, the README rebuilt as the repository front page, SECURITY.md, and the plan for Material for MkDocs end of life. No criteria changes.
+- `v1.4.1` — 2026-11-02. Patch release: a clearer opening on the landing page, centred section headings there, a current link preview card and dashes removed from tool text.
+- `v1.4.2` — 2026-11-04. Patch release: the worked example earlier in the Start path with a before and after, the self-assessment page as a list of criteria with the tool one click away, the tool starting at GOVERN for a new assessment, and four-digit numbers without a comma.
+- `v1.5.0` — 2026-11-16. Minor release from a practitioner review: identity and session attacks, ransomware decisions, an ISO/IEC 27001 crosswalk, log retention, a decision log with post-incident reviews held against it, the NIS2 claim aligned with the crosswalk, and a hardened website build. No criterion changes.
+- `v1.6.0` — 2026-11-19. Minor release: renamed from the Open CDC Framework to OpenCDC, and a clearer way in, with Find your route, the build path, Build and Learn in the menu, and step banners on the seven step pages. No criterion changes.
 
 ## Community benchmark
 
@@ -44,12 +44,16 @@ Plan, to finish before May 2027:
 
 ## When to release
 
-Releases had been coming faster than readers could follow: seven tagged releases between 2 September and 16 November 2026. From v1.6.0 these rules apply, and the maintainer holds himself to them:
+Releases had been coming faster than readers could follow, and faster than the changes could be thought through: seven tagged releases between 2 September and 16 November 2026, and v1.6.0 three days after v1.5.0. A monthly limit set at v1.6.0 was not enough. From v1.6.1 these rules apply, and the maintainer holds himself to them:
 
 - **Major, X.0.0,** only when assessments made under the previous version can no longer be compared, which means a new criteria set. Rare by design.
-- **Minor, 1.X.0,** at most once a month. New pages, new tools, restructured navigation and new guidance collect on the release branch until then.
-- **Patch, 1.6.X,** only for faults: a wrong fact or legal reference, a broken link or tool, a build failure. Not for new content, however small, and not for wording that is merely better.
-- **When in doubt, wait.** A change that can sit on the branch for three more weeks should.
+- **Minor, 1.X.0,** only in a quarterly window: early March, June, September or December. A release that misses its window waits for the next one; there is no release in between. The next window after v1.6.0 is March 2027.
+- **Rest after a minor release.** For 30 days after a minor release, no release branch is opened and no new content is written. Ideas go into the ideas note and nowhere else.
+- **Design before content.** Each minor release starts with a short design the maintainer approves: what changes, why, and for whom. Nothing is written for it before that.
+- **Freeze before the window.** The release branch is frozen at least 14 days before the window. In those days it is read again with fresh eyes, and only faults are fixed.
+- **Enough to be worth it.** A minor release carries at least one complete new piece for the reader, such as a new route through OpenCDC or a new tool, not only a handful of adjustments. If it does not, the window is skipped.
+- **Patch, 1.6.X,** only for faults: a wrong fact or legal reference, a broken link or tool, a build failure, or a step that cannot be completed as written or sends the reader the wrong way. Not for new content, however small, and not for wording that is merely better. Patches are collected and released at most once a month, unless a wrong legal reference or a security problem cannot wait.
+- **When in doubt, wait.** A change that can sit on the branch until the next window should.
 
 ## Cutting a release
 1. Update the version in six places: the README badge and its citation line, the citation line in `docs/references.md`, the CHANGELOG heading, where you close `Unreleased` and date it, the version line in the footer box of the landing page `site/index.md`, and `OPENCDC_VERSION` in `tools/maturity-assessment.html`, which goes into benchmark contributions and the printed assessment. Then add the release to the history above.

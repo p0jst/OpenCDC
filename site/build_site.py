@@ -38,6 +38,34 @@ def web_checklist(text):
     return text
 
 
+# The other checklists and templates keep their tick boxes in the repository,
+# where they are copied and filled in. On the website a box cannot be ticked,
+# so it looks broken: list items lose the box, empty box cells in tables are
+# left blank to fill in, and an inline row of choices reads as a list.
+def web_tickboxes(text):
+    text = re.sub(r"^(\s*)- \[ \] ", r"\1- ", text, flags=re.M)
+    text = text.replace("☑ typically", "Typically")
+    def choices(m):
+        items = [s.strip() for s in m.group(2).split("☐") if s.strip()]
+        return m.group(1) + "one or more of " + ", ".join(items[:-1]) + " or " + items[-1]
+    text = re.sub(r"^(.*?:\*\* )((?:☐ [^☐\n|]+){2,})$", choices, text, flags=re.M)
+    text = re.sub(r"\| ☐ (?=\|)", "|  ", text)
+    return text
+
+
+def web_pages():
+    for page in SRC.rglob("*.md"):
+        if page.relative_to(SRC).as_posix() == CHECKLIST:
+            continue
+        text = page.read_text(encoding="utf-8")
+        new = web_tickboxes(text)
+        if new != text:
+            page.write_text(new, encoding="utf-8")
+        leftover = [m for m in ("- [ ]", "☐", "☑") if m in new]
+        if leftover:
+            raise SystemExit(f"{page.relative_to(SRC)}: website version still contains {leftover}")
+
+
 # The build path: seven pages that each do one step. On the website each gets a
 # line under its title saying which step it is, and a block at the end that
 # sends the reader to the next step, so the footer's previous/next links (which
@@ -107,6 +135,7 @@ def main():
             shutil.copy2(p, SRC / f)
     checklist = SRC / CHECKLIST
     checklist.write_text(web_checklist(checklist.read_text(encoding="utf-8")), encoding="utf-8")
+    web_pages()
     add_step_banners()
     # website-only files
     shutil.copy2(ROOT / "site" / "index.md", SRC / "index.md")

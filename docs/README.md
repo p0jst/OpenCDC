@@ -12,7 +12,7 @@ the work. The reading order below is for reading OpenCDC through, not for
 the order of work.
 
 Reading order: start with the
-[introduction](introduction.md), then [start here](start-here.md) to
+[introduction](introduction.md), then [the first 90 days](start-here.md) to
 prioritise and [implementation tiers](tiers.md) to pick a tier, then the six
 functions below with [CIA as design lens](cia-triad.md) and the
 [maturity model](maturity-model.md) alongside them, then operating models

@@ -27,7 +27,7 @@ quarter's results.
 
 - A signed charter with containment authority
 - A daytime team, and a provider for nights
-- A scored baseline and a 90-day plan
+- A scored baseline and an action plan with owners
 - Maturity targets agreed with the board
 </div>
 
@@ -207,7 +207,7 @@ recommends.
 - The portfolio stayed small and tested. Coverage grows from the threat profile,
   not from importing rules.
 - Every gap has a name and a date next to it. That is what turned the maturity
-  score into a plan, and the gaps below the legal floor went to the top of it.
+  score into a plan, and the NIS2-marked gaps below Level 2 went to the top of it.
 - The two incidents were detected after six hours, not minutes. Fast containment
   saved them; detection speed is where the next quarter's engineering goes.
 

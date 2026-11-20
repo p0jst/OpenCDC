@@ -8,7 +8,7 @@ Not every organisation needs every capability. Instead of maintaining three edit
 
 | Tier | Who | Rough profile |
 |------|-----|---------------|
-| **E, Essential** | SMEs and low-complexity IT, up to about five security FTE | The defensible minimum, and the NIS2 floor; mostly Model A or hybrid operating models |
+| **E, Essential** | SMEs and low-complexity IT, up to about five security FTE | The defensible minimum, and the first target for a NIS2 entity; mostly Model A or hybrid operating models |
 | **S, Standard** | A dedicated CDC in a mid-sized or large, regulated organisation | Full six-function coverage with measurement |
 | **A, Advanced** | Critical infrastructure, high-threat sectors, DORA TLPT-scope entities | Validation, automation and self-improvement |
 

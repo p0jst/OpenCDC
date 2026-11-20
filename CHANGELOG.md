@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased
+
+Patch release, planned as v1.6.1. Faults found by walking the build path from a new security team to a 24/7 SOC, and a stronger brake on releases. No maturity criterion is added, moved or reworded, so assessments made under v1.6.0 compare directly.
+
+- **Level 2 and the law, the rest of it.** Five places still said that Level 2, or the Essential tier, *is* the NIS2 floor: the maturity model page and its staircase diagram, the implementation tiers table and capability map, and the worked example. They now say it is the first target for a NIS2 entity, matching the crosswalk, which names two parts covered only thinly.
+- **24/7 staffing.** The operating model decision path said a single 24/7 seat takes 9–10 people with daytime capacity on top. One seat around the clock takes 5.6; the 9–10 already includes a second daytime seat, detection engineering and a lead, as the arithmetic below it shows.
+- **The design navigator sent readers ahead to step 6** right after the workshops. Its last section now leads to the charter, step 3, and keeps the answers as evidence for the baseline.
+- **The first 90 days schedule all six workshops,** not only GOVERN, and the day-90 exit criteria include the approved IR plan that the build path promises.
+- **The charter has room for what Find your route asks for:** why now, the tier and twelve-month ambition, and what a provider may do on the CDC's behalf.
+- **The annual calendar has a table of owners and dates,** so step 7 can be finished as the build path describes it.
+- **No tick boxes that cannot be ticked.** On the website, the checklists in the templates, playbooks, IT/OT page and national annexes are plain lists, and empty box cells are blank. The repository files keep their boxes for copying and filling in.
+- **Smaller fixes.** The charter, IR plan and self-assessment header lines are small tables instead of text with visible bars. Two links still called The first 90 days "Start here". The front page and worked example call the result of step 6 an action plan, not a 90-day plan. The release history is in order.
+- **Release rules.** PUBLISHING.md now limits minor releases to quarterly windows, with 30 days of rest after each, a design approved first and a 14-day freeze before the window. The next minor release is due in March 2027.
+
 ## v1.6.0 — 2026-11-19
 
 A new name and a clearer way in. No maturity criterion is added, moved or reworded, so assessments made under v1.5 compare directly.

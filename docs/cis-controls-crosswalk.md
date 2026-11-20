@@ -2,7 +2,7 @@
 
 <p class="src" markdown><span class="src-tag standard">Standard</span><span class="src-tag opencdc">OpenCDC</span>CIS Controls v8.1 as published; the actions per control are OpenCDC's.</p>
 
-> All 18 CIS Critical Security Controls v8 and v8.1 mapped to OpenCDC, each with the concrete actions a CDC should drive or verify. Use it three ways: as a gap check asking which controls have no owner, as the business-facing prioritisation narrative of [Start here](start-here.md), and as an implementation checklist per tier, since CIS Implementation Groups align with OpenCDC tiers: IG1≈Essential, IG2≈Standard, IG3≈Advanced. The CDC rarely *operates* all of these; it must *require, verify and consume* them instead.
+> All 18 CIS Critical Security Controls v8 and v8.1 mapped to OpenCDC, each with the concrete actions a CDC should drive or verify. Use it three ways: as a gap check asking which controls have no owner, as the business-facing prioritisation narrative of [The first 90 days](start-here.md), and as an implementation checklist per tier, since CIS Implementation Groups align with OpenCDC tiers: IG1≈Essential, IG2≈Standard, IG3≈Advanced. The CDC rarely *operates* all of these; it must *require, verify and consume* them instead.
 
 | # | CIS Control | OpenCDC ref | Concrete actions |
 |---|-------------|----------|------------------|

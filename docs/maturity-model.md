@@ -10,8 +10,8 @@ We deliberately use four levels rather than five: in practice the difference bet
 
 ## The levels
 
-[![The four maturity levels as a staircase: Initial, Managed, Established and Optimising, with Level 2 marked as the NIS2 floor and staged scoring explained below](../assets/diagrams/maturity-levels-light.svg#gh-light-mode-only)](../assets/diagrams/maturity-levels-light.svg)
-[![The four maturity levels as a staircase: Initial, Managed, Established and Optimising, with Level 2 marked as the NIS2 floor and staged scoring explained below](../assets/diagrams/maturity-levels-dark.svg#gh-dark-mode-only)](../assets/diagrams/maturity-levels-dark.svg)
+[![The four maturity levels as a staircase: Initial, Managed, Established and Optimising, with Level 2 marked as the first NIS2 target and staged scoring explained below](../assets/diagrams/maturity-levels-light.svg#gh-light-mode-only)](../assets/diagrams/maturity-levels-light.svg)
+[![The four maturity levels as a staircase: Initial, Managed, Established and Optimising, with Level 2 marked as the first NIS2 target and staged scoring explained below](../assets/diagrams/maturity-levels-dark.svg#gh-dark-mode-only)](../assets/diagrams/maturity-levels-dark.svg)
 
 <details markdown>
 <summary>The levels as a table, with what each one means in practice</summary>
@@ -27,7 +27,7 @@ We deliberately use four levels rather than five: in practice the difference bet
 
 The scored criteria for every function live in one place, the [maturity self-assessment](../assessments/maturity-self-assessment.md); the [interactive tool](../tools/maturity-assessment.html) carries the same text. The function documents link there rather than keeping their own copy.
 
-**Level 2 is also the NIS2 floor.** The Level 2 criteria include the minimum form of every measure NIS2 Art. 20 and 21 require, marked with the article they serve. An entity in NIS2 scope should treat Level 2 in every function as the least it can defend, whatever its target; see the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md).
+**Level 2 is also the first target for a NIS2 entity.** The Level 2 criteria hold the minimum form of each measure NIS2 Art. 20 and 21 require, marked with the article they serve. Two parts, human-resources security and vulnerability disclosure, are covered only thinly. An entity in NIS2 scope should treat Level 2 in every function as the least it can defend, whatever its target. Reaching it is not a compliance verdict; the [NIS2 Article 21 crosswalk](nis2-article-21-crosswalk.md) shows the mapping and the gaps.
 
 ## Relationship to tiers
 
@@ -80,7 +80,7 @@ readings, and a criterion's status travels with its evidence note.
 | NIS2 *essential* entity / DORA financial entity | Level 3 across all functions |
 | Critical infrastructure, high-threat sectors | Level 3–4, prioritising DETECT/RESPOND at 4 |
 
-Targets are risk decisions. Set them in GOVERN, with executive sign-off. Above the legal floor at Level 2, the difference between the rows is exposure and scrutiny, not law: essential entities are supervised before the fact, and the sectors in the last row are the ones attackers pick.
+Targets are risk decisions. Set them in GOVERN, with executive sign-off. Above Level 2, the first target for a NIS2 entity, the difference between the rows is exposure and scrutiny, not law: essential entities are supervised before the fact, and the sectors in the last row are the ones attackers pick.
 
 ### Coverage hours are a target, not a level
 

@@ -38,7 +38,9 @@ average up.
 Tick the box when the status is `implemented` or `evidenced`. Scores without
 recorded evidence tend to come out higher.
 
-**Assessment date:** | **Assessors:** | **Evidence repository:**
+| Assessment date | Assessors | Evidence repository |
+|-----------------|-----------|---------------------|
+|  |  |  |
 <!-- offline-only:end -->
 
 ---

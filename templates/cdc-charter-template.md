@@ -2,12 +2,16 @@
 
 > Related capability: GV-1. Delete guidance in blockquotes before publishing.
 
-**Document owner:** | **Approved by:** | **Version / date:** | **Review cycle:** annually
+| Document owner | Approved by | Version and date | Review cycle |
+|----------------|-------------|------------------|--------------|
+|  |  |  | Annually |
 
 ## 1. Mission
 > One paragraph: why does the CDC exist, in business terms.
 
 The Cyber Defence Center protects the confidentiality, integrity and availability of [ORGANISATION]'s information, systems and services by governing, preventing, detecting, responding to and recovering from cyber threats.
+
+- **Why now:** the reason this charter is written today, such as a law that applies, an incident, a request from the board or a customer, or the wish to run the team better: …
 
 ## 2. Scope
 - **Organisational scope:** legal entities / business units covered: …
@@ -37,6 +41,8 @@ The CDC is authorised, without prior approval, to:
 - [ ] Block network indicators, whether IP, domain or hash, at security controls
 - [ ] Access logs and forensic data on any in-scope system, subject to the data-handling rules in §7
 
+Actions a provider may take on the CDC's behalf without prior approval, if a provider is used: … List them here, no wider than the list above, and match the provider contract.
+
 Actions requiring approval from [ROLE]:
 
 - [ ] Isolation of tier-1 crown-jewel production services
@@ -53,6 +59,7 @@ A decision taken within this authority, on the information available at the time
 ## 6. Resourcing
 - Approved headcount and roles: …
 - Sourcing model: in-house / hybrid / MSSP for [functions]
+- Implementation tier and twelve-month ambition: Essential, Standard or Advanced, and the maturity level aimed for in twelve months: …
 - Budget cycle and owner: …
 
 ## 7. Data handling & privacy

@@ -2,7 +2,9 @@
 
 > Related capability: RS-1. Structure informed by NIST SP 800-61r3, the Dynamic Approach to Incident Response (DAIR) and FIRST good practice. Keep this document short, 10–15 pages at most; detail belongs in playbooks.
 
-**Owner:** | **Approved by:** | **Version / date:** | **Exercised on:**
+| Owner | Approved by | Version and date | Exercised on |
+|-------|-------------|------------------|--------------|
+|  |  |  |  |
 
 ## 1. Definitions & severity classification
 

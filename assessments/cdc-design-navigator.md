@@ -95,9 +95,9 @@ Most ➜ pointers are capability IDs such as `PR-7` or `DE-4`. Look any of them 
 
 ## Turning answers into a design
 
-1. Run all six workshops; log every weak answer as a backlog item tagged with its capability ID, such as `DE-4`.
-2. Score yourself with the [maturity self-assessment](maturity-self-assessment.md); the navigator answers *are* much of your evidence.
-3. Prioritise: fix GOVERN gaps first, since they block everything, then the cheapest blast-radius items P1, P3 and P4, then coverage at D1 and D2.
-4. Set level targets per function, using the [maturity model](../docs/maturity-model.md), and reassess annually, or after major organisational change.
+1. Run all six workshops; log every weak answer as a backlog item tagged with its capability ID, such as `DE-4`. Give every question an answer, or a named owner and a date.
+2. Prioritise the backlog: GOVERN gaps first, since they block everything, then the cheapest blast-radius items P1, P3 and P4, then coverage at D1 and D2.
+3. Take the answers into [step 3, the charter](../templates/cdc-charter-template.md): the mandate, scope and authority questions in GOVERN and RESPOND are written there.
+4. Keep the answers. At [step 6](maturity-self-assessment.md) they are much of your evidence for the baseline, and the targets per function are set there, using the [maturity model](../docs/maturity-model.md).
 
 *OpenCDC, licensed CC BY 4.0.*

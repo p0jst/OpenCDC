@@ -69,9 +69,9 @@ markdown_extensions:
       # generated, so every section remains linkable via the table of contents.
       permalink: false
   - pymdownx.superfences
-  # Renders "- [ ]" as a real (non-clickable) checkbox rather than literal
-  # "[ ]" text. The reference checklists are meant to be printed or copied;
-  # the interactive tool is where you actually tick things.
+  # A fallback only: site/build_site.py turns "- [ ]" items into plain list
+  # items for the website and stops the build if one is left. The boxes stay
+  # in the repository files, which are copied and filled in.
   - pymdownx.tasklist:
       custom_checkbox: false
   # Renders the bare URLs used throughout the references and national annexes

@@ -192,7 +192,7 @@ through the seven steps to its first board report.
 
 - A signed charter with containment authority
 - A daytime team, and a provider for nights
-- A scored baseline and a 90-day plan
+- A scored baseline and an action plan with owners
 - Maturity targets agreed with the board
 </div>
 

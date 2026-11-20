@@ -27,7 +27,7 @@ Whichever shape, write the provider's containment mandate into the [containment 
 **Fits:** SMEs and important entities without security hiring power; organisations needing 24/7 *now*.
 
 ### Model B: in-house tiered SOC, Tier 1 → 2 → 3
-The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires 8–12 FTE for the shift line with daytime capacity on top, and that still means one analyst alone at night; see [staffing and cost](#staffing-and-cost-the-arithmetic).
+The classical pyramid: Tier 1 does front-line triage on shift, escalates to Tier 2 investigators, with Tier 3 for hunting, DFIR and engineering behind them. Sustained 24/7 in-house realistically requires 8–12 FTE once the shift line, a second daytime seat, detection engineering and a lead are counted, and that still means one analyst alone at night; see [staffing and cost](#staffing-and-cost-the-arithmetic).
 
 | Pros | Cons |
 |------|------|
@@ -82,7 +82,7 @@ The operating model is usually decided by one or two hard constraints, not by ad
    Yes → keep those sources in-house (**B** or **C**). A provider can still hold the watch over everything else, as a hybrid.
 2. **Do you need out-of-hours detection within six months?**
    Yes → start with a provider (**A**, or **A+C** if you already have a team), and contract for exit from day one: log ownership, portable detections, a transition clause. Then continue down the path to decide what comes after.
-3. **Can you hire and keep the roughly 9–10 people a single 24/7 seat takes, with daytime capacity on top?** See [the arithmetic](#staffing-and-cost-the-arithmetic).
+3. **Can you hire and keep the roughly 9–10 people a 24/7 line takes: 5.6 for one seat around the clock, plus a second daytime seat, detection engineering and a lead?** See [the arithmetic](#staffing-and-cost-the-arithmetic).
    No → a provider holds nights and weekends (**A** or **A+C**). If you already run a 24/7 operations desk, it can be the out-of-hours first line instead.
 4. **Do you have, or can you hire, 5–8 senior people who work with version control and automation?**
    Yes → a capability-based team (**C**), with a provider or on-call for nights.

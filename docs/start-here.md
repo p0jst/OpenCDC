@@ -28,6 +28,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 |------|----|-----------|
 | 1–2 | Run the GOVERN navigator workshop; draft the charter including containment authority in §4 | [Navigator](../assessments/cdc-design-navigator.md) G1–G11, [charter template](../templates/cdc-charter-template.md) |
 | 1–4 | Regulatory applicability register: which laws, which entities, which countries; register with authorities where overdue | This document, your [national annex](annexes/README.md), and the [regulatory selector](../tools/regulatory-profile.html) |
+| 2–6 | Run the remaining navigator workshops, IDENTIFY to RECOVER, with the people who own the answers; log weak answers in the gap backlog | [Navigator](../assessments/cdc-design-navigator.md) |
 | 2–6 | **Decide the operating model**, whether MSSP, tiered or capability-based, using the decision path | [Operating models](operating-models.md) |
 | 3–8 | Crown-jewel workshop with the business, I1; C/I/A impact rating per service | ID-3, [CIA triad](cia-triad.md) |
 | 4–10 | Blast-radius sprint: MFA everywhere at P1, one offline or immutable backup copy restore-tested at P3, admin-path segmentation quick wins at P4 | [PROTECT](protect.md) |
@@ -39,7 +40,7 @@ The ordering below deliberately mirrors the logic of the CIS Critical Security C
 
 **Dependency warning:** most of the 90-day steps depend on another department. Charter sign-off and the reporting drill are [GATE] dependencies, on management and on legal and the DPO. Log onboarding and the MFA rollout are [HARD] dependencies, on the system owners and the IAM team. See each function document's "External dependencies" table and the marker convention in [Introduction](introduction.md). Secure named counterparts for every [HARD] on this plan before week 1; it is the most common silent killer of new CDC timelines.
 
-**Exit criteria for day 90:** signed charter · applicability register · operating model decided · crown jewels agreed in writing · MFA coverage measured · one clean restore proven · identity+endpoint telemetry flowing · reporting drill executed.
+**Exit criteria for day 90:** signed charter · applicability register · operating model decided · crown jewels agreed in writing · MFA coverage measured · one clean restore proven · identity+endpoint telemetry flowing · IR plan v1 approved · reporting drill executed.
 
 ## Months 4–12
 
